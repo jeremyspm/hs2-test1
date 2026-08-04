@@ -1,0 +1,6 @@
+{
+  "name": "hs2-test1",
+  "private": true,
+  "type": "module",
+  "description": "Build scripts only. The shipped artefact is index.html, which is fully self-contained and has no dependencies."
+}
