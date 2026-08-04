@@ -269,10 +269,10 @@ const PACK = {
   exam: { auto: 30, saq: 5, minutes: 65, pass: 65, noPaper: true,
           mix: { mcq:.40, cloze:.20, match:.15, tfset:.15, order:.10 } },
 
-  doorNote: 'The priority order here is not a guess. The course publishes 36 assessment criteria for Module 1; the two formative tests between them only drill 12 of those. The 8 criteria nothing covers are the ones this queue starts with.',
+  doorNote: 'The priority order here is not a guess. The course publishes 36 assessment criteria for Module 1; the two formative tests between them only drill 12 of those, so this queue starts with the 8 they never touch. <b>One honest caveat:</b> Canvas will not export quizzes, and there are around 13 more of them in the course — including a 50-mark Module 1 SAQ paper and quizzes on shock, the heart, and lymphatic terminology. Some of those almost certainly do cover a few of these 8. "Blind" here means <b>no practice material we can read</b>, not "she never tested it".',
 
   // Honest provenance. Read this before trusting a number.
-  sources: 'The <b>scope</b> (36 criteria), the <b>test format</b>, and <b>which case studies are examinable</b> come straight from the Canvas export — the Focus Points document, the Assessment Overview, and the Case Study Workbook. Cards carrying a 📄 <b>Source</b> line are traceable to a specific course document, and any marking schedule labelled "verbatim" was copied from the lecturer\'s own model answer. <b>Everything else is standard textbook anatomy and physiology written for this pack, then cross-checked against the slide-sourced content in the Module 1 hub.</b> Where the lecture\'s figures differ from the textbook, the lecture wins and the card says so — atmospheric gas pressures, conduction-system rates, CO₂ transport percentages and respiratory membrane thickness were all corrected that way. If a card gives a number with no source line, treat it as a useful approximation rather than something she will mark you against.',
+  sources: 'The <b>scope</b> (36 criteria), the <b>test format</b>, and <b>which case studies are examinable</b> come straight from the Canvas export — the Focus Points document, the Assessment Overview, and the Case Study Workbook. Cards carrying a 📄 <b>Source</b> line are traceable to a specific course document, and any marking schedule labelled "verbatim" was copied from the lecturer\'s own model answer. <b>Everything else is standard textbook anatomy and physiology written for this pack, then cross-checked against the slide-sourced content in the Module 1 hub.</b> Where the lecture\'s figures differ from the textbook, the lecture wins and the card says so — atmospheric gas pressures, conduction-system rates, CO₂ transport percentages and respiratory membrane thickness were all corrected that way. If a card gives a number with no source line, treat it as a useful approximation rather than something she will mark you against. <b>What is missing:</b> the archive was taken on 27 July 2026 and <b>Canvas will not export quizzes</b> — around 13 of them, worth 175+ marks of her own questions, exist only as links. Anything she has posted since that date is also absent.',
 
   topics: [
     { id:'cvs-anat',    name:'Heart anatomy & flow',   icon:'🫀' },
@@ -2190,7 +2190,7 @@ function cardWeak(c){
   return (!m||!m.t) ? true : (m.g/m.t)<0.6;      // never drilled counts as weak
 }
 const TIERMSG=[
-  'Starting with the <b>blueprint blind spots</b> — the criteria no practice test ever covered.',
+  'Starting with the <b>blueprint blind spots</b> — criteria flagged as having no practice coverage.',
   'Starting with what you are <b>shakiest</b> on.',
   'Working through what is <b>due for review</b>.',
   'Nothing is flagged — running the <b>full pool</b>.'
