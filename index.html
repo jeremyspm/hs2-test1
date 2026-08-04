@@ -272,7 +272,7 @@ const PACK = {
   doorNote: 'The priority order here is not a guess. The course publishes 36 assessment criteria for Module 1; the two formative tests between them only drill 12 of those, so this queue starts with the 8 they never touch. <b>One honest caveat:</b> Canvas will not export quizzes, and there are around 13 more of them in the course — including a 50-mark Module 1 SAQ paper and quizzes on shock, the heart, and lymphatic terminology. Some of those almost certainly do cover a few of these 8. "Blind" here means <b>no practice material we can read</b>, not "she never tested it".',
 
   // Honest provenance. Read this before trusting a number.
-  sources: 'The <b>scope</b> (36 criteria), the <b>test format</b>, and <b>which case studies are examinable</b> come straight from the Canvas export — the Focus Points document, the Assessment Overview, and the Case Study Workbook. Cards carrying a 📄 <b>Source</b> line are traceable to a specific course document, and any marking schedule labelled "verbatim" was copied from the lecturer\'s own model answer. <b>Everything else is standard textbook anatomy and physiology written for this pack, then cross-checked against the slide-sourced content in the Module 1 hub.</b> Where the lecture\'s figures differ from the textbook, the lecture wins and the card says so — atmospheric gas pressures, conduction-system rates, CO₂ transport percentages and respiratory membrane thickness were all corrected that way. If a card gives a number with no source line, treat it as a useful approximation rather than something she will mark you against. <b>What is missing:</b> the archive was taken on 27 July 2026 and <b>Canvas will not export quizzes</b> — around 13 of them, worth 175+ marks of her own questions, exist only as links. Anything she has posted since that date is also absent.',
+  sources: 'The <b>scope</b> (36 criteria), the <b>test format</b>, and <b>which case studies are examinable</b> come straight from the Canvas export — the Focus Points document, the Assessment Overview, and the Case Study Workbook. Cards carrying a 📄 <b>Source</b> line are traceable to a specific course document or lecture slide (86 of 392 — her nine Module 1 decks were mined on 5 Aug 2026), and any marking schedule labelled "verbatim" was copied from the lecturer\'s own model answer. <b>Everything else is standard textbook anatomy and physiology written for this pack, then cross-checked against her slides and against the Module 1 hub.</b> Where the lecture\'s figures differ from the textbook, the lecture wins and the card says so — atmospheric gas pressures, conduction-system rates, CO₂ transport percentages and respiratory membrane thickness were all corrected that way. If a card gives a number with no source line, treat it as a useful approximation rather than something she will mark you against. <b>What is missing:</b> the archive was taken on 27 July 2026 and <b>Canvas will not export quizzes</b> — around 13 of them, worth 175+ marks of her own questions, exist only as links. Anything she has posted since that date is also absent.',
 
   topics: [
     { id:'cvs-anat',    name:'Heart anatomy & flow',   icon:'🫀' },
@@ -354,8 +354,8 @@ const PACK = {
     a:'A fibrous <b>capsule</b> with inward <b>trabeculae</b>. Under it the <b>subcapsular sinus</b>. Then the <b>outer cortex</b> — follicles with germinal centres, packed with <b>B cells</b>. The <b>deep cortex (paracortex)</b> holds <b>T cells</b> and dendritic cells. The inner <b>medulla</b> has medullary cords (plasma cells, macrophages) and medullary sinuses.' },
   { type:'flash', topic:'immune', crit:'cs-vacc', q:'Why does lymph flow SLOWLY through a lymph node, and why does that matter?',
     a:'Several <b>afferent</b> vessels enter the convex surface but only one or two <b>efferent</b> vessels leave at the hilum. Lymph therefore pools and stagnates, giving <b>macrophages time to phagocytose</b> debris and pathogens and giving lymphocytes time to meet antigen.' },
-  { type:'flash', topic:'immune', crit:'cs-vacc', q:'Which cells find and present antigens to the rest of the immune system?',
-    a:'<b>Antigen-presenting cells (APCs)</b>: <b>dendritic cells</b> (the most important), <b>macrophages</b>, and <b>B cells</b>. They engulf the antigen, process it, and display fragments on <b>MHC class II</b> on their surface.' },
+  { type:'flash', topic:'immune', crit:'cs-vacc', src:'2026 Lymphatic system slides 13–14', q:'Which cells find and present antigens to the rest of the immune system?',
+    a:'The lecture names <b>macrophages and B lymphocytes</b> — they collect antigens in the tissue fluid and <b>present them to T cells to organise the immune system</b>, after which the B cells form antibodies. <i>(Textbooks add <b>dendritic cells</b> as the most effective professional APC, and describe display on <b>MHC class II</b>; her slide does not mention either, so lead with macrophages and B cells.)</i>' },
   { type:'flash', topic:'immune', crit:'cs-vacc', q:'Which cell orchestrates a full-blown adaptive immune response, and how?',
     a:'The <b>helper T cell (CD4+)</b>. It binds antigen presented on MHC II, receives co-stimulation, then releases <b>cytokines</b> that activate <b>B cells</b> (→ plasma cells + memory B cells), <b>cytotoxic T cells (CD8+)</b> and <b>macrophages</b>. Without helper T cells the response barely gets going — which is why HIV is so devastating.' },
   { type:'flash', topic:'immune', crit:'cs-vacc', q:'What is the difference between VACCINATION and IMMUNISATION?',
@@ -425,17 +425,17 @@ const PACK = {
      Neither formative test asks a single question on this. It is a
      discrete, memorisable fact set — ideal MCQ material.
      ══════════════════════════════════════════════════════════════════ */
-  { type:'flash', topic:'cvs-ecg', crit:'cvs-7', q:'What causes the FIRST heart sound (S1, "lub")?',
+  { type:'flash', topic:'cvs-ecg', crit:'cvs-7', src:'2026 Cardiovascular system 2-3 slides 27–28', q:'What causes the FIRST heart sound (S1, "lub")?',
     a:'Closure of the <b>atrioventricular valves</b> (mitral and tricuspid) at the <b>start of ventricular systole</b>, as ventricular pressure rises above atrial pressure. It is <b>longer and lower-pitched</b> than S2.' },
-  { type:'flash', topic:'cvs-ecg', crit:'cvs-7', q:'What causes the SECOND heart sound (S2, "dub")?',
+  { type:'flash', topic:'cvs-ecg', crit:'cvs-7', src:'2026 Cardiovascular system 2-3 slides 27–28', q:'What causes the SECOND heart sound (S2, "dub")?',
     a:'Closure of the <b>semilunar valves</b> (aortic and pulmonary) at the <b>start of ventricular diastole</b>, as the ventricles relax and blood begins to flow back towards them. Shorter and sharper than S1.' },
   { type:'flash', topic:'cvs-ecg', crit:'cvs-7', q:'What is a third heart sound (S3) and when is it abnormal?',
     a:'A low-pitched sound in <b>early diastole</b> caused by blood rushing into the ventricle during rapid passive filling. <b>Normal</b> in children, young adults and pregnancy; in an older adult it suggests <b>heart failure or volume overload</b> ("ventricular gallop").' },
   { type:'flash', topic:'cvs-ecg', crit:'cvs-7', q:'What is a fourth heart sound (S4)?',
     a:'A late-diastolic sound caused by <b>atrial contraction forcing blood into a stiff, non-compliant ventricle</b>. Almost always abnormal — associated with hypertension, ventricular hypertrophy and ischaemia ("atrial gallop").' },
-  { type:'flash', topic:'cvs-ecg', crit:'cvs-7', q:'What causes a heart MURMUR?',
+  { type:'flash', topic:'cvs-ecg', crit:'cvs-7', src:'2026 Cardiovascular system 2-3 slide 27', q:'What causes a heart MURMUR?',
     a:'<b>Turbulent blood flow</b>. Usually either a <b>stenotic</b> valve (narrowed, so blood is forced through a tight opening) or an <b>incompetent/regurgitant</b> valve (leaking backwards). Can also occur with anaemia or high flow states.' },
-  { type:'flash', topic:'cvs-ecg', crit:'cvs-7', q:'Why is each valve NOT auscultated directly over its anatomical position?',
+  { type:'flash', topic:'cvs-ecg', crit:'cvs-7', src:'2026 Cardiovascular system 2-3 slide 32', q:'Why is each valve NOT auscultated directly over its anatomical position?',
     a:'Because sound travels <b>in the direction of blood flow</b>. You listen <b>downstream</b> of the valve, where the sound is projected onto the chest wall — which is why the aortic area is at the right sternal border even though the aortic valve sits centrally.' },
   { type:'mcq', topic:'cvs-ecg', crit:'cvs-7', q:'Where is the AORTIC area for auscultation?',
     options:['2nd intercostal space, right sternal border','2nd intercostal space, left sternal border','5th intercostal space, left midclavicular line','4th intercostal space, left lower sternal border'], correct:0,
@@ -618,7 +618,7 @@ const PACK = {
     a:'About <b>75% saturated</b> — only about a quarter of the carried oxygen is unloaded at rest. That reserve is the <b>venous oxygen reserve</b>: during exercise, tissues can extract far more without any increase in blood flow.' },
   { type:'flash', topic:'resp-gas', crit:'resp-10', q:'List the factors that affect the rate of internal respiration.',
     a:'<b>Partial pressure gradient</b> (steeper = faster), <b>surface area</b> available, <b>diffusion distance</b> (oedema increases it and slows exchange), <b>solubility and molecular weight</b> of the gas, and <b>tissue perfusion</b> — no blood flow, no exchange.' },
-  { type:'flash', topic:'resp-gas', crit:'resp-10', q:'What is the Bohr effect and why is it so useful?',
+  { type:'flash', topic:'resp-gas', crit:'resp-10', src:'2026 RESP 3 slide 16', q:'What is the Bohr effect and why is it so useful?',
     a:'A rise in <b>PCO₂</b>, a fall in <b>pH</b>, a rise in <b>temperature</b> or a rise in <b>2,3-BPG</b> all <b>reduce haemoglobin\'s affinity for oxygen</b> — the dissociation curve shifts <b>RIGHT</b>. All four are features of <b>metabolically active tissue</b>, so haemoglobin automatically dumps more oxygen exactly where it is needed most.' },
   { type:'flash', topic:'resp-gas', crit:'resp-10', q:'Why does exercising muscle extract far more oxygen than resting muscle from the same blood?',
     a:'Active muscle is <b>warmer, more acidic and has a higher PCO₂</b>. Each of those shifts the oxygen–haemoglobin dissociation curve to the <b>right</b>, so at any given PO₂ haemoglobin holds on to less oxygen and releases more. Tissue PO₂ also falls lower, steepening the gradient.' },
@@ -664,9 +664,9 @@ const PACK = {
      BLIND SPOT · resp-15 — EMOTIONAL AND CONSCIOUS CONTROL
      Directly underpins the Panic Attack scenario, and untested anywhere.
      ══════════════════════════════════════════════════════════════════ */
-  { type:'flash', topic:'resp-control', crit:'resp-15', q:'How do the hypothalamus and limbic system influence breathing?',
-    a:'They feed into the respiratory centres so that <b>emotion, pain and temperature</b> change rate and depth — you gasp when frightened, hold your breath when sobbing, and breathe faster when anxious or febrile. This is the pathway that drives <b>hyperventilation in a panic attack</b>.' },
-  { type:'flash', topic:'resp-control', crit:'resp-15', q:'By what pathway does VOLUNTARY control of breathing reach the respiratory muscles?',
+  { type:'flash', topic:'resp-control', crit:'resp-15', src:'2026 RESP4 slide 18', q:'How do the hypothalamus and limbic system influence breathing?',
+    a:'<b>Unconscious</b> control: emotions act through the <b>hypothalamus and limbic system</b> on the inspiratory centre to modify rate and depth. The lecture\'s own example is <b>anger leading to breath holding</b> — note some emotions <b>increase</b> the rate and others <b>decrease</b> it. This is also the pathway that drives <b>hyperventilation in a panic attack</b>.' },
+  { type:'flash', topic:'resp-control', crit:'resp-15', src:'2026 RESP4 slide 18', q:'By what pathway does VOLUNTARY control of breathing reach the respiratory muscles?',
     a:'The <b>motor cortex</b> sends signals down the <b>corticospinal tracts</b> directly to the motor neurons of the diaphragm and intercostals — <b>bypassing the medullary respiratory centres entirely</b>. That is why you can consciously override your own breathing to speak, sing, swim or hold your breath.' },
   { type:'flash', topic:'resp-control', crit:'resp-15', q:'Why can you NOT kill yourself by holding your breath?',
     a:'Voluntary control is overridden. As breath-holding continues, <b>PCO₂ and H⁺ rise</b> and PO₂ falls; the <b>central and peripheral chemoreceptors</b> drive the medullary centres so hard that involuntary inspiration takes over at the "breakpoint". If someone did hold on to unconsciousness, voluntary control is lost and automatic breathing resumes immediately.' },
@@ -716,9 +716,9 @@ const PACK = {
   /* ══════════════════════════════════════════════════════════════════
      BLIND SPOT · resp-16 — EXERCISE, TEMPERATURE, PAIN, IRRITATION
      ══════════════════════════════════════════════════════════════════ */
-  { type:'flash', topic:'resp-control', crit:'resp-16', q:'What is hyperpnoea, and how does it differ from hyperventilation?',
+  { type:'flash', topic:'resp-control', crit:'resp-16', src:'2026 RESP4 slide 21 (her own question)', q:'What is hyperpnoea, and how does it differ from hyperventilation?',
     a:'<b>Hyperpnoea</b> is the increased rate and depth of breathing during exercise that <b>matches</b> metabolic demand — arterial PO₂, PCO₂ and pH stay almost <b>unchanged</b>. <b>Hyperventilation</b> is breathing in excess of demand, so PCO₂ <b>falls</b> and alkalosis results.' },
-  { type:'flash', topic:'resp-control', crit:'resp-16', q:'What actually drives the increase in ventilation during exercise?',
+  { type:'flash', topic:'resp-control', crit:'resp-16', src:'2026 RESP4 slide 21', q:'What actually drives the increase in ventilation during exercise?',
     a:'Not falling oxygen — arterial PO₂ barely changes. It is driven by <b>psychological/anticipatory signals from the cerebral cortex</b>, <b>collateral signals from the motor cortex</b> as it activates muscle, and <b>proprioceptors in the moving joints and muscles</b> feeding back to the respiratory centres.' },
   { type:'flash', topic:'resp-control', crit:'resp-16', q:'Describe the pattern of ventilation at the start and end of exercise.',
     a:'At the onset there is an <b>abrupt increase</b> (neural, anticipatory), then a <b>gradual further rise</b> to a steady state. When exercise stops there is an <b>abrupt decrease</b> followed by a <b>gradual decline</b> back to resting levels. The abrupt changes are neural; the gradual ones are chemical.' },
@@ -726,8 +726,8 @@ const PACK = {
     a:'A <b>rise</b> in body temperature (fever, exercise, heat) <b>increases</b> respiratory rate — partly a direct effect on the respiratory centres, partly through raised metabolic rate. <b>Hypothermia depresses</b> respiration. Sudden immersion in cold water triggers a reflex <b>gasp then apnoea</b>.' },
   { type:'flash', topic:'resp-control', crit:'resp-16', q:'How does pain affect breathing?',
     a:'Sudden severe pain typically causes a <b>brief apnoea (a gasp and hold)</b> followed by <b>rapid, shallow breathing</b>, mediated through the hypothalamus and limbic system. <b>Visceral pain</b> and stretching the anal sphincter tend to cause <b>apnoea</b> instead.' },
-  { type:'flash', topic:'resp-control', crit:'resp-16', q:'What reflexes protect the airway from irritants, and where does each originate?',
-    a:'<b>Sneeze</b> — irritation of the <b>nasal cavity</b>; air is forced out through the nose. <b>Cough</b> — irritation <b>below the larynx</b> (trachea, bronchi); the glottis closes, pressure builds, then air blasts out through the mouth. Both are accompanied by <b>reflex bronchoconstriction</b>. Severe irritation can cause <b>apnoea</b>.' },
+  { type:'flash', topic:'resp-control', crit:'resp-16', src:'2026 RESP4 slide 20', q:'What reflexes protect the airway from irritants, and where does each originate?',
+    a:'The lecture calls these the <b>pulmonary irritant reflexes</b> and says they <b>involve the carina</b>. Irritants — dust, mucus, fumes — stimulate receptors in the lungs, which <b>inhibit the inspiratory centre</b>, allow a <b>forceful expiration (a cough, with the trachealis muscle contracting)</b>, cause <b>bronchoconstriction</b>, and <b>increase ventilation</b>. A <b>sneeze</b> is the equivalent for the nasal cavity, expelling air through the nose.' },
   { type:'mcq', topic:'resp-control', crit:'resp-16', q:'During moderate exercise, arterial PO₂ and PCO₂:',
     options:['Both fall markedly','Both rise markedly','Remain remarkably constant','PO₂ falls while PCO₂ rises steeply'], correct:2,
     why:'This is the counter-intuitive fact worth remembering — ventilation rises to <b>match</b> demand, so the blood gases barely move.' },
@@ -972,7 +972,7 @@ const PACK = {
     model:'The lecturer\'s own marking schedule from Module 1 Formative Test Q26, reproduced verbatim. The examiner is testing whether you can separate structural evidence from inference.' },
 
   /* ══════════ cvs-3 · CAPILLARY FLUID DYNAMICS ══════════ */
-  { type:'flash', topic:'cvs-vessels', crit:'cvs-3', q:'What are the two opposing pressures governing fluid movement at a capillary?',
+  { type:'flash', topic:'cvs-vessels', crit:'cvs-3', src:'2026 CIRCULATION VESSELS CV1-2 slide 24', q:'What are the two opposing pressures governing fluid movement at a capillary?',
     a:'<b>Hydrostatic pressure (HP)</b> — the blood pressure inside the capillary, which <b>pushes fluid OUT</b>. <b>Colloid osmotic (oncotic) pressure (OP)</b> — generated by <b>plasma proteins, mainly albumin</b>, which cannot cross the wall, and which <b>pulls fluid IN</b>.' },
   { type:'flash', topic:'cvs-vessels', crit:'cvs-3', q:'What happens at the ARTERIAL end of a capillary, and why?',
     a:'Hydrostatic pressure is high (~35 mmHg) and exceeds oncotic pressure (~25 mmHg), so there is <b>net FILTRATION</b> — fluid, oxygen and nutrients are pushed out into the interstitial space for the cells to use.' },
@@ -1087,17 +1087,17 @@ const PACK = {
     why:'Two of these come straight from the formative. The pulmonary circuit is <b>low</b> pressure, and coronary perfusion happens in <b>diastole</b>.' },
 
   /* ══════════ cvs-8 · CONDUCTION, CARDIAC CYCLE, ECG ══════════ */
-  { type:'flash', topic:'cvs-ecg', crit:'cvs-8', q:'Name the components of the cardiac conduction system in order.',
+  { type:'flash', topic:'cvs-ecg', crit:'cvs-8', src:'2026 CVS 3 slides 3 & 6', q:'Name the components of the cardiac conduction system in order.',
     a:'<b>SA node</b> (in the right atrial wall) → <b>AV node</b> (in the interatrial septum) → <b>AV bundle (bundle of His)</b> → <b>right and left bundle branches</b> (down the interventricular septum) → <b>Purkinje fibres</b> (through the ventricular myocardium, from the apex upwards).' },
-  { type:'flash', topic:'cvs-ecg', crit:'cvs-8', q:'Why is the SA node the pacemaker, and what are the intrinsic rates of the backup pacemakers?',
-    a:'The SA node depolarises spontaneously <b>fastest</b>, so it sets the pace before anything else can. The lecture\'s own figures: <b>SA node ~70/min</b>, <b>AV node 40–60/min</b>, <b>bundle of His ~30/min</b>. Everything below can take over if forced, just more slowly — which is exactly why heart block produces the rate it does. <i>(Textbooks usually quote the SA node\'s range as 60–100/min; use the lecture\'s ~70 if she asks for a figure.)</i>' },
+  { type:'flash', topic:'cvs-ecg', crit:'cvs-8', src:'2026 CVS 3 slide 6', q:'Why is the SA node the pacemaker, and what are the intrinsic rates of the backup pacemakers?',
+    a:'The SA node depolarises spontaneously <b>fastest</b>, so it sets the pace before anything else can. The lecture gives four tiers: <b>SA node 70 b/min</b> → <b>AV node 40–60 b/min</b> → <b>bundle of His 30 b/min</b> → <b>the heart muscle walls themselves, self-exciting at 20 b/min — which she notes is "not sufficient"</b>. Everything below can take over if forced, just more slowly, which is exactly why heart block produces the rate it does. <i>(Her slide 6 writes the AV node as 50 b/min and a later slide as 40–60 — either is safe. Textbooks quote the SA node as 60–100/min; use her 70 if she asks for a figure.)</i>' },
   { type:'flash', topic:'cvs-ecg', crit:'cvs-8', q:'Why is there a deliberate DELAY at the AV node?',
     a:'The impulse is held for about <b>0.1 second</b>. This lets the <b>atria finish contracting and completely empty into the ventricles before the ventricles contract</b>. Without the delay, atria and ventricles would contract together and ventricular filling would be badly reduced.' },
   { type:'flash', topic:'cvs-ecg', crit:'cvs-8', q:'Why do the ventricles contract from the APEX upwards?',
     a:'The Purkinje fibres deliver the impulse to the apex first. Contracting from the bottom up <b>squeezes blood upwards towards the semilunar valves</b> at the top of the ventricles — like squeezing a tube of toothpaste from the end. Contracting top-down would trap blood at the apex.' },
   { type:'flash', topic:'cvs-ecg', crit:'cvs-8', q:'What do the P wave, QRS complex and T wave represent?',
     a:'<b>P wave</b> — depolarisation of the <b>atria</b>, followed by atrial contraction. <b>QRS complex</b> — depolarisation of the <b>ventricles</b>, followed by ventricular contraction (atrial repolarisation is hidden inside it). <b>T wave</b> — repolarisation of the <b>ventricles</b>, followed by ventricular relaxation.' },
-  { type:'flash', topic:'cvs-ecg', crit:'cvs-8', q:'Name the phases of the cardiac cycle in order.',
+  { type:'flash', topic:'cvs-ecg', crit:'cvs-8', src:'2026 Cardiovascular system 2-3 slide 29 (Patton fig. 28-19)', q:'Name the phases of the cardiac cycle in order.',
     a:'<b>Atrial systole</b> (tops up the ventricles — the "atrial kick") → <b>isovolumetric ventricular contraction</b> (all valves shut, pressure builds, no volume change) → <b>ventricular ejection</b> (semilunar valves open) → <b>isovolumetric relaxation</b> (all valves shut again) → <b>ventricular filling</b> (AV valves open, mostly passive).' },
   { type:'mcq', topic:'cvs-ecg', crit:'cvs-8', src:'BN2 Formative Test PDF Model Answers — Q1', q:'Which part of the ECG best represents ventricular repolarisation?',
     options:['The P wave','The QRS complex','The T wave','An ECG trace does not show ventricular repolarisation'], correct:2,
@@ -1123,7 +1123,7 @@ const PACK = {
            'The Purkinje fibres carry it through the ventricular myocardium, which contracts from the apex upwards'],
     why:'The AV delay is the step people leave out — and it is the one with a stated reason.' },
   { type:'match', topic:'cvs-ecg', crit:'cvs-8', q:'Match each conduction structure to its feature.',
-    pairs:[ ['SA node','Intrinsic rate ~70/min; the normal pacemaker'],
+    pairs:[ ['SA node','Intrinsic rate 70 b/min; the normal pacemaker'],
             ['AV node','Delays the impulse by ~0.1 s to allow ventricular filling'],
             ['Bundle of His','Only electrical connection between atria and ventricles'],
             ['Purkinje fibres','Spread the impulse through the ventricles from the apex upwards'] ],
@@ -1471,9 +1471,9 @@ const PACK = {
   /* ══════════ resp-7 · VENTILATION MECHANICS ══════════ */
   { type:'flash', topic:'resp-mech', crit:'resp-7', q:'State Boyle\'s law and apply it to breathing.',
     a:'At constant temperature, the <b>pressure of a gas is inversely proportional to its volume</b>. Increasing thoracic volume therefore <b>lowers</b> intrapulmonary pressure below atmospheric, and air flows in down the gradient. Decreasing volume raises pressure above atmospheric and air flows out.' },
-  { type:'flash', topic:'resp-mech', crit:'resp-7', q:'Which muscles produce quiet inspiration and quiet expiration?',
+  { type:'flash', topic:'resp-mech', crit:'resp-7', src:'2026 RESP4 slide 24 (her comparison table)', q:'Which muscles produce quiet inspiration and quiet expiration?',
     a:'<b>Quiet inspiration is ACTIVE</b> — the <b>diaphragm</b> (about 75% of the work) contracts and descends, and the <b>external intercostals</b> lift the ribs up and out. <b>Quiet expiration is PASSIVE</b> — the muscles relax and the <b>elastic recoil</b> of the lungs and chest wall does the work. No muscle contraction is needed.' },
-  { type:'flash', topic:'resp-mech', crit:'resp-7', q:'Which accessory muscles are used in FORCED inspiration and FORCED expiration?',
+  { type:'flash', topic:'resp-mech', crit:'resp-7', src:'2026 RESP4 slide 24 (her comparison table)', q:'Which accessory muscles are used in FORCED inspiration and FORCED expiration?',
     a:'<b>Forced inspiration</b>: sternocleidomastoid, scalenes, pectoralis minor and erector spinae — visibly used in respiratory distress. <b>Forced expiration</b>: <b>internal intercostals</b> (pulling the ribs down and in) and the <b>abdominal wall muscles</b> (pushing the diaphragm up).' },
   { type:'flash', topic:'resp-mech', crit:'resp-7', q:'Why must intrapleural pressure stay NEGATIVE?',
     a:'Intrapleural pressure is about <b>4 mmHg below intrapulmonary pressure</b> at all times. That negative transpulmonary pressure is what <b>holds the lung expanded against its own elastic recoil</b>. If air enters the pleural cavity (<b>pneumothorax</b>) the pressure equalises and the lung <b>collapses (atelectasis)</b>.' },
@@ -1531,7 +1531,7 @@ const PACK = {
     why:'CO₂ has a much SMALLER gradient (5 mmHg) but is 20× more soluble.' },
 
   /* ══════════ resp-11 · OXYGEN TRANSPORT ══════════ */
-  { type:'flash', topic:'resp-gas', crit:'resp-11', q:'How is oxygen carried in the blood?',
+  { type:'flash', topic:'resp-gas', crit:'resp-11', src:'2026 RESP 3 slides 12–14', q:'How is oxygen carried in the blood?',
     a:'<b>~98.5% bound to haemoglobin</b> as <b>oxyhaemoglobin</b> — each Hb molecule carries up to <b>four O₂</b>, one on each haem iron. Only <b>~1.5% is dissolved</b> in the plasma — but it is that dissolved fraction that produces the PO₂ and drives diffusion.' },
   { type:'flash', topic:'resp-gas', crit:'resp-11', q:'Why is the oxygen–haemoglobin dissociation curve S-shaped (sigmoid)?',
     a:'Because of <b>cooperative binding</b> — as each O₂ binds, haemoglobin changes shape and its affinity for the next O₂ increases. The <b>flat plateau at high PO₂</b> means saturation stays near 100% even if alveolar PO₂ falls somewhat (a safety margin at altitude or in mild lung disease). The <b>steep portion at tissue PO₂</b> means a small fall in tissue PO₂ unloads a lot of oxygen.' },
@@ -1555,7 +1555,7 @@ const PACK = {
     why:'Statement 1 is verbatim from the formative. Heat shifts the curve <b>right</b>, and ~98.5% of O₂ is carried on haemoglobin.' },
 
   /* ══════════ resp-12 · CARBON DIOXIDE TRANSPORT ══════════ */
-  { type:'flash', topic:'resp-gas', crit:'resp-12', q:'In what three forms is carbon dioxide carried in the blood?',
+  { type:'flash', topic:'resp-gas', crit:'resp-12', src:'2026 RESP 3 slides 22–23', q:'In what three forms is carbon dioxide carried in the blood?',
     a:'<b>70% as bicarbonate ions (HCO₃⁻)</b> in the plasma. <b>20–30% as carbamino-haemoglobin</b>, bound to the <b>amino groups</b> of haemoglobin inside the red cells — <b>not</b> to the haem iron, so it does not compete with oxygen. <b>7–10% dissolved</b> in plasma. Note the division of labour: oxygen rides on the haem groups, CO₂ on the amino groups.' },
   { type:'flash', topic:'resp-gas', crit:'resp-12', q:'Write out the bicarbonate buffer equation and say where it happens.',
     a:'<b>CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻</b>. It happens fast <b>inside the red blood cell</b>, where the enzyme <b>carbonic anhydrase</b> catalyses the first step. The HCO₃⁻ then moves out into the plasma.' },
@@ -1581,7 +1581,7 @@ const PACK = {
     model:'The lecturer\'s own worked answer from the Module 1 formative test. Note the mirror case: hyperventilation blows off CO₂, the reaction runs the other way, H⁺ falls and pH rises — respiratory alkalosis.' },
 
   /* ══════════ resp-13 · RESPIRATORY RHYTHM ══════════ */
-  { type:'flash', topic:'resp-control', crit:'resp-13', q:'Which centres generate and modify the basic respiratory rhythm?',
+  { type:'flash', topic:'resp-control', crit:'resp-13', src:'2026 RESP4 slides 9–11', q:'Which centres generate and modify the basic respiratory rhythm?',
     a:'In the <b>medulla oblongata</b>: the <b>ventral respiratory group (VRG)</b> contains the pacemaker (the pre-Bötzinger complex) that sets the basic rhythm, and the <b>dorsal respiratory group (DRG)</b> integrates sensory input from chemoreceptors and stretch receptors. In the <b>pons</b>, the <b>pontine respiratory group</b> smooths the transition between inspiration and expiration.' },
   { type:'flash', topic:'resp-control', crit:'resp-13', q:'What is eupnoea, and what is the normal respiratory rate?',
     a:'<b>Eupnoea</b> is normal, quiet, unlaboured breathing. The normal adult rate is <b>12–20 breaths per minute</b>, with inspiration lasting about 2 seconds and expiration about 3.' },
@@ -1603,9 +1603,9 @@ const PACK = {
     distractors:['Detects blood pressure in the aortic arch','Produces surfactant'] },
 
   /* ══════════ resp-14 · CHEMICAL CONTROL OF VENTILATION ══════════ */
-  { type:'flash', topic:'resp-control', crit:'resp-14', q:'Where are the central and peripheral chemoreceptors, and what does each detect?',
+  { type:'flash', topic:'resp-control', crit:'resp-14', src:'2026 RESP4 slide 16', q:'Where are the central and peripheral chemoreceptors, and what does each detect?',
     a:'<b>Central chemoreceptors</b> sit in the <b>medulla</b> and respond to <b>H⁺ in the cerebrospinal fluid</b>, which reflects arterial PCO₂ (CO₂ crosses the blood–brain barrier and forms carbonic acid). <b>Peripheral chemoreceptors</b> are in the <b>carotid bodies and aortic arch</b> and respond to <b>PO₂, PCO₂ and H⁺</b> in arterial blood.' },
-  { type:'flash', topic:'resp-control', crit:'resp-14', q:'Which chemical stimulus is the MOST powerful driver of ventilation, and why is that surprising?',
+  { type:'flash', topic:'resp-control', crit:'resp-14', src:'2026 RESP4 slide 17', q:'Which chemical stimulus is the MOST powerful driver of ventilation, and why is that surprising?',
     a:'<b>Rising PCO₂ (and the H⁺ it generates)</b> — not falling oxygen. A rise of just <b>5 mmHg</b> in PCO₂ can double ventilation. Oxygen only becomes a significant drive when arterial <b>PO₂ falls below about 60 mmHg</b>, at which point the peripheral chemoreceptors fire hard. So you breathe to get rid of CO₂ far more than to take in O₂.' },
   { type:'flash', topic:'resp-control', crit:'resp-14', q:'What is the "hypoxic drive" and why does it matter clinically?',
     a:'In some patients with chronic CO₂ retention (advanced COPD), the central chemoreceptors adapt to the persistently high CO₂ and stop responding to it. Ventilation then depends mainly on the <b>low PO₂ stimulus</b>. Giving high-flow oxygen carelessly can remove that drive and worsen CO₂ retention — hence controlled oxygen targets, often <b>88–92%</b>, in those specific patients.' },
@@ -1668,7 +1668,7 @@ const PACK = {
   { type:'flash', topic:'lymph', crit:'lymph-1', src:'2026 Lymphatic system slide 30',
     q:'State the three main functions of the lymphatic system.',
     a:'<b>1. Fluid balance</b> — returning the roughly <b>3 L/day</b> of filtered fluid and leaked plasma protein that the capillaries do not reabsorb, preventing oedema. The lecture notes the flow is very slow (about <b>120 mL/hr</b>) and it is a <b>low pressure</b> system. <b>2. Immune defence</b> — housing lymphocytes and filtering lymph through nodes. <b>3. Lipid absorption</b> — absorbing dietary fats from the small intestine.' },
-  { type:'flash', topic:'lymph', crit:'lymph-1', q:'How does the lymphatic system absorb dietary fat?',
+  { type:'flash', topic:'lymph', crit:'lymph-1', src:'2026 Lymphatic system slides 6 & 15', q:'How does the lymphatic system absorb dietary fat?',
     a:'Specialised lymphatic capillaries called <b>lacteals</b> sit in each intestinal villus. Fats are too large to enter the blood capillaries, so they are packaged into <b>chylomicrons</b> and taken up by the lacteals. The milky fat-laden lymph is called <b>chyle</b>; it drains to the <b>cisterna chyli</b>, up the <b>thoracic duct</b>, and enters the blood at the left subclavian vein.' },
   { type:'flash', topic:'lymph', crit:'lymph-1', q:'Why is returning leaked PROTEIN as important as returning fluid?',
     a:'Plasma proteins that escape into the interstitium cannot re-enter the blood capillary. If they accumulated, they would raise interstitial oncotic pressure and <b>hold fluid in the tissues</b>, causing progressive oedema. Only the lymphatics can retrieve them — which is why lymphatic failure produces a stubborn, protein-rich oedema.' },
@@ -1685,18 +1685,18 @@ const PACK = {
     why:'Lacteals in the intestinal villi absorb dietary fat as chyle.' },
 
   /* ══════════ lymph-2 · FUNCTIONAL ANATOMY ══════════ */
-  { type:'flash', topic:'lymph', crit:'lymph-2', q:'How is a lymphatic CAPILLARY structured, and why does that structure matter?',
+  { type:'flash', topic:'lymph', crit:'lymph-2', src:'2026 Lymphatic system slide 6', q:'How is a lymphatic CAPILLARY structured, and why does that structure matter?',
     a:'It is <b>blind-ended</b> and its endothelial cells <b>overlap loosely like roof shingles</b>, forming one-way <b>mini-valves</b>. <b>Anchoring filaments</b> tether them to surrounding tissue. When interstitial fluid pressure rises, the tissue pulls the flaps open, fluid floods in, and the flaps then close so it cannot escape. That is why lymphatics can take up large particles and even whole cells.' },
-  { type:'flash', topic:'lymph', crit:'lymph-2', q:'Trace the lymphatic pathway from capillary to bloodstream.',
+  { type:'flash', topic:'lymph', crit:'lymph-2', src:'2026 Lymphatic system slides 6–7', q:'Trace the lymphatic pathway from capillary to bloodstream.',
     a:'<b>Lymphatic capillaries → lymphatic collecting vessels → lymph nodes → lymphatic trunks → lymphatic ducts → subclavian veins.</b>' },
   { type:'flash', topic:'lymph', crit:'lymph-2', q:'Which regions do the thoracic duct and the right lymphatic duct drain?',
     a:'The <b>thoracic duct</b> drains about <b>three-quarters of the body</b> — everything below the diaphragm plus the left side of the head, neck, chest and left arm — into the <b>left subclavian vein</b>. The <b>right lymphatic duct</b> drains only the <b>right side of the head, neck, chest and right arm</b> into the right subclavian vein.' },
   { type:'flash', topic:'lymph', crit:'lymph-2', q:'Describe the structure and functions of the SPLEEN.',
     a:'The largest lymphoid organ, in the <b>left upper quadrant</b>. <b>White pulp</b> (lymphocytes around arterioles) mounts immune responses against blood-borne antigens. <b>Red pulp</b> filters the blood, <b>breaking down worn-out red cells</b> and recycling iron, and stores platelets. Highly vascular, so rupture causes rapid life-threatening haemorrhage.' },
-  { type:'flash', topic:'lymph', crit:'lymph-2', q:'What does the THYMUS do, and what happens to it with age?',
-    a:'It is where <b>T lymphocytes mature</b> and are selected so they respond to foreign antigen but not to self. It is <b>largest and most active in childhood</b> and then <b>involutes</b> — progressively replaced by fat after puberty. It is a primary lymphoid organ: it makes lymphocytes competent rather than housing immune responses.' },
-  { type:'flash', topic:'lymph', crit:'lymph-2', q:'Where are the tonsils and MALT, and what do they do?',
-    a:'The <b>tonsils</b> — pharyngeal (adenoid), palatine and lingual — form a ring guarding the entrance to the pharynx. <b>MALT</b> (mucosa-associated lymphoid tissue), including <b>Peyer\'s patches</b> in the ileum and the appendix, guards the gut. Both sit at the body\'s main entry points, sampling everything that is swallowed or inhaled.' },
+  { type:'flash', topic:'lymph', crit:'lymph-2', src:'2026 Lymphatic system slides 20–21', q:'What does the THYMUS do, and what happens to it with age?',
+    a:'It is where <b>T lymphocytes mature</b> and become immunocompetent before moving on to the other lymphoid organs, and it <b>secretes thymosin</b>, which stimulates lymphocytes. Bi-lobed, in the <b>anterosuperior mediastinum</b>, anterior to the trachea and deep to the manubrium; it has a cortex and medulla. Important in children, it <b>degenerates in adults</b>. The lecture stresses it is the <b>odd one out</b>: <b>no afferent lymphatics or nodules, it does not filter lymph, no reticular tissue, and never any B cells</b>.' },
+  { type:'flash', topic:'lymph', crit:'lymph-2', src:'2026 Lymphatic system slides 24 & 26', q:'Where are the tonsils and MALT, and what do they do?',
+    a:'The lecture names <b>four</b> tonsil groups: <b>lingual, palatine, pharyngeal (adenoids) and tubal</b>. Their <b>crypts</b> — hollows in the epithelium — trap bacteria and jump-start the immune response; they are the defensive mechanism for the pharynx. <b>MALT</b> (mucosa-associated lymphoid tissue) covers <b>Peyer\'s patches</b> (mucosa of the small intestine, especially the <b>ileum</b>), the tonsils and the appendix, plus <b>lymphoid nodules in the walls of the bronchi</b>.' },
   { type:'order', topic:'lymph', crit:'lymph-2', src:'MODULE 1 Formative Test (Canvas) — Q24', q:'Place the structures of the lymphatic system in order from the smallest lymphatic through to where it drains into the venous system.',
     steps:['Lymph capillaries','Lymph collecting vessels','Lymph nodes','Lymphatic ducts','Subclavian vein'],
     why:'From the formative test, which warns there are distractors — "lymphatic arteries" and "lymphatic veins" do not exist.' },
@@ -1705,9 +1705,9 @@ const PACK = {
     why:'A <b>primary</b> lymphoid organ — the others are secondary, where mature cells meet antigen.' },
 
   /* ══════════ lymph-3 · CVS ↔ LYMPHATIC RELATIONSHIP ══════════ */
-  { type:'flash', topic:'lymph', crit:'lymph-3', q:'Where does lymph re-enter the cardiovascular system?',
+  { type:'flash', topic:'lymph', crit:'lymph-3', src:'2026 Lymphatic system slide 31', q:'Where does lymph re-enter the cardiovascular system?',
     a:'At the <b>subclavian veins</b> — the thoracic duct into the left, the right lymphatic duct into the right. It joins the venous blood just before it returns to the right atrium, completing the circuit that began as capillary filtration.' },
-  { type:'flash', topic:'lymph', crit:'lymph-3', q:'How does lymph move if there is no pump?',
+  { type:'flash', topic:'lymph', crit:'lymph-3', src:'2026 Lymphatic system slide 30', q:'How does lymph move if there is no pump?',
     a:'The same way venous blood does, plus one extra. <b>Skeletal muscle pump</b>, <b>respiratory pump</b>, <b>one-way valves</b>, <b>pulsation of adjacent arteries</b>, and — unique to lymphatics — <b>rhythmic contraction of smooth muscle in the walls of the larger collecting vessels</b>.' },
   { type:'flash', topic:'lymph', crit:'lymph-3', q:'How are the cardiovascular and lymphatic systems structurally similar and different?',
     a:'<b>Similar</b>: both have thin-walled vessels with valves, both are lined with endothelium, and both rely on the muscle and respiratory pumps. <b>Different</b>: the lymphatic system is a <b>one-way drainage system, not a circuit</b> — it has no pump and begins as <b>blind-ended</b> capillaries; the CVS is a closed circuit driven by the heart.' },
@@ -1815,9 +1815,58 @@ const PACK = {
     options:['Everything below the diaphragm','The right side of the head, neck, chest and the right arm only',
              'The entire left side of the body','The whole body except the legs'], correct:1,
     why:'The asymmetry is the examinable point — the <b>thoracic duct</b> drains roughly three-quarters of the body, the right lymphatic duct only that one quadrant.' },
-  { type:'flash', topic:'lymph', crit:'lymph-2', fig:F('lymph-spleen'), figcap:FC('lymph-spleen'),
-    q:'From the diagram: distinguish the red pulp and white pulp of the spleen.',
-    a:'<b>White pulp</b> — sleeves of lymphocytes around the central arterioles; mounts <b>immune responses</b> against blood-borne antigens. <b>Red pulp</b> — sinusoids and cords that <b>filter the blood</b>, breaking down worn-out red cells, recycling iron and storing platelets. Its extreme vascularity is why a ruptured spleen bleeds so dangerously.' },
+  { type:'flash', topic:'lymph', crit:'lymph-2', src:'2026 Lymphatic system slides 18–19', fig:F('lymph-spleen'), figcap:FC('lymph-spleen'),
+    q:'Give the four functions of the spleen as the lecture lists them.',
+    a:'<b>1. Haemolysis</b> — breaks down worn-out red cells; the lecture calls it the <b>"RBC graveyard"</b>. Haemoglobin is recycled: the globin to amino acids, the iron stored as <b>ferritin</b>, and the non-iron part of haem to <b>bilirubin → liver → bile</b>. <b>2. Storage</b> — blood, red cells, and platelet breakdown products. <b>3. Immunity</b> — rich in macrophages and lymphocytes; its <b>sinusoid (discontinuous) capillaries</b> let macrophages grab invaders straight out of the blood. <b>4. Haematopoiesis</b> — makes red cells before birth and helps monocytes and lymphocytes mature. <i>(Textbooks split this as red pulp = filtration, white pulp = immunity — she does not use those terms.)</i>' },
+
+  /* ══════════════════════════════════════════════════════════════════
+     FROM THE LECTURE DECKS
+     Added 5 Aug 2026 after mining the nine Module 1 pptx decks. Everything
+     below is traceable to a slide. High altitude is an entire taught topic
+     the pack had no cards on at all.
+     ══════════════════════════════════════════════════════════════════ */
+  { type:'flash', topic:'resp-control', crit:'resp-16', src:'2026 RESP4 slide 22',
+    q:'What happens to ventilation at HIGH ALTITUDE, and why?',
+    a:'The fall in arterial PO₂ makes the <b>peripheral chemoreceptors (carotid bodies) more responsive to rises in PCO₂</b>, and the declining PO₂ then <b>directly stimulates them</b>. Ventilation rises as the brain tries to restore gas exchange. Because you are now breathing more, <b>arterial PCO₂ falls below its sea-level 40 mmHg</b> — so people living at altitude run a chronically low PCO₂.' },
+  { type:'flash', topic:'resp-control', crit:'resp-16', src:'2026 RESP4 slides 22–23',
+    q:'List the changes of ACCLIMATISATION to altitude over days to weeks.',
+    a:'<b>Blood:</b> increased haematocrit (<b>polycythaemia</b>) and red cell mass, decreased plasma volume, and a rise in <b>2,3-BPG</b> to help unload oxygen. <b>Muscle:</b> more capillaries, more myoglobin, more mitochondria, higher aerobic enzyme concentrations, and lower lactate production. <b>Lungs and heart:</b> hypoxic pulmonary vasoconstriction, rising pulmonary artery pressure, and eventually <b>right ventricular hypertrophy</b>. Above <b>8,000 m — the "death zone" — the body cannot acclimatise at all</b>.' },
+  { type:'mcq', topic:'resp-control', crit:'resp-16', src:'2026 RESP4 slide 22',
+    q:'A person who has lived at high altitude for years is likely to have an arterial PCO₂ that is:',
+    options:['Well above 40 mmHg','Below 40 mmHg','Exactly 40 mmHg','Undetectable'], correct:1,
+    why:'Sustained hyperventilation to compensate for low PO₂ <b>blows off CO₂</b>, so their PCO₂ sits below the sea-level value of 40 mmHg.' },
+  { type:'match', topic:'resp-control', crit:'resp-16', src:'2026 RESP4 slides 22–23',
+    q:'Match each acclimatisation change to what it achieves.',
+    pairs:[ ['Increased haematocrit and red cell mass','More haemoglobin, so more oxygen carried per unit of blood'],
+            ['Increase in 2,3-BPG','Shifts the curve right so haemoglobin unloads oxygen more readily'],
+            ['More capillaries in skeletal muscle','Shortens the diffusion distance to the muscle cells'],
+            ['Increased myoglobin and mitochondria','More oxygen storage and more aerobic capacity within the cell'],
+            ['Hypoxic pulmonary vasoconstriction','Diverts blood towards better-oxygenated alveoli'] ],
+    distractors:['Reduces the need to breathe','Lowers the haemoglobin concentration'] },
+  { type:'flash', topic:'resp-control', crit:'resp-14', src:'2026 RESP4 slide 17',
+    q:'What does HYPOCAPNIA do to breathing?',
+    a:'A low arterial PCO₂ <b>inhibits</b> the inspiratory centre, so breathing becomes <b>slow and shallow</b>. The lecture adds that <b>periods of apnoea may occur until the arterial PCO₂ rises again</b> and stimulates respiration. It is the mirror image of hypercapnia, which excites the centre.' },
+  { type:'flash', topic:'resp-control', crit:'resp-14', src:'2026 RESP4 slide 13',
+    q:'Beyond the chemical factors, what else does the lecture list as modifying rate and depth of breathing?',
+    a:'<b>Conscious control</b> (excites or inhibits), <b>emotions</b> (some excite, some inhibit), <b>degree of physical activity</b> (excites), <b>degree of lung inflation</b> (severe inflation inhibits), <b>irritants in the lungs</b>, and <b>narcotics — morphine and alcohol</b>. That last one is the clinically dangerous one: opioids depress the respiratory centre.' },
+  { type:'tfset', topic:'resp-control', crit:'resp-13', src:'2026 RESP4 slides 9 & 11',
+    q:'Are the following statements about the respiratory centres true or false?',
+    statements:[ {s:'The pontine respiratory group contains the apneustic (gasping) and pneumotaxic (off-switch) centres.',v:true},
+                 {s:'The pontine group fine-tunes the rhythm and helps prevent over-inflation of the lungs.',v:true},
+                 {s:'The VRG appears to be the basic rhythm generator — the pacemaker.',v:true},
+                 {s:'The inspiratory centre fires for about 2 seconds and is then inactive for about 3 seconds.',v:true} ],
+    why:'<b>Watch out:</b> her slides label the DRG two different ways — slide 11 calls it the <b>expiratory centre</b> (with three question marks beside it), while slide 16 calls it the <b>inspiratory centre</b> that chemoreceptors signal. Her clearest statement is slide 9: <b>VRG = rhythm generator, DRG = integrates chemoreceptor information for PCO₂</b>. If asked, answer with slide 9 and do not volunteer the DRG-as-expiratory-centre line.' },
+  { type:'mcq', topic:'resp-control', crit:'resp-14', src:'2026 RESP4 slide 14 (her own question)',
+    q:'Which of hypoxia (low O₂) or hypercapnia (high CO₂) has the stronger effect on breathing rate?',
+    options:['Hypoxia, because oxygen is what the cells need','Hypercapnia — the most powerful respiratory stimulant in a healthy person','They are exactly equal','Neither; breathing rate is purely voluntary'], correct:1,
+    why:'Her slide 17 puts it in those words: hypercapnia is the <b>"most powerful respiratory stimulant in a healthy individual"</b>. Oxygen only takes over below a PO₂ of about 60 mmHg.' },
+  { type:'mcq', topic:'lymph', crit:'lymph-1', src:'2026 Lymphatic system slides 27 & 8 (her own question and answer)',
+    q:'Lymphatic vessels:',
+    options:['collect excess fluid from interstitial spaces','drain blood from lymph nodes','are part of the venous system','are built like arteries'], correct:0,
+    why:'Her deck poses this and answers it: <b>"collect excess fluid from interstitial spaces"</b>. They are a one-way drainage system, not part of the venous circuit, and they are not built like arteries.' },
+  { type:'flash', topic:'lymph', crit:'lymph-2', src:'2026 Lymphatic system slide 17',
+    q:'Which lymphoid organs filter lymph, and which is the structural exception?',
+    a:'<b>Only the lymph nodes filter lymph.</b> All the lymphoid organs <b>except the thymus</b> are built from <b>reticular connective tissue</b>. The three lymphoid organs are <b>lymph nodes, spleen and thymus</b>; lymphoid <i>tissue</i> (MALT, Peyer\'s patches, the appendix) is diffuse rather than encapsulated.' },
 
   ],
 
