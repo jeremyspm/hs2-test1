@@ -38,7 +38,15 @@ for (const it of items) {
   if (!t) { fail('G1', it.where, 'no `tier`', label(it.o)); continue; }
   if (!TIERS[t]) { fail('G1', it.where, `unknown tier "${t}"`, label(it.o)); continue; }
   if (t === 'textbook') {
-    if (!it.o.why) fail('G1', it.where, '`textbook` tier requires a `why` reason string', label(it.o));
+    /* `srcNote`, not `why`. `why` is the explanation a reader gets when they answer a
+       drill card wrong, and filing the sourcing reason there meant 123 auto-marked
+       cards answered "why was I wrong?" with "no citation — standard textbook content
+       written for the pack" — while also overwriting ~97 real authored explanations
+       that pack.source.js already had. The gate is unchanged in strength: a textbook
+       card must still state why it has no citation. It just no longer does it in the
+       field the student reads. */
+    if (!it.o.srcNote) fail('G1', it.where, '`textbook` tier requires a `srcNote` saying why it has no citation', label(it.o));
+    if (it.o.why && it.o.why === it.o.srcNote) fail('G1', it.where, '`why` duplicates `srcNote` — `why` must explain the answer, not the sourcing', label(it.o));
   } else if (!it.o.ev || (Array.isArray(it.o.ev) && !it.o.ev.length)) {
     fail('G1', it.where, `tier "${t}" requires a non-empty \`ev\``, label(it.o));
   }

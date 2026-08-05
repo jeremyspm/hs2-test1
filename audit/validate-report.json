@@ -1,21 +1,8 @@
 {
- "failures": [
-  {
-   "gate": "G9",
-   "where": "criterion cvs-1",
-   "msg": "6 card(s), floor is 10 (blind)",
-   "detail": "Function of the cardiovascular system"
-  },
-  {
-   "gate": "G9",
-   "where": "criterion cvs-1",
-   "msg": "blind criterion has no SAQ card",
-   "detail": "Function of the cardiovascular system"
-  }
- ],
+ "failures": [],
  "tiers": {
-  "textbook": 433,
+  "textbook": 437,
   "taught": 33,
-  "verbatim": 195
+  "verbatim": 190
  }
 }

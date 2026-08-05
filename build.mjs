@@ -56,13 +56,31 @@ console.log(`built index.html — ${(out.length / 1024).toFixed(0)} KB`);
 console.log(`${P.cards.length} cards:`, Object.entries(types).sort((a, b) => b[1] - a[1]).map(([k, v]) => `${k} ${v}`).join(' · '));
 console.log('tiers:', Object.entries(tiers).sort((a, b) => b[1] - a[1]).map(([k, v]) => `${k} ${v}`).join(' · '));
 
-// coverage: which declared criteria are still under their card floor
+/* ── coverage gate ────────────────────────────────────────────────────────────
+   This used to print its findings and ship anyway, and the engine rendered the same
+   failures into the live page as a yellow banner — so a student's first sight of the
+   tool was a build-time lint result written in authoring vocabulary, telling them the
+   thing was broken before they had read a card.
+
+   The banner is gone from the student build. That only works if the failure is caught
+   HERE instead, so this now exits non-zero. The rule matches the engine's
+   `validateCoverage` exactly, including counting `alsoCrit`: a build that passes must
+   mean a page with nothing to complain about. Open the page with `?dev=1` to see the
+   same list at runtime. */
 const counts = {};
 for (const c of P.cards) for (const id of [c.crit, ...(c.alsoCrit ?? [])].filter(Boolean)) counts[id] = (counts[id] || 0) + 1;
-const MIN = 6, BLIND_MIN = 10;
-const short = (P.criteria ?? []).filter(c => (counts[c.id] || 0) < (c.blind ? BLIND_MIN : MIN));
-console.log(short.length
-  ? `${short.length} criteria under floor: ` + short.map(c => `${c.id} ${counts[c.id] || 0}/${c.blind ? BLIND_MIN : MIN}`).join(' · ')
-  : `all ${(P.criteria ?? []).length} criteria at or above their card floor ✓`);
+const { min: MIN = 6, blindMin: BLIND_MIN = 10, blindNeedsSaq = false } = P.coverage ?? {};
+const covErrs = [];
+for (const c of P.criteria ?? []) {
+  const floor = c.blind ? Math.max(MIN, BLIND_MIN) : MIN;
+  const n = counts[c.id] || 0;
+  if (n < floor) covErrs.push(`${c.id} has ${n} cards, needs ${floor}`);
+  if (c.blind && blindNeedsSaq && !P.cards.some(x => (x.crit === c.id || (x.alsoCrit ?? []).includes(c.id)) && x.type === 'saq'))
+    covErrs.push(`${c.id} is never practised anywhere in the course and has no written-answer card`);
+}
+console.log(covErrs.length
+  ? `✗ ${covErrs.length} coverage failure(s): ` + covErrs.join(' · ')
+  : `all ${(P.criteria ?? []).length} focus points at or above their card floor ✓`);
+if (covErrs.length) { console.error('\n✗ NOT SHIPPING. Fix the coverage above — the page no longer warns the reader on your behalf.'); process.exit(1); }
 console.log(`${used.size} of ${Object.keys(FIG).length} ported figures wired to cards`);
 if (used.size === 0) { console.error('✗ no figures wired — pack.js has lost its F()/FC() calls'); process.exit(1); }
