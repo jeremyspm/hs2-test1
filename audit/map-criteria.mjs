@@ -19,18 +19,29 @@ const { BOUND } = await import(pathToFileURL(path.join(HERE, 'harvested-bound.js
 
 /* [criterion id, pattern]. Written from her criterion wording, deliberately specific:
    a loose rule that maps everything would make the blind list look better than it is,
-   which is the exact failure this recomputation exists to correct. */
+   which is the exact failure this recomputation exists to correct.
+
+   EVERY BARE WORD HERE NEEDS \b AROUND IT. Three of these rules originally did not
+   have it, and a regex alternative with no word boundary matches inside other words:
+     cvs-10  `age`      matched pass|im|cartil|percent|c|dam-age  — 49 "her questions"
+                        on that criterion, of which 47 were the word "passage"
+     cvs-7   `lub`      matched so-lub-ility, so two gas-solubility questions were
+                        filed under Heart sounds
+     cvs-5   `chamber`  matched "hyperbaric chambers"
+   Nothing about that is visible in the output — the counts just come out too high and
+   crits[0] becomes the card's displayed focus point. selfTest() below now asserts that
+   none of these rules fires on a control string. Add a control whenever you add a rule. */
 const RULES = [
   ['cvs-1',  /function of the (cardiovascular|circulatory)|why do we (need|have) a (heart|circulation)/i],
   ['cvs-2',  /\b(artery|arteries|vein|veins|capillar\w+)\b.*\b(structure|differen|wall|tunica|lumen|compare)|\b(tunica|IEL|internal elastic lamina)\b|which vessel|vessel type/i],
   ['cvs-3',  /hydrostatic|oncotic|osmotic pressure|osmolality|capillary (exchange|fluid)|filtration|reabsorption|oedema|edema/i],
   ['cvs-4',  /peripheral resistance|\bPR\b.*\bBP\b|\bSVR\b|blood flow.*velocity|velocity.*blood|viscosity|vessel (radius|diameter).*(resistance|flow)|normal BP.*(arteries|arterioles|capillaries)/i],
-  ['cvs-5',  /pericardi|epicardi|myocardi|endocardi|heart wall|chamber|atri\w+|ventricl\w+|septum|valve|papillary|chordae|apex of the heart|heart is located|pectinate|trabecul|fibrous material on the outside of the heart/i],
+  ['cvs-5',  /pericardi|epicardi|myocardi|endocardi|heart wall|\bchambers? of the heart\b|heart chamber|atri\w+|ventricl\w+|septum|valve|papillary|chordae|apex of the heart|heart is located|pectinate|trabecul|fibrous material on the outside of the heart/i],
   ['cvs-6',  /blood flow through|pulmonary (circuit|circulation)|systemic (circuit|circulation)|coronary (artery|arteries|circulation)|route of the|widow maker|foramen ovale|ductus|arch of the aorta|descending aorta|hepatic portal|inferior vena cava|superior vena cava|major (artery|blood vessels)|interventricular artery|circumflex|deoxygenated blood to the lungs/i],
-  ['cvs-7',  /heart sound|S1|S2|lub|dub|murmur|auscultat|phono-?cardiogram/i],
+  ['cvs-7',  /heart sound|\bS1\b|\bS2\b|\blub\b|\bdub\b|lub-?dub|murmur|auscultat|phono-?cardiogram/i],
   ['cvs-8',  /\bECG\b|EKG|P wave|QRS|T wave|SA node|AV node|sinoatrial|atrioventricular node|bundle of His|Purkinje|conduction system|cardiac cycle|automaticity|depolaris|repolaris/i],
   ['cvs-9',  /cardiac output|stroke volume|\bCO = |heart rate.*control|sympathetic.*heart|parasympathetic.*heart|vagus|inotropic|chronotropic/i],
-  ['cvs-10', /factors? affecting (heart rate|stroke volume|cardiac output)|age|temperature.*heart rate/i],
+  ['cvs-10', /factors? affecting (heart rate|stroke volume|cardiac output)|\bages?\b|temperature.*heart rate/i],
   ['cvs-11', /venous return|preload|afterload|Frank-?Starling|electrolyte.*(cardiac|heart)|potassium.*heart|exercise.*(cardiac|heart)/i],
   ['cvs-12', /baroreceptor|vasomotor|renin|angiotensin|aldosterone|\bADH\b|antidiuretic|blood pressure.*(control|regulat)|regulat.*blood pressure/i],
   ['cvs-13', /stress.*blood pressure|exercise.*blood pressure|blood pressure.*exercise/i],
@@ -38,7 +49,7 @@ const RULES = [
   ['cvs-15', /pulse|tissue perfusion|vasoconstrict|vasodilat|ischaem|ischem|myocardial infarction|angina|bradycard|tachycard|hypertens|hypotens|pericarditis|myocarditis|endocarditis|fibrillation|asystole/i],
 
   ['resp-1',  /processes of respiration|pulmonary ventilation|external respiration|internal respiration|cellular respiration|four (processes|stages)|metabolic reason.*respiration/i],
-  ['resp-2',  /\bnose\b|nasal|sinus|pharyn|laryn|trache|bronch|pleura|lung.*(lobe|anatomy)|respiratory tract anatomy|sizes of the two lungs|pneumonia/i],
+  ['resp-2',  /\bnose\b|nasal|sinus|pharyn|laryn|trache|bronch|pleura|lung.*(lobe|anatomy|tissue)|respiratory tract anatomy|sizes of the two lungs|pneumonia/i],
   ['resp-3',  /conducting zone|respiratory zone|upper respiratory|lower respiratory/i],
   ['resp-4',  /pathway of air|air pass|muco-?cili|cilia|vibrissae|cough|sneeze|carina|sound production|vocal/i],
   ['resp-5',  /alveol\w+|surfactant|respiratory membrane|type (I|II|1|2) (cell|pneumocyte)|surface tension/i],
@@ -50,7 +61,7 @@ const RULES = [
   ['resp-11', /oxygen transport|oxyhaemoglobin|oxyhemoglobin|h[ae]moglobin|dissociation curve|Bohr|heme group|affinity for which/i],
   ['resp-12', /carbon dioxide transport|bicarbonate|carbamino|carbonic anhydrase|chloride shift/i],
   ['resp-13', /respiratory centre|respiratory center|medulla|pons|\bDRG\b|\bVRG\b|pontine|basic rhythm/i],
-  ['resp-14', /chemoreceptor|\bpH\b.*ventilation|PCO2.*ventilation|hypercapn|hypoxi[ac]|acidosis|alkalosis|ketoacidosis|urge to breathe|acid.?base buffer/i],
+  ['resp-14', /chemoreceptor|\bpH\b.*(ventilation|respiration|breathing)|PCO2.*ventilation|hypercapn|hypoxi[ac]|acidosis|alkalosis|ketoacidosis|urge to breathe|acid.?base buffer/i],
   ['resp-15', /emotion|conscious control|voluntary.*breath|hypothalam.*breath|cortical.*breath|anxiety|panic/i],
   ['resp-16', /exercise.*ventilation|body temperature.*breath|pain.*breath|irritation.*airway|hyperpnoea/i],
   ['resp-17', /asthma|bronchitis|emphysema|tuberculosis|bronchodilator|dyspnoea|apnoea|eupnoea|tachypnoea|hyperventilat|hypoventilat|hypocapn|cyanosis/i],
@@ -65,6 +76,29 @@ const RULES = [
 ];
 
 const textOf = (c) => JSON.stringify({ q: c.q, text: c.text, options: c.options, pairs: c.pairs, statements: c.statements, blanks: c.blanks });
+
+/* ── the gate the rules above needed and did not have ─────────────────────────
+   Wording that is pure scaffolding, plus the near-misses that actually bit. None of
+   it names any physiology, so NO rule may fire on it. A bare word in an alternation
+   silently matches inside longer words, and the only symptom downstream is a count
+   that looks healthy — so this runs before the mapping, not after it. */
+const CONTROLS = [
+  'Complete the passage.', 'Complete the passage. (MODULE 1)', 'Study the images and answer the questions',
+  'Identify the structures in the image below', 'Match the following', 'Choose all that apply',
+  'the cartilage', 'its percentage', 'the rib cage', 'lung damage', 'the average',
+  'solubility in water', 'a hyperbaric chamber', 'Select the correct answer',
+];
+const leaks = [];
+for (const s of CONTROLS) {
+  const t = textOf({ q: s });
+  for (const [id, re] of RULES) if (re.test(t)) leaks.push(`"${s}" wrongly matches ${id} on ${JSON.stringify(String(t.match(re)[0]))}`);
+}
+if (leaks.length) {
+  console.error('✗ criterion rules match text that names no physiology:');
+  for (const l of leaks) console.error('    ' + l);
+  console.error('\n  Put \\b around the bare word. See the note above the rule table.');
+  process.exit(1);
+}
 
 const mapped = [];
 const unmapped = [];

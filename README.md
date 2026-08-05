@@ -46,9 +46,12 @@ Full gap analysis: [`../HS2-TEST1-CRAM-SPEC.md`](../HS2-TEST1-CRAM-SPEC.md).
 
 Every card carries a `crit:` naming the focus point it covers, and **`node build.mjs`
 exits non-zero** if any drops below its floor (6 cards, or 10 plus a written answer
-for a never-practised one). That gate is what lets the page stop warning the reader:
-validation output goes to the console and the **Sources** tab, `?dev=1` brings the
-banner back for authoring, and a failing pack simply does not build.
+for a never-practised one). The same command also refuses to ship if **any of the 300
+machine-marked cards has no explanation, or any of the 44 written answers has no model
+answer**. Those gates are what let the page stop warning the reader: validation output
+goes to the console and the **Sources** tab, `?dev=1` brings the banner back for
+authoring, and a failing pack simply does not build — `index.html` is written last, so
+a build that says NOT SHIPPING has not written one.
 
 ## Start in the Brief
 
@@ -88,10 +91,17 @@ node build.mjs                           # splice into the engine → index.html
 ```
 
 `pack.js` is **generated** — `audit/apply-migration.mjs` assembles it from
-`pack.source.js`, `migration.json`, the harvest, the case studies and
-`coverage-fill.js`, then runs the voice pass. Do not hand-edit it. `build.mjs`
-splices it (plus the figures) into `../cram-engine/template.html`, reports card
-counts, and **exits non-zero if any focus point is under its card floor**.
+`pack.source.js`, `migration.json`, the harvest, the case studies,
+`coverage-fill.js` and `explanations.json`, then runs the voice pass. Do not
+hand-edit it. `build.mjs` splices it (plus the figures) into
+`../cram-engine/template.html`, reports card counts, and **exits non-zero if any focus
+point is under its card floor or any card cannot explain itself**.
+
+**What is in git and what is not** is decided in `.gitignore`, and the rule is that a
+fresh clone must be able to run `apply-migration` and `validate`. It cannot run the
+whole pipeline, because the source documents live in `../_inbox` and are not part of
+this repo — so `audit/harvested-bound.js` (2.1 MB) and `audit/corpus.json` (2.4 MB) are
+tracked despite being generated, and the 50 MB of quiz screenshots behind them is not.
 
 ```bash
 node port-figs.mjs           # re-extract figures from hs2-module1
@@ -157,9 +167,22 @@ renders as the explanation of a wrong answer. Two consequences, both fixed here:
   into the shipped pack. Splitting the fields recovered them — **128 of 300 drill
   cards now carry an authored explanation, up from 31**, with no new writing.
 
-The other 172 land on a synthesised line (the correct option, the pairs or blanks
-missed) plus a link into the Brief. That is the engine's floor, not a substitute:
-**authoring `why:` for those 172 is the highest-value writing left in this pack.**
+The remaining 172 have now been authored, in `audit/explanations.json`, along with a
+`model:` for the last 6 written answers. **Every machine-marked card in the pack
+explains itself, and the build refuses to ship one that does not.**
+
+They live in their own file rather than in the cards because most of them belong to
+harvested cards — the lecturer's own questions, reproduced unedited and proven so by a
+diff against the capture — and `pack.source.js` is the pre-migration source, which
+holds none of them. Each entry is keyed by the **same content hash the deduplication
+uses**: edit a question and its key changes, so a stale explanation fails the build
+rather than silently reattaching itself to a card it was not written for. The
+generator also **refuses to overwrite an explanation that already exists**, which is
+the specific failure that cost this pack ~97 authored lines last time.
+
+They are written to sit *on top of* the engine's floor, not to replace it. The floor
+already states the correct option or the pairs missed; an authored line gives the
+reasoning, names the trap, or separates the two things being confused.
 
 ### Duplicates: five culled, both sources kept
 
@@ -195,6 +218,61 @@ Nine places where the content was wrong or unsupported. All fixed:
 | Artery/vein SAQ asked for "3 and 3" | **"3 you can see, 2 you cannot"** | That is the real question, and her 5th visible point was missing. |
 | Alveolar mixing volume "~2200 mL" | **~2400 mL (the FRC)** | Contradicted this pack's own lung-volume card. |
 | S1 "louder than S2" | **"longer and lower-pitched"** | Relative loudness depends on the auscultation site. |
+
+### Four places where the course material disagrees with itself, or with the rule
+
+Writing an explanation for all 300 machine-marked cards meant reading every answer key
+in the pack against what it claims. Four of them do not survive that reading. A
+**verbatim card is never edited** — it reproduces the lecturer's own question *and* her
+key, and that fidelity is the whole basis of the tier — so in each case the card ships
+unchanged and its explanation says plainly what the disagreement is.
+
+| Card | The key says | The problem |
+|---|---|---|
+| `MODULE 1.3` ABG: pH 7.52, PaCO₂ 30 mmHg, HCO₃⁻ 24 mmol/L | metabolic alkalosis | pH up, CO₂ down, bicarbonate normal is a **respiratory** alkalosis by the standard rule. Verified against the raw capture (`weight:100`), so this is the source, not the import. The explanation teaches the rule and flags the key. |
+| `MODULE 1.1 SHOCK QUIZ`: "Cardiogenic shock can be caused by" | fluid build-up in the pericardial space | **The same quiz's next question files that same cause under obstructive shock.** Both labels are defensible and both are in the course material; the explanation says so rather than picking one. |
+| Loop diuretic: which symptoms should the nurse expect | restlessness and agitation | The classic potassium picture — weak irregular pulse, poor muscle tone — is another option on the same card and is also a real effect of the same drug. The explanation gives both. |
+| `MODULE 1: FORMATIVE` MALT passage: the blood cell abundant in lymph, and its function | lymphocyte — "primary mediators of the rapid innate host defense against most bacterial and fungal pathogens" | The cell is right, the function belongs to the **neutrophil**. Lymphocytes are the *adaptive* arm: B cells make antibody, T cells kill infected cells. Verified against the raw capture, so again the source and not the import. The explanation flags it and teaches the innate/adaptive split. |
+
+Same rule as everywhere else in this tool: a study aid that quietly teaches a wrong
+answer because the answer key said so is worse than one that shows its working.
+
+### One number the pack contradicted itself on
+
+Three cards give the capillary-filtration budget as **20 L filtered / 17 L reabsorbed /
+3 L returned by the lymphatics**, and two more rounded that residue to "10%". 3 of 20 is
+15%. Nothing in the course states either figure, so the arithmetic the pack already
+uses wins: both now say *3 L of the 20 L filtered each day*. Worth knowing that `G5`
+does not catch this — it only compares numbers against the **declared** quantity table,
+and a percentage nobody declared is invisible to it.
+
+### Focus points chosen by a substring
+
+Every harvested card gets its focus point from `audit/map-criteria.mjs`, a hand-written
+table of one regex per criterion, and `crits[0]` becomes the card's displayed focus
+point. Three of those regexes matched **inside other words**:
+
+| Rule | Bare alternative | What it really matched |
+|---|---|---|
+| `cvs-10` General factors affecting HR, SV, CO | `age` | pass**age**, im**age**, cartil**age**, percent**age**, rib c**age**, dam**age** — **47 of its 49 "her questions" were the word "passage"** |
+| `cvs-7` Heart sounds | `lub` | so**lub**ility — two gas-solubility questions filed under heart sounds |
+| `cvs-5` Functional anatomy of the heart | `chamber` | "hyperbaric **chamber**s" |
+
+Nothing about this was visible in the output: the counts simply came out high and
+13 cards displayed the wrong focus point. The rules are now word-bounded, `cvs-10`
+reports **2** of her questions rather than 49, and `map-criteria.mjs` runs a control
+list first — scaffolding wording like *"Complete the passage."* and the near-misses
+above — and **exits non-zero if any rule fires on text that names no physiology**. The
+blind list is unchanged by all of this: still `cvs-1`, `resp-15`, `resp-16`.
+
+**Known and not fixed:** the rules match the whole card, *including its distractors*, so
+a wrong answer can still choose a card's focus point — that is why three pleura
+questions sit under `cvs-5` (the options mention "pericardium") and the hyperbaric
+question under `cvs-11` ("Frank-Starling"). About 15 cards are affected. Ranking a
+criterion that matches the stem and the correct answer above one that only matches a
+distractor is the fix, and it reshuffles enough of the mapping to deserve its own pass.
+Two harvested cards name no topic at all in their own wording and carry **no** focus
+point rather than a guessed one; that is the table's stated policy, not an oversight.
 
 ## Notes
 

@@ -23,7 +23,11 @@ const got = report.failures;
 const EXPECT = [
   ['G1', 'no `tier`'],
   ['G1', 'unknown tier'],
-  ['G1', 'requires a `why`'],
+  /* Was 'requires a `why`' until the reframing pass renamed the field to `srcNote`.
+     The gate kept firing; only this needle went stale, so the self-test reported a dead
+     gate for a live one. When you rename a field, grep THIS list for its old name. */
+  ['G1', 'requires a `srcNote`'],
+  ['G1', 'duplicates `srcNote`'],
   ['G1', 'requires a non-empty `ev`'],
   ['G2', 'unknown source'],
   ['G3', 'no such location'],

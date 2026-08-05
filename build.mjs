@@ -39,8 +39,6 @@ for (const [i, m] of [...out.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/sc
     process.exit(1);
   }
 }
-writeFileSync('index.html', out);
-
 /* Stats come from LOADING the pack, not from regexing it. pack.js is now generated
    JSON, so patterns written for the old hand-authored style (type:'flash', crit:'cvs-7')
    matched nothing and every count silently read zero — a build that reported "0 cards"
@@ -84,3 +82,33 @@ console.log(covErrs.length
 if (covErrs.length) { console.error('\n✗ NOT SHIPPING. Fix the coverage above — the page no longer warns the reader on your behalf.'); process.exit(1); }
 console.log(`${used.size} of ${Object.keys(FIG).length} ported figures wired to cards`);
 if (used.size === 0) { console.error('✗ no figures wired — pack.js has lost its F()/FC() calls'); process.exit(1); }
+
+/* ── explanation gate ─────────────────────────────────────────────────────────
+   Getting a question wrong is the moment the tool either teaches the reader or loses
+   them. A card that answers "why was I wrong?" with nothing but a red box does the
+   second, and half the machine-marked cards used to do exactly that.
+
+   The engine synthesises a floor line (the correct option, the pairs or blanks missed)
+   so nobody ever meets a bare mark — but a floor is not teaching, and without a gate
+   here there is nothing to stop the next batch of cards arriving without one. Same
+   shape as the coverage gate above: authored in audit/explanations.json, enforced at
+   ship time, no runtime warning for the reader to decode. */
+const MARKED = ['mcq', 'match', 'cloze', 'tfset', 'order'];
+const noWhy = P.cards.filter(c => MARKED.includes(c.type) && !String(c.why ?? '').trim());
+const noModel = P.cards.filter(c => c.type === 'saq' && !String(c.model ?? '').trim());
+console.log(noWhy.length || noModel.length
+  ? `✗ ${noWhy.length} machine-marked card(s) with no explanation, ${noModel.length} written answer(s) with no model`
+  : `every one of the ${P.cards.filter(c => MARKED.includes(c.type)).length} machine-marked cards explains itself, and all ${P.cards.filter(c => c.type === 'saq').length} written answers carry a model ✓`);
+for (const c of [...noWhy, ...noModel].slice(0, 8)) {
+  console.error(`    ${c.type} ${c.crit ?? '?'}: ${String(c.q ?? '').replace(/<[^>]+>/g, '').slice(0, 72)}`);
+}
+if (noWhy.length || noModel.length) {
+  console.error('\n✗ NOT SHIPPING. Author the missing `why:`/`model:` in audit/explanations.json and re-run apply-migration.');
+  process.exit(1);
+}
+
+/* Written last, so "NOT SHIPPING" above is literally true. It used to be written
+   before the gates ran, which left a failing build with a fresh index.html on disk
+   next to a message saying it had not shipped one. */
+writeFileSync('index.html', out);
+console.log('wrote index.html');

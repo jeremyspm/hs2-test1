@@ -22,9 +22,15 @@ const PACK = {
     // G1 — unknown tier
     { type: 'flash', topic: 't', crit: 'c-ok', tier: 'made-up', q: 'G1b: bogus tier', a: 'x' },
     // G1 — textbook with no reason
-    { type: 'flash', topic: 't', crit: 'c-ok', tier: 'textbook', q: 'G1c: textbook, no why', a: 'x' },
+    { type: 'flash', topic: 't', crit: 'c-ok', tier: 'textbook', q: 'G1c: textbook, no srcNote', a: 'x' },
     // G1 — taught with no evidence
     { type: 'flash', topic: 't', crit: 'c-ok', tier: 'taught', q: 'G1d: taught, no ev', a: 'x' },
+    /* G1 — `why` holding the sourcing note instead of the explanation. This is the
+       failure that silently overwrote ~97 authored explanations: the generator filed the
+       tier reason in `why`, so a reader who got the card wrong was told "no citation"
+       instead of being taught the answer. The rule went in without a tripwire. */
+    { type: 'mcq', topic: 't', crit: 'c-ok', tier: 'textbook', q: 'G1e: why duplicates srcNote',
+      options: ['a', 'b'], correct: 0, srcNote: 'no citation — background reading', why: 'no citation — background reading' },
     // G2 — unknown source id
     { type: 'flash', topic: 't', crit: 'c-ok', tier: 'taught', q: 'G2a: bad source', a: 'x',
       ev: [{ src: 'SRC-DOES-NOT-EXIST', loc: 'slide 1', quote: 'anything' }] },

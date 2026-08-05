@@ -1,1 +1,32 @@
 node_modules/
+
+# ── What belongs in git, and why ─────────────────────────────────────────────
+# The rule: a fresh clone must be able to run `apply-migration` and `validate`.
+# It cannot re-run the whole pipeline — the source documents live in ../_inbox
+# and are not part of this repo — so the two files those steps READ are tracked
+# even though they are generated:
+#
+#   audit/harvested-bound.js  2.1 MB  the lecturer's questions, images bound in.
+#                                     apply-migration.mjs imports it, so without
+#                                     it pack.js cannot be regenerated at all.
+#   audit/corpus.json         2.4 MB  every quote-checkable location in the course
+#                                     material. validate.mjs G3 reads it.
+#
+# Everything below is regenerable ONLY from documents this repo does not hold, so
+# committing it would buy nothing but weight. If the pipeline ever has to run
+# end-to-end again, those inputs come back from ../_inbox and `node audit/run-all.mjs`
+# rebuilds these.
+
+# (a `#` only opens a comment at the START of a line — a trailing one becomes part
+# of the pattern, which is how the first version of this file ignored nothing.)
+
+# 50 MB of base64 quiz screenshots
+audit/question-images.json
+# derived from question-images.json
+audit/images-optimised.json
+# sidecar for build-corpus, superseded by corpus.json
+audit/pdf-units.json
+
+# apply-migration.mjs writes both of these on every run. pack.js is the artifact.
+pack.new.js
+pack.backup.js
