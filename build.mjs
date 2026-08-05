@@ -66,13 +66,21 @@ console.log('tiers:', Object.entries(tiers).sort((a, b) => b[1] - a[1]).map(([k,
    mean a page with nothing to complain about. Open the page with `?dev=1` to see the
    same list at runtime. */
 const counts = {};
-for (const c of P.cards) for (const id of [c.crit, ...(c.alsoCrit ?? [])].filter(Boolean)) counts[id] = (counts[id] || 0) + 1;
+const liveCounts = {};   // same, but ignoring cards demoted to background reading
+for (const c of P.cards) for (const id of [c.crit, ...(c.alsoCrit ?? [])].filter(Boolean)) {
+  counts[id] = (counts[id] || 0) + 1;
+  if (!c.bg) liveCounts[id] = (liveCounts[id] || 0) + 1;
+}
 const { min: MIN = 6, blindMin: BLIND_MIN = 10, blindNeedsSaq = false } = P.coverage ?? {};
 const covErrs = [];
 for (const c of P.criteria ?? []) {
   const floor = c.blind ? Math.max(MIN, BLIND_MIN) : MIN;
   const n = counts[c.id] || 0;
   if (n < floor) covErrs.push(`${c.id} has ${n} cards, needs ${floor}`);
+  /* Mirrors the engine's validateCoverage. The floor above counts the PACK; a focus
+     point can clear it on background cards alone and still be unreachable from the
+     default queue, which is a hole the reader meets as "no cards in this topic". */
+  if (n && !liveCounts[c.id]) covErrs.push(`${c.id} has ${n} cards but every one is background reading — nothing to drill in the default queue`);
   if (c.blind && blindNeedsSaq && !P.cards.some(x => (x.crit === c.id || (x.alsoCrit ?? []).includes(c.id)) && x.type === 'saq'))
     covErrs.push(`${c.id} is never practised anywhere in the course and has no written-answer card`);
 }

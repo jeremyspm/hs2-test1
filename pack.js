@@ -42,62 +42,74 @@ const PACK = {
   {
    "id": "cvs-anat",
    "name": "Heart anatomy & flow",
-   "icon": "🫀"
+   "icon": "🫀",
+   "sys": "cvs"
   },
   {
    "id": "cvs-ecg",
    "name": "Cycle, ECG & sounds",
-   "icon": "📈"
+   "icon": "📈",
+   "sys": "cvs"
   },
   {
    "id": "cvs-vessels",
    "name": "Vessels & fluid dynamics",
-   "icon": "🩸"
+   "icon": "🩸",
+   "sys": "cvs"
   },
   {
    "id": "cvs-bp",
    "name": "Blood pressure control",
-   "icon": "🎚️"
+   "icon": "🎚️",
+   "sys": "cvs"
   },
   {
    "id": "cvs-output",
    "name": "Cardiac output & shock",
-   "icon": "⚡"
+   "icon": "⚡",
+   "sys": "cvs"
   },
   {
    "id": "resp-anat",
    "name": "Respiratory anatomy",
-   "icon": "👃"
+   "icon": "👃",
+   "sys": "resp"
   },
   {
    "id": "resp-mech",
    "name": "Ventilation & volumes",
-   "icon": "💨"
+   "icon": "💨",
+   "sys": "resp"
   },
   {
    "id": "resp-gas",
    "name": "Gas exchange & transport",
-   "icon": "🫁"
+   "icon": "🫁",
+   "sys": "resp"
   },
   {
    "id": "resp-control",
    "name": "Control of breathing",
-   "icon": "🧠"
+   "icon": "🧠",
+   "sys": "resp"
   },
   {
    "id": "lymph",
    "name": "Lymphatic system",
-   "icon": "💧"
+   "icon": "💧",
+   "sys": "lymph"
   },
   {
    "id": "immune",
    "name": "Immunity & vaccination",
-   "icon": "🛡️"
+   "icon": "🛡️",
+   "sys": "lymph"
   },
   {
    "id": "terms",
    "name": "Terminology",
-   "icon": "📖"
+   "icon": "📖",
+   "sys": "terms"
   }
  ],
  "coverage": {
@@ -309,7 +321,8 @@ const PACK = {
    "q": "Where in the body are B lymphocytes MADE, and where do they MATURE?",
    "a": "Both happen in <b>red bone marrow</b>. B cells arise from haematopoietic stem cells in the marrow and also become immunocompetent there — the \"B\" is a useful memory hook (<b>B</b>one marrow).",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -318,7 +331,8 @@ const PACK = {
    "q": "Where are T lymphocytes MADE, and where do they MATURE?",
    "a": "Made from haematopoietic stem cells in <b>red bone marrow</b>, but they travel to the <b>thymus</b> to mature and become immunocompetent — <b>T</b> for <b>T</b>hymus.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -327,7 +341,8 @@ const PACK = {
    "q": "Once mature, where are B and T lymphocytes STORED?",
    "a": "In the <b>secondary lymphoid organs</b>, where they wait to meet their antigen: <b>lymph nodes, spleen, tonsils</b> and the <b>MALT</b> of the gut (including Peyer's patches) and airways.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -336,7 +351,8 @@ const PACK = {
    "q": "Describe the internal structure of a lymph node.",
    "a": "A fibrous <b>capsule</b> with inward <b>trabeculae</b>. Under it the <b>subcapsular sinus</b>. Then the <b>outer cortex</b> — follicles with germinal centres, packed with <b>B cells</b>. The <b>deep cortex (paracortex)</b> holds <b>T cells</b> and dendritic cells. The inner <b>medulla</b> has medullary cords (plasma cells, macrophages) and medullary sinuses.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -345,7 +361,8 @@ const PACK = {
    "q": "Why does lymph flow SLOWLY through a lymph node, and why does that matter?",
    "a": "Several <b>afferent</b> vessels enter the convex surface but only one or two <b>efferent</b> vessels leave at the hilum. Lymph therefore pools and stagnates, giving <b>macrophages time to phagocytose</b> debris and pathogens and giving lymphocytes time to meet antigen.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -369,7 +386,8 @@ const PACK = {
    "q": "Which cell orchestrates a full-blown adaptive immune response, and how?",
    "a": "The <b>helper T cell (CD4+)</b>. It binds antigen presented on MHC II, receives co-stimulation, then releases <b>cytokines</b> that activate <b>B cells</b> (→ plasma cells + memory B cells), <b>cytotoxic T cells (CD8+)</b> and <b>macrophages</b>. Without helper T cells the response barely gets going — which is why HIV is so devastating.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -378,7 +396,8 @@ const PACK = {
    "q": "What is the difference between VACCINATION and IMMUNISATION?",
    "a": "<b>Vaccination</b> is the <i>act</i> — physically giving the vaccine. <b>Immunisation</b> is the <i>process and result</i> — the person actually developing immunity. You can be vaccinated without being successfully immunised (e.g. an immunosuppressed patient who mounts no response).",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -387,7 +406,8 @@ const PACK = {
    "q": "How does a vaccine produce protection?",
    "a": "It presents an <b>antigen without the live disease-causing pathogen</b>. This triggers a <b>primary immune response</b> — slow, mostly IgM, low antibody levels — but crucially it leaves behind <b>memory B and T cells</b>. On real exposure the <b>secondary response</b> is faster, far larger, and mostly high-affinity <b>IgG</b>, so the person clears the pathogen before becoming ill.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -396,7 +416,8 @@ const PACK = {
    "q": "How does the COVID-19 mRNA vaccine work?",
    "a": "A <b>lipid nanoparticle</b> carries mRNA coding for the SARS-CoV-2 <b>spike protein</b> into your cells. Your own ribosomes translate it, the spike protein is displayed, and the immune system mounts a response against it, leaving memory cells. The mRNA is <b>degraded within days</b>, never enters the nucleus and cannot alter your DNA.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -412,7 +433,8 @@ const PACK = {
    "correct": 1,
    "why": "Made in marrow, but they <b>mature in the thymus</b> — that is the distinction the question is testing.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -428,7 +450,8 @@ const PACK = {
    "correct": 2,
    "why": "<b>Outer cortex follicles with germinal centres = B cells.</b> The paracortex is the T cell zone.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -444,7 +467,8 @@ const PACK = {
    "correct": 1,
    "why": "<b>Dendritic cells</b> are the professional APC — they migrate to nodes and prime naive T cells. Plasma cells secrete antibody but do not present.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -460,7 +484,8 @@ const PACK = {
    "correct": 1,
    "why": "Vaccination is what the nurse does; <b>immunisation is what the immune system does in response</b> — and it can fail.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "tfset",
@@ -487,7 +512,8 @@ const PACK = {
    ],
    "why": "All four must be right for the mark — that is the real marking rule for a true/false set.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "order",
@@ -504,7 +530,8 @@ const PACK = {
    ],
    "why": "The whole point of vaccination is step 6 — everything before it is a rehearsal.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "match",
@@ -540,6 +567,7 @@ const PACK = {
    ],
    "tier": "textbook",
    "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true,
    "why": "Split them by job: <b>B cells make antibody</b> (as plasma cells) and <b>T cells act on cells</b> — CD8 killing infected ones, CD4 directing everybody else. The dendritic cell is the one that starts the whole thing, by carrying antigen to the node."
   },
   {
@@ -592,7 +620,8 @@ const PACK = {
    ],
    "why": "The <b>IgM → IgG</b> switch between primary and secondary responses is the detail most people drop.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "saq",
@@ -609,7 +638,8 @@ const PACK = {
    ],
    "model": "Full marks also available for mentioning herd immunity — protecting those who cannot be vaccinated by reducing circulation of the pathogen.",
    "tier": "textbook",
-   "srcNote": "cites case study workbook 2026 s2 but no phrase from this card appears in that source — the citation was never verified"
+   "srcNote": "cites case study workbook 2026 s2 but no phrase from this card appears in that source — the citation was never verified",
+   "bg": true
   },
   {
    "type": "saq",
@@ -626,7 +656,8 @@ const PACK = {
    ],
    "model": "Worth adding: more afferent than efferent vessels, so lymph flow slows and macrophages get time to filter it.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -651,7 +682,8 @@ const PACK = {
      ]
     },
     "strong": false
-   }
+   },
+   "bg": true
   },
   {
    "type": "flash",
@@ -676,7 +708,8 @@ const PACK = {
      ]
     },
     "strong": false
-   }
+   },
+   "bg": true
   },
   {
    "type": "flash",
@@ -685,7 +718,8 @@ const PACK = {
    "q": "What is a third heart sound (S3) and when is it abnormal?",
    "a": "A low-pitched sound in <b>early diastole</b> caused by blood rushing into the ventricle during rapid passive filling. <b>Normal</b> in children, young adults and pregnancy; in an older adult it suggests <b>heart failure or volume overload</b> (\"ventricular gallop\").",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -694,7 +728,8 @@ const PACK = {
    "q": "What is a fourth heart sound (S4)?",
    "a": "A late-diastolic sound caused by <b>atrial contraction forcing blood into a stiff, non-compliant ventricle</b>. Almost always abnormal — associated with hypertension, ventricular hypertrophy and ischaemia (\"atrial gallop\").",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -703,7 +738,8 @@ const PACK = {
    "q": "What causes a heart MURMUR?",
    "a": "<b>Turbulent blood flow</b>. Usually either a <b>stenotic</b> valve (narrowed, so blood is forced through a tight opening) or an <b>incompetent/regurgitant</b> valve (leaking backwards). Can also occur with anaemia or high flow states.",
    "tier": "textbook",
-   "srcNote": "cites 2026 cardiovascular system 2-3 but no phrase from this card appears in that source — the citation was never verified"
+   "srcNote": "cites 2026 cardiovascular system 2-3 but no phrase from this card appears in that source — the citation was never verified",
+   "bg": true
   },
   {
    "type": "flash",
@@ -712,7 +748,8 @@ const PACK = {
    "q": "Why is each valve NOT auscultated directly over its anatomical position?",
    "a": "Because sound travels <b>in the direction of blood flow</b>. You listen <b>downstream</b> of the valve, where the sound is projected onto the chest wall — which is why the aortic area is at the right sternal border even though the aortic valve sits centrally.",
    "tier": "textbook",
-   "srcNote": "cites 2026 cardiovascular system 2-3 but no phrase from this card appears in that source — the citation was never verified"
+   "srcNote": "cites 2026 cardiovascular system 2-3 but no phrase from this card appears in that source — the citation was never verified",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -728,7 +765,8 @@ const PACK = {
    "correct": 0,
    "why": "<b>Aortic = 2nd ICS RIGHT.</b> Pulmonary is its mirror image at 2nd ICS left.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -744,7 +782,8 @@ const PACK = {
    "correct": 1,
    "why": "The <b>apex beat</b> — 5th ICS, left midclavicular line. This is also where you count an apical pulse.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -760,7 +799,8 @@ const PACK = {
    "correct": 1,
    "why": "S1 = <b>AV valves closing</b> = the beginning of ventricular contraction.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -776,7 +816,8 @@ const PACK = {
    "correct": 1,
    "why": "S3 is benign in the young but in an <b>older adult with signs of congestion it points to heart failure</b>.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "order",
@@ -791,7 +832,8 @@ const PACK = {
    ],
    "why": "The classic route is a diagonal sweep: <b>A</b>ortic → <b>P</b>ulmonary → <b>T</b>ricuspid → <b>M</b>itral. \"All Physicians Take Money.\"",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "match",
@@ -826,6 +868,7 @@ const PACK = {
    ],
    "tier": "textbook",
    "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true,
    "why": "Sounds are <b>valves closing</b>: S1 the AV valves at the start of ventricular contraction, S2 the semilunar valves at its end. S3 and S4 are filling sounds — blood rushing in, and the atrium pushing against a stiff ventricle."
   },
   {
@@ -853,7 +896,8 @@ const PACK = {
    ],
    "why": "Statement 1 describes <b>S2</b>, and statement 4 is the classic trap — you listen <b>downstream</b>.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "cloze",
@@ -905,7 +949,8 @@ const PACK = {
    ],
    "why": "S1 → AV valves → systole. S2 → semilunar valves → diastole. Get that pairing and the rest follows.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "saq",
@@ -922,7 +967,8 @@ const PACK = {
    ],
    "model": "A mark is also available for noting S1 is longer and lower-pitched than S2.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -931,7 +977,8 @@ const PACK = {
    "q": "What do the nasal conchae (turbinates) do, and why does it matter clinically?",
    "a": "The <b>superior, middle and inferior conchae</b> project into the nasal cavity and make the airflow <b>turbulent</b>. That turbulence throws particles against the mucus and greatly increases contact with the warm, wet mucosa — so inspired air is <b>filtered, warmed to body temperature and humidified</b> before it reaches the lungs. This is why mouth-breathing and unhumidified oxygen dry and irritate the airway.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -940,7 +987,8 @@ const PACK = {
    "q": "Name the four paranasal sinuses and their functions.",
    "a": "<b>Frontal, maxillary, sphenoid and ethmoid.</b> They <b>lighten the skull</b>, help <b>warm and humidify</b> air, act as <b>resonance chambers for the voice</b>, and produce mucus that drains into the nasal cavity. Because they drain into the nose, nasal infection readily becomes sinusitis.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -949,7 +997,8 @@ const PACK = {
    "q": "Name the three regions of the pharynx and what each contains.",
    "a": "<b>Nasopharynx</b> — air only; contains the pharyngeal tonsil (adenoid) and the openings of the auditory (Eustachian) tubes. <b>Oropharynx</b> — air and food; palatine and lingual tonsils. <b>Laryngopharynx</b> — air and food; leads to both the larynx and the oesophagus.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -958,7 +1007,8 @@ const PACK = {
    "q": "Which laryngeal cartilage is the only COMPLETE ring, and why does that matter?",
    "a": "The <b>cricoid cartilage</b>. Because it is a complete ring it does not collapse — it is the landmark for <b>cricoid pressure</b> during intubation and the site of an emergency <b>cricothyroidotomy</b> (through the cricothyroid membrane just above it).",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -967,7 +1017,8 @@ const PACK = {
    "q": "What is the difference between the true and false vocal folds?",
    "a": "The <b>true vocal folds (vocal cords)</b> vibrate as air passes and <b>produce sound</b>. The <b>vestibular folds (false vocal cords)</b> sit above them, play no part in sound, and act to <b>close the glottis and protect the airway</b> — they are what lets you hold your breath and brace when lifting.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -976,7 +1027,8 @@ const PACK = {
    "q": "Why are the tracheal cartilage rings C-shaped rather than complete?",
    "a": "The open (posterior) side faces the <b>oesophagus</b> and is bridged by the <b>trachealis</b> smooth muscle. This lets the oesophagus <b>bulge forwards as a bolus passes</b>, while the cartilage in front still keeps the airway from collapsing on inspiration.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -985,7 +1037,8 @@ const PACK = {
    "q": "What is the carina and why is it clinically important?",
    "a": "The ridge of cartilage at the <b>bifurcation of the trachea</b> into the two main bronchi. Its mucosa is extremely sensitive — contact triggers a <b>violent cough reflex</b>. It is the landmark for checking endotracheal tube position on a chest X-ray.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -994,7 +1047,8 @@ const PACK = {
    "q": "Why does an aspirated object usually end up in the RIGHT lung?",
    "a": "The <b>right main bronchus is wider, shorter and more vertical</b> than the left, which has to angle around the heart. Gravity and momentum carry inhaled material straight down it — so right-sided aspiration pneumonia is far more common.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -1003,7 +1057,8 @@ const PACK = {
    "q": "How many lobes and fissures does each lung have?",
    "a": "<b>Right lung: 3 lobes</b> (superior, middle, inferior) divided by the <b>oblique and horizontal fissures</b>. <b>Left lung: 2 lobes</b> (superior, inferior) divided by the <b>oblique fissure</b> only — it is smaller to make room for the heart, and has the <b>cardiac notch</b> and the <b>lingula</b>.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -1012,7 +1067,8 @@ const PACK = {
    "q": "Describe the pleural membranes and the pleural cavity.",
    "a": "The <b>visceral pleura</b> covers the lung surface; the <b>parietal pleura</b> lines the thoracic wall, diaphragm and mediastinum. Between them the <b>pleural cavity</b> holds a thin film of <b>serous fluid</b>, which <b>lubricates</b> the surfaces and whose <b>surface tension holds the lung against the chest wall</b> so the lung expands when the thorax does.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -1028,7 +1084,8 @@ const PACK = {
    "correct": 1,
    "why": "The <b>right main bronchus</b> is the more direct continuation of the trachea.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -1044,7 +1101,8 @@ const PACK = {
    "correct": 1,
    "why": "<b>Cartilage rings</b> hold it open. The trachealis is the posterior muscle that allows oesophageal expansion.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -1060,7 +1118,8 @@ const PACK = {
    "correct": 1,
    "why": "The <b>left lung</b> is scooped out to accommodate the heart.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "order",
@@ -1080,7 +1139,8 @@ const PACK = {
    ],
    "why": "The conducting zone ends at the <b>terminal bronchioles</b>; the respiratory zone begins at the respiratory bronchioles.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "match",
@@ -1116,6 +1176,7 @@ const PACK = {
    ],
    "tier": "textbook",
    "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true,
    "why": "Each one is defined by the job its shape does: the <b>cricoid is a complete ring</b> because it must never collapse, the conchae make air swirl so it is warmed and filtered, and the carina is nerve-rich so anything reaching it triggers a cough."
   },
   {
@@ -1143,7 +1204,8 @@ const PACK = {
    ],
    "why": "The <b>true</b> vocal folds make sound; the pleural cavity holds only a thin film of serous fluid — air in it is a <b>pneumothorax</b>.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "cloze",
@@ -1195,7 +1257,8 @@ const PACK = {
    ],
    "why": "Cricoid = complete ring; true vocal folds = sound; C-shaped rings = room for the oesophagus.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "saq",
@@ -1212,7 +1275,8 @@ const PACK = {
    ],
    "model": "Also creditable: the paranasal sinuses contribute to warming and humidifying, and the sneeze reflex forcibly expels nasal irritants.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -1239,7 +1303,8 @@ const PACK = {
      "terms": []
     },
     "strong": true
-   }
+   },
+   "bg": true
   },
   {
    "type": "flash",
@@ -1248,7 +1313,8 @@ const PACK = {
    "q": "What are the partial pressures of the gases in ALVEOLAR air?",
    "a": "<b>PO₂ ≈ 104 mmHg</b>, <b>PCO₂ ≈ 40 mmHg</b>, and <b>water vapour 47 mmHg</b> (saturated at 37 °C), with nitrogen making up the balance. These are the three values the lecture uses for the gas-exchange gradients — learn them before any percentage breakdown.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -1257,7 +1323,8 @@ const PACK = {
    "q": "Give the THREE reasons alveolar air differs from atmospheric air.",
    "a": "<b>1. Gas exchange</b> — oxygen is constantly removed into the blood and carbon dioxide added. <b>2. Humidification</b> — air is saturated with water vapour (47 mmHg at 37 °C) in the airways, and that vapour dilutes the other gases. <b>3. Mixing with residual gas</b> — only ~350 mL of fresh air reaches the alveoli per breath and mixes with the ~2400 mL functional residual capacity already there.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -1266,7 +1333,8 @@ const PACK = {
    "q": "Why is it a GOOD thing that alveolar gas changes only slightly with each breath?",
    "a": "Because the huge functional residual capacity buffers the alveolar gas, arterial <b>PO₂ and PCO₂ stay remarkably steady</b> between breaths rather than swinging up and down. Tissues therefore get a constant oxygen supply and blood pH is not thrown around by every breath.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -1275,7 +1343,8 @@ const PACK = {
    "q": "Why is alveolar PO₂ (104 mmHg) so much lower than atmospheric PO₂ (159.6 mmHg)?",
    "a": "Three losses stack up: water vapour added in the airways dilutes it, oxygen is continuously diffusing out into the pulmonary capillaries, and the small volume of fresh air is diluted by the large residual volume already in the lungs.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -1284,7 +1353,8 @@ const PACK = {
    "q": "What is anatomical dead space and how does it affect alveolar air?",
    "a": "The <b>~150 mL</b> of the conducting airways where no gas exchange happens. Of a 500 mL tidal breath, only <b>~350 mL</b> reaches the alveoli — and the first air in is the stale dead-space air from the last breath. This is why <b>slow deep breaths ventilate better than rapid shallow ones</b> at the same minute volume.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -1300,7 +1370,8 @@ const PACK = {
    "correct": 1,
    "why": "<b>104 mmHg</b> in the alveolus; 159.6 mmHg is atmospheric; 40 mmHg is tissue/venous; 47 mmHg is water vapour.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -1316,7 +1387,8 @@ const PACK = {
    "correct": 3,
    "why": "Nitrogen is <b>physiologically inert</b> and is not absorbed — its percentage only changes because the other gases do.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -1332,7 +1404,8 @@ const PACK = {
    "correct": 1,
    "why": "Only ~50 mL of each 200 mL breath reaches the alveoli — <b>most of the effort ventilates dead space</b>.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "match",
@@ -1367,6 +1440,7 @@ const PACK = {
    ],
    "tier": "textbook",
    "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true,
    "why": "The gradient is the whole point: oxygen falls <b>atmosphere → alveolus → blood → cell</b> and carbon dioxide runs the other way. Alveolar air is poorer in oxygen than the atmosphere because it has been humidified and mixed with the air that never left."
   },
   {
@@ -1394,7 +1468,8 @@ const PACK = {
    ],
    "why": "Roughly 150 mL of every breath never gets past the conducting airways.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "cloze",
@@ -1446,7 +1521,8 @@ const PACK = {
    ],
    "why": "≈160 → 104 is the drop worth memorising, along with PCO₂ 0.2 → 40.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "saq",
@@ -1462,7 +1538,8 @@ const PACK = {
    ],
    "model": "A further mark is often given for the consequence — because of this mixing, alveolar gas composition stays stable between breaths, keeping arterial blood gases steady.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -1471,7 +1548,8 @@ const PACK = {
    "q": "Define internal respiration and state how it differs from external respiration.",
    "a": "<b>Internal respiration</b> is gas exchange between <b>systemic capillary blood and the tissue cells</b> — O₂ moves out of the blood into the cells, CO₂ moves in. <b>External respiration</b> is exchange between the <b>alveoli and pulmonary capillary blood</b> — the gradients run the opposite way.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -1480,7 +1558,8 @@ const PACK = {
    "q": "Give the partial pressure gradients that drive internal respiration.",
    "a": "Arterial blood arrives with <b>PO₂ 100 mmHg</b> and meets tissue with <b>PO₂ 40 mmHg</b> or lower — so oxygen diffuses <b>out of the blood</b>. Tissue <b>PCO₂ is 45 mmHg</b> against blood <b>PCO₂ 40 mmHg</b> — so carbon dioxide diffuses <b>into the blood</b>. Blood leaves as venous blood at PO₂ 40 / PCO₂ 45.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -1489,7 +1568,8 @@ const PACK = {
    "q": "How saturated is haemoglobin in systemic VENOUS blood at rest, and why does that matter?",
    "a": "About <b>75% saturated</b> — only about a quarter of the carried oxygen is unloaded at rest. That reserve is the <b>venous oxygen reserve</b>: during exercise, tissues can extract far more without any increase in blood flow.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -1498,7 +1578,8 @@ const PACK = {
    "q": "List the factors that affect the rate of internal respiration.",
    "a": "<b>Partial pressure gradient</b> (steeper = faster), <b>surface area</b> available, <b>diffusion distance</b> (oedema increases it and slows exchange), <b>solubility and molecular weight</b> of the gas, and <b>tissue perfusion</b> — no blood flow, no exchange.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -1507,7 +1588,8 @@ const PACK = {
    "q": "What is the Bohr effect and why is it so useful?",
    "a": "A rise in <b>PCO₂</b>, a fall in <b>pH</b>, a rise in <b>temperature</b> or a rise in <b>2,3-BPG</b> all <b>reduce haemoglobin's affinity for oxygen</b> — the dissociation curve shifts <b>RIGHT</b>. All four are features of <b>metabolically active tissue</b>, so haemoglobin automatically dumps more oxygen exactly where it is needed most.",
    "tier": "textbook",
-   "srcNote": "cites 2026 resp 3 but no phrase from this card appears in that source — the citation was never verified"
+   "srcNote": "cites 2026 resp 3 but no phrase from this card appears in that source — the citation was never verified",
+   "bg": true
   },
   {
    "type": "flash",
@@ -1516,7 +1598,8 @@ const PACK = {
    "q": "Why does exercising muscle extract far more oxygen than resting muscle from the same blood?",
    "a": "Active muscle is <b>warmer, more acidic and has a higher PCO₂</b>. Each of those shifts the oxygen–haemoglobin dissociation curve to the <b>right</b>, so at any given PO₂ haemoglobin holds on to less oxygen and releases more. Tissue PO₂ also falls lower, steepening the gradient.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -1532,7 +1615,8 @@ const PACK = {
    "correct": 1,
    "why": "Internal respiration = <b>blood → tissues</b> for O₂, tissues → blood for CO₂.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -1548,7 +1632,8 @@ const PACK = {
    "correct": 1,
    "why": "Fluid in the interstitium pushes cells further from the capillary, so gases have <b>further to diffuse</b>.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -1564,7 +1649,8 @@ const PACK = {
    "correct": 1,
    "why": "Right shift = <b>reduced affinity = more unloading</b>. Caused by ↑CO₂, ↑H⁺, ↑temperature, ↑2,3-BPG.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "match",
@@ -1599,6 +1685,7 @@ const PACK = {
    ],
    "tier": "textbook",
    "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true,
    "why": "Arterial blood arrives nearly saturated and leaves the tissues still carrying most of its oxygen. That leftover is the <b>venous reserve</b> — what a tissue draws on the moment it starts working harder."
   },
   {
@@ -1626,7 +1713,8 @@ const PACK = {
    ],
    "why": "A fall in pH causes a <b>right</b> shift — more unloading, not less.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "order",
@@ -1643,7 +1731,8 @@ const PACK = {
    ],
    "why": "The Bohr effect is the step that turns a passive gradient into a demand-matched delivery system.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "saq",
@@ -1660,7 +1749,8 @@ const PACK = {
    ],
    "model": "A mark is also available for the Bohr effect — warmth, acidity and high CO₂ in active tissue shift the dissociation curve right so more oxygen is unloaded.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -1702,7 +1792,8 @@ const PACK = {
      ]
     },
     "strong": false
-   }
+   },
+   "bg": true
   },
   {
    "type": "flash",
@@ -1711,7 +1802,8 @@ const PACK = {
    "q": "Why can you NOT kill yourself by holding your breath?",
    "a": "Voluntary control is overridden. As breath-holding continues, <b>PCO₂ and H⁺ rise</b> and PO₂ falls; the <b>central and peripheral chemoreceptors</b> drive the medullary centres so hard that involuntary inspiration takes over at the \"breakpoint\". If someone did hold on to unconsciousness, voluntary control is lost and automatic breathing resumes immediately.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -1720,7 +1812,8 @@ const PACK = {
    "q": "Why is hyperventilating before a breath-hold dive dangerous?",
    "a": "Hyperventilation <b>blows off CO₂</b>, so the CO₂-driven urge to breathe is delayed — but it barely raises oxygen stores. The diver can therefore stay under until <b>PO₂ falls low enough to cause unconsciousness before the CO₂ drive returns</b>: shallow water blackout, and drowning.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -1729,7 +1822,8 @@ const PACK = {
    "q": "Explain what happens to blood pH during a prolonged panic attack.",
    "a": "Limbic/hypothalamic drive causes <b>hyperventilation</b> → CO₂ is blown off faster than it is produced → blood <b>PCO₂ falls</b> → the bicarbonate buffer equation shifts left, consuming H⁺ → <b>H⁺ falls and pH rises</b> → <b>respiratory alkalosis</b>. Symptoms include tingling in the lips and fingers, dizziness and carpopedal spasm.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -1738,7 +1832,8 @@ const PACK = {
    "q": "How does speech alter the normal breathing pattern?",
    "a": "Cortical control takes over the pattern: a <b>rapid deep inspiration</b> followed by a <b>long, controlled expiration</b> against partially adducted vocal folds. Normal rhythmic tidal breathing is suspended — which is why breathlessness shows up clinically as an <b>inability to speak in full sentences</b>.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -1754,7 +1849,8 @@ const PACK = {
    "correct": 1,
    "why": "The <b>chemoreceptor drive from rising CO₂/H⁺</b> is the strongest stimulus to breathe and cannot be consciously suppressed indefinitely.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -1770,7 +1866,8 @@ const PACK = {
    "correct": 1,
    "why": "Conscious control travels <b>direct from the motor cortex</b>, which is exactly why it can override the automatic centres.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -1786,7 +1883,8 @@ const PACK = {
    "correct": 1,
    "why": "Blowing off CO₂ raises pH — a <b>respiratory</b> cause of <b>alkalosis</b>.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "tfset",
@@ -1813,7 +1911,8 @@ const PACK = {
    ],
    "why": "Statement 4 is the dangerous myth — it delays the urge to breathe without adding oxygen.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "order",
@@ -1830,7 +1929,8 @@ const PACK = {
    ],
    "why": "This is the Panic Attack case study in six steps — expect it as an SAQ or an ordering question.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "match",
@@ -1861,6 +1961,7 @@ const PACK = {
    ],
    "tier": "textbook",
    "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true,
    "why": "Breathing has <b>three sets of controllers</b> — voluntary from the cortex, emotional from the limbic system, and automatic from the chemoreceptors. The chemical one always wins in the end, which is why a voluntary breath-hold always finishes with a breath being taken for you."
   },
   {
@@ -1878,7 +1979,8 @@ const PACK = {
    ],
    "model": "Clinically relevant example: hyperventilation in a panic attack is limbic drive producing respiratory alkalosis.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -1903,7 +2005,8 @@ const PACK = {
      ]
     },
     "strong": false
-   }
+   },
+   "bg": true
   },
   {
    "type": "flash",
@@ -1929,7 +2032,8 @@ const PACK = {
      ]
     },
     "strong": false
-   }
+   },
+   "bg": true
   },
   {
    "type": "flash",
@@ -1938,7 +2042,8 @@ const PACK = {
    "q": "Describe the pattern of ventilation at the start and end of exercise.",
    "a": "At the onset there is an <b>abrupt increase</b> (neural, anticipatory), then a <b>gradual further rise</b> to a steady state. When exercise stops there is an <b>abrupt decrease</b> followed by a <b>gradual decline</b> back to resting levels. The abrupt changes are neural; the gradual ones are chemical.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -1947,7 +2052,8 @@ const PACK = {
    "q": "How does body temperature affect ventilation?",
    "a": "A <b>rise</b> in body temperature (fever, exercise, heat) <b>increases</b> respiratory rate — partly a direct effect on the respiratory centres, partly through raised metabolic rate. <b>Hypothermia depresses</b> respiration. Sudden immersion in cold water triggers a reflex <b>gasp then apnoea</b>.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -1956,7 +2062,8 @@ const PACK = {
    "q": "How does pain affect breathing?",
    "a": "Sudden severe pain typically causes a <b>brief apnoea (a gasp and hold)</b> followed by <b>rapid, shallow breathing</b>, mediated through the hypothalamus and limbic system. <b>Visceral pain</b> and stretching the anal sphincter tend to cause <b>apnoea</b> instead.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -1987,7 +2094,8 @@ const PACK = {
      ]
     },
     "strong": false
-   }
+   },
+   "bg": true
   },
   {
    "type": "mcq",
@@ -2003,7 +2111,8 @@ const PACK = {
    "correct": 2,
    "why": "This is the counter-intuitive fact worth remembering — ventilation rises to <b>match</b> demand, so the blood gases barely move.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -2019,7 +2128,8 @@ const PACK = {
    "correct": 1,
    "why": "The rise happens <b>before</b> any chemical change could occur — so it must be neural.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -2035,7 +2145,8 @@ const PACK = {
    "correct": 1,
    "why": "Below the larynx → <b>cough</b>. In the nasal cavity → sneeze.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -2051,7 +2162,8 @@ const PACK = {
    "correct": 1,
    "why": "Raised temperature <b>increases</b> ventilation; hypothermia depresses it.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "tfset",
@@ -2078,7 +2190,8 @@ const PACK = {
    ],
    "why": "Statement 1 is the classic trap: arterial PO₂ hardly changes during exercise.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "match",
@@ -2113,6 +2226,7 @@ const PACK = {
    ],
    "tier": "textbook",
    "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true,
    "why": "The exercise one is the surprise: rate and depth rise <b>before</b> the blood gases have changed at all, because the motor cortex and the joint receptors signal the medulla directly. The two irritant reflexes divide by level — sneeze above the larynx, cough below it."
   },
   {
@@ -2130,7 +2244,8 @@ const PACK = {
    ],
    "model": "Distinguish clearly from hyperventilation, where ventilation EXCEEDS demand and PCO₂ falls.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -2139,7 +2254,8 @@ const PACK = {
    "q": "What are BUBOES?",
    "a": "Grossly swollen, inflamed and painful <b>lymph nodes</b>, classically in the groin or axilla. The defining sign of <b>bubonic plague</b>, but the term is used for any dramatically enlarged infected node.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -2148,7 +2264,8 @@ const PACK = {
    "q": "What is LYMPHOEDEMA and what commonly causes it?",
    "a": "Tissue swelling caused by <b>impaired lymphatic drainage</b>, so protein-rich interstitial fluid accumulates. Common causes: <b>surgical removal of lymph nodes</b> (e.g. axillary clearance in breast cancer), radiotherapy, tumour obstruction, or filariasis. Typically non-pitting and chronic.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -2157,7 +2274,8 @@ const PACK = {
    "q": "What is LYMPHANGITIS and how does it present?",
    "a": "Inflammation of the <b>lymphatic vessels</b> themselves, usually from bacterial spread out of a wound. It presents as <b>red, tender streaks running under the skin</b> from the infection site towards the draining nodes — a sign the infection is spreading and needs urgent treatment.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -2166,7 +2284,8 @@ const PACK = {
    "q": "What is HODGKIN'S DISEASE?",
    "a": "A <b>malignancy of lymphoid tissue</b> (a lymphoma), characterised by the presence of <b>Reed–Sternberg cells</b>. Typically presents with <b>painless, rubbery enlargement of lymph nodes</b>, often cervical, with \"B symptoms\": fever, night sweats and weight loss.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -2175,7 +2294,8 @@ const PACK = {
    "q": "What is a SENTINEL NODE and why is it biopsied?",
    "a": "The <b>first lymph node</b> that drains a tumour. Because cancer spreads through lymphatics in an orderly way, if the sentinel node is <b>clear</b> the cancer has probably not spread further — so a biopsy can spare the patient a full node clearance and the lymphoedema that follows it.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -2184,7 +2304,8 @@ const PACK = {
    "q": "What are the consequences of a SPLENECTOMY?",
    "a": "Loss of a major site of <b>blood filtration, antibody production and old-red-cell breakdown</b>. The patient is left at lifelong risk of <b>overwhelming post-splenectomy infection</b>, particularly by <b>encapsulated bacteria</b> (pneumococcus, meningococcus, <i>Haemophilus influenzae</i>), so they require vaccination and often prophylactic antibiotics.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -2193,7 +2314,8 @@ const PACK = {
    "q": "What is a RUPTURED SPLEEN and what makes it dangerous?",
    "a": "Splenic tearing after <b>blunt trauma to the left upper quadrant</b> (or lower left ribs). Because the spleen is extremely vascular it causes <b>rapid, potentially fatal intra-abdominal haemorrhage</b> and hypovolaemic shock. Blood irritating the diaphragm may refer pain to the <b>left shoulder tip (Kehr's sign)</b>.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -2202,7 +2324,8 @@ const PACK = {
    "q": "What is TONSILLITIS, and what are \"swollen glands\"?",
    "a": "<b>Tonsillitis</b> is inflammation/infection of the tonsils — usually the palatine tonsils — causing sore throat, dysphagia and fever. <b>\"Swollen glands\"</b> is the lay term for <b>lymphadenopathy</b>: reactive enlargement of lymph nodes as they mount a response to infection. They are nodes, not glands.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -2218,7 +2341,8 @@ const PACK = {
    "correct": 1,
    "why": "Removing the nodes removes the drainage route — protein-rich fluid accumulates as <b>lymphoedema</b>.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -2234,7 +2358,8 @@ const PACK = {
    "correct": 1,
    "why": "Inflamed <b>lymphatic vessels</b> — the infection is spreading towards the nodes and needs urgent treatment.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -2250,7 +2375,8 @@ const PACK = {
    "correct": 1,
    "why": "The spleen is the main site for clearing <b>encapsulated organisms</b>, hence lifelong vaccination and prophylaxis.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "match",
@@ -2286,6 +2412,7 @@ const PACK = {
    ],
    "tier": "textbook",
    "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true,
    "why": "Two of these are signs to recognise on sight: <b>red streaks tracking from a wound</b> is lymphangitis, and <b>left shoulder-tip pain</b> after abdominal trauma is Kehr's sign of a ruptured spleen."
   },
   {
@@ -2313,7 +2440,8 @@ const PACK = {
    ],
    "why": "The spleen one is the clinically dangerous misconception.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "saq",
@@ -2331,7 +2459,8 @@ const PACK = {
    ],
    "model": "Also creditable: buboes as grossly swollen infected nodes, and post-splenectomy risk from encapsulated bacteria.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "saq",
@@ -2379,7 +2508,8 @@ const PACK = {
     "scope": "cited",
     "how": "phrase",
     "strong": true
-   }
+   },
+   "bg": true
   },
   {
    "type": "saq",
@@ -2440,7 +2570,8 @@ const PACK = {
    ],
    "model": "The key contrast: dropping BP is corrected mainly by SYMPATHETIC activation; rising BP is corrected by sympathetic withdrawal plus PARASYMPATHETIC (vagal) activation.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "saq",
@@ -2479,7 +2610,8 @@ const PACK = {
    ],
    "model": "The workbook makes exactly this point about baroreceptors — they help determine what \"normal\" blood pressure is, and long-standing high BP re-defines it.",
    "tier": "textbook",
-   "srcNote": "cites case study workbook 2026 s2 but no phrase from this card appears in that source — the citation was never verified"
+   "srcNote": "cites case study workbook 2026 s2 but no phrase from this card appears in that source — the citation was never verified",
+   "bg": true
   },
   {
    "type": "saq",
@@ -2512,7 +2644,8 @@ const PACK = {
      ]
     },
     "strong": false
-   }
+   },
+   "bg": true
   },
   {
    "type": "saq",
@@ -2549,7 +2682,8 @@ const PACK = {
    ],
    "model": "A neat demonstration that the two drugs work by disabling the two arms of the baroreceptor reflex.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "saq",
@@ -2582,7 +2716,8 @@ const PACK = {
      ]
     },
     "strong": false
-   }
+   },
+   "bg": true
   },
   {
    "type": "saq",
@@ -2599,7 +2734,8 @@ const PACK = {
    ],
    "model": "Every one of Jill's signs is a compensatory mechanism, not a separate disease. That framing is what earns full marks.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "saq",
@@ -2660,7 +2796,8 @@ const PACK = {
    ],
    "model": "The examinable contrast is memory: only active immunity leaves memory cells, which is why passive protection wears off.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -2773,7 +2910,8 @@ const PACK = {
    "q": "Name the three layers of a blood vessel wall and what each is made of.",
    "a": "<b>Tunica intima</b> — endothelium on a basement membrane; smooth, so blood is not activated to clot. <b>Tunica media</b> — smooth muscle and elastic fibres; controls vasoconstriction and vasodilation. <b>Tunica externa (adventitia)</b> — collagen fibres anchoring the vessel.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -2782,7 +2920,8 @@ const PACK = {
    "q": "Give five structural differences between an artery and a vein.",
    "a": "<b>1.</b> Artery has a much <b>thicker tunica media</b>. <b>2.</b> Artery has an <b>internal elastic lamina</b> (and external in large arteries); veins do not. <b>3.</b> Artery has a <b>smaller lumen relative to wall thickness</b>. <b>4.</b> Artery <b>holds its round shape</b> in section; veins collapse. <b>5.</b> Veins have <b>valves</b>; arteries do not.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -2791,7 +2930,8 @@ const PACK = {
    "q": "Give three FUNCTIONAL differences between arteries and veins.",
    "a": "Arteries carry blood <b>away from the heart</b> under <b>high pressure</b> in a pulsatile flow. Veins carry blood <b>towards the heart</b> under <b>low pressure</b> in a steady flow, and act as the body's <b>blood reservoir</b> — around 60–65% of total blood volume sits in the venous system at any moment.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -2800,7 +2940,8 @@ const PACK = {
    "q": "Describe the structure of a capillary and why it suits its function.",
    "a": "A <b>single layer of endothelial cells on a basement membrane</b> — no media, no externa. That makes the wall about <b>1 cell thick</b>, so diffusion distances are minimal, and the lumen is barely wide enough for red cells to pass in single file, which maximises contact with the wall. Perfect for exchange, useless for withstanding pressure.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -2809,7 +2950,8 @@ const PACK = {
    "q": "Name the three types of capillary and where each is found.",
    "a": "<b>Continuous</b> — uninterrupted endothelium; muscle, skin, lung, CNS (where tight junctions form the blood–brain barrier). <b>Fenestrated</b> — pores in the endothelium for rapid filtration; kidney glomeruli, small intestine, endocrine glands. <b>Sinusoid</b> — large gaps allowing whole cells and proteins through; liver, spleen, bone marrow.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -2825,7 +2967,8 @@ const PACK = {
    "correct": 1,
    "why": "Thick media + internal elastic lamina + holds its shape = <b>artery</b>. This is a standard image question.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -2841,7 +2984,8 @@ const PACK = {
    "correct": 2,
    "why": "The venous system is the <b>capacitance reservoir</b>, holding roughly 60–65%.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "match",
@@ -2872,6 +3016,7 @@ const PACK = {
    ],
    "tier": "textbook",
    "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true,
    "why": "Read the wall and the vessel names itself: <b>elastic media means pressure</b> (artery), <b>valves mean flow against gravity</b> (vein), <b>one cell thick means exchange</b> (capillary)."
   },
   {
@@ -2902,7 +3047,8 @@ const PACK = {
    "q": "What are the two opposing pressures governing fluid movement at a capillary?",
    "a": "<b>Hydrostatic pressure (HP)</b> — the blood pressure inside the capillary, which <b>pushes fluid OUT</b>. <b>Colloid osmotic (oncotic) pressure (OP)</b> — generated by <b>plasma proteins, mainly albumin</b>, which cannot cross the wall, and which <b>pulls fluid IN</b>.",
    "tier": "textbook",
-   "srcNote": "cites 2026 circulation vessels cv1-2 but no phrase from this card appears in that source — the citation was never verified"
+   "srcNote": "cites 2026 circulation vessels cv1-2 but no phrase from this card appears in that source — the citation was never verified",
+   "bg": true
   },
   {
    "type": "flash",
@@ -2911,7 +3057,8 @@ const PACK = {
    "q": "What happens at the ARTERIAL end of a capillary, and why?",
    "a": "Hydrostatic pressure is high (~35 mmHg) and exceeds oncotic pressure (~25 mmHg), so there is <b>net FILTRATION</b> — fluid, oxygen and nutrients are pushed out into the interstitial space for the cells to use.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -2920,7 +3067,8 @@ const PACK = {
    "q": "What happens at the VENOUS end of a capillary, and why?",
    "a": "Hydrostatic pressure has fallen (~17 mmHg) below the oncotic pressure (~25 mmHg, now relatively higher because plasma proteins stayed behind), so there is <b>net REABSORPTION</b> — fluid, wastes and CO₂ are drawn back into the capillary.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -2929,7 +3077,8 @@ const PACK = {
    "q": "If most filtered fluid is reabsorbed, what happens to the rest?",
    "a": "Around <b>20 L is filtered out per day</b> across all the capillaries and about <b>17 L is reabsorbed</b> at the venous ends. The leftover — roughly <b>3 L/day</b>, plus any leaked plasma protein — is <b>collected by the lymphatic capillaries</b> and returned to the venous system at the subclavian veins. Without that, oedema would be continuous.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -2938,7 +3087,8 @@ const PACK = {
    "q": "Name three mechanisms that cause OEDEMA in terms of capillary fluid dynamics.",
    "a": "<b>1. Raised hydrostatic pressure</b> — heart failure, venous obstruction, DVT: more is pushed out. <b>2. Reduced oncotic pressure</b> — low albumin from liver failure, malnutrition (kwashiorkor) or nephrotic syndrome: less is pulled back. <b>3. Blocked lymphatic drainage</b> — node removal, filariasis: the residual <b>3 L/day</b> is never collected.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -2976,7 +3126,8 @@ const PACK = {
    "correct": 1,
    "why": "No albumin means <b>no pull</b> — filtered fluid stays in the tissue.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "cloze",
@@ -3028,7 +3179,8 @@ const PACK = {
    ],
    "why": "Hydrostatic OUT, oncotic IN — everything else follows from that pairing.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "saq",
@@ -3044,7 +3196,8 @@ const PACK = {
    ],
    "model": "This is the Lymph Node Removal case study. Note that although THAT case study is starred (exam), the underlying fluid dynamics are criterion cvs-3 and are fair game in Test 1.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -3053,7 +3206,8 @@ const PACK = {
    "q": "State the relationship between blood flow, pressure and resistance.",
    "a": "<b>Flow = change in pressure ÷ resistance (F = ΔP / R).</b> Flow is <b>directly</b> proportional to the pressure gradient and <b>inversely</b> proportional to resistance. Also <b>BP = Cardiac Output × Peripheral Resistance</b>.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -3062,7 +3216,8 @@ const PACK = {
    "q": "What three factors determine peripheral resistance, and which matters most?",
    "a": "<b>Blood vessel diameter (radius)</b> — by far the most important, because resistance is inversely proportional to the <b>fourth power of the radius</b>: halve the radius and resistance rises 16-fold. <b>Blood viscosity</b> — thicker blood (polycythaemia, dehydration) resists more. <b>Vessel length</b> — longer vessels resist more, which is why obesity raises BP.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -3071,7 +3226,8 @@ const PACK = {
    "q": "Where is blood velocity slowest, and why is that essential?",
    "a": "In the <b>capillaries</b>. Although each capillary is tiny, there are so many that their <b>total cross-sectional area is enormous</b> — so the same volume of blood moves very slowly through them. That slow transit is exactly what gives time for <b>gas, nutrient and waste exchange</b>. Velocity is fastest in the aorta.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -3095,7 +3251,8 @@ const PACK = {
     "scope": "cited",
     "how": "phrase-question-only",
     "strong": false
-   }
+   },
+   "bg": true
   },
   {
    "type": "mcq",
@@ -3111,7 +3268,8 @@ const PACK = {
    "correct": 3,
    "why": "Resistance ∝ 1/r⁴, so halving the radius multiplies resistance by <b>2⁴ = 16</b>. This is why tiny changes in arteriolar tone control BP so powerfully.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "tfset",
@@ -3138,7 +3296,8 @@ const PACK = {
    ],
    "why": "Wide vessels have LOW resistance and so lower pressure; capillaries have the slowest velocity because of their huge combined cross-sectional area.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "match",
@@ -3169,6 +3328,7 @@ const PACK = {
    ],
    "tier": "textbook",
    "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true,
    "why": "Everything routes through <b>BP = cardiac output × peripheral resistance</b>: vessel diameter and blood viscosity move the resistance term, blood volume moves the cardiac output term."
   },
   {
@@ -3178,7 +3338,8 @@ const PACK = {
    "q": "Describe the location and orientation of the heart.",
    "a": "In the <b>mediastinum</b>, between the lungs, behind the sternum and above the diaphragm. About <b>two-thirds lies to the LEFT</b> of the midline. The <b>base</b> (broad superior surface, where the great vessels attach) points posteriorly and to the right at about the 2nd rib; the <b>apex</b> points anteriorly, inferiorly and to the left, reaching the <b>5th intercostal space at the midclavicular line</b>.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -3187,7 +3348,8 @@ const PACK = {
    "q": "Name the coverings of the heart from the outside in.",
    "a": "<b>Fibrous pericardium</b> — tough outer sac that anchors the heart and prevents overfilling. <b>Parietal layer of the serous pericardium</b> — lines the fibrous sac. <b>Pericardial cavity</b> — contains a thin film of serous fluid. <b>Visceral layer of the serous pericardium</b>, also called the <b>epicardium</b> — sits directly on the heart.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -3196,7 +3358,8 @@ const PACK = {
    "q": "Name the three layers of the heart WALL and their composition.",
    "a": "<b>Epicardium</b> — the visceral serous pericardium; thin, protective. <b>Myocardium</b> — the thick middle layer of <b>cardiac muscle</b> that does the pumping. <b>Endocardium</b> — thin endothelium lining the chambers and covering the valves, continuous with the vessel endothelium so blood meets one smooth surface throughout.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -3205,7 +3368,8 @@ const PACK = {
    "q": "Why is the wall of the left ventricle so much thicker than the right?",
    "a": "The right ventricle pumps only to the <b>low-pressure pulmonary circuit</b> (next door, ~25/8 mmHg). The left ventricle must generate enough pressure to drive blood around the <b>entire high-pressure systemic circuit</b> (~120/80 mmHg). Its wall is roughly <b>three times thicker</b>.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -3214,7 +3378,8 @@ const PACK = {
    "q": "Name the four heart valves and state what each separates.",
    "a": "<b>Tricuspid</b> — right atrium from right ventricle. <b>Pulmonary (semilunar)</b> — right ventricle from pulmonary trunk. <b>Mitral / bicuspid</b> — left atrium from left ventricle. <b>Aortic (semilunar)</b> — left ventricle from aorta.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -3223,7 +3388,8 @@ const PACK = {
    "q": "What are the chordae tendineae and papillary muscles for?",
    "a": "The <b>papillary muscles</b> project from the ventricle wall and attach via the <b>chordae tendineae</b> (\"heart strings\") to the cusps of the AV valves. When the ventricle contracts they tighten, <b>stopping the valve cusps from being blown backwards (prolapsing) into the atrium</b>. They do not open or close the valve — pressure does that.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -3261,7 +3427,8 @@ const PACK = {
    "correct": 1,
    "why": "<b>Peri</b>carditis — the pericardium. Myocarditis is the muscle, endocarditis the lining and valves.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "match",
@@ -3296,6 +3463,7 @@ const PACK = {
    ],
    "tier": "textbook",
    "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true,
    "why": "The prefixes place them: <b>endo-</b> inside, <b>myo-</b> muscle, <b>peri-</b> around. Chordae tendineae and the septa are named for what they hold and what they separate."
   },
   {
@@ -3314,7 +3482,8 @@ const PACK = {
    ],
    "model": "There is a peer-marked SAQ discussion board on exactly this topic — \"HEART COVERINGS & STRUCTURES IN THE RIGHT & LEFT HALVES OF THE HEART\".",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -3323,7 +3492,8 @@ const PACK = {
    "q": "Trace the path of blood through the heart and pulmonary circuit.",
    "a": "Superior/inferior vena cava and coronary sinus → <b>right atrium</b> → tricuspid valve → <b>right ventricle</b> → pulmonary valve → pulmonary trunk and arteries → <b>lungs</b> → pulmonary veins → <b>left atrium</b> → mitral valve → <b>left ventricle</b> → aortic valve → <b>aorta</b> → systemic circulation.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -3332,7 +3502,8 @@ const PACK = {
    "q": "Which are the only arteries carrying deoxygenated blood, and the only veins carrying oxygenated blood?",
    "a": "The <b>pulmonary arteries</b> carry deoxygenated blood (to the lungs) and the <b>pulmonary veins</b> carry oxygenated blood (back to the heart). Arteries are defined by carrying blood <b>away from the heart</b>, not by oxygen content. (The umbilical vessels in the fetus are the other exception.)",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -3341,7 +3512,8 @@ const PACK = {
    "q": "Describe the coronary circulation.",
    "a": "The <b>left and right coronary arteries</b> arise from the <b>base of the aorta</b> just above the aortic valve. The left divides into the <b>anterior interventricular (LAD)</b> and <b>circumflex</b> branches; the right gives the <b>marginal</b> and <b>posterior interventricular</b> branches. Venous blood collects in the <b>coronary sinus</b> and drains into the <b>right atrium</b>.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -3350,7 +3522,8 @@ const PACK = {
    "q": "When does the myocardium actually receive its blood supply, and why does that matter?",
    "a": "During <b>DIASTOLE</b>. In systole the contracting myocardium compresses its own vessels and the open aortic valve cusps partly obscure the coronary openings. This is why a <b>very fast heart rate is dangerous in coronary disease</b> — tachycardia shortens diastole, so the heart has less time to perfuse itself just when it needs more oxygen.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -3366,7 +3539,8 @@ const PACK = {
    "correct": 1,
    "why": "The LAD supplies the anterior left ventricle and septum — hence its nickname, the \"widow-maker\".",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "order",
@@ -3390,7 +3564,8 @@ const PACK = {
     "scope": "cited",
     "how": "phrase-question-only",
     "strong": false
-   }
+   },
+   "bg": true
   },
   {
    "type": "tfset",
@@ -3417,7 +3592,8 @@ const PACK = {
    ],
    "why": "Two of these come straight from the formative. The pulmonary circuit is <b>low</b> pressure, and coronary perfusion happens in <b>diastole</b>.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -3444,7 +3620,8 @@ const PACK = {
      ]
     },
     "strong": false
-   }
+   },
+   "bg": true
   },
   {
    "type": "flash",
@@ -3468,7 +3645,8 @@ const PACK = {
    "q": "Why is there a deliberate DELAY at the AV node?",
    "a": "The impulse is held for about <b>0.1 second</b>. This lets the <b>atria finish contracting and completely empty into the ventricles before the ventricles contract</b>. Without the delay, atria and ventricles would contract together and ventricular filling would be badly reduced.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -3477,7 +3655,8 @@ const PACK = {
    "q": "Why do the ventricles contract from the APEX upwards?",
    "a": "The Purkinje fibres deliver the impulse to the apex first. Contracting from the bottom up <b>squeezes blood upwards towards the semilunar valves</b> at the top of the ventricles — like squeezing a tube of toothpaste from the end. Contracting top-down would trap blood at the apex.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -3486,7 +3665,8 @@ const PACK = {
    "q": "What do the P wave, QRS complex and T wave represent?",
    "a": "<b>P wave</b> — depolarisation of the <b>atria</b>, followed by atrial contraction. <b>QRS complex</b> — depolarisation of the <b>ventricles</b>, followed by ventricular contraction (atrial repolarisation is hidden inside it). <b>T wave</b> — repolarisation of the <b>ventricles</b>, followed by ventricular relaxation.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -3616,7 +3796,8 @@ const PACK = {
    ],
    "why": "Depolarisation precedes contraction; repolarisation precedes relaxation. Only ventricular repolarisation is visible.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "order",
@@ -3633,7 +3814,8 @@ const PACK = {
    ],
    "why": "The AV delay is the step people leave out — and it is the one with a stated reason.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "match",
@@ -3664,6 +3846,7 @@ const PACK = {
    ],
    "tier": "textbook",
    "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true,
    "why": "Every part of the chain has its own intrinsic rate, and the <b>fastest one sets the pace</b> — normally the SA node. The AV delay is not a flaw: it is what lets the atria empty before the ventricles fire."
   },
   {
@@ -3673,7 +3856,8 @@ const PACK = {
    "q": "Define cardiac output and give the normal resting value.",
    "a": "<b>Cardiac output (CO) = heart rate × stroke volume</b> — the volume of blood pumped by one ventricle per minute. Typically <b>70 bpm × 70 mL ≈ 5 L/min</b>, roughly the entire blood volume every minute.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -3682,7 +3866,8 @@ const PACK = {
    "q": "How does the NERVOUS system control heart rate?",
    "a": "Two centres in the medulla. The <b>cardioacceleratory centre</b> sends <b>sympathetic</b> fibres to the SA node, AV node and myocardium, releasing <b>noradrenaline</b> onto β₁ receptors → faster rate and greater force. The <b>cardioinhibitory centre</b> sends <b>parasympathetic</b> fibres in the <b>vagus nerve</b>, releasing <b>acetylcholine</b> → slower rate. At rest vagal tone dominates.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -3691,7 +3876,8 @@ const PACK = {
    "q": "Which hormones affect heart rate and contractility?",
    "a": "<b>Adrenaline and noradrenaline</b> from the adrenal medulla — the hormonal arm of fight-or-flight; they increase rate and force. <b>Thyroxine</b> — a slower, sustained increase in heart rate and sensitivity to catecholamines, which is why hyperthyroid patients are tachycardic.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -3700,7 +3886,8 @@ const PACK = {
    "q": "State the Frank–Starling law of the heart.",
    "a": "The more the ventricle is <b>stretched by the volume of blood filling it (preload/EDV)</b>, the more forcefully it contracts and the greater the stroke volume — within limits. This automatically matches output to venous return, so the heart pumps out whatever it receives.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -3709,7 +3896,8 @@ const PACK = {
    "q": "Name the three determinants of stroke volume.",
    "a": "<b>Preload</b> — end-diastolic volume, the degree of stretch before contraction (Frank–Starling). <b>Contractility</b> — the intrinsic force of contraction at a given preload, raised by sympathetic stimulation, adrenaline and calcium. <b>Afterload</b> — the pressure the ventricle must overcome to eject; raised afterload (hypertension, aortic stenosis) reduces stroke volume.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -3718,7 +3906,8 @@ const PACK = {
    "q": "What do \"inotropic\" and \"chronotropic\" mean?",
    "a": "<b>Inotropic</b> = affecting the <b>force</b> of contraction. <b>Chronotropic</b> = affecting the <b>rate</b>. Positive inotropes/chronotropes increase them (adrenaline, sympathetic stimulation); negative ones decrease them (beta blockers, vagal stimulation).",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -3734,7 +3923,8 @@ const PACK = {
    "correct": 1,
    "why": "Blocking β₁ receptors reduces both <b>force (inotropic)</b> and <b>rate (chronotropic)</b>.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "tfset",
@@ -3773,7 +3963,8 @@ const PACK = {
     "scope": "cited",
     "how": "phrase-question-only",
     "strong": false
-   }
+   },
+   "bg": true
   },
   {
    "type": "cloze",
@@ -3825,7 +4016,8 @@ const PACK = {
    ],
    "why": "CO = HR × SV is the single most reusable equation in this module.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "saq",
@@ -3842,7 +4034,8 @@ const PACK = {
    ],
    "model": "A mark is often available for stating the resting value, ~5 L/min.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -3851,7 +4044,8 @@ const PACK = {
    "q": "List the general factors that raise heart rate.",
    "a": "<b>Exercise</b>, <b>stress/emotion/fear</b>, <b>fever or raised body temperature</b>, <b>caffeine, nicotine and stimulant drugs</b>, <b>hypovolaemia and haemorrhage</b>, <b>hyperthyroidism</b>, <b>anaemia and hypoxia</b>, and <b>younger age</b> — infants have much higher resting rates than adults.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -3860,7 +4054,8 @@ const PACK = {
    "q": "Why does a trained athlete have a low resting heart rate?",
    "a": "Endurance training <b>hypertrophies the myocardium and increases end-diastolic volume</b>, so <b>stroke volume rises substantially</b>. Because CO = HR × SV and resting cardiac output is unchanged, the heart rate falls to compensate — resting rates of 40–50 bpm are normal in athletes and are not pathological bradycardia.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -3869,7 +4064,8 @@ const PACK = {
    "q": "How does age affect resting heart rate?",
    "a": "Resting heart rate is <b>highest in infancy</b> (120–160 bpm in a newborn) and falls progressively through childhood to the adult <b>60–100 bpm</b>. Maximum achievable heart rate also declines with age, so older patients have less cardiac reserve.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -3878,7 +4074,8 @@ const PACK = {
    "q": "How does body temperature affect heart rate?",
    "a": "<b>Raised temperature increases</b> heart rate — roughly 10 bpm per degree Celsius — by speeding SA node depolarisation and raising metabolic demand. <b>Hypothermia slows</b> the heart markedly, which is why therapeutic cooling reduces cardiac work and oxygen demand.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -3894,7 +4091,8 @@ const PACK = {
    "correct": 1,
    "why": "Athletic bradycardia is a <b>trained adaptation</b>: CO is unchanged because SV is much larger.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -3910,7 +4108,8 @@ const PACK = {
    "correct": 0,
    "why": "Pyrexia raises heart rate by roughly <b>10 bpm per °C</b>.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "match",
@@ -3945,6 +4144,7 @@ const PACK = {
    ],
    "tier": "textbook",
    "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true,
    "why": "Everything here is <b>sympathetic drive up or down</b>, with one exception: in endurance training the resting rate falls because a bigger stroke volume delivers the same cardiac output in fewer beats."
   },
   {
@@ -3954,7 +4154,8 @@ const PACK = {
    "q": "Name the mechanisms that drive venous return against gravity.",
    "a": "<b>The skeletal muscle pump</b> — contracting muscles squeeze the deep veins and the valves force blood one way, towards the heart. <b>The respiratory pump</b> — inspiration lowers thoracic pressure and raises abdominal pressure, sucking blood upward. <b>Venous valves</b> — prevent backflow. <b>Sympathetic venoconstriction</b> — reduces venous capacitance. Plus the residual pressure from the heartbeat itself.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -3963,7 +4164,8 @@ const PACK = {
    "q": "Why does immobility predispose to deep vein thrombosis?",
    "a": "Without the <b>skeletal muscle pump</b>, blood stagnates in the deep veins of the leg. Stasis is one arm of <b>Virchow's triad</b> (stasis, endothelial injury, hypercoagulability), so a thrombus forms. If it dislodges it becomes an <b>embolus</b> and travels through the venae cavae and right heart to the pulmonary arteries — a pulmonary embolism.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -3972,7 +4174,8 @@ const PACK = {
    "q": "How does HYPERKALAEMIA affect the heart?",
    "a": "A raised extracellular K⁺ makes the resting membrane potential <b>less negative</b>, so cardiac cells first become more excitable and then <b>fail to repolarise properly</b>. The result is <b>reduced contractility, heart block, and ultimately ventricular fibrillation or cardiac arrest</b>. It is one of the most lethal electrolyte disturbances.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -3981,7 +4184,8 @@ const PACK = {
    "q": "How do calcium and sodium levels affect cardiac function?",
    "a": "<b>Hypercalcaemia</b> increases contractility and prolongs contraction, risking arrest in systole; <b>hypocalcaemia</b> weakens contraction. <b>Hypernatraemia</b> interferes with calcium entry, reducing contractility. Calcium is essential for excitation–contraction coupling, so any disturbance shows up mechanically.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -3990,7 +4194,8 @@ const PACK = {
    "q": "What happens to cardiac output during exercise, and how?",
    "a": "CO can rise from ~5 L/min to <b>20–25 L/min</b> (more in athletes). The muscle and respiratory pumps massively increase <b>venous return</b>, raising end-diastolic volume; by the <b>Frank–Starling</b> mechanism this increases stroke volume. Simultaneously sympathetic drive raises <b>heart rate</b> and <b>contractility</b>. Both terms of CO = HR × SV go up.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -4014,7 +4219,8 @@ const PACK = {
     "scope": "cited",
     "how": "phrase-question-only",
     "strong": false
-   }
+   },
+   "bg": true
   },
   {
    "type": "tfset",
@@ -4041,7 +4247,8 @@ const PACK = {
    ],
    "why": "Statement 1 is verbatim from the formative test; hyperkalaemia is potentially fatal.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -4050,7 +4257,8 @@ const PACK = {
    "q": "Where are the baroreceptors, and what do they actually detect?",
    "a": "In the <b>aortic arch</b> and the <b>carotid sinus</b>. They are <b>stretch receptors</b> — they detect how much the vessel wall is being stretched, which reflects blood pressure. More stretch = more firing.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -4059,7 +4267,8 @@ const PACK = {
    "q": "Name the three centres in the medulla involved in blood pressure control and what each does.",
    "a": "<b>Cardioacceleratory centre</b> — speeds the heart and increases force (sympathetic). <b>Cardioinhibitory centre</b> — slows the heart (parasympathetic, vagus). <b>Vasomotor centre</b> — controls blood vessel diameter, and so peripheral resistance.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -4068,7 +4277,8 @@ const PACK = {
    "q": "Contrast the SHORT-term and LONG-term control of blood pressure.",
    "a": "<b>Short term (seconds):</b> the neural baroreceptor reflex, adjusting heart rate, contractility and vessel diameter. Also chemoreceptor reflexes and hormones such as adrenaline. <b>Long term (minutes to days):</b> the <b>kidney</b>, adjusting blood volume through GFR, renin–angiotensin–aldosterone and ADH. Neural mechanisms cannot correct a sustained problem — only volume can.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -4077,7 +4287,8 @@ const PACK = {
    "q": "Set out the renin–angiotensin–aldosterone system in sequence.",
    "a": "Low BP → <b>juxtaglomerular apparatus</b> releases <b>renin</b> → renin converts <b>angiotensinogen</b> (from the liver) to <b>angiotensin I</b> → in the lungs, <b>ACE</b> converts it to <b>angiotensin II</b> → angiotensin II causes <b>vasoconstriction</b>, releases <b>aldosterone</b> (Na⁺ and water reabsorption) and <b>ADH</b> (water reabsorption), and stimulates <b>thirst</b>.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -4086,7 +4297,8 @@ const PACK = {
    "q": "What does ADH do, and where does it act?",
    "a": "<b>Antidiuretic hormone</b> (vasopressin), released from the <b>posterior pituitary</b>, makes the <b>collecting ducts</b> of the nephron more permeable to water. More water is reabsorbed from the filtrate back into the blood, so <b>urine volume falls, urine concentrates, and blood volume and pressure rise</b>. At high concentrations it also causes vasoconstriction.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -4095,7 +4307,8 @@ const PACK = {
    "q": "What does aldosterone do?",
    "a": "A mineralocorticoid from the <b>adrenal cortex</b>. It increases <b>Na⁺ reabsorption</b> (and K⁺ excretion) in the distal tubule and collecting duct. Because <b>water follows salt</b> osmotically, blood volume and therefore blood pressure rise.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "tfset",
@@ -4126,7 +4339,8 @@ const PACK = {
     "scope": "cited",
     "how": "phrase-question-only",
     "strong": false
-   }
+   },
+   "bg": true
   },
   {
    "type": "order",
@@ -4143,7 +4357,8 @@ const PACK = {
    ],
    "why": "Note that ACE acts in the <b>lungs</b> — a favourite detail, and the reason ACE inhibitors can cause a dry cough.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "match",
@@ -4178,6 +4393,7 @@ const PACK = {
    ],
    "tier": "textbook",
    "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true,
    "why": "Two timescales in one list. <b>Baroreceptors and the vasomotor centre act in seconds</b>; <b>renin, aldosterone and ADH work over hours</b>, and they work by changing volume rather than vessel diameter."
   },
   {
@@ -4187,7 +4403,8 @@ const PACK = {
    "q": "What happens to blood pressure during the fight-or-flight response?",
    "a": "Sympathetic activation plus adrenaline raises <b>heart rate and contractility</b> (so cardiac output rises) and causes <b>vasoconstriction in skin, gut and kidney</b> while <b>dilating vessels in skeletal muscle</b>. Systolic pressure rises markedly; diastolic changes less because muscle beds are dilated.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -4196,7 +4413,8 @@ const PACK = {
    "q": "Why does systolic pressure rise more than diastolic during exercise?",
    "a": "<b>Cardiac output</b> rises steeply, driving systolic pressure up. But <b>vasodilation in the working skeletal muscle beds lowers total peripheral resistance</b>, which offsets the rise in diastolic pressure. A diastolic pressure that <b>rises</b> markedly during exercise is an abnormal finding.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -4205,7 +4423,8 @@ const PACK = {
    "q": "How does chronic stress contribute to hypertension?",
    "a": "Repeated sympathetic activation and cortisol release cause sustained <b>vasoconstriction and sodium/water retention</b>. Over time the <b>baroreceptors reset their set point</b> to the higher pressure, so the reflex no longer corrects it, and persistent high pressure damages vessel walls and accelerates atherosclerosis.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -4221,7 +4440,8 @@ const PACK = {
    "correct": 1,
    "why": "Blood is shunted <b>to</b> working muscle and the heart, and <b>away</b> from gut and kidney.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -4237,7 +4457,8 @@ const PACK = {
    "correct": 1,
    "why": "Seconds-scale correction is always the <b>baroreceptor reflex</b>; RAAS is the slow, volume-based system.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "saq",
@@ -4253,7 +4474,8 @@ const PACK = {
    ],
    "model": "Later in exercise, skin vessels dilate to lose heat — which is why prolonged exertion in heat can drop blood pressure.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -4262,7 +4484,8 @@ const PACK = {
    "q": "Define circulatory shock.",
    "a": "A state in which <b>blood flow (perfusion) is inadequate to meet the metabolic needs of the tissues</b>. Cells switch to anaerobic metabolism, lactic acid accumulates, and without correction cell death and multi-organ failure follow. It is defined by <b>inadequate perfusion</b>, not by a particular blood pressure.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -4271,7 +4494,8 @@ const PACK = {
    "q": "Name the four main types of circulatory shock and their causes.",
    "a": "<b>Hypovolaemic</b> — loss of blood or fluid volume (haemorrhage, burns, severe dehydration). <b>Cardiogenic</b> — the heart fails as a pump (MI, arrhythmia, heart failure). <b>Septic</b> — overwhelming bacterial infection causing massive vasodilation. <b>Anaphylactic</b> — severe allergic reaction causing vasodilation and capillary leak.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -4280,7 +4504,8 @@ const PACK = {
    "q": "Describe the three stages of hypovolaemic shock.",
    "a": "<b>1. Compensated (initial)</b> — baroreceptor reflex maintains BP; tachycardia, vasoconstriction, cool pale clammy skin, anxiety, reduced urine output. <b>BP may still be normal</b>. <b>2. Progressive (decompensated)</b> — compensation fails; BP falls, tachycardia worsens, confusion, metabolic acidosis, oliguria. <b>3. Irreversible</b> — cell and organ damage is beyond repair; death follows even if volume is restored.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -4289,7 +4514,8 @@ const PACK = {
    "q": "What are the signs of hypovolaemic shock, and which is the trap?",
    "a": "<b>Tachycardia</b> (often the earliest), <b>tachypnoea</b>, <b>cool, pale, clammy skin</b> with prolonged capillary refill, <b>weak thready pulse</b>, <b>reduced urine output</b>, <b>thirst</b>, restlessness then confusion. <b>The trap: blood pressure is a LATE sign.</b> A young patient can lose 30% of their blood volume and still have a normal BP — by the time it falls, compensation has already failed.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -4350,6 +4576,7 @@ const PACK = {
     "how": "phrase-question-only",
     "strong": false
    },
+   "bg": true,
    "why": "Name the thing that failed: <b>volume</b> (hypovolaemic), <b>pump</b> (cardiogenic), or <b>vessel tone</b> — which is what sepsis and anaphylaxis both destroy, by different routes."
   },
   {
@@ -4367,7 +4594,8 @@ const PACK = {
    ],
    "why": "The examinable point is step 3 — a <b>normal blood pressure does not exclude shock</b>.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "saq",
@@ -4385,7 +4613,8 @@ const PACK = {
    ],
    "model": "The mark most often missed is that BLOOD PRESSURE IS A LATE SIGN — a compensating patient can look \"normal\" on the chart while being profoundly shocked.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -4394,7 +4623,8 @@ const PACK = {
    "q": "Define PULSE and PRESSURE POINTS.",
    "a": "<b>Pulse</b> — the pressure wave transmitted along an artery as the left ventricle ejects blood; palpable wherever an artery lies over bone. <b>Pressure points</b> — sites where an artery can be compressed against bone to slow bleeding, e.g. brachial, femoral, carotid, temporal.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -4403,7 +4633,8 @@ const PACK = {
    "q": "Define TISSUE PERFUSION and BLOOD FLOW.",
    "a": "<b>Blood flow</b> — the volume of blood passing a point per unit time. <b>Tissue perfusion</b> — the actual delivery of that blood to a capillary bed so exchange can occur. Perfusion is what keeps tissue alive; flow through a vessel that bypasses the tissue does not.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -4412,7 +4643,8 @@ const PACK = {
    "q": "Define VASOCONSTRICTION and VASODILATION.",
    "a": "<b>Vasoconstriction</b> — narrowing of a vessel by contraction of smooth muscle in the tunica media, raising peripheral resistance and blood pressure and reducing flow to that area. <b>Vasodilation</b> — relaxation of that muscle, widening the vessel, lowering resistance and increasing local flow.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -4421,7 +4653,8 @@ const PACK = {
    "q": "Define ISCHAEMIA and distinguish ANGINA PECTORIS from MYOCARDIAL INFARCTION.",
    "a": "<b>Ischaemia</b> — inadequate blood supply to a tissue, so it lacks oxygen. <b>Angina pectoris</b> — chest pain from <b>reversible</b> myocardial ischaemia, typically on exertion, relieved by rest or GTN. <b>Myocardial infarction (heart attack)</b> — prolonged, complete occlusion causing <b>irreversible death of myocardial tissue</b>; pain is not relieved by rest.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -4430,7 +4663,8 @@ const PACK = {
    "q": "Define ATRIAL and VENTRICULAR SYSTOLE and DIASTOLE.",
    "a": "<b>Systole</b> = contraction, <b>diastole</b> = relaxation. <b>Atrial systole</b> — the atria contract, topping up the ventricles. <b>Atrial diastole</b> — the atria relax and refill. <b>Ventricular systole</b> — the ventricles contract and eject blood. <b>Ventricular diastole</b> — the ventricles relax and fill. A recorded \"blood pressure\" quotes ventricular systole over ventricular diastole.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -4439,7 +4673,8 @@ const PACK = {
    "q": "Distinguish PERICARDITIS, MYOCARDITIS and ENDOCARDITIS.",
    "a": "<b>Pericarditis</b> — inflammation of the pericardial sac; sharp chest pain, worse lying flat, relieved by sitting forward; risk of effusion and tamponade. <b>Myocarditis</b> — inflammation of the heart muscle; can weaken contraction and cause arrhythmias. <b>Endocarditis</b> — infection of the endocardium, especially the <b>valves</b>; causes vegetations, murmurs and emboli.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -4448,7 +4683,8 @@ const PACK = {
    "q": "Define BRADYCARDIA, TACHYCARDIA and ASYSTOLE.",
    "a": "<b>Bradycardia</b> — resting adult heart rate <b>below 60 bpm</b>. <b>Tachycardia</b> — resting adult heart rate <b>above 100 bpm</b>. <b>Asystole</b> — <b>no electrical activity and no contraction at all</b>: a flat line on the ECG, and a non-shockable cardiac arrest rhythm.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -4457,7 +4693,8 @@ const PACK = {
    "q": "Define VENTRICULAR FIBRILLATION and why it is fatal without treatment.",
    "a": "Chaotic, disorganised electrical activity so the ventricular muscle <b>quivers instead of contracting</b>. There is <b>no coordinated ejection, so no cardiac output and no pulse</b>. It is a <b>shockable</b> arrest rhythm — defibrillation depolarises the whole myocardium at once so the SA node can resume control.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -4466,7 +4703,8 @@ const PACK = {
    "q": "Define CONGESTIVE HEART FAILURE.",
    "a": "A state where the heart cannot pump enough to meet the body's needs, so blood <b>backs up (congests) behind the failing side</b>. <b>Left-sided failure</b> congests the lungs → pulmonary oedema, breathlessness, orthopnoea. <b>Right-sided failure</b> congests the systemic veins → peripheral oedema, raised JVP, hepatomegaly.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -4475,7 +4713,8 @@ const PACK = {
    "q": "Define HYPERTENSION and HYPOTENSION.",
    "a": "<b>Hypertension</b> — sustained blood pressure at or above about <b>140/90 mmHg</b> on repeated measurement; usually symptomless but damaging. <b>Hypotension</b> — blood pressure low enough to impair perfusion, generally a systolic below about <b>90 mmHg</b>, or a fall large enough to cause symptoms.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -4484,7 +4723,8 @@ const PACK = {
    "q": "Define POSITIVE and NEGATIVE INOTROPIC and CHRONOTROPIC action.",
    "a": "<b>Inotropic</b> affects the <b>force</b> of contraction; <b>chronotropic</b> affects the <b>rate</b>. <b>Positive</b> = increases it (adrenaline, sympathetic stimulation, digoxin is positively inotropic but negatively chronotropic). <b>Negative</b> = decreases it (beta blockers, vagal stimulation).",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "match",
@@ -4520,6 +4760,7 @@ const PACK = {
    ],
    "tier": "textbook",
    "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true,
    "why": "Read the endings: <b>-aemia</b> concerns blood, <b>-itis</b> is inflammation, <b>a-systole</b> is literally no contraction. Angina is ischaemia that is still reversible; infarction is when it no longer is."
   },
   {
@@ -4536,7 +4777,8 @@ const PACK = {
    "correct": 1,
    "why": "<b>Asystole</b> — and unlike VF it is <b>not shockable</b>; the treatment is CPR and adrenaline.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -4545,7 +4787,8 @@ const PACK = {
    "q": "Name the four processes of respiration.",
    "a": "<b>1. Pulmonary ventilation</b> — moving air in and out of the lungs. <b>2. External respiration</b> — gas exchange between alveoli and pulmonary capillary blood. <b>3. Transport of blood gases</b> — carrying O₂ and CO₂ between lungs and tissues. <b>4. Internal respiration</b> — gas exchange between systemic capillaries and tissue cells. <b>Cellular respiration</b> — the cells actually using O₂ to make ATP — is the point of all four.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -4554,7 +4797,8 @@ const PACK = {
    "q": "State the functions of the respiratory system beyond gas exchange.",
    "a": "<b>Gas exchange</b> is the main one, but also: <b>acid–base regulation</b> (adjusting CO₂ regulates blood pH within minutes), <b>sound production</b> (larynx), <b>olfaction</b>, <b>defence</b> (filtering, mucus, cough, macrophages), <b>heat and water loss</b>, and it houses the enzyme <b>ACE</b>, which converts angiotensin I to II.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -4570,7 +4814,8 @@ const PACK = {
    "correct": 1,
    "why": "<b>External</b> = at the lungs (in contact with the outside world). <b>Internal</b> = at the tissues.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -4586,7 +4831,8 @@ const PACK = {
    "correct": 1,
    "why": "Blowing off CO₂ raises pH; retaining it lowers pH — the fastest pH control the body has.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "order",
@@ -4601,7 +4847,8 @@ const PACK = {
    ],
    "why": "Cellular respiration then uses that oxygen to make ATP — it is metabolism, not a respiratory process itself.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "match",
@@ -4632,6 +4879,7 @@ const PACK = {
    ],
    "tier": "textbook",
    "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true,
    "why": "The lungs do a great deal more than gas exchange: <b>speech, smell, pH control and the activation of angiotensin II</b> all happen here. That last one is why the respiratory system keeps turning up in the blood-pressure story."
   },
   {
@@ -4641,7 +4889,8 @@ const PACK = {
    "q": "Where does the CONDUCTING zone begin and end, and what does it do?",
    "a": "From the <b>nose to the terminal bronchioles</b>. <b>No gas exchange happens here</b> — it conducts, filters, warms and humidifies air. Its ~150 mL volume is the <b>anatomical dead space</b>.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -4650,7 +4899,8 @@ const PACK = {
    "q": "What makes up the RESPIRATORY zone?",
    "a": "<b>Respiratory bronchioles → alveolar ducts → alveolar sacs → alveoli.</b> These are the only structures with alveoli in their walls, so this is the <b>only region where gas exchange occurs</b>.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -4659,7 +4909,8 @@ const PACK = {
    "q": "Where is the boundary between the UPPER and LOWER respiratory tract?",
    "a": "At the <b>larynx</b>. <b>Upper tract</b>: nose, nasal cavity, paranasal sinuses and pharynx. <b>Lower tract</b>: larynx, trachea, bronchi, bronchioles and the lungs. Clinically it separates a \"cold\" from a chest infection.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -4668,7 +4919,8 @@ const PACK = {
    "q": "How does the epithelium change as you move down the airway, and why?",
    "a": "<b>Ciliated pseudostratified columnar</b> in the trachea and bronchi (with goblet cells) → <b>ciliated simple columnar, then cuboidal</b> in the bronchioles (goblet cells and cilia disappear) → <b>simple squamous</b> in the alveoli. It thins progressively because the priority shifts from <b>cleaning</b> the air to <b>exchanging gas</b> across it.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -4706,7 +4958,8 @@ const PACK = {
    "correct": 2,
    "why": "<b>Bronchioles have no cartilage</b> — only smooth muscle. That is exactly why they can constrict in asthma while a bronchus cannot.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "match",
@@ -4737,6 +4990,7 @@ const PACK = {
    ],
    "tier": "textbook",
    "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true,
    "why": "Two things change all the way down the tree: <b>cartilage disappears and the epithelium gets thinner</b>, until the alveolar wall is a single flat cell — thin enough for gas to cross in a fraction of a second."
   },
   {
@@ -4764,7 +5018,8 @@ const PACK = {
    ],
    "why": "No cartilage in bronchioles is the fact that makes asthma possible.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -4773,7 +5028,8 @@ const PACK = {
    "q": "How does the muco-ciliary escalator work?",
    "a": "<b>Goblet cells and submucosal glands</b> secrete a sticky mucus blanket that traps inhaled particles. Beneath it, the <b>cilia of the pseudostratified columnar epithelium beat rhythmically upwards</b>, sweeping the mucus towards the pharynx, where it is <b>swallowed</b> and destroyed by stomach acid.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -4782,7 +5038,8 @@ const PACK = {
    "q": "How does smoking damage the muco-ciliary escalator, and what follows?",
    "a": "Smoke <b>paralyses and then destroys the cilia</b> while simultaneously <b>increasing mucus production</b>. Mucus can no longer be cleared, so it pools in the airways — hence the \"smoker's cough\" (the only clearance mechanism left), recurrent chest infections and chronic bronchitis.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -4791,7 +5048,8 @@ const PACK = {
    "q": "What happens to dust and debris that DOES reach the alveoli?",
    "a": "It is <b>engulfed and removed by alveolar macrophages</b> (\"dust cells\") that patrol the alveolar surface looking for antigens and pathogens. There are no cilia this far down, so phagocytosis is the only defence.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -4800,7 +5058,8 @@ const PACK = {
    "q": "How is sound produced and then shaped into speech?",
    "a": "<b>Production</b>: air forced through the <b>true vocal folds</b> makes them vibrate. <b>Pitch</b> depends on the tension and length of the folds; <b>loudness</b> on the force of the air. <b>Resonance</b> is added by the pharynx, oral and nasal cavities and the paranasal sinuses. <b>Articulation</b> into words is done by the tongue, lips, teeth and soft palate — not by the larynx.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -4809,7 +5068,8 @@ const PACK = {
    "q": "Which structures stop food entering the airway?",
    "a": "During swallowing the <b>larynx rises</b> and the <b>epiglottis folds down</b> over the glottis, while the <b>vestibular (false) vocal folds</b> close. If anything gets past, the highly sensitive <b>carina</b> and tracheal mucosa trigger a violent <b>cough reflex</b>.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -4825,7 +5085,8 @@ const PACK = {
    "correct": 1,
    "why": "<b>Goblet cells</b> (with submucosal glands) make mucus; the ciliated cells move it. Type II pneumocytes make surfactant, which is different.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "saq",
@@ -4862,7 +5123,8 @@ const PACK = {
    ],
    "why": "A layered system — each stage catches what the one before it missed.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -4871,7 +5133,8 @@ const PACK = {
    "q": "Name the three cell types found in an alveolus and their functions.",
    "a": "<b>Type I pneumocytes</b> — simple squamous cells forming ~95% of the surface; the actual gas-exchange membrane. <b>Type II pneumocytes</b> — cuboidal cells that secrete <b>surfactant</b>. <b>Alveolar macrophages</b> (\"dust cells\") — phagocytose bacteria and debris.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -4896,7 +5159,8 @@ const PACK = {
      ]
     },
     "strong": false
-   }
+   },
+   "bg": true
   },
   {
    "type": "flash",
@@ -4905,7 +5169,8 @@ const PACK = {
    "q": "What does surfactant do, and what happens without it?",
    "a": "Surfactant is a <b>phospholipid</b> that <b>reduces the surface tension</b> of the fluid lining the alveoli. Without it, surface tension would pull each alveolus shut at the end of every expiration and enormous effort would be needed to reinflate them. Deficiency in a premature baby causes <b>infant respiratory distress syndrome</b>.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -4914,7 +5179,8 @@ const PACK = {
    "q": "Why does the huge number of alveoli matter?",
    "a": "The lecture gives about <b>300 million alveoli</b>, providing an enormous total surface area for gas exchange packed into the chest. Diffusion rate is <b>directly proportional to surface area</b>, so destroying alveolar walls (emphysema) cripples gas exchange even though the lungs get bigger. <i>(Textbooks quote the area as anything from 70 to 140 m² — the lecture does not give a figure, so learn the 300 million and the principle, not a number.)</i>",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "match",
@@ -4953,6 +5219,7 @@ const PACK = {
     "how": "phrase-question-only",
     "strong": false
    },
+   "bg": true,
    "why": "Two cell types, two jobs: <b>type I is the thin wall gas crosses</b>, <b>type II makes surfactant</b>. The macrophage is the cleaner, because everything inhaled that got past the cilia ends up here."
   },
   {
@@ -4969,7 +5236,8 @@ const PACK = {
    "correct": 1,
    "why": "Surfactant production ramps up late in gestation — hence antenatal steroids to accelerate it.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "tfset",
@@ -4996,7 +5264,8 @@ const PACK = {
    ],
    "why": "Statement 1 is verbatim from the formative. Surfactant <b>reduces</b> surface tension, and <b>type II</b> cells make it.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -5005,7 +5274,8 @@ const PACK = {
    "q": "Define the four lung VOLUMES and give typical adult male values.",
    "a": "<b>Tidal volume (TV)</b> ~500 mL — moved in a normal quiet breath. <b>Inspiratory reserve volume (IRV)</b> ~3100 mL — extra you can inhale beyond a tidal breath. <b>Expiratory reserve volume (ERV)</b> ~1200 mL — extra you can exhale beyond a tidal breath. <b>Residual volume (RV)</b> ~1200 mL — air that can never be exhaled, keeping the alveoli open.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -5014,7 +5284,8 @@ const PACK = {
    "q": "Define the four lung CAPACITIES and how each is calculated.",
    "a": "<b>Inspiratory capacity (IC)</b> = TV + IRV (~3600 mL). <b>Functional residual capacity (FRC)</b> = ERV + RV (~2400 mL) — what stays in the lungs after a quiet breath out. <b>Vital capacity (VC)</b> = TV + IRV + ERV (~4800 mL) — the most you can move in one breath. <b>Total lung capacity (TLC)</b> = VC + RV (~6000 mL).",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -5023,7 +5294,8 @@ const PACK = {
    "q": "Why can residual volume never be measured with a spirometer?",
    "a": "Because a spirometer only measures air that <b>moves in or out</b>, and residual volume by definition <b>never leaves the lungs</b>. It must be measured indirectly, e.g. by helium dilution or body plethysmography. This also means TLC and FRC cannot be measured directly.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -5032,7 +5304,8 @@ const PACK = {
    "q": "What is the clinical significance of lung volumes in obstructive vs restrictive disease?",
    "a": "<b>Obstructive</b> (asthma, COPD, emphysema) — air is trapped, so <b>residual volume and FRC rise</b> and the <b>FEV₁/FVC ratio falls</b>; the problem is getting air OUT. <b>Restrictive</b> (fibrosis, obesity, kyphoscoliosis, neuromuscular disease) — the lungs cannot expand, so <b>VC and TLC fall</b> while the FEV₁/FVC ratio is normal or high; the problem is getting air IN.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -5041,7 +5314,8 @@ const PACK = {
    "q": "What is minute ventilation, and why is alveolar ventilation more useful?",
    "a": "<b>Minute ventilation</b> = tidal volume × respiratory rate (~500 × 12 = 6 L/min). <b>Alveolar ventilation</b> subtracts the ~150 mL dead space first: (500 − 150) × 12 = 4.2 L/min. Alveolar ventilation is what actually reaches gas exchange — which is why <b>rapid shallow breathing is inefficient</b> despite a normal minute volume.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -5057,7 +5331,8 @@ const PACK = {
    "correct": 1,
    "why": "VC = TV + IRV + ERV. TLC adds the residual volume on top.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "saq",
@@ -5080,7 +5355,8 @@ const PACK = {
     "scope": "cited",
     "how": "phrase-question-only",
     "strong": false
-   }
+   },
+   "bg": true
   },
   {
    "type": "cloze",
@@ -5132,7 +5408,8 @@ const PACK = {
    ],
    "why": "Air trapping in obstructive disease <b>raises</b> RV and FRC — the lungs hyperinflate.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -5141,7 +5418,8 @@ const PACK = {
    "q": "State Boyle's law and apply it to breathing.",
    "a": "At constant temperature, the <b>pressure of a gas is inversely proportional to its volume</b>. Increasing thoracic volume therefore <b>lowers</b> intrapulmonary pressure below atmospheric, and air flows in down the gradient. Decreasing volume raises pressure above atmospheric and air flows out.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -5167,7 +5445,8 @@ const PACK = {
      ]
     },
     "strong": false
-   }
+   },
+   "bg": true
   },
   {
    "type": "flash",
@@ -5196,7 +5475,8 @@ const PACK = {
      ]
     },
     "strong": false
-   }
+   },
+   "bg": true
   },
   {
    "type": "flash",
@@ -5205,7 +5485,8 @@ const PACK = {
    "q": "Why must intrapleural pressure stay NEGATIVE?",
    "a": "Intrapleural pressure is about <b>4 mmHg below intrapulmonary pressure</b> at all times. That negative transpulmonary pressure is what <b>holds the lung expanded against its own elastic recoil</b>. If air enters the pleural cavity (<b>pneumothorax</b>) the pressure equalises and the lung <b>collapses (atelectasis)</b>.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -5214,7 +5495,8 @@ const PACK = {
    "q": "Name the three factors that determine how easily air moves in and out.",
    "a": "<b>Airway resistance</b> — mostly set by airway radius; bronchoconstriction, mucus or oedema raise it sharply. <b>Alveolar surface tension</b> — opposed by surfactant. <b>Lung compliance</b> — how stretchy the lungs and chest wall are; reduced by fibrosis, oedema and kyphoscoliosis.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -5238,7 +5520,8 @@ const PACK = {
     "scope": "cited",
     "how": "phrase-question-only",
     "strong": false
-   }
+   },
+   "bg": true
   },
   {
    "type": "mcq",
@@ -5262,7 +5545,8 @@ const PACK = {
     "scope": "cited",
     "how": "phrase-question-only",
     "strong": false
-   }
+   },
+   "bg": true
   },
   {
    "type": "mcq",
@@ -5308,7 +5592,8 @@ const PACK = {
     "scope": "cited",
     "how": "phrase-question-only",
     "strong": false
-   }
+   },
+   "bg": true
   },
   {
    "type": "saq",
@@ -5324,7 +5609,8 @@ const PACK = {
    ],
    "model": "The contrast that earns marks: quiet expiration is PASSIVE elastic recoil with no muscle contraction; forced expiration is active.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "match",
@@ -5363,6 +5649,7 @@ const PACK = {
     "how": "phrase-question-only",
     "strong": false
    },
+   "bg": true,
    "why": "Quiet breathing uses the <b>diaphragm and the external intercostals</b>, and nothing else. The neck muscles, the internal intercostals and the abdominals are recruited only once breathing becomes forced."
   },
   {
@@ -5482,7 +5769,8 @@ const PACK = {
    "q": "Why is the oxygen–haemoglobin dissociation curve S-shaped (sigmoid)?",
    "a": "Because of <b>cooperative binding</b> — as each O₂ binds, haemoglobin changes shape and its affinity for the next O₂ increases. The <b>flat plateau at high PO₂</b> means saturation stays near 100% even if alveolar PO₂ falls somewhat (a safety margin at altitude or in mild lung disease). The <b>steep portion at tissue PO₂</b> means a small fall in tissue PO₂ unloads a lot of oxygen.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -5491,7 +5779,8 @@ const PACK = {
    "q": "What shifts the oxygen–haemoglobin dissociation curve to the RIGHT?",
    "a": "<b>Increased PCO₂, increased H⁺ (lower pH), increased temperature, increased 2,3-BPG.</b> All reduce haemoglobin's affinity so <b>more oxygen is unloaded</b>. All four are features of active or hypoxic tissue — this is the <b>Bohr effect</b>.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -5500,7 +5789,8 @@ const PACK = {
    "q": "What shifts the curve to the LEFT, and when is that dangerous?",
    "a": "<b>Decreased PCO₂, increased pH, decreased temperature, decreased 2,3-BPG</b> — haemoglobin holds oxygen more tightly. <b>Fetal haemoglobin</b> is left-shifted, which is how the fetus pulls oxygen from maternal blood. <b>Carbon monoxide</b> both occupies binding sites (200× the affinity of O₂) <b>and</b> shifts the curve left, so the little oxygen carried is not released — which is why CO poisoning is so lethal.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -5509,7 +5799,8 @@ const PACK = {
    "q": "What does a pulse oximeter actually measure, and what are its limits?",
    "a": "The <b>percentage saturation of haemoglobin with oxygen (SpO₂)</b> — normally <b>95–100%</b> on room air. It does <b>not</b> measure how much haemoglobin there is, so a severely anaemic patient can read 100% while carrying very little oxygen. It also cannot distinguish oxyhaemoglobin from <b>carboxyhaemoglobin</b>, so it reads falsely high in carbon monoxide poisoning.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -5533,7 +5824,8 @@ const PACK = {
     "scope": "cited",
     "how": "phrase",
     "strong": true
-   }
+   },
+   "bg": true
   },
   {
    "type": "mcq",
@@ -5549,7 +5841,8 @@ const PACK = {
    "correct": 1,
    "why": "Saturation and oxygen <b>content</b> are different things. This is a classic exam distinction.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "tfset",
@@ -5576,7 +5869,8 @@ const PACK = {
    ],
    "why": "Statement 1 is verbatim from the formative. Heat shifts the curve <b>right</b>, and ~98.5% of O₂ is carried on haemoglobin.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -5600,7 +5894,8 @@ const PACK = {
    "q": "Write out the bicarbonate buffer equation and say where it happens.",
    "a": "<b>CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻</b>. It happens fast <b>inside the red blood cell</b>, where the enzyme <b>carbonic anhydrase</b> catalyses the first step. The HCO₃⁻ then moves out into the plasma.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -5609,7 +5904,8 @@ const PACK = {
    "q": "What is the chloride shift?",
    "a": "As bicarbonate leaves the red cell for the plasma, <b>chloride ions move IN</b> to maintain electrical neutrality — an exchange across the red cell membrane. It reverses in the lungs. Without it, the charge imbalance would stop bicarbonate export and limit CO₂ carriage.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -5618,7 +5914,8 @@ const PACK = {
    "q": "How does CO₂ transport link to blood pH?",
    "a": "Every CO₂ converted to bicarbonate also releases an <b>H⁺</b>. So <b>retaining CO₂ raises H⁺ and lowers pH (acidosis)</b>, and <b>blowing off CO₂ lowers H⁺ and raises pH (alkalosis)</b>. This makes ventilation the body's fastest pH control — minutes, versus hours to days for the kidney.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "cloze",
@@ -5688,7 +5985,8 @@ const PACK = {
      ]
     },
     "strong": false
-   }
+   },
+   "bg": true
   },
   {
    "type": "mcq",
@@ -5704,7 +6002,8 @@ const PACK = {
    "correct": 1,
    "why": "CO₂ binds the <b>globin</b>, so oxygen and carbon dioxide can be carried simultaneously.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "saq",
@@ -5727,7 +6026,8 @@ const PACK = {
     "scope": "cited",
     "how": "phrase-question-only",
     "strong": false
-   }
+   },
+   "bg": true
   },
   {
    "type": "flash",
@@ -5754,7 +6054,8 @@ const PACK = {
      ]
     },
     "strong": false
-   }
+   },
+   "bg": true
   },
   {
    "type": "flash",
@@ -5763,7 +6064,8 @@ const PACK = {
    "q": "What is eupnoea, and what is the normal respiratory rate?",
    "a": "<b>Eupnoea</b> is normal, quiet, unlaboured breathing. The normal adult rate is <b>12–20 breaths per minute</b>, with inspiration lasting about 2 seconds and expiration about 3.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -5772,7 +6074,8 @@ const PACK = {
    "q": "What is the Hering–Breuer reflex?",
    "a": "A protective <b>inflation reflex</b>. Stretch receptors in the bronchi and bronchioles fire when the lungs are strongly inflated, signalling via the <b>vagus nerve</b> to inhibit the inspiratory centre and end inspiration. It prevents over-inflation, and matters mostly in infants and during very deep breathing.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -5781,7 +6084,8 @@ const PACK = {
    "q": "Why does a high cervical spinal cord injury stop breathing?",
    "a": "The diaphragm is supplied by the <b>phrenic nerve, from spinal roots C3, C4 and C5</b> — \"C3, 4, 5 keeps the diaphragm alive.\" An injury <b>above C3</b> cuts the medulla's signal off from the phrenic nerve entirely, so the diaphragm is paralysed and ventilation stops even though the brainstem is intact.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -5797,7 +6101,8 @@ const PACK = {
    "correct": 1,
    "why": "Specifically the <b>ventral respiratory group</b> of the medulla.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -5813,7 +6118,8 @@ const PACK = {
    "correct": 1,
    "why": "The <b>apneustic centre</b> controls the length of inspiration; without pontine restraint, inspiration is prolonged.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "match",
@@ -5844,6 +6150,7 @@ const PACK = {
    ],
    "tier": "textbook",
    "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true,
    "why": "The rhythm is generated in the <b>medulla</b> and only smoothed by the pons; the phrenic nerve is the wire out to the diaphragm. That is why an injury above the mid-cervical cord stops breathing altogether."
   },
   {
@@ -5869,7 +6176,8 @@ const PACK = {
      ]
     },
     "strong": false
-   }
+   },
+   "bg": true
   },
   {
    "type": "flash",
@@ -5896,7 +6204,8 @@ const PACK = {
      ]
     },
     "strong": false
-   }
+   },
+   "bg": true
   },
   {
    "type": "flash",
@@ -5905,7 +6214,8 @@ const PACK = {
    "q": "What is the \"hypoxic drive\" and why does it matter clinically?",
    "a": "In some patients with chronic CO₂ retention (advanced COPD), the central chemoreceptors adapt to the persistently high CO₂ and stop responding to it. Ventilation then depends mainly on the <b>low PO₂ stimulus</b>. Giving high-flow oxygen carelessly can remove that drive and worsen CO₂ retention — hence controlled oxygen targets, often <b>88–92%</b>, in those specific patients.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -5914,7 +6224,8 @@ const PACK = {
    "q": "Why does the respiratory rate increase in diabetic ketoacidosis?",
    "a": "Ketoacids raise blood <b>H⁺</b> and lower pH. Chemoreceptors detect this and drive <b>deep, rapid breathing (Kussmaul respiration)</b> to blow off CO₂. Removing CO₂ pulls the bicarbonate buffer equation to the left, consuming H⁺ and <b>partially correcting the acidosis</b> — respiratory compensation for a metabolic problem.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -5930,7 +6241,8 @@ const PACK = {
    "correct": 1,
    "why": "CO₂ is the master control. Oxygen only takes over below a PO₂ of about 60 mmHg.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -5946,7 +6258,8 @@ const PACK = {
    "correct": 1,
    "why": "Same anatomical neighbourhood as the baroreceptors, but a different job — <b>bodies</b> sense chemistry, the <b>sinus</b> senses stretch.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "cloze",
@@ -6055,7 +6368,8 @@ const PACK = {
     "scope": "cited",
     "how": "phrase-question-only",
     "strong": false
-   }
+   },
+   "bg": true
   },
   {
    "type": "tfset",
@@ -6082,7 +6396,8 @@ const PACK = {
    ],
    "why": "Statement 2 is the classic misconception — CO₂ drives ventilation, not O₂.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -6091,7 +6406,8 @@ const PACK = {
    "q": "Define EUPNOEA, DYSPNOEA, APNOEA, TACHYPNOEA and BRADYPNOEA.",
    "a": "<b>Eupnoea</b> — normal, quiet, unlaboured breathing. <b>Dyspnoea</b> — difficult or laboured breathing; the subjective sensation of breathlessness. <b>Apnoea</b> — absence of breathing. <b>Tachypnoea</b> — abnormally rapid breathing (above 20/min in an adult). <b>Bradypnoea</b> — abnormally slow breathing (below 12/min).",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -6100,7 +6416,8 @@ const PACK = {
    "q": "Define HYPOXIA, HYPOCAPNIA and HYPERCAPNIA.",
    "a": "<b>Hypoxia</b> — inadequate oxygen at tissue level (hypoxaemia is specifically low oxygen in the blood). <b>Hypocapnia</b> — abnormally LOW blood CO₂, typically from hyperventilation, causing respiratory alkalosis. <b>Hypercapnia</b> — abnormally HIGH blood CO₂, from hypoventilation or CO₂ retention, causing respiratory acidosis.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -6109,7 +6426,8 @@ const PACK = {
    "q": "Define PNEUMOTHORAX, ATELECTASIS and CYANOSIS.",
    "a": "<b>Pneumothorax</b> — air in the pleural cavity; the negative pressure is lost so the lung collapses. <b>Atelectasis</b> — collapse of the lung or part of it, whether from pneumothorax, obstruction or under-inflation. <b>Cyanosis</b> — bluish discolouration of the skin and mucous membranes caused by an excess of deoxygenated haemoglobin; a <b>late</b> sign.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -6118,7 +6436,8 @@ const PACK = {
    "q": "Distinguish ASTHMA, CHRONIC BRONCHITIS and EMPHYSEMA.",
    "a": "<b>Asthma</b> — <b>reversible</b> airway obstruction from bronchoconstriction, inflammatory wall oedema and excess mucus, triggered by allergens or irritants. <b>Chronic bronchitis</b> — long-term inflammation with excessive mucus production and a productive cough; airways narrowed by mucus and wall thickening. <b>Emphysema</b> — permanent <b>destruction of alveolar walls</b>, so surface area is lost and the lungs lose elastic recoil, trapping air.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -6127,7 +6446,8 @@ const PACK = {
    "q": "State Boyle's law and Henry's law and give a respiratory example of each.",
    "a": "<b>Boyle's law</b> — pressure is inversely proportional to volume at constant temperature; this is the basis of <b>pulmonary ventilation</b>. <b>Henry's law</b> — the amount of gas dissolving in a liquid is proportional to its partial pressure and its solubility; this governs <b>how much O₂ and CO₂ dissolve in the blood</b>, and explains decompression sickness.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -6136,7 +6456,8 @@ const PACK = {
    "q": "Define BRONCHODILATOR, and contrast NEGATIVE and POSITIVE PRESSURE ventilation.",
    "a": "A <b>bronchodilator</b> (e.g. salbutamol) relaxes bronchiolar smooth muscle, widening the airway and reducing resistance. <b>Negative pressure</b> ventilation is normal physiological breathing — the thorax expands and air is <b>sucked in</b>. <b>Positive pressure</b> ventilation is mechanical — air is <b>pushed in</b> under pressure by a ventilator or bag-valve-mask.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -6145,7 +6466,8 @@ const PACK = {
    "q": "Define TUBERCULOSIS and HYPERVENTILATION.",
    "a": "<b>Tuberculosis</b> — infection with <i>Mycobacterium tuberculosis</i>, which forms granulomas (tubercles) in the lungs, causing chronic cough, haemoptysis, night sweats and weight loss; spread by airborne droplets. <b>Hyperventilation</b> — ventilation in EXCESS of metabolic need, so CO₂ is blown off, PCO₂ falls and respiratory alkalosis results.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "match",
@@ -6189,6 +6511,7 @@ const PACK = {
     "how": "phrase-question-only",
     "strong": false
    },
+   "bg": true,
    "why": "The same word-parts again, and the pair worth separating carefully is <b>pneumothorax</b> (air where it should not be) and <b>atelectasis</b> (the collapse that the air causes)."
   },
   {
@@ -6257,7 +6580,8 @@ const PACK = {
      ]
     },
     "strong": false
-   }
+   },
+   "bg": true
   },
   {
    "type": "flash",
@@ -6266,7 +6590,8 @@ const PACK = {
    "q": "Why is returning leaked PROTEIN as important as returning fluid?",
    "a": "Plasma proteins that escape into the interstitium cannot re-enter the blood capillary. If they accumulated, they would raise interstitial oncotic pressure and <b>hold fluid in the tissues</b>, causing progressive oedema. Only the lymphatics can retrieve them — which is why lymphatic failure produces a stubborn, protein-rich oedema.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -6282,7 +6607,8 @@ const PACK = {
    "correct": 2,
    "why": "From the formative test. Plasma is filtered into the tissue to become <b>interstitial fluid</b>; once it enters a lymphatic capillary it is called <b>lymph</b>.",
    "tier": "textbook",
-   "srcNote": "cites bn2 formative test pdf model answers but no phrase from this card appears in that source — the citation was never verified"
+   "srcNote": "cites bn2 formative test pdf model answers but no phrase from this card appears in that source — the citation was never verified",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -6298,7 +6624,8 @@ const PACK = {
    "correct": 1,
    "why": "It is a size and permeability issue — lymphatic capillaries have overlapping endothelial flaps that admit large particles.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "tfset",
@@ -6321,7 +6648,8 @@ const PACK = {
    ],
    "why": "Lacteals in the intestinal villi absorb dietary fat as chyle.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -6346,7 +6674,8 @@ const PACK = {
      ]
     },
     "strong": false
-   }
+   },
+   "bg": true
   },
   {
    "type": "flash",
@@ -6372,7 +6701,8 @@ const PACK = {
      ]
     },
     "strong": false
-   }
+   },
+   "bg": true
   },
   {
    "type": "flash",
@@ -6381,7 +6711,8 @@ const PACK = {
    "q": "Which regions do the thoracic duct and the right lymphatic duct drain?",
    "a": "The <b>thoracic duct</b> drains about <b>three-quarters of the body</b> — everything below the diaphragm plus the left side of the head, neck, chest and left arm — into the <b>left subclavian vein</b>. The <b>right lymphatic duct</b> drains only the <b>right side of the head, neck, chest and right arm</b> into the right subclavian vein.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -6390,7 +6721,8 @@ const PACK = {
    "q": "Describe the structure and functions of the SPLEEN.",
    "a": "The largest lymphoid organ, in the <b>left upper quadrant</b>. <b>White pulp</b> (lymphocytes around arterioles) mounts immune responses against blood-borne antigens. <b>Red pulp</b> filters the blood, <b>breaking down worn-out red cells</b> and recycling iron, and stores platelets. Highly vascular, so rupture causes rapid life-threatening haemorrhage.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -6444,7 +6776,8 @@ const PACK = {
     "scope": "cited",
     "how": "phrase-question-only",
     "strong": false
-   }
+   },
+   "bg": true
   },
   {
    "type": "mcq",
@@ -6460,7 +6793,8 @@ const PACK = {
    "correct": 1,
    "why": "A <b>primary</b> lymphoid organ — the others are secondary, where mature cells meet antigen.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -6469,7 +6803,8 @@ const PACK = {
    "q": "Where does lymph re-enter the cardiovascular system?",
    "a": "At the <b>subclavian veins</b> — the thoracic duct into the left, the right lymphatic duct into the right. It joins the venous blood just before it returns to the right atrium, completing the circuit that began as capillary filtration.",
    "tier": "textbook",
-   "srcNote": "cites 2026 lymphatic system but no phrase from this card appears in that source — the citation was never verified"
+   "srcNote": "cites 2026 lymphatic system but no phrase from this card appears in that source — the citation was never verified",
+   "bg": true
   },
   {
    "type": "flash",
@@ -6478,7 +6813,8 @@ const PACK = {
    "q": "How does lymph move if there is no pump?",
    "a": "The same way venous blood does, plus one extra. <b>Skeletal muscle pump</b>, <b>respiratory pump</b>, <b>one-way valves</b>, <b>pulsation of adjacent arteries</b>, and — unique to lymphatics — <b>rhythmic contraction of smooth muscle in the walls of the larger collecting vessels</b>.",
    "tier": "textbook",
-   "srcNote": "cites 2026 lymphatic system but no phrase from this card appears in that source — the citation was never verified"
+   "srcNote": "cites 2026 lymphatic system but no phrase from this card appears in that source — the citation was never verified",
+   "bg": true
   },
   {
    "type": "flash",
@@ -6487,7 +6823,8 @@ const PACK = {
    "q": "How are the cardiovascular and lymphatic systems structurally similar and different?",
    "a": "<b>Similar</b>: both have thin-walled vessels with valves, both are lined with endothelium, and both rely on the muscle and respiratory pumps. <b>Different</b>: the lymphatic system is a <b>one-way drainage system, not a circuit</b> — it has no pump and begins as <b>blind-ended</b> capillaries; the CVS is a closed circuit driven by the heart.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -6547,7 +6884,8 @@ const PACK = {
    ],
    "model": "Movement relies on the skeletal muscle pump, the respiratory pump, valves and smooth muscle in the vessel walls — there is no lymphatic heart.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -6558,7 +6896,8 @@ const PACK = {
    "q": "Look at the three vessels in cross-section. Working from the image alone, how would you tell the artery from the vein?",
    "a": "The <b>artery</b> has a much <b>thicker tunica media</b>, a visible <b>internal elastic lamina</b>, a <b>small lumen relative to its wall</b>, and it <b>holds its round shape</b>. The <b>vein</b> has a <b>large lumen, a thin wall</b>, and has <b>collapsed</b>. The <b>capillary</b> is a single endothelial layer. What you cannot see from the image: valves, direction of flow, and pressure.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "cloze",
@@ -6615,7 +6954,8 @@ const PACK = {
    ],
    "why": "The lecture teaches this as a <b>tug-of-war</b>, not a sum — it never gives pressure figures, so learn which pressure wins where rather than a number.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "order",
@@ -6634,7 +6974,8 @@ const PACK = {
    ],
    "why": "The pericardial cavity sits between the two serous layers — that is the space that fills in an effusion.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "match",
@@ -6667,6 +7008,7 @@ const PACK = {
    ],
    "tier": "textbook",
    "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true,
    "why": "Name each valve by what is <b>downstream</b> of it — the pulmonary valve guards the pulmonary trunk, the aortic valve the aorta. The two AV valves are told apart by side: <b>tricuspid right, mitral left</b>."
   },
   {
@@ -6700,6 +7042,7 @@ const PACK = {
    ],
    "tier": "textbook",
    "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true,
    "why": "Read it as <b>depolarise, depolarise, repolarise</b> — atria, then ventricles, then ventricles again — with the P–R interval as the pause at the AV node in between."
   },
   {
@@ -6718,7 +7061,8 @@ const PACK = {
    ],
    "why": "The bundle of His is the ONLY electrical connection between atria and ventricles — the fibrous skeleton insulates everything else.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "order",
@@ -6737,7 +7081,8 @@ const PACK = {
    ],
    "why": "Three organs and the lungs all take part — kidney, liver, adrenal, and the pulmonary capillaries for ACE.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "order",
@@ -6757,7 +7102,8 @@ const PACK = {
    ],
    "why": "The larynx is the boundary between the <b>upper</b> and <b>lower</b> respiratory tracts.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -6768,7 +7114,8 @@ const PACK = {
    "q": "From the diagram: name the two pleural layers, what lies between them, and what happens if air gets in.",
    "a": "<b>Visceral pleura</b> directly on the lung; <b>parietal pleura</b> lining the thoracic wall, diaphragm and mediastinum. Between them is the <b>pleural cavity</b> with a thin film of <b>serous fluid</b> — its surface tension holds the lung against the chest wall, and it lubricates movement. Air entering the cavity is a <b>pneumothorax</b>: the negative pressure is lost and the lung collapses (<b>atelectasis</b>).",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "match",
@@ -6801,6 +7148,7 @@ const PACK = {
    ],
    "tier": "textbook",
    "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true,
    "why": "The respiratory membrane is only three thin layers pressed together — <b>alveolar cell, fused basement membranes, capillary cell</b>. Anything that thickens it, whether fluid in pulmonary oedema or scarring in fibrosis, slows gas exchange down."
   },
   {
@@ -6838,6 +7186,7 @@ const PACK = {
    ],
    "tier": "textbook",
    "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true,
    "why": "<b>Volumes add up to capacities.</b> Vital capacity is the three you can move — tidal plus both reserves — and residual volume is the one you cannot, so it is never part of vital capacity."
   },
   {
@@ -6867,7 +7216,8 @@ const PACK = {
    ],
    "why": "Right shift = unload (the Bohr effect: hot, acidic, CO₂-rich active tissue). Left shift = hold on (fetal Hb, carbon monoxide).",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -6878,7 +7228,8 @@ const PACK = {
    "q": "From the diagram: why does a lymph node have more ways IN than OUT, and what does that achieve?",
    "a": "Several <b>afferent</b> vessels enter the convex surface but only one or two <b>efferent</b> vessels leave at the hilum. Lymph therefore <b>slows down and pools</b> inside the node — giving <b>macrophages time to phagocytose</b> pathogens and debris, and giving <b>lymphocytes time to encounter antigen</b> in the B cell follicles of the cortex and the T cell paracortex.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "mcq",
@@ -6896,7 +7247,8 @@ const PACK = {
    "correct": 1,
    "why": "The asymmetry is the examinable point — the <b>thoracic duct</b> drains roughly three-quarters of the body, the right lymphatic duct only that one quadrant.",
    "tier": "textbook",
-   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said."
+   "srcNote": "Nothing in the captured course material was found stating this, so it is here as background rather than as something the course itself has said.",
+   "bg": true
   },
   {
    "type": "flash",
@@ -6932,7 +7284,8 @@ const PACK = {
      ]
     },
     "strong": false
-   }
+   },
+   "bg": true
   },
   {
    "type": "flash",
@@ -6982,7 +7335,8 @@ const PACK = {
      ]
     },
     "strong": false
-   }
+   },
+   "bg": true
   },
   {
    "type": "mcq",
@@ -6998,7 +7352,8 @@ const PACK = {
    "correct": 1,
    "why": "Sustained hyperventilation to compensate for low PO₂ <b>blows off CO₂</b>, so their PCO₂ sits below the sea-level value of 40 mmHg.",
    "tier": "textbook",
-   "srcNote": "cites 2026 resp4 but no phrase from this card appears in that source — the citation was never verified"
+   "srcNote": "cites 2026 resp4 but no phrase from this card appears in that source — the citation was never verified",
+   "bg": true
   },
   {
    "type": "match",
@@ -7066,7 +7421,8 @@ const PACK = {
      ]
     },
     "strong": false
-   }
+   },
+   "bg": true
   },
   {
    "type": "flash",
@@ -7095,7 +7451,8 @@ const PACK = {
      ]
     },
     "strong": false
-   }
+   },
+   "bg": true
   },
   {
    "type": "tfset",
@@ -7145,7 +7502,8 @@ const PACK = {
      ]
     },
     "strong": false
-   }
+   },
+   "bg": true
   },
   {
    "type": "mcq",
@@ -7369,7 +7727,7 @@ const PACK = {
    "figcap": "From Practice Lab 2: SAQ & MC Quiz (10 marks) · Question 11",
    "crit": "resp-2",
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "Pick the four you can actually identify, then give each a function. In lung histology the markers are: <b>alveoli</b> — thin-walled sacs, the site of gas exchange; <b>type I pneumocytes</b> — the flat squamous cells forming most of the alveolar wall, thin enough to diffuse across; <b>type II pneumocytes</b> — rounder, bulging into the sac, secreting surfactant to lower surface tension and stop the alveolus collapsing; <b>alveolar macrophages</b> — free cells in the airspace that engulf dust and pathogens; <b>capillaries</b> — packed against the alveolar wall, often with red blood cells visible inside; the <b>respiratory membrane</b> — alveolar epithelium plus capillary endothelium plus their fused basement membranes, 0.5–1 µm thick; and a <b>bronchiole</b> — cuboidal epithelium, smooth muscle, and no cartilage, which is what separates it from a bronchus.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "resp-anat",
@@ -7436,7 +7794,7 @@ const PACK = {
    "pointsTier": "TODO",
    "crit": "resp-7",
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "<b>The ease with which the lungs can expand</b> — the distensibility of the lung tissue and of the thoracic cage around it. High compliance means the lungs inflate for little effort; low compliance means each breath costs more work. It is reduced by scar tissue or fibrosis, by a thoracic cage that has lost flexibility, and by smaller airways blocked with mucus or fluid. Lung compliance is one of the four physical factors affecting pulmonary ventilation, alongside airway resistance, alveolar surface tension and negative intrapleural pressure.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "resp-anat",
@@ -7452,7 +7810,7 @@ const PACK = {
    "pointsTier": "TODO",
    "crit": "resp-7",
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "<b>Pneumothorax</b> is air in the pleural cavity. <b>Atelectasis</b> is collapse of lung tissue — alveoli that have emptied and shut. The relationship is cause and effect through the pleural seal: the intrapleural pressure is normally <b>negative</b>, and that is what makes the visceral and parietal pleurae cling together so the lung is pulled open with the chest wall. Let air into the pleural cavity and the negative pressure is lost, the coupling breaks, and the elastic lung recoils inwards — so a pneumothorax causes atelectasis. Not every atelectasis is a pneumothorax though: an obstructed airway or a surfactant deficiency will collapse alveoli with the pleural seal perfectly intact.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "cvs-output",
@@ -9494,7 +9852,7 @@ const PACK = {
     "resp-13"
    ],
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "The list of parts is fine and so is the purpose. The two errors are both about <b>where the electrical activity comes from</b>.<br><br><b>Misconception 1 — \"the neuromuscular junctions at the SA and AV nodes\".</b> The nodes are not neuromuscular junctions. They are <b>self-excitatory (autogenic) myocardial tissue</b> that generates its own rhythm. A heart with every nerve cut still beats.<br><br><b>Misconception 2 — \"electrical activity coming from the medulla oblongata via the nerves\".</b> The impulse is generated by the <b>SA node itself</b>, not sent down from the brain. The medulla only <b>modifies</b> a rhythm the heart is already producing, speeding it up or slowing it down through the sympathetic and parasympathetic supply.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "cvs-ecg",
@@ -10114,7 +10472,7 @@ const PACK = {
    "pointsTier": "TODO",
    "crit": "cvs-4",
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "Pressure falls the whole way round: <b>arteries very high → arterioles high → capillaries low and still dropping → venae cavae lowest</b>.<br><br>Why: blood pressure depends on the force of the heart's contraction and on peripheral resistance. Arteries take blood <b>directly</b> from the heart, so pressure is highest there, and their thick tunica media offers the greatest resistance to the pumping force. Pressure then falls steadily across the capillary beds — which is the point, because a capillary bed at arterial pressure would rupture — and the veins receive what is left, at low pressure.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "cvs-vessels",
@@ -10286,7 +10644,7 @@ const PACK = {
    "pointsTier": "TODO",
    "crit": "cvs-12",
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "<b>The pathway</b> is the kidney's powerful but <b>slow</b> answer to low blood pressure. Renin from the kidney converts angiotensinogen (from the liver) to angiotensin I; <b>ACE</b> in the lungs converts that to <b>angiotensin II</b>. Angiotensin II then does three things: it is a powerful <b>vasoconstrictor</b>, so peripheral resistance rises; it triggers <b>ADH</b>, so water is reabsorbed; and it triggers <b>aldosterone</b>, so sodium — and water behind it — is reabsorbed. The last two raise blood volume, and so stroke volume.<br><br><b>ACE inhibitors</b> block the conversion of angiotensin I to angiotensin II. That removes both the rise in peripheral resistance and the rise in blood volume. Since BP = SV × HR × PR, blocking two of the three factors is why they are such effective antihypertensives.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "cvs-anat",
@@ -10351,7 +10709,7 @@ const PACK = {
    "pointsTier": "TODO",
    "crit": "cvs-5",
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "The discriminator is <b>which chambers they are in</b>.<br><br><b>Pectinate muscles</b> are the parallel, comb-like ridges of muscle in the walls of the <b>atria</b> — the right atrial wall and the auricles of both atria. They let the thin-walled atrium contract with useful force and still expand to fill.<br><br><b>Trabeculae carneae</b> are the irregular muscular ridges and columns lining the <b>ventricles</b>. They stop the ventricle walls sticking together as it empties, add strength without solid bulk, and channel blood towards the outflow. The papillary muscles arise from them.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "cvs-anat",
@@ -10367,7 +10725,7 @@ const PACK = {
    "pointsTier": "TODO",
    "crit": "cvs-5",
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "Both are semilunar valves with three pocket-like cusps, both open when the ventricle contracts and both snap shut at the start of ventricular diastole, together making the <b>second heart sound</b>. The differences are side, destination and pressure.<br><br><b>Pulmonary valve</b>: <b>right</b> ventricle into the pulmonary trunk, carrying <b>deoxygenated</b> blood to the lungs, against low pulmonary pressure.<br><b>Aortic valve</b>: <b>left</b> ventricle into the aorta, carrying <b>oxygenated</b> blood to the body, against much higher systemic pressure — so it is the more heavily built of the two, and it is the one that commonly stenoses. The <b>coronary ostia</b> sit in the aortic wall just above its cusps.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "cvs-anat",
@@ -10383,7 +10741,7 @@ const PACK = {
    "pointsTier": "TODO",
    "crit": "cvs-5",
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "They are the two layers of one continuous <b>serous</b> membrane, folded back on itself at the great vessels.<br><br><b>Parietal pericardium</b> is the <b>outer</b> layer, lining the inside of the tough fibrous pericardial sac.<br><b>Visceral pericardium</b> is the <b>inner</b> layer, stuck down onto the surface of the heart itself — and that layer has a second name, the <b>epicardium</b>.<br><br>Between them is the pericardial cavity holding pericardial fluid, so the heart slides against its sac without friction as it beats.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "cvs-anat",
@@ -10399,7 +10757,7 @@ const PACK = {
    "pointsTier": "TODO",
    "crit": "cvs-5",
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "Work outside in.<br><br><b>Pericardium</b> — the double-walled <b>sac around</b> the heart: a tough outer fibrous layer plus the parietal serous layer lining it, with pericardial fluid in the space.<br><b>Epicardium</b> — the visceral layer of that serous pericardium, lying <b>on</b> the heart. It is both the innermost layer of the sac and the <b>outermost layer of the heart wall</b>, which is why it has two names.<br><b>Endocardium</b> — the thin endothelial sheet lining the <b>inside</b> of the chambers and covering the valves, continuous with the endothelium of the great vessels.<br><br>The <b>myocardium</b>, the cardiac muscle that does the work, sits between epicardium and endocardium.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "cvs-anat",
@@ -10415,7 +10773,7 @@ const PACK = {
    "pointsTier": "TODO",
    "crit": "cvs-5",
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "Both are <b>atrioventricular</b> valves, both are anchored by chordae tendineae to papillary muscles, and both shut at the start of ventricular systole to make the <b>first heart sound</b>. The difference is side and cusp count.<br><br><b>Tricuspid</b> — <b>right</b> side, between right atrium and right ventricle, <b>three</b> cusps.<br><b>Mitral (bicuspid)</b> — <b>left</b> side, between left atrium and left ventricle, <b>two</b> cusps.<br><br>The memory hook is that <b>tri</b>cuspid goes with the <b>ri</b>ght side.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "cvs-anat",
@@ -10431,7 +10789,7 @@ const PACK = {
    "pointsTier": "TODO",
    "crit": "cvs-5",
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "<b>Atrioventricular valves</b> sit between atrium and ventricle — tricuspid on the right, mitral on the left. They have <b>chordae tendineae and papillary muscles</b> holding them, they close at the <b>start of ventricular systole</b> making the first sound (LUB), and they stop blood going back into the atria.<br><br><b>Semilunar valves</b> sit at the ventricle <b>exits</b> into the great arteries — pulmonary and aortic. Three pocket-shaped cusps, <b>no chordae</b> (arterial back-pressure fills the pockets and seals them), closing at the <b>start of ventricular diastole</b> to make the second sound (DUB), and stopping blood falling back out of the arteries into the ventricles.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "cvs-anat",
@@ -10447,7 +10805,7 @@ const PACK = {
    "pointsTier": "TODO",
    "crit": "cvs-5",
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "Cone-shaped muscles projecting inwards from the ventricle wall, arising from the trabeculae carneae. Each anchors the <b>chordae tendineae</b>, which run up to the free edges of the atrioventricular valve flaps.<br><br>Their function is to stop the valve <b>blowing inside out</b>. When the ventricle contracts the pressure behind the AV valve is enormous, and without the chordae held taut the flaps would prolapse back into the atrium and let blood regurgitate. The papillary muscles contract with the ventricle, keeping the tension constant so the valve stays shut in its correct plane.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "cvs-ecg",
@@ -10466,7 +10824,7 @@ const PACK = {
     "cvs-7"
    ],
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "<b>LUB is the atrioventricular valves closing</b> — tricuspid and mitral — at the <b>start of ventricular systole</b>. The ventricles have begun to contract, pressure inside them rises above atrial pressure, and the AV valves slam shut.<br><br><b>DUB is the semilunar valves closing</b> — pulmonary and aortic — at the <b>start of ventricular diastole</b>. The ventricles have finished ejecting and relaxed, arterial pressure now exceeds ventricular pressure, and the semilunar cusps fill and seal.<br><br>So the two sounds bracket ventricular systole: LUB starts it, DUB ends it.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "cvs-ecg",
@@ -10482,7 +10840,7 @@ const PACK = {
    "pointsTier": "TODO",
    "crit": "cvs-7",
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "A murmur is the sound of <b>turbulent</b> blood flow where flow should be smooth. Three groups of cause:<br><br><b>A valve that will not open properly — stenosis.</b> The opening is narrowed or stiffened, so blood is forced through a tight orifice at speed.<br><b>A valve that will not close properly — incompetence or regurgitation.</b> The valve leaks and blood washes backwards through it.<br><b>An abnormal opening</b> such as a septal defect, letting blood cross between chambers that should be separated.<br><br>Flow can also be turbulent through a normal valve simply because it is fast or thin — in anaemia, fever, pregnancy or exercise. Those are the innocent or flow murmurs.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "resp-anat",
@@ -10826,7 +11184,7 @@ const PACK = {
    "fig": "<img src=\"data:image/webp;base64,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\" alt=\"Figure from Hannetjie's quiz question\">",
    "figcap": "From MODULE 1.2: RESP BASIC ANATOMY (10 Marks) · Question 20",
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "The specific error depends on the figure in front of you, so work the checklist — these are where AI-generated respiratory summaries usually go wrong.<br><br><b>Zone boundary.</b> The <b>terminal</b> bronchiole is the last conducting structure; from the <b>respiratory</b> bronchiole onwards it is respiratory zone. Summaries routinely put the split in the wrong place.<br><b>Cartilage.</b> Bronchi have cartilage, <b>bronchioles have none</b> — they have proportionally more smooth muscle instead.<br><b>Cell types.</b> Type I pneumocytes do gas exchange; <b>type II make surfactant</b>. These get swapped constantly.<br><b>Pleura.</b> Visceral is on the lung, parietal lines the thoracic wall.<br><b>Lobes.</b> Right lung <b>three</b>, left lung <b>two</b> plus the cardiac notch.<br><b>Airway order.</b> Nasal cavity → pharynx → larynx → trachea → main → lobar → segmental bronchi → bronchioles → terminal → respiratory bronchioles → alveolar ducts → sacs → alveoli.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "resp-mech",
@@ -11722,7 +12080,7 @@ const PACK = {
    "pointsTier": "TODO",
    "crit": "cvs-3",
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "It is an <b>oncotic pressure</b> failure. Too little dietary protein means the liver cannot make enough plasma <b>albumin</b>, and albumin is what holds the colloid osmotic (oncotic) pressure of the blood.<br><br>At the venular end of a capillary bed, reabsorption normally happens because oncotic pressure pulling fluid <b>in</b> exceeds hydrostatic pressure pushing it <b>out</b>. Drop the plasma protein and that inward pull collapses, so fluid filtered out at the arteriolar end is never pulled back. It accumulates in the interstitium faster than the lymphatics can drain it — <b>oedema</b>. In the peritoneal cavity that accumulation is ascites, and ascites is what distends the abdomen.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "lymph",
@@ -11741,7 +12099,7 @@ const PACK = {
     "cvs-15"
    ],
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "It is a <b>hydrostatic pressure</b> failure — the mirror image of the low-protein case.<br><br>Fluid leaves a capillary at the arteriolar end because hydrostatic pressure pushing out beats oncotic pressure pulling in. Raise the systemic blood pressure and you raise that hydrostatic pressure, so <b>more fluid is forced out</b> into the interstitium at the arterial end, and less comes back at the venular end because the outward push is still elevated there too.<br><br>Filtration now exceeds reabsorption plus lymphatic drainage, and the surplus sits in the tissues as <b>oedema</b>.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "cvs-vessels",
@@ -11757,7 +12115,7 @@ const PACK = {
    "pointsTier": "TODO",
    "crit": "cvs-6",
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "Three branches, left to right as they leave the arch:<br><br><b>1. Brachiocephalic trunk</b> — the only one that divides. It splits into the <b>right common carotid</b> (right side of the head, neck and brain) and the <b>right subclavian</b> (right upper limb).<br><b>2. Left common carotid</b> — the <b>left</b> side of the head, neck and brain.<br><b>3. Left subclavian</b> — the <b>left</b> upper limb.<br><br>So the arch supplies the head, the neck and both arms. Note the asymmetry: the right side gets its carotid and subclavian second-hand off one trunk, the left side gets both direct from the arch.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "cvs-anat",
@@ -11773,7 +12131,7 @@ const PACK = {
    "pointsTier": "TODO",
    "crit": "cvs-6",
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "Four, with what each supplies:<br><br><b>Coeliac trunk</b> — stomach, liver and spleen, via its hepatic, splenic and left gastric branches.<br><b>Superior mesenteric artery</b> — small intestine and the first part of the large intestine.<br><b>Renal arteries</b>, left and right — the kidneys.<br><b>Inferior mesenteric artery</b> — the distal large intestine and rectum.<br><br>Also branching from it: the gonadal arteries to the testes or ovaries, the lumbar arteries to the body wall, and finally the split into the two <b>common iliac</b> arteries to the pelvis and legs.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "cvs-vessels",
@@ -11797,7 +12155,7 @@ const PACK = {
    "pointsTier": "TODO",
    "crit": "cvs-6",
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "<b>Arteries.</b> The <b>common carotid</b> runs up each side and divides into the <b>internal carotid</b> (brain) and the <b>external carotid</b> (face, scalp and neck). Behind them the <b>vertebral artery</b> branches off the subclavian and climbs through the transverse foramina of the cervical vertebrae to reach the brain from below.<br><br><b>Veins.</b> The <b>internal jugular</b> is the big one, draining the brain and the dural venous sinuses. The <b>external jugular</b> is more superficial and drains the scalp and face. Both end up in the <b>subclavian vein</b>, which joins its partner to form the brachiocephalic vein and then the superior vena cava.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "cvs-vessels",
@@ -11821,7 +12179,7 @@ const PACK = {
    "pointsTier": "TODO",
    "crit": "cvs-6",
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "<b>Upper limb:</b> the <b>subclavian</b> artery, which becomes the <b>axillary</b> as it passes the first rib, then the <b>brachial</b> in the upper arm — the one a manual blood pressure reading listens over — and finally divides into the <b>radial</b> and <b>ulnar</b> arteries in the forearm.<br><br><b>Lower limb:</b> the <b>external iliac</b> artery, which becomes the <b>femoral</b> as it passes under the inguinal ligament, then the <b>popliteal</b> behind the knee, and divides into the <b>anterior and posterior tibial</b> arteries.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "cvs-vessels",
@@ -11837,7 +12195,7 @@ const PACK = {
    "pointsTier": "TODO",
    "crit": "cvs-6",
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "Four, with what each drains:<br><br><b>Common iliac veins</b> — the legs and pelvis. These are the two the IVC is formed from.<br><b>Renal veins</b> — the kidneys.<br><b>Hepatic veins</b> — the liver, carrying away everything the liver has finished processing.<br><b>Gonadal veins</b> — the testes or ovaries.<br><br>The <b>suprarenal</b> veins from the adrenal glands also drain here. Note the liver is on this list twice over in a sense: blood arrives at the liver by the hepatic portal vein and leaves it by the hepatic veins into the IVC.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "cvs-vessels",
@@ -11853,7 +12211,7 @@ const PACK = {
    "pointsTier": "TODO",
    "crit": "cvs-6",
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "<b>The tributaries.</b> The <b>superior mesenteric vein</b> (small intestine and proximal colon) and the <b>splenic vein</b> (spleen — and it has already picked up the <b>inferior mesenteric vein</b> from the distal colon and rectum) merge behind the pancreas to form the hepatic portal vein. The <b>gastric veins</b> from the stomach drain into it too.<br><br><b>Why it matters.</b> A portal vein is a vein with a capillary bed at <b>both</b> ends. Everything absorbed from the gut therefore goes to the <b>liver first</b>, not straight into the general circulation. That lets the liver take up and store nutrients, and detoxify drugs, alcohol and absorbed toxins, before any of it reaches the rest of the body — which is also why an oral drug dose is not the same as an injected one.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "cvs-anat",
@@ -11871,7 +12229,7 @@ const PACK = {
    "figcap": "From MODULE 1.1: SAQ STUDENT MARKED CVS LAB REVIEW (15 marks) · Question 8",
    "crit": "cvs-5",
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "<b>1. Visceral vs parietal.</b> Two layers of one continuous serous membrane. <b>Visceral</b> is stuck to the surface of the heart itself and is also called the <b>epicardium</b>; <b>parietal</b> is the outer layer lining the inside of the fibrous sac.<br><br><b>2. Connected to the diaphragm.</b> The <b>fibrous pericardium</b> — the tough outermost layer, anchored to the central tendon of the diaphragm.<br><br><b>3. Where the fluid sits.</b> Between the <b>parietal serous and visceral serous</b> layers, in the pericardial cavity.<br><br><b>4. Function.</b> The pericardium anchors the heart in the mediastinum, protects it, and being inelastic it prevents the heart <b>overfilling</b>. The fluid lubricates, so the layers slide over each other with each beat instead of rubbing.<br><br><b>5. \"Serous\".</b> A serous membrane is a double-layered membrane that secretes a thin, watery <b>serous fluid</b> into the space between its layers.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "cvs-vessels",
@@ -11895,7 +12253,7 @@ const PACK = {
    "pointsTier": "TODO",
    "crit": "cvs-15",
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "The pulse is a <b>pressure wave</b>, not the blood itself moving. Each time the left ventricle ejects, the elastic arterial wall stretches and then recoils, and that expansion travels along the arteries as a palpable wave.<br><br>A vein sits on the <b>far side of a capillary bed</b>. The capillary bed dissipates both the pressure and the wave — pressure has fallen from very high to low by the time blood reaches the venules, and the pulsatility has been damped out entirely. So the pumping force of the heart is simply no longer transmitted to the vein wall, and there is nothing to feel.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "cvs-ecg",
@@ -11919,7 +12277,7 @@ const PACK = {
    "pointsTier": "TODO",
    "crit": "cvs-8",
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "An ECG records the <b>electrical</b> activity of the heart — depolarisation and repolarisation of the myocardium — so it detects anything that disturbs that.<br><br><b>Rhythm</b> — regular or irregular. An irregular rhythm is an <b>arrhythmia</b>, such as atrial fibrillation.<br><b>Rate</b> — <b>tachycardia</b> above 100 beats/min, <b>bradycardia</b> below 60.<br><b>Interrupted blood flow</b> — a <b>STEMI</b> is a complete occlusion, an <b>NSTEMI</b> a partial one.<br><br>It also shows conduction blocks and chamber enlargement. Two examples for the marks: <b>atrial fibrillation</b> and <b>myocardial infarction</b>.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "cvs-ecg",
@@ -11943,7 +12301,7 @@ const PACK = {
    "pointsTier": "TODO",
    "crit": "cvs-8",
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "<b>Sitting, resting</b> — the baseline. Normal resting rate, roughly 60–100.<br><br><b>Supine, resting</b> — the <b>slowest</b> of the four. Lying down removes gravitational pooling in the legs, so venous return and end-diastolic volume rise and stroke volume with them. Baroreceptors in the aortic arch and carotid sinus sense the resulting rise in pressure and increase <b>parasympathetic (vagal)</b> output, slowing the rate.<br><br><b>Immediately on standing</b> — a sharp <b>rise</b>. Blood pools in the legs, venous return and stroke volume fall and blood pressure drops. The baroreceptors detect the drop, the cardio-acceleratory and vasomotor centres fire sympathetically, and heart rate and peripheral resistance rise to defend blood pressure. This is the orthostatic response, and the failure of it is orthostatic hypotension.<br><br><b>Immediately after exercise, standing</b> — the <b>highest</b>. Sympathetic drive plus circulating adrenaline, plus chemoreceptors responding to raised CO₂ and lowered pH. The rate stays up through recovery while the oxygen debt is repaid.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "resp-mech",
@@ -11962,7 +12320,7 @@ const PACK = {
     "resp-3"
    ],
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "The two zones do different jobs. The <b>conducting zone</b> — nose through to the larger bronchioles — is plumbing: it moves, warms, humidifies and cleans the air but does no gas exchange. The <b>respiratory zone</b> — respiratory bronchioles, alveolar ducts and alveoli — is where gas exchange happens.<br><br><b>COPD</b> attacks the plumbing. Chronic bronchitis inflames the airway walls and floods them with mucus, so the lumen narrows and <b>airway resistance</b> rises. The problem is getting air <b>through the tubes</b>, which is why expiration is prolonged and wheezy.<br><br><b>Pneumonia</b> attacks the exchange surface. Infection fills the alveoli with exudate and pus, so the <b>respiratory membrane thickens</b> and diffusion across it falls. The tubes are fine; the destination is flooded.<br><br><b>Where the statement is loose:</b> COPD also covers <b>emphysema</b>, which destroys alveolar walls and so loses respiratory-zone surface area. So the statement holds for the bronchitic half of COPD and understates the emphysematous half.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "resp-mech",
@@ -11981,7 +12339,7 @@ const PACK = {
     "resp-17"
    ],
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "Both halves are true because the same equation runs in both directions: <b>CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻</b>. CO₂ is an acid in solution, and breathing is what sets how much of it there is.<br><br><b>CAUSING — when breathing is the primary problem.</b><br>Hyperventilation blows off CO₂, driving the reaction <b>left</b>, consuming H⁺ → pH rises → <b>respiratory alkalosis</b> (panic attack, over-breathing).<br>Hypoventilation retains CO₂, driving it <b>right</b>, generating H⁺ → pH falls → <b>respiratory acidosis</b> (opioid overdose, severe asthma, head injury).<br><br><b>ALLEVIATING — when the primary problem is metabolic.</b><br>In metabolic acidosis (too much H⁺, e.g. ketoacidosis) chemoreceptors drive <b>hyperventilation</b> so CO₂ is blown off, pulling the reaction left and mopping up H⁺.<br>In metabolic alkalosis (too little H⁺, e.g. severe vomiting) <b>hypoventilation</b> retains CO₂ to generate H⁺ and pull pH back down.<br><br>So the deciding question is always <b>which came first</b>. The same manoeuvre is the disease when breathing is the primary event and the compensation when it is not.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "resp-mech",
@@ -11997,7 +12355,7 @@ const PACK = {
    "pointsTier": "TODO",
    "crit": "resp-7",
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "Quiet breathing uses only the <b>diaphragm and external intercostals</b> on the way in, and nothing at all on the way out — quiet expiration is passive <b>elastic recoil</b>. Accessory muscles are the reserve recruited when that is not enough.<br><br><b>Forced inspiration</b> adds the <b>sternocleidomastoid and scalenes</b>, which lift the sternum and the first two ribs, plus pectoralis minor. They enlarge the thorax further and faster than the diaphragm alone can.<br><br><b>Forced expiration</b> is no longer passive at all: the <b>internal intercostals</b> pull the ribs down and the <b>abdominal muscles</b> — rectus abdominis and the obliques — contract to drive the abdominal organs up against the diaphragm, squeezing the thoracic volume down hard.<br><br><b>Why it matters clinically:</b> visible accessory-muscle use — neck muscles standing out, abdominal effort — means the patient is paying an unusual amount of work for each breath. It is one of the earliest signs of respiratory distress, and it appears before the oxygen saturation falls.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "cvs-ecg",
@@ -12283,7 +12641,7 @@ const PACK = {
     "cvs-15"
    ],
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "<b>1. Type of shock.</b> <b>Hypovolaemic</b> — the circulating volume itself has been lost.<br><br><b>2. BP = SV × HR × PR.</b> Blood loss cuts the volume returning to the heart, so end-diastolic volume falls, so <b>stroke volume</b> falls. With SV down, the product falls and blood pressure with it. Heart rate and peripheral resistance rise to compensate — which is why an early hypovolaemic patient is tachycardic with cold peripheries and a still-normal BP — but once the loss outruns them, pressure drops.<br><br><b>3.1 Capillary pressures.</b> With perfusion reduced, <b>hydrostatic</b> pressure inside the capillary falls, so less fluid is pushed out at the arteriolar end. Plasma proteins are still there, so <b>oncotic</b> pressure is unchanged or relatively higher. The balance therefore shifts towards <b>reabsorption</b>: fluid is drawn from the interstitium back into the capillaries. That is a useful compensation — it pulls interstitial fluid into the circulation to defend blood volume.<br><br><b>3.2 Lymph flow.</b> Lymph is made from the interstitial fluid that filtration leaves behind. With hydrostatic pressure down, far less fluid is filtered out in the first place, and what is there is being reabsorbed instead — so there is less interstitial fluid to become lymph, and <b>lymph flow falls</b>.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "cvs-vessels",
@@ -12702,7 +13060,7 @@ const PACK = {
     "cvs-15"
    ],
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "<b>1. Where its blood comes from.</b> From the <b>left ventricle</b>, out through the <b>aortic valve</b> into the <b>ascending aorta</b>, then through the <b>coronary ostia</b> — the openings sitting in the aortic wall just above the aortic valve cusps — into the <b>left coronary artery</b>, which gives off the LAD (the anterior interventricular branch). The coronaries fill during <b>diastole</b>, when the cusps fall back and uncover the ostia.<br><br><b>2. What it perfuses.</b> The <b>anterior wall of the left ventricle</b>; the <b>anterior two-thirds of the interventricular septum</b>; the <b>apex</b> of the heart; and part of the anterior right ventricular wall. The <b>bundle branches</b> run inside that septum, which is what makes the next part happen.<br><br><b>3. Both bundle branches lost.</b> The signal can no longer get from the AV node down to the Purkinje fibres, so this is a <b>complete (third-degree) heart block</b>. The ventricles fall back on a slow escape pacemaker of their own, beating independently of the atria.<br><b>Contractions:</b> slow, and no longer coordinated with atrial contraction, so the atrial contribution to filling is lost and cardiac output falls sharply.<br><b>ECG:</b> a <b>widened QRS</b> (the ventricles are depolarising slowly, cell to cell, instead of via the fast conducting system), P waves <b>dissociated</b> from the QRS complexes with no fixed relationship, and a slow ventricular rate — plus the <b>ST elevation</b> of the anterior infarct itself.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "cvs-vessels",
@@ -12718,7 +13076,7 @@ const PACK = {
    "pointsTier": "TODO",
    "crit": "cvs-6",
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "<b>1. The brachiocephalic trunk</b> (also called the brachiocephalic artery or innominate artery) — it divides into the right common carotid and the right subclavian, supplying the right arm and the right side of the head.<br><b>3. The left subclavian artery</b> — the left arm.<br><br><b>One caution about item 2.</b> The question describes the left common carotid as supplying \"the left side of the heart\". It does not — it supplies the left side of the <b>head</b> and neck. The heart has its own supply, the <b>coronary arteries</b>, which leave the ascending aorta through the ostia <b>before</b> the arch. Read it as a slip in the question rather than a fact to learn, but answer the blanks as asked.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "cvs-vessels",
@@ -12737,7 +13095,7 @@ const PACK = {
     "lymph-2"
    ],
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "<b>1. RENAL</b> arteries — the kidneys.<br><b>2. HEPATIC</b> artery — the liver.<br>3. Splenic artery — the spleen.<br>4. Inferior mesenteric artery — the distal large intestine and rectum.<br><br><b>Worth knowing for a written answer:</b> strictly the hepatic and splenic arteries are branches of the <b>coeliac trunk</b>, and it is the coeliac trunk that comes directly off the abdominal aorta. The renal arteries and the inferior mesenteric really do arise from the aorta itself. Fill the blanks as the question asks, but say \"via the coeliac trunk\" if you are writing it out in full.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "cvs-vessels",
@@ -12753,7 +13111,7 @@ const PACK = {
    "pointsTier": "TODO",
    "crit": "cvs-6",
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "<b>1. COMMON ILIAC</b> veins — the legs and pelvis. These are the two veins that join to form the inferior vena cava itself.<br><b>2. HEPATIC</b> veins — the liver.<br><br>With the gonadal, suprarenal and renal veins already given, that is the full set of direct tributaries: legs and pelvis, gonads, adrenals, kidneys, liver.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "cvs-vessels",
@@ -12769,7 +13127,7 @@ const PACK = {
    "pointsTier": "TODO",
    "crit": "cvs-2",
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "<b>The three layers, both vessels, inside out.</b><br><b>Tunica intima</b> — endothelium on a basement membrane. Smooth, so blood flows without clotting or friction. In a <b>vein</b> this layer folds inwards to form the <b>valves</b>.<br><b>Tunica media</b> — smooth muscle and elastic fibres, under sympathetic control; this is the layer that vasoconstricts and vasodilates. Much <b>thicker in an artery</b>, and an artery also has a distinct <b>internal elastic lamina</b> at its inner border.<br><b>Tunica externa (adventitia)</b> — collagen; anchors the vessel to surrounding tissue. Proportionally thicker in a vein.<br><br><b>What your labels must show — structural.</b> Artery: thick tunica media, visible internal elastic lamina, small round lumen, wall holds its shape. Vein: thin wall, <b>large and floppy lumen</b> that collapses, <b>valves</b> present.<br><br><b>Functional.</b> Artery: carries blood <b>away</b> from the heart, under high pulsatile pressure — the thick elastic media absorbs and smooths each ejection. Vein: carries blood <b>towards</b> the heart at low pressure, holds most of the blood volume as a reservoir, and depends on the skeletal muscle pump and its valves to move blood against gravity.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "cvs-anat",
@@ -12785,7 +13143,7 @@ const PACK = {
    "pointsTier": "TODO",
    "crit": "cvs-5",
    "selfMark": true,
-   "a": "This is Hannetjie's own question from a self-marked quiz — <b>Canvas publishes no model answer for it</b>, so none is shown here rather than one being invented. Write your answer out, then check it against the lecture slides and learning pages for this topic."
+   "a": "The <b>fibrous pericardium</b> — the tough outermost layer of the pericardial sac, made of dense irregular connective tissue.<br><br>Three functions:<br><b>Anchors</b> the heart in place, being fixed to the central tendon of the diaphragm below and blending with the roots of the great vessels above.<br><b>Protects</b> the heart from physical trauma and from infection spreading in from the lungs.<br><b>Prevents overfilling</b> — it is strong and inelastic, so the heart cannot stretch beyond a safe volume however much blood returns to it.<br><br>That inelasticity cuts both ways: it is exactly why blood or fluid collecting in the pericardial space cannot be accommodated and compresses the heart instead, which is <b>cardiac tamponade</b>.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "type": "saq",
@@ -13637,6 +13995,24 @@ const PACK = {
   }
  ],
  "lecturer": "Hannetjie",
+ "systems": [
+  {
+   "id": "cvs",
+   "name": "Cardiovascular"
+  },
+  {
+   "id": "resp",
+   "name": "Respiratory"
+  },
+  {
+   "id": "lymph",
+   "name": "Lymphatic & immunity"
+  },
+  {
+   "id": "terms",
+   "name": "Terminology"
+  }
+ ],
  "acknowledgedGaps": [
   "cvs-1",
   "resp-15",

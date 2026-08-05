@@ -58,14 +58,44 @@ a build that says NOT SHIPPING has not written one.
 The **Brief** tab is the study guide: one section per focus point, in the order the
 course publishes them, written out as prose. It is generated from the pack's flash
 answers — the same content the flip cards use, read as a page instead of as
-questions. Each section ends with **▸ Drill this**, which points Learn and Drill at
-that focus point alone; get a drill question wrong and **→ Read the full explanation**
+questions. Each section ends with **▸ Drill this**, which points **Study** at
+that focus point alone; get a question wrong and **→ Read the full explanation**
 brings you straight back to its section.
 
-Open the tool with no saved progress and it **lands there**, deliberately. Learn
+Open the tool with no saved progress and it **lands there**, deliberately. Study
 opens by asking you to recall something; on a topic you only half-absorbed in the
 lecture, that is the slowest and most discouraging way in. Read the section, mark
 it read, then drill it.
+
+## Then Study — one queue, 586 cards
+
+There is **one** practice tab. Every card in the pack is in it, and the card decides
+how it is presented: a flashcard flips and you grade yourself, a written question
+reveals its marking points for you to tick, a multichoice/matching/ordering/cloze/
+true-false card is answered and marked for you. The deck works through the course in
+its published order — **Cardiovascular → Respiratory → Lymphatic & immunity →
+Terminology** — finishing one before starting the next, and inside each block it leads
+with the questions Hannetjie has actually set before.
+
+This replaced three tabs (Learn, Drill, Written) that split the pack by how a card
+happened to be marked. That split made an honest card count impossible — Drill spoke
+for only the 300 machine-marked cards while Sources said 586 — and put all 44 written
+questions in two tabs at once.
+
+### 240 by default, 586 on request
+
+The queue holds **240** cards, not 586. The other **346** are background reading:
+standard physiology sitting on focus points Hannetjie's own questions already cover.
+Only **17** textbook cards are load-bearing — the ones holding up cvs-1, resp-9,
+resp-15 and resp-16, the four focus points with no sourced card anywhere — and those
+stay in.
+
+Nothing is deleted and nothing is locked. The switch sits above the queue under both
+doors and states both counts; the Brief and Search always show everything; the mock
+test draws from whichever pool you are studying, so it cannot ask you something the
+queue has never shown you; Progress counts that pool and says so. A card is demoted
+only if **every** focus point it touches already has a sourced card, and the build
+fails if that leaves any focus point with nothing to drill.
 
 Both doors show all 38 focus points — **🎯 Get me ready** only reorders them, leading
 with the never-practised ones and whatever you are weakest on. Nothing is hidden
@@ -277,8 +307,17 @@ point rather than a guessed one; that is the table's stated policy, not an overs
 ## Notes
 
 - **`lean:'exam'`** marks content the lecturer flagged as final-exam-only (the
-  acidosis→chemoreceptor→phrenic cascade). It stays in Learn and Drill and is
+  acidosis→chemoreceptor→phrenic cascade). It stays in Study and is
   excluded from the mock test.
+- **The 38 self-marked cards carry authored answers**, in `audit/selfmark-answers.json`.
+  These are Hannetjie's own questions from quizzes Canvas marks yourself, so no marking
+  schedule was ever published for them. They used to ship with the question and a
+  paragraph explaining that fact and nothing else. Not having the schedule is a reason
+  not to publish a schedule, not a reason to withhold the answer — so each now carries
+  one, written for this pack against the slide-cited Module 1 hub, with a footer saying
+  exactly whose answer it is. The key is `hash('flash|'+question)` and **not** the full
+  `ckey`, because `ckey` folds in the answer text: an overlay may only key on fields it
+  does not itself write.
 - **The mock test is 29 auto + 6 written**, not 32 + 3, because our ordering and
   cloze items pay several marks each — 3 SAQs only came to 13% of marks, not the
   paper's stated 20%. The engine's mark projection derives the same split from
