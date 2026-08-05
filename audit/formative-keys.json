@@ -1,0 +1,374 @@
+{
+ "src": "SRC-BN2-FORMATIVE-TEST-MODEL-ANSWERS-FOR-CANVAS",
+ "sha256": "d808c7c362e2ce30c07beeeec090a46636d01028c0b662fa9ac0ad1bc4e3da8f",
+ "results": [
+  {
+   "q": "1",
+   "kind": "marked",
+   "question": "Q1: Which part of the wave below best represents ventricular repolarization? | The P Wave | The QRS complex | The T wave | An ECG trace does not show ventricular | repolarisation",
+   "questionLoc": "slide 2",
+   "inferredNumber": false,
+   "inheritedSlides": [],
+   "key": [
+    {
+     "text": "The T wave",
+     "loc": "slide 3"
+    }
+   ],
+   "modelAnswer": []
+  },
+  {
+   "q": "2",
+   "kind": "marked",
+   "question": "Q2: Which of the following would drive FILTRATION in capillaries, to facilitate nutrient delivery to the tissues? | High hydrostatic pressure at the arterial end of capillaries | High osmotic pressure at the arterial end of capillaries | High hydrostatic pressure at the venous end of capillaries | High osmotic pressure at the venous end of capillaries",
+   "questionLoc": "slide 4",
+   "inferredNumber": false,
+   "inheritedSlides": [
+    "slide 6"
+   ],
+   "key": [
+    {
+     "text": "High hydrostatic pressure at the arterial end of capillaries",
+     "loc": "slide 5"
+    }
+   ],
+   "modelAnswer": [
+    {
+     "loc": "slide 6",
+     "t": "Fluid Dynamics – VERY important to understand for PATHO | Arterial End – High Hydrostatic Pressure (related to your blood pressure) | This pressure drives FILTRATION and nutrients, fluids and oxygen get pushed into the tissues | The cells use these for metabolism to create ATP. The | byproduct | is wastes and CO2 | Venous End – Higher Osmotic pressure (due to the blood cells and plasma proteins that stay inside your capillary) | This pressure drives absorption and wastes, fluids and CO2 get sucked back into the capillary | The lymphatics help prevent oedema by draining any extra fluid still in tissues"
+    }
+   ]
+  },
+  {
+   "q": "3",
+   "kind": "marked",
+   "question": "Q3: Which of the following factor DOES NOT impact upon pulmonary ventilation? | Lung compliance | Airway diameter | Partial pressure gradients | Surfactant production",
+   "questionLoc": "slide 7",
+   "inferredNumber": false,
+   "inheritedSlides": [],
+   "key": [
+    {
+     "text": "Partial pressure gradients",
+     "loc": "slide 8"
+    }
+   ],
+   "modelAnswer": []
+  },
+  {
+   "q": "4",
+   "kind": "marked",
+   "question": "Q4: At which blood vessel does the lymphatic fluid drain back to the venous system? | The jugular vein | The subclavian vein | The superior vena cava | The inferior vena cava",
+   "questionLoc": "slide 9",
+   "inferredNumber": false,
+   "inheritedSlides": [],
+   "key": [
+    {
+     "text": "The subclavian vein",
+     "loc": "slide 10"
+    }
+   ],
+   "modelAnswer": []
+  },
+  {
+   "q": "5",
+   "kind": "marked",
+   "question": "Q5: Which of the following structures has a similar function to the SA node of the heart? | The Ventral respiratory group | The Pontine | r | espiratory group | The | Cardioinhibitory | | centre | The vasomotor | centre",
+   "questionLoc": "slide 11",
+   "inferredNumber": false,
+   "inheritedSlides": [],
+   "key": [
+    {
+     "text": "The Ventral respiratory group",
+     "loc": "slide 12"
+    }
+   ],
+   "modelAnswer": []
+  },
+  {
+   "q": "6",
+   "kind": "marked",
+   "question": "Q6: Lymph | is derived from the | ___________? | plasma | intracellular | fluid | interstitial | fluid | extracellular | fluid",
+   "questionLoc": "slide 13",
+   "inferredNumber": false,
+   "inheritedSlides": [],
+   "key": [
+    {
+     "text": "interstitial",
+     "loc": "slide 14"
+    },
+    {
+     "text": "fluid",
+     "loc": "slide 14"
+    }
+   ],
+   "modelAnswer": []
+  },
+  {
+   "q": "7",
+   "kind": "marked",
+   "question": "Q7: Which of the following terms refers to air in the pleural space? | Atelectasis | Pneumathorax | Eupnoea | Dyspnoea",
+   "questionLoc": "slide 15",
+   "inferredNumber": false,
+   "inheritedSlides": [],
+   "key": [
+    {
+     "text": "Pneumathorax",
+     "loc": "slide 16"
+    }
+   ],
+   "modelAnswer": []
+  },
+  {
+   "q": "8",
+   "kind": "marked",
+   "question": "Q8: | Which of the following is not a part of the conducting zone of the respiratory system? | Pharynx | Larynx | Trachea | Alveoli | Secondary bronchioles",
+   "questionLoc": "slide 17",
+   "inferredNumber": false,
+   "inheritedSlides": [],
+   "key": [
+    {
+     "text": "Alveoli",
+     "loc": "slide 18"
+    }
+   ],
+   "modelAnswer": []
+  },
+  {
+   "q": "9",
+   "kind": "marked",
+   "question": "Q9: Which valve of the heart is described below: | Found between the right atrium and the right ventricle, it has 3 valve flaps and is anchored to papillary muscles by chordae | tendinae | A semilunar valve, the mitral valve | A semilunar valve, the tricuspid valve | An atrioventricular valve, the mitral valve | An atrioventricular valve, the tricuspid valve",
+   "questionLoc": "slide 19",
+   "inferredNumber": false,
+   "inheritedSlides": [],
+   "key": [
+    {
+     "text": "An atrioventricular valve, the tricuspid valve",
+     "loc": "slide 20"
+    }
+   ],
+   "modelAnswer": []
+  },
+  {
+   "q": "10",
+   "kind": "marked",
+   "question": "Q10: Lymph vessels and veins have similar structures and functions. Which of the following | HELPS | to move fluid through | both | types of vessels? | Mini-valves in the walls | Smooth muscle contraction | Pressure changes in the chest | The pumping force of the heart",
+   "questionLoc": "slide 21",
+   "inferredNumber": false,
+   "inheritedSlides": [],
+   "key": [
+    {
+     "text": "Pressure changes in the chest",
+     "loc": "slide 22"
+    }
+   ],
+   "modelAnswer": []
+  },
+  {
+   "q": "11",
+   "kind": "marked",
+   "question": "Q11: In | the blood flowing through systemic veins of a person at | rest… | the | haemoglobin | is 75% saturated, | the blood is carrying about 20 ml of oxygen per 100 mL of blood | the Bohr effect has increased | haemoglobin’s | affinity for oxygen | each | haemoglobin | molecule, on an average, carries two oxygen molecules",
+   "questionLoc": "slide 23",
+   "inferredNumber": false,
+   "inheritedSlides": [],
+   "key": [
+    {
+     "text": "the",
+     "loc": "slide 24"
+    },
+    {
+     "text": "haemoglobin",
+     "loc": "slide 24"
+    },
+    {
+     "text": "is 75% saturated,",
+     "loc": "slide 24"
+    }
+   ],
+   "modelAnswer": []
+  },
+  {
+   "q": "12",
+   "kind": "marked",
+   "question": "Q12: Which of the following types of shock could be caused by major blood loss? | Cardiogenic shock | Anaphylactic shock | Hypovolemic shock | Septic shock",
+   "questionLoc": "slide 25",
+   "inferredNumber": false,
+   "inheritedSlides": [],
+   "key": [
+    {
+     "text": "Hypovolemic shock",
+     "loc": "slide 26"
+    }
+   ],
+   "modelAnswer": []
+  },
+  {
+   "q": "13",
+   "kind": "marked",
+   "question": "Q13: Are the following statements true or false? | I | . Blood pressure will be highest in vessels that are long. | II. Blood pressure will be highest in vessel that are wide. | III. Blood pressure will be highest in vessels containing serous blood",
+   "questionLoc": "slide 27",
+   "inferredNumber": false,
+   "inheritedSlides": [],
+   "key": [
+    {
+     "text": "FALSE",
+     "loc": "slide 28"
+    },
+    {
+     "text": "FALSE",
+     "loc": "slide 28"
+    },
+    {
+     "text": "TRUE",
+     "loc": "slide 28"
+    }
+   ],
+   "modelAnswer": [
+    {
+     "loc": "slide 28",
+     "t": "Q13: Are the following statements true or false? | I. Blood pressure will be highest in vessels that are long. | II. Blood pressure will be highest in vessel that are wide. | III. Blood pressure will be highest in vessels containing serous blood | FALSE | FALSE | TRUE"
+    }
+   ]
+  },
+  {
+   "q": "14",
+   "kind": "written-only",
+   "question": "Q14: Outline the process of | FORCED exhalation | You should include: | | - Brain control | | - Muscle action | - Volume and pressure changes | - Air movement",
+   "questionLoc": "slide 29",
+   "inferredNumber": false,
+   "inheritedSlides": [],
+   "key": [],
+   "modelAnswer": [
+    {
+     "loc": "slide 30",
+     "t": "Q14: Forced Exhalation | The VRG acts as a pacemaker and sets the rhythm of breathing, | while the DRG stimulate the expiratory accessory muscles. | The | external | intercostals | and diaphragm | relax, | causing the ribs to | fall and | the floor of the thoracic cavity to | rise. The abdominals and the internal intercostal muscles contract to aid in this process | This | decreases | intrathoracic | volume | Because of the pleural membranes and the negative | intrapleural | pressure, the lung tissue follows the walls of the thoracic | cavity. During exhalation, the lung tissue recoils to a smaller size. | This | decreases | the intrapulmonary volume | This | decrease | in intrapulmonary volume results in a | increase | in intrapulmonary pressure | This | increase | in pressure creates a pressure gradient, and air moves | into the | external environment | from the | lungs | until the | pressures inside and outside the body are the same | ."
+    }
+   ]
+  },
+  {
+   "q": "15",
+   "kind": "written-only",
+   "question": "Q15: Outline the processes involved in | renal regulation | of blood pressure to | correct low blood pressure | You should include: | - Indirect mechanisms | | - Direct mechanisms",
+   "questionLoc": "slide 31",
+   "inferredNumber": false,
+   "inheritedSlides": [
+    "slide 33"
+   ],
+   "key": [],
+   "modelAnswer": [
+    {
+     "loc": "slide 32",
+     "t": "Q15: Renal BP | 1. The kidney has its own | barorecepetor | , called the juxtaglomerular apparatus which are cells in the kidney. | 2. When the juxtaglomerular apparatus senses a change in blood pressure, it will initiate regulatory mechanisms. | The kidney acts primarily to increase the blood pressure | - if the blood pressure is | high | , | the following steps will NOT take place. | Direct mechanism: | 3A. There is a reduction in the glomerular filtration rate (or GFR), so the kidney slows the rate which it is filtering the blood. | 4A. When the filtration slows down, urine production also slows down. This results in fluid being maintained in the blood. | 5A. This increases the blood volume | 6A. Blood volume is directly tied to blood pressure, as a higher volume of fluid will stretch the blood vessels, causing blood pressure to increase. | Indirect mechanism: happens at the same time as the direct mechanism | 3B. As the kidney is slowing its filtration rate, the kidney also releases Renin. Renin is an enzyme and converts Angiotensinogen from the liver to Angiotensin I | 4B. Angiotensin I travels to the lungs where ACE (Angiotensin converting enzyme) converts Angiotensin I to | Angiotension | II | 5B. Angiotensin II ( | Ang | II) impacts multiple parts of the body to restore normal blood pressure. | | i | ) | Ang | II leads to vasoconstriction. As the vessels constrict, the resistance inside them increases, which causes peripheral resistance (PR, or systemic vascular resistance SVR) to increase. | ii) | Ang | II increases the release of ADH (anti-diuretic hormone). ADH acts of the collecting ducts of the nephron making it more porous. This causes more water to be reabsorbed from the filtrate (which will become urine) back into the blood. This causes the blood volume to increase. | iii) | Ang | II acts on the adrenal gland to cause the release of Aldosterone. Aldosterone is a hormone that acts on the nephron to increase the | resabsorption | of Na+ from the filtrate into the blood. As water always follows salt, this causes more water to be absorbed into the blood. This causes the blood volume to increase. | 6B. The increase in peripheral resistance (from vasoconstriction) and the increase in blood volume help to increase the blood pressure back to normal."
+    },
+    {
+     "loc": "slide 33",
+     "t": "Molecule | Where from? | What does it do | What does that cause? | Renin | Kidney | Converts Angiotensinogen to | Ang | I | More | Ang | I | Angiotensin | ogen | Liver | Is converted into | Ang | I | More | Ang | I | Angiotensin I | Reaction between Renin and Angiotensinogen | Is converted into | Ang | II | More | Ang | II | ACE | Lungs | Converts | Ang | I | | to | Ang | II | More | Ang | II | Angiotensin | II | Reaction between ACE and Angiotensin I | Promotes | ADH and aldosterone release, vasoconstriction and thirst | Various! | ADH | Posterior Pituitary | Increases water reabsorption | Increases | blood volume | Aldosterone | Adrenal Cortex | Increases Na reabsorption | Increase water | reabsorption"
+    }
+   ]
+  },
+  {
+   "q": "16",
+   "kind": "marked",
+   "question": "CO | 2 | is __1__ | soluable | | than O | 2. | When CO | 2 | enters the blood it reacts with __2__ to form a larger molecule __3__. To do this, it needs the help of an enzyme __4__. This molecule tends to dissolve, forming __5__ ions and __6__. [6] accounts for about 70% of all the CO | 2 | transported in the blood. | Q16: Fill in the blanks below in the paragraph explaining CO | 2 | transport in the blood",
+   "questionLoc": "slide 34",
+   "inferredNumber": true,
+   "inheritedSlides": [
+    "slide 34",
+    "slide 35"
+   ],
+   "key": [
+    {
+     "text": "MORE",
+     "loc": "slide 35"
+    },
+    {
+     "text": "WATER",
+     "loc": "slide 35"
+    },
+    {
+     "text": "CARBONIC ACID",
+     "loc": "slide 35"
+    },
+    {
+     "text": "CARBONIC ANHYDRASE",
+     "loc": "slide 35"
+    },
+    {
+     "text": "HYDROGEN",
+     "loc": "slide 35"
+    },
+    {
+     "text": "BICARBONATE",
+     "loc": "slide 35"
+    }
+   ],
+   "modelAnswer": [
+    {
+     "loc": "slide 35",
+     "t": "CO | 2 | is | MORE | | soluable | | than O | 2. | When CO | 2 | enters the blood it reacts with | WATER | to form a larger molecule | CARBONIC ACID | . To do this, it needs the help of an enzyme | CARBONIC ANHYDRASE | . This molecule tends to dissolve, forming | HYDROGEN | ions and | BICARBONATE | . [6] accounts for about 70% of all the CO | 2 | transported in the blood. | Q16: Fill in the blanks below in the paragraph explaining CO | 2 | transport in the blood"
+    }
+   ]
+  },
+  {
+   "q": "17",
+   "kind": "written-only",
+   "question": "Q17: Outline the processes involved in | neural regulation | of blood pressure to | correct low blood pressure | You should include: | - Indirect mechanisms | | - Direct mechanisms",
+   "questionLoc": "slide 36",
+   "inferredNumber": false,
+   "inheritedSlides": [],
+   "key": [],
+   "modelAnswer": [
+    {
+     "loc": "slide 37",
+     "t": "Q17: Neural BP | 1. Blood pressure is sensed by | barorepectors | , which detect the stretch of the vessels. These are found in the Aortic Arch and the Carotid Sinus. | The baroreceptors help to determine what are normal blood pressure is - if your blood pressure is high for a long time, the baroreceptors what they consider to be normal. | 2. The baroreceptors signal to the cardiac | centre | of the brain. There are three parts that are important. These are the | cardioaccelatory | | centre | (speeds heart), | cardioinhibitory | | centre | (slows heart) and the vasomotor | centre | (controls blood vessel diameter). | 3 | . The | cardioaccelatory | | centre | is stimulated and the | cardioinhibitory | | centre | is inhibited. This sends signals to the heart which results in a faster heart rate, and increased force of contraction of the myocardium. This causes the cardiac output (CO) to rise. | 4. The vasomotor | centre | sends signals to the blood vessels which them to | vasoconstrict | . As the vessels constrict, the resistance inside them increases, which causes peripheral resistance (PR, or systemic vascular resistance SVR) to increase. | 5. Both CO and PR determine blood pressure, so as they increase, this causes the blood pressure to increase back to normal."
+    }
+   ]
+  },
+  {
+   "q": "18",
+   "kind": "written-only",
+   "question": "Q18: Identify… | What kind of blood vessel is “A”? | What kind of blood vessel is “B”? | Give 2 reasons that helped you come to this conclusion | https://www.carolina.com/images/product/large/314082.jpg | A | B",
+   "questionLoc": "slide 38",
+   "inferredNumber": false,
+   "inheritedSlides": [],
+   "key": [],
+   "modelAnswer": [
+    {
+     "loc": "slide 39",
+     "t": "Q18: Identify… | A has a much thicker wall when compared to the lumen (and vice versa) | The muscle layer in A comprises the majority of the wall thickness | The artery has held it’s shape better due to the thick wall | The vein has an overall larger lumen (and therefore holds a larger volume of blood) | https://www.carolina.com/images/product/large/314082.jpg | Artery | Vein"
+    }
+   ]
+  },
+  {
+   "q": "19",
+   "kind": "written-only",
+   "question": "Q19: If you forced yourself to hyperventilate (or if someone was hyperventilating due to a non-respiratory system reason, like anxiety), can you explain how their blood pH might be affected? | Hint: Think about this in a step wise process!",
+   "questionLoc": "slide 40",
+   "inferredNumber": false,
+   "inheritedSlides": [],
+   "key": [],
+   "modelAnswer": [
+    {
+     "loc": "slide 41",
+     "t": "Q19: Forced hyperventilation | If you breath harder and faster (hyperventilate), you will ‘huff out’ more CO | 2. | | It’s how the body reduces CO | 2 | in the blood. That’s why we breathe more when we exercise, to increase oxygen intake and get rid of the extra CO | 2 | we are making. | When CO | 2 | reduces, this changes the ratios of bicarbonate and carbonic acid. | When this happens, the reaction begins to | favour | CO | 2 | to restore the ratios, and HCO | 3 | joins with to H | + | to form H | 2 | CO | 3 | (carbonic acid), which will then split to form water and carbon dioxide. In doing so, the buffer uses to H | + | ions, reducing the concentration of H | + | ions in the blood. | When H | + | ion concentration goes down, this causes blood pH to rise. | If blood pH rises higher then 7.45, a person could be considered | alkalotic | . Normal the body would try to correct this first!"
+    }
+   ]
+  },
+  {
+   "q": "20",
+   "kind": "written-only",
+   "question": "Q20: If you had uncontrolled diabetes, ketoacidosis could cause your blood pH to decrease. One of the ways your body tries to compensate is by breathing faster – why would this help? Explain using your knowledge of the respiratory system.",
+   "questionLoc": "slide 42",
+   "inferredNumber": false,
+   "inheritedSlides": [
+    "slide 43"
+   ],
+   "key": [],
+   "modelAnswer": [
+    {
+     "loc": "slide 43",
+     "t": "Ketoacidosis and how the body compensates | When you are in ketoacidosis – fatty acids/ketones in your blood increase the H+ concentration of the blood, and decrease the | pH. | | This decrease in pH is detected by | chemorecetprs | which are found in the brain and periphery (carotid and aorta, just like baroreceptors) and causes you to breathe faster. | Breathing faster causes more CO2 to be exhaled. | In the blood the bicarbonate buffer system helps to balance CO2 and H+ levels. As more CO2 in breathed out of the body, H+ and HCO3- can converted to CO2. Together this helps reduce H+ in the body and return pH to normal levels."
+    }
+   ]
+  }
+ ]
+}

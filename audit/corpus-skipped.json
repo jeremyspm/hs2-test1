@@ -1,0 +1,3866 @@
+{
+ "skipped": [
+  {
+   "file": "00 COURSE OVERVIEW & EXTRAS\\_INDEX.html",
+   "why": "unsupported format .html"
+  },
+  {
+   "file": "08of11.zip",
+   "why": "unsupported format .zip"
+  },
+  {
+   "file": "08of11\\11 Module 1 Revision Materials\\Files\\Mod 1 16 slide revision zoom_1.mp4",
+   "why": "unsupported format .mp4"
+  },
+  {
+   "file": "0of11.zip",
+   "why": "unsupported format .zip"
+  },
+  {
+   "file": "10of11.zip",
+   "why": "unsupported format .zip"
+  },
+  {
+   "file": "10of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\art and vein 2.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "10of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\art and vein.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "10of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\bicarb buffer.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "10of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\bones numbered.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "10of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\gas exchange.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "10of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\heart and lymph.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "10of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\how o2 sats change with exercise.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "10of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\icon-play(g).png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "10of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\image-047da792-213a-4e17-b322-5abe5567a1d5.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "10of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\labelling major muscle groups.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "10of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\lung volumes.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "10of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\lymphatics organs.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "10of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\osteon.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "10of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\regulatory parts resp brain-1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "11of11.zip",
+   "why": "unsupported format .zip"
+  },
+  {
+   "file": "11of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\Calcium regulation.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\Lobes, gyri, sulci labelled.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\Pulm-systemic-circ-©Ohio-State-647x1024.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "11of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\Sperm.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\Thigh C11-FF1.webp",
+   "why": "unsupported format .webp"
+  },
+  {
+   "file": "11of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\anterior chamger.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\blood pressure 1.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "11of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\cauda equina.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\cochlear structures.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\dermatomes.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "11of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\endocrine lettered-1.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\eye-anatomy-numbered.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\fetal.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "11of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\functional regions of the cerebrum.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "11of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\heart ext.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "11of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\image-19f55e96-c44f-436e-81e4-801140e6f75b.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\lactating vs non lactating breast.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\lobes cerebrum lateral.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\male-front-labelled_mednumbered-1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "11of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\male-front-labelled_mednumbered.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "11of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\medial brain labelled.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\medial brain.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\movement type 2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "11of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\movement types.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "11of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\nerve plexus.gif",
+   "why": "unsupported format .gif"
+  },
+  {
+   "file": "11of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\pulses 2.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "11of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\sperm structure.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\sperm.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "11of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\spinal cord cross section.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\spinal nerve and spinal cord 2.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\spinal nerve and spinal cord.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\synapse for anatomy 6.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\thigh 0514_upper_legs_posterior_view_medical_images_for_powerpoint_Slide01.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "11of11\\15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Files\\tracts of the spinal cord.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\17 SAQ PRACTICE DISCUSSIONS PEER MARKED\\Files\\FORAMEN OVALE 2.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "11of11\\17 SAQ PRACTICE DISCUSSIONS PEER MARKED\\Files\\FORAMEN OVALE.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "11of11\\17 SAQ PRACTICE DISCUSSIONS PEER MARKED\\Files\\image-1bf463fd-85d7-474a-8f57-c5216c780ac9.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\17 SAQ PRACTICE DISCUSSIONS PEER MARKED\\Files\\image-5054f714-c803-4f93-914b-ca111e20173b.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\18 PROFESSIONALISM IN NURSING\\Files\\All Characters-01.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\18 PROFESSIONALISM IN NURSING\\Files\\Ana 'saying hi'.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\18 PROFESSIONALISM IN NURSING\\Files\\Ana Arms Crossed.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\18 PROFESSIONALISM IN NURSING\\Files\\Ana-Nurse-1.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\18 PROFESSIONALISM IN NURSING\\Files\\By understanding-wisdom-01.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\18 PROFESSIONALISM IN NURSING\\Files\\Clincial Comic Strip V2.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\18 PROFESSIONALISM IN NURSING\\Files\\Complaint Process.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\18 PROFESSIONALISM IN NURSING\\Files\\Standouts.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\18 PROFESSIONALISM IN NURSING\\Files\\Study-Help-01.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\18 PROFESSIONALISM IN NURSING\\Files\\Study-Help-02.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\18 PROFESSIONALISM IN NURSING\\Files\\Study-Help-03.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\18 PROFESSIONALISM IN NURSING\\Files\\Study-Help-04.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\18 PROFESSIONALISM IN NURSING\\Files\\Trap Comic.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\18 PROFESSIONALISM IN NURSING\\Files\\Values Graphic.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\18 PROFESSIONALISM IN NURSING\\Files\\Values vs Principles Graphic.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\19 OTHER DISCUSSIONS & UNLINKED FILES\\Files\\LONG BONE 5436178.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\19 OTHER DISCUSSIONS & UNLINKED FILES\\Files\\Pulmonary Volumes.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "11of11\\19 OTHER DISCUSSIONS & UNLINKED FILES\\Files\\antagonistic Screen-Shot-2022-04-01-at-6.54.50-PM.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\19 OTHER DISCUSSIONS & UNLINKED FILES\\Files\\image-54cbe6f9-8823-4567-bb1d-37c93c9b057f.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\19 OTHER DISCUSSIONS & UNLINKED FILES\\Files\\image-b42b255f-e4b9-4d08-824e-5a67037dd9cd.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\19 OTHER DISCUSSIONS & UNLINKED FILES\\Files\\image-d3df17c2-1bfe-4894-9535-a981d3d218c5.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\19 OTHER DISCUSSIONS & UNLINKED FILES\\Files\\muscles.PNG",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "11of11\\19 OTHER DISCUSSIONS & UNLINKED FILES\\Files\\osteon.jfif",
+   "why": "unsupported format .jfif"
+  },
+  {
+   "file": "11of11\\19 OTHER DISCUSSIONS & UNLINKED FILES\\Files\\respiratory system.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "11of11\\19 OTHER DISCUSSIONS & UNLINKED FILES\\Files\\synovial joint-4.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "1of11.zip",
+   "why": "unsupported format .zip"
+  },
+  {
+   "file": "1of11\\01 WELCOME TO HS2\\Files\\BN2 time table 2026 s2.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "1of11\\01 WELCOME TO HS2\\Files\\Final_stem_cell_differentiation_(1).svg.webp",
+   "why": "unsupported format .webp"
+  },
+  {
+   "file": "1of11\\01 WELCOME TO HS2\\Files\\bronch letters.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "1of11\\01 WELCOME TO HS2\\Files\\image-c21c6b82-7e99-4779-bedc-2edce1d7d8c9.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "1of11\\01 WELCOME TO HS2\\Files\\internal heart.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "1of11\\02 THE TOOLS AND THE RULES\\Files\\BN2 COURSE DESCRIPTOR PAGE 51.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "1of11\\02 THE TOOLS AND THE RULES\\Files\\BN2 COURSE DESCRIPTOR PAGE 52.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "1of11\\02 THE TOOLS AND THE RULES\\Files\\BN2 COURSE DESCRIPTOR PAGE 53.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "1of11\\02 THE TOOLS AND THE RULES\\Files\\BN2 COURSE DESCRIPTOR PAGE 54.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "1of11\\04 COMMUNICATION CHANNELS & RECORDINGS FROM THE PAST & PRESENT\\Files\\Kate and Ana.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "1of11\\04 COMMUNICATION CHANNELS & RECORDINGS FROM THE PAST & PRESENT\\Files\\image-f76970d5-2237-47fc-8090-82b387526311.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "1of11\\05 ESSENTIAL DOCUMENTS & LINKS\\Files\\tomkins-1.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "1of11\\05 ESSENTIAL DOCUMENTS & LINKS\\Files\\watson.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "1of11\\_INDEX.html",
+   "why": "unsupported format .html"
+  },
+  {
+   "file": "2of11.zip",
+   "why": "unsupported format .zip"
+  },
+  {
+   "file": "2of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\2104_Three_Major_Capillary_Types.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "2of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\3-s2.0-B9780123944474400192-f40019-02-9780123944474 capillary.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "2of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\BLOOD VESSELS LETTERED.JPEG",
+   "why": "unsupported format .jpeg"
+  },
+  {
+   "file": "2of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Blood vessel general.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "2of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\CAP MOVEMENT 2108_Capillary_ExchangeN.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "2of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Capillary Fluid Dynamics.pptx",
+   "why": "no extractable text (image-only?)"
+  },
+  {
+   "file": "2of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\dec34c1c-ee13-4132-9f4e-1426d5240746.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "2of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\flowchart.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "2of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\image-2f276a6a-b4f4-4958-8714-02946666f8d1.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "2of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\image-68b768f3-87fb-4025-9a63-8e7f7722cdee.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "2of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\image-7e1233d0-3db5-458a-b5b7-16e5b9d3b51d.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "3of11.zip",
+   "why": "unsupported format .zip"
+  },
+  {
+   "file": "3of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\HEART CYCLE PATTON f28-18-9780702078606.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "3of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\Screenshot_20260723_065738_M365 Copilot.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "3of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\Test-yourself-image-for-the-conduction-system-of-the-heart-answers-shown-955x1024-1.webp",
+   "why": "unsupported format .webp"
+  },
+  {
+   "file": "3of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\heart blocked-3.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "3of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\heart chambers.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "3of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\heart.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "3of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\image-19d83054-75a6-460c-9a86-6d539b90034f.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "3of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\image-46e7b923-ca78-4d3d-a8a3-6b17285f49fc.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "3of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\image-4d14c591-52a0-4bd2-904b-1f172b91172a.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "3of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\image-5c3d6f49-856a-4b61-96f7-c37e90472828.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "3of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\image-67bba377-2eb1-4bb3-8b69-85fe33df7262.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "3of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\image-9b6e2f12-6129-4121-ba53-a46289a2073f.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "3of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\image-a08557ea-4f2d-4b2d-96f0-bead1025bc5c.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "3of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\image-df091ea1-6d3c-48f8-b11b-7fec77a4b10a.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "3of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\mitral.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "3of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\tricuspid valve.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "4of11.zip",
+   "why": "unsupported format .zip"
+  },
+  {
+   "file": "4of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\CALC YTI BP.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "4of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\LEFT HEART DISSECTION.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "4of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\SHOCK-1.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "4of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\baroreceptors 2.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "4of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\blood pressure 1-1.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "4of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\blood pressure f30-02-9780702078606.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "4of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\bloodvessles-1.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "4of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\e7694f0f-ced6-411c-8331-85a37ea4fb8d.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "4of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\image-0271ca4f-f745-4d4b-9a6d-bacf2c9def05.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "4of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\image-2531e77a-377f-48eb-8135-dc8a662acffe.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "4of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\image-5b49e19a-7748-447b-95ee-840df60b23dd.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "4of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\image-5dc2128a-fc86-4897-987a-e54b64e07e9b.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "4of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\image-72f75a0f-ccfe-4186-bd0f-8e8fb4954fad.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "4of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\image-8d93f720-3be5-41d5-9be7-470c6ec0220d.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "4of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\image-8e25f7f7-8837-4b4d-b7e6-5fdae84a35e2.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "4of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\image-aebad6cd-0437-4958-b723-1a1334dd4158.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "4of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\image-f2c74223-48cc-4cfe-bba6-2d8c203b710b.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "4of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\image-fda108d5-bc24-453f-a29b-43a92588ed9d.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "4of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\raas 2.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "4of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\right atrium ventricleLABEL.PNG",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "4of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\shock video khan.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "5of11.zip",
+   "why": "unsupported format .zip"
+  },
+  {
+   "file": "5of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\82568933-0ca1-40ca-a9d4-4d10cc6a7577.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "5of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\LUNG DRAWING.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "5of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\image-06531993-73c4-4279-b9c1-4029fc308860.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "5of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\image-235c1b28-999a-4d85-a4bf-dbd5b952e630.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "5of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\image-5010d14d-3e1f-4731-b581-4cc81e0efdd3.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "5of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\image-71466e2e-cb54-49bd-a7a0-9f1d4bd2e8b1.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "5of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\image-90b2d2f3-ab15-4915-ace1-b8f335390426.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "5of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\image-9aa9e8c4-9de2-458c-b936-22e911f92dc0.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "5of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\image-a700da0f-6176-4e66-93f5-615f06e3e9b5.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "5of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\image-e8e44906-11f6-4c53-9821-30b63725775c.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "5of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\image-fcccb054-fef8-487a-9873-2d6e2baad069.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "5of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\luNF DRAWING 2.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "5of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\muscles-of-respiration.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "5of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\respiratory 2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "5of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\spirogram.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "6of11.zip",
+   "why": "unsupported format .zip"
+  },
+  {
+   "file": "6of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\99c18b77-f90d-4e63-a7f2-7b88f56e01e4 (1).jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "6of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\9b8abc67-9b2a-470d-8ade-c9df07ba6743 (1).jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "6of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\LUNG DISEASES 2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "6of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\Taut hemoglobin in quaternary structure.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "6of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\acid base summary.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "6of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\image-0a133622-cf31-459f-b648-5e66452d3d54.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "6of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\image-18cc5757-7d0f-4d7e-83da-c4e4c33b9de8.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "6of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\image-37f68c29-b9e4-4a15-a531-801285fabaa6.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "6of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\image-5793f712-6791-40ab-8d16-152214a6e83f.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "6of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\image-5fda9724-bba4-4cd5-b738-a351dd3f0771.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "6of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\image-6298e2f1-70d6-481f-ba8e-0f827c32eca8.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "6of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\image-6484cc57-d28c-49e2-be92-975aa1b737f4.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "6of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\image-68681bfd-eac6-4c52-85fe-b755139156d2.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "6of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\image-6be89caa-f249-403e-8294-515c70b1f904.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "6of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\image-72c02a9a-b96e-42c9-9866-57808fca67ec.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "6of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\image-cbc046a8-27eb-4cb2-93f2-65d8b32d14bb.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "6of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\image-fe5a7249-48c9-4430-832e-ab9997cc46f2.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "6of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\lung diseases f36-17-9780702078606-1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "7of11.zip",
+   "why": "unsupported format .zip"
+  },
+  {
+   "file": "7of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\ALVEOLI 0e7ded61-0e17-41f2-8f42-d0f7f9d7ed85.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "7of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\ALVEOLI AND BRONCHILI ebda9048-0ce6-4fc4-b6fc-c604759240fe-1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "7of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\CAPILLARIES AND ALVEOLI 2 a234101e-0a3e-4e23-b8c5-7d27c9ca0445.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "7of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\LUB DUB.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "7of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\Practice.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "7of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\TRACHEA 2 1ff89902-8d10-49c8-b163-24a13b99f979-1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "7of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\TRACHEA EPITHELIUM faca50e1-fb4e-4a26-b121-cbc5eeb00a44-1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "7of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\Ventilation vs Gas Exchange.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "7of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\acidbase.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "7of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\image-2d5ba171-25a2-4d5f-ad65-354cef2704d5.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "7of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\image-2e215d01-2210-49c1-bbd7-4dd2f2b6121c.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "7of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\image-5e90f6b4-2a88-493f-b530-eef0fbbacef9.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "7of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\image-7f9b482f-db38-4f58-a792-53c0c1258d84.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "7of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\image-84eea4b8-746b-4092-9bff-69c4901e6533.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "7of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\image-8b846a56-503a-4f4e-9d2c-334d589357f4.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "7of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\image-9eadd68c-d148-4bb9-a318-11aafeae87d3.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "7of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\image-bea43ddc-bdaa-4acc-a044-56a96f88e207.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "7of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\image-c0ecf4cc-c351-4a38-b8cb-0e06bd538c96.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "7of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\image-cfb21634-385a-43e6-9129-c0162e2133e8.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "7of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\image-d09b3bc6-911b-4cb1-aa75-9b6179638e48.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "7of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\image-d28be4f1-4144-4001-82f6-f9cc61331b3c.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "7of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\image-ec122ab2-00f9-40a8-92b8-58c447870711.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "7of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\image-ecaed8d6-d961-4ba8-87e8-02219eaad0f5.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "7of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\image-fd880655-05d7-41a1-83a4-8a9af2c6d3e3.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "7of11\\10 MODULE 1.3 LYMPHATIC SYSTEM\\Files\\0fbb3d08-0de0-4380-9431-f338ee087c6c (1).jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "7of11\\10 MODULE 1.3 LYMPHATIC SYSTEM\\Files\\Lymphatics.htm",
+   "why": "unsupported format .htm"
+  },
+  {
+   "file": "7of11\\10 MODULE 1.3 LYMPHATIC SYSTEM\\Files\\image-0b3a2778-2e3c-462f-8900-43b90f3a3779.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "7of11\\10 MODULE 1.3 LYMPHATIC SYSTEM\\Files\\image-3bb4afa8-a5e2-4685-aa84-c331dbaa3a3b.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "7of11\\10 MODULE 1.3 LYMPHATIC SYSTEM\\Files\\image-447d588a-4d94-4ad6-9fe9-2ff580f8e69e.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "7of11\\10 MODULE 1.3 LYMPHATIC SYSTEM\\Files\\image-70271814-a4be-495d-943d-285f0c1555d7.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "7of11\\10 MODULE 1.3 LYMPHATIC SYSTEM\\Files\\image-7e3c3df7-5dcb-467e-9933-665d74a62262.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "7of11\\10 MODULE 1.3 LYMPHATIC SYSTEM\\Files\\image-8e21a094-58d2-4439-a01c-0b093c2387e4.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "7of11\\10 MODULE 1.3 LYMPHATIC SYSTEM\\Files\\image-eeaf2f3c-98b6-4804-880d-fc3d2ccbbf8f.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "7of11\\10 MODULE 1.3 LYMPHATIC SYSTEM\\Files\\tonsils microorganisms-11-01624-g001-550.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "7of11\\11 Module 1 Revision Materials\\Files\\emma cvs 4 kahoot.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "7of11\\11 Module 1 Revision Materials\\Files\\kahoot module 1.PNG",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "7of11\\11 Module 1 Revision Materials\\Files\\kahoots mod 1.PNG",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "7of11\\13 Lab 1 prep - Cardiovascular System\\Files\\image-53a5a784-02c4-435d-9ac1-d9d5ba4b3b19.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "7of11\\13 Lab 1 prep - Cardiovascular System\\Files\\image-643466db-af3f-4d5d-81e7-7383efcbaea4.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11.zip",
+   "why": "unsupported format .zip"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\50d1000b-c2c4-4c90-b05a-8eb78f3a1151.jpeg",
+   "why": "unsupported format .jpeg"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\9f471220-7d92-4b2d-88a2-50948ffa939a.jpeg",
+   "why": "unsupported format .jpeg"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\DSC10001.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\DSC10005.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\DSC10006-edit-20240726194311.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\PICT0001 (1) (2).jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\PICT0001 (1).JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\PICT0001-edit-20240802103009.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\PICT0002.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\PICT0003-2.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\PICT0003.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\PICT0004(1).jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\PICT0007 (1).JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\PICT0012.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\PICT0019.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\PICT0020.JPG.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\PICT0024.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\R and left Ventricles PICT0001-edit-20260226131357.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\artery and vein.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\image-0d8225f0-a5ad-4a05-932b-ba3e5465d173.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\image-0ddd4f68-5db3-493a-9e45-da75744f5330.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\image-12cdedae-4351-4574-83ca-558b0ead2d46.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\image-1e8b241f-fe88-4193-ac69-2ca2855c4a0f.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\image-3cbae96a-ff68-4acb-a1f6-ae5de6ae05ea.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\image-415ffff3-fde4-4a66-9615-b1863949c234.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\image-43bde09e-cfe9-4e62-b919-4e6228798407.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\image-56351637-44dd-4d89-bf4a-407d7dd759bb.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\image-5b979f65-51a5-41c5-bf06-6ad9296e2832.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\image-6f90a730-13db-415b-895c-7325e03c53f0.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\image-73a5aa26-3926-4591-b0fb-2dd3db64e7df.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\image-7ddb6d64-578e-4a6f-a02b-ea1e4e30eaed.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\image-91b45ce8-4356-4dcd-a520-3f32d6b170d1.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\image-94c20a24-cdca-46bd-8d51-336da73b06df.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\image-9525872d-07a0-4c43-88da-03134b50f2fd.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\image-a295eaa2-b127-455d-b438-dec8f6bc6d49.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\image-ade252e8-1d50-45fb-accb-b946c0c3d465.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\image-cf170b4f-fcfb-42df-b63b-295310e12e9a.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\image-d0f3f42b-3a1f-4a81-82e7-04405da801fd.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\image-eeede773-638b-421b-bf50-cf7126cc200e.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\image-f15e68b8-411e-40ff-946f-4339fbb902f2.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\13 Lab 1 prep - Cardiovascular System\\Files\\image-f82d3fd6-922e-427f-80cc-f3a5c551d1aa.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\1000024292.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\1000024293.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\1000024294.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\1000024295.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\1000024296.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\1000024297.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\ALVEOLI AND BRONCHILI ebda9048-0ce6-4fc4-b6fc-c604759240fe.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\DSC10001 (2).JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\DSC10001-edit-20250327141934.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\DSC10002 (1).JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\DSC10003 (2).JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\DSC10003-edit-20250327142233.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\DSC10004 (1).JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\DSC10004.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\DSC10005 (1).JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\FB_IMG_1678353076225.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\FB_IMG_1678353180635.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\PICT0001 (1) (2).jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\PICT0002 (2).JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\PICT0003 (3).JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\PICT0004-2.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\PICT0004.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\PICT0023.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\PICT0024-edit-20230309215214 (1).jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\TRACHEA 2 1ff89902-8d10-49c8-b163-24a13b99f979.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\TRACHEA EPITHELIUM faca50e1-fb4e-4a26-b121-cbc5eeb00a44.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\cartilage PICT0004.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-00db38bf-6355-4674-92e2-66afb55dd70f.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-00e87a8d-36a5-4c0e-95c2-c3c9b2ebbd10.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-045c821a-f43d-45c3-a533-9e4fcb2fc97f.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-0a180311-d10d-4f62-9c88-e799e70cd006.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-0e3167a1-3e66-418c-b9e9-3c53a039d7f3.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-18b258d0-1d97-40b2-825a-916eebd9083c.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-24b2209e-7b32-4338-bf67-be6e6ec57610.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-2a94165b-660c-4dd7-ac8f-12c21da5b0ec.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-2cdf3679-bf40-464b-8919-5cf4e9a35d87.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-2e3b9a16-56b4-47b2-b65a-3a9142851076.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-308559ec-7050-4632-8fbe-58ca392f942d.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-4227506f-668e-4e3f-9cdd-10e1bb24276a.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-451a3e23-897e-4d26-83eb-1bf4c0ba3bf7.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-4716c139-9180-4edb-80f6-e6ef28d0343b.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-4a9b4493-3325-43c5-bb2f-d6124f3e00e2.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-625e09b0-c529-4ae0-b04b-49ece2f71121.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-67771d3c-bbf1-42f9-84ea-bc265d5b86ed.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-67c59f83-5458-46f0-8084-62ad4acbd23b.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-681ca0e2-4379-4e06-a33a-1cec895974a9.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-764e4af4-3383-4dc3-92f7-63cc2cf3bd17.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-78d0be8f-358d-47fa-a815-319de1945470.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-8442d883-e743-446d-bb10-50bac409deb7.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-89cca65f-e56b-4cf3-a487-ed6fbd73e5c4.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-8ae3b71b-f5d7-4ded-a19d-b28bcffd624e.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-98e595fd-4d48-4ea6-9392-b279eab2060e.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-99255a71-9bf8-4a11-b2c2-b24fa41dec3c.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-c2c6e7b8-4271-4575-9210-c419a6114c48.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-c4582fad-55a4-4e92-a964-b86b4ed45f39.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-c995c20b-5e65-4122-9ea0-0d89612403f4.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-ca3f3584-f196-4627-9742-e52ce3aee7ff.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-cc932bd9-1cfa-40e8-90f6-82a48ef234d4.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-d0fec9fc-0f47-42c5-867c-625128e25e0f.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-d65b7f75-4d70-490a-bf03-7247e53a3c6c.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-d9bed046-5094-40e1-9ef7-f065374da274.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-dae4395e-1f80-4f22-a8a6-413c4f7517d2.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-db0a1bfd-0844-4dec-9316-0f4b72fe1f3c.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-db3c9b4c-7bb2-45af-8540-7eb76acb2eff.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-dc40ee47-ca01-42ab-80b2-83b475f92959.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-dc940f34-a325-434f-9505-d82d5b05d966.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-e1430199-7978-4cd2-b516-81c161fd6f3a.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-e351cdca-be22-413d-bb33-17b50b7abcc5.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-e5def7ef-1362-4602-bd3c-4e6dd07f5110.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-ecefe95d-168b-4919-a91a-049f915c0f3c.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-f4332c51-e08c-4e8b-9b80-c3feb9db00db.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\image-f5a18700-cdc8-4984-b7e8-9103b8f4a853.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\lung epithelium.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\lung filled with air.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\pleura44e1ea15-9b7d-4edd-8471-b4273d203635.jpeg",
+   "why": "unsupported format .jpeg"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\trachea bronchi PICT0002.JPG",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "9of11\\14 Lab 2 - Respiratory System\\Files\\trachea cross section.PNG",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "Respiratory system-1.htm",
+   "why": "unsupported format .htm"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\DISCUSSION_MODULE 1.1- BLOOD VESSELS AS AN IMPORTANT PART OF YOUR TRAINING_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\DISCUSSION_MODULE 1.1- BLOOD VESSELS AS AN IMPORTANT PART OF YOUR TRAINING_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\DISCUSSION_MODULE 1.1- BLOOD VESSELS AS AN IMPORTANT PART OF YOUR TRAINING_img3.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\DISCUSSION_MODULE 1.1- BLOOD VESSELS AS AN IMPORTANT PART OF YOUR TRAINING_img4.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\DISCUSSION_MODULE 1.1- BLOOD VESSELS AS AN IMPORTANT PART OF YOUR TRAINING_img5.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\DISCUSSION_MODULE 1.1- BLOOD VESSELS AS AN IMPORTANT PART OF YOUR TRAINING_img6.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\DISCUSSION_MODULE 1.1- BLOOD VESSELS AS AN IMPORTANT PART OF YOUR TRAINING_img7.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Monday's Content Page.txt",
+   "why": "no extractable text (image-only?)"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 1- Blood vessels and Heart structure_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 1- Blood vessels and Heart structure_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 1- Blood vessels and Heart structure_img3.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 10- Spinal cord, Spinal nerves and Reflexes_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 10- Spinal cord, Spinal nerves and Reflexes_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 10- Spinal cord, Spinal nerves and Reflexes_img3.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 10- Spinal cord, Spinal nerves and Reflexes_img4.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 10- Spinal cord, Spinal nerves and Reflexes_img5.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 10- Spinal cord, Spinal nerves and Reflexes_img6.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 10- Spinal cord, Spinal nerves and Reflexes_img7.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 11- Cranial nerves, Nerve plexuses, Olfaction, Taste and Endocrine Disorders_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 11- Cranial nerves, Nerve plexuses, Olfaction, Taste and Endocrine Disorders_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 11- Cranial nerves, Nerve plexuses, Olfaction, Taste and Endocrine Disorders_img3.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 12- Ear, Eye, Nose, Lactation & Sperm morphology_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 12- Ear, Eye, Nose, Lactation & Sperm morphology_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 12- Reproductive systems, Eye, Ear & Intro to Genetics terminology_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 12- Reproductive systems, Eye, Ear & Intro to Genetics terminology_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 12- Reproductive systems, Eye, Ear & Intro to Genetics terminology_img3.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 12- Reproductive systems, Eye, Ear & Intro to Genetics terminology_img4.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 12- Reproductive systems, Eye, Ear & Intro to Genetics terminology_img5.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 12- Reproductive systems, Eye, Ear & Intro to Genetics terminology_img6.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 12- Reproductive systems, Eye, Ear & Intro to Genetics terminology_img7.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 15 Exam Prep_img1.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 2- Heart Physiology & Lymphatics_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 2- Heart Physiology & Lymphatics_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 3 Electrical conduction in heart and Respiratory Intro_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 3 Electrical conduction in heart and Respiratory Intro_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 4- Gas Transport and Exchange & Test Preparation_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 4- Gas Transport and Exchange & Test Preparation_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 4- Gas Transport and Exchange & Test Preparation_img3.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 4- Gas Transport and Exchange & Test Preparation_img4.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 4- Gas Transport and Exchange & Test Preparation_img5.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 5- Skeleton and Muscles_img1.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 5- Skeleton and Muscles_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 5- Skeleton and Muscles_img3.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 5- Skeleton and Muscles_img4.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 6- Muscles and Intro to Nervous system_img1.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 6- Muscles and Intro to Nervous system_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 7- Test Review- Muscle actions, Movements and Lever systems_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 7- Test Review- Muscle actions, Movements and Lever systems_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 8- The Brain and Endocrine glands_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 8- The Brain and Endocrine glands_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 8- The Brain and Endocrine glands_img3.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Anatomy Mondays 9- Brain parts and their functions, Blood sugar regulation and Stress_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Answers for 10- Spinal cord, Spinal nerves and Reflexes_img1.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Answers for 12-  Ear, Eye, Nose, Lactation & Sperm morphology_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Answers for 12-  Ear, Eye, Nose, Lactation & Sperm morphology_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Answers for 12-  Ear, Eye, Nose, Lactation & Sperm morphology_img3.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Answers for 12-  Ear, Eye, Nose, Lactation & Sperm morphology_img4.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Answers for 12-  Ear, Eye, Nose, Lactation & Sperm morphology_img5.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Answers for 12-  Ear, Eye, Nose, Lactation & Sperm morphology_img6.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Answers for 12-  Ear, Eye, Nose, Lactation & Sperm morphology_img7.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Answers for 8- The Brain and Endocrine glands_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Answers for 8- The Brain and Endocrine glands_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Answers for 8- The Brain and Endocrine glands_img3.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Answers for 8- The Brain and Endocrine glands_img4.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Answers for 9- Brain parts and their functions, Blood sugar regulation and Stress_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Answers for 9- Brain parts and their functions, Blood sugar regulation and Stress_img2.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Answers for AM 1- Blood vessels and Heart structure_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Answers for AM 1- Blood vessels and Heart structure_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Answers for AM 1- Blood vessels and Heart structure_img3.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Answers for AM 11- Cranial nerves, Nerve plexuses, Olfaction, Taste and Endocrine Disorders _img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Answers for AM 11- Cranial nerves, Nerve plexuses, Olfaction, Taste and Endocrine Disorders _img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Answers for AM 12- Reproductive systems, Eye, Ear and Genetics Terminology_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Answers for AM 12- Reproductive systems, Eye, Ear and Genetics Terminology_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Answers for AM 12- Reproductive systems, Eye, Ear and Genetics Terminology_img3.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Answers for AM 12- Reproductive systems, Eye, Ear and Genetics Terminology_img4.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Answers for AM 12- Reproductive systems, Eye, Ear and Genetics Terminology_img5.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Answers for AM 12- Reproductive systems, Eye, Ear and Genetics Terminology_img6.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Answers for AM 12- Reproductive systems, Eye, Ear and Genetics Terminology_img7.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Answers for AM 2_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Answers for AM 5- Skeleton and Muscles_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Answers for AM 5- Skeleton and Muscles_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Answers for AM 5- Skeleton and Muscles_img3.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Answers for AM 5- Skeleton and Muscles_img4.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Answers for AM 5- Skeleton and Muscles_img5.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Answers for AM 6- Muscles and Intro to Nervous system_img1.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Answers for AM 6- Muscles and Intro to Nervous system_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_Answers for AM 6- Muscles and Intro to Nervous system_img3.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_What are Anatomy Mondays-_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\PAGE_What are Anatomy Mondays-_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Respiratory System： Terminology Assessment： Health Science 2 (8_5_2026 9：10：23 AM).html",
+   "why": "unsupported format .html"
+  },
+  {
+   "file": "ESSENTIAL DOCUMENTS & LINKS\\PAGE_CLINICAL KEY TEXTBOOKS & LINKS_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ESSENTIAL DOCUMENTS & LINKS\\PAGE_CLINICAL KEY TEXTBOOKS & LINKS_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ESSENTIAL DOCUMENTS & LINKS\\PAGE_PRACTICAL LABORATORY ARRANGEMENTS_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ESSENTIAL DOCUMENTS & LINKS\\PAGE_PRACTICAL LABORATORY ARRANGEMENTS_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ESSENTIAL DOCUMENTS & LINKS\\PAGE_PRACTICAL LABORATORY ARRANGEMENTS_img3.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ESSENTIAL DOCUMENTS & LINKS\\PAGE_PRACTICAL LABORATORY ARRANGEMENTS_img4.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ESSENTIAL DOCUMENTS & LINKS\\PAGE_PRACTICAL LABORATORY ARRANGEMENTS_img5.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "ESSENTIAL DOCUMENTS & LINKS\\PAGE_PRACTICAL LABORATORY ARRANGEMENTS_img6.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img10.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img11.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img12.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img13.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img14.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img15.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img16.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img17.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img18.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img19.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img20.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img21.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img22.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img23.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img24.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img25.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img26.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img27.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img28.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img29.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img3.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img30.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img31.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img32.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img33.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img34.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img35.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img36.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img37.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img38.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img39.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img4.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img40.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img41.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img42.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img43.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img5.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img6.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img7.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img8.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 1 prep - Cardiovascular System\\PAGE_IMAGES FROM LAB 1 CVS a_img9.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img10.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img11.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img12.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img13.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img14.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img15.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img16.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img17.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img18.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img19.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img20.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img21.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img22.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img23.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img24.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img25.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img26.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img27.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img28.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img29.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img3.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img30.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img31.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img32.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img33.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img34.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img35.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img36.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img37.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img38.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img39.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img4.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img40.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img41.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img42.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img43.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img44.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img45.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img46.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img47.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img48.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img49.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img5.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img50.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img51.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img52.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img53.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img54.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img55.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img56.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img57.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img58.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img59.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img6.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img60.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img61.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img62.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img63.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img64.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img65.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img66.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img67.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img68.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img69.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img7.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img70.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img71.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img72.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img73.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img74.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img75.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img76.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img77.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img8.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\PAGE_IMAGES FROM LAB 2_img9.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\Practice Lab 2： SAQ & MC Quiz (10 marks)： Health Science 2 (8_5_2026 9：06：53 AM).html",
+   "why": "unsupported format .html"
+  },
+  {
+   "file": "Lab 2 - Respiratory System\\Respiratory (SAQ & MC) Pre-Lab Quiz： Health Science 2 (8_5_2026 9：07：11 AM).html",
+   "why": "unsupported format .html"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Capillary Fluid Dynamics.pptx",
+   "why": "no extractable text (image-only?)"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\DISCUSSION_MODULE 1.1- DISCUSSION- DVT_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\MODULE 1.1 SHOCK QUIZ (5 Marks)： Health Science 2 (8_5_2026 8：58：09 AM).html",
+   "why": "unsupported format .html"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\MODULE 1.1： CVS HOMEOSTASIS (30 Marks) ： Health Science 2 (8_5_2026 8：58：49 AM).html",
+   "why": "unsupported format .html"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\MODULE 1.1： CVS1 BLOOD VESSELS (10 marks)： Health Science 2 (8_5_2026 8：55：42 AM).html",
+   "why": "unsupported format .html"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\MODULE 1.1： CVS3 CARDIAC CONDUCTION & ECG (10 marks)： Health Science 2 (8_5_2026 8：57：56 AM).html",
+   "why": "unsupported format .html"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\MODULE 1.1： QUIZ： CVS2 THE HEART (25 marks)： Health Science 2 (8_5_2026 8：56：34 AM).html",
+   "why": "unsupported format .html"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\MODULE 1.1： SAQ & MC： CVS REVIEW ＊(35 marks )： Health Science 2 (8_5_2026 8：58：22 AM).html",
+   "why": "unsupported format .html"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 1- BLOOD VESSELS_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 1- BLOOD VESSELS_img10.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 1- BLOOD VESSELS_img11.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 1- BLOOD VESSELS_img12.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 1- BLOOD VESSELS_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 1- BLOOD VESSELS_img3.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 1- BLOOD VESSELS_img4.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 1- BLOOD VESSELS_img5.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 1- BLOOD VESSELS_img6.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 1- BLOOD VESSELS_img7.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 1- BLOOD VESSELS_img8.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 1- BLOOD VESSELS_img9.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 2- THE HEART & BLOOD FLOW_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 2- THE HEART & BLOOD FLOW_img10.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 2- THE HEART & BLOOD FLOW_img11.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 2- THE HEART & BLOOD FLOW_img12.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 2- THE HEART & BLOOD FLOW_img13.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 2- THE HEART & BLOOD FLOW_img14.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 2- THE HEART & BLOOD FLOW_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 2- THE HEART & BLOOD FLOW_img3.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 2- THE HEART & BLOOD FLOW_img4.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 2- THE HEART & BLOOD FLOW_img5.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 2- THE HEART & BLOOD FLOW_img6.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 2- THE HEART & BLOOD FLOW_img7.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 2- THE HEART & BLOOD FLOW_img8.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 2- THE HEART & BLOOD FLOW_img9.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 3- CARDIAC PHYSIOLOGY_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 3- CARDIAC PHYSIOLOGY_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 3- CARDIAC PHYSIOLOGY_img3.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 3- CARDIAC PHYSIOLOGY_img4.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 3- CARDIAC PHYSIOLOGY_img5.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 3- CARDIAC PHYSIOLOGY_img6.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 3- CARDIAC PHYSIOLOGY_img7.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 4- REGULATION OF BLOOD PRESSURE  _img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 4- REGULATION OF BLOOD PRESSURE  _img10.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 4- REGULATION OF BLOOD PRESSURE  _img11.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 4- REGULATION OF BLOOD PRESSURE  _img12.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 4- REGULATION OF BLOOD PRESSURE  _img13.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 4- REGULATION OF BLOOD PRESSURE  _img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 4- REGULATION OF BLOOD PRESSURE  _img3.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 4- REGULATION OF BLOOD PRESSURE  _img4.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 4- REGULATION OF BLOOD PRESSURE  _img5.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 4- REGULATION OF BLOOD PRESSURE  _img6.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 4- REGULATION OF BLOOD PRESSURE  _img7.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 4- REGULATION OF BLOOD PRESSURE  _img8.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_LEARNING PAGE CVS 4- REGULATION OF BLOOD PRESSURE  _img9.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_MODULE 1.1- Circulatory Shock_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_MODULE 1.1- Circulatory Shock_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\PAGE_MODULE 1.1- Circulatory Shock_img3.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Quiz： MODULE 1.1： HEART COVERINGS & STRUCTURES IN THE RIGHT & LEFT HALVES OF THE HEART (15 marks) (8_5_2026 8：57：16 AM).html",
+   "why": "unsupported format .html"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\DISCUSSION_MODULE 1 EXAM CASE 3- -ASTHMA- DISCUSSION_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\DISCUSSION_MODULE 1 EXAM CASE 3- -ASTHMA- DISCUSSION_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\DISCUSSION_MODULE 1 EXAM CASE 3- -ASTHMA- DISCUSSION_img3.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\DISCUSSION_MODULE 1 EXAM CASE 3- -ASTHMA- DISCUSSION_img4.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\DISCUSSION_MODULE 1 EXAM CASE 3- -ASTHMA- DISCUSSION_img5.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\DISCUSSION_MODULE 1.2- LUNG TISSUE UNDER THE MICROSCOPE_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\DISCUSSION_MODULE 1.2- LUNG TISSUE UNDER THE MICROSCOPE_img10.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\DISCUSSION_MODULE 1.2- LUNG TISSUE UNDER THE MICROSCOPE_img11.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\DISCUSSION_MODULE 1.2- LUNG TISSUE UNDER THE MICROSCOPE_img12.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\DISCUSSION_MODULE 1.2- LUNG TISSUE UNDER THE MICROSCOPE_img13.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\DISCUSSION_MODULE 1.2- LUNG TISSUE UNDER THE MICROSCOPE_img14.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\DISCUSSION_MODULE 1.2- LUNG TISSUE UNDER THE MICROSCOPE_img15.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\DISCUSSION_MODULE 1.2- LUNG TISSUE UNDER THE MICROSCOPE_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\DISCUSSION_MODULE 1.2- LUNG TISSUE UNDER THE MICROSCOPE_img3.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\DISCUSSION_MODULE 1.2- LUNG TISSUE UNDER THE MICROSCOPE_img4.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\DISCUSSION_MODULE 1.2- LUNG TISSUE UNDER THE MICROSCOPE_img5.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\DISCUSSION_MODULE 1.2- LUNG TISSUE UNDER THE MICROSCOPE_img6.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\DISCUSSION_MODULE 1.2- LUNG TISSUE UNDER THE MICROSCOPE_img7.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\DISCUSSION_MODULE 1.2- LUNG TISSUE UNDER THE MICROSCOPE_img8.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\DISCUSSION_MODULE 1.2- LUNG TISSUE UNDER THE MICROSCOPE_img9.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\DISCUSSION_MODULE 1.2- RESPIRATORY SYSTEM DISCUSSION BOARD (RESP  LEARNING PAGES 1,2,3 & 4)_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\DISCUSSION_MODULE 1.2- RESPIRATORY SYSTEM DISCUSSION BOARD (RESP  LEARNING PAGES 1,2,3 & 4)_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\MODULE 1.2： RESP BASIC ANATOMY (10 Marks) ： Health Science 2 (8_5_2026 8：59：52 AM).html",
+   "why": "unsupported format .html"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\MODULE 1.2： RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)： Health Science 2 (8_5_2026 9：00：06 AM).html",
+   "why": "unsupported format .html"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 1- Respiratory tract anatomy_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 1- Respiratory tract anatomy_img10.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 1- Respiratory tract anatomy_img11.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 1- Respiratory tract anatomy_img12.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 1- Respiratory tract anatomy_img13.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 1- Respiratory tract anatomy_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 1- Respiratory tract anatomy_img3.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 1- Respiratory tract anatomy_img4.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 1- Respiratory tract anatomy_img5.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 1- Respiratory tract anatomy_img6.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 1- Respiratory tract anatomy_img7.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 1- Respiratory tract anatomy_img8.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 1- Respiratory tract anatomy_img9.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 2- The physiology of the respiratory tract_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 2- The physiology of the respiratory tract_img10.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 2- The physiology of the respiratory tract_img11.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 2- The physiology of the respiratory tract_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 2- The physiology of the respiratory tract_img3.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 2- The physiology of the respiratory tract_img4.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 2- The physiology of the respiratory tract_img5.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 2- The physiology of the respiratory tract_img6.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 2- The physiology of the respiratory tract_img7.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 2- The physiology of the respiratory tract_img8.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 2- The physiology of the respiratory tract_img9.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 3- Gas exchange and gas transport_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 3- Gas exchange and gas transport_img10.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 3- Gas exchange and gas transport_img11.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 3- Gas exchange and gas transport_img12.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 3- Gas exchange and gas transport_img13.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 3- Gas exchange and gas transport_img14.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 3- Gas exchange and gas transport_img15.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 3- Gas exchange and gas transport_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 3- Gas exchange and gas transport_img3.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 3- Gas exchange and gas transport_img4.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 3- Gas exchange and gas transport_img5.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 3- Gas exchange and gas transport_img6.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 3- Gas exchange and gas transport_img7.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 3- Gas exchange and gas transport_img8.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 3- Gas exchange and gas transport_img9.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 4- Regulation of respiratory system_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 4- Regulation of respiratory system_img10.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 4- Regulation of respiratory system_img11.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 4- Regulation of respiratory system_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 4- Regulation of respiratory system_img3.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 4- Regulation of respiratory system_img4.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 4- Regulation of respiratory system_img5.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 4- Regulation of respiratory system_img6.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 4- Regulation of respiratory system_img7.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 4- Regulation of respiratory system_img8.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_LEARNING PAGE RESP 4- Regulation of respiratory system_img9.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_MODULE 1.2- Respiratory Regulation, Acid-Base Balance and Tutorial_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_MODULE 1.2- Respiratory Regulation, Acid-Base Balance and Tutorial_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_MODULE 1.2- Respiratory Regulation, Acid-Base Balance and Tutorial_img3.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\PAGE_MODULE 1.2- Respiratory Regulation, Acid-Base Balance and Tutorial_img4.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.3  LYMPHATIC SYSTEM\\DISCUSSION_MODULE 1 EXAM CASE 2- DISCUSSION- -LYMPH NODE REMOVAL_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.3  LYMPHATIC SYSTEM\\Lymphatics.htm",
+   "why": "unsupported format .htm"
+  },
+  {
+   "file": "MODULE 1.3  LYMPHATIC SYSTEM\\MODULE 1.3： QUIZ： DISEASES _ TERMINOLOGY RELATED TO THE LYMPHATIC SYSTEM： Health Science 2 (8_5_2026 9：03：06 AM).html",
+   "why": "unsupported format .html"
+  },
+  {
+   "file": "MODULE 1.3  LYMPHATIC SYSTEM\\MODULE 1.3：SAQ & MC： FLUID, ELECTROLYTE & FLUID BALANCE (10 marks) ： Health Science 2 (8_5_2026 9：03：17 AM).html",
+   "why": "unsupported format .html"
+  },
+  {
+   "file": "MODULE 1.3  LYMPHATIC SYSTEM\\PAGE_LEARNING PAGE- Lymphatic System_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.3  LYMPHATIC SYSTEM\\PAGE_LEARNING PAGE- Lymphatic System_img10.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.3  LYMPHATIC SYSTEM\\PAGE_LEARNING PAGE- Lymphatic System_img11.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "MODULE 1.3  LYMPHATIC SYSTEM\\PAGE_LEARNING PAGE- Lymphatic System_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.3  LYMPHATIC SYSTEM\\PAGE_LEARNING PAGE- Lymphatic System_img3.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.3  LYMPHATIC SYSTEM\\PAGE_LEARNING PAGE- Lymphatic System_img4.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.3  LYMPHATIC SYSTEM\\PAGE_LEARNING PAGE- Lymphatic System_img5.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.3  LYMPHATIC SYSTEM\\PAGE_LEARNING PAGE- Lymphatic System_img6.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.3  LYMPHATIC SYSTEM\\PAGE_LEARNING PAGE- Lymphatic System_img7.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.3  LYMPHATIC SYSTEM\\PAGE_LEARNING PAGE- Lymphatic System_img8.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "MODULE 1.3  LYMPHATIC SYSTEM\\PAGE_LEARNING PAGE- Lymphatic System_img9.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Module 1 Revision Materials\\DISCUSSION_MARKED ANSWERS- MOD 1 TEST CASE STUDIES 1 (BLOOD PRESSURE) & 5 (VACCINATION). BY PREVIOUS SEMESTER'S STUDENTS_img1.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "Module 1 Revision Materials\\Mod 1 16 slide revision zoom_1.mp4",
+   "why": "unsupported format .mp4"
+  },
+  {
+   "file": "Module 1 Revision Materials\\PAGE_MODULE 1 KAHOOTS (3 OF THEM)_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Module 1 Revision Materials\\PAGE_MODULE 1 KAHOOTS (3 OF THEM)_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Module 1 Revision Materials\\PAGE_MODULE 1 KAHOOTS (3 OF THEM)_img3.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "Module 1 Revision Materials\\dmdm-module1-mapping.md",
+   "why": "unsupported format .md"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1- DISCUSSION BOARD LYMPHATIC SYSTEM, CARDIOVASCULAR SYSTEM & RESPIRATORY SYSTEM- LEARNING TOGETHER_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1- DISCUSSION BOARD LYMPHATIC SYSTEM, CARDIOVASCULAR SYSTEM & RESPIRATORY SYSTEM- LEARNING TOGETHER_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.1- BLOOD VESSELS AS AN IMPORTANT PART OF YOUR TRAINING_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.1- BLOOD VESSELS AS AN IMPORTANT PART OF YOUR TRAINING_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.1- BLOOD VESSELS AS AN IMPORTANT PART OF YOUR TRAINING_img3.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.1- BLOOD VESSELS AS AN IMPORTANT PART OF YOUR TRAINING_img4.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.1- BLOOD VESSELS AS AN IMPORTANT PART OF YOUR TRAINING_img5.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.1- BLOOD VESSELS AS AN IMPORTANT PART OF YOUR TRAINING_img6.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.1- BLOOD VESSELS AS AN IMPORTANT PART OF YOUR TRAINING_img7.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.1- CVS DISCUSSION BOARD (SCENARIO LINKED)_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.1- CVS DISCUSSION BOARD (SCENARIO LINKED)_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.1- CVS DISCUSSION BOARD (SCENARIO LINKED)_img3.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.1- CVS DISCUSSION BOARD (SCENARIO LINKED)_img4.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.1- CVS DISCUSSION BOARD (SCENARIO LINKED)_img5.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.1- CVS DISCUSSION BOARD (SCENARIO LINKED)_img6.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.1- DISCUSSION- DVT_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.1- HEART COVERINGS & STRUCTURES IN THE RIGHT & LEFT HALVES OF THE HEART_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.1- HEART COVERINGS & STRUCTURES IN THE RIGHT & LEFT HALVES OF THE HEART_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.1- HEART COVERINGS & STRUCTURES IN THE RIGHT & LEFT HALVES OF THE HEART_img3.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.1- HEART COVERINGS & STRUCTURES IN THE RIGHT & LEFT HALVES OF THE HEART_img4.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.1- HEART COVERINGS & STRUCTURES IN THE RIGHT & LEFT HALVES OF THE HEART_img5.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.1- HEART COVERINGS & STRUCTURES IN THE RIGHT & LEFT HALVES OF THE HEART_img6.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.2- LUNG TISSUE UNDER THE MICROSCOPE_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.2- LUNG TISSUE UNDER THE MICROSCOPE_img10.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.2- LUNG TISSUE UNDER THE MICROSCOPE_img11.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.2- LUNG TISSUE UNDER THE MICROSCOPE_img12.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.2- LUNG TISSUE UNDER THE MICROSCOPE_img13.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.2- LUNG TISSUE UNDER THE MICROSCOPE_img14.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.2- LUNG TISSUE UNDER THE MICROSCOPE_img15.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.2- LUNG TISSUE UNDER THE MICROSCOPE_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.2- LUNG TISSUE UNDER THE MICROSCOPE_img3.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.2- LUNG TISSUE UNDER THE MICROSCOPE_img4.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.2- LUNG TISSUE UNDER THE MICROSCOPE_img5.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.2- LUNG TISSUE UNDER THE MICROSCOPE_img6.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.2- LUNG TISSUE UNDER THE MICROSCOPE_img7.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.2- LUNG TISSUE UNDER THE MICROSCOPE_img8.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.2- LUNG TISSUE UNDER THE MICROSCOPE_img9.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.2- RESPIRATORY SYSTEM DISCUSSION BOARD (RESP  LEARNING PAGES 1,2,3 & 4)_img1.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.2- RESPIRATORY SYSTEM DISCUSSION BOARD (RESP  LEARNING PAGES 1,2,3 & 4)_img2.jpg",
+   "why": "unsupported format .jpg"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.2- RESPIRATORY- DISCUSSION-  (SCENARIO LINKED)_img1.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.2- RESPIRATORY- DISCUSSION-  (SCENARIO LINKED)_img2.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.3- LYMPHATIC SYSTEM- DISCUSSION- (SCENARIO LINKED)_img1.png",
+   "why": "unsupported format .png"
+  },
+  {
+   "file": "SAQ QUIZZES (STUDENT MARKED) (-ESSENTIAL)\\MODULE 1.1： SAQ & MC： CVS REVIEW ＊(35 marks )： Health Science 2 (8_5_2026 9：11：16 AM).html",
+   "why": "unsupported format .html"
+  },
+  {
+   "file": "SAQ QUIZZES (STUDENT MARKED) (-ESSENTIAL)\\MODULE 1.1： SAQ STUDENT MARKED CVS LAB REVIEW (15 marks)： Health Science 2 (8_5_2026 9：11：34 AM).html",
+   "why": "unsupported format .html"
+  },
+  {
+   "file": "SAQ QUIZZES (STUDENT MARKED) (-ESSENTIAL)\\MODULE 1.2： SAQ RESPIRATORY SYSTEM (20 marks)： Health Science 2 (8_5_2026 9：12：49 AM).html",
+   "why": "unsupported format .html"
+  },
+  {
+   "file": "SAQ QUIZZES (STUDENT MARKED) (-ESSENTIAL)\\MODULE 1.3：SAQ & MC： FLUID, ELECTROLYTE & FLUID BALANCE (10 marks) ： Health Science 2 (8_5_2026 9：12：53 AM).html",
+   "why": "unsupported format .html"
+  },
+  {
+   "file": "SAQ QUIZZES (STUDENT MARKED) (-ESSENTIAL)\\MODULE 1： SAQ & MC： FORMATIVE CVS, LYMPHATIC & RESPIRATORY SYSTEMS ＊(50 marks)： Health Science 2 (8_5_2026 9：11：03 AM).html",
+   "why": "unsupported format .html"
+  },
+  {
+   "file": "SAQ QUIZZES (STUDENT MARKED) (-ESSENTIAL)\\Practice Lab 1： SAQ & MC Quiz (20 marks)： Health Science 2 (8_5_2026 9：12：37 AM).html",
+   "why": "unsupported format .html"
+  },
+  {
+   "file": "SAQ QUIZZES (STUDENT MARKED) (-ESSENTIAL)\\Practice Lab 2： SAQ & MC Quiz (10 marks)： Health Science 2 (8_5_2026 9：12：41 AM).html",
+   "why": "unsupported format .html"
+  },
+  {
+   "file": "_inbox/Health Science 2 Export Module 1/ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Lecture One RS.pdf",
+   "why": "no text layer (6 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/Health Science 2 Export Module 1/MODULE 1.2  THE RESPIRATORY SYSTEM/Lecture One RS.pdf",
+   "why": "no text layer (6 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/Health Science 2 Export Module 1/MODULE 1.2  THE RESPIRATORY SYSTEM/Lecture two RS.pdf",
+   "why": "no text layer (9 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/Health Science 2 Export Module 1/MODULE 1.2  THE RESPIRATORY SYSTEM/Respiration four.pdf",
+   "why": "no text layer (8 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/Health Science 2 Export Module 1/MODULE 1.2  THE RESPIRATORY SYSTEM/Respiratory three.pdf",
+   "why": "no text layer (9 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/Health Science 2 Export Module 1/MODULE 1.3  LYMPHATIC SYSTEM/Lymph system.pdf",
+   "why": "no text layer (3 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/00 COURSE OVERVIEW & EXTRAS/Assignments (all 35).pdf",
+   "why": "no text layer (10 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/00 COURSE OVERVIEW & EXTRAS/Quizzes (reference list).pdf",
+   "why": "no text layer (2 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/00 COURSE OVERVIEW & EXTRAS/Syllabus.pdf",
+   "why": "no text layer (5 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/10of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Discussions/01 MODULE 1.1- BLOOD VESSELS AS AN IMPORTANT PART OF YOUR TRAINING.pdf",
+   "why": "no text layer (3 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/10of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Discussions/02 Anatomy 2 Discussion Board- Learning together by sharing answers.pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/10of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Discussions/03 Anatomy 3- Discussion Board- Learning together about the Respiratory system.pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/10of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Discussions/04 Anatomy Mondays 5-9- Ask your lecturer questions here!.pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/10of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Files/Lecture One RS.pdf",
+   "why": "no text layer (6 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/10of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Pages/11 Answers for AM 6- Muscles and Intro to Nervous system.pdf",
+   "why": "no text layer (3 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/10of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Pages/12 Anatomy Mondays 7- Test Review- Muscle actions, Movements and Lever systems.pdf",
+   "why": "no text layer (2 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/10of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Pages/13 Answers for 7- Muscle actions, Movements and Lever systems.pdf",
+   "why": "no text layer (3 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/10of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Pages/14 Anatomy Mondays 8- The Brain and Endocrine glands.pdf",
+   "why": "no text layer (3 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/10of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Pages/15 Answers for 8- The Brain and Endocrine glands.pdf",
+   "why": "no text layer (4 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/10of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Pages/16 Anatomy Mondays 9- Brain parts and their functions, Blood sugar regulation and Stress.pdf",
+   "why": "no text layer (2 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/10of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Pages/17 Answers for 9- Brain parts and their functions, Blood sugar regulation and Stress.pdf",
+   "why": "no text layer (4 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/10of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Pages/18 Anatomy Mondays 10- Spinal cord, Spinal nerves and Reflexes.pdf",
+   "why": "no text layer (4 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/10of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Pages/19 Answers for 10- Spinal cord, Spinal nerves and Reflexes.pdf",
+   "why": "no text layer (2 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/10of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Pages/20 Anatomy Mondays 11- Cranial nerves, Nerve plexuses, Olfaction, Taste and Endocrine Disorders.pdf",
+   "why": "no text layer (5 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/10of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Pages/21 Answers for AM 11- Cranial nerves, Nerve plexuses, Olfaction, Taste and Endocrine Disorders.pdf",
+   "why": "no text layer (5 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/10of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Pages/22 Anatomy Mondays 12- Reproductive systems, Eye, Ear & Intro to Genetics terminology.pdf",
+   "why": "no text layer (3 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/10of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Pages/23 Answers for AM 12- Reproductive systems, Eye, Ear and Genetics Terminology.pdf",
+   "why": "no text layer (5 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/10of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Pages/24 Anatomy Mondays 12- Ear, Eye, Nose, Lactation & Sperm morphology.pdf",
+   "why": "no text layer (3 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/10of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Pages/25 Answers for 12- Ear, Eye, Nose, Lactation & Sperm morphology.pdf",
+   "why": "no text layer (4 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/10of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Pages/26 Anatomy Mondays 13- Light, Sound, waves and Special senses.pdf",
+   "why": "no text layer (2 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/10of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Pages/27 Answers for AM 13- Light, Sound, waves and Special senses.pdf",
+   "why": "no text layer (2 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/10of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Pages/28 Anatomy Mondays 14 Case Study Booklet and Vision.pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/10of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Pages/29 Anatomy Mondays 15 Exam Prep.pdf",
+   "why": "no text layer (3 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/10of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Pages/30 Anatomy Monday's Content Page.pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/17 SAQ PRACTICE DISCUSSIONS PEER MARKED/Discussions/01 MODULE 1.1- HEART COVERINGS & STRUCTURES IN THE RIGHT & LEFT HALVES OF THE HEART.pdf",
+   "why": "no text layer (4 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/17 SAQ PRACTICE DISCUSSIONS PEER MARKED/Discussions/02 MODULE 1- DISCUSSION BOARD LYMPHATIC SYSTEM, CARDIOVASCULAR SYSTEM & RESPIRATORY SYSTEM- LEARNING TOGETHER.pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/17 SAQ PRACTICE DISCUSSIONS PEER MARKED/Discussions/03 MODULE 1- ANSWERS- DISCUSSION BOARD LYMPHATIC SYSTEM, CARDIOVASCULAR SYSTEM & RESPIRATORY SYSTEM- LEARNING TOG.pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/17 SAQ PRACTICE DISCUSSIONS PEER MARKED/Discussions/04 MODULE 1.1- BLOOD VESSELS AS AN IMPORTANT PART OF YOUR TRAINING.pdf",
+   "why": "no text layer (3 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/17 SAQ PRACTICE DISCUSSIONS PEER MARKED/Discussions/05 MODULE 1.1- DISCUSSION- DVT.pdf",
+   "why": "no text layer (3 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/17 SAQ PRACTICE DISCUSSIONS PEER MARKED/Discussions/06 MODULE 1.1- CVS DISCUSSION BOARD (SCENARIO LINKED).pdf",
+   "why": "no text layer (6 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/17 SAQ PRACTICE DISCUSSIONS PEER MARKED/Discussions/07 MODULE 1.2- LUNG TISSUE UNDER THE MICROSCOPE.pdf",
+   "why": "no text layer (3 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/17 SAQ PRACTICE DISCUSSIONS PEER MARKED/Discussions/08 MODULE 1.2- RESPIRATORY- DISCUSSION- (SCENARIO LINKED).pdf",
+   "why": "no text layer (4 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/17 SAQ PRACTICE DISCUSSIONS PEER MARKED/Discussions/09 MODULE 1.2- USEFUL VIDEOS EXPLAINING THE RESPIRATORY SYSTEM.pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/17 SAQ PRACTICE DISCUSSIONS PEER MARKED/Discussions/10 MODULE 1.2- RESPIRATORY SYSTEM DISCUSSION BOARD (RESP LEARNING PAGES 1,2,3 & 4).pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/17 SAQ PRACTICE DISCUSSIONS PEER MARKED/Discussions/11 MODULE 1.3- LYMPHATIC SYSTEM- DISCUSSION- (SCENARIO LINKED).pdf",
+   "why": "no text layer (3 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/18 PROFESSIONALISM IN NURSING/Discussions/01 What are your Values-.pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/18 PROFESSIONALISM IN NURSING/Discussions/02 Valuation Alignment.pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/18 PROFESSIONALISM IN NURSING/Discussions/03 Code of Conduct FAQs.pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/18 PROFESSIONALISM IN NURSING/Files/Guidelines Prof Boundaries Booklet full.pdf",
+   "why": "PARTIAL: text on 35/36 pages"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/18 PROFESSIONALISM IN NURSING/Files/Guidelines Social Media.pdf",
+   "why": "PARTIAL: text on 7/8 pages"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/18 PROFESSIONALISM IN NURSING/Pages/01 Code of Conduct Introduction.pdf",
+   "why": "no text layer (2 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/18 PROFESSIONALISM IN NURSING/Pages/02 Where to begin.pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/18 PROFESSIONALISM IN NURSING/Pages/03 Student Regulations.pdf",
+   "why": "no text layer (3 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/18 PROFESSIONALISM IN NURSING/Pages/04 Key Regulations.pdf",
+   "why": "no text layer (2 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/18 PROFESSIONALISM IN NURSING/Pages/05 What you need to know for Assessments.pdf",
+   "why": "no text layer (3 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/18 PROFESSIONALISM IN NURSING/Pages/06 Academic Integrity & Plagiarism.pdf",
+   "why": "no text layer (2 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/18 PROFESSIONALISM IN NURSING/Pages/07 Misconduct.pdf",
+   "why": "no text layer (3 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/18 PROFESSIONALISM IN NURSING/Pages/08 Misconduct - Clinical Placement.pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/18 PROFESSIONALISM IN NURSING/Pages/09 Misconduct - Online Exams.pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/18 PROFESSIONALISM IN NURSING/Pages/10 Online Networks and Misconduct.pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/18 PROFESSIONALISM IN NURSING/Pages/11 Concerns and Appeals.pdf",
+   "why": "no text layer (2 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/18 PROFESSIONALISM IN NURSING/Pages/12 MIT Nursing Student - That's you.pdf",
+   "why": "no text layer (2 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/18 PROFESSIONALISM IN NURSING/Pages/13 Being Professional Online.pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/18 PROFESSIONALISM IN NURSING/Pages/14 Summary.pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/19 OTHER DISCUSSIONS & UNLINKED FILES/Discussions/01 MODULE 3 CASE STUDY L- NOISE-INDUCED HEARING LOSS.pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/19 OTHER DISCUSSIONS & UNLINKED FILES/Discussions/02 MODULE 3 TEST CASE STUDY 11- LACTATION AND POSTPARTUM.pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/19 OTHER DISCUSSIONS & UNLINKED FILES/Discussions/03 MODULE 3 TEST & EXAM CASE STUDIES (Lactation, Hearing loss, Fertility, Colour blindness, Genetic diseases).pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/19 OTHER DISCUSSIONS & UNLINKED FILES/Discussions/04 Musculoskeletal System Online Learning Module Answers.pdf",
+   "why": "no text layer (5 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/19 OTHER DISCUSSIONS & UNLINKED FILES/Discussions/05 Musculoskeletal System Online Learning Module.pdf",
+   "why": "no text layer (6 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/19 OTHER DISCUSSIONS & UNLINKED FILES/Discussions/06 Anatomy 11- Smell, Taste and COVID19.pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/19 OTHER DISCUSSIONS & UNLINKED FILES/Discussions/07 HELP WITH MODULE 3 TOPICS.pdf",
+   "why": "no text layer (2 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/19 OTHER DISCUSSIONS & UNLINKED FILES/Discussions/08 DIAGRAMS & PROCESSES IN TEST 2.pdf",
+   "why": "no text layer (5 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/19 OTHER DISCUSSIONS & UNLINKED FILES/Discussions/09 Meet and Greet.pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/19 OTHER DISCUSSIONS & UNLINKED FILES/Discussions/10 EXAM CASE STUDY HELPLINE (Most important resource for exam prep.).pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/19 OTHER DISCUSSIONS & UNLINKED FILES/Discussions/11 MODULE 1.2- DISCUSSION BOARD Respiratory System 1 Online Learning.pdf",
+   "why": "no text layer (2 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/19 OTHER DISCUSSIONS & UNLINKED FILES/Discussions/12 Do you have a question-.pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/11of11/19 OTHER DISCUSSIONS & UNLINKED FILES/Files/Lecture One RS.pdf",
+   "why": "no text layer (6 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/1of11/01 WELCOME TO HS2/Pages/01 Homepage.pdf",
+   "why": "no text layer (3 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/1of11/01 WELCOME TO HS2/Pages/02 Semester Timetable.pdf",
+   "why": "no text layer (7 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/1of11/02 THE TOOLS AND THE RULES/Pages/01 Course Descriptor 722.541.pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/1of11/02 THE TOOLS AND THE RULES/Pages/02 Regulations and Policies for Students.pdf",
+   "why": "no text layer (2 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/1of11/02 THE TOOLS AND THE RULES/Pages/03 Literacy & Numeracy.pdf",
+   "why": "no text layer (3 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/1of11/02 THE TOOLS AND THE RULES/Pages/04 Using AI Tools in Assessments.pdf",
+   "why": "no text layer (2 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/1of11/02 THE TOOLS AND THE RULES/Pages/05 You Said We Did.pdf",
+   "why": "no text layer (7 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/1of11/02 THE TOOLS AND THE RULES/Pages/06 Staying well while studying.pdf",
+   "why": "no text layer (2 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/1of11/03 PREPARING FOR HS2/Pages/01 Study tips - how to study smarter, not harder!.pdf",
+   "why": "no text layer (3 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/1of11/03 PREPARING FOR HS2/Pages/02 Continuing Year One Science.pdf",
+   "why": "no text layer (2 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/1of11/03 PREPARING FOR HS2/Pages/03 Introduction to HS2, LOs, Syllabus and Assessments.pdf",
+   "why": "no text layer (2 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/1of11/04 COMMUNICATION CHANNELS & RECORDINGS FROM THE PAST & PRESENT/Pages/01 Communication Channel Links and Details [TEAMS, PROCTORU, FB].pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/1of11/04 COMMUNICATION CHANNELS & RECORDINGS FROM THE PAST & PRESENT/Pages/02 About Social Media.pdf",
+   "why": "no text layer (2 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/1of11/04 COMMUNICATION CHANNELS & RECORDINGS FROM THE PAST & PRESENT/Pages/03 About Online Classes.pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/1of11/04 COMMUNICATION CHANNELS & RECORDINGS FROM THE PAST & PRESENT/Pages/04 Introduction to ProctorU.pdf",
+   "why": "no text layer (3 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/1of11/04 COMMUNICATION CHANNELS & RECORDINGS FROM THE PAST & PRESENT/Pages/05 RECORDINGS 2022 ONWARDS.pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/1of11/05 ESSENTIAL DOCUMENTS & LINKS/Pages/01 PRACTICAL LABORATORY ARRANGEMENTS.pdf",
+   "why": "no text layer (3 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/1of11/05 ESSENTIAL DOCUMENTS & LINKS/Pages/02 LAB-WORK BOOKS.pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/1of11/05 ESSENTIAL DOCUMENTS & LINKS/Pages/03 CASE STUDY BOOKLET A.pdf",
+   "why": "no text layer (2 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/1of11/05 ESSENTIAL DOCUMENTS & LINKS/Pages/04 CLINICAL KEY TEXTBOOKS & LINKS.pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/1of11/05 ESSENTIAL DOCUMENTS & LINKS/Pages/05 IMAGES FROM THE LABS.pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/1of11/06 SUMMATIVE ASSESSMENTS (pass-fail depends on performance in these)/Pages/01 ASSESSMENT OVERVIEW.pdf",
+   "why": "no text layer (5 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/1of11/07 MODULE 1/Discussions/01 MODULE 1 HELPLINE.pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/1of11/07 MODULE 1/Discussions/02 MARKED ANSWERS- MOD 1 TEST CASE STUDIES 1 (BLOOD PRESSURE) & 5 (VACCINATION). BY PREVIOUS SEMESTER'S STUDENTS.pdf",
+   "why": "no text layer (9 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/1of11/07 MODULE 1/Pages/01 MODULE 1.1, 1.2 & 1.3 RESOURCES.pdf",
+   "why": "no text layer (3 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/1of11/08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM/Discussions/01 MODULE 1.1- DISCUSSION- DVT.pdf",
+   "why": "no text layer (3 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/1of11/08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM/Discussions/02 MODULE 1.1- HEART COVERINGS & STRUCTURES IN THE RIGHT & LEFT HALVES OF THE HEART.pdf",
+   "why": "no text layer (4 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/1of11/08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM/Discussions/03 MODULE 1.1- TEST CASE STUDY 1- BLOOD PRESSURE.pdf",
+   "why": "no text layer (2 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/1of11/08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM/Pages/01 LEARNING PAGE CVS 1- BLOOD VESSELS.pdf",
+   "why": "no text layer (6 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/1of11/08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM/Pages/02 LEARNING PAGE CVS 2- THE HEART & BLOOD FLOW.pdf",
+   "why": "no text layer (6 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/1of11/08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM/Pages/03 LEARNING PAGE CVS 3- CARDIAC PHYSIOLOGY.pdf",
+   "why": "no text layer (4 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/1of11/08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM/Pages/04 LEARNING PAGE CVS 4- REGULATION OF BLOOD PRESSURE.pdf",
+   "why": "no text layer (8 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/1of11/08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM/Pages/05 MODULE 1.1- Circulatory Shock.pdf",
+   "why": "no text layer (3 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/4of11/09 MODULE 1.2 THE RESPIRATORY SYSTEM/Discussions/01 MODULE 1.2- LUNG TISSUE UNDER THE MICROSCOPE.pdf",
+   "why": "no text layer (3 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/4of11/09 MODULE 1.2 THE RESPIRATORY SYSTEM/Discussions/02 MODULE 1.2- RESPIRATORY SYSTEM DISCUSSION BOARD (RESP LEARNING PAGES 1,2,3 & 4).pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/4of11/09 MODULE 1.2 THE RESPIRATORY SYSTEM/Discussions/03 MODULE 1 EXAM CASE STUDY 3- -ASTHMA- DISCUSSION.pdf",
+   "why": "no text layer (2 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/4of11/09 MODULE 1.2 THE RESPIRATORY SYSTEM/Discussions/04 MODULE 1 EXAM CASE STUDY 4- -PANIC ATTACK DISCUSSION.pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/4of11/09 MODULE 1.2 THE RESPIRATORY SYSTEM/Pages/01 LEARNING PAGE RESP 1- Respiratory tract anatomy.pdf",
+   "why": "no text layer (6 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/4of11/09 MODULE 1.2 THE RESPIRATORY SYSTEM/Pages/02 LEARNING PAGE RESP 2- The physiology of the respiratory tract.pdf",
+   "why": "no text layer (3 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/4of11/09 MODULE 1.2 THE RESPIRATORY SYSTEM/Pages/03 LEARNING PAGE RESP 3- Gas exchange and gas transport.pdf",
+   "why": "no text layer (6 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/4of11/09 MODULE 1.2 THE RESPIRATORY SYSTEM/Pages/04 LEARNING PAGE RESP 4- Regulation of respiratory system.pdf",
+   "why": "no text layer (8 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/4of11/09 MODULE 1.2 THE RESPIRATORY SYSTEM/Pages/05 MODULE 1.2- Helpful Respiratory Videos.pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/4of11/09 MODULE 1.2 THE RESPIRATORY SYSTEM/Pages/06 MODULE 1.2- Respiratory Regulation, Acid-Base Balance and Tutorial.pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/5of11/09 MODULE 1.2 THE RESPIRATORY SYSTEM/Files/Lecture One RS.pdf",
+   "why": "no text layer (6 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/5of11/09 MODULE 1.2 THE RESPIRATORY SYSTEM/Files/Lecture two RS.pdf",
+   "why": "no text layer (9 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/6of11/09 MODULE 1.2 THE RESPIRATORY SYSTEM/Files/Respiration four.pdf",
+   "why": "no text layer (8 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/6of11/09 MODULE 1.2 THE RESPIRATORY SYSTEM/Files/Respiratory three.pdf",
+   "why": "no text layer (9 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/7of11/10 MODULE 1.3 LYMPHATIC SYSTEM/Discussions/01 MODULE 1 EXAM CASE STUDY 2- DISCUSSION- -LYMPH NODE REMOVAL.pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/7of11/10 MODULE 1.3 LYMPHATIC SYSTEM/Discussions/02 MODULE 1 TEST CASE STUDY 5- DISCUSSION- VACCINATION AND IMMUNISATION.pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/7of11/10 MODULE 1.3 LYMPHATIC SYSTEM/Files/Lymph system.pdf",
+   "why": "no text layer (3 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/7of11/10 MODULE 1.3 LYMPHATIC SYSTEM/Pages/01 LEARNING PAGE- Lymphatic System.pdf",
+   "why": "no text layer (7 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/7of11/11 Module 1 Revision Materials/Discussions/01 Module 1 Completion.pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/7of11/11 Module 1 Revision Materials/Pages/01 MODULE 1 KAHOOTS (3 OF THEM).pdf",
+   "why": "no text layer (5 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/7of11/12 LABORATORIES/Pages/01 PRACTICAL LABORATORY ARRANGEMENTS.pdf",
+   "why": "no text layer (3 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/7of11/12 LABORATORIES/Pages/02 IMAGES FROM THE LABS.pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/7of11/12 LABORATORIES/Pages/03 LAB-WORK BOOKS.pdf",
+   "why": "no text layer (1 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/7of11/13 Lab 1 prep - Cardiovascular System/Pages/01 IMAGES FROM LAB 1 CVS a.pdf",
+   "why": "no text layer (5 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/9of11/14 Lab 2 - Respiratory System/Pages/01 IMAGES FROM LAB 2.pdf",
+   "why": "no text layer (6 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/9of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Pages/01 What are Anatomy Mondays-.pdf",
+   "why": "no text layer (3 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/9of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Pages/02 Anatomy Mondays 1- Blood vessels and Heart structure.pdf",
+   "why": "no text layer (3 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/9of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Pages/03 Answers for AM 1- Blood vessels and Heart structure.pdf",
+   "why": "no text layer (2 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/9of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Pages/04 Anatomy Mondays 2- Heart Physiology & Lymphatics.pdf",
+   "why": "no text layer (2 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/9of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Pages/05 Answers for AM 2.pdf",
+   "why": "no text layer (3 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/9of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Pages/06 Anatomy Mondays 3 Electrical conduction in heart and Respiratory Intro.pdf",
+   "why": "no text layer (2 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/9of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Pages/07 Anatomy Mondays 4- Gas Transport and Exchange & Test Preparation.pdf",
+   "why": "no text layer (3 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/9of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Pages/08 Anatomy Mondays 5- Skeleton and Muscles.pdf",
+   "why": "no text layer (5 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/9of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Pages/09 Answers for AM 5- Skeleton and Muscles.pdf",
+   "why": "no text layer (3 pages) — scanned/image PDF"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/9of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Pages/10 Anatomy Mondays 6- Muscles and Intro to Nervous system.pdf",
+   "why": "no text layer (3 pages) — scanned/image PDF"
+  }
+ ],
+ "duplicates": [
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\2023 Case studies NS.pptx",
+   "sameAs": "SRC-2023-CASE-STUDIES-NS"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\2024 Case studies mod ans-joints.pptx",
+   "sameAs": "SRC-2024-CASE-STUDIES-MOD-ANS-JOINTS"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Anatomy 15 Notes - PNS and the Reflex Arc.docx",
+   "sameAs": "SRC-ANATOMY-15-NOTES-PNS-AND-THE-REFLEX-ARC"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Anatomy 9 Notes.docx",
+   "sameAs": "SRC-ANATOMY-9-NOTES"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Case studies 2003 model answers-.pptx",
+   "sameAs": "SRC-CASE-STUDIES-2003-MODEL-ANSWERS"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Cells of NS Notes.docx",
+   "sameAs": "SRC-CELLS-OF-NS-NOTES"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Full Slides MS.pptx",
+   "sameAs": "SRC-FULL-SLIDES-MS"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Muscle tissue notes.docx",
+   "sameAs": "SRC-MUSCLE-TISSUE-NOTES"
+  },
+  {
+   "file": "ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content\\Skeletal notes lecturer version.docx",
+   "sameAs": "SRC-SKELETAL-NOTES-LECTURER-VERSION"
+  },
+  {
+   "file": "ESSENTIAL DOCUMENTS & LINKS\\2026 (2) 722.537 541 552 Course Lab Workbook ff.docx",
+   "sameAs": "SRC-2026-2-722-537-541-552-COURSE-LAB-WORKBOOK-FF"
+  },
+  {
+   "file": "ESSENTIAL DOCUMENTS & LINKS\\APPLICATION FOR LATE SIT OF CONTINUOUS TEST.docx",
+   "sameAs": "SRC-APPLICATION-FOR-LATE-SIT-OF-CONTINUOUS-TEST"
+  },
+  {
+   "file": "ESSENTIAL DOCUMENTS & LINKS\\ASSESSMENT CRITERIA.docx",
+   "sameAs": "SRC-SCIENCE-2-DETAILED-CONTENT"
+  },
+  {
+   "file": "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.docx",
+   "sameAs": "SRC-CASE-STUDY-WORKBOOK-2026-S2"
+  },
+  {
+   "file": "ESSENTIAL DOCUMENTS & LINKS\\EXTENSION REQUEST FORM.docx",
+   "sameAs": "SRC-EXTENSION-REQUEST-FORM"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\2026 CIRCULATION VESSELS CV1-2.pptx",
+   "sameAs": "SRC-2026-CIRCULATION-VESSELS-CV1-2"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\2026 CVS 3.pptx",
+   "sameAs": "SRC-2026-CVS-3"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\2026 Cardiovascular System 4-2.pptx",
+   "sameAs": "SRC-2026-CARDIOVASCULAR-SYSTEM-4-2"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\2026 Cardiovascular system 2-3.pptx",
+   "sameAs": "SRC-2026-CARDIOVASCULAR-SYSTEM-2-3"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Capillaries, Fluid and Flow.pptx",
+   "sameAs": "SRC-CAPILLARIES-FLUID-AND-FLOW"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Cardiovascular System 3 - Annotated.pptx",
+   "sameAs": "SRC-CARDIOVASCULAR-SYSTEM-3-ANNOTATED"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Cardiovascular System 4 - Annotated.pptx",
+   "sameAs": "SRC-CARDIOVASCULAR-SYSTEM-4-ANNOTATED"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Cardiovascular system 2 -1.pptx",
+   "sameAs": "SRC-CARDIOVASCULAR-SYSTEM-2-1"
+  },
+  {
+   "file": "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Cardiovascular system 2 Annotated.pptx",
+   "sameAs": "SRC-CARDIOVASCULAR-SYSTEM-2-ANNOTATED"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP 1.pptx",
+   "sameAs": "SRC-2026-RESP-1"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP 3.pptx",
+   "sameAs": "SRC-2026-RESP-3"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP2.pptx",
+   "sameAs": "SRC-2026-RESP2"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx",
+   "sameAs": "SRC-2026-RESP4-1"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\Emma's Respiration 1 lecture - Annotated-1.pptx",
+   "sameAs": "SRC-EMMA-S-RESPIRATION-1-LECTURE-ANNOTATED-1"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\Emma's Respiration 2 lecture - Annotated.pptx",
+   "sameAs": "SRC-EMMA-S-RESPIRATION-2-LECTURE-ANNOTATED"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\Emma's Respiration 3 lecture - Annotated.pptx",
+   "sameAs": "SRC-EMMA-S-RESPIRATION-3-LECTURE-ANNOTATED"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\RESPIRATORY SYSTEM 4 BN2 Lecture (JL).pptx",
+   "sameAs": "SRC-RESPIRATORY-SYSTEM-4-BN2-LECTURE-JL"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\Resp 4 Annotated.pptx",
+   "sameAs": "SRC-RESP-4-ANNOTATED"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\Respiratory 3 Slides.pptx",
+   "sameAs": "SRC-RESPIRATORY-3-SLIDES"
+  },
+  {
+   "file": "MODULE 1.2  THE RESPIRATORY SYSTEM\\Respiratory Regulation and AcidBase Balance.pptx",
+   "sameAs": "SRC-RESPIRATORY-REGULATION-AND-ACIDBASE-BALANCE"
+  },
+  {
+   "file": "MODULE 1.3  LYMPHATIC SYSTEM\\2026  Lymphatic system.pptx",
+   "sameAs": "SRC-2026-LYMPHATIC-SYSTEM"
+  },
+  {
+   "file": "MODULE 1.3  LYMPHATIC SYSTEM\\Online Lymphatics Lecture Material - Annotated.pptx",
+   "sameAs": "SRC-ONLINE-LYMPHATICS-LECTURE-MATERIAL-ANNOTATED"
+  },
+  {
+   "file": "MODULE 1\\2024 Revision mod 1 16 slide.pptx",
+   "sameAs": "SRC-2024-REVISION-MOD-1-16-SLIDE"
+  },
+  {
+   "file": "Module 1 Revision Materials\\2020a Revision mod 1 16 slide-1.pptx",
+   "sameAs": "SRC-2020A-REVISION-MOD-1-16-SLIDE-1"
+  },
+  {
+   "file": "Module 1 Revision Materials\\BN2 Formative Test - Model Answers for Canvas.pptx",
+   "sameAs": "SRC-BN2-FORMATIVE-TEST-MODEL-ANSWERS-FOR-CANVAS"
+  },
+  {
+   "file": "Module 1 Revision Materials\\BN2 Formative Test - Questions Only.pptx",
+   "sameAs": "SRC-BN2-FORMATIVE-TEST-QUESTIONS-ONLY"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\Case Study Workbook 2025 s2.docx",
+   "sameAs": "SRC-CASE-STUDY-WORKBOOK-2025-S2"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.1- BLOOD VESSELS AS AN IMPORTANT PART OF YOUR TRAINING.txt",
+   "sameAs": "SRC-DISCUSSION-MODULE-1-1-BLOOD-VESSELS-AS-AN-IMPO"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.1- DISCUSSION- DVT.txt",
+   "sameAs": "SRC-DISCUSSION-MODULE-1-1-DISCUSSION-DVT"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.2- LUNG TISSUE UNDER THE MICROSCOPE.txt",
+   "sameAs": "SRC-DISCUSSION-MODULE-1-2-LUNG-TISSUE-UNDER-THE-MI"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\DISCUSSION_MODULE 1.2- RESPIRATORY SYSTEM DISCUSSION BOARD (RESP  LEARNING PAGES 1,2,3 & 4).txt",
+   "sameAs": "SRC-DISCUSSION-MODULE-1-2-RESPIRATORY-SYSTEM-DISCU"
+  },
+  {
+   "file": "SAQ PRACTICE DISCUSSIONS PEER MARKED\\THE AIRWAYS diagrams. docx-1.docx",
+   "sameAs": "SRC-THE-AIRWAYS-DIAGRAMS-DOCX-1"
+  },
+  {
+   "file": "_inbox/Health Science 2 Export Module 1/MODULE 1/MODULE 1 16 SLIDE OVERVIEW(HM).pdf",
+   "sameAs": "SRC-2020A-REVISION-MOD-1-16-SLIDE-1"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/1of11/05 ESSENTIAL DOCUMENTS & LINKS/Files/2026 (2) 722.537 541 552 Course Lab Workbook ff.pdf",
+   "sameAs": "SRC-2026-2-722-537-541-552-COURSE-LAB-WORKBOOK-FF-2"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/1of11/05 ESSENTIAL DOCUMENTS & LINKS/Files/Case Study Workbook 2026 S2.pdf",
+   "sameAs": "SRC-CASE-STUDY-WORKBOOK-2026-S2-2"
+  },
+  {
+   "file": "_inbox/HEALTH SCIENCE 2/7of11/11 Module 1 Revision Materials/Files/BN2 Formative Test PDF Model Answers.pdf",
+   "sameAs": "SRC-PDF-OF-IN-CLASS-FORMATIVE-MODEL-ANSWERS"
+  }
+ ]
+}

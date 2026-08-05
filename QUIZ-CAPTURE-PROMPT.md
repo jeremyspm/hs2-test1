@@ -1,87 +1,119 @@
-# Prompt for Claude in Chrome — capture the HS2 quizzes
+# Capture the two remaining HS2 quizzes
 
-Canvas will not export quizzes, so these ~13 exist only as links. The two
-formative tests in the archive were captured by **submitting an attempt**, which
-reveals the questions and model answers. That's the whole trick.
+**Updated 5 Aug 2026** after the provenance audit. 18 of the 20 quizzes on the original
+list are already captured, parsed, and in `audit/questions.json` — 236 questions, 180
+with machine-extracted answer keys. **Two are still missing, and one capture needs
+redoing.** That is all this document is now for.
 
-Open Chrome, log in to Canvas, open the Claude side panel, and paste the prompt
-below.
+Everything here needs you, in Chrome, logged into Canvas. It is the only part of the
+rebuild that cannot be done from the repo.
 
 ---
 
-## The prompt
+## Why these three, and nothing else
+
+### 1. `722.541 2026 PROCTORU TRIAL TEST` — do this first, regardless of its questions
+
+This is the only rehearsal of the real exam setup: camera, photo ID, room scan, the
+lock-down flow. **Finding out on 23 August that your webcam or ID check fails is a loss
+no revision card can offset.** Its questions are a bonus; the dry run is the point.
+
+### 2. `Practice Lab 2: SAQ & MC Quiz (10 marks)` — RE-CAPTURE, submitted
+
+We already have a capture of this one. It is unusable, and the audit worked out why.
+
+| | Practice Lab 1 | Practice Lab 2 |
+|---|---|---|
+| Captured from | a **submitted** attempt | an **unsubmitted** attempt |
+| Auto-marked questions | 10 | 10 |
+| …with a recovered key | **10 / 10** | **0 / 10** |
+
+Same quiz family, same parser, same selectors, opposite outcome. **Canvas only reveals
+the answer key once an attempt is submitted.** Practice Lab 2's 8 multiple-choice, 1
+matching and 1 multiple-dropdown question all have keys sitting behind that submission.
+
+It is also the most valuable one to recover: **all 11 of its questions carry images**
+(`trachea cross section`, `bell jar numbered`, `resp system numbered`) — the
+label-the-diagram format. The current 392-card pack drills that format **zero** times,
+and answers to image questions cannot be authored blind. Recovering hers is the only
+route.
+
+### 3. `Knowledge Check Quiz` — only if it is free
+
+Low value. Skip it if anything above is at risk.
+
+---
+
+## Before you start
+
+**Check whether an attempt costs you anything.** Practice Lab 2 is a practice quiz, but
+open it and read the header first: points, time limit, attempts allowed, graded vs
+practice. If it says **unlimited attempts** and is ungraded, submitting is free and you
+should submit. If attempts are limited or it is graded, stop and tell me — a recovered
+answer key is not worth a recorded mark.
+
+The Trial Test is a rehearsal by design; submitting it is the intended use.
+
+---
+
+## The prompt for Claude in Chrome
+
+Open Chrome, log into Canvas, open the Claude side panel, and paste this:
 
 > I'm on Canvas at Manukau Institute of Technology, logged in as a student in
-> **Health Science 2 (722.541), course 61986**. I have a ProctorU test on 23
-> August covering Module 1 and I'm building a revision deck from the course's own
-> questions.
+> **Health Science 2 (722.541), course 61986**. I have a ProctorU test on 23 August and
+> I'm recovering two quizzes for a revision tool.
 >
-> I want you to work through the quizzes in this course and capture each one as
-> plain text I can save. Work through them **one at a time** and show me each
-> result before moving on.
+> **Quiz A — `722.541 2026 PROCTORU TRIAL TEST`**
+> **Quiz B — `Practice Lab 2: SAQ & MC Quiz (10 marks)`**
 >
-> **For each quiz, in this order:**
+> For each one, in this order:
 >
-> 1. Open the quiz page and, before doing anything else, tell me: its **name**,
->    the **points available**, the **time limit**, the **number of allowed
->    attempts**, and whether it is **graded or ungraded/practice**.
-> 2. **Stop and ask me before you start, submit, or interact with any attempt.**
->    I will tell you whether to proceed. Do not assume — some of these carry
->    marks and I don't want an attempt burned or a zero recorded.
-> 3. Once I say go, open the attempt, and for **every question** capture:
->    the full question text, every answer option, which option is marked correct,
->    the model answer or marking schedule if one is shown, and any feedback or
->    explanation text.
-> 4. Give it to me as **plain text or markdown**, question by question, in the
->    order they appear. Don't summarise, don't paraphrase, don't shorten — I need
->    her exact wording, because the real test reuses it.
-> 5. If a question has an image, describe what it shows and what is labelled,
->    since I can't copy the image itself.
+> 1. Open the quiz page. Before doing anything else, tell me its **name**, **points
+>    available**, **time limit**, **number of attempts allowed**, and whether it is
+>    **graded or ungraded/practice**. Then stop.
+> 2. **Wait for me to say go before starting or submitting any attempt.** Do not assume.
+> 3. Once I say go: complete the attempt (answers can be wrong — I only need the results
+>    page) and **submit it**, because Canvas does not reveal the answer key until an
+>    attempt is submitted.
+> 4. On the results page, save the **whole page** — File → Save Page As → *Webpage,
+>    Complete*. Do not copy the text out; the answer key lives in the page's HTML
+>    attributes and is lost if you paste it as plain text.
+> 5. For every question, also tell me in the chat: the full question text, every option,
+>    which option is marked correct, and any model answer or feedback shown.
+> 6. If a question shows an image, describe what it shows and what is labelled.
 >
-> **The quizzes I want, in priority order:**
->
-> 1. `MODULE 1: SAQ & MC: FORMATIVE CVS, LYMPHATIC & RESPIRATORY SYSTEMS` (50 marks)
-> 2. `722.541 2026 PROCTORU TRIAL TEST`
-> 3. `MODULE 1.1: SAQ & MC: CVS REVIEW` (35 marks)
-> 4. `MODULE 1.1: QUIZ: CVS2 THE HEART` (25 marks)
-> 5. `MODULE 1.2: SAQ RESPIRATORY SYSTEM` (20 marks)
-> 6. `MODULE 1.1: SAQ STUDENT MARKED CVS LAB REVIEW` (15 marks)
-> 7. `MODULE 1.3: SAQ & MC: FLUID, ELECTROLYTE & FLUID BALANCE` (10 marks)
-> 8. `MODULE 1.3: QUIZ: DISEASES / TERMINOLOGY RELATED TO THE LYMPHATIC SYSTEM`
-> 9. `MODULE 1.1 SHOCK QUIZ` (5 marks)
-> 10. `Practice Lab 1: SAQ & MC Quiz` (10 marks)
-> 11. `Practice Lab 2: SAQ & MC Quiz` (10 marks)
-> 12. `Respiratory Pre-Lab Quiz`
-> 13. `Knowledge Check Quiz`
->
-> Most of these live under the module section **"16 SAQ QUIZZES (STUDENT MARKED)
-> (-ESSENTIAL)"**. Start by listing every quiz you can find in the course and
-> which section it's in, so we can check nothing is missed, then begin with
-> number 1.
->
-> Two things to keep in mind throughout:
-> - **Never submit an attempt without asking me first.**
-> - If a quiz shows a previous attempt of mine, capture that results page rather
->   than starting a new attempt.
+> Two standing rules: **never submit an attempt without asking me first**, and if a quiz
+> shows a previous attempt of mine, capture that results page rather than starting a new
+> one.
 
 ---
 
-## After you have the text
+## Where to put the files
 
-Save each quiz as its own `.md` or `.txt` file into `github/_inbox/HEALTH SCIENCE 2/`
-and tell me — I'll fold them into the pack, replacing my textbook-written cards
-with her actual wording wherever they overlap, and I'll re-check the eight
-"blind" criteria against what the quizzes actually cover.
+Save both `.html` files into:
 
-## Why the priority order
+```
+github/_inbox/Health Science 2 Export Module 1/
+```
 
-1 and 2 are worth more than the rest combined. **#1** is a 50-mark paper across
-all three Module 1 systems — the closest thing to a full mock. **#2** is a
-rehearsal of the actual ProctorU setup, so it's worth doing properly once even if
-the questions turn out to be trivial: you find out whether your camera, ID check
-and room scan work *before* the day.
+Folder does not matter — the parser walks the whole tree. Keep Chrome's default filename.
 
-**#4, #5, #8 and #9 matter disproportionately** because they hit criteria this
-pack currently flags as blind — heart sounds, respiratory anatomy, lymphatic
-terminology, and shock. If those quizzes cover them, the blind list shrinks and
-the priority queue should be rebalanced.
+Then tell me, and I run:
+
+```bash
+node audit/run-all.mjs
+```
+
+**What proves it worked:** `parse-quizzes.mjs` picks both up, and Practice Lab 2 reports
+**≥10 keyed** instead of 0. If it still says 0, the attempt did not submit and the page
+was saved from the pre-submission view.
+
+---
+
+## Everything else on the old list is done
+
+The original 13-quiz priority list is captured, sha256-pinned in `audit/registry.json`,
+and harvested into `audit/harvested.js`. Do not re-capture any of them — including the
+50-mark Module 1 formative, CVS REVIEW, CVS2 THE HEART, the lymphatic terminology quiz,
+the shock quiz and Practice Lab 1. They are all in, with their keys.

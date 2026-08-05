@@ -41,21 +41,28 @@ for (const [i, m] of [...out.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/sc
 }
 writeFileSync('index.html', out);
 
-// quick authoring stats so a build always tells you where the pack stands
+/* Stats come from LOADING the pack, not from regexing it. pack.js is now generated
+   JSON, so patterns written for the old hand-authored style (type:'flash', crit:'cvs-7')
+   matched nothing and every count silently read zero — a build that reported "0 cards"
+   while shipping 588. */
+const { loadPack } = await import('./audit/load-pack.mjs');
+const { pack: P } = loadPack();
+
 const types = {};
-for (const m of pack.matchAll(/type:\s*'(\w+)'/g)) types[m[1]] = (types[m[1]] || 0) + 1;
-const total = Object.values(types).reduce((x, y) => x + y, 0);
+for (const c of P.cards) types[c.type] = (types[c.type] || 0) + 1;
+const tiers = {};
+for (const c of P.cards) tiers[c.tier ?? '(none)'] = (tiers[c.tier ?? '(none)'] || 0) + 1;
 console.log(`built index.html — ${(out.length / 1024).toFixed(0)} KB`);
-console.log(`${total} cards:`, Object.entries(types).map(([k, v]) => `${k} ${v}`).join(' · '));
+console.log(`${P.cards.length} cards:`, Object.entries(types).sort((a, b) => b[1] - a[1]).map(([k, v]) => `${k} ${v}`).join(' · '));
+console.log('tiers:', Object.entries(tiers).sort((a, b) => b[1] - a[1]).map(([k, v]) => `${k} ${v}`).join(' · '));
 
 // coverage: which declared criteria are still under their card floor
-const declared = [...pack.matchAll(/\{\s*id:'([\w-]+)',\s*name:'[^']*'(,\s*blind:true)?\s*\}/g)]
-  .map(m => ({ id: m[1], blind: !!m[2] }));
 const counts = {};
-for (const m of pack.matchAll(/crit:'([\w-]+)'/g)) counts[m[1]] = (counts[m[1]] || 0) + 1;
+for (const c of P.cards) for (const id of [c.crit, ...(c.alsoCrit ?? [])].filter(Boolean)) counts[id] = (counts[id] || 0) + 1;
 const MIN = 6, BLIND_MIN = 10;
-const short = declared.filter(c => (counts[c.id] || 0) < (c.blind ? BLIND_MIN : MIN));
+const short = (P.criteria ?? []).filter(c => (counts[c.id] || 0) < (c.blind ? BLIND_MIN : MIN));
 console.log(short.length
   ? `${short.length} criteria under floor: ` + short.map(c => `${c.id} ${counts[c.id] || 0}/${c.blind ? BLIND_MIN : MIN}`).join(' · ')
-  : `all ${declared.length} criteria at or above their card floor ✓`);
+  : `all ${(P.criteria ?? []).length} criteria at or above their card floor ✓`);
 console.log(`${used.size} of ${Object.keys(FIG).length} ported figures wired to cards`);
+if (used.size === 0) { console.error('✗ no figures wired — pack.js has lost its F()/FC() calls'); process.exit(1); }

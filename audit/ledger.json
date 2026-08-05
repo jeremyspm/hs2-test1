@@ -1,0 +1,9035 @@
+{
+ "freeze": {
+  "at": "2026-08-05T03:11:15.062Z",
+  "commit": "f918d9b9fb9f42fe7b23317f77925f9d4f19b88e",
+  "files": {
+   "pack.js": {
+    "bytes": 2454400,
+    "sha256": "de87ad30d5a88800beb9a26ab049642c426afcff922ccca79784cdd267201858"
+   },
+   "index.html": {
+    "bytes": 3327875,
+    "sha256": "1edab9f28ca27a207d69efab22f74198128873722df6543ab6d878ec812491a1"
+   },
+   "figs.js": {
+    "bytes": 803534,
+    "sha256": "ee0d312635146e073b6b6cfbbbfc08b2b168db2bce75154f4a82ae78a53e0c44"
+   },
+   "build.mjs": {
+    "bytes": 4041,
+    "sha256": "4142cf3144e40d21196698b7dc8dcf77726da7307556a83349ba9c2a74c32f80"
+   }
+  }
+ },
+ "counts": {
+  "cards": 392,
+  "glossary": 74,
+  "withSrc": 86,
+  "withoutSrc": 380,
+  "srcUnresolved": 33,
+  "quantityMentions": 163,
+  "itemsWithQuantity": 80
+ },
+ "rows": [
+  {
+   "kind": "card",
+   "idx": 0,
+   "type": "flash",
+   "topic": "immune",
+   "crit": "cs-vacc",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 288,
+   "label": "Where in the body are B lymphocytes MADE, and where do they MATURE?"
+  },
+  {
+   "kind": "card",
+   "idx": 1,
+   "type": "flash",
+   "topic": "immune",
+   "crit": "cs-vacc",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 251,
+   "label": "Where are T lymphocytes MADE, and where do they MATURE?"
+  },
+  {
+   "kind": "card",
+   "idx": 2,
+   "type": "flash",
+   "topic": "immune",
+   "crit": "cs-vacc",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 267,
+   "label": "Once mature, where are B and T lymphocytes STORED?"
+  },
+  {
+   "kind": "card",
+   "idx": 3,
+   "type": "flash",
+   "topic": "immune",
+   "crit": "cs-vacc",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 438,
+   "label": "Describe the internal structure of a lymph node."
+  },
+  {
+   "kind": "card",
+   "idx": 4,
+   "type": "flash",
+   "topic": "immune",
+   "crit": "cs-vacc",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 373,
+   "label": "Why does lymph flow SLOWLY through a lymph node, and why does that matter?"
+  },
+  {
+   "kind": "card",
+   "idx": 5,
+   "type": "flash",
+   "topic": "immune",
+   "crit": "cs-vacc",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 Lymphatic system slides 13–14",
+   "srcInfo": {
+    "raw": "2026 Lymphatic system slides 13–14",
+    "head": "2026 Lymphatic system",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.3  LYMPHATIC SYSTEM\\2026  Lymphatic system.pptx"
+    ]
+   },
+   "quantities": [],
+   "chars": 510,
+   "label": "Which cells find and present antigens to the rest of the immune system?"
+  },
+  {
+   "kind": "card",
+   "idx": 6,
+   "type": "flash",
+   "topic": "immune",
+   "crit": "cs-vacc",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 439,
+   "label": "Which cell orchestrates a full-blown adaptive immune response, and how?"
+  },
+  {
+   "kind": "card",
+   "idx": 7,
+   "type": "flash",
+   "topic": "immune",
+   "crit": "cs-vacc",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 373,
+   "label": "What is the difference between VACCINATION and IMMUNISATION?"
+  },
+  {
+   "kind": "card",
+   "idx": 8,
+   "type": "flash",
+   "topic": "immune",
+   "crit": "cs-vacc",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 451,
+   "label": "How does a vaccine produce protection?"
+  },
+  {
+   "kind": "card",
+   "idx": 9,
+   "type": "flash",
+   "topic": "immune",
+   "crit": "cs-vacc",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 406,
+   "label": "How does the COVID-19 mRNA vaccine work?"
+  },
+  {
+   "kind": "card",
+   "idx": 10,
+   "type": "mcq",
+   "topic": "immune",
+   "crit": "cs-vacc",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 267,
+   "label": "A patient asks where their T cells \"learned their job\". The correct answer is:"
+  },
+  {
+   "kind": "card",
+   "idx": 11,
+   "type": "mcq",
+   "topic": "immune",
+   "crit": "cs-vacc",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 285,
+   "label": "Which region of a lymph node is packed with B cells?"
+  },
+  {
+   "kind": "card",
+   "idx": 12,
+   "type": "mcq",
+   "topic": "immune",
+   "crit": "cs-vacc",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 294,
+   "label": "Which cell type is the MOST effective antigen-presenting cell?"
+  },
+  {
+   "kind": "card",
+   "idx": 13,
+   "type": "mcq",
+   "topic": "immune",
+   "crit": "cs-vacc",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 452,
+   "label": "A student says \"I was vaccinated so I am immunised.\" The most accurate correction is:"
+  },
+  {
+   "kind": "card",
+   "idx": 14,
+   "type": "tfset",
+   "topic": "immune",
+   "crit": "cs-vacc",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 437,
+   "label": "Are the following statements about vaccination true or false?"
+  },
+  {
+   "kind": "card",
+   "idx": 15,
+   "type": "order",
+   "topic": "immune",
+   "crit": "cs-vacc",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 646,
+   "label": "Place the events of the response to a vaccine in order."
+  },
+  {
+   "kind": "card",
+   "idx": 16,
+   "type": "match",
+   "topic": "immune",
+   "crit": "cs-vacc",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 444,
+   "label": "Match each immune cell or structure to its role."
+  },
+  {
+   "kind": "card",
+   "idx": 17,
+   "type": "cloze",
+   "topic": "immune",
+   "crit": "cs-vacc",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 605,
+   "label": "Complete the passage on immunological memory."
+  },
+  {
+   "kind": "card",
+   "idx": 18,
+   "type": "saq",
+   "topic": "immune",
+   "crit": "cs-vacc",
+   "lean": null,
+   "hasFig": false,
+   "src": "Case Study Workbook 2026 S2 — Case study 5 (blue = test)",
+   "srcInfo": {
+    "raw": "Case Study Workbook 2026 S2 — Case study 5 (blue = test)",
+    "head": "Case Study Workbook 2026 S2",
+    "resolved": true,
+    "candidates": [
+     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.docx",
+     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.pdf"
+    ]
+   },
+   "quantities": [],
+   "chars": 839,
+   "label": "Explain how vaccination protects a person from disease, and distinguish vaccination from i"
+  },
+  {
+   "kind": "card",
+   "idx": 19,
+   "type": "saq",
+   "topic": "immune",
+   "crit": "cs-vacc",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 635,
+   "label": "Describe the structure of a lymph node and explain what is found in each region. (5 marks)"
+  },
+  {
+   "kind": "card",
+   "idx": 20,
+   "type": "flash",
+   "topic": "cvs-ecg",
+   "crit": "cvs-7",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 Cardiovascular system 2-3 slides 27–28",
+   "srcInfo": {
+    "raw": "2026 Cardiovascular system 2-3 slides 27–28",
+    "head": "2026 Cardiovascular system 2-3",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\2026 Cardiovascular system 2-3.pptx"
+    ]
+   },
+   "quantities": [],
+   "chars": 287,
+   "label": "What causes the FIRST heart sound (S1, \"lub\")?"
+  },
+  {
+   "kind": "card",
+   "idx": 21,
+   "type": "flash",
+   "topic": "cvs-ecg",
+   "crit": "cvs-7",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 Cardiovascular system 2-3 slides 27–28",
+   "srcInfo": {
+    "raw": "2026 Cardiovascular system 2-3 slides 27–28",
+    "head": "2026 Cardiovascular system 2-3",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\2026 Cardiovascular system 2-3.pptx"
+    ]
+   },
+   "quantities": [],
+   "chars": 279,
+   "label": "What causes the SECOND heart sound (S2, \"dub\")?"
+  },
+  {
+   "kind": "card",
+   "idx": 22,
+   "type": "flash",
+   "topic": "cvs-ecg",
+   "crit": "cvs-7",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 352,
+   "label": "What is a third heart sound (S3) and when is it abnormal?"
+  },
+  {
+   "kind": "card",
+   "idx": 23,
+   "type": "flash",
+   "topic": "cvs-ecg",
+   "crit": "cvs-7",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 286,
+   "label": "What is a fourth heart sound (S4)?"
+  },
+  {
+   "kind": "card",
+   "idx": 24,
+   "type": "flash",
+   "topic": "cvs-ecg",
+   "crit": "cvs-7",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 Cardiovascular system 2-3 slide 27",
+   "srcInfo": {
+    "raw": "2026 Cardiovascular system 2-3 slide 27",
+    "head": "2026 Cardiovascular system 2-3",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\2026 Cardiovascular system 2-3.pptx"
+    ]
+   },
+   "quantities": [],
+   "chars": 291,
+   "label": "What causes a heart MURMUR?"
+  },
+  {
+   "kind": "card",
+   "idx": 25,
+   "type": "flash",
+   "topic": "cvs-ecg",
+   "crit": "cvs-7",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 Cardiovascular system 2-3 slide 32",
+   "srcInfo": {
+    "raw": "2026 Cardiovascular system 2-3 slide 32",
+    "head": "2026 Cardiovascular system 2-3",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\2026 Cardiovascular system 2-3.pptx"
+    ]
+   },
+   "quantities": [],
+   "chars": 360,
+   "label": "Why is each valve NOT auscultated directly over its anatomical position?"
+  },
+  {
+   "kind": "card",
+   "idx": 26,
+   "type": "mcq",
+   "topic": "cvs-ecg",
+   "crit": "cvs-7",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 337,
+   "label": "Where is the AORTIC area for auscultation?"
+  },
+  {
+   "kind": "card",
+   "idx": 27,
+   "type": "mcq",
+   "topic": "cvs-ecg",
+   "crit": "cvs-7",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 363,
+   "label": "Where is the MITRAL (apical) area for auscultation?"
+  },
+  {
+   "kind": "card",
+   "idx": 28,
+   "type": "mcq",
+   "topic": "cvs-ecg",
+   "crit": "cvs-7",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 350,
+   "label": "S1 (\"lub\") corresponds to which event in the cardiac cycle?"
+  },
+  {
+   "kind": "card",
+   "idx": 29,
+   "type": "mcq",
+   "topic": "cvs-ecg",
+   "crit": "cvs-7",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 343,
+   "label": "An 78-year-old with shortness of breath and ankle oedema has an audible S3. This most like"
+  },
+  {
+   "kind": "card",
+   "idx": 30,
+   "type": "order",
+   "topic": "cvs-ecg",
+   "crit": "cvs-7",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 522,
+   "label": "Place the four auscultation areas in the order a nurse would move the stethoscope, startin"
+  },
+  {
+   "kind": "card",
+   "idx": 31,
+   "type": "match",
+   "topic": "cvs-ecg",
+   "crit": "cvs-7",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 413,
+   "label": "Match each heart sound to its cause."
+  },
+  {
+   "kind": "card",
+   "idx": 32,
+   "type": "tfset",
+   "topic": "cvs-ecg",
+   "crit": "cvs-7",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 454,
+   "label": "Are the following statements about heart sounds true or false?"
+  },
+  {
+   "kind": "card",
+   "idx": 33,
+   "type": "cloze",
+   "topic": "cvs-ecg",
+   "crit": "cvs-7",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 662,
+   "label": "Complete the passage on the heart sounds."
+  },
+  {
+   "kind": "card",
+   "idx": 34,
+   "type": "saq",
+   "topic": "cvs-ecg",
+   "crit": "cvs-7",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 829,
+   "label": "Explain what produces the first and second heart sounds, and state where each of the four "
+  },
+  {
+   "kind": "card",
+   "idx": 35,
+   "type": "flash",
+   "topic": "resp-anat",
+   "crit": "resp-2",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 523,
+   "label": "What do the nasal conchae (turbinates) do, and why does it matter clinically?"
+  },
+  {
+   "kind": "card",
+   "idx": 36,
+   "type": "flash",
+   "topic": "resp-anat",
+   "crit": "resp-2",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 376,
+   "label": "Name the four paranasal sinuses and their functions."
+  },
+  {
+   "kind": "card",
+   "idx": 37,
+   "type": "flash",
+   "topic": "resp-anat",
+   "crit": "resp-2",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 364,
+   "label": "Name the three regions of the pharynx and what each contains."
+  },
+  {
+   "kind": "card",
+   "idx": 38,
+   "type": "flash",
+   "topic": "resp-anat",
+   "crit": "resp-2",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 362,
+   "label": "Which laryngeal cartilage is the only COMPLETE ring, and why does that matter?"
+  },
+  {
+   "kind": "card",
+   "idx": 39,
+   "type": "flash",
+   "topic": "resp-anat",
+   "crit": "resp-2",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 395,
+   "label": "What is the difference between the true and false vocal folds?"
+  },
+  {
+   "kind": "card",
+   "idx": 40,
+   "type": "flash",
+   "topic": "resp-anat",
+   "crit": "resp-2",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 357,
+   "label": "Why are the tracheal cartilage rings C-shaped rather than complete?"
+  },
+  {
+   "kind": "card",
+   "idx": 41,
+   "type": "flash",
+   "topic": "resp-anat",
+   "crit": "resp-2",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 337,
+   "label": "What is the carina and why is it clinically important?"
+  },
+  {
+   "kind": "card",
+   "idx": 42,
+   "type": "flash",
+   "topic": "resp-anat",
+   "crit": "resp-2",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 331,
+   "label": "Why does an aspirated object usually end up in the RIGHT lung?"
+  },
+  {
+   "kind": "card",
+   "idx": 43,
+   "type": "flash",
+   "topic": "resp-anat",
+   "crit": "resp-2",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 381,
+   "label": "How many lobes and fissures does each lung have?"
+  },
+  {
+   "kind": "card",
+   "idx": 44,
+   "type": "flash",
+   "topic": "resp-anat",
+   "crit": "resp-2",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 447,
+   "label": "Describe the pleural membranes and the pleural cavity."
+  },
+  {
+   "kind": "card",
+   "idx": 45,
+   "type": "mcq",
+   "topic": "resp-anat",
+   "crit": "resp-2",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 348,
+   "label": "A patient aspirates a peanut. Which bronchus is it most likely to enter?"
+  },
+  {
+   "kind": "card",
+   "idx": 46,
+   "type": "mcq",
+   "topic": "resp-anat",
+   "crit": "resp-2",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 327,
+   "label": "Which structure prevents the trachea from collapsing during forceful inspiration?"
+  },
+  {
+   "kind": "card",
+   "idx": 47,
+   "type": "mcq",
+   "topic": "resp-anat",
+   "crit": "resp-2",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 222,
+   "label": "The cardiac notch and lingula are found on:"
+  },
+  {
+   "kind": "card",
+   "idx": 48,
+   "type": "order",
+   "topic": "resp-anat",
+   "crit": "resp-2",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 416,
+   "label": "Place these structures in the order air passes through them, from outside to the gas-excha"
+  },
+  {
+   "kind": "card",
+   "idx": 49,
+   "type": "match",
+   "topic": "resp-anat",
+   "crit": "resp-2",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 525,
+   "label": "Match each respiratory structure to its distinguishing feature."
+  },
+  {
+   "kind": "card",
+   "idx": 50,
+   "type": "tfset",
+   "topic": "resp-anat",
+   "crit": "resp-2",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 458,
+   "label": "Are the following statements about respiratory anatomy true or false?"
+  },
+  {
+   "kind": "card",
+   "idx": 51,
+   "type": "cloze",
+   "topic": "resp-anat",
+   "crit": "resp-2",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 672,
+   "label": "Complete the passage on the upper airway."
+  },
+  {
+   "kind": "card",
+   "idx": 52,
+   "type": "saq",
+   "topic": "resp-anat",
+   "crit": "resp-2",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 714,
+   "label": "Describe how the structure of the nasal cavity and upper airway prepares inspired air for "
+  },
+  {
+   "kind": "card",
+   "idx": 53,
+   "type": "flash",
+   "topic": "resp-gas",
+   "crit": "resp-8",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 RESP2 slides 4–5",
+   "srcInfo": {
+    "raw": "2026 RESP2 slides 4–5",
+    "head": "2026 RESP2",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP2.pptx"
+    ]
+   },
+   "quantities": [
+    {
+     "value": "760",
+     "unit": "mmHg",
+     "raw": "760 mmHg"
+    },
+    {
+     "value": "78",
+     "unit": "%",
+     "raw": "78%"
+    },
+    {
+     "value": "21",
+     "unit": "%",
+     "raw": "21%"
+    }
+   ],
+   "chars": 375,
+   "label": "What is the composition and partial pressure of the gases in ATMOSPHERIC air at sea level?"
+  },
+  {
+   "kind": "card",
+   "idx": 54,
+   "type": "flash",
+   "topic": "resp-gas",
+   "crit": "resp-8",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "104",
+     "unit": "mmHg",
+     "raw": "104 mmHg"
+    },
+    {
+     "value": "40",
+     "unit": "mmHg",
+     "raw": "40 mmHg"
+    },
+    {
+     "value": "47",
+     "unit": "mmHg",
+     "raw": "47 mmHg"
+    },
+    {
+     "value": "37",
+     "unit": "°C",
+     "raw": "37 °C"
+    }
+   ],
+   "chars": 348,
+   "label": "What are the partial pressures of the gases in ALVEOLAR air?"
+  },
+  {
+   "kind": "card",
+   "idx": 55,
+   "type": "flash",
+   "topic": "resp-gas",
+   "crit": "resp-8",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "47",
+     "unit": "mmHg",
+     "raw": "47 mmHg"
+    },
+    {
+     "value": "37",
+     "unit": "°C",
+     "raw": "37 °C"
+    },
+    {
+     "value": "350",
+     "unit": "mL",
+     "raw": "350 mL"
+    },
+    {
+     "value": "2400",
+     "unit": "mL",
+     "raw": "2400 mL"
+    }
+   ],
+   "chars": 494,
+   "label": "Give the THREE reasons alveolar air differs from atmospheric air."
+  },
+  {
+   "kind": "card",
+   "idx": 56,
+   "type": "flash",
+   "topic": "resp-gas",
+   "crit": "resp-8",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 382,
+   "label": "Why is it a GOOD thing that alveolar gas changes only slightly with each breath?"
+  },
+  {
+   "kind": "card",
+   "idx": 57,
+   "type": "flash",
+   "topic": "resp-gas",
+   "crit": "resp-8",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "104",
+     "unit": "mmHg",
+     "raw": "104 mmHg"
+    },
+    {
+     "value": "159",
+     "unit": "mmHg",
+     "raw": "159 mmHg"
+    }
+   ],
+   "chars": 341,
+   "label": "Why is alveolar PO₂ (104 mmHg) so much lower than atmospheric PO₂ (159 mmHg)?"
+  },
+  {
+   "kind": "card",
+   "idx": 58,
+   "type": "flash",
+   "topic": "resp-gas",
+   "crit": "resp-8",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "150",
+     "unit": "mL",
+     "raw": "150 mL"
+    },
+    {
+     "value": "500",
+     "unit": "mL",
+     "raw": "500 mL"
+    },
+    {
+     "value": "350",
+     "unit": "mL",
+     "raw": "350 mL"
+    }
+   ],
+   "chars": 416,
+   "label": "What is anatomical dead space and how does it affect alveolar air?"
+  },
+  {
+   "kind": "card",
+   "idx": 59,
+   "type": "mcq",
+   "topic": "resp-gas",
+   "crit": "resp-8",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "159",
+     "unit": "mmHg",
+     "raw": "159 mmHg"
+    },
+    {
+     "value": "104",
+     "unit": "mmHg",
+     "raw": "104 mmHg"
+    },
+    {
+     "value": "40",
+     "unit": "mmHg",
+     "raw": "40 mmHg"
+    },
+    {
+     "value": "47",
+     "unit": "mmHg",
+     "raw": "47 mmHg"
+    },
+    {
+     "value": "104",
+     "unit": "mmHg",
+     "raw": "104 mmHg"
+    },
+    {
+     "value": "159",
+     "unit": "mmHg",
+     "raw": "159 mmHg"
+    },
+    {
+     "value": "40",
+     "unit": "mmHg",
+     "raw": "40 mmHg"
+    },
+    {
+     "value": "47",
+     "unit": "mmHg",
+     "raw": "47 mmHg"
+    }
+   ],
+   "chars": 243,
+   "label": "The partial pressure of oxygen in alveolar air is approximately:"
+  },
+  {
+   "kind": "card",
+   "idx": 60,
+   "type": "mcq",
+   "topic": "resp-gas",
+   "crit": "resp-8",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 445,
+   "label": "Which of the following is NOT a reason alveolar air differs from atmospheric air?"
+  },
+  {
+   "kind": "card",
+   "idx": 61,
+   "type": "mcq",
+   "topic": "resp-gas",
+   "crit": "resp-8",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "200",
+     "unit": "mL",
+     "raw": "200 mL"
+    },
+    {
+     "value": "150",
+     "unit": "mL",
+     "raw": "150 mL"
+    },
+    {
+     "value": "50",
+     "unit": "mL",
+     "raw": "50 mL"
+    },
+    {
+     "value": "200",
+     "unit": "mL",
+     "raw": "200 mL"
+    }
+   ],
+   "chars": 419,
+   "label": "A patient breathes rapidly and shallowly at 30 breaths/min with a tidal volume of 200 mL. "
+  },
+  {
+   "kind": "card",
+   "idx": 62,
+   "type": "match",
+   "topic": "resp-gas",
+   "crit": "resp-8",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "159",
+     "unit": "mmHg",
+     "raw": "159 mmHg"
+    },
+    {
+     "value": "104",
+     "unit": "mmHg",
+     "raw": "104 mmHg"
+    },
+    {
+     "value": "40",
+     "unit": "mmHg",
+     "raw": "40 mmHg"
+    },
+    {
+     "value": "40",
+     "unit": "mmHg",
+     "raw": "40 mmHg"
+    },
+    {
+     "value": "47",
+     "unit": "mmHg",
+     "raw": "47 mmHg"
+    },
+    {
+     "value": "37",
+     "unit": "°C",
+     "raw": "37 °C"
+    }
+   ],
+   "chars": 384,
+   "label": "Match each partial pressure to where it is found."
+  },
+  {
+   "kind": "card",
+   "idx": 63,
+   "type": "tfset",
+   "topic": "resp-gas",
+   "crit": "resp-8",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "500",
+     "unit": "mL",
+     "raw": "500 mL"
+    },
+    {
+     "value": "150",
+     "unit": "mL",
+     "raw": "150 mL"
+    }
+   ],
+   "chars": 424,
+   "label": "Are the following statements about alveolar air true or false?"
+  },
+  {
+   "kind": "card",
+   "idx": 64,
+   "type": "cloze",
+   "topic": "resp-gas",
+   "crit": "resp-8",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 612,
+   "label": "Complete the comparison of atmospheric and alveolar air."
+  },
+  {
+   "kind": "card",
+   "idx": 65,
+   "type": "saq",
+   "topic": "resp-gas",
+   "crit": "resp-8",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "40",
+     "unit": "mmHg",
+     "raw": "40 mmHg"
+    },
+    {
+     "value": "47",
+     "unit": "mmHg",
+     "raw": "47 mmHg"
+    },
+    {
+     "value": "37",
+     "unit": "°C",
+     "raw": "37 °C"
+    },
+    {
+     "value": "350",
+     "unit": "mL",
+     "raw": "350 mL"
+    }
+   ],
+   "chars": 765,
+   "label": "Explain why the composition of alveolar air differs from that of atmospheric air. (4 marks"
+  },
+  {
+   "kind": "card",
+   "idx": 66,
+   "type": "flash",
+   "topic": "resp-gas",
+   "crit": "resp-10",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 408,
+   "label": "Define internal respiration and state how it differs from external respiration."
+  },
+  {
+   "kind": "card",
+   "idx": 67,
+   "type": "flash",
+   "topic": "resp-gas",
+   "crit": "resp-10",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "100",
+     "unit": "mmHg",
+     "raw": "100 mmHg"
+    },
+    {
+     "value": "40",
+     "unit": "mmHg",
+     "raw": "40 mmHg"
+    },
+    {
+     "value": "45",
+     "unit": "mmHg",
+     "raw": "45 mmHg"
+    },
+    {
+     "value": "40",
+     "unit": "mmHg",
+     "raw": "40 mmHg"
+    }
+   ],
+   "chars": 409,
+   "label": "Give the partial pressure gradients that drive internal respiration."
+  },
+  {
+   "kind": "card",
+   "idx": 68,
+   "type": "flash",
+   "topic": "resp-gas",
+   "crit": "resp-10",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "75",
+     "unit": "%",
+     "raw": "75%"
+    }
+   ],
+   "chars": 344,
+   "label": "How saturated is haemoglobin in systemic VENOUS blood at rest, and why does that matter?"
+  },
+  {
+   "kind": "card",
+   "idx": 69,
+   "type": "flash",
+   "topic": "resp-gas",
+   "crit": "resp-10",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 354,
+   "label": "List the factors that affect the rate of internal respiration."
+  },
+  {
+   "kind": "card",
+   "idx": 70,
+   "type": "flash",
+   "topic": "resp-gas",
+   "crit": "resp-10",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 RESP 3 slide 16",
+   "srcInfo": {
+    "raw": "2026 RESP 3 slide 16",
+    "head": "2026 RESP 3",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP 3.pptx"
+    ]
+   },
+   "quantities": [],
+   "chars": 419,
+   "label": "What is the Bohr effect and why is it so useful?"
+  },
+  {
+   "kind": "card",
+   "idx": 71,
+   "type": "flash",
+   "topic": "resp-gas",
+   "crit": "resp-10",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 402,
+   "label": "Why does exercising muscle extract far more oxygen than resting muscle from the same blood"
+  },
+  {
+   "kind": "card",
+   "idx": 72,
+   "type": "mcq",
+   "topic": "resp-gas",
+   "crit": "resp-10",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 296,
+   "label": "During internal respiration, oxygen moves:"
+  },
+  {
+   "kind": "card",
+   "idx": 73,
+   "type": "mcq",
+   "topic": "resp-gas",
+   "crit": "resp-10",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 434,
+   "label": "A patient has severe peripheral oedema. How does this affect internal respiration?"
+  },
+  {
+   "kind": "card",
+   "idx": 74,
+   "type": "mcq",
+   "topic": "resp-gas",
+   "crit": "resp-10",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "50",
+     "unit": "%",
+     "raw": "50%"
+    }
+   ],
+   "chars": 379,
+   "label": "A shift of the oxygen–haemoglobin dissociation curve to the RIGHT means:"
+  },
+  {
+   "kind": "card",
+   "idx": 75,
+   "type": "match",
+   "topic": "resp-gas",
+   "crit": "resp-10",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "100",
+     "unit": "mmHg",
+     "raw": "100 mmHg"
+    },
+    {
+     "value": "40",
+     "unit": "mmHg",
+     "raw": "40 mmHg"
+    },
+    {
+     "value": "45",
+     "unit": "mmHg",
+     "raw": "45 mmHg"
+    },
+    {
+     "value": "75",
+     "unit": "%",
+     "raw": "75%"
+    },
+    {
+     "value": "98",
+     "unit": "%",
+     "raw": "98%"
+    }
+   ],
+   "chars": 409,
+   "label": "Match each value to the correct location."
+  },
+  {
+   "kind": "card",
+   "idx": 76,
+   "type": "tfset",
+   "topic": "resp-gas",
+   "crit": "resp-10",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 452,
+   "label": "Are the following statements about internal respiration true or false?"
+  },
+  {
+   "kind": "card",
+   "idx": 77,
+   "type": "order",
+   "topic": "resp-gas",
+   "crit": "resp-10",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "100",
+     "unit": "mmHg",
+     "raw": "100 mmHg"
+    }
+   ],
+   "chars": 665,
+   "label": "Place the events of oxygen delivery to an exercising muscle cell in order."
+  },
+  {
+   "kind": "card",
+   "idx": 78,
+   "type": "saq",
+   "topic": "resp-gas",
+   "crit": "resp-10",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "100",
+     "unit": "mmHg",
+     "raw": "100 mmHg"
+    },
+    {
+     "value": "40",
+     "unit": "mmHg",
+     "raw": "40 mmHg"
+    },
+    {
+     "value": "45",
+     "unit": "mmHg",
+     "raw": "45 mmHg"
+    },
+    {
+     "value": "40",
+     "unit": "mmHg",
+     "raw": "40 mmHg"
+    }
+   ],
+   "chars": 792,
+   "label": "Explain the process of internal respiration and name three factors that affect its rate. ("
+  },
+  {
+   "kind": "card",
+   "idx": 79,
+   "type": "flash",
+   "topic": "resp-control",
+   "crit": "resp-15",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 RESP4 slide 18",
+   "srcInfo": {
+    "raw": "2026 RESP4 slide 18",
+    "head": "2026 RESP4",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx"
+    ]
+   },
+   "quantities": [],
+   "chars": 465,
+   "label": "How do the hypothalamus and limbic system influence breathing?"
+  },
+  {
+   "kind": "card",
+   "idx": 80,
+   "type": "flash",
+   "topic": "resp-control",
+   "crit": "resp-15",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 RESP4 slide 18",
+   "srcInfo": {
+    "raw": "2026 RESP4 slide 18",
+    "head": "2026 RESP4",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx"
+    ]
+   },
+   "quantities": [],
+   "chars": 421,
+   "label": "By what pathway does VOLUNTARY control of breathing reach the respiratory muscles?"
+  },
+  {
+   "kind": "card",
+   "idx": 81,
+   "type": "flash",
+   "topic": "resp-control",
+   "crit": "resp-15",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 449,
+   "label": "Why can you NOT kill yourself by holding your breath?"
+  },
+  {
+   "kind": "card",
+   "idx": 82,
+   "type": "flash",
+   "topic": "resp-control",
+   "crit": "resp-15",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 379,
+   "label": "Why is hyperventilating before a breath-hold dive dangerous?"
+  },
+  {
+   "kind": "card",
+   "idx": 83,
+   "type": "flash",
+   "topic": "resp-control",
+   "crit": "resp-15",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 435,
+   "label": "Explain what happens to blood pH during a prolonged panic attack."
+  },
+  {
+   "kind": "card",
+   "idx": 84,
+   "type": "flash",
+   "topic": "resp-control",
+   "crit": "resp-15",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 394,
+   "label": "How does speech alter the normal breathing pattern?"
+  },
+  {
+   "kind": "card",
+   "idx": 85,
+   "type": "mcq",
+   "topic": "resp-control",
+   "crit": "resp-15",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 367,
+   "label": "Voluntary breath-holding is ultimately overridden by:"
+  },
+  {
+   "kind": "card",
+   "idx": 86,
+   "type": "mcq",
+   "topic": "resp-control",
+   "crit": "resp-15",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 358,
+   "label": "Voluntary control of breathing reaches the respiratory muscles by:"
+  },
+  {
+   "kind": "card",
+   "idx": 87,
+   "type": "mcq",
+   "topic": "resp-control",
+   "crit": "resp-15",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 267,
+   "label": "A patient hyperventilating during a panic attack is most at risk of:"
+  },
+  {
+   "kind": "card",
+   "idx": 88,
+   "type": "tfset",
+   "topic": "resp-control",
+   "crit": "resp-15",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 486,
+   "label": "Are the following statements about conscious and emotional control of breathing true or fa"
+  },
+  {
+   "kind": "card",
+   "idx": 89,
+   "type": "order",
+   "topic": "resp-control",
+   "crit": "resp-15",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 617,
+   "label": "Place the events of a panic-attack hyperventilation in order."
+  },
+  {
+   "kind": "card",
+   "idx": 90,
+   "type": "match",
+   "topic": "resp-control",
+   "crit": "resp-15",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 442,
+   "label": "Match each influence on breathing to its source."
+  },
+  {
+   "kind": "card",
+   "idx": 91,
+   "type": "saq",
+   "topic": "resp-control",
+   "crit": "resp-15",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 831,
+   "label": "Explain how emotion and conscious thought can alter breathing, and why voluntary control h"
+  },
+  {
+   "kind": "card",
+   "idx": 92,
+   "type": "flash",
+   "topic": "resp-control",
+   "crit": "resp-16",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 RESP4 slide 21 (her own question)",
+   "srcInfo": {
+    "raw": "2026 RESP4 slide 21 (her own question)",
+    "head": "2026 RESP4",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx"
+    ]
+   },
+   "quantities": [],
+   "chars": 376,
+   "label": "What is hyperpnoea, and how does it differ from hyperventilation?"
+  },
+  {
+   "kind": "card",
+   "idx": 93,
+   "type": "flash",
+   "topic": "resp-control",
+   "crit": "resp-16",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 RESP4 slide 21",
+   "srcInfo": {
+    "raw": "2026 RESP4 slide 21",
+    "head": "2026 RESP4",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx"
+    ]
+   },
+   "quantities": [],
+   "chars": 406,
+   "label": "What actually drives the increase in ventilation during exercise?"
+  },
+  {
+   "kind": "card",
+   "idx": 94,
+   "type": "flash",
+   "topic": "resp-control",
+   "crit": "resp-16",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 408,
+   "label": "Describe the pattern of ventilation at the start and end of exercise."
+  },
+  {
+   "kind": "card",
+   "idx": 95,
+   "type": "flash",
+   "topic": "resp-control",
+   "crit": "resp-16",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 379,
+   "label": "How does body temperature affect ventilation?"
+  },
+  {
+   "kind": "card",
+   "idx": 96,
+   "type": "flash",
+   "topic": "resp-control",
+   "crit": "resp-16",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 332,
+   "label": "How does pain affect breathing?"
+  },
+  {
+   "kind": "card",
+   "idx": 97,
+   "type": "flash",
+   "topic": "resp-control",
+   "crit": "resp-16",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 RESP4 slide 20",
+   "srcInfo": {
+    "raw": "2026 RESP4 slide 20",
+    "head": "2026 RESP4",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx"
+    ]
+   },
+   "quantities": [],
+   "chars": 571,
+   "label": "What reflexes protect the airway from irritants, and where does each originate?"
+  },
+  {
+   "kind": "card",
+   "idx": 98,
+   "type": "mcq",
+   "topic": "resp-control",
+   "crit": "resp-16",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 318,
+   "label": "During moderate exercise, arterial PO₂ and PCO₂:"
+  },
+  {
+   "kind": "card",
+   "idx": 99,
+   "type": "mcq",
+   "topic": "resp-control",
+   "crit": "resp-16",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 337,
+   "label": "The abrupt increase in ventilation at the very START of exercise is caused mainly by:"
+  },
+  {
+   "kind": "card",
+   "idx": 100,
+   "type": "mcq",
+   "topic": "resp-control",
+   "crit": "resp-16",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 278,
+   "label": "Irritation of the trachea by inhaled smoke produces which protective reflex?"
+  },
+  {
+   "kind": "card",
+   "idx": 101,
+   "type": "mcq",
+   "topic": "resp-control",
+   "crit": "resp-16",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 396,
+   "label": "A febrile patient has a respiratory rate of 26. The rise in temperature affects breathing "
+  },
+  {
+   "kind": "card",
+   "idx": 102,
+   "type": "tfset",
+   "topic": "resp-control",
+   "crit": "resp-16",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 390,
+   "label": "Are the following statements true or false?"
+  },
+  {
+   "kind": "card",
+   "idx": 103,
+   "type": "match",
+   "topic": "resp-control",
+   "crit": "resp-16",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 436,
+   "label": "Match each stimulus to its effect on breathing."
+  },
+  {
+   "kind": "card",
+   "idx": 104,
+   "type": "saq",
+   "topic": "resp-control",
+   "crit": "resp-16",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 813,
+   "label": "Explain how ventilation increases during exercise, and why arterial blood gases change so "
+  },
+  {
+   "kind": "card",
+   "idx": 105,
+   "type": "flash",
+   "topic": "terms",
+   "crit": "lymph-4",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 248,
+   "label": "What are BUBOES?"
+  },
+  {
+   "kind": "card",
+   "idx": 106,
+   "type": "flash",
+   "topic": "terms",
+   "crit": "lymph-4",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 368,
+   "label": "What is LYMPHOEDEMA and what commonly causes it?"
+  },
+  {
+   "kind": "card",
+   "idx": 107,
+   "type": "flash",
+   "topic": "terms",
+   "crit": "lymph-4",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 356,
+   "label": "What is LYMPHANGITIS and how does it present?"
+  },
+  {
+   "kind": "card",
+   "idx": 108,
+   "type": "flash",
+   "topic": "terms",
+   "crit": "lymph-4",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 318,
+   "label": "What is HODGKIN'S DISEASE?"
+  },
+  {
+   "kind": "card",
+   "idx": 109,
+   "type": "flash",
+   "topic": "terms",
+   "crit": "lymph-4",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 361,
+   "label": "What is a SENTINEL NODE and why is it biopsied?"
+  },
+  {
+   "kind": "card",
+   "idx": 110,
+   "type": "flash",
+   "topic": "terms",
+   "crit": "lymph-4",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 427,
+   "label": "What are the consequences of a SPLENECTOMY?"
+  },
+  {
+   "kind": "card",
+   "idx": 111,
+   "type": "flash",
+   "topic": "terms",
+   "crit": "lymph-4",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 401,
+   "label": "What is a RUPTURED SPLEEN and what makes it dangerous?"
+  },
+  {
+   "kind": "card",
+   "idx": 112,
+   "type": "flash",
+   "topic": "terms",
+   "crit": "lymph-4",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 385,
+   "label": "What is TONSILLITIS, and what are \"swollen glands\"?"
+  },
+  {
+   "kind": "card",
+   "idx": 113,
+   "type": "mcq",
+   "topic": "terms",
+   "crit": "lymph-4",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 295,
+   "label": "A woman develops persistent swelling of her right arm two weeks after axillary lymph node "
+  },
+  {
+   "kind": "card",
+   "idx": 114,
+   "type": "mcq",
+   "topic": "terms",
+   "crit": "lymph-4",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 272,
+   "label": "Red, tender streaks tracking up the forearm from an infected cut indicate:"
+  },
+  {
+   "kind": "card",
+   "idx": 115,
+   "type": "mcq",
+   "topic": "terms",
+   "crit": "lymph-4",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 317,
+   "label": "After a splenectomy a patient is at particular risk of infection by:"
+  },
+  {
+   "kind": "card",
+   "idx": 116,
+   "type": "match",
+   "topic": "terms",
+   "crit": "lymph-4",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 465,
+   "label": "Match each lymphatic term to its meaning."
+  },
+  {
+   "kind": "card",
+   "idx": 117,
+   "type": "tfset",
+   "topic": "terms",
+   "crit": "lymph-4",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 413,
+   "label": "Are the following statements true or false?"
+  },
+  {
+   "kind": "card",
+   "idx": 118,
+   "type": "saq",
+   "topic": "terms",
+   "crit": "lymph-4",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 859,
+   "label": "Define lymphoedema, lymphangitis and sentinel node, and explain the clinical relevance of "
+  },
+  {
+   "kind": "card",
+   "idx": 119,
+   "type": "saq",
+   "topic": "cvs-bp",
+   "crit": "cs-bp",
+   "lean": null,
+   "hasFig": false,
+   "src": "Case Study Workbook 2026 S2 — Case study 1 (blue = test)",
+   "srcInfo": {
+    "raw": "Case Study Workbook 2026 S2 — Case study 1 (blue = test)",
+    "head": "Case Study Workbook 2026 S2",
+    "resolved": true,
+    "candidates": [
+     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.docx",
+     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.pdf"
+    ]
+   },
+   "quantities": [],
+   "chars": 840,
+   "label": "What determines blood pressure? Include both the underlying physiology and the factors tha"
+  },
+  {
+   "kind": "card",
+   "idx": 120,
+   "type": "saq",
+   "topic": "cvs-bp",
+   "crit": "cs-bp",
+   "lean": null,
+   "hasFig": false,
+   "src": "Case Study Workbook 2026 S2 — Case study 1 (blue = test)",
+   "srcInfo": {
+    "raw": "Case Study Workbook 2026 S2 — Case study 1 (blue = test)",
+    "head": "Case Study Workbook 2026 S2",
+    "resolved": true,
+    "candidates": [
+     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.docx",
+     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.pdf"
+    ]
+   },
+   "quantities": [
+    {
+     "value": "90",
+     "unit": "mmHg",
+     "raw": "90 mmHg"
+    }
+   ],
+   "chars": 843,
+   "label": "How is high blood pressure defined, and what are its chronic downstream consequences? (5 m"
+  },
+  {
+   "kind": "card",
+   "idx": 121,
+   "type": "saq",
+   "topic": "cvs-bp",
+   "crit": "cs-bp",
+   "lean": null,
+   "hasFig": false,
+   "src": "Case Study Workbook 2026 S2 — Case study 1 (blue = test)",
+   "srcInfo": {
+    "raw": "Case Study Workbook 2026 S2 — Case study 1 (blue = test)",
+    "head": "Case Study Workbook 2026 S2",
+    "resolved": true,
+    "candidates": [
+     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.docx",
+     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.pdf"
+    ]
+   },
+   "quantities": [],
+   "chars": 621,
+   "label": "What are the ACUTE consequences of low blood pressure? (4 marks)"
+  },
+  {
+   "kind": "card",
+   "idx": 122,
+   "type": "saq",
+   "topic": "cvs-bp",
+   "crit": "cs-bp",
+   "lean": null,
+   "hasFig": false,
+   "src": "MODULE 1 Formative Test (Canvas) — Q16 model answer",
+   "srcInfo": {
+    "raw": "MODULE 1 Formative Test (Canvas) — Q16 model answer",
+    "head": "MODULE 1 Formative Test (Canvas)",
+    "resolved": false,
+    "candidates": []
+   },
+   "quantities": [],
+   "chars": 1315,
+   "label": "Explain the process of the NEURAL regulation of blood pressure in response to a drop in bl"
+  },
+  {
+   "kind": "card",
+   "idx": 123,
+   "type": "saq",
+   "topic": "cvs-bp",
+   "crit": "cs-bp",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 803,
+   "label": "How does the neural response differ when blood pressure is HIGHER than normal — for exampl"
+  },
+  {
+   "kind": "card",
+   "idx": 124,
+   "type": "saq",
+   "topic": "cvs-bp",
+   "crit": "cs-bp",
+   "lean": null,
+   "hasFig": false,
+   "src": "MODULE 1 Formative Test (Canvas) — Q17 model answer",
+   "srcInfo": {
+    "raw": "MODULE 1 Formative Test (Canvas) — Q17 model answer",
+    "head": "MODULE 1 Formative Test (Canvas)",
+    "resolved": false,
+    "candidates": []
+   },
+   "quantities": [],
+   "chars": 1470,
+   "label": "Explain the process of the RENAL regulation of blood pressure in response to a drop in blo"
+  },
+  {
+   "kind": "card",
+   "idx": 125,
+   "type": "saq",
+   "topic": "cvs-bp",
+   "crit": "cs-bp",
+   "lean": null,
+   "hasFig": false,
+   "src": "Case Study Workbook 2026 S2 — Case study 1 (blue = test)",
+   "srcInfo": {
+    "raw": "Case Study Workbook 2026 S2 — Case study 1 (blue = test)",
+    "head": "Case Study Workbook 2026 S2",
+    "resolved": true,
+    "candidates": [
+     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.docx",
+     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.pdf"
+    ]
+   },
+   "quantities": [],
+   "chars": 782,
+   "label": "Explain what is meant by a \"set point\" for blood pressure, and why this matters in long-st"
+  },
+  {
+   "kind": "card",
+   "idx": 126,
+   "type": "saq",
+   "topic": "cvs-bp",
+   "crit": "cs-bp",
+   "lean": null,
+   "hasFig": false,
+   "src": "Case Study Workbook 2026 S2 — Case study 1 (blue = test)",
+   "srcInfo": {
+    "raw": "Case Study Workbook 2026 S2 — Case study 1 (blue = test)",
+    "head": "Case Study Workbook 2026 S2",
+    "resolved": true,
+    "candidates": [
+     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.docx",
+     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.pdf"
+    ]
+   },
+   "quantities": [],
+   "chars": 1069,
+   "label": "Jack takes quinapril (an ACE inhibitor) and metoprolol (a beta blocker). Explain in plain "
+  },
+  {
+   "kind": "card",
+   "idx": 127,
+   "type": "saq",
+   "topic": "cvs-bp",
+   "crit": "cs-bp",
+   "lean": null,
+   "hasFig": false,
+   "src": "Case Study Workbook 2026 S2 — Case study 1 (blue = test)",
+   "srcInfo": {
+    "raw": "Case Study Workbook 2026 S2 — Case study 1 (blue = test)",
+    "head": "Case Study Workbook 2026 S2",
+    "resolved": true,
+    "candidates": [
+     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.docx",
+     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.pdf"
+    ]
+   },
+   "quantities": [],
+   "chars": 648,
+   "label": "Why are medications for high blood pressure started when there are no symptoms of damage? "
+  },
+  {
+   "kind": "card",
+   "idx": 128,
+   "type": "saq",
+   "topic": "cvs-bp",
+   "crit": "cs-bp",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 755,
+   "label": "Explain postural (orthostatic) hypotension and why Jack is at particular risk of it. (4 ma"
+  },
+  {
+   "kind": "card",
+   "idx": 129,
+   "type": "saq",
+   "topic": "cvs-bp",
+   "crit": "cs-bp",
+   "lean": null,
+   "hasFig": false,
+   "src": "Case Study Workbook 2026 S2 — Case study 1 (blue = test)",
+   "srcInfo": {
+    "raw": "Case Study Workbook 2026 S2 — Case study 1 (blue = test)",
+    "head": "Case Study Workbook 2026 S2",
+    "resolved": true,
+    "candidates": [
+     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.docx",
+     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.pdf"
+    ]
+   },
+   "quantities": [],
+   "chars": 941,
+   "label": "Describe atherosclerosis: where the deposit builds up, and what narrowing a vessel causes."
+  },
+  {
+   "kind": "card",
+   "idx": 130,
+   "type": "saq",
+   "topic": "cvs-bp",
+   "crit": "cs-bp",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 1067,
+   "label": "Jill presents with BP 80/55, dizziness, excessive thirst and concentrated, low-volume urin"
+  },
+  {
+   "kind": "card",
+   "idx": 131,
+   "type": "saq",
+   "topic": "immune",
+   "crit": "cs-vacc",
+   "lean": null,
+   "hasFig": false,
+   "src": "Case Study Workbook 2026 S2 — Case study 5 (blue = test)",
+   "srcInfo": {
+    "raw": "Case Study Workbook 2026 S2 — Case study 5 (blue = test)",
+    "head": "Case Study Workbook 2026 S2",
+    "resolved": true,
+    "candidates": [
+     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.docx",
+     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.pdf"
+    ]
+   },
+   "quantities": [],
+   "chars": 533,
+   "label": "Where in the body are B and T lymphocytes made and stored? Be specific. (4 marks)"
+  },
+  {
+   "kind": "card",
+   "idx": 132,
+   "type": "saq",
+   "topic": "immune",
+   "crit": "cs-vacc",
+   "lean": null,
+   "hasFig": false,
+   "src": "Case Study Workbook 2026 S2 — Case study 5 (blue = test)",
+   "srcInfo": {
+    "raw": "Case Study Workbook 2026 S2 — Case study 5 (blue = test)",
+    "head": "Case Study Workbook 2026 S2",
+    "resolved": true,
+    "candidates": [
+     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.docx",
+     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.pdf"
+    ]
+   },
+   "quantities": [],
+   "chars": 836,
+   "label": "Which cells find antigens in the body, and which cells then stimulate a full immune respon"
+  },
+  {
+   "kind": "card",
+   "idx": 133,
+   "type": "saq",
+   "topic": "immune",
+   "crit": "cs-vacc",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 804,
+   "label": "Explain the difference between active and passive immunity, giving an example of each. (4 "
+  },
+  {
+   "kind": "card",
+   "idx": 134,
+   "type": "flash",
+   "topic": "cvs-anat",
+   "crit": "cvs-1",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 417,
+   "label": "State the three broad functions of the cardiovascular system."
+  },
+  {
+   "kind": "card",
+   "idx": 135,
+   "type": "flash",
+   "topic": "cvs-anat",
+   "crit": "cvs-1",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 371,
+   "label": "What is tissue perfusion and why is it the point of the whole system?"
+  },
+  {
+   "kind": "card",
+   "idx": 136,
+   "type": "mcq",
+   "topic": "cvs-anat",
+   "crit": "cvs-1",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 306,
+   "label": "Which of the following is NOT a function of the cardiovascular system?"
+  },
+  {
+   "kind": "card",
+   "idx": 137,
+   "type": "mcq",
+   "topic": "cvs-anat",
+   "crit": "cvs-1",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 361,
+   "label": "How does the cardiovascular system help regulate body temperature?"
+  },
+  {
+   "kind": "card",
+   "idx": 138,
+   "type": "tfset",
+   "topic": "cvs-anat",
+   "crit": "cvs-1",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 363,
+   "label": "Are the following statements about the CVS true or false?"
+  },
+  {
+   "kind": "card",
+   "idx": 139,
+   "type": "match",
+   "topic": "cvs-anat",
+   "crit": "cvs-1",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 398,
+   "label": "Match each substance to what the cardiovascular system does with it."
+  },
+  {
+   "kind": "card",
+   "idx": 140,
+   "type": "flash",
+   "topic": "cvs-vessels",
+   "crit": "cvs-2",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 379,
+   "label": "Name the three layers of a blood vessel wall and what each is made of."
+  },
+  {
+   "kind": "card",
+   "idx": 141,
+   "type": "flash",
+   "topic": "cvs-vessels",
+   "crit": "cvs-2",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 453,
+   "label": "Give five structural differences between an artery and a vein."
+  },
+  {
+   "kind": "card",
+   "idx": 142,
+   "type": "flash",
+   "topic": "cvs-vessels",
+   "crit": "cvs-2",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "65",
+     "unit": "%",
+     "raw": "65%"
+    }
+   ],
+   "chars": 400,
+   "label": "Give three FUNCTIONAL differences between arteries and veins."
+  },
+  {
+   "kind": "card",
+   "idx": 143,
+   "type": "flash",
+   "topic": "cvs-vessels",
+   "crit": "cvs-2",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 443,
+   "label": "Describe the structure of a capillary and why it suits its function."
+  },
+  {
+   "kind": "card",
+   "idx": 144,
+   "type": "flash",
+   "topic": "cvs-vessels",
+   "crit": "cvs-2",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 436,
+   "label": "Name the three types of capillary and where each is found."
+  },
+  {
+   "kind": "card",
+   "idx": 145,
+   "type": "mcq",
+   "topic": "cvs-vessels",
+   "crit": "cvs-2",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 382,
+   "label": "You are shown two vessels in cross-section. Vessel A is round with a thick wall and a visi"
+  },
+  {
+   "kind": "card",
+   "idx": 146,
+   "type": "mcq",
+   "topic": "cvs-vessels",
+   "crit": "cvs-2",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "65",
+     "unit": "%",
+     "raw": "65%"
+    }
+   ],
+   "chars": 261,
+   "label": "Which vessel type contains the greatest proportion of the body's blood volume at rest?"
+  },
+  {
+   "kind": "card",
+   "idx": 147,
+   "type": "match",
+   "topic": "cvs-vessels",
+   "crit": "cvs-2",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 334,
+   "label": "Match each vessel feature to the vessel it belongs to."
+  },
+  {
+   "kind": "card",
+   "idx": 148,
+   "type": "saq",
+   "topic": "cvs-vessels",
+   "crit": "cvs-2",
+   "lean": null,
+   "hasFig": false,
+   "src": "MODULE 1 Formative Test (Canvas) — Q26 model answer",
+   "srcInfo": {
+    "raw": "MODULE 1 Formative Test (Canvas) — Q26 model answer",
+    "head": "MODULE 1 Formative Test (Canvas)",
+    "resolved": false,
+    "candidates": []
+   },
+   "quantities": [],
+   "chars": 823,
+   "label": "You are shown a micrograph of an artery and a vein side by side. Identify 3 things you CAN"
+  },
+  {
+   "kind": "card",
+   "idx": 149,
+   "type": "flash",
+   "topic": "cvs-vessels",
+   "crit": "cvs-3",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 CIRCULATION VESSELS CV1-2 slide 24",
+   "srcInfo": {
+    "raw": "2026 CIRCULATION VESSELS CV1-2 slide 24",
+    "head": "2026 CIRCULATION VESSELS CV1-2",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\2026 CIRCULATION VESSELS CV1-2.pptx"
+    ]
+   },
+   "quantities": [],
+   "chars": 379,
+   "label": "What are the two opposing pressures governing fluid movement at a capillary?"
+  },
+  {
+   "kind": "card",
+   "idx": 150,
+   "type": "flash",
+   "topic": "cvs-vessels",
+   "crit": "cvs-3",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "35",
+     "unit": "mmHg",
+     "raw": "35 mmHg"
+    },
+    {
+     "value": "25",
+     "unit": "mmHg",
+     "raw": "25 mmHg"
+    }
+   ],
+   "chars": 299,
+   "label": "What happens at the ARTERIAL end of a capillary, and why?"
+  },
+  {
+   "kind": "card",
+   "idx": 151,
+   "type": "flash",
+   "topic": "cvs-vessels",
+   "crit": "cvs-3",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "17",
+     "unit": "mmHg",
+     "raw": "17 mmHg"
+    },
+    {
+     "value": "25",
+     "unit": "mmHg",
+     "raw": "25 mmHg"
+    }
+   ],
+   "chars": 325,
+   "label": "What happens at the VENOUS end of a capillary, and why?"
+  },
+  {
+   "kind": "card",
+   "idx": 152,
+   "type": "flash",
+   "topic": "cvs-vessels",
+   "crit": "cvs-3",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 443,
+   "label": "If most filtered fluid is reabsorbed, what happens to the rest?"
+  },
+  {
+   "kind": "card",
+   "idx": 153,
+   "type": "flash",
+   "topic": "cvs-vessels",
+   "crit": "cvs-3",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "10",
+     "unit": "%",
+     "raw": "10%"
+    }
+   ],
+   "chars": 451,
+   "label": "Name three mechanisms that cause OEDEMA in terms of capillary fluid dynamics."
+  },
+  {
+   "kind": "card",
+   "idx": 154,
+   "type": "mcq",
+   "topic": "cvs-vessels",
+   "crit": "cvs-3",
+   "lean": null,
+   "hasFig": false,
+   "src": "BN2 Formative Test PDF Model Answers — Q2",
+   "srcInfo": {
+    "raw": "BN2 Formative Test PDF Model Answers — Q2",
+    "head": "BN2 Formative Test PDF Model Answers",
+    "resolved": false,
+    "candidates": []
+   },
+   "quantities": [],
+   "chars": 424,
+   "label": "Which of the following drives FILTRATION at the arterial end of a capillary, delivering nu"
+  },
+  {
+   "kind": "card",
+   "idx": 155,
+   "type": "mcq",
+   "topic": "cvs-vessels",
+   "crit": "cvs-3",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 363,
+   "label": "A patient with liver failure has a very low serum albumin and widespread oedema. The mecha"
+  },
+  {
+   "kind": "card",
+   "idx": 156,
+   "type": "cloze",
+   "topic": "cvs-vessels",
+   "crit": "cvs-3",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "10",
+     "unit": "%",
+     "raw": "10%"
+    }
+   ],
+   "chars": 638,
+   "label": "Complete the passage on capillary fluid exchange."
+  },
+  {
+   "kind": "card",
+   "idx": 157,
+   "type": "saq",
+   "topic": "cvs-vessels",
+   "crit": "cvs-3",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 835,
+   "label": "Explain why swelling develops in the arm after axillary lymph node removal. (4 marks)"
+  },
+  {
+   "kind": "card",
+   "idx": 158,
+   "type": "flash",
+   "topic": "cvs-vessels",
+   "crit": "cvs-4",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 327,
+   "label": "State the relationship between blood flow, pressure and resistance."
+  },
+  {
+   "kind": "card",
+   "idx": 159,
+   "type": "flash",
+   "topic": "cvs-vessels",
+   "crit": "cvs-4",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 473,
+   "label": "What three factors determine peripheral resistance, and which matters most?"
+  },
+  {
+   "kind": "card",
+   "idx": 160,
+   "type": "flash",
+   "topic": "cvs-vessels",
+   "crit": "cvs-4",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 412,
+   "label": "Where is blood velocity slowest, and why is that essential?"
+  },
+  {
+   "kind": "card",
+   "idx": 161,
+   "type": "mcq",
+   "topic": "cvs-vessels",
+   "crit": "cvs-4",
+   "lean": null,
+   "hasFig": false,
+   "src": "MODULE 1 Formative Test (Canvas) — Q22",
+   "srcInfo": {
+    "raw": "MODULE 1 Formative Test (Canvas) — Q22",
+    "head": "MODULE 1 Formative Test (Canvas)",
+    "resolved": false,
+    "candidates": []
+   },
+   "quantities": [],
+   "chars": 329,
+   "label": "What is the functional relationship between peripheral resistance (PR) and blood pressure "
+  },
+  {
+   "kind": "card",
+   "idx": 162,
+   "type": "mcq",
+   "topic": "cvs-vessels",
+   "crit": "cvs-4",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 286,
+   "label": "Halving the radius of an arteriole changes its resistance by a factor of approximately:"
+  },
+  {
+   "kind": "card",
+   "idx": 163,
+   "type": "tfset",
+   "topic": "cvs-vessels",
+   "crit": "cvs-4",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 477,
+   "label": "Are the following true or false?"
+  },
+  {
+   "kind": "card",
+   "idx": 164,
+   "type": "match",
+   "topic": "cvs-vessels",
+   "crit": "cvs-4",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 447,
+   "label": "Match each change to its effect on blood pressure."
+  },
+  {
+   "kind": "card",
+   "idx": 165,
+   "type": "flash",
+   "topic": "cvs-anat",
+   "crit": "cvs-5",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 490,
+   "label": "Describe the location and orientation of the heart."
+  },
+  {
+   "kind": "card",
+   "idx": 166,
+   "type": "flash",
+   "topic": "cvs-anat",
+   "crit": "cvs-5",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 427,
+   "label": "Name the coverings of the heart from the outside in."
+  },
+  {
+   "kind": "card",
+   "idx": 167,
+   "type": "flash",
+   "topic": "cvs-anat",
+   "crit": "cvs-5",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 421,
+   "label": "Name the three layers of the heart WALL and their composition."
+  },
+  {
+   "kind": "card",
+   "idx": 168,
+   "type": "flash",
+   "topic": "cvs-anat",
+   "crit": "cvs-5",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "8",
+     "unit": "mmHg",
+     "raw": "8 mmHg"
+    },
+    {
+     "value": "80",
+     "unit": "mmHg",
+     "raw": "80 mmHg"
+    }
+   ],
+   "chars": 383,
+   "label": "Why is the wall of the left ventricle so much thicker than the right?"
+  },
+  {
+   "kind": "card",
+   "idx": 169,
+   "type": "flash",
+   "topic": "cvs-anat",
+   "crit": "cvs-5",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 324,
+   "label": "Name the four heart valves and state what each separates."
+  },
+  {
+   "kind": "card",
+   "idx": 170,
+   "type": "flash",
+   "topic": "cvs-anat",
+   "crit": "cvs-5",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 430,
+   "label": "What are the chordae tendineae and papillary muscles for?"
+  },
+  {
+   "kind": "card",
+   "idx": 171,
+   "type": "mcq",
+   "topic": "cvs-anat",
+   "crit": "cvs-5",
+   "lean": null,
+   "hasFig": false,
+   "src": "BN2 Formative Test PDF Model Answers — Q9",
+   "srcInfo": {
+    "raw": "BN2 Formative Test PDF Model Answers — Q9",
+    "head": "BN2 Formative Test PDF Model Answers",
+    "resolved": false,
+    "candidates": []
+   },
+   "quantities": [],
+   "chars": 341,
+   "label": "Which valve is described? \"Found between the right atrium and the right ventricle, it has "
+  },
+  {
+   "kind": "card",
+   "idx": 172,
+   "type": "mcq",
+   "topic": "cvs-anat",
+   "crit": "cvs-5",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 252,
+   "label": "Inflammation of the serous membrane surrounding the heart is called:"
+  },
+  {
+   "kind": "card",
+   "idx": 173,
+   "type": "match",
+   "topic": "cvs-anat",
+   "crit": "cvs-5",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 535,
+   "label": "Match each heart structure to its description."
+  },
+  {
+   "kind": "card",
+   "idx": 174,
+   "type": "saq",
+   "topic": "cvs-anat",
+   "crit": "cvs-5",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 966,
+   "label": "Describe the coverings of the heart and the three layers of the heart wall, and state the "
+  },
+  {
+   "kind": "card",
+   "idx": 175,
+   "type": "flash",
+   "topic": "cvs-anat",
+   "crit": "cvs-6",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 401,
+   "label": "Trace the path of blood through the heart and pulmonary circuit."
+  },
+  {
+   "kind": "card",
+   "idx": 176,
+   "type": "flash",
+   "topic": "cvs-anat",
+   "crit": "cvs-6",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 428,
+   "label": "Which are the only arteries carrying deoxygenated blood, and the only veins carrying oxyge"
+  },
+  {
+   "kind": "card",
+   "idx": 177,
+   "type": "flash",
+   "topic": "cvs-anat",
+   "crit": "cvs-6",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 449,
+   "label": "Describe the coronary circulation."
+  },
+  {
+   "kind": "card",
+   "idx": 178,
+   "type": "flash",
+   "topic": "cvs-anat",
+   "crit": "cvs-6",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 458,
+   "label": "When does the myocardium actually receive its blood supply, and why does that matter?"
+  },
+  {
+   "kind": "card",
+   "idx": 179,
+   "type": "mcq",
+   "topic": "cvs-anat",
+   "crit": "cvs-6",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 329,
+   "label": "Blockage of the anterior interventricular (LAD) artery would most directly damage:"
+  },
+  {
+   "kind": "card",
+   "idx": 180,
+   "type": "order",
+   "topic": "cvs-anat",
+   "crit": "cvs-6",
+   "lean": null,
+   "hasFig": false,
+   "src": "MODULE 1 Formative Test (Canvas) — Q1",
+   "srcInfo": {
+    "raw": "MODULE 1 Formative Test (Canvas) — Q1",
+    "head": "MODULE 1 Formative Test (Canvas)",
+    "resolved": false,
+    "candidates": []
+   },
+   "quantities": [],
+   "chars": 480,
+   "label": "A thrombus forms in the femoral vein and dislodges. Place the route of the resulting embol"
+  },
+  {
+   "kind": "card",
+   "idx": 181,
+   "type": "tfset",
+   "topic": "cvs-anat",
+   "crit": "cvs-6",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 440,
+   "label": "Are the following true or false?"
+  },
+  {
+   "kind": "card",
+   "idx": 182,
+   "type": "flash",
+   "topic": "cvs-ecg",
+   "crit": "cvs-8",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 CVS 3 slides 3 & 6",
+   "srcInfo": {
+    "raw": "2026 CVS 3 slides 3 & 6",
+    "head": "2026 CVS 3",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\2026 CVS 3.pptx"
+    ]
+   },
+   "quantities": [],
+   "chars": 373,
+   "label": "Name the components of the cardiac conduction system in order."
+  },
+  {
+   "kind": "card",
+   "idx": 183,
+   "type": "flash",
+   "topic": "cvs-ecg",
+   "crit": "cvs-8",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 CVS 3 slide 6",
+   "srcInfo": {
+    "raw": "2026 CVS 3 slide 6",
+    "head": "2026 CVS 3",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\2026 CVS 3.pptx"
+    ]
+   },
+   "quantities": [
+    {
+     "value": "100",
+     "unit": "/min",
+     "raw": "100/min"
+    }
+   ],
+   "chars": 741,
+   "label": "Why is the SA node the pacemaker, and what are the intrinsic rates of the backup pacemaker"
+  },
+  {
+   "kind": "card",
+   "idx": 184,
+   "type": "flash",
+   "topic": "cvs-ecg",
+   "crit": "cvs-8",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 355,
+   "label": "Why is there a deliberate DELAY at the AV node?"
+  },
+  {
+   "kind": "card",
+   "idx": 185,
+   "type": "flash",
+   "topic": "cvs-ecg",
+   "crit": "cvs-8",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 362,
+   "label": "Why do the ventricles contract from the APEX upwards?"
+  },
+  {
+   "kind": "card",
+   "idx": 186,
+   "type": "flash",
+   "topic": "cvs-ecg",
+   "crit": "cvs-8",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 401,
+   "label": "What do the P wave, QRS complex and T wave represent?"
+  },
+  {
+   "kind": "card",
+   "idx": 187,
+   "type": "flash",
+   "topic": "cvs-ecg",
+   "crit": "cvs-8",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 Cardiovascular system 2-3 slide 29 (Patton fig. 28-19)",
+   "srcInfo": {
+    "raw": "2026 Cardiovascular system 2-3 slide 29 (Patton fig. 28-19)",
+    "head": "2026 Cardiovascular system 2-3",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\2026 Cardiovascular system 2-3.pptx"
+    ]
+   },
+   "quantities": [],
+   "chars": 416,
+   "label": "Name the phases of the cardiac cycle in order."
+  },
+  {
+   "kind": "card",
+   "idx": 188,
+   "type": "mcq",
+   "topic": "cvs-ecg",
+   "crit": "cvs-8",
+   "lean": null,
+   "hasFig": false,
+   "src": "BN2 Formative Test PDF Model Answers — Q1",
+   "srcInfo": {
+    "raw": "BN2 Formative Test PDF Model Answers — Q1",
+    "head": "BN2 Formative Test PDF Model Answers",
+    "resolved": false,
+    "candidates": []
+   },
+   "quantities": [],
+   "chars": 316,
+   "label": "Which part of the ECG best represents ventricular repolarisation?"
+  },
+  {
+   "kind": "card",
+   "idx": 189,
+   "type": "mcq",
+   "topic": "cvs-ecg",
+   "crit": "cvs-8",
+   "lean": null,
+   "hasFig": false,
+   "src": "BN2 Formative Test PDF Model Answers — Q5",
+   "srcInfo": {
+    "raw": "BN2 Formative Test PDF Model Answers — Q5",
+    "head": "BN2 Formative Test PDF Model Answers",
+    "resolved": false,
+    "candidates": []
+   },
+   "quantities": [],
+   "chars": 371,
+   "label": "Which structure of the respiratory system has a similar pacemaking function to the SA node"
+  },
+  {
+   "kind": "card",
+   "idx": 190,
+   "type": "cloze",
+   "topic": "cvs-ecg",
+   "crit": "cvs-8",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 560,
+   "label": "Name each ECG wave and what it represents."
+  },
+  {
+   "kind": "card",
+   "idx": 191,
+   "type": "order",
+   "topic": "cvs-ecg",
+   "crit": "cvs-8",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 550,
+   "label": "Place the steps of cardiac conduction in order."
+  },
+  {
+   "kind": "card",
+   "idx": 192,
+   "type": "match",
+   "topic": "cvs-ecg",
+   "crit": "cvs-8",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 416,
+   "label": "Match each conduction structure to its feature."
+  },
+  {
+   "kind": "card",
+   "idx": 193,
+   "type": "flash",
+   "topic": "cvs-output",
+   "crit": "cvs-9",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "70",
+     "unit": "bpm",
+     "raw": "70 bpm"
+    },
+    {
+     "value": "70",
+     "unit": "mL",
+     "raw": "70 mL"
+    },
+    {
+     "value": "5",
+     "unit": "L/min",
+     "raw": "5 L/min"
+    }
+   ],
+   "chars": 290,
+   "label": "Define cardiac output and give the normal resting value."
+  },
+  {
+   "kind": "card",
+   "idx": 194,
+   "type": "flash",
+   "topic": "cvs-output",
+   "crit": "cvs-9",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 471,
+   "label": "How does the NERVOUS system control heart rate?"
+  },
+  {
+   "kind": "card",
+   "idx": 195,
+   "type": "flash",
+   "topic": "cvs-output",
+   "crit": "cvs-9",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 361,
+   "label": "Which hormones affect heart rate and contractility?"
+  },
+  {
+   "kind": "card",
+   "idx": 196,
+   "type": "flash",
+   "topic": "cvs-output",
+   "crit": "cvs-9",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 346,
+   "label": "State the Frank–Starling law of the heart."
+  },
+  {
+   "kind": "card",
+   "idx": 197,
+   "type": "flash",
+   "topic": "cvs-output",
+   "crit": "cvs-9",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 453,
+   "label": "Name the three determinants of stroke volume."
+  },
+  {
+   "kind": "card",
+   "idx": 198,
+   "type": "flash",
+   "topic": "cvs-output",
+   "crit": "cvs-9",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 335,
+   "label": "What do \"inotropic\" and \"chronotropic\" mean?"
+  },
+  {
+   "kind": "card",
+   "idx": 199,
+   "type": "mcq",
+   "topic": "cvs-output",
+   "crit": "cvs-9",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 375,
+   "label": "Metoprolol is a beta blocker. It is best described as having:"
+  },
+  {
+   "kind": "card",
+   "idx": 200,
+   "type": "tfset",
+   "topic": "cvs-output",
+   "crit": "cvs-9",
+   "lean": null,
+   "hasFig": false,
+   "src": "MODULE 1 Formative Test (Canvas) — Q6",
+   "srcInfo": {
+    "raw": "MODULE 1 Formative Test (Canvas) — Q6",
+    "head": "MODULE 1 Formative Test (Canvas)",
+    "resolved": false,
+    "candidates": []
+   },
+   "quantities": [],
+   "chars": 538,
+   "label": "Your heart rate is lowest at rest. Are the following true or false with relation to the he"
+  },
+  {
+   "kind": "card",
+   "idx": 201,
+   "type": "cloze",
+   "topic": "cvs-output",
+   "crit": "cvs-9",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 635,
+   "label": "Complete the passage on cardiac output."
+  },
+  {
+   "kind": "card",
+   "idx": 202,
+   "type": "saq",
+   "topic": "cvs-output",
+   "crit": "cvs-9",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "5",
+     "unit": "L/min",
+     "raw": "5 L/min"
+    }
+   ],
+   "chars": 881,
+   "label": "Explain how the nervous system and hormones together control cardiac output. (5 marks)"
+  },
+  {
+   "kind": "card",
+   "idx": 203,
+   "type": "flash",
+   "topic": "cvs-output",
+   "crit": "cvs-10",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 378,
+   "label": "List the general factors that raise heart rate."
+  },
+  {
+   "kind": "card",
+   "idx": 204,
+   "type": "flash",
+   "topic": "cvs-output",
+   "crit": "cvs-10",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "50",
+     "unit": "bpm",
+     "raw": "50 bpm"
+    }
+   ],
+   "chars": 412,
+   "label": "Why does a trained athlete have a low resting heart rate?"
+  },
+  {
+   "kind": "card",
+   "idx": 205,
+   "type": "flash",
+   "topic": "cvs-output",
+   "crit": "cvs-10",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "160",
+     "unit": "bpm",
+     "raw": "160 bpm"
+    },
+    {
+     "value": "100",
+     "unit": "bpm",
+     "raw": "100 bpm"
+    }
+   ],
+   "chars": 319,
+   "label": "How does age affect resting heart rate?"
+  },
+  {
+   "kind": "card",
+   "idx": 206,
+   "type": "flash",
+   "topic": "cvs-output",
+   "crit": "cvs-10",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "10",
+     "unit": "bpm",
+     "raw": "10 bpm"
+    }
+   ],
+   "chars": 344,
+   "label": "How does body temperature affect heart rate?"
+  },
+  {
+   "kind": "card",
+   "idx": 207,
+   "type": "mcq",
+   "topic": "cvs-output",
+   "crit": "cvs-10",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "46",
+     "unit": "bpm",
+     "raw": "46 bpm"
+    }
+   ],
+   "chars": 382,
+   "label": "A marathon runner has a resting pulse of 46 bpm and is asymptomatic. This is best explaine"
+  },
+  {
+   "kind": "card",
+   "idx": 208,
+   "type": "mcq",
+   "topic": "cvs-output",
+   "crit": "cvs-10",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "39.5",
+     "unit": "°C",
+     "raw": "39.5 °C"
+    },
+    {
+     "value": "10",
+     "unit": "bpm",
+     "raw": "10 bpm"
+    }
+   ],
+   "chars": 334,
+   "label": "A patient with a temperature of 39.5 °C has a heart rate of 112. The most likely explanati"
+  },
+  {
+   "kind": "card",
+   "idx": 209,
+   "type": "match",
+   "topic": "cvs-output",
+   "crit": "cvs-10",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 431,
+   "label": "Match each factor to its effect on heart rate."
+  },
+  {
+   "kind": "card",
+   "idx": 210,
+   "type": "flash",
+   "topic": "cvs-output",
+   "crit": "cvs-11",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 506,
+   "label": "Name the mechanisms that drive venous return against gravity."
+  },
+  {
+   "kind": "card",
+   "idx": 211,
+   "type": "flash",
+   "topic": "cvs-output",
+   "crit": "cvs-11",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 436,
+   "label": "Why does immobility predispose to deep vein thrombosis?"
+  },
+  {
+   "kind": "card",
+   "idx": 212,
+   "type": "flash",
+   "topic": "cvs-output",
+   "crit": "cvs-11",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 418,
+   "label": "How does HYPERKALAEMIA affect the heart?"
+  },
+  {
+   "kind": "card",
+   "idx": 213,
+   "type": "flash",
+   "topic": "cvs-output",
+   "crit": "cvs-11",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 407,
+   "label": "How do calcium and sodium levels affect cardiac function?"
+  },
+  {
+   "kind": "card",
+   "idx": 214,
+   "type": "flash",
+   "topic": "cvs-output",
+   "crit": "cvs-11",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "5",
+     "unit": "L/min",
+     "raw": "5 L/min"
+    },
+    {
+     "value": "25",
+     "unit": "L/min",
+     "raw": "25 L/min"
+    }
+   ],
+   "chars": 447,
+   "label": "What happens to cardiac output during exercise, and how?"
+  },
+  {
+   "kind": "card",
+   "idx": 215,
+   "type": "mcq",
+   "topic": "cvs-output",
+   "crit": "cvs-11",
+   "lean": null,
+   "hasFig": false,
+   "src": "MODULE 1 Formative Test (Canvas) — Q25",
+   "srcInfo": {
+    "raw": "MODULE 1 Formative Test (Canvas) — Q25",
+    "head": "MODULE 1 Formative Test (Canvas)",
+    "resolved": false,
+    "candidates": []
+   },
+   "quantities": [],
+   "chars": 441,
+   "label": "Which of the following does NOT directly help blood move through the veins?"
+  },
+  {
+   "kind": "card",
+   "idx": 216,
+   "type": "tfset",
+   "topic": "cvs-output",
+   "crit": "cvs-11",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 454,
+   "label": "Are the following true or false?"
+  },
+  {
+   "kind": "card",
+   "idx": 217,
+   "type": "flash",
+   "topic": "cvs-bp",
+   "crit": "cvs-12",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 298,
+   "label": "Where are the baroreceptors, and what do they actually detect?"
+  },
+  {
+   "kind": "card",
+   "idx": 218,
+   "type": "flash",
+   "topic": "cvs-bp",
+   "crit": "cvs-12",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 370,
+   "label": "Name the three centres in the medulla involved in blood pressure control and what each doe"
+  },
+  {
+   "kind": "card",
+   "idx": 219,
+   "type": "flash",
+   "topic": "cvs-bp",
+   "crit": "cvs-12",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 473,
+   "label": "Contrast the SHORT-term and LONG-term control of blood pressure."
+  },
+  {
+   "kind": "card",
+   "idx": 220,
+   "type": "flash",
+   "topic": "cvs-bp",
+   "crit": "cvs-12",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 471,
+   "label": "Set out the renin–angiotensin–aldosterone system in sequence."
+  },
+  {
+   "kind": "card",
+   "idx": 221,
+   "type": "flash",
+   "topic": "cvs-bp",
+   "crit": "cvs-12",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 437,
+   "label": "What does ADH do, and where does it act?"
+  },
+  {
+   "kind": "card",
+   "idx": 222,
+   "type": "flash",
+   "topic": "cvs-bp",
+   "crit": "cvs-12",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 298,
+   "label": "What does aldosterone do?"
+  },
+  {
+   "kind": "card",
+   "idx": 223,
+   "type": "tfset",
+   "topic": "cvs-bp",
+   "crit": "cvs-12",
+   "lean": null,
+   "hasFig": false,
+   "src": "MODULE 1 Formative Test (Canvas) — Q5",
+   "srcInfo": {
+    "raw": "MODULE 1 Formative Test (Canvas) — Q5",
+    "head": "MODULE 1 Formative Test (Canvas)",
+    "resolved": false,
+    "candidates": []
+   },
+   "quantities": [],
+   "chars": 607,
+   "label": "Are the following statements about angiotensin II action true or false?"
+  },
+  {
+   "kind": "card",
+   "idx": 224,
+   "type": "order",
+   "topic": "cvs-bp",
+   "crit": "cvs-12",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 650,
+   "label": "Place the steps of the renin–angiotensin–aldosterone system in order."
+  },
+  {
+   "kind": "card",
+   "idx": 225,
+   "type": "match",
+   "topic": "cvs-bp",
+   "crit": "cvs-12",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 486,
+   "label": "Match each component of blood pressure regulation to its action."
+  },
+  {
+   "kind": "card",
+   "idx": 226,
+   "type": "flash",
+   "topic": "cvs-bp",
+   "crit": "cvs-13",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 402,
+   "label": "What happens to blood pressure during the fight-or-flight response?"
+  },
+  {
+   "kind": "card",
+   "idx": 227,
+   "type": "flash",
+   "topic": "cvs-bp",
+   "crit": "cvs-13",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 393,
+   "label": "Why does systolic pressure rise more than diastolic during exercise?"
+  },
+  {
+   "kind": "card",
+   "idx": 228,
+   "type": "flash",
+   "topic": "cvs-bp",
+   "crit": "cvs-13",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 401,
+   "label": "How does chronic stress contribute to hypertension?"
+  },
+  {
+   "kind": "card",
+   "idx": 229,
+   "type": "mcq",
+   "topic": "cvs-bp",
+   "crit": "cvs-13",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 297,
+   "label": "During exercise, blood flow is redistributed. Which beds VASODILATE?"
+  },
+  {
+   "kind": "card",
+   "idx": 230,
+   "type": "mcq",
+   "topic": "cvs-bp",
+   "crit": "cvs-13",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 491,
+   "label": "After a fright, a patient's pounding heart gradually settles. Which mechanism returns thei"
+  },
+  {
+   "kind": "card",
+   "idx": 231,
+   "type": "saq",
+   "topic": "cvs-bp",
+   "crit": "cvs-13",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 741,
+   "label": "Explain what happens to blood pressure and blood distribution during vigorous exercise. (4"
+  },
+  {
+   "kind": "card",
+   "idx": 232,
+   "type": "flash",
+   "topic": "cvs-output",
+   "crit": "cvs-14",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 373,
+   "label": "Define circulatory shock."
+  },
+  {
+   "kind": "card",
+   "idx": 233,
+   "type": "flash",
+   "topic": "cvs-output",
+   "crit": "cvs-14",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 436,
+   "label": "Name the four main types of circulatory shock and their causes."
+  },
+  {
+   "kind": "card",
+   "idx": 234,
+   "type": "flash",
+   "topic": "cvs-output",
+   "crit": "cvs-14",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 503,
+   "label": "Describe the three stages of hypovolaemic shock."
+  },
+  {
+   "kind": "card",
+   "idx": 235,
+   "type": "flash",
+   "topic": "cvs-output",
+   "crit": "cvs-14",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "30",
+     "unit": "%",
+     "raw": "30%"
+    }
+   ],
+   "chars": 503,
+   "label": "What are the signs of hypovolaemic shock, and which is the trap?"
+  },
+  {
+   "kind": "card",
+   "idx": 236,
+   "type": "mcq",
+   "topic": "cvs-output",
+   "crit": "cvs-14",
+   "lean": null,
+   "hasFig": false,
+   "src": "BN2 Formative Test PDF Model Answers — Q12",
+   "srcInfo": {
+    "raw": "BN2 Formative Test PDF Model Answers — Q12",
+    "head": "BN2 Formative Test PDF Model Answers",
+    "resolved": false,
+    "candidates": []
+   },
+   "quantities": [],
+   "chars": 224,
+   "label": "Which type of shock could be caused by major blood loss?"
+  },
+  {
+   "kind": "card",
+   "idx": 237,
+   "type": "match",
+   "topic": "cvs-output",
+   "crit": "cvs-14",
+   "lean": null,
+   "hasFig": false,
+   "src": "MODULE 1 Formative Test (Canvas) — Q23",
+   "srcInfo": {
+    "raw": "MODULE 1 Formative Test (Canvas) — Q23",
+    "head": "MODULE 1 Formative Test (Canvas)",
+    "resolved": false,
+    "candidates": []
+   },
+   "quantities": [],
+   "chars": 284,
+   "label": "Choose the correct cause of each of the following types of shock."
+  },
+  {
+   "kind": "card",
+   "idx": 238,
+   "type": "order",
+   "topic": "cvs-output",
+   "crit": "cvs-14",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 692,
+   "label": "Place the events of untreated hypovolaemic shock in order."
+  },
+  {
+   "kind": "card",
+   "idx": 239,
+   "type": "saq",
+   "topic": "cvs-output",
+   "crit": "cvs-14",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 1175,
+   "label": "Define circulatory shock, name the four main types, and describe the signs and events of h"
+  },
+  {
+   "kind": "card",
+   "idx": 240,
+   "type": "flash",
+   "topic": "terms",
+   "crit": "cvs-15",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 340,
+   "label": "Define PULSE and PRESSURE POINTS."
+  },
+  {
+   "kind": "card",
+   "idx": 241,
+   "type": "flash",
+   "topic": "terms",
+   "crit": "cvs-15",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 334,
+   "label": "Define TISSUE PERFUSION and BLOOD FLOW."
+  },
+  {
+   "kind": "card",
+   "idx": 242,
+   "type": "flash",
+   "topic": "terms",
+   "crit": "cvs-15",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 367,
+   "label": "Define VASOCONSTRICTION and VASODILATION."
+  },
+  {
+   "kind": "card",
+   "idx": 243,
+   "type": "flash",
+   "topic": "terms",
+   "crit": "cvs-15",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 470,
+   "label": "Define ISCHAEMIA and distinguish ANGINA PECTORIS from MYOCARDIAL INFARCTION."
+  },
+  {
+   "kind": "card",
+   "idx": 244,
+   "type": "flash",
+   "topic": "terms",
+   "crit": "cvs-15",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 475,
+   "label": "Define ATRIAL and VENTRICULAR SYSTOLE and DIASTOLE."
+  },
+  {
+   "kind": "card",
+   "idx": 245,
+   "type": "flash",
+   "topic": "terms",
+   "crit": "cvs-15",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 461,
+   "label": "Distinguish PERICARDITIS, MYOCARDITIS and ENDOCARDITIS."
+  },
+  {
+   "kind": "card",
+   "idx": 246,
+   "type": "flash",
+   "topic": "terms",
+   "crit": "cvs-15",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "60",
+     "unit": "bpm",
+     "raw": "60 bpm"
+    },
+    {
+     "value": "100",
+     "unit": "bpm",
+     "raw": "100 bpm"
+    }
+   ],
+   "chars": 349,
+   "label": "Define BRADYCARDIA, TACHYCARDIA and ASYSTOLE."
+  },
+  {
+   "kind": "card",
+   "idx": 247,
+   "type": "flash",
+   "topic": "terms",
+   "crit": "cvs-15",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 412,
+   "label": "Define VENTRICULAR FIBRILLATION and why it is fatal without treatment."
+  },
+  {
+   "kind": "card",
+   "idx": 248,
+   "type": "flash",
+   "topic": "terms",
+   "crit": "cvs-15",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 384,
+   "label": "Define CONGESTIVE HEART FAILURE."
+  },
+  {
+   "kind": "card",
+   "idx": 249,
+   "type": "flash",
+   "topic": "terms",
+   "crit": "cvs-15",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "90",
+     "unit": "mmHg",
+     "raw": "90 mmHg"
+    },
+    {
+     "value": "90",
+     "unit": "mmHg",
+     "raw": "90 mmHg"
+    }
+   ],
+   "chars": 365,
+   "label": "Define HYPERTENSION and HYPOTENSION."
+  },
+  {
+   "kind": "card",
+   "idx": 250,
+   "type": "flash",
+   "topic": "terms",
+   "crit": "cvs-15",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 391,
+   "label": "Define POSITIVE and NEGATIVE INOTROPIC and CHRONOTROPIC action."
+  },
+  {
+   "kind": "card",
+   "idx": 251,
+   "type": "match",
+   "topic": "terms",
+   "crit": "cvs-15",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "100",
+     "unit": "bpm",
+     "raw": "100 bpm"
+    }
+   ],
+   "chars": 445,
+   "label": "Match each cardiovascular term to its meaning."
+  },
+  {
+   "kind": "card",
+   "idx": 252,
+   "type": "mcq",
+   "topic": "terms",
+   "crit": "cvs-15",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 279,
+   "label": "A patient in cardiac arrest has a flat line on the monitor with no electrical activity. Th"
+  },
+  {
+   "kind": "card",
+   "idx": 253,
+   "type": "flash",
+   "topic": "resp-gas",
+   "crit": "resp-1",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 507,
+   "label": "Name the four processes of respiration."
+  },
+  {
+   "kind": "card",
+   "idx": 254,
+   "type": "flash",
+   "topic": "resp-gas",
+   "crit": "resp-1",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 430,
+   "label": "State the functions of the respiratory system beyond gas exchange."
+  },
+  {
+   "kind": "card",
+   "idx": 255,
+   "type": "mcq",
+   "topic": "resp-gas",
+   "crit": "resp-1",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 296,
+   "label": "Gas exchange between the alveoli and the pulmonary capillaries is called:"
+  },
+  {
+   "kind": "card",
+   "idx": 256,
+   "type": "mcq",
+   "topic": "resp-gas",
+   "crit": "resp-1",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 384,
+   "label": "How does the respiratory system contribute to acid–base balance?"
+  },
+  {
+   "kind": "card",
+   "idx": 257,
+   "type": "order",
+   "topic": "resp-gas",
+   "crit": "resp-1",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 522,
+   "label": "Place the four processes of respiration in the order oxygen encounters them."
+  },
+  {
+   "kind": "card",
+   "idx": 258,
+   "type": "match",
+   "topic": "resp-gas",
+   "crit": "resp-1",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 402,
+   "label": "Match each respiratory function to its structure or mechanism."
+  },
+  {
+   "kind": "card",
+   "idx": 259,
+   "type": "flash",
+   "topic": "resp-anat",
+   "crit": "resp-3",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "150",
+     "unit": "mL",
+     "raw": "150 mL"
+    }
+   ],
+   "chars": 289,
+   "label": "Where does the CONDUCTING zone begin and end, and what does it do?"
+  },
+  {
+   "kind": "card",
+   "idx": 260,
+   "type": "flash",
+   "topic": "resp-anat",
+   "crit": "resp-3",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 261,
+   "label": "What makes up the RESPIRATORY zone?"
+  },
+  {
+   "kind": "card",
+   "idx": 261,
+   "type": "flash",
+   "topic": "resp-anat",
+   "crit": "resp-3",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 322,
+   "label": "Where is the boundary between the UPPER and LOWER respiratory tract?"
+  },
+  {
+   "kind": "card",
+   "idx": 262,
+   "type": "flash",
+   "topic": "resp-anat",
+   "crit": "resp-3",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 448,
+   "label": "How does the epithelium change as you move down the airway, and why?"
+  },
+  {
+   "kind": "card",
+   "idx": 263,
+   "type": "mcq",
+   "topic": "resp-anat",
+   "crit": "resp-3",
+   "lean": null,
+   "hasFig": false,
+   "src": "BN2 Formative Test PDF Model Answers — Q8",
+   "srcInfo": {
+    "raw": "BN2 Formative Test PDF Model Answers — Q8",
+    "head": "BN2 Formative Test PDF Model Answers",
+    "resolved": false,
+    "candidates": []
+   },
+   "quantities": [],
+   "chars": 252,
+   "label": "Which of the following is NOT part of the conducting zone of the respiratory system?"
+  },
+  {
+   "kind": "card",
+   "idx": 264,
+   "type": "mcq",
+   "topic": "resp-anat",
+   "crit": "resp-3",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 280,
+   "label": "Cartilage disappears from the airway wall at the level of the:"
+  },
+  {
+   "kind": "card",
+   "idx": 265,
+   "type": "match",
+   "topic": "resp-anat",
+   "crit": "resp-3",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 476,
+   "label": "Match each airway level to its wall structure."
+  },
+  {
+   "kind": "card",
+   "idx": 266,
+   "type": "tfset",
+   "topic": "resp-anat",
+   "crit": "resp-3",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 353,
+   "label": "Are the following true or false?"
+  },
+  {
+   "kind": "card",
+   "idx": 267,
+   "type": "flash",
+   "topic": "resp-anat",
+   "crit": "resp-4",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 375,
+   "label": "How does the muco-ciliary escalator work?"
+  },
+  {
+   "kind": "card",
+   "idx": 268,
+   "type": "flash",
+   "topic": "resp-anat",
+   "crit": "resp-4",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 384,
+   "label": "How does smoking damage the muco-ciliary escalator, and what follows?"
+  },
+  {
+   "kind": "card",
+   "idx": 269,
+   "type": "flash",
+   "topic": "resp-anat",
+   "crit": "resp-4",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 304,
+   "label": "What happens to dust and debris that DOES reach the alveoli?"
+  },
+  {
+   "kind": "card",
+   "idx": 270,
+   "type": "flash",
+   "topic": "resp-anat",
+   "crit": "resp-4",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 465,
+   "label": "How is sound produced and then shaped into speech?"
+  },
+  {
+   "kind": "card",
+   "idx": 271,
+   "type": "flash",
+   "topic": "resp-anat",
+   "crit": "resp-4",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 347,
+   "label": "Which structures stop food entering the airway?"
+  },
+  {
+   "kind": "card",
+   "idx": 272,
+   "type": "mcq",
+   "topic": "resp-anat",
+   "crit": "resp-4",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 322,
+   "label": "Which cell type produces the mucus of the muco-ciliary escalator?"
+  },
+  {
+   "kind": "card",
+   "idx": 273,
+   "type": "saq",
+   "topic": "resp-anat",
+   "crit": "resp-4",
+   "lean": null,
+   "hasFig": false,
+   "src": "MODULE 1 Formative Test (Canvas) — Q14 model answer",
+   "srcInfo": {
+    "raw": "MODULE 1 Formative Test (Canvas) — Q14 model answer",
+    "head": "MODULE 1 Formative Test (Canvas)",
+    "resolved": false,
+    "candidates": []
+   },
+   "quantities": [],
+   "chars": 796,
+   "label": "Explain why most particles in the inspired air, like dust and irritants, do not actually m"
+  },
+  {
+   "kind": "card",
+   "idx": 274,
+   "type": "order",
+   "topic": "resp-anat",
+   "crit": "resp-4",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 571,
+   "label": "Place the defences an inhaled dust particle meets in the order it encounters them."
+  },
+  {
+   "kind": "card",
+   "idx": 275,
+   "type": "flash",
+   "topic": "resp-gas",
+   "crit": "resp-5",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "95",
+     "unit": "%",
+     "raw": "95%"
+    }
+   ],
+   "chars": 364,
+   "label": "Name the three cell types found in an alveolus and their functions."
+  },
+  {
+   "kind": "card",
+   "idx": 276,
+   "type": "flash",
+   "topic": "resp-gas",
+   "crit": "resp-5",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 RESP2 slides 28, 30, 31, 32",
+   "srcInfo": {
+    "raw": "2026 RESP2 slides 28, 30, 31, 32",
+    "head": "2026 RESP2",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP2.pptx"
+    ]
+   },
+   "quantities": [
+    {
+     "value": "1",
+     "unit": "µm",
+     "raw": "1 µm"
+    }
+   ],
+   "chars": 460,
+   "label": "What are the layers of the respiratory membrane, and how thick is it?"
+  },
+  {
+   "kind": "card",
+   "idx": 277,
+   "type": "flash",
+   "topic": "resp-gas",
+   "crit": "resp-5",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 419,
+   "label": "What does surfactant do, and what happens without it?"
+  },
+  {
+   "kind": "card",
+   "idx": 278,
+   "type": "flash",
+   "topic": "resp-gas",
+   "crit": "resp-5",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "140",
+     "unit": "m²",
+     "raw": "140 m²"
+    }
+   ],
+   "chars": 527,
+   "label": "Why does the huge number of alveoli matter?"
+  },
+  {
+   "kind": "card",
+   "idx": 279,
+   "type": "match",
+   "topic": "resp-gas",
+   "crit": "resp-5",
+   "lean": null,
+   "hasFig": false,
+   "src": "MODULE 1 Formative Test (Canvas) — Q13",
+   "srcInfo": {
+    "raw": "MODULE 1 Formative Test (Canvas) — Q13",
+    "head": "MODULE 1 Formative Test (Canvas)",
+    "resolved": false,
+    "candidates": []
+   },
+   "quantities": [],
+   "chars": 431,
+   "label": "Match the terms found in the alveoli with their correct function."
+  },
+  {
+   "kind": "card",
+   "idx": 280,
+   "type": "mcq",
+   "topic": "resp-gas",
+   "crit": "resp-5",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 358,
+   "label": "A premature infant at 28 weeks develops severe respiratory distress. The most likely cause"
+  },
+  {
+   "kind": "card",
+   "idx": 281,
+   "type": "tfset",
+   "topic": "resp-gas",
+   "crit": "resp-5",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "1",
+     "unit": "µm",
+     "raw": "1 µm"
+    }
+   ],
+   "chars": 467,
+   "label": "Are the following true or false?"
+  },
+  {
+   "kind": "card",
+   "idx": 282,
+   "type": "flash",
+   "topic": "resp-mech",
+   "crit": "resp-6",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "500",
+     "unit": "mL",
+     "raw": "500 mL"
+    },
+    {
+     "value": "3100",
+     "unit": "mL",
+     "raw": "3100 mL"
+    },
+    {
+     "value": "1200",
+     "unit": "mL",
+     "raw": "1200 mL"
+    },
+    {
+     "value": "1200",
+     "unit": "mL",
+     "raw": "1200 mL"
+    }
+   ],
+   "chars": 447,
+   "label": "Define the four lung VOLUMES and give typical adult male values."
+  },
+  {
+   "kind": "card",
+   "idx": 283,
+   "type": "flash",
+   "topic": "resp-mech",
+   "crit": "resp-6",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "3600",
+     "unit": "mL",
+     "raw": "3600 mL"
+    },
+    {
+     "value": "2400",
+     "unit": "mL",
+     "raw": "2400 mL"
+    },
+    {
+     "value": "4800",
+     "unit": "mL",
+     "raw": "4800 mL"
+    },
+    {
+     "value": "6000",
+     "unit": "mL",
+     "raw": "6000 mL"
+    }
+   ],
+   "chars": 411,
+   "label": "Define the four lung CAPACITIES and how each is calculated."
+  },
+  {
+   "kind": "card",
+   "idx": 284,
+   "type": "flash",
+   "topic": "resp-mech",
+   "crit": "resp-6",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 362,
+   "label": "Why can residual volume never be measured with a spirometer?"
+  },
+  {
+   "kind": "card",
+   "idx": 285,
+   "type": "flash",
+   "topic": "resp-mech",
+   "crit": "resp-6",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 496,
+   "label": "What is the clinical significance of lung volumes in obstructive vs restrictive disease?"
+  },
+  {
+   "kind": "card",
+   "idx": 286,
+   "type": "flash",
+   "topic": "resp-mech",
+   "crit": "resp-6",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "6",
+     "unit": "L/min",
+     "raw": "6 L/min"
+    },
+    {
+     "value": "150",
+     "unit": "mL",
+     "raw": "150 mL"
+    },
+    {
+     "value": "4.2",
+     "unit": "L/min",
+     "raw": "4.2 L/min"
+    }
+   ],
+   "chars": 436,
+   "label": "What is minute ventilation, and why is alveolar ventilation more useful?"
+  },
+  {
+   "kind": "card",
+   "idx": 287,
+   "type": "mcq",
+   "topic": "resp-mech",
+   "crit": "resp-6",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 315,
+   "label": "Vital capacity is best defined as:"
+  },
+  {
+   "kind": "card",
+   "idx": 288,
+   "type": "saq",
+   "topic": "resp-mech",
+   "crit": "resp-6",
+   "lean": null,
+   "hasFig": false,
+   "src": "MODULE 1 Formative Test (Canvas) — Q18 model answer",
+   "srcInfo": {
+    "raw": "MODULE 1 Formative Test (Canvas) — Q18 model answer",
+    "head": "MODULE 1 Formative Test (Canvas)",
+    "resolved": false,
+    "candidates": []
+   },
+   "quantities": [],
+   "chars": 813,
+   "label": "Explain what Tidal Volume, Vital Capacity and Total Lung Capacity are, in your own words."
+  },
+  {
+   "kind": "card",
+   "idx": 289,
+   "type": "cloze",
+   "topic": "resp-mech",
+   "crit": "resp-6",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "500",
+     "unit": "mL",
+     "raw": "500 mL"
+    }
+   ],
+   "chars": 765,
+   "label": "Complete the passage on lung volumes and capacities."
+  },
+  {
+   "kind": "card",
+   "idx": 290,
+   "type": "flash",
+   "topic": "resp-mech",
+   "crit": "resp-7",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 371,
+   "label": "State Boyle's law and apply it to breathing."
+  },
+  {
+   "kind": "card",
+   "idx": 291,
+   "type": "flash",
+   "topic": "resp-mech",
+   "crit": "resp-7",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 RESP4 slide 24 (her comparison table)",
+   "srcInfo": {
+    "raw": "2026 RESP4 slide 24 (her comparison table)",
+    "head": "2026 RESP4",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx"
+    ]
+   },
+   "quantities": [
+    {
+     "value": "75",
+     "unit": "%",
+     "raw": "75%"
+    }
+   ],
+   "chars": 422,
+   "label": "Which muscles produce quiet inspiration and quiet expiration?"
+  },
+  {
+   "kind": "card",
+   "idx": 292,
+   "type": "flash",
+   "topic": "resp-mech",
+   "crit": "resp-7",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 RESP4 slide 24 (her comparison table)",
+   "srcInfo": {
+    "raw": "2026 RESP4 slide 24 (her comparison table)",
+    "head": "2026 RESP4",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx"
+    ]
+   },
+   "quantities": [],
+   "chars": 394,
+   "label": "Which accessory muscles are used in FORCED inspiration and FORCED expiration?"
+  },
+  {
+   "kind": "card",
+   "idx": 293,
+   "type": "flash",
+   "topic": "resp-mech",
+   "crit": "resp-7",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "4",
+     "unit": "mmHg",
+     "raw": "4 mmHg"
+    }
+   ],
+   "chars": 397,
+   "label": "Why must intrapleural pressure stay NEGATIVE?"
+  },
+  {
+   "kind": "card",
+   "idx": 294,
+   "type": "flash",
+   "topic": "resp-mech",
+   "crit": "resp-7",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 385,
+   "label": "Name the three factors that determine how easily air moves in and out."
+  },
+  {
+   "kind": "card",
+   "idx": 295,
+   "type": "mcq",
+   "topic": "resp-mech",
+   "crit": "resp-7",
+   "lean": null,
+   "hasFig": false,
+   "src": "MODULE 1 Formative Test (Canvas) — Q12",
+   "srcInfo": {
+    "raw": "MODULE 1 Formative Test (Canvas) — Q12",
+    "head": "MODULE 1 Formative Test (Canvas)",
+    "resolved": false,
+    "candidates": []
+   },
+   "quantities": [],
+   "chars": 418,
+   "label": "When you blow air into a balloon, which accessory muscles of breathing contract?"
+  },
+  {
+   "kind": "card",
+   "idx": 296,
+   "type": "mcq",
+   "topic": "resp-mech",
+   "crit": "resp-7",
+   "lean": null,
+   "hasFig": false,
+   "src": "MODULE 1 Formative Test (Canvas) — Q20",
+   "srcInfo": {
+    "raw": "MODULE 1 Formative Test (Canvas) — Q20",
+    "head": "MODULE 1 Formative Test (Canvas)",
+    "resolved": false,
+    "candidates": []
+   },
+   "quantities": [],
+   "chars": 327,
+   "label": "Which of the following will INCREASE airway resistance?"
+  },
+  {
+   "kind": "card",
+   "idx": 297,
+   "type": "mcq",
+   "topic": "resp-mech",
+   "crit": "resp-7",
+   "lean": null,
+   "hasFig": false,
+   "src": "BN2 Formative Test PDF Model Answers — Q3",
+   "srcInfo": {
+    "raw": "BN2 Formative Test PDF Model Answers — Q3",
+    "head": "BN2 Formative Test PDF Model Answers",
+    "resolved": false,
+    "candidates": []
+   },
+   "quantities": [],
+   "chars": 295,
+   "label": "Which factor does NOT impact upon pulmonary ventilation?"
+  },
+  {
+   "kind": "card",
+   "idx": 298,
+   "type": "order",
+   "topic": "resp-mech",
+   "crit": "resp-7",
+   "lean": null,
+   "hasFig": false,
+   "src": "MODULE 1 Formative Test (Canvas) — Q2",
+   "srcInfo": {
+    "raw": "MODULE 1 Formative Test (Canvas) — Q2",
+    "head": "MODULE 1 Formative Test (Canvas)",
+    "resolved": false,
+    "candidates": []
+   },
+   "quantities": [],
+   "chars": 537,
+   "label": "The inspiratory centre in the brain sends signals to the inspiratory muscles. Place the st"
+  },
+  {
+   "kind": "card",
+   "idx": 299,
+   "type": "saq",
+   "topic": "resp-mech",
+   "crit": "resp-7",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 757,
+   "label": "Outline the process of FORCED exhalation, including brain control, muscle action, volume a"
+  },
+  {
+   "kind": "card",
+   "idx": 300,
+   "type": "match",
+   "topic": "resp-mech",
+   "crit": "resp-7",
+   "lean": null,
+   "hasFig": false,
+   "src": "MODULE 1 Formative Test (Canvas) — Q27",
+   "srcInfo": {
+    "raw": "MODULE 1 Formative Test (Canvas) — Q27",
+    "head": "MODULE 1 Formative Test (Canvas)",
+    "resolved": false,
+    "candidates": []
+   },
+   "quantities": [],
+   "chars": 319,
+   "label": "Match the muscles to their action."
+  },
+  {
+   "kind": "card",
+   "idx": 301,
+   "type": "flash",
+   "topic": "resp-gas",
+   "crit": "resp-9",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "104",
+     "unit": "mmHg",
+     "raw": "104 mmHg"
+    },
+    {
+     "value": "40",
+     "unit": "mmHg",
+     "raw": "40 mmHg"
+    },
+    {
+     "value": "45",
+     "unit": "mmHg",
+     "raw": "45 mmHg"
+    },
+    {
+     "value": "40",
+     "unit": "mmHg",
+     "raw": "40 mmHg"
+    }
+   ],
+   "chars": 385,
+   "label": "Give the partial pressure gradients that drive external respiration."
+  },
+  {
+   "kind": "card",
+   "idx": 302,
+   "type": "flash",
+   "topic": "resp-gas",
+   "crit": "resp-9",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 355,
+   "label": "List the factors affecting the rate of external respiration."
+  },
+  {
+   "kind": "card",
+   "idx": 303,
+   "type": "flash",
+   "topic": "resp-gas",
+   "crit": "resp-9",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "5",
+     "unit": "mmHg",
+     "raw": "5 mmHg"
+    },
+    {
+     "value": "64",
+     "unit": "mmHg",
+     "raw": "64 mmHg"
+    }
+   ],
+   "chars": 437,
+   "label": "Why does CO₂ cross the respiratory membrane so easily despite a tiny gradient?"
+  },
+  {
+   "kind": "card",
+   "idx": 304,
+   "type": "flash",
+   "topic": "resp-gas",
+   "crit": "resp-9",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 492,
+   "label": "What is ventilation–perfusion matching, and what happens when it fails?"
+  },
+  {
+   "kind": "card",
+   "idx": 305,
+   "type": "mcq",
+   "topic": "resp-gas",
+   "crit": "resp-9",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "1",
+     "unit": "µm",
+     "raw": "1 µm"
+    }
+   ],
+   "chars": 382,
+   "label": "A patient in acute pulmonary oedema has fluid in the alveoli. Gas exchange is impaired mai"
+  },
+  {
+   "kind": "card",
+   "idx": 306,
+   "type": "mcq",
+   "topic": "resp-gas",
+   "crit": "resp-9",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 371,
+   "label": "In emphysema, alveolar walls are destroyed. This impairs external respiration by reducing:"
+  },
+  {
+   "kind": "card",
+   "idx": 307,
+   "type": "tfset",
+   "topic": "resp-gas",
+   "crit": "resp-9",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "5",
+     "unit": "mmHg",
+     "raw": "5 mmHg"
+    }
+   ],
+   "chars": 452,
+   "label": "Are the following true or false?"
+  },
+  {
+   "kind": "card",
+   "idx": 308,
+   "type": "flash",
+   "topic": "resp-gas",
+   "crit": "resp-11",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 RESP 3 slides 12–14",
+   "srcInfo": {
+    "raw": "2026 RESP 3 slides 12–14",
+    "head": "2026 RESP 3",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP 3.pptx"
+    ]
+   },
+   "quantities": [
+    {
+     "value": "98.5",
+     "unit": "%",
+     "raw": "98.5%"
+    },
+    {
+     "value": "1.5",
+     "unit": "%",
+     "raw": "1.5%"
+    }
+   ],
+   "chars": 323,
+   "label": "How is oxygen carried in the blood?"
+  },
+  {
+   "kind": "card",
+   "idx": 309,
+   "type": "flash",
+   "topic": "resp-gas",
+   "crit": "resp-11",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "100",
+     "unit": "%",
+     "raw": "100%"
+    }
+   ],
+   "chars": 484,
+   "label": "Why is the oxygen–haemoglobin dissociation curve S-shaped (sigmoid)?"
+  },
+  {
+   "kind": "card",
+   "idx": 310,
+   "type": "flash",
+   "topic": "resp-gas",
+   "crit": "resp-11",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 341,
+   "label": "What shifts the oxygen–haemoglobin dissociation curve to the RIGHT?"
+  },
+  {
+   "kind": "card",
+   "idx": 311,
+   "type": "flash",
+   "topic": "resp-gas",
+   "crit": "resp-11",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 509,
+   "label": "What shifts the curve to the LEFT, and when is that dangerous?"
+  },
+  {
+   "kind": "card",
+   "idx": 312,
+   "type": "flash",
+   "topic": "resp-gas",
+   "crit": "resp-11",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "100",
+     "unit": "%",
+     "raw": "100%"
+    },
+    {
+     "value": "100",
+     "unit": "%",
+     "raw": "100%"
+    }
+   ],
+   "chars": 472,
+   "label": "What does a pulse oximeter actually measure, and what are its limits?"
+  },
+  {
+   "kind": "card",
+   "idx": 313,
+   "type": "mcq",
+   "topic": "resp-gas",
+   "crit": "resp-11",
+   "lean": null,
+   "hasFig": false,
+   "src": "BN2 Formative Test PDF Model Answers — Q11",
+   "srcInfo": {
+    "raw": "BN2 Formative Test PDF Model Answers — Q11",
+    "head": "BN2 Formative Test PDF Model Answers",
+    "resolved": false,
+    "candidates": []
+   },
+   "quantities": [
+    {
+     "value": "100",
+     "unit": "%",
+     "raw": "100%"
+    },
+    {
+     "value": "98",
+     "unit": "%",
+     "raw": "98%"
+    },
+    {
+     "value": "75",
+     "unit": "%",
+     "raw": "75%"
+    },
+    {
+     "value": "25",
+     "unit": "%",
+     "raw": "25%"
+    }
+   ],
+   "chars": 310,
+   "label": "In the blood flowing through systemic veins of a person at rest, haemoglobin is approximat"
+  },
+  {
+   "kind": "card",
+   "idx": 314,
+   "type": "mcq",
+   "topic": "resp-gas",
+   "crit": "resp-11",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "99",
+     "unit": "%",
+     "raw": "99%"
+    },
+    {
+     "value": "99",
+     "unit": "%",
+     "raw": "99%"
+    }
+   ],
+   "chars": 393,
+   "label": "A patient with severe anaemia has an SpO₂ of 99% but is breathless and tired. Why?"
+  },
+  {
+   "kind": "card",
+   "idx": 315,
+   "type": "tfset",
+   "topic": "resp-gas",
+   "crit": "resp-11",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "98",
+     "unit": "%",
+     "raw": "98%"
+    },
+    {
+     "value": "98.5",
+     "unit": "%",
+     "raw": "98.5%"
+    }
+   ],
+   "chars": 499,
+   "label": "Are the following true or false?"
+  },
+  {
+   "kind": "card",
+   "idx": 316,
+   "type": "flash",
+   "topic": "resp-gas",
+   "crit": "resp-12",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 RESP 3 slides 22–23",
+   "srcInfo": {
+    "raw": "2026 RESP 3 slides 22–23",
+    "head": "2026 RESP 3",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP 3.pptx"
+    ]
+   },
+   "quantities": [
+    {
+     "value": "70",
+     "unit": "%",
+     "raw": "70%"
+    },
+    {
+     "value": "30",
+     "unit": "%",
+     "raw": "30%"
+    },
+    {
+     "value": "10",
+     "unit": "%",
+     "raw": "10%"
+    }
+   ],
+   "chars": 441,
+   "label": "In what three forms is carbon dioxide carried in the blood?"
+  },
+  {
+   "kind": "card",
+   "idx": 317,
+   "type": "flash",
+   "topic": "resp-gas",
+   "crit": "resp-12",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 298,
+   "label": "Write out the bicarbonate buffer equation and say where it happens."
+  },
+  {
+   "kind": "card",
+   "idx": 318,
+   "type": "flash",
+   "topic": "resp-gas",
+   "crit": "resp-12",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 329,
+   "label": "What is the chloride shift?"
+  },
+  {
+   "kind": "card",
+   "idx": 319,
+   "type": "flash",
+   "topic": "resp-gas",
+   "crit": "resp-12",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 359,
+   "label": "How does CO₂ transport link to blood pH?"
+  },
+  {
+   "kind": "card",
+   "idx": 320,
+   "type": "cloze",
+   "topic": "resp-gas",
+   "crit": "resp-12",
+   "lean": null,
+   "hasFig": false,
+   "src": "BN2 Formative Test PDF Model Answers — Q16 (adapted)",
+   "srcInfo": {
+    "raw": "BN2 Formative Test PDF Model Answers — Q16 (adapted)",
+    "head": "BN2 Formative Test PDF Model Answers",
+    "resolved": false,
+    "candidates": []
+   },
+   "quantities": [],
+   "chars": 639,
+   "label": "Complete the passage on carbon dioxide transport."
+  },
+  {
+   "kind": "card",
+   "idx": 321,
+   "type": "mcq",
+   "topic": "resp-gas",
+   "crit": "resp-12",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 302,
+   "label": "Carbaminohaemoglobin is formed when CO₂ binds to:"
+  },
+  {
+   "kind": "card",
+   "idx": 322,
+   "type": "saq",
+   "topic": "resp-gas",
+   "crit": "resp-12",
+   "lean": null,
+   "hasFig": false,
+   "src": "MODULE 1 Formative Test (Canvas) — Q30 model answer",
+   "srcInfo": {
+    "raw": "MODULE 1 Formative Test (Canvas) — Q30 model answer",
+    "head": "MODULE 1 Formative Test (Canvas)",
+    "resolved": false,
+    "candidates": []
+   },
+   "quantities": [],
+   "chars": 728,
+   "label": "If you hypoventilate, explain how your blood pH would change and why. (3 marks)"
+  },
+  {
+   "kind": "card",
+   "idx": 323,
+   "type": "flash",
+   "topic": "resp-control",
+   "crit": "resp-13",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 RESP4 slides 9–11",
+   "srcInfo": {
+    "raw": "2026 RESP4 slides 9–11",
+    "head": "2026 RESP4",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx"
+    ]
+   },
+   "quantities": [],
+   "chars": 483,
+   "label": "Which centres generate and modify the basic respiratory rhythm?"
+  },
+  {
+   "kind": "card",
+   "idx": 324,
+   "type": "flash",
+   "topic": "resp-control",
+   "crit": "resp-13",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 270,
+   "label": "What is eupnoea, and what is the normal respiratory rate?"
+  },
+  {
+   "kind": "card",
+   "idx": 325,
+   "type": "flash",
+   "topic": "resp-control",
+   "crit": "resp-13",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 381,
+   "label": "What is the Hering–Breuer reflex?"
+  },
+  {
+   "kind": "card",
+   "idx": 326,
+   "type": "flash",
+   "topic": "resp-control",
+   "crit": "resp-13",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 399,
+   "label": "Why does a high cervical spinal cord injury stop breathing?"
+  },
+  {
+   "kind": "card",
+   "idx": 327,
+   "type": "mcq",
+   "topic": "resp-control",
+   "crit": "resp-13",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 215,
+   "label": "The basic rhythm of breathing is generated in the:"
+  },
+  {
+   "kind": "card",
+   "idx": 328,
+   "type": "mcq",
+   "topic": "resp-control",
+   "crit": "resp-13",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 367,
+   "label": "Damage to the pons producing prolonged gasping inspirations with a pause at full inspirati"
+  },
+  {
+   "kind": "card",
+   "idx": 329,
+   "type": "match",
+   "topic": "resp-control",
+   "crit": "resp-13",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 462,
+   "label": "Match each control centre to its role."
+  },
+  {
+   "kind": "card",
+   "idx": 330,
+   "type": "flash",
+   "topic": "resp-control",
+   "crit": "resp-14",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 RESP4 slide 16",
+   "srcInfo": {
+    "raw": "2026 RESP4 slide 16",
+    "head": "2026 RESP4",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx"
+    ]
+   },
+   "quantities": [],
+   "chars": 455,
+   "label": "Where are the central and peripheral chemoreceptors, and what does each detect?"
+  },
+  {
+   "kind": "card",
+   "idx": 331,
+   "type": "flash",
+   "topic": "resp-control",
+   "crit": "resp-14",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 RESP4 slide 17",
+   "srcInfo": {
+    "raw": "2026 RESP4 slide 17",
+    "head": "2026 RESP4",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx"
+    ]
+   },
+   "quantities": [
+    {
+     "value": "5",
+     "unit": "mmHg",
+     "raw": "5 mmHg"
+    },
+    {
+     "value": "60",
+     "unit": "mmHg",
+     "raw": "60 mmHg"
+    }
+   ],
+   "chars": 468,
+   "label": "Which chemical stimulus is the MOST powerful driver of ventilation, and why is that surpri"
+  },
+  {
+   "kind": "card",
+   "idx": 332,
+   "type": "flash",
+   "topic": "resp-control",
+   "crit": "resp-14",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "92",
+     "unit": "%",
+     "raw": "92%"
+    }
+   ],
+   "chars": 477,
+   "label": "What is the \"hypoxic drive\" and why does it matter clinically?"
+  },
+  {
+   "kind": "card",
+   "idx": 333,
+   "type": "flash",
+   "topic": "resp-control",
+   "crit": "resp-14",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 425,
+   "label": "Why does the respiratory rate increase in diabetic ketoacidosis?"
+  },
+  {
+   "kind": "card",
+   "idx": 334,
+   "type": "mcq",
+   "topic": "resp-control",
+   "crit": "resp-14",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "60",
+     "unit": "mmHg",
+     "raw": "60 mmHg"
+    }
+   ],
+   "chars": 306,
+   "label": "The most powerful chemical stimulus to increase ventilation in a healthy person is:"
+  },
+  {
+   "kind": "card",
+   "idx": 335,
+   "type": "mcq",
+   "topic": "resp-control",
+   "crit": "resp-14",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 306,
+   "label": "Peripheral chemoreceptors are found in the:"
+  },
+  {
+   "kind": "card",
+   "idx": 336,
+   "type": "cloze",
+   "topic": "resp-control",
+   "crit": "resp-14",
+   "lean": "exam",
+   "hasFig": false,
+   "src": "MODULE 1 Formative Test (Canvas) — Q3 (flagged EXAM-only by the lecturer)",
+   "srcInfo": {
+    "raw": "MODULE 1 Formative Test (Canvas) — Q3 (flagged EXAM-only by the lecturer)",
+    "head": "MODULE 1 Formative Test (Canvas)",
+    "resolved": false,
+    "candidates": []
+   },
+   "quantities": [],
+   "chars": 1377,
+   "label": "ACIDOSIS CASCADE — flagged by the lecturer as final-exam material, not Test 1. Kept here t"
+  },
+  {
+   "kind": "card",
+   "idx": 337,
+   "type": "tfset",
+   "topic": "resp-control",
+   "crit": "resp-14",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "60",
+     "unit": "mmHg",
+     "raw": "60 mmHg"
+    }
+   ],
+   "chars": 442,
+   "label": "Are the following true or false?"
+  },
+  {
+   "kind": "card",
+   "idx": 338,
+   "type": "flash",
+   "topic": "terms",
+   "crit": "resp-17",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "20",
+     "unit": "/min",
+     "raw": "20/min"
+    },
+    {
+     "value": "12",
+     "unit": "/min",
+     "raw": "12/min"
+    }
+   ],
+   "chars": 412,
+   "label": "Define EUPNOEA, DYSPNOEA, APNOEA, TACHYPNOEA and BRADYPNOEA."
+  },
+  {
+   "kind": "card",
+   "idx": 339,
+   "type": "flash",
+   "topic": "terms",
+   "crit": "resp-17",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 403,
+   "label": "Define HYPOXIA, HYPOCAPNIA and HYPERCAPNIA."
+  },
+  {
+   "kind": "card",
+   "idx": 340,
+   "type": "flash",
+   "topic": "terms",
+   "crit": "resp-17",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 434,
+   "label": "Define PNEUMOTHORAX, ATELECTASIS and CYANOSIS."
+  },
+  {
+   "kind": "card",
+   "idx": 341,
+   "type": "flash",
+   "topic": "terms",
+   "crit": "resp-17",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 534,
+   "label": "Distinguish ASTHMA, CHRONIC BRONCHITIS and EMPHYSEMA."
+  },
+  {
+   "kind": "card",
+   "idx": 342,
+   "type": "flash",
+   "topic": "terms",
+   "crit": "resp-17",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 465,
+   "label": "State Boyle's law and Henry's law and give a respiratory example of each."
+  },
+  {
+   "kind": "card",
+   "idx": 343,
+   "type": "flash",
+   "topic": "terms",
+   "crit": "resp-17",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 477,
+   "label": "Define BRONCHODILATOR, and contrast NEGATIVE and POSITIVE PRESSURE ventilation."
+  },
+  {
+   "kind": "card",
+   "idx": 344,
+   "type": "flash",
+   "topic": "terms",
+   "crit": "resp-17",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 419,
+   "label": "Define TUBERCULOSIS and HYPERVENTILATION."
+  },
+  {
+   "kind": "card",
+   "idx": 345,
+   "type": "match",
+   "topic": "terms",
+   "crit": "resp-17",
+   "lean": null,
+   "hasFig": false,
+   "src": "MODULE 1 Formative Test (Canvas) — Q28",
+   "srcInfo": {
+    "raw": "MODULE 1 Formative Test (Canvas) — Q28",
+    "head": "MODULE 1 Formative Test (Canvas)",
+    "resolved": false,
+    "candidates": []
+   },
+   "quantities": [],
+   "chars": 358,
+   "label": "Match each clinical description to its correct term."
+  },
+  {
+   "kind": "card",
+   "idx": 346,
+   "type": "mcq",
+   "topic": "terms",
+   "crit": "resp-17",
+   "lean": null,
+   "hasFig": false,
+   "src": "BN2 Formative Test PDF Model Answers — Q7",
+   "srcInfo": {
+    "raw": "BN2 Formative Test PDF Model Answers — Q7",
+    "head": "BN2 Formative Test PDF Model Answers",
+    "resolved": false,
+    "candidates": []
+   },
+   "quantities": [],
+   "chars": 216,
+   "label": "Which of the following terms refers to air in the pleural space?"
+  },
+  {
+   "kind": "card",
+   "idx": 347,
+   "type": "flash",
+   "topic": "lymph",
+   "crit": "lymph-1",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 Lymphatic system slide 30",
+   "srcInfo": {
+    "raw": "2026 Lymphatic system slide 30",
+    "head": "2026 Lymphatic system",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.3  LYMPHATIC SYSTEM\\2026  Lymphatic system.pptx"
+    ]
+   },
+   "quantities": [
+    {
+     "value": "120",
+     "unit": "mL",
+     "raw": "120 mL"
+    }
+   ],
+   "chars": 512,
+   "label": "State the three main functions of the lymphatic system."
+  },
+  {
+   "kind": "card",
+   "idx": 348,
+   "type": "flash",
+   "topic": "lymph",
+   "crit": "lymph-1",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 Lymphatic system slides 6 & 15",
+   "srcInfo": {
+    "raw": "2026 Lymphatic system slides 6 & 15",
+    "head": "2026 Lymphatic system",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.3  LYMPHATIC SYSTEM\\2026  Lymphatic system.pptx"
+    ]
+   },
+   "quantities": [],
+   "chars": 461,
+   "label": "How does the lymphatic system absorb dietary fat?"
+  },
+  {
+   "kind": "card",
+   "idx": 349,
+   "type": "flash",
+   "topic": "lymph",
+   "crit": "lymph-1",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 426,
+   "label": "Why is returning leaked PROTEIN as important as returning fluid?"
+  },
+  {
+   "kind": "card",
+   "idx": 350,
+   "type": "mcq",
+   "topic": "lymph",
+   "crit": "lymph-1",
+   "lean": null,
+   "hasFig": false,
+   "src": "BN2 Formative Test PDF Model Answers — Q6",
+   "srcInfo": {
+    "raw": "BN2 Formative Test PDF Model Answers — Q6",
+    "head": "BN2 Formative Test PDF Model Answers",
+    "resolved": false,
+    "candidates": []
+   },
+   "quantities": [],
+   "chars": 283,
+   "label": "Lymph is derived from:"
+  },
+  {
+   "kind": "card",
+   "idx": 351,
+   "type": "mcq",
+   "topic": "lymph",
+   "crit": "lymph-1",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 473,
+   "label": "Dietary fats are absorbed into the lymphatic system rather than the blood because:"
+  },
+  {
+   "kind": "card",
+   "idx": 352,
+   "type": "tfset",
+   "topic": "lymph",
+   "crit": "lymph-1",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "3",
+     "unit": "litres",
+     "raw": "3 litres"
+    }
+   ],
+   "chars": 313,
+   "label": "Are the following true or false?"
+  },
+  {
+   "kind": "card",
+   "idx": 353,
+   "type": "flash",
+   "topic": "lymph",
+   "crit": "lymph-2",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 Lymphatic system slide 6",
+   "srcInfo": {
+    "raw": "2026 Lymphatic system slide 6",
+    "head": "2026 Lymphatic system",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.3  LYMPHATIC SYSTEM\\2026  Lymphatic system.pptx"
+    ]
+   },
+   "quantities": [],
+   "chars": 505,
+   "label": "How is a lymphatic CAPILLARY structured, and why does that structure matter?"
+  },
+  {
+   "kind": "card",
+   "idx": 354,
+   "type": "flash",
+   "topic": "lymph",
+   "crit": "lymph-2",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 Lymphatic system slides 6–7",
+   "srcInfo": {
+    "raw": "2026 Lymphatic system slides 6–7",
+    "head": "2026 Lymphatic system",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.3  LYMPHATIC SYSTEM\\2026  Lymphatic system.pptx"
+    ]
+   },
+   "quantities": [],
+   "chars": 217,
+   "label": "Trace the lymphatic pathway from capillary to bloodstream."
+  },
+  {
+   "kind": "card",
+   "idx": 355,
+   "type": "flash",
+   "topic": "lymph",
+   "crit": "lymph-2",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 437,
+   "label": "Which regions do the thoracic duct and the right lymphatic duct drain?"
+  },
+  {
+   "kind": "card",
+   "idx": 356,
+   "type": "flash",
+   "topic": "lymph",
+   "crit": "lymph-2",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 434,
+   "label": "Describe the structure and functions of the SPLEEN."
+  },
+  {
+   "kind": "card",
+   "idx": 357,
+   "type": "flash",
+   "topic": "lymph",
+   "crit": "lymph-2",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 Lymphatic system slides 20–21",
+   "srcInfo": {
+    "raw": "2026 Lymphatic system slides 20–21",
+    "head": "2026 Lymphatic system",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.3  LYMPHATIC SYSTEM\\2026  Lymphatic system.pptx"
+    ]
+   },
+   "quantities": [],
+   "chars": 613,
+   "label": "What does the THYMUS do, and what happens to it with age?"
+  },
+  {
+   "kind": "card",
+   "idx": 358,
+   "type": "flash",
+   "topic": "lymph",
+   "crit": "lymph-2",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 Lymphatic system slides 24 & 26",
+   "srcInfo": {
+    "raw": "2026 Lymphatic system slides 24 & 26",
+    "head": "2026 Lymphatic system",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.3  LYMPHATIC SYSTEM\\2026  Lymphatic system.pptx"
+    ]
+   },
+   "quantities": [],
+   "chars": 562,
+   "label": "Where are the tonsils and MALT, and what do they do?"
+  },
+  {
+   "kind": "card",
+   "idx": 359,
+   "type": "order",
+   "topic": "lymph",
+   "crit": "lymph-2",
+   "lean": null,
+   "hasFig": false,
+   "src": "MODULE 1 Formative Test (Canvas) — Q24",
+   "srcInfo": {
+    "raw": "MODULE 1 Formative Test (Canvas) — Q24",
+    "head": "MODULE 1 Formative Test (Canvas)",
+    "resolved": false,
+    "candidates": []
+   },
+   "quantities": [],
+   "chars": 375,
+   "label": "Place the structures of the lymphatic system in order from the smallest lymphatic through "
+  },
+  {
+   "kind": "card",
+   "idx": 360,
+   "type": "mcq",
+   "topic": "lymph",
+   "crit": "lymph-2",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 234,
+   "label": "Which lymphoid organ is the site of T lymphocyte maturation?"
+  },
+  {
+   "kind": "card",
+   "idx": 361,
+   "type": "flash",
+   "topic": "lymph",
+   "crit": "lymph-3",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 Lymphatic system slide 31",
+   "srcInfo": {
+    "raw": "2026 Lymphatic system slide 31",
+    "head": "2026 Lymphatic system",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.3  LYMPHATIC SYSTEM\\2026  Lymphatic system.pptx"
+    ]
+   },
+   "quantities": [],
+   "chars": 316,
+   "label": "Where does lymph re-enter the cardiovascular system?"
+  },
+  {
+   "kind": "card",
+   "idx": 362,
+   "type": "flash",
+   "topic": "lymph",
+   "crit": "lymph-3",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 Lymphatic system slide 30",
+   "srcInfo": {
+    "raw": "2026 Lymphatic system slide 30",
+    "head": "2026 Lymphatic system",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.3  LYMPHATIC SYSTEM\\2026  Lymphatic system.pptx"
+    ]
+   },
+   "quantities": [],
+   "chars": 353,
+   "label": "How does lymph move if there is no pump?"
+  },
+  {
+   "kind": "card",
+   "idx": 363,
+   "type": "flash",
+   "topic": "lymph",
+   "crit": "lymph-3",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 457,
+   "label": "How are the cardiovascular and lymphatic systems structurally similar and different?"
+  },
+  {
+   "kind": "card",
+   "idx": 364,
+   "type": "mcq",
+   "topic": "lymph",
+   "crit": "lymph-3",
+   "lean": null,
+   "hasFig": false,
+   "src": "BN2 Formative Test PDF Model Answers — Q4",
+   "srcInfo": {
+    "raw": "BN2 Formative Test PDF Model Answers — Q4",
+    "head": "BN2 Formative Test PDF Model Answers",
+    "resolved": false,
+    "candidates": []
+   },
+   "quantities": [],
+   "chars": 270,
+   "label": "At which blood vessel does lymphatic fluid drain back into the venous system?"
+  },
+  {
+   "kind": "card",
+   "idx": 365,
+   "type": "mcq",
+   "topic": "lymph",
+   "crit": "lymph-3",
+   "lean": null,
+   "hasFig": false,
+   "src": "BN2 Formative Test PDF Model Answers — Q10",
+   "srcInfo": {
+    "raw": "BN2 Formative Test PDF Model Answers — Q10",
+    "head": "BN2 Formative Test PDF Model Answers",
+    "resolved": false,
+    "candidates": []
+   },
+   "quantities": [],
+   "chars": 401,
+   "label": "Lymph vessels and veins have similar structures and functions. Which of the following HELP"
+  },
+  {
+   "kind": "card",
+   "idx": 366,
+   "type": "saq",
+   "topic": "lymph",
+   "crit": "lymph-3",
+   "lean": null,
+   "hasFig": false,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 892,
+   "label": "Explain the relationship between the cardiovascular and lymphatic systems in the transport"
+  },
+  {
+   "kind": "card",
+   "idx": 367,
+   "type": "flash",
+   "topic": "cvs-vessels",
+   "crit": "cvs-2",
+   "lean": null,
+   "hasFig": true,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 581,
+   "label": "Look at the three vessels in cross-section. Working from the image alone, how would you te"
+  },
+  {
+   "kind": "card",
+   "idx": 368,
+   "type": "cloze",
+   "topic": "cvs-vessels",
+   "crit": "cvs-3",
+   "lean": null,
+   "hasFig": true,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 752,
+   "label": "Read the Starling forces off the diagram."
+  },
+  {
+   "kind": "card",
+   "idx": 369,
+   "type": "order",
+   "topic": "cvs-anat",
+   "crit": "cvs-5",
+   "lean": null,
+   "hasFig": true,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 450,
+   "label": "Using the diagram, place the coverings and wall layers of the heart in order from SUPERFIC"
+  },
+  {
+   "kind": "card",
+   "idx": 370,
+   "type": "match",
+   "topic": "cvs-anat",
+   "crit": "cvs-5",
+   "lean": null,
+   "hasFig": true,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 471,
+   "label": "Using the superior view of the valves, match each valve to its position."
+  },
+  {
+   "kind": "card",
+   "idx": 371,
+   "type": "match",
+   "topic": "cvs-ecg",
+   "crit": "cvs-8",
+   "lean": null,
+   "hasFig": true,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 403,
+   "label": "Read the trace. Match each deflection to what it represents."
+  },
+  {
+   "kind": "card",
+   "idx": 372,
+   "type": "order",
+   "topic": "cvs-ecg",
+   "crit": "cvs-8",
+   "lean": null,
+   "hasFig": true,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 454,
+   "label": "Trace the impulse through the conduction system shown, in order."
+  },
+  {
+   "kind": "card",
+   "idx": 373,
+   "type": "order",
+   "topic": "cvs-bp",
+   "crit": "cvs-12",
+   "lean": null,
+   "hasFig": true,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 605,
+   "label": "Follow the cascade in the diagram and place the steps in order."
+  },
+  {
+   "kind": "card",
+   "idx": 374,
+   "type": "order",
+   "topic": "resp-anat",
+   "crit": "resp-2",
+   "lean": null,
+   "hasFig": true,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 344,
+   "label": "Using the diagram of the respiratory tract, order these structures from superior to inferi"
+  },
+  {
+   "kind": "card",
+   "idx": 375,
+   "type": "flash",
+   "topic": "resp-anat",
+   "crit": "resp-2",
+   "lean": null,
+   "hasFig": true,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 596,
+   "label": "From the diagram: name the two pleural layers, what lies between them, and what happens if"
+  },
+  {
+   "kind": "card",
+   "idx": 376,
+   "type": "match",
+   "topic": "resp-gas",
+   "crit": "resp-5",
+   "lean": null,
+   "hasFig": true,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "1",
+     "unit": "µm",
+     "raw": "1 µm"
+    }
+   ],
+   "chars": 538,
+   "label": "Using the alveolus diagram, match each labelled component to its role."
+  },
+  {
+   "kind": "card",
+   "idx": 377,
+   "type": "match",
+   "topic": "resp-mech",
+   "crit": "resp-6",
+   "lean": null,
+   "hasFig": true,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "500",
+     "unit": "mL",
+     "raw": "500 mL"
+    },
+    {
+     "value": "3100",
+     "unit": "mL",
+     "raw": "3100 mL"
+    },
+    {
+     "value": "1200",
+     "unit": "mL",
+     "raw": "1200 mL"
+    },
+    {
+     "value": "1200",
+     "unit": "mL",
+     "raw": "1200 mL"
+    },
+    {
+     "value": "4800",
+     "unit": "mL",
+     "raw": "4800 mL"
+    }
+   ],
+   "chars": 621,
+   "label": "Read the spirogram and match each label to its definition."
+  },
+  {
+   "kind": "card",
+   "idx": 378,
+   "type": "tfset",
+   "topic": "resp-gas",
+   "crit": "resp-11",
+   "lean": null,
+   "hasFig": true,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "40",
+     "unit": "mmHg",
+     "raw": "40 mmHg"
+    },
+    {
+     "value": "75",
+     "unit": "%",
+     "raw": "75%"
+    }
+   ],
+   "chars": 572,
+   "label": "Read the oxyhaemoglobin dissociation curve. Are these statements true or false?"
+  },
+  {
+   "kind": "card",
+   "idx": 379,
+   "type": "flash",
+   "topic": "immune",
+   "crit": "cs-vacc",
+   "lean": null,
+   "hasFig": true,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 537,
+   "label": "From the diagram: why does a lymph node have more ways IN than OUT, and what does that ach"
+  },
+  {
+   "kind": "card",
+   "idx": 380,
+   "type": "mcq",
+   "topic": "lymph",
+   "crit": "lymph-3",
+   "lean": null,
+   "hasFig": true,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 486,
+   "label": "From the diagram of the two lymphatic ducts, which region does the RIGHT lymphatic duct dr"
+  },
+  {
+   "kind": "card",
+   "idx": 381,
+   "type": "flash",
+   "topic": "lymph",
+   "crit": "lymph-2",
+   "lean": null,
+   "hasFig": true,
+   "src": "2026 Lymphatic system slides 18–19",
+   "srcInfo": {
+    "raw": "2026 Lymphatic system slides 18–19",
+    "head": "2026 Lymphatic system",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.3  LYMPHATIC SYSTEM\\2026  Lymphatic system.pptx"
+    ]
+   },
+   "quantities": [],
+   "chars": 839,
+   "label": "Give the four functions of the spleen as the lecture lists them."
+  },
+  {
+   "kind": "card",
+   "idx": 382,
+   "type": "flash",
+   "topic": "resp-control",
+   "crit": "resp-16",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 RESP4 slide 22",
+   "srcInfo": {
+    "raw": "2026 RESP4 slide 22",
+    "head": "2026 RESP4",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx"
+    ]
+   },
+   "quantities": [
+    {
+     "value": "40",
+     "unit": "mmHg",
+     "raw": "40 mmHg"
+    }
+   ],
+   "chars": 480,
+   "label": "What happens to ventilation at HIGH ALTITUDE, and why?"
+  },
+  {
+   "kind": "card",
+   "idx": 383,
+   "type": "flash",
+   "topic": "resp-control",
+   "crit": "resp-16",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 RESP4 slides 22–23",
+   "srcInfo": {
+    "raw": "2026 RESP4 slides 22–23",
+    "head": "2026 RESP4",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx"
+    ]
+   },
+   "quantities": [],
+   "chars": 618,
+   "label": "List the changes of ACCLIMATISATION to altitude over days to weeks."
+  },
+  {
+   "kind": "card",
+   "idx": 384,
+   "type": "mcq",
+   "topic": "resp-control",
+   "crit": "resp-16",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 RESP4 slide 22",
+   "srcInfo": {
+    "raw": "2026 RESP4 slide 22",
+    "head": "2026 RESP4",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx"
+    ]
+   },
+   "quantities": [
+    {
+     "value": "40",
+     "unit": "mmHg",
+     "raw": "40 mmHg"
+    },
+    {
+     "value": "40",
+     "unit": "mmHg",
+     "raw": "40 mmHg"
+    },
+    {
+     "value": "40",
+     "unit": "mmHg",
+     "raw": "40 mmHg"
+    },
+    {
+     "value": "40",
+     "unit": "mmHg",
+     "raw": "40 mmHg"
+    }
+   ],
+   "chars": 328,
+   "label": "A person who has lived at high altitude for years is likely to have an arterial PCO₂ that "
+  },
+  {
+   "kind": "card",
+   "idx": 385,
+   "type": "match",
+   "topic": "resp-control",
+   "crit": "resp-16",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 RESP4 slides 22–23",
+   "srcInfo": {
+    "raw": "2026 RESP4 slides 22–23",
+    "head": "2026 RESP4",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx"
+    ]
+   },
+   "quantities": [],
+   "chars": 631,
+   "label": "Match each acclimatisation change to what it achieves."
+  },
+  {
+   "kind": "card",
+   "idx": 386,
+   "type": "flash",
+   "topic": "resp-control",
+   "crit": "resp-14",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 RESP4 slide 17",
+   "srcInfo": {
+    "raw": "2026 RESP4 slide 17",
+    "head": "2026 RESP4",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx"
+    ]
+   },
+   "quantities": [],
+   "chars": 364,
+   "label": "What does HYPOCAPNIA do to breathing?"
+  },
+  {
+   "kind": "card",
+   "idx": 387,
+   "type": "flash",
+   "topic": "resp-control",
+   "crit": "resp-14",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 RESP4 slide 13",
+   "srcInfo": {
+    "raw": "2026 RESP4 slide 13",
+    "head": "2026 RESP4",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx"
+    ]
+   },
+   "quantities": [],
+   "chars": 500,
+   "label": "Beyond the chemical factors, what else does the lecture list as modifying rate and depth o"
+  },
+  {
+   "kind": "card",
+   "idx": 388,
+   "type": "tfset",
+   "topic": "resp-control",
+   "crit": "resp-13",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 RESP4 slides 9 & 11",
+   "srcInfo": {
+    "raw": "2026 RESP4 slides 9 & 11",
+    "head": "2026 RESP4",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx"
+    ]
+   },
+   "quantities": [],
+   "chars": 898,
+   "label": "Are the following statements about the respiratory centres true or false?"
+  },
+  {
+   "kind": "card",
+   "idx": 389,
+   "type": "mcq",
+   "topic": "resp-control",
+   "crit": "resp-14",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 RESP4 slide 14 (her own question)",
+   "srcInfo": {
+    "raw": "2026 RESP4 slide 14 (her own question)",
+    "head": "2026 RESP4",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx"
+    ]
+   },
+   "quantities": [
+    {
+     "value": "60",
+     "unit": "mmHg",
+     "raw": "60 mmHg"
+    }
+   ],
+   "chars": 502,
+   "label": "Which of hypoxia (low O₂) or hypercapnia (high CO₂) has the stronger effect on breathing r"
+  },
+  {
+   "kind": "card",
+   "idx": 390,
+   "type": "mcq",
+   "topic": "lymph",
+   "crit": "lymph-1",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 Lymphatic system slides 27 & 8 (her own question and answer)",
+   "srcInfo": {
+    "raw": "2026 Lymphatic system slides 27 & 8 (her own question and answer)",
+    "head": "2026 Lymphatic system",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.3  LYMPHATIC SYSTEM\\2026  Lymphatic system.pptx"
+    ]
+   },
+   "quantities": [],
+   "chars": 379,
+   "label": "Lymphatic vessels:"
+  },
+  {
+   "kind": "card",
+   "idx": 391,
+   "type": "flash",
+   "topic": "lymph",
+   "crit": "lymph-2",
+   "lean": null,
+   "hasFig": false,
+   "src": "2026 Lymphatic system slide 17",
+   "srcInfo": {
+    "raw": "2026 Lymphatic system slide 17",
+    "head": "2026 Lymphatic system",
+    "resolved": true,
+    "candidates": [
+     "MODULE 1.3  LYMPHATIC SYSTEM\\2026  Lymphatic system.pptx"
+    ]
+   },
+   "quantities": [],
+   "chars": 411,
+   "label": "Which lymphoid organs filter lymph, and which is the structural exception?"
+  },
+  {
+   "kind": "glossary",
+   "idx": 0,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 89,
+   "label": "Pulse"
+  },
+  {
+   "kind": "glossary",
+   "idx": 1,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "5",
+     "unit": "L/min",
+     "raw": "5 L/min"
+    }
+   ],
+   "chars": 110,
+   "label": "Cardiac output"
+  },
+  {
+   "kind": "glossary",
+   "idx": 2,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 104,
+   "label": "Blood pressure"
+  },
+  {
+   "kind": "glossary",
+   "idx": 3,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 104,
+   "label": "Blood flow"
+  },
+  {
+   "kind": "glossary",
+   "idx": 4,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 112,
+   "label": "Peripheral resistance"
+  },
+  {
+   "kind": "glossary",
+   "idx": 5,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 85,
+   "label": "Tissue perfusion"
+  },
+  {
+   "kind": "glossary",
+   "idx": 6,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 112,
+   "label": "Vasoconstriction"
+  },
+  {
+   "kind": "glossary",
+   "idx": 7,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 108,
+   "label": "Vasodilation"
+  },
+  {
+   "kind": "glossary",
+   "idx": 8,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 130,
+   "label": "Pressure points"
+  },
+  {
+   "kind": "glossary",
+   "idx": 9,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 164,
+   "label": "ECG"
+  },
+  {
+   "kind": "glossary",
+   "idx": 10,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 113,
+   "label": "Coronary arteries"
+  },
+  {
+   "kind": "glossary",
+   "idx": 11,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 135,
+   "label": "Coronary circulation"
+  },
+  {
+   "kind": "glossary",
+   "idx": 12,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 135,
+   "label": "Heart attack / Myocardial infarction"
+  },
+  {
+   "kind": "glossary",
+   "idx": 13,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 68,
+   "label": "Ischaemia"
+  },
+  {
+   "kind": "glossary",
+   "idx": 14,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 115,
+   "label": "Myocardium"
+  },
+  {
+   "kind": "glossary",
+   "idx": 15,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 100,
+   "label": "Atrial systole"
+  },
+  {
+   "kind": "glossary",
+   "idx": 16,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 81,
+   "label": "Atrial diastole"
+  },
+  {
+   "kind": "glossary",
+   "idx": 17,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 124,
+   "label": "Ventricular systole"
+  },
+  {
+   "kind": "glossary",
+   "idx": 18,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 85,
+   "label": "Ventricular diastole"
+  },
+  {
+   "kind": "glossary",
+   "idx": 19,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 108,
+   "label": "Pericarditis"
+  },
+  {
+   "kind": "glossary",
+   "idx": 20,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 93,
+   "label": "Myocarditis"
+  },
+  {
+   "kind": "glossary",
+   "idx": 21,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 107,
+   "label": "Endocarditis"
+  },
+  {
+   "kind": "glossary",
+   "idx": 22,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 117,
+   "label": "Angina pectoris"
+  },
+  {
+   "kind": "glossary",
+   "idx": 23,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 110,
+   "label": "Asystole"
+  },
+  {
+   "kind": "glossary",
+   "idx": 24,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "60",
+     "unit": "bpm",
+     "raw": "60 bpm"
+    }
+   ],
+   "chars": 52,
+   "label": "Bradycardia"
+  },
+  {
+   "kind": "glossary",
+   "idx": 25,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "100",
+     "unit": "bpm",
+     "raw": "100 bpm"
+    }
+   ],
+   "chars": 53,
+   "label": "Tachycardia"
+  },
+  {
+   "kind": "glossary",
+   "idx": 26,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 112,
+   "label": "Inotropic action"
+  },
+  {
+   "kind": "glossary",
+   "idx": 27,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 97,
+   "label": "Chronotropic action"
+  },
+  {
+   "kind": "glossary",
+   "idx": 28,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 190,
+   "label": "Congestive heart failure"
+  },
+  {
+   "kind": "glossary",
+   "idx": 29,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 147,
+   "label": "Ventricular fibrillation"
+  },
+  {
+   "kind": "glossary",
+   "idx": 30,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "90",
+     "unit": "mmHg",
+     "raw": "90 mmHg"
+    }
+   ],
+   "chars": 89,
+   "label": "Hypertension"
+  },
+  {
+   "kind": "glossary",
+   "idx": 31,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "90",
+     "unit": "mmHg",
+     "raw": "90 mmHg"
+    }
+   ],
+   "chars": 96,
+   "label": "Hypotension"
+  },
+  {
+   "kind": "glossary",
+   "idx": 32,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 101,
+   "label": "Atherosclerosis"
+  },
+  {
+   "kind": "glossary",
+   "idx": 33,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 128,
+   "label": "Circulatory shock"
+  },
+  {
+   "kind": "glossary",
+   "idx": 34,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "70",
+     "unit": "m²",
+     "raw": "70 m²"
+    }
+   ],
+   "chars": 94,
+   "label": "Alveoli"
+  },
+  {
+   "kind": "glossary",
+   "idx": 35,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 94,
+   "label": "Asthma"
+  },
+  {
+   "kind": "glossary",
+   "idx": 36,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 95,
+   "label": "Chronic bronchitis"
+  },
+  {
+   "kind": "glossary",
+   "idx": 37,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 108,
+   "label": "Emphysema"
+  },
+  {
+   "kind": "glossary",
+   "idx": 38,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 102,
+   "label": "Bronchodilator"
+  },
+  {
+   "kind": "glossary",
+   "idx": 39,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 103,
+   "label": "Negative pressure breathing"
+  },
+  {
+   "kind": "glossary",
+   "idx": 40,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 101,
+   "label": "Positive pressure ventilation"
+  },
+  {
+   "kind": "glossary",
+   "idx": 41,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 127,
+   "label": "Cellular respiration"
+  },
+  {
+   "kind": "glossary",
+   "idx": 42,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "4",
+     "unit": "mmHg",
+     "raw": "4 mmHg"
+    }
+   ],
+   "chars": 117,
+   "label": "Pleural pressure"
+  },
+  {
+   "kind": "glossary",
+   "idx": 43,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [
+    {
+     "value": "760",
+     "unit": "mmHg",
+     "raw": "760 mmHg"
+    },
+    {
+     "value": "159",
+     "unit": "mmHg",
+     "raw": "159 mmHg"
+    },
+    {
+     "value": "0.3",
+     "unit": "mmHg",
+     "raw": "0.3 mmHg"
+    }
+   ],
+   "chars": 78,
+   "label": "Atmospheric pressure at sea level"
+  },
+  {
+   "kind": "glossary",
+   "idx": 44,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 127,
+   "label": "Partial pressure of gases"
+  },
+  {
+   "kind": "glossary",
+   "idx": 45,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 120,
+   "label": "Boyle's law"
+  },
+  {
+   "kind": "glossary",
+   "idx": 46,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 110,
+   "label": "Henry's law"
+  },
+  {
+   "kind": "glossary",
+   "idx": 47,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 97,
+   "label": "Hypoxia"
+  },
+  {
+   "kind": "glossary",
+   "idx": 48,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 99,
+   "label": "Hypocapnia"
+  },
+  {
+   "kind": "glossary",
+   "idx": 49,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 104,
+   "label": "Hypercapnia"
+  },
+  {
+   "kind": "glossary",
+   "idx": 50,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 87,
+   "label": "Dyspnoea"
+  },
+  {
+   "kind": "glossary",
+   "idx": 51,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 30,
+   "label": "Apnoea"
+  },
+  {
+   "kind": "glossary",
+   "idx": 52,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 77,
+   "label": "Eupnoea"
+  },
+  {
+   "kind": "glossary",
+   "idx": 53,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 82,
+   "label": "Tachypnoea"
+  },
+  {
+   "kind": "glossary",
+   "idx": 54,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 81,
+   "label": "Bradypnoea"
+  },
+  {
+   "kind": "glossary",
+   "idx": 55,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 106,
+   "label": "Hyperventilation"
+  },
+  {
+   "kind": "glossary",
+   "idx": 56,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 105,
+   "label": "Tuberculosis"
+  },
+  {
+   "kind": "glossary",
+   "idx": 57,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 91,
+   "label": "Pneumothorax"
+  },
+  {
+   "kind": "glossary",
+   "idx": 58,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 47,
+   "label": "Atelectasis"
+  },
+  {
+   "kind": "glossary",
+   "idx": 59,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 112,
+   "label": "Cyanosis"
+  },
+  {
+   "kind": "glossary",
+   "idx": 60,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 110,
+   "label": "Surfactant"
+  },
+  {
+   "kind": "glossary",
+   "idx": 61,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 131,
+   "label": "Bohr effect"
+  },
+  {
+   "kind": "glossary",
+   "idx": 62,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 135,
+   "label": "Chloride shift"
+  },
+  {
+   "kind": "glossary",
+   "idx": 63,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 78,
+   "label": "Buboes"
+  },
+  {
+   "kind": "glossary",
+   "idx": 64,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 104,
+   "label": "Lymphoedema"
+  },
+  {
+   "kind": "glossary",
+   "idx": 65,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 110,
+   "label": "Lymphangitis"
+  },
+  {
+   "kind": "glossary",
+   "idx": 66,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 134,
+   "label": "Hodgkin's disease"
+  },
+  {
+   "kind": "glossary",
+   "idx": 67,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 118,
+   "label": "Splenectomy"
+  },
+  {
+   "kind": "glossary",
+   "idx": 68,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 85,
+   "label": "Tonsillitis"
+  },
+  {
+   "kind": "glossary",
+   "idx": 69,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 104,
+   "label": "Sentinel node"
+  },
+  {
+   "kind": "glossary",
+   "idx": 70,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 129,
+   "label": "Swollen glands"
+  },
+  {
+   "kind": "glossary",
+   "idx": 71,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 143,
+   "label": "Ruptured spleen"
+  },
+  {
+   "kind": "glossary",
+   "idx": 72,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 88,
+   "label": "Lacteal"
+  },
+  {
+   "kind": "glossary",
+   "idx": 73,
+   "type": "glossary",
+   "topic": null,
+   "crit": null,
+   "src": null,
+   "srcInfo": null,
+   "quantities": [],
+   "chars": 69,
+   "label": "Chyle"
+  }
+ ],
+ "quantityIndex": {
+  "760mmHg": [
+   {
+    "kind": "card",
+    "idx": 53,
+    "label": "What is the composition and partial pressure of the gases in ATMOSPHERIC air at sea level?",
+    "src": "2026 RESP2 slides 4–5"
+   },
+   {
+    "kind": "glossary",
+    "idx": 43,
+    "label": "Atmospheric pressure at sea level",
+    "src": null
+   }
+  ],
+  "78%": [
+   {
+    "kind": "card",
+    "idx": 53,
+    "label": "What is the composition and partial pressure of the gases in ATMOSPHERIC air at sea level?",
+    "src": "2026 RESP2 slides 4–5"
+   }
+  ],
+  "21%": [
+   {
+    "kind": "card",
+    "idx": 53,
+    "label": "What is the composition and partial pressure of the gases in ATMOSPHERIC air at sea level?",
+    "src": "2026 RESP2 slides 4–5"
+   }
+  ],
+  "104mmHg": [
+   {
+    "kind": "card",
+    "idx": 54,
+    "label": "What are the partial pressures of the gases in ALVEOLAR air?",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 57,
+    "label": "Why is alveolar PO₂ (104 mmHg) so much lower than atmospheric PO₂ (159 mmHg)?",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 59,
+    "label": "The partial pressure of oxygen in alveolar air is approximately:",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 59,
+    "label": "The partial pressure of oxygen in alveolar air is approximately:",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 62,
+    "label": "Match each partial pressure to where it is found.",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 301,
+    "label": "Give the partial pressure gradients that drive external respiration.",
+    "src": null
+   }
+  ],
+  "40mmHg": [
+   {
+    "kind": "card",
+    "idx": 54,
+    "label": "What are the partial pressures of the gases in ALVEOLAR air?",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 59,
+    "label": "The partial pressure of oxygen in alveolar air is approximately:",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 59,
+    "label": "The partial pressure of oxygen in alveolar air is approximately:",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 62,
+    "label": "Match each partial pressure to where it is found.",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 62,
+    "label": "Match each partial pressure to where it is found.",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 65,
+    "label": "Explain why the composition of alveolar air differs from that of atmospheric air. (4 marks",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 67,
+    "label": "Give the partial pressure gradients that drive internal respiration.",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 67,
+    "label": "Give the partial pressure gradients that drive internal respiration.",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 75,
+    "label": "Match each value to the correct location.",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 78,
+    "label": "Explain the process of internal respiration and name three factors that affect its rate. (",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 78,
+    "label": "Explain the process of internal respiration and name three factors that affect its rate. (",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 301,
+    "label": "Give the partial pressure gradients that drive external respiration.",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 301,
+    "label": "Give the partial pressure gradients that drive external respiration.",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 378,
+    "label": "Read the oxyhaemoglobin dissociation curve. Are these statements true or false?",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 382,
+    "label": "What happens to ventilation at HIGH ALTITUDE, and why?",
+    "src": "2026 RESP4 slide 22"
+   },
+   {
+    "kind": "card",
+    "idx": 384,
+    "label": "A person who has lived at high altitude for years is likely to have an arterial PCO₂ that ",
+    "src": "2026 RESP4 slide 22"
+   },
+   {
+    "kind": "card",
+    "idx": 384,
+    "label": "A person who has lived at high altitude for years is likely to have an arterial PCO₂ that ",
+    "src": "2026 RESP4 slide 22"
+   },
+   {
+    "kind": "card",
+    "idx": 384,
+    "label": "A person who has lived at high altitude for years is likely to have an arterial PCO₂ that ",
+    "src": "2026 RESP4 slide 22"
+   },
+   {
+    "kind": "card",
+    "idx": 384,
+    "label": "A person who has lived at high altitude for years is likely to have an arterial PCO₂ that ",
+    "src": "2026 RESP4 slide 22"
+   }
+  ],
+  "47mmHg": [
+   {
+    "kind": "card",
+    "idx": 54,
+    "label": "What are the partial pressures of the gases in ALVEOLAR air?",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 55,
+    "label": "Give the THREE reasons alveolar air differs from atmospheric air.",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 59,
+    "label": "The partial pressure of oxygen in alveolar air is approximately:",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 59,
+    "label": "The partial pressure of oxygen in alveolar air is approximately:",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 62,
+    "label": "Match each partial pressure to where it is found.",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 65,
+    "label": "Explain why the composition of alveolar air differs from that of atmospheric air. (4 marks",
+    "src": null
+   }
+  ],
+  "37°C": [
+   {
+    "kind": "card",
+    "idx": 54,
+    "label": "What are the partial pressures of the gases in ALVEOLAR air?",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 55,
+    "label": "Give the THREE reasons alveolar air differs from atmospheric air.",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 62,
+    "label": "Match each partial pressure to where it is found.",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 65,
+    "label": "Explain why the composition of alveolar air differs from that of atmospheric air. (4 marks",
+    "src": null
+   }
+  ],
+  "350mL": [
+   {
+    "kind": "card",
+    "idx": 55,
+    "label": "Give the THREE reasons alveolar air differs from atmospheric air.",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 58,
+    "label": "What is anatomical dead space and how does it affect alveolar air?",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 65,
+    "label": "Explain why the composition of alveolar air differs from that of atmospheric air. (4 marks",
+    "src": null
+   }
+  ],
+  "2400mL": [
+   {
+    "kind": "card",
+    "idx": 55,
+    "label": "Give the THREE reasons alveolar air differs from atmospheric air.",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 283,
+    "label": "Define the four lung CAPACITIES and how each is calculated.",
+    "src": null
+   }
+  ],
+  "159mmHg": [
+   {
+    "kind": "card",
+    "idx": 57,
+    "label": "Why is alveolar PO₂ (104 mmHg) so much lower than atmospheric PO₂ (159 mmHg)?",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 59,
+    "label": "The partial pressure of oxygen in alveolar air is approximately:",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 59,
+    "label": "The partial pressure of oxygen in alveolar air is approximately:",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 62,
+    "label": "Match each partial pressure to where it is found.",
+    "src": null
+   },
+   {
+    "kind": "glossary",
+    "idx": 43,
+    "label": "Atmospheric pressure at sea level",
+    "src": null
+   }
+  ],
+  "150mL": [
+   {
+    "kind": "card",
+    "idx": 58,
+    "label": "What is anatomical dead space and how does it affect alveolar air?",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 61,
+    "label": "A patient breathes rapidly and shallowly at 30 breaths/min with a tidal volume of 200 mL. ",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 63,
+    "label": "Are the following statements about alveolar air true or false?",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 259,
+    "label": "Where does the CONDUCTING zone begin and end, and what does it do?",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 286,
+    "label": "What is minute ventilation, and why is alveolar ventilation more useful?",
+    "src": null
+   }
+  ],
+  "500mL": [
+   {
+    "kind": "card",
+    "idx": 58,
+    "label": "What is anatomical dead space and how does it affect alveolar air?",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 63,
+    "label": "Are the following statements about alveolar air true or false?",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 282,
+    "label": "Define the four lung VOLUMES and give typical adult male values.",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 289,
+    "label": "Complete the passage on lung volumes and capacities.",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 377,
+    "label": "Read the spirogram and match each label to its definition.",
+    "src": null
+   }
+  ],
+  "200mL": [
+   {
+    "kind": "card",
+    "idx": 61,
+    "label": "A patient breathes rapidly and shallowly at 30 breaths/min with a tidal volume of 200 mL. ",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 61,
+    "label": "A patient breathes rapidly and shallowly at 30 breaths/min with a tidal volume of 200 mL. ",
+    "src": null
+   }
+  ],
+  "50mL": [
+   {
+    "kind": "card",
+    "idx": 61,
+    "label": "A patient breathes rapidly and shallowly at 30 breaths/min with a tidal volume of 200 mL. ",
+    "src": null
+   }
+  ],
+  "100mmHg": [
+   {
+    "kind": "card",
+    "idx": 67,
+    "label": "Give the partial pressure gradients that drive internal respiration.",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 75,
+    "label": "Match each value to the correct location.",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 77,
+    "label": "Place the events of oxygen delivery to an exercising muscle cell in order.",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 78,
+    "label": "Explain the process of internal respiration and name three factors that affect its rate. (",
+    "src": null
+   }
+  ],
+  "45mmHg": [
+   {
+    "kind": "card",
+    "idx": 67,
+    "label": "Give the partial pressure gradients that drive internal respiration.",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 75,
+    "label": "Match each value to the correct location.",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 78,
+    "label": "Explain the process of internal respiration and name three factors that affect its rate. (",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 301,
+    "label": "Give the partial pressure gradients that drive external respiration.",
+    "src": null
+   }
+  ],
+  "75%": [
+   {
+    "kind": "card",
+    "idx": 68,
+    "label": "How saturated is haemoglobin in systemic VENOUS blood at rest, and why does that matter?",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 75,
+    "label": "Match each value to the correct location.",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 291,
+    "label": "Which muscles produce quiet inspiration and quiet expiration?",
+    "src": "2026 RESP4 slide 24 (her comparison table)"
+   },
+   {
+    "kind": "card",
+    "idx": 313,
+    "label": "In the blood flowing through systemic veins of a person at rest, haemoglobin is approximat",
+    "src": "BN2 Formative Test PDF Model Answers — Q11"
+   },
+   {
+    "kind": "card",
+    "idx": 378,
+    "label": "Read the oxyhaemoglobin dissociation curve. Are these statements true or false?",
+    "src": null
+   }
+  ],
+  "50%": [
+   {
+    "kind": "card",
+    "idx": 74,
+    "label": "A shift of the oxygen–haemoglobin dissociation curve to the RIGHT means:",
+    "src": null
+   }
+  ],
+  "98%": [
+   {
+    "kind": "card",
+    "idx": 75,
+    "label": "Match each value to the correct location.",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 313,
+    "label": "In the blood flowing through systemic veins of a person at rest, haemoglobin is approximat",
+    "src": "BN2 Formative Test PDF Model Answers — Q11"
+   },
+   {
+    "kind": "card",
+    "idx": 315,
+    "label": "Are the following true or false?",
+    "src": null
+   }
+  ],
+  "90mmHg": [
+   {
+    "kind": "card",
+    "idx": 120,
+    "label": "How is high blood pressure defined, and what are its chronic downstream consequences? (5 m",
+    "src": "Case Study Workbook 2026 S2 — Case study 1 (blue = test)"
+   },
+   {
+    "kind": "card",
+    "idx": 249,
+    "label": "Define HYPERTENSION and HYPOTENSION.",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 249,
+    "label": "Define HYPERTENSION and HYPOTENSION.",
+    "src": null
+   },
+   {
+    "kind": "glossary",
+    "idx": 30,
+    "label": "Hypertension",
+    "src": null
+   },
+   {
+    "kind": "glossary",
+    "idx": 31,
+    "label": "Hypotension",
+    "src": null
+   }
+  ],
+  "65%": [
+   {
+    "kind": "card",
+    "idx": 142,
+    "label": "Give three FUNCTIONAL differences between arteries and veins.",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 146,
+    "label": "Which vessel type contains the greatest proportion of the body's blood volume at rest?",
+    "src": null
+   }
+  ],
+  "35mmHg": [
+   {
+    "kind": "card",
+    "idx": 150,
+    "label": "What happens at the ARTERIAL end of a capillary, and why?",
+    "src": null
+   }
+  ],
+  "25mmHg": [
+   {
+    "kind": "card",
+    "idx": 150,
+    "label": "What happens at the ARTERIAL end of a capillary, and why?",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 151,
+    "label": "What happens at the VENOUS end of a capillary, and why?",
+    "src": null
+   }
+  ],
+  "17mmHg": [
+   {
+    "kind": "card",
+    "idx": 151,
+    "label": "What happens at the VENOUS end of a capillary, and why?",
+    "src": null
+   }
+  ],
+  "10%": [
+   {
+    "kind": "card",
+    "idx": 153,
+    "label": "Name three mechanisms that cause OEDEMA in terms of capillary fluid dynamics.",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 156,
+    "label": "Complete the passage on capillary fluid exchange.",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 316,
+    "label": "In what three forms is carbon dioxide carried in the blood?",
+    "src": "2026 RESP 3 slides 22–23"
+   }
+  ],
+  "8mmHg": [
+   {
+    "kind": "card",
+    "idx": 168,
+    "label": "Why is the wall of the left ventricle so much thicker than the right?",
+    "src": null
+   }
+  ],
+  "80mmHg": [
+   {
+    "kind": "card",
+    "idx": 168,
+    "label": "Why is the wall of the left ventricle so much thicker than the right?",
+    "src": null
+   }
+  ],
+  "100/min": [
+   {
+    "kind": "card",
+    "idx": 183,
+    "label": "Why is the SA node the pacemaker, and what are the intrinsic rates of the backup pacemaker",
+    "src": "2026 CVS 3 slide 6"
+   }
+  ],
+  "70bpm": [
+   {
+    "kind": "card",
+    "idx": 193,
+    "label": "Define cardiac output and give the normal resting value.",
+    "src": null
+   }
+  ],
+  "70mL": [
+   {
+    "kind": "card",
+    "idx": 193,
+    "label": "Define cardiac output and give the normal resting value.",
+    "src": null
+   }
+  ],
+  "5L/min": [
+   {
+    "kind": "card",
+    "idx": 193,
+    "label": "Define cardiac output and give the normal resting value.",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 202,
+    "label": "Explain how the nervous system and hormones together control cardiac output. (5 marks)",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 214,
+    "label": "What happens to cardiac output during exercise, and how?",
+    "src": null
+   },
+   {
+    "kind": "glossary",
+    "idx": 1,
+    "label": "Cardiac output",
+    "src": null
+   }
+  ],
+  "50bpm": [
+   {
+    "kind": "card",
+    "idx": 204,
+    "label": "Why does a trained athlete have a low resting heart rate?",
+    "src": null
+   }
+  ],
+  "160bpm": [
+   {
+    "kind": "card",
+    "idx": 205,
+    "label": "How does age affect resting heart rate?",
+    "src": null
+   }
+  ],
+  "100bpm": [
+   {
+    "kind": "card",
+    "idx": 205,
+    "label": "How does age affect resting heart rate?",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 246,
+    "label": "Define BRADYCARDIA, TACHYCARDIA and ASYSTOLE.",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 251,
+    "label": "Match each cardiovascular term to its meaning.",
+    "src": null
+   },
+   {
+    "kind": "glossary",
+    "idx": 25,
+    "label": "Tachycardia",
+    "src": null
+   }
+  ],
+  "10bpm": [
+   {
+    "kind": "card",
+    "idx": 206,
+    "label": "How does body temperature affect heart rate?",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 208,
+    "label": "A patient with a temperature of 39.5 °C has a heart rate of 112. The most likely explanati",
+    "src": null
+   }
+  ],
+  "46bpm": [
+   {
+    "kind": "card",
+    "idx": 207,
+    "label": "A marathon runner has a resting pulse of 46 bpm and is asymptomatic. This is best explaine",
+    "src": null
+   }
+  ],
+  "39.5°C": [
+   {
+    "kind": "card",
+    "idx": 208,
+    "label": "A patient with a temperature of 39.5 °C has a heart rate of 112. The most likely explanati",
+    "src": null
+   }
+  ],
+  "25L/min": [
+   {
+    "kind": "card",
+    "idx": 214,
+    "label": "What happens to cardiac output during exercise, and how?",
+    "src": null
+   }
+  ],
+  "30%": [
+   {
+    "kind": "card",
+    "idx": 235,
+    "label": "What are the signs of hypovolaemic shock, and which is the trap?",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 316,
+    "label": "In what three forms is carbon dioxide carried in the blood?",
+    "src": "2026 RESP 3 slides 22–23"
+   }
+  ],
+  "60bpm": [
+   {
+    "kind": "card",
+    "idx": 246,
+    "label": "Define BRADYCARDIA, TACHYCARDIA and ASYSTOLE.",
+    "src": null
+   },
+   {
+    "kind": "glossary",
+    "idx": 24,
+    "label": "Bradycardia",
+    "src": null
+   }
+  ],
+  "95%": [
+   {
+    "kind": "card",
+    "idx": 275,
+    "label": "Name the three cell types found in an alveolus and their functions.",
+    "src": null
+   }
+  ],
+  "1µm": [
+   {
+    "kind": "card",
+    "idx": 276,
+    "label": "What are the layers of the respiratory membrane, and how thick is it?",
+    "src": "2026 RESP2 slides 28, 30, 31, 32"
+   },
+   {
+    "kind": "card",
+    "idx": 281,
+    "label": "Are the following true or false?",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 305,
+    "label": "A patient in acute pulmonary oedema has fluid in the alveoli. Gas exchange is impaired mai",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 376,
+    "label": "Using the alveolus diagram, match each labelled component to its role.",
+    "src": null
+   }
+  ],
+  "140m²": [
+   {
+    "kind": "card",
+    "idx": 278,
+    "label": "Why does the huge number of alveoli matter?",
+    "src": null
+   }
+  ],
+  "3100mL": [
+   {
+    "kind": "card",
+    "idx": 282,
+    "label": "Define the four lung VOLUMES and give typical adult male values.",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 377,
+    "label": "Read the spirogram and match each label to its definition.",
+    "src": null
+   }
+  ],
+  "1200mL": [
+   {
+    "kind": "card",
+    "idx": 282,
+    "label": "Define the four lung VOLUMES and give typical adult male values.",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 282,
+    "label": "Define the four lung VOLUMES and give typical adult male values.",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 377,
+    "label": "Read the spirogram and match each label to its definition.",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 377,
+    "label": "Read the spirogram and match each label to its definition.",
+    "src": null
+   }
+  ],
+  "3600mL": [
+   {
+    "kind": "card",
+    "idx": 283,
+    "label": "Define the four lung CAPACITIES and how each is calculated.",
+    "src": null
+   }
+  ],
+  "4800mL": [
+   {
+    "kind": "card",
+    "idx": 283,
+    "label": "Define the four lung CAPACITIES and how each is calculated.",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 377,
+    "label": "Read the spirogram and match each label to its definition.",
+    "src": null
+   }
+  ],
+  "6000mL": [
+   {
+    "kind": "card",
+    "idx": 283,
+    "label": "Define the four lung CAPACITIES and how each is calculated.",
+    "src": null
+   }
+  ],
+  "6L/min": [
+   {
+    "kind": "card",
+    "idx": 286,
+    "label": "What is minute ventilation, and why is alveolar ventilation more useful?",
+    "src": null
+   }
+  ],
+  "4.2L/min": [
+   {
+    "kind": "card",
+    "idx": 286,
+    "label": "What is minute ventilation, and why is alveolar ventilation more useful?",
+    "src": null
+   }
+  ],
+  "4mmHg": [
+   {
+    "kind": "card",
+    "idx": 293,
+    "label": "Why must intrapleural pressure stay NEGATIVE?",
+    "src": null
+   },
+   {
+    "kind": "glossary",
+    "idx": 42,
+    "label": "Pleural pressure",
+    "src": null
+   }
+  ],
+  "5mmHg": [
+   {
+    "kind": "card",
+    "idx": 303,
+    "label": "Why does CO₂ cross the respiratory membrane so easily despite a tiny gradient?",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 307,
+    "label": "Are the following true or false?",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 331,
+    "label": "Which chemical stimulus is the MOST powerful driver of ventilation, and why is that surpri",
+    "src": "2026 RESP4 slide 17"
+   }
+  ],
+  "64mmHg": [
+   {
+    "kind": "card",
+    "idx": 303,
+    "label": "Why does CO₂ cross the respiratory membrane so easily despite a tiny gradient?",
+    "src": null
+   }
+  ],
+  "98.5%": [
+   {
+    "kind": "card",
+    "idx": 308,
+    "label": "How is oxygen carried in the blood?",
+    "src": "2026 RESP 3 slides 12–14"
+   },
+   {
+    "kind": "card",
+    "idx": 315,
+    "label": "Are the following true or false?",
+    "src": null
+   }
+  ],
+  "1.5%": [
+   {
+    "kind": "card",
+    "idx": 308,
+    "label": "How is oxygen carried in the blood?",
+    "src": "2026 RESP 3 slides 12–14"
+   }
+  ],
+  "100%": [
+   {
+    "kind": "card",
+    "idx": 309,
+    "label": "Why is the oxygen–haemoglobin dissociation curve S-shaped (sigmoid)?",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 312,
+    "label": "What does a pulse oximeter actually measure, and what are its limits?",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 312,
+    "label": "What does a pulse oximeter actually measure, and what are its limits?",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 313,
+    "label": "In the blood flowing through systemic veins of a person at rest, haemoglobin is approximat",
+    "src": "BN2 Formative Test PDF Model Answers — Q11"
+   }
+  ],
+  "25%": [
+   {
+    "kind": "card",
+    "idx": 313,
+    "label": "In the blood flowing through systemic veins of a person at rest, haemoglobin is approximat",
+    "src": "BN2 Formative Test PDF Model Answers — Q11"
+   }
+  ],
+  "99%": [
+   {
+    "kind": "card",
+    "idx": 314,
+    "label": "A patient with severe anaemia has an SpO₂ of 99% but is breathless and tired. Why?",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 314,
+    "label": "A patient with severe anaemia has an SpO₂ of 99% but is breathless and tired. Why?",
+    "src": null
+   }
+  ],
+  "70%": [
+   {
+    "kind": "card",
+    "idx": 316,
+    "label": "In what three forms is carbon dioxide carried in the blood?",
+    "src": "2026 RESP 3 slides 22–23"
+   }
+  ],
+  "60mmHg": [
+   {
+    "kind": "card",
+    "idx": 331,
+    "label": "Which chemical stimulus is the MOST powerful driver of ventilation, and why is that surpri",
+    "src": "2026 RESP4 slide 17"
+   },
+   {
+    "kind": "card",
+    "idx": 334,
+    "label": "The most powerful chemical stimulus to increase ventilation in a healthy person is:",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 337,
+    "label": "Are the following true or false?",
+    "src": null
+   },
+   {
+    "kind": "card",
+    "idx": 389,
+    "label": "Which of hypoxia (low O₂) or hypercapnia (high CO₂) has the stronger effect on breathing r",
+    "src": "2026 RESP4 slide 14 (her own question)"
+   }
+  ],
+  "92%": [
+   {
+    "kind": "card",
+    "idx": 332,
+    "label": "What is the \"hypoxic drive\" and why does it matter clinically?",
+    "src": null
+   }
+  ],
+  "20/min": [
+   {
+    "kind": "card",
+    "idx": 338,
+    "label": "Define EUPNOEA, DYSPNOEA, APNOEA, TACHYPNOEA and BRADYPNOEA.",
+    "src": null
+   }
+  ],
+  "12/min": [
+   {
+    "kind": "card",
+    "idx": 338,
+    "label": "Define EUPNOEA, DYSPNOEA, APNOEA, TACHYPNOEA and BRADYPNOEA.",
+    "src": null
+   }
+  ],
+  "120mL": [
+   {
+    "kind": "card",
+    "idx": 347,
+    "label": "State the three main functions of the lymphatic system.",
+    "src": "2026 Lymphatic system slide 30"
+   }
+  ],
+  "3litres": [
+   {
+    "kind": "card",
+    "idx": 352,
+    "label": "Are the following true or false?",
+    "src": null
+   }
+  ],
+  "70m²": [
+   {
+    "kind": "glossary",
+    "idx": 34,
+    "label": "Alveoli",
+    "src": null
+   }
+  ],
+  "0.3mmHg": [
+   {
+    "kind": "glossary",
+    "idx": 43,
+    "label": "Atmospheric pressure at sea level",
+    "src": null
+   }
+  ]
+ },
+ "impliedUnitSuspects": [
+  {
+   "kind": "card",
+   "idx": 53,
+   "label": "What is the composition and partial pressure of the gases in ATMOSPHERIC air at sea level?",
+   "bare": [
+    "592.8",
+    "159.6",
+    "0.2",
+    "7.4"
+   ]
+  },
+  {
+   "kind": "card",
+   "idx": 65,
+   "label": "Explain why the composition of alveolar air differs from that of atmospheric air. (4 marks",
+   "bare": [
+    "0.3"
+   ]
+  },
+  {
+   "kind": "card",
+   "idx": 208,
+   "label": "A patient with a temperature of 39.5 °C has a heart rate of 112. The most likely explanati",
+   "bare": [
+    "39.5"
+   ]
+  },
+  {
+   "kind": "card",
+   "idx": 276,
+   "label": "What are the layers of the respiratory membrane, and how thick is it?",
+   "bare": [
+    "0.5"
+   ]
+  },
+  {
+   "kind": "card",
+   "idx": 281,
+   "label": "Are the following true or false?",
+   "bare": [
+    "0.5"
+   ]
+  },
+  {
+   "kind": "card",
+   "idx": 286,
+   "label": "What is minute ventilation, and why is alveolar ventilation more useful?",
+   "bare": [
+    "4.2"
+   ]
+  },
+  {
+   "kind": "card",
+   "idx": 305,
+   "label": "A patient in acute pulmonary oedema has fluid in the alveoli. Gas exchange is impaired mai",
+   "bare": [
+    "0.5"
+   ]
+  },
+  {
+   "kind": "card",
+   "idx": 376,
+   "label": "Using the alveolus diagram, match each labelled component to its role.",
+   "bare": [
+    "0.5"
+   ]
+  }
+ ]
+}

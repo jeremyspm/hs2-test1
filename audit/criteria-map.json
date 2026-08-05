@@ -1,0 +1,1861 @@
+{
+ "herCount": {
+  "cvs-10": 49,
+  "resp-2": 39,
+  "resp-7": 11,
+  "resp-17": 9,
+  "cvs-2": 17,
+  "cvs-3": 15,
+  "resp-6": 6,
+  "cvs-14": 12,
+  "cvs-12": 11,
+  "cvs-15": 32,
+  "cvs-5": 74,
+  "cvs-6": 38,
+  "cvs-8": 30,
+  "cvs-4": 10,
+  "cvs-9": 15,
+  "resp-13": 8,
+  "cvs-11": 11,
+  "cvs-13": 3,
+  "resp-14": 10,
+  "lymph-2": 14,
+  "cs-vacc": 4,
+  "cvs-7": 10,
+  "resp-3": 5,
+  "resp-5": 12,
+  "resp-4": 9,
+  "resp-1": 4,
+  "resp-8": 4,
+  "resp-11": 8,
+  "resp-12": 2,
+  "resp-10": 2,
+  "lymph-4": 2,
+  "lymph-1": 4,
+  "lymph-3": 1,
+  "cs-bp": 4,
+  "resp-9": 1
+ },
+ "nowBlind": [
+  "cvs-1",
+  "resp-15",
+  "resp-16"
+ ],
+ "wasBlindNowCovered": [],
+ "unmapped": [
+  {
+   "quiz": "MODULE 1.2: RESP BASIC ANATOMY (10 Marks)",
+   "n": "Question 20",
+   "type": "saq",
+   "q": "Find and describe at least ONE error in the labelling of the AI created summary below and "
+  }
+ ],
+ "mapped": [
+  {
+   "quiz": "Respiratory System: Terminology Assessment",
+   "n": "Question 1",
+   "crits": [
+    "cvs-10",
+    "resp-2",
+    "resp-7",
+    "resp-17"
+   ]
+  },
+  {
+   "quiz": "Respiratory System: Terminology Assessment",
+   "n": "Question 2",
+   "crits": [
+    "cvs-2",
+    "cvs-3",
+    "cvs-10"
+   ]
+  },
+  {
+   "quiz": "Practice Lab 2: SAQ & MC Quiz (10 marks)",
+   "n": "Question 11",
+   "crits": [
+    "cvs-10"
+   ]
+  },
+  {
+   "quiz": "Respiratory (SAQ & MC) Pre-Lab Quiz",
+   "n": "Question 1",
+   "crits": [
+    "cvs-10",
+    "resp-6"
+   ]
+  },
+  {
+   "quiz": "Respiratory (SAQ & MC) Pre-Lab Quiz",
+   "n": "Question 2",
+   "crits": [
+    "resp-7"
+   ]
+  },
+  {
+   "quiz": "Respiratory (SAQ & MC) Pre-Lab Quiz",
+   "n": "Question 3",
+   "crits": [
+    "resp-7"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1 SHOCK QUIZ (5 Marks)",
+   "n": "Question 1",
+   "crits": [
+    "cvs-14"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1 SHOCK QUIZ (5 Marks)",
+   "n": "Question 2",
+   "crits": [
+    "cvs-12",
+    "cvs-14",
+    "cvs-15"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1 SHOCK QUIZ (5 Marks)",
+   "n": "Question 3",
+   "crits": [
+    "cvs-14"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1 SHOCK QUIZ (5 Marks)",
+   "n": "Question 4",
+   "crits": [
+    "cvs-14",
+    "cvs-15",
+    "resp-17"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1 SHOCK QUIZ (5 Marks)",
+   "n": "Question 5",
+   "crits": [
+    "cvs-5",
+    "cvs-14",
+    "cvs-15"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1 SHOCK QUIZ (5 Marks)",
+   "n": "Question 6",
+   "crits": [
+    "cvs-14"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1 SHOCK QUIZ (5 Marks)",
+   "n": "Question 7",
+   "crits": [
+    "cvs-5",
+    "cvs-6",
+    "cvs-14"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1 SHOCK QUIZ (5 Marks)",
+   "n": "Question 8",
+   "crits": [
+    "cvs-8",
+    "cvs-14"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1 SHOCK QUIZ (5 Marks)",
+   "n": "Question 9",
+   "crits": [
+    "cvs-5",
+    "cvs-14"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS HOMEOSTASIS (30 Marks)",
+   "n": "Question 1",
+   "crits": [
+    "cvs-4",
+    "cvs-5",
+    "cvs-9",
+    "cvs-10",
+    "cvs-12",
+    "cvs-14",
+    "cvs-15",
+    "resp-13"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS HOMEOSTASIS (30 Marks)",
+   "n": "Question 2",
+   "crits": [
+    "cvs-2",
+    "cvs-3",
+    "cvs-10",
+    "cvs-12"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS HOMEOSTASIS (30 Marks)",
+   "n": "Question 3",
+   "crits": [
+    "cvs-5",
+    "cvs-8",
+    "cvs-9",
+    "cvs-10",
+    "cvs-12",
+    "cvs-15",
+    "resp-13"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS HOMEOSTASIS (30 Marks)",
+   "n": "Question 4",
+   "crits": [
+    "cvs-3",
+    "cvs-4",
+    "cvs-9",
+    "cvs-10",
+    "cvs-11",
+    "cvs-12",
+    "cvs-13",
+    "resp-13"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS HOMEOSTASIS (30 Marks)",
+   "n": "Question 5",
+   "crits": [
+    "cvs-5",
+    "cvs-9",
+    "cvs-11",
+    "cvs-15"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS HOMEOSTASIS (30 Marks)",
+   "n": "Question 6",
+   "crits": [
+    "cvs-9",
+    "cvs-10",
+    "cvs-11",
+    "cvs-12",
+    "cvs-15",
+    "resp-2",
+    "resp-14"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS1 BLOOD VESSELS (10 marks)",
+   "n": "Question 1",
+   "crits": [
+    "cvs-2"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS1 BLOOD VESSELS (10 marks)",
+   "n": "Question 2",
+   "crits": [
+    "cvs-2",
+    "resp-13"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS1 BLOOD VESSELS (10 marks)",
+   "n": "Question 3",
+   "crits": [
+    "cvs-2",
+    "cvs-5",
+    "cvs-12"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS1 BLOOD VESSELS (10 marks)",
+   "n": "Question 4",
+   "crits": [
+    "cvs-4"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS1 BLOOD VESSELS (10 marks)",
+   "n": "Question 5",
+   "crits": [
+    "cvs-3"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS1 BLOOD VESSELS (10 marks)",
+   "n": "Question 6",
+   "crits": [
+    "cvs-6",
+    "resp-2"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS1 BLOOD VESSELS (10 marks)",
+   "n": "Question 7",
+   "crits": [
+    "cvs-6"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS1 BLOOD VESSELS (10 marks)",
+   "n": "Question 8",
+   "crits": [
+    "cvs-6"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS1 BLOOD VESSELS (10 marks)",
+   "n": "Question 9",
+   "crits": [
+    "cvs-6",
+    "lymph-2"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS1 BLOOD VESSELS (10 marks)",
+   "n": "Question 10",
+   "crits": [
+    "cvs-2",
+    "cvs-5",
+    "cvs-6",
+    "resp-2"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS1 BLOOD VESSELS (10 marks)",
+   "n": "Question 11",
+   "crits": [
+    "cvs-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS1 BLOOD VESSELS (10 marks)",
+   "n": "Question 12",
+   "crits": [
+    "cvs-2",
+    "cvs-15"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS3 CARDIAC CONDUCTION & ECG (10 marks)",
+   "n": "Question 1",
+   "crits": [
+    "cvs-5",
+    "cvs-8"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS3 CARDIAC CONDUCTION & ECG (10 marks)",
+   "n": "Question 2",
+   "crits": [
+    "cvs-5",
+    "cvs-8",
+    "cvs-15"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS3 CARDIAC CONDUCTION & ECG (10 marks)",
+   "n": "Question 3",
+   "crits": [
+    "cvs-15"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS3 CARDIAC CONDUCTION & ECG (10 marks)",
+   "n": "Question 5",
+   "crits": [
+    "cvs-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS3 CARDIAC CONDUCTION & ECG (10 marks)",
+   "n": "Question 6",
+   "crits": [
+    "cvs-5",
+    "cvs-9",
+    "cvs-11",
+    "cvs-15"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS3 CARDIAC CONDUCTION & ECG (10 marks)",
+   "n": "Question 7",
+   "crits": [
+    "cvs-8",
+    "cvs-15",
+    "resp-13"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS3 CARDIAC CONDUCTION & ECG (10 marks)",
+   "n": "Question 8",
+   "crits": [
+    "cvs-8",
+    "cvs-10",
+    "cvs-11",
+    "cvs-15",
+    "cs-vacc"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 1",
+   "crits": [
+    "cvs-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 2",
+   "crits": [
+    "cvs-6"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 3",
+   "crits": [
+    "cvs-5",
+    "cvs-7",
+    "cvs-9"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 4",
+   "crits": [
+    "cvs-2",
+    "cvs-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 5",
+   "crits": [
+    "cvs-5",
+    "cvs-6"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 6",
+   "crits": [
+    "cvs-5",
+    "cvs-8"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 7",
+   "crits": [
+    "cvs-5",
+    "cvs-7"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 8",
+   "crits": [
+    "cvs-5",
+    "cvs-8",
+    "cvs-15"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 9",
+   "crits": [
+    "cvs-5",
+    "cvs-6",
+    "cvs-7"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 10",
+   "crits": [
+    "cvs-5",
+    "cvs-8"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 11",
+   "crits": [
+    "cvs-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 12",
+   "crits": [
+    "cvs-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 13",
+   "crits": [
+    "cvs-5",
+    "cvs-6"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 14",
+   "crits": [
+    "cvs-6"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 15",
+   "crits": [
+    "cvs-5",
+    "cvs-6",
+    "cvs-15"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 16",
+   "crits": [
+    "cvs-6",
+    "cvs-10"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 17",
+   "crits": [
+    "cvs-5",
+    "cvs-6",
+    "cvs-10"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 18",
+   "crits": [
+    "cvs-6",
+    "cvs-10"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 19",
+   "crits": [
+    "cvs-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 20",
+   "crits": [
+    "cvs-6"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 21",
+   "crits": [
+    "cvs-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 22",
+   "crits": [
+    "cvs-5",
+    "cvs-10"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 23",
+   "crits": [
+    "cvs-5",
+    "cvs-7",
+    "cvs-9"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 24",
+   "crits": [
+    "cvs-5",
+    "cvs-7"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 25",
+   "crits": [
+    "cvs-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 26",
+   "crits": [
+    "cvs-5",
+    "cvs-8",
+    "cvs-15"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 27",
+   "crits": [
+    "cvs-8"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 28",
+   "crits": [
+    "cvs-5",
+    "cvs-8"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 29",
+   "crits": [
+    "cvs-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 30",
+   "crits": [
+    "cvs-5",
+    "cvs-8"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ & MC: CVS REVIEW *(35 marks )",
+   "n": "Question 1",
+   "crits": [
+    "cvs-6",
+    "cvs-10"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ & MC: CVS REVIEW *(35 marks )",
+   "n": "Question 2",
+   "crits": [
+    "cvs-5",
+    "cvs-6",
+    "cvs-10"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ & MC: CVS REVIEW *(35 marks )",
+   "n": "Question 3",
+   "crits": [
+    "cvs-5",
+    "cvs-10"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ & MC: CVS REVIEW *(35 marks )",
+   "n": "Question 4",
+   "crits": [
+    "cvs-6"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ & MC: CVS REVIEW *(35 marks )",
+   "n": "Question 5",
+   "crits": [
+    "cvs-5",
+    "cvs-8",
+    "resp-13"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ & MC: CVS REVIEW *(35 marks )",
+   "n": "Question 6",
+   "crits": [
+    "cvs-5",
+    "cvs-8"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ & MC: CVS REVIEW *(35 marks )",
+   "n": "Question 7",
+   "crits": [
+    "cvs-8"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ & MC: CVS REVIEW *(35 marks )",
+   "n": "Question 8",
+   "crits": [
+    "cvs-8"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ & MC: CVS REVIEW *(35 marks )",
+   "n": "Question 9",
+   "crits": [
+    "cvs-5",
+    "cvs-8"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ & MC: CVS REVIEW *(35 marks )",
+   "n": "Question 10",
+   "crits": [
+    "cvs-4",
+    "cvs-5",
+    "cvs-8",
+    "cvs-9",
+    "cvs-15"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ & MC: CVS REVIEW *(35 marks )",
+   "n": "Question 11",
+   "crits": [
+    "cvs-6",
+    "cvs-15"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ & MC: CVS REVIEW *(35 marks )",
+   "n": "Question 12",
+   "crits": [
+    "cvs-2",
+    "cvs-15"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ & MC: CVS REVIEW *(35 marks )",
+   "n": "Question 13",
+   "crits": [
+    "cvs-2",
+    "cvs-4",
+    "cvs-5",
+    "cvs-9"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ & MC: CVS REVIEW *(35 marks )",
+   "n": "Question 14",
+   "crits": [
+    "cvs-4"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ & MC: CVS REVIEW *(35 marks )",
+   "n": "Question 15",
+   "crits": [
+    "cvs-9"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ & MC: CVS REVIEW *(35 marks )",
+   "n": "Question 16",
+   "crits": [
+    "cvs-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ & MC: CVS REVIEW *(35 marks )",
+   "n": "Question 17",
+   "crits": [
+    "cvs-11"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ & MC: CVS REVIEW *(35 marks )",
+   "n": "Question 18",
+   "crits": [
+    "cvs-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ & MC: CVS REVIEW *(35 marks )",
+   "n": "Question 19",
+   "crits": [
+    "cvs-11",
+    "cvs-15"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ & MC: CVS REVIEW *(35 marks )",
+   "n": "Question 20",
+   "crits": [
+    "cvs-2",
+    "cvs-5",
+    "cvs-10"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ & MC: CVS REVIEW *(35 marks )",
+   "n": "Question 21",
+   "crits": [
+    "cvs-2",
+    "cvs-10"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ & MC: CVS REVIEW *(35 marks )",
+   "n": "Question 22",
+   "crits": [
+    "cvs-2",
+    "cvs-15"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ & MC: CVS REVIEW *(35 marks )",
+   "n": "Question 23",
+   "crits": [
+    "cvs-4"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ & MC: CVS REVIEW *(35 marks )",
+   "n": "Question 24",
+   "crits": [
+    "cvs-3"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ & MC: CVS REVIEW *(35 marks )",
+   "n": "Question 25",
+   "crits": [
+    "cvs-3",
+    "cvs-15"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ & MC: CVS REVIEW *(35 marks )",
+   "n": "Question 26",
+   "crits": [
+    "cvs-4",
+    "cvs-9",
+    "cvs-11",
+    "cvs-12",
+    "cvs-13",
+    "resp-2",
+    "resp-13",
+    "resp-14"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ & MC: CVS REVIEW *(35 marks )",
+   "n": "Question 27",
+   "crits": [
+    "cvs-3"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ & MC: CVS REVIEW *(35 marks )",
+   "n": "Question 28",
+   "crits": [
+    "cvs-12"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ & MC: CVS REVIEW *(35 marks )",
+   "n": "Question 29",
+   "crits": [
+    "cvs-5",
+    "cvs-8",
+    "cvs-9",
+    "cvs-11"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: HEART COVERINGS & STRUCTURES IN THE RIGHT & LEFT HALVES OF THE HEART (15 marks)",
+   "n": "Question 1",
+   "crits": [
+    "cvs-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: HEART COVERINGS & STRUCTURES IN THE RIGHT & LEFT HALVES OF THE HEART (15 marks)",
+   "n": "Question 2",
+   "crits": [
+    "cvs-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: HEART COVERINGS & STRUCTURES IN THE RIGHT & LEFT HALVES OF THE HEART (15 marks)",
+   "n": "Question 3",
+   "crits": [
+    "cvs-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: HEART COVERINGS & STRUCTURES IN THE RIGHT & LEFT HALVES OF THE HEART (15 marks)",
+   "n": "Question 4",
+   "crits": [
+    "cvs-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: HEART COVERINGS & STRUCTURES IN THE RIGHT & LEFT HALVES OF THE HEART (15 marks)",
+   "n": "Question 5",
+   "crits": [
+    "cvs-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: HEART COVERINGS & STRUCTURES IN THE RIGHT & LEFT HALVES OF THE HEART (15 marks)",
+   "n": "Question 6",
+   "crits": [
+    "cvs-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: HEART COVERINGS & STRUCTURES IN THE RIGHT & LEFT HALVES OF THE HEART (15 marks)",
+   "n": "Question 7",
+   "crits": [
+    "cvs-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: HEART COVERINGS & STRUCTURES IN THE RIGHT & LEFT HALVES OF THE HEART (15 marks)",
+   "n": "Question 8",
+   "crits": [
+    "cvs-5",
+    "cvs-7"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: HEART COVERINGS & STRUCTURES IN THE RIGHT & LEFT HALVES OF THE HEART (15 marks)",
+   "n": "Question 9",
+   "crits": [
+    "cvs-7"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESP BASIC ANATOMY (10 Marks)",
+   "n": "Question 1",
+   "crits": [
+    "resp-2"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESP BASIC ANATOMY (10 Marks)",
+   "n": "Question 2",
+   "crits": [
+    "cvs-5",
+    "resp-2"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESP BASIC ANATOMY (10 Marks)",
+   "n": "Question 3",
+   "crits": [
+    "cvs-5",
+    "resp-2"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESP BASIC ANATOMY (10 Marks)",
+   "n": "Question 4",
+   "crits": [
+    "cvs-5",
+    "resp-2"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESP BASIC ANATOMY (10 Marks)",
+   "n": "Question 5",
+   "crits": [
+    "resp-2",
+    "resp-3"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESP BASIC ANATOMY (10 Marks)",
+   "n": "Question 6",
+   "crits": [
+    "resp-2",
+    "resp-3",
+    "resp-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESP BASIC ANATOMY (10 Marks)",
+   "n": "Question 7",
+   "crits": [
+    "resp-2",
+    "resp-4",
+    "resp-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESP BASIC ANATOMY (10 Marks)",
+   "n": "Question 8",
+   "crits": [
+    "resp-2",
+    "resp-3",
+    "resp-4",
+    "resp-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESP BASIC ANATOMY (10 Marks)",
+   "n": "Question 9",
+   "crits": [
+    "cvs-10",
+    "resp-2",
+    "resp-4",
+    "resp-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESP BASIC ANATOMY (10 Marks)",
+   "n": "Question 10",
+   "crits": [
+    "resp-2",
+    "resp-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESP BASIC ANATOMY (10 Marks)",
+   "n": "Question 11",
+   "crits": [
+    "resp-2"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESP BASIC ANATOMY (10 Marks)",
+   "n": "Question 12",
+   "crits": [
+    "resp-2"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESP BASIC ANATOMY (10 Marks)",
+   "n": "Question 13",
+   "crits": [
+    "resp-2",
+    "resp-17"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESP BASIC ANATOMY (10 Marks)",
+   "n": "Question 14",
+   "crits": [
+    "resp-2",
+    "resp-5",
+    "resp-17"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESP BASIC ANATOMY (10 Marks)",
+   "n": "Question 15",
+   "crits": [
+    "cvs-10",
+    "resp-2"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESP BASIC ANATOMY (10 Marks)",
+   "n": "Question 16",
+   "crits": [
+    "cvs-10",
+    "resp-4",
+    "resp-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESP BASIC ANATOMY (10 Marks)",
+   "n": "Question 17",
+   "crits": [
+    "cvs-10",
+    "resp-2"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESP BASIC ANATOMY (10 Marks)",
+   "n": "Question 18",
+   "crits": [
+    "cvs-10",
+    "resp-2",
+    "resp-4"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESP BASIC ANATOMY (10 Marks)",
+   "n": "Question 19",
+   "crits": [
+    "resp-2",
+    "resp-4"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)",
+   "n": "Question 1",
+   "crits": [
+    "resp-1"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)",
+   "n": "Question 2",
+   "crits": [
+    "resp-2",
+    "resp-5",
+    "resp-7"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)",
+   "n": "Question 3",
+   "crits": [
+    "resp-2"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)",
+   "n": "Question 4",
+   "crits": [
+    "resp-2",
+    "resp-17"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)",
+   "n": "Question 5",
+   "crits": [
+    "resp-8"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)",
+   "n": "Question 6",
+   "crits": [
+    "cvs-10",
+    "resp-7",
+    "resp-8"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)",
+   "n": "Question 7",
+   "crits": [
+    "cvs-7",
+    "resp-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)",
+   "n": "Question 8",
+   "crits": [
+    "resp-14"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)",
+   "n": "Question 9",
+   "crits": [
+    "resp-11"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)",
+   "n": "Question 10",
+   "crits": [
+    "resp-12"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)",
+   "n": "Question 11",
+   "crits": [
+    "resp-6"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)",
+   "n": "Question 12",
+   "crits": [
+    "cvs-5",
+    "cvs-11",
+    "resp-7",
+    "resp-8"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)",
+   "n": "Question 13",
+   "crits": [
+    "cvs-10",
+    "resp-7"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)",
+   "n": "Question 14",
+   "crits": [
+    "resp-6"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)",
+   "n": "Question 15",
+   "crits": [
+    "resp-8",
+    "resp-11"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)",
+   "n": "Question 16",
+   "crits": [
+    "resp-2",
+    "resp-4"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)",
+   "n": "Question 17",
+   "crits": [
+    "resp-2",
+    "resp-4",
+    "resp-5",
+    "resp-14"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)",
+   "n": "Question 18",
+   "crits": [
+    "resp-11"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)",
+   "n": "Question 19",
+   "crits": [
+    "resp-5",
+    "resp-6"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)",
+   "n": "Question 20",
+   "crits": [
+    "resp-14"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)",
+   "n": "Question 21",
+   "crits": [
+    "cvs-10"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)",
+   "n": "Question 22",
+   "crits": [
+    "resp-11"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)",
+   "n": "Question 23",
+   "crits": [
+    "resp-1",
+    "resp-10"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)",
+   "n": "Question 24",
+   "crits": [
+    "resp-11"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)",
+   "n": "Question 25",
+   "crits": [
+    "cvs-7",
+    "resp-11"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)",
+   "n": "Question 26",
+   "crits": [
+    "resp-11"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.3: QUIZ: DISEASES / TERMINOLOGY RELATED TO THE LYMPHATIC SYSTEM",
+   "n": "Question 1",
+   "crits": [
+    "cvs-3",
+    "resp-2",
+    "lymph-2",
+    "lymph-4"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.3: QUIZ: DISEASES / TERMINOLOGY RELATED TO THE LYMPHATIC SYSTEM",
+   "n": "Question 2",
+   "crits": [
+    "lymph-1",
+    "cs-vacc"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.3: QUIZ: DISEASES / TERMINOLOGY RELATED TO THE LYMPHATIC SYSTEM",
+   "n": "Question 3",
+   "crits": [
+    "cvs-3",
+    "cvs-14",
+    "lymph-1"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.3: QUIZ: DISEASES / TERMINOLOGY RELATED TO THE LYMPHATIC SYSTEM",
+   "n": "Question 4",
+   "crits": [
+    "cvs-10",
+    "lymph-2",
+    "cs-vacc"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.3: QUIZ: DISEASES / TERMINOLOGY RELATED TO THE LYMPHATIC SYSTEM",
+   "n": "Question 5",
+   "crits": [
+    "lymph-2"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.3: QUIZ: DISEASES / TERMINOLOGY RELATED TO THE LYMPHATIC SYSTEM",
+   "n": "Question 6",
+   "crits": [
+    "cvs-10",
+    "lymph-2"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.3: QUIZ: DISEASES / TERMINOLOGY RELATED TO THE LYMPHATIC SYSTEM",
+   "n": "Question 7",
+   "crits": [
+    "lymph-3"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.3: QUIZ: DISEASES / TERMINOLOGY RELATED TO THE LYMPHATIC SYSTEM",
+   "n": "Question 8",
+   "crits": [
+    "cvs-10",
+    "lymph-2"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.3: QUIZ: DISEASES / TERMINOLOGY RELATED TO THE LYMPHATIC SYSTEM",
+   "n": "Question 9",
+   "crits": [
+    "lymph-2"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.3: QUIZ: DISEASES / TERMINOLOGY RELATED TO THE LYMPHATIC SYSTEM",
+   "n": "Question 10",
+   "crits": [
+    "lymph-2"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.3: QUIZ: DISEASES / TERMINOLOGY RELATED TO THE LYMPHATIC SYSTEM",
+   "n": "Question 11",
+   "crits": [
+    "lymph-2"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.3:SAQ & MC: FLUID, ELECTROLYTE & FLUID BALANCE (10 marks)",
+   "n": "Question 1",
+   "crits": [
+    "cvs-3"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.3:SAQ & MC: FLUID, ELECTROLYTE & FLUID BALANCE (10 marks)",
+   "n": "Question 2",
+   "crits": [
+    "cvs-15"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.3:SAQ & MC: FLUID, ELECTROLYTE & FLUID BALANCE (10 marks)",
+   "n": "Question 3",
+   "crits": [
+    "cvs-15"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.3:SAQ & MC: FLUID, ELECTROLYTE & FLUID BALANCE (10 marks)",
+   "n": "Question 4",
+   "crits": [
+    "resp-14"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.3:SAQ & MC: FLUID, ELECTROLYTE & FLUID BALANCE (10 marks)",
+   "n": "Question 5",
+   "crits": [
+    "resp-14"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.3:SAQ & MC: FLUID, ELECTROLYTE & FLUID BALANCE (10 marks)",
+   "n": "Question 6",
+   "crits": [
+    "lymph-1"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.3:SAQ & MC: FLUID, ELECTROLYTE & FLUID BALANCE (10 marks)",
+   "n": "Question 7",
+   "crits": [
+    "cvs-3"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.3:SAQ & MC: FLUID, ELECTROLYTE & FLUID BALANCE (10 marks)",
+   "n": "Question 8",
+   "crits": [
+    "cvs-3",
+    "cvs-15"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ STUDENT MARKED CVS LAB REVIEW (15 marks)",
+   "n": "Question 1",
+   "crits": [
+    "cvs-6"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ STUDENT MARKED CVS LAB REVIEW (15 marks)",
+   "n": "Question 2",
+   "crits": [
+    "cvs-6"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ STUDENT MARKED CVS LAB REVIEW (15 marks)",
+   "n": "Question 3",
+   "crits": [
+    "cvs-6"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ STUDENT MARKED CVS LAB REVIEW (15 marks)",
+   "n": "Question 4",
+   "crits": [
+    "cvs-6"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ STUDENT MARKED CVS LAB REVIEW (15 marks)",
+   "n": "Question 5",
+   "crits": [
+    "cvs-6"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ STUDENT MARKED CVS LAB REVIEW (15 marks)",
+   "n": "Question 6",
+   "crits": [
+    "cvs-6"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ STUDENT MARKED CVS LAB REVIEW (15 marks)",
+   "n": "Question 7",
+   "crits": [
+    "cvs-2",
+    "cvs-10"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ STUDENT MARKED CVS LAB REVIEW (15 marks)",
+   "n": "Question 8",
+   "crits": [
+    "cvs-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ STUDENT MARKED CVS LAB REVIEW (15 marks)",
+   "n": "Question 9",
+   "crits": [
+    "cvs-15"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ STUDENT MARKED CVS LAB REVIEW (15 marks)",
+   "n": "Question 10",
+   "crits": [
+    "cvs-8"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ STUDENT MARKED CVS LAB REVIEW (15 marks)",
+   "n": "Question 11",
+   "crits": [
+    "cvs-8"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: SAQ RESPIRATORY SYSTEM (20 marks)",
+   "n": "Question 1",
+   "crits": [
+    "resp-2",
+    "resp-3"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: SAQ RESPIRATORY SYSTEM (20 marks)",
+   "n": "Question 2",
+   "crits": [
+    "resp-14",
+    "resp-17"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: SAQ RESPIRATORY SYSTEM (20 marks)",
+   "n": "Question 3",
+   "crits": [
+    "resp-7"
+   ]
+  },
+  {
+   "quiz": "MODULE 1: SAQ & MC: FORMATIVE CVS, LYMPHATIC & RESPIRATORY SYSTEMS *(50 marks)",
+   "n": "Question 1",
+   "crits": [
+    "cvs-5",
+    "cvs-8",
+    "cvs-10",
+    "cs-bp"
+   ]
+  },
+  {
+   "quiz": "MODULE 1: SAQ & MC: FORMATIVE CVS, LYMPHATIC & RESPIRATORY SYSTEMS *(50 marks)",
+   "n": "Question 2",
+   "crits": [
+    "cvs-5",
+    "cvs-6",
+    "cvs-10",
+    "cvs-15",
+    "resp-2"
+   ]
+  },
+  {
+   "quiz": "MODULE 1: SAQ & MC: FORMATIVE CVS, LYMPHATIC & RESPIRATORY SYSTEMS *(50 marks)",
+   "n": "Question 3",
+   "crits": [
+    "cvs-5",
+    "cvs-8",
+    "cvs-10",
+    "cs-bp"
+   ]
+  },
+  {
+   "quiz": "MODULE 1: SAQ & MC: FORMATIVE CVS, LYMPHATIC & RESPIRATORY SYSTEMS *(50 marks)",
+   "n": "Question 4",
+   "crits": [
+    "cvs-2",
+    "cvs-4",
+    "cvs-5",
+    "cvs-6",
+    "cvs-8",
+    "cvs-9",
+    "cvs-10",
+    "cvs-12",
+    "cvs-15",
+    "resp-2",
+    "resp-14",
+    "lymph-2",
+    "cs-bp"
+   ]
+  },
+  {
+   "quiz": "MODULE 1: SAQ & MC: FORMATIVE CVS, LYMPHATIC & RESPIRATORY SYSTEMS *(50 marks)",
+   "n": "Question 5",
+   "crits": [
+    "cvs-5",
+    "cvs-7",
+    "cvs-8",
+    "cvs-10",
+    "resp-2",
+    "cs-bp"
+   ]
+  },
+  {
+   "quiz": "MODULE 1: SAQ & MC: FORMATIVE CVS, LYMPHATIC & RESPIRATORY SYSTEMS *(50 marks)",
+   "n": "Question 6",
+   "crits": [
+    "cvs-3",
+    "cvs-14",
+    "cvs-15"
+   ]
+  },
+  {
+   "quiz": "MODULE 1: SAQ & MC: FORMATIVE CVS, LYMPHATIC & RESPIRATORY SYSTEMS *(50 marks)",
+   "n": "Question 7",
+   "crits": [
+    "cvs-5",
+    "cvs-6",
+    "cvs-10",
+    "lymph-2"
+   ]
+  },
+  {
+   "quiz": "MODULE 1: SAQ & MC: FORMATIVE CVS, LYMPHATIC & RESPIRATORY SYSTEMS *(50 marks)",
+   "n": "Question 8",
+   "crits": [
+    "cvs-10",
+    "resp-1",
+    "resp-2",
+    "resp-6",
+    "resp-7",
+    "resp-13",
+    "resp-14",
+    "resp-17"
+   ]
+  },
+  {
+   "quiz": "MODULE 1: SAQ & MC: FORMATIVE CVS, LYMPHATIC & RESPIRATORY SYSTEMS *(50 marks)",
+   "n": "Question 9",
+   "crits": [
+    "cvs-10",
+    "resp-2",
+    "resp-3",
+    "resp-4"
+   ]
+  },
+  {
+   "quiz": "MODULE 1: SAQ & MC: FORMATIVE CVS, LYMPHATIC & RESPIRATORY SYSTEMS *(50 marks)",
+   "n": "Question 10",
+   "crits": [
+    "cvs-10",
+    "resp-2",
+    "resp-7"
+   ]
+  },
+  {
+   "quiz": "MODULE 1: SAQ & MC: FORMATIVE CVS, LYMPHATIC & RESPIRATORY SYSTEMS *(50 marks)",
+   "n": "Question 11",
+   "crits": [
+    "cvs-3",
+    "cvs-4",
+    "cvs-8",
+    "cvs-9",
+    "cvs-10",
+    "cvs-11",
+    "cvs-12",
+    "cvs-13",
+    "cvs-15",
+    "resp-2"
+   ]
+  },
+  {
+   "quiz": "MODULE 1: SAQ & MC: FORMATIVE CVS, LYMPHATIC & RESPIRATORY SYSTEMS *(50 marks)",
+   "n": "Question 12",
+   "crits": [
+    "cvs-10",
+    "resp-6"
+   ]
+  },
+  {
+   "quiz": "MODULE 1: SAQ & MC: FORMATIVE CVS, LYMPHATIC & RESPIRATORY SYSTEMS *(50 marks)",
+   "n": "Question 13",
+   "crits": [
+    "cvs-10",
+    "resp-1",
+    "resp-2",
+    "resp-5",
+    "resp-7",
+    "resp-9",
+    "resp-10",
+    "resp-11",
+    "resp-12",
+    "resp-17"
+   ]
+  },
+  {
+   "quiz": "MODULE 1: SAQ & MC: FORMATIVE CVS, LYMPHATIC & RESPIRATORY SYSTEMS *(50 marks)",
+   "n": "Question 14",
+   "crits": [
+    "resp-17"
+   ]
+  },
+  {
+   "quiz": "MODULE 1: SAQ & MC: FORMATIVE CVS, LYMPHATIC & RESPIRATORY SYSTEMS *(50 marks)",
+   "n": "Question 15",
+   "crits": [
+    "cvs-3",
+    "cvs-6",
+    "cvs-10",
+    "lymph-1",
+    "lymph-2",
+    "lymph-4",
+    "cs-vacc"
+   ]
+  },
+  {
+   "quiz": "Practice Lab 1: SAQ & MC Quiz (20 marks)",
+   "n": "Question 1",
+   "crits": [
+    "lymph-2"
+   ]
+  },
+  {
+   "quiz": "Practice Lab 1: SAQ & MC Quiz (20 marks)",
+   "n": "Question 2",
+   "crits": [
+    "cvs-5",
+    "resp-2"
+   ]
+  },
+  {
+   "quiz": "Practice Lab 1: SAQ & MC Quiz (20 marks)",
+   "n": "Question 3",
+   "crits": [
+    "cvs-10"
+   ]
+  },
+  {
+   "quiz": "Practice Lab 1: SAQ & MC Quiz (20 marks)",
+   "n": "Question 5",
+   "crits": [
+    "cvs-5"
+   ]
+  },
+  {
+   "quiz": "Practice Lab 1: SAQ & MC Quiz (20 marks)",
+   "n": "Question 6",
+   "crits": [
+    "cvs-5",
+    "cvs-6",
+    "cvs-10"
+   ]
+  },
+  {
+   "quiz": "Practice Lab 1: SAQ & MC Quiz (20 marks)",
+   "n": "Question 7",
+   "crits": [
+    "cvs-5",
+    "cvs-10"
+   ]
+  },
+  {
+   "quiz": "Practice Lab 1: SAQ & MC Quiz (20 marks)",
+   "n": "Question 8",
+   "crits": [
+    "cvs-6",
+    "cvs-10"
+   ]
+  },
+  {
+   "quiz": "Practice Lab 1: SAQ & MC Quiz (20 marks)",
+   "n": "Question 9",
+   "crits": [
+    "cvs-5"
+   ]
+  },
+  {
+   "quiz": "Practice Lab 1: SAQ & MC Quiz (20 marks)",
+   "n": "Question 11",
+   "crits": [
+    "cvs-2",
+    "cvs-5",
+    "cvs-6",
+    "cvs-8",
+    "cvs-15"
+   ]
+  },
+  {
+   "quiz": "Practice Lab 1: SAQ & MC Quiz (20 marks)",
+   "n": "Question 12",
+   "crits": [
+    "cvs-6"
+   ]
+  },
+  {
+   "quiz": "Practice Lab 1: SAQ & MC Quiz (20 marks)",
+   "n": "Question 13",
+   "crits": [
+    "cvs-6",
+    "lymph-2"
+   ]
+  },
+  {
+   "quiz": "Practice Lab 1: SAQ & MC Quiz (20 marks)",
+   "n": "Question 14",
+   "crits": [
+    "cvs-6"
+   ]
+  },
+  {
+   "quiz": "Practice Lab 1: SAQ & MC Quiz (20 marks)",
+   "n": "Question 15",
+   "crits": [
+    "cvs-6"
+   ]
+  },
+  {
+   "quiz": "Practice Lab 1: SAQ & MC Quiz (20 marks)",
+   "n": "Question 16",
+   "crits": [
+    "cvs-6"
+   ]
+  },
+  {
+   "quiz": "Practice Lab 1: SAQ & MC Quiz (20 marks)",
+   "n": "Question 17",
+   "crits": [
+    "cvs-2",
+    "cvs-10"
+   ]
+  },
+  {
+   "quiz": "Practice Lab 1: SAQ & MC Quiz (20 marks)",
+   "n": "Question 18",
+   "crits": [
+    "cvs-5"
+   ]
+  },
+  {
+   "quiz": "Practice Lab 1: SAQ & MC Quiz (20 marks)",
+   "n": "Question 19",
+   "crits": [
+    "cvs-15"
+   ]
+  },
+  {
+   "quiz": "Practice Lab 1: SAQ & MC Quiz (20 marks)",
+   "n": "Question 20",
+   "crits": [
+    "cvs-8"
+   ]
+  },
+  {
+   "quiz": "Practice Lab 1: SAQ & MC Quiz (20 marks)",
+   "n": "Question 21",
+   "crits": [
+    "cvs-8"
+   ]
+  }
+ ]
+}

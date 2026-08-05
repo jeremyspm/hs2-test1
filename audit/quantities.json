@@ -1,0 +1,320 @@
+{
+ "_README": [
+  "Declared canonical quantities (spec SS5 G5). Hand-written against the corpus, NOT inferred.",
+  "Every `canonical` and `alsoTaught` entry carries a quote that must appear verbatim at its",
+  "cited location - check-quantities.mjs verifies that, so this table cannot drift away from",
+  "her material without failing the build.",
+  "",
+  "  canonical   : the value the pack must use. Her material, her number.",
+  "  alsoTaught  : a DIFFERENT value that ALSO appears in her material. Recorded, not resolved -",
+  "                where she contradicts herself the pack says so rather than silently picking.",
+  "  rejected    : values that are simply WRONG for this concept. Hard build failure.",
+  "  needsHers   : values that are not wrong (a textbook figure, a rounding) but must not appear",
+  "                WITHOUT her value alongside them in the same card. Fails only if hers is absent.",
+  "  notTaught   : the concept appears nowhere in her material at any value.",
+  "",
+  "  match       : REQUIRED wherever rejected/needsHers is used. An explicit context regex that",
+  "                must be present in the card for the rule to apply. Declared by hand, never",
+  "                inferred - an earlier inferring version of this check tagged nitrogen's 592.8",
+  "                as an oxygen value and flagged a correct range as a contradiction.",
+  "  requireRange: {unit, pattern} - only fires when the card uses that unit, and is satisfied by",
+  "                any phrasing the declared pattern accepts (\"0.5-1\", \"0.5 to 1\"). Declared, so",
+  "                the check cannot fail a correct card for writing the range a different way.",
+  "",
+  "`range: true` means the canonical IS the interval; citing one endpoint alone is wrong."
+ ],
+ "atmospheric-po2": {
+  "concept": "Partial pressure of O₂ in atmospheric air at sea level",
+  "unit": "mmHg",
+  "canonical": "159.6",
+  "ev": {
+   "src": "SRC-2026-RESP2",
+   "loc": "slide 4",
+   "quote": "159.6 mm Hg"
+  },
+  "alsoTaught": [
+   {
+    "value": "158.08",
+    "note": "implied by her own worked formula on the next slide (20.8% of 760), which disagrees with her table's 159.6 (21%). Both are hers.",
+    "ev": {
+     "src": "SRC-2026-RESP2",
+     "loc": "slide 5",
+     "quote": "760 mm Hg = (20.8/100 x 760) + (0.03/100 x 760) + (78/100 x 760)"
+    }
+   }
+  ],
+  "match": "atmospher|sea level|inspired air",
+  "needsHers": [
+   {
+    "value": "159",
+    "why": "textbook rounding of her 159.6. Not wrong, but the pack must not state it without her figure - card #53 cites 159.6 while #57/#59/#62/#64 say 159."
+   }
+  ]
+ },
+ "atmospheric-pco2": {
+  "concept": "Partial pressure of CO₂ in atmospheric air at sea level",
+  "unit": "mmHg",
+  "canonical": "0.2",
+  "ev": {
+   "src": "SRC-2026-RESP2",
+   "loc": "slide 4",
+   "quote": "0.2 mm Hg"
+  },
+  "rejected": [
+   {
+    "value": "0.3",
+    "why": "a different textbook's figure (0.04% of 760). Her slide gives 0.2, consistent with the 0.03% in her own formula. README claims this was corrected; it survives in card #65 and glossary #43."
+   }
+  ],
+  "match": "atmospher|sea level|inspired air"
+ },
+ "atmospheric-pn2": {
+  "concept": "Partial pressure of N₂ in atmospheric air at sea level",
+  "unit": "mmHg",
+  "canonical": "592.8",
+  "ev": {
+   "src": "SRC-2026-RESP2",
+   "loc": "slide 4",
+   "quote": "592.8 mm Hg"
+  },
+  "match": "atmospher|sea level|inspired air"
+ },
+ "atmospheric-pother": {
+  "concept": "Partial pressure of other gases (water vapour, argon) in atmospheric air",
+  "unit": "mmHg",
+  "canonical": "7.4",
+  "ev": {
+   "src": "SRC-2026-RESP2",
+   "loc": "slide 4",
+   "quote": "7.4 mm Hg"
+  },
+  "match": "atmospher|sea level|inspired air"
+ },
+ "alveolar-po2": {
+  "concept": "Partial pressure of O₂ in alveolar air",
+  "unit": "mmHg",
+  "canonical": "104",
+  "ev": {
+   "src": "SRC-2026-RESP2",
+   "loc": "slide 27",
+   "quote": "P | O2 | 104 mmHg"
+  },
+  "match": "alveol"
+ },
+ "alveolar-pco2": {
+  "concept": "Partial pressure of CO₂ in alveolar air",
+  "unit": "mmHg",
+  "canonical": "40",
+  "ev": {
+   "src": "SRC-2026-RESP2",
+   "loc": "slide 27",
+   "quote": "P | CO2 | 40 mmHg"
+  },
+  "match": "alveol"
+ },
+ "resp-membrane-thickness": {
+  "concept": "Thickness of the respiratory membrane",
+  "unit": "µm",
+  "canonical": "0.5-1",
+  "range": true,
+  "ev": {
+   "src": "SRC-2026-RESP2",
+   "loc": "slide 30",
+   "quote": "0.5 to 1"
+  },
+  "match": "respiratory membrane|alveolar wall",
+  "requireRange": {
+   "unit": "µm|um",
+   "pattern": "0\\.5\\s*(?:-|–|—|to)\\s*1",
+   "why": "Her slides give the interval 0.5 to 1 um. A card that mentions membrane thickness in um must carry the whole range; one endpoint alone misstates it."
+  }
+ },
+ "tidal-volume": {
+  "concept": "Tidal volume, normal adult",
+  "unit": "mL",
+  "canonical": "500",
+  "ev": {
+   "src": "SRC-2026-RESP2",
+   "loc": "slide 19",
+   "quote": "Normally about 500ml of air is moved in & out per breath"
+  },
+  "match": "tidal volume"
+ },
+ "sa-node-rate": {
+  "concept": "Intrinsic rate of the SA node",
+  "unit": "/min",
+  "canonical": "70",
+  "ev": {
+   "src": "SRC-2026-CVS-3",
+   "loc": "slide 8",
+   "quote": "SA node – 70 b/min"
+  },
+  "match": "SA node|sinoatrial",
+  "needsHers": [
+   {
+    "value": "60-100",
+    "why": "the real textbook range. Citing it is fine - citing it INSTEAD of her 70 is not."
+   }
+  ]
+ },
+ "av-node-rate": {
+  "concept": "Intrinsic rate of the AV node",
+  "unit": "/min",
+  "canonical": "40-60",
+  "range": true,
+  "ev": {
+   "src": "SRC-2026-CVS-3",
+   "loc": "slide 8",
+   "quote": "AV node -40- 60 b/min"
+  },
+  "alsoTaught": [
+   {
+    "value": "50",
+    "note": "a second slide of hers gives a single figure of 50 rather than the 40-60 range. Her material disagrees with itself.",
+    "ev": {
+     "src": "SRC-2026-CVS-3",
+     "loc": "slide 6",
+     "quote": "AV node -50 b/min"
+    }
+   }
+  ],
+  "match": "AV node|atrioventricular node"
+ },
+ "bundle-of-his-rate": {
+  "concept": "Intrinsic rate of the bundle of His",
+  "unit": "/min",
+  "canonical": "30",
+  "ev": {
+   "src": "SRC-2026-CVS-3",
+   "loc": "slide 8",
+   "quote": "Bundle of His - 30 b/min"
+  },
+  "match": "bundle of His"
+ },
+ "co2-transport-bicarbonate": {
+  "concept": "Proportion of CO₂ transported as bicarbonate in plasma",
+  "unit": "%",
+  "canonical": "70",
+  "ev": {
+   "src": "SRC-2026-RESP-3",
+   "loc": "slide 22",
+   "quote": "70% is transported as"
+  },
+  "alsoTaught": [
+   {
+    "value": "60-70",
+    "note": "the other respiratory lecturer's deck gives a 60-70% range for the same quantity.",
+    "ev": {
+     "src": "SRC-EMMA-S-RESPIRATION-3-LECTURE-ANNOTATED",
+     "loc": "slide 16",
+     "quote": "60-70% transported as bicarbonates in the plasma"
+    }
+   }
+  ],
+  "match": "bicarbonate"
+ },
+ "co2-transport-carbamino": {
+  "concept": "Proportion of CO₂ carried bound to haemoglobin as carbamino-haemoglobin",
+  "unit": "%",
+  "canonical": "20-30",
+  "range": true,
+  "ev": {
+   "src": "SRC-2026-RESP-3",
+   "loc": "slide 22",
+   "quote": "20-30% is carried in RBCs"
+  },
+  "alsoTaught": [
+   {
+    "value": "30-40",
+    "note": "her RESP 3 learning page gives 30-40% for the same quantity, contradicting her own slide's 20-30%.",
+    "ev": {
+     "src": "SRC-PAGE-LEARNING-PAGE-RESP-3-GAS-EXCHANGE-AND-GAS",
+     "loc": "line 239",
+     "quote": "Hb = 30-40%)"
+    }
+   }
+  ],
+  "rejected": [
+   {
+    "value": "23",
+    "why": "appears only in a student discussion-board post, which may not back a taught claim (spec G7)."
+   }
+  ],
+  "match": "carbamino|carb-amino"
+ },
+ "co2-transport-dissolved": {
+  "concept": "Proportion of CO₂ dissolved in plasma",
+  "unit": "%",
+  "canonical": "7-10",
+  "range": true,
+  "ev": {
+   "src": "SRC-2026-RESP-3",
+   "loc": "slide 22",
+   "quote": "Dissolved in plasma | | – 7 to | 10%"
+  },
+  "alsoTaught": [
+   {
+    "value": "<10",
+    "note": "her RESP 3 learning page states it as an upper bound instead of a range.",
+    "ev": {
+     "src": "SRC-PAGE-LEARNING-PAGE-RESP-3-GAS-EXCHANGE-AND-GAS",
+     "loc": "line 242",
+     "quote": "dissolved in plasma (<10%)."
+    }
+   }
+  ],
+  "match": "dissolved in plasma"
+ },
+ "ventricular-muscle-rate": {
+  "concept": "Intrinsic rate of ventricular (heart muscle) cells",
+  "unit": "/min",
+  "canonical": "20",
+  "ev": {
+   "src": "SRC-2026-CVS-3",
+   "loc": "slide 8",
+   "quote": "Heart muscle walls are self exciting- 20"
+  },
+  "match": "ventricular (muscle|cell)|heart muscle wall"
+ },
+ "o2-transport-oxyhaemoglobin": {
+  "concept": "Proportion of O2 carried bound to haemoglobin",
+  "unit": "%",
+  "canonical": "98.5",
+  "ev": {
+   "src": "SRC-PAGE-LEARNING-PAGE-RESP-3-GAS-EXCHANGE-AND-GAS",
+   "loc": "line 598",
+   "quote": "Hb = 98.5%)"
+  },
+  "match": "oxyhaemoglobin|oxyhemoglobin"
+ },
+ "o2-transport-dissolved": {
+  "concept": "Proportion of O2 dissolved in plasma",
+  "unit": "%",
+  "canonical": "1.5",
+  "ev": {
+   "src": "SRC-PAGE-LEARNING-PAGE-RESP-3-GAS-EXCHANGE-AND-GAS",
+   "loc": "line 601",
+   "quote": "Dissolved in plasma (= 1.5%)"
+  },
+  "match": "dissolved in plasma"
+ },
+ "cardiac-output-worked": {
+  "concept": "Her worked cardiac-output example",
+  "unit": "L/min",
+  "canonical": "5.25",
+  "ev": {
+   "src": "SRC-2026-CVS-3",
+   "loc": "slide 27",
+   "quote": "CO = 70ml/beat x 75 beats/min | = 5.25L/min"
+  },
+  "note": "No rejection declared. ~5 L/min is a legitimate typical cardiac output and a DIFFERENT claim from her worked example of 5.25 L/min (SV 70 mL x HR 75/min). Only cards reproducing HER worked example must use 5.25.",
+  "match": "cardiac output"
+ },
+ "anatomical-dead-space": {
+  "concept": "Volume of the anatomical dead space",
+  "unit": "mL",
+  "notTaught": true,
+  "why": "Zero hits for \"dead space\" anywhere in the 12,063-unit corpus. The pack asserts ~150 mL on five cards. Standard textbook value, but she teaches no figure, so it cannot be `taught` tier.",
+  "match": "dead space"
+ }
+}

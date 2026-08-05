@@ -1,0 +1,279 @@
+{
+ "bound": 37,
+ "figMissing": [
+  {
+   "quiz": "MODULE 1.1: CVS3 CARDIAC CONDUCTION & ECG (10 marks)",
+   "n": "Question 8",
+   "type": "match",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "Electogenics of the heart."
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 6",
+   "type": "mcq",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "The P wave on the electrocardiogram is associated with"
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 7",
+   "type": "mcq",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "The first heart sound on the phono-cardiogram is associated with the"
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 8",
+   "type": "mcq",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "The QRS wave of the electrocardiogram represents the electrical impulse going through the "
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 9",
+   "type": "mcq",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "The second heart sound on the phono-cardiogram is associated with the"
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 10",
+   "type": "mcq",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "The aortic pressure is the highest when:"
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 16",
+   "type": "tfset",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "Study the images and answer the questions asked about changes in blood flow that occur at "
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 22",
+   "type": "mcq",
+   "hold": "dependent",
+   "why": "the stem cannot be answered without a figure the pack does not have",
+   "q": "The layers of the pericardium are shown in the image: The epicardium is also known as the "
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 23",
+   "type": "mcq",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "Check the text and video to find the answer: Link This video may display YouTube ads. Cont"
+  },
+  {
+   "quiz": "MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks)",
+   "n": "Question 24",
+   "type": "mcq",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "This video may display YouTube ads. Continue to YouTube content Heart Murmurs and Heart So"
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ & MC: CVS REVIEW *(35 marks )",
+   "n": "Question 2",
+   "type": "match",
+   "hold": "dependent",
+   "why": "the stem cannot be answered without a figure the pack does not have",
+   "q": "Anatomical Structures of the Heart Identify the structures in the image below."
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ & MC: CVS REVIEW *(35 marks )",
+   "n": "Question 3",
+   "type": "match",
+   "hold": "dependent",
+   "why": "the stem cannot be answered without a figure the pack does not have",
+   "q": "Anatomical Structures of the Heart Drag and drop each label to correctly identify the stru"
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ & MC: CVS REVIEW *(35 marks )",
+   "n": "Question 4",
+   "type": "saq",
+   "hold": "dependent",
+   "why": "the stem cannot be answered without a figure the pack does not have",
+   "q": "Examine the figure above of the pulmonary and systemic circulations. Describe the structur"
+  },
+  {
+   "quiz": "MODULE 1.2: RESP BASIC ANATOMY (10 Marks)",
+   "n": "Question 11",
+   "type": "mcq",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "Infection of this part is clled bronchiolitis."
+  },
+  {
+   "quiz": "MODULE 1.2: RESP BASIC ANATOMY (10 Marks)",
+   "n": "Question 12",
+   "type": "mcq",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "Infection of this part is called pneumonia."
+  },
+  {
+   "quiz": "MODULE 1.2: RESP BASIC ANATOMY (10 Marks)",
+   "n": "Question 13",
+   "type": "mcq",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "Inflammation of these parts is called bronchitis."
+  },
+  {
+   "quiz": "MODULE 1.2: RESP BASIC ANATOMY (10 Marks)",
+   "n": "Question 16",
+   "type": "mcq",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "The tissue numbered 1 in this image is part of the mucociliary escalator keeping particles"
+  },
+  {
+   "quiz": "MODULE 1.2: RESP BASIC ANATOMY (10 Marks)",
+   "n": "Question 18",
+   "type": "mcq",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "The stripy muscle at the back of the trachea holds the ends of the C-shaped cartilage ring"
+  },
+  {
+   "quiz": "MODULE 1.3: QUIZ: DISEASES / TERMINOLOGY RELATED TO THE LYMPHATIC SYSTEM",
+   "n": "Question 4",
+   "type": "mcq",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "Check the image in the linked article . What types of blood cells predominate in the lymph"
+  },
+  {
+   "quiz": "MODULE 1.3: QUIZ: DISEASES / TERMINOLOGY RELATED TO THE LYMPHATIC SYSTEM",
+   "n": "Question 6",
+   "type": "mcq",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "Check the image in the linked article : Lymph from the interstitial spaces in the left han"
+  },
+  {
+   "quiz": "MODULE 1.3: QUIZ: DISEASES / TERMINOLOGY RELATED TO THE LYMPHATIC SYSTEM",
+   "n": "Question 8",
+   "type": "mcq",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "Check the image in the linked article ( ) . Afferent lymphatic vessels lead into a lymph n"
+  },
+  {
+   "quiz": "MODULE 1.3: QUIZ: DISEASES / TERMINOLOGY RELATED TO THE LYMPHATIC SYSTEM",
+   "n": "Question 9",
+   "type": "mcq",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "Where are Peyer's patches found and are they part of the MALT system?"
+  },
+  {
+   "quiz": "MODULE 1.3: QUIZ: DISEASES / TERMINOLOGY RELATED TO THE LYMPHATIC SYSTEM",
+   "n": "Question 10",
+   "type": "mcq",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "Which statement is not true? The thymus differs from the other lymphatic organs in that it"
+  },
+  {
+   "quiz": "MODULE 1.1: SAQ STUDENT MARKED CVS LAB REVIEW (15 marks)",
+   "n": "Question 7",
+   "type": "saq",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "Use the histological images and diagrams provided on CANVAS to draw diagrams of an artery "
+  },
+  {
+   "quiz": "MODULE 1: SAQ & MC: FORMATIVE CVS, LYMPHATIC & RESPIRATORY SYSTEMS *(50 marks)",
+   "n": "Question 2",
+   "type": "cloze",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "Complete the passage. (MODULE 1) The [[1]] is known as the widow maker since it is the cor"
+  },
+  {
+   "quiz": "MODULE 1: SAQ & MC: FORMATIVE CVS, LYMPHATIC & RESPIRATORY SYSTEMS *(50 marks)",
+   "n": "Question 8",
+   "type": "cloze",
+   "hold": "dependent",
+   "why": "the stem cannot be answered without a figure the pack does not have",
+   "q": "Complete the passage. (MODULE 1) Eupnoea is best described as [[1]] . Pulmonary ventilatio"
+  },
+  {
+   "quiz": "MODULE 1: SAQ & MC: FORMATIVE CVS, LYMPHATIC & RESPIRATORY SYSTEMS *(50 marks)",
+   "n": "Question 13",
+   "type": "cloze",
+   "hold": "dependent",
+   "why": "the stem cannot be answered without a figure the pack does not have",
+   "q": "Complete the passage. (MODULE 1) Given below is an image of a bronchiole of a normal and o"
+  },
+  {
+   "quiz": "MODULE 1: SAQ & MC: FORMATIVE CVS, LYMPHATIC & RESPIRATORY SYSTEMS *(50 marks)",
+   "n": "Question 14",
+   "type": "saq",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "Asthma medications used as relievers and preventers have different effects on the respirat"
+  },
+  {
+   "quiz": "Practice Lab 1: SAQ & MC Quiz (20 marks)",
+   "n": "Question 2",
+   "type": "mcq",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "What is the structure being held by the foreceps in this photo?"
+  },
+  {
+   "quiz": "Practice Lab 1: SAQ & MC Quiz (20 marks)",
+   "n": "Question 3",
+   "type": "cloze",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "Complete the passage. (Practice Lab 1) What is the white tissue seen on in the heart in th"
+  },
+  {
+   "quiz": "Practice Lab 1: SAQ & MC Quiz (20 marks)",
+   "n": "Question 6",
+   "type": "match",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "Image Source:"
+  },
+  {
+   "quiz": "Practice Lab 1: SAQ & MC Quiz (20 marks)",
+   "n": "Question 7",
+   "type": "mcq",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "Image Source: Which valve is closed as the left ventricle begins to contract?"
+  },
+  {
+   "quiz": "Practice Lab 1: SAQ & MC Quiz (20 marks)",
+   "n": "Question 8",
+   "type": "mcq",
+   "hold": "dependent",
+   "why": "the stem cannot be answered without a figure the pack does not have",
+   "q": "Using the numbers for the structures in the image below The fetal foramen ovale (the hole "
+  },
+  {
+   "quiz": "Practice Lab 1: SAQ & MC Quiz (20 marks)",
+   "n": "Question 9",
+   "type": "mcq",
+   "hold": "dependent",
+   "why": "the stem cannot be answered without a figure the pack does not have",
+   "q": "The structure labelled B is the"
+  }
+ ],
+ "noFigureNeeded": 150,
+ "multi": 2
+}
