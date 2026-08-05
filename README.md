@@ -109,6 +109,25 @@ used to be a red-orange ⚠️ firing on 61% of all cards, which is not a warnin
 a texture that teaches a reader to distrust the whole tool — and it was never true:
 the content is not suspect, it just is not in the slides.
 
+## All cards — read the pack, flag what is broken
+
+Behind the `···`. Every one of the 586 cards, standing still: group them by topic,
+focus point, source or question type, open a group and read the questions with their
+answers straight through. It shows the background-reading cards too — like the Brief
+and Search, this is a view that has to be able to show *everything*.
+
+It exists because the queue is not a way to *read* a pack. Study deals one card and
+chooses it for you, Search needs the word you are looking for already, and the Brief
+is prose about focus points rather than the cards themselves — so most of these 586
+could only be encountered, never inspected.
+
+That matters because **three of the answer keys imported from Hannetjie's own quizzes
+were wrong**, and each was caught by a person reading the card. **⚑ Flag** is on every
+card here, on the study card, and in the mock-test review (not during the mock test —
+mid-question it would be a hint the real paper will not give). Say what is wrong, add
+a note, and it is kept on the device; **All cards → ⚑ Flagged** exports the lot.
+`node audit/flags.mjs` is the other end of that trip — see *Acting on flagged cards*.
+
 ## Build
 
 The shipped `index.html` is a single self-contained offline file. It is generated,
@@ -140,6 +159,30 @@ node port-figs.mjs --check   # fail if they have drifted
 
 Figures are copied **byte for byte** from `hs2-module1` — never re-drawn, never
 re-described. `--check` is the enforcement. Run it before shipping.
+
+### Acting on flagged cards
+
+The live tool has a **⚑ Flag** button on every card — in **All cards**, on the study
+card, and in the mock-test review. It is how a wrong answer key gets reported by the
+person best placed to notice one: whoever is reading it. Flags are stored on the
+device, keyed by the card's `ckey`, and exported from **All cards → ⚑ Flagged**.
+
+```bash
+node audit/flags.mjs audit/flags.json    # resolve the export back to cards
+```
+
+It prints each flagged card's question, answer, explanation and source, worst reason
+first, then lists any flag whose key no longer resolves — those point at a card that
+has since been edited, which usually means it was already fixed. **It is not a build
+gate.** A flag is a reader's report, not a schema error.
+
+It does gate itself: it re-derives `ckey` in Node, so before printing anything it
+proves its copy of the hash still agrees with `apply-migration.mjs` by checking that
+all 178 keys in `explanations.json` resolve. A drifted hash would otherwise report
+every flag as stale, and look completely plausible doing it.
+
+Three answer keys in this pack were already wrong when they were imported (see
+*Four places where the course material disagrees with itself*). Assume there are more.
 
 ## Editing content
 

@@ -300,6 +300,65 @@ h2.sec{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--tx
 .doorhelp p{margin:0 0 8px}
 .doorhelp p:last-child{margin-bottom:0}
 .chip .pc{font-size:11px;font-weight:800;opacity:.75;margin-left:5px}
+/* ---- All cards + flagging ----------------------------------------------------
+   Study deals you ONE card and decides which one. This is the other direction:
+   every card in the pack, sitting still, grouped, readable straight through.
+
+   It exists because a 586-card pack is unauditable from inside a queue — you
+   cannot check a card you have not been dealt, and the person best placed to
+   notice a broken answer key is whoever is reading it at the time. So browsing
+   and flagging are deliberately the SAME screen, and the flag button also rides
+   along on the study card and the mock-test review, because the moment you spot a
+   bad card is the moment it is in front of you. */
+.libgrp{display:flex;align-items:center;gap:9px;width:100%;text-align:left;padding:12px 14px;margin-bottom:8px;
+  background:var(--card);border:1px solid var(--line);border-radius:11px;color:var(--tx);font-size:14.5px;font-weight:600;line-height:1.4;transition:.12s}
+.libgrp:hover{border-color:var(--line2)}
+.libgrp .nm{min-width:0}
+.libgrp .n{margin-left:auto;flex:0 0 auto;font-size:12px;font-weight:800;color:var(--tx3);font-variant-numeric:tabular-nums;white-space:nowrap}
+.libgrp .fl{flex:0 0 auto;font-size:10.5px;font-weight:800;padding:2px 7px;border-radius:5px;background:var(--gHard);color:var(--hard);border:1px solid var(--bHard);white-space:nowrap}
+.libgrp.flagsgrp{border-color:var(--bHard);background:var(--gHard)}
+.libhead{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+.libhead .btn{flex:0 0 auto;padding:9px 14px;font-size:13px}
+.libcard{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:14px 15px;margin-bottom:9px}
+.libcard.flagged{border-color:var(--bHard);box-shadow:0 0 0 2px var(--gHard)}
+.libmeta{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-bottom:8px}
+.libmeta .flagbtn{margin-left:auto}
+.libq{font-size:15px;font-weight:650;line-height:1.5;color:var(--tx)}
+.liba{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line2);font-size:14px;line-height:1.6;color:var(--tx2);overflow-wrap:anywhere}
+.liba b{color:var(--tx)}
+.liba .lb{display:block;font-size:10.5px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:var(--tx3);margin-bottom:3px}
+.libwhy{margin-top:8px;font-size:13px;line-height:1.55;color:var(--tx3)}
+.libcard .figwrap{margin-top:10px}
+.libstale{margin-top:8px;font-size:12.5px;line-height:1.5;color:var(--hard)}
+/* The flag control. Quiet until it has been used — an outline button that turns
+   into a warning chip — for the same reason the source badges are quiet: a loud
+   affordance on every one of 586 cards is a texture, not a signal. */
+.flagbtn{font-size:10.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;padding:3px 8px;border-radius:6px;
+  border:1px solid var(--line2);background:none;color:var(--tx3);font-family:inherit;display:inline-flex;align-items:center;gap:4px;transition:.12s}
+.flagbtn:hover{color:var(--tx);border-color:var(--tx3)}
+.flagbtn.on{background:var(--gHard);color:var(--hard);border-color:var(--bHard);font-weight:800}
+.flagpanel{margin-top:11px;padding:12px 13px;border:1px solid var(--bHard);border-radius:10px;background:var(--gHard);font-size:13px;line-height:1.55;color:var(--tx2);animation:pop .18s ease}
+.flagpanel b{color:var(--tx)}
+.flagpanel .chips{margin:9px 0 0}
+/* `:not(.on)` is load-bearing. The panel sits on a --gHard wash, so an unselected
+   chip needs a card-coloured fill to read at all — but `.flagpanel .chip` and
+   `.chip.on` are both two classes, so the later rule was winning and repainting the
+   SELECTED chip card-coloured while it kept `color:#fff`. White on white: in the
+   light theme the reason you had just picked vanished. */
+.flagpanel .chip:not(.on){background:var(--card)}
+.flagpanel textarea{width:100%;margin-top:9px;background:var(--card);border:1px solid var(--line2);border-radius:9px;padding:9px 11px;
+  color:var(--tx);font:inherit;font-size:13.5px;line-height:1.5;outline:none;resize:vertical;min-height:62px}
+.flagpanel textarea:focus{border-color:var(--acc)}
+.flagpanel .btnrow{margin-top:10px}
+.flagpanel .btn{padding:10px 15px;font-size:13.5px}
+.flagpanel .btn:disabled{opacity:.5;cursor:default}
+.flagpanel .note{margin:10px 0 0;font-size:12px;line-height:1.5;color:var(--tx2)}
+.revflag{margin-top:12px}
+/* The type label and the flag button travel as one right-aligned unit. Two separate
+   `margin-left:auto` items in the same wrapping row split the free space between
+   them, which at 375px dropped the flag onto a line of its own, hard left, reading
+   as a stray tag rather than a button. */
+.cmend{margin-left:auto;flex:0 0 auto;display:flex;align-items:center;gap:8px}
 .empty{color:var(--tx3);text-align:center;padding:40px 10px;font-size:14px}
 .foot{margin-top:26px;text-align:center;font-size:11.5px;color:var(--tx3)}
 </style>
@@ -331,6 +390,7 @@ h2.sec{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--tx
       <button id="navMore" title="More" aria-expanded="false" aria-controls="nav2">···</button>
     </div>
     <div class="seg hidden" id="nav2">
+      <button data-v="cards">All cards</button>
       <button data-v="search">Search</button>
       <button data-v="stats">Progress</button>
       <button data-v="audit" id="navAudit" hidden>Sources</button>
@@ -14537,7 +14597,11 @@ let S=load();
 if(window.Cloud) Cloud.sync([KEY]);   // syncs this pack's progress across devices when signed in; no-op otherwise
 function load(){
   try{ const s=JSON.parse(localStorage.getItem(KEY)); if(s&&s.srs) return migrate(s); }catch(e){}
-  return {v:3,theme:'dark',topic:'all',door:'ready',bg:false,srs:{},mcq:{},exams:[],read:{},saq:{}};
+  /* `flags` lives in the same blob as progress on purpose: Cloud.sync already carries
+     this key, so a card flagged on a phone mid-revision is waiting on the laptop that
+     can actually fix it. No new storage, no new sync path. */
+  return {v:3,theme:'dark',topic:'all',door:'ready',bg:false,srs:{},mcq:{},exams:[],read:{},saq:{},
+          flags:{},libGroup:'topic',libAt:null,libAns:true};
 }
 /* v1 keyed progress by card index · v2 by a hash of the question · v3 adds the
    card's content signature so cards sharing a question stem stop sharing a record. */
@@ -14565,6 +14629,7 @@ function migrate(s){
 }
 function save(){ localStorage.setItem(KEY,JSON.stringify(S)); }
 if(!S.door) S.door='ready';        // saves made before the two doors existed
+if(!S.flags) S.flags={};           // …and before cards could be flagged
 const topicName=id=>{const t=PACK.topics.find(t=>t.id===id);return t?`${t.icon} ${t.name}`:id;};
 
 /* ---- background reading -------------------------------------------------------
@@ -14995,8 +15060,11 @@ document.addEventListener('click',e=>{
   const b=e.target.closest('[data-prov]'); if(!b) return;
   /* The Brief puts dozens of cards on one screen, so the card is resolved from the
      button and the detail fills the slot inside its OWN fact block. The single-card
-     views have one .provslot per .card and still fall back to CUR. */
-  const host=b.closest('.fact')||b.closest('.card');
+     views have one .provslot per .card and still fall back to CUR.
+     `.libcard` must be listed BEFORE `.card`: All cards renders many .libcards and
+     none of them is a .card, so without it every badge in that view resolved no slot
+     and did nothing at all — a dead control that throws no error. */
+  const host=b.closest('.fact')||b.closest('.libcard')||b.closest('.card');
   const slot=host&&host.querySelector('.provslot'); if(!slot) return;
   const ck=b.dataset.ck;
   const card=ck?PACK.cards.find(x=>ckey(x)===ck):null;
@@ -15050,6 +15118,12 @@ function renderAudit(){
         (${Math.round(100*(n('verbatim')+n('taught'))/Math.max(cards.length,1))}%) trace back to something the course itself published.</p>
     </div>
 
+    ${flagCount()?`<div class="card" style="margin-top:14px">
+      <h3>⚑ ${flagCount()} card${flagCount()===1?'':'s'} you have flagged</h3>
+      <p style="color:var(--tx2);font-size:13.5px;line-height:1.6;margin:2px 0 10px">Cards you marked as having a wrong or unclear question or answer. They are kept on this device so they can be sent on and fixed at the source.</p>
+      <div class="btnrow" style="margin-top:0"><button class="btn ghost" id="auditFlags">Read them in All cards</button></div>
+    </div>`:''}
+
     ${gaps.length?`<div class="card" style="margin-top:14px">
       <h3>Never practised</h3>
       <p style="color:var(--tx2);font-size:13.5px;margin:2px 0 10px">The course lists these as examinable, but no practice test we can read covers them. They are not hidden from you, and this tool leads with them.</p>
@@ -15069,6 +15143,320 @@ function renderAudit(){
       <p style="color:var(--tx2);font-size:13.5px;margin:2px 0 10px">This tool checks its own content every time it is built. These checks did not pass. They are authoring problems rather than anything you can act on — they are here because hiding them would be worse than showing them.</p>
       ${packErrs.map(e=>`<div class="auditrow"><span class="n">!</span><span>${esc(e)}</span></div>`).join('')}
     </div>`:''}`;
+  const g=$('#auditFlags'); if(g) g.onclick=()=>{ S.libAt='_flagged'; save(); nav('cards'); };
+}
+
+/* ============================================================================
+   ALL CARDS — the browse-everything view, and flagging
+   ============================================================================
+   Every other view answers "what should I do next?". This one answers "what is
+   actually IN here?", which is a different question and had no home: Study deals
+   one card and chooses it for you, Search needs you to already know the word you
+   are looking for, and the Brief is prose about focus points rather than the cards
+   themselves. On a 586-card pack that means most cards could not be READ on
+   purpose, only encountered.
+
+   That matters more than browsing convenience, because it is also the only way a
+   wrong answer key gets caught. The pack is built from a lecturer's own quizzes;
+   three of hs2-test1's imported keys turned out to be wrong, and every one was
+   found by a human reading the card. So this view and the flag button ship
+   together: see all of it, and mark what is broken while you are looking at it. */
+
+/* One renderer for "what is the answer to this card", shared with Search. Each
+   type answers differently and every view that shows an answer outside the runner
+   needs the same switch — it existed once already, inside renderSearch. */
+function clozeFilled(c){
+  let h=c.text||'';
+  (c.blanks||[]).forEach((b,i)=>{ h=h.split('[['+(i+1)+']]').join(`<b>${b.options[b.correct]}</b>`); });
+  return h;
+}
+function answerHTML(c){
+  switch(c.type){
+    case 'flash': return c.a||'';
+    case 'mcq':   return `<b>${c.options[c.correct]}</b>`;
+    /* The completed passage, not a numbered list of the blanks. A cloze card's
+       answer IS the sentence read through with the gaps filled — checking one
+       against the slides means reading it as prose. */
+    case 'cloze': return clozeFilled(c);
+    case 'order': return c.steps.map((s,i)=>`${i+1}. ${strip(s)}`).join('<br/>');
+    case 'tfset': return c.statements.map(s=>`<b>${s.v?'TRUE':'FALSE'}</b> — ${strip(s.s)}`).join('<br/>');
+    case 'match': return c.pairs.map(p=>`${strip(p[0])} → <b>${strip(p[1])}</b>`).join('<br/>');
+    default:      return (c.points||[]).map((p,i)=>`${i+1}. ${p}`).join('<br/>');   // saq
+  }
+}
+
+/* ---- flags -------------------------------------------------------------------
+   A flag is keyed by `ckey` — the same hash of type + question + content that keys
+   progress and the authored explanations overlay. That is the whole design:
+
+   - EDIT THE CARD AND THE KEY CHANGES. A flag against a card that has since been
+     rewritten stops resolving, which is exactly right — it has probably been fixed.
+     The flagged list shows those separately and says so rather than silently
+     dropping them or, worse, re-attaching them to a card nobody flagged.
+   - It rides Cloud.sync with the rest of the state blob, so flags raised on a phone
+     are on the laptop that can fix them.
+
+   There is no server. A flag is a note to whoever maintains the pack, and the panel
+   says so in those words — claiming a report had been "sent" when it went into
+   localStorage would be the self-explaining-UI rule broken in the one place the
+   reader cannot check. */
+const FLAGREASONS=[
+  {id:'answer',   lab:'The answer is wrong'},
+  {id:'question', lab:'The question is wrong'},
+  {id:'unclear',  lab:'Unclear or badly worded'},
+  {id:'typo',     lab:'Typo or formatting'},
+  {id:'misfiled', lab:'Wrong topic'},
+  {id:'dupe',     lab:'Duplicate'},
+  {id:'other',    lab:'Something else'},
+];
+const REASONLAB=id=>(FLAGREASONS.find(r=>r.id===id)||{lab:id}).lab;
+const flagOf=ck=>(S.flags||{})[ck];
+const flagCount=()=>Object.keys(S.flags||{}).length;
+const flagsIn=cards=>cards.filter(c=>flagOf(c.key)).length;
+function flagBtnHTML(ck){
+  const f=flagOf(ck);
+  return `<button class="flagbtn${f?' on':''}" data-flag="1" data-ck="${ck}" aria-expanded="false">⚑ ${f?'Flagged':'Flag'}</button>`;
+}
+function flagPanelHTML(ck){
+  const f=flagOf(ck)||{};
+  return `<div class="flagpanel">
+    <b>What is wrong with this card?</b>
+    <div class="chips">${FLAGREASONS.map(r=>`<button class="chip${f.r===r.id?' on':''}" data-fr="${r.id}">${r.lab}</button>`).join('')}</div>
+    <textarea placeholder="Optional — what should it say instead?">${esc(f.note||'')}</textarea>
+    <div class="btnrow">
+      <button class="btn primary" data-fsave="1"${f.r?'':' disabled'}>${f.r?'Update flag':'Pick what is wrong'}</button>
+      ${f.r?`<button class="btn ghost" data-fdel="1">Remove flag</button>`:''}
+    </div>
+    <p class="note">Saved on this device, and carried to your other devices if you are signed in on the hub. <b>Nothing is sent anywhere.</b> Send them on from <b>All cards → Flagged</b>.</p>
+  </div>`;
+}
+/* Delegated, like the source badges and for the same reason: the study card
+   re-renders on every answer and All cards re-renders on every filter keystroke,
+   so per-render wiring would have to be repeated in five places and would rot in
+   the sixth. */
+document.addEventListener('click',e=>{
+  const b=e.target.closest('[data-flag]'); if(!b) return;
+  const host=b.closest('.libcard')||b.closest('.rev')||b.closest('.card');
+  const slot=host&&host.querySelector('.flagslot'); if(!slot) return;
+  const ck=b.dataset.ck;
+  if(slot.innerHTML){ slot.innerHTML=''; b.setAttribute('aria-expanded','false'); return; }
+  slot.innerHTML=flagPanelHTML(ck);
+  b.setAttribute('aria-expanded','true');
+  wireFlagPanel(slot,ck,b);
+});
+function wireFlagPanel(slot,ck,btn){
+  let sel=(flagOf(ck)||{}).r||null;
+  const sv=slot.querySelector('[data-fsave]'), del=slot.querySelector('[data-fdel]');
+  const chips=[...slot.querySelectorAll('[data-fr]')];
+  /* Saving with no reason chosen would file everything as "other" and make the
+     export useless to read, so the button states the requirement instead of
+     failing on press. */
+  const upd=()=>{ if(!sv) return; sv.disabled=!sel;
+    sv.textContent=sel?(flagOf(ck)?'Update flag':'Save flag'):'Pick what is wrong'; };
+  chips.forEach(ch=>ch.onclick=()=>{ sel=ch.dataset.fr; chips.forEach(x=>x.classList.toggle('on',x===ch)); upd(); });
+  const refreshBtn=()=>{
+    const f=flagOf(ck);
+    btn.classList.toggle('on',!!f);
+    btn.textContent='⚑ '+(f?'Flagged':'Flag');
+    const lc=btn.closest('.libcard'); if(lc) lc.classList.toggle('flagged',!!f);
+  };
+  const close=()=>{ slot.innerHTML=''; btn.setAttribute('aria-expanded','false'); };
+  /* Redrawing the smallest thing that changed, and no more. Re-rendering the whole
+     view on save cost the reader their filter text and their place in a 60-card
+     list every time they flagged something — which is the moment they are least
+     likely to be finished. Only the flagged list genuinely changes shape, because
+     removing a flag removes the card from it. */
+  const after=()=>{
+    save();
+    if(VIEW==='cards'&&S.libAt==='_flagged'){ libFlagged(); return; }
+    const lc=btn.closest('.libcard'), c=allCards().find(x=>x.key===ck);
+    if(lc&&c){ lc.outerHTML=libCardHTML(c); return; }   // delegated handlers, so the fresh node is live
+    refreshBtn(); close();                              // study card / mock-test review
+  };
+  if(sv) sv.onclick=()=>{
+    if(!sel) return;
+    const c=PACK.cards.find(x=>ckey(x)===ck);
+    S.flags[ck]={r:sel, note:(slot.querySelector('textarea').value||'').trim(), t:Date.now(),
+                 q:c?strip(c.q).slice(0,200):(flagOf(ck)||{}).q||''};
+    after();
+  };
+  if(del) del.onclick=()=>{ delete S.flags[ck]; after(); };
+}
+/* The export. Enough per flag that it is still legible after the card it points at
+   has been edited away — the reason, the note, and the question as it read when it
+   was flagged. */
+function flagsJSON(){
+  const rows=Object.entries(S.flags||{}).sort((a,b)=>(b[1].t||0)-(a[1].t||0)).map(([ck,f])=>{
+    const c=PACK.cards.find(x=>ckey(x)===ck);
+    return {ck, reason:f.r, note:f.note||'', at:new Date(f.t||Date.now()).toISOString(),
+            type:c?c.type:null, topic:c?c.topic:null, crit:c?(c.crit||null):null,
+            stillInPack:!!c, q:(c?strip(c.q):f.q||'').slice(0,300)};
+  });
+  return JSON.stringify({pack:PACK.id, exported:new Date().toISOString(), n:rows.length, flags:rows},null,2);
+}
+/* clipboard-then-textarea: navigator.clipboard is absent over file:// and on some
+   in-app browsers, which is exactly where an offline single-file tool gets opened. */
+function copyText(t,btn){
+  const done=ok=>{ if(!btn) return; const o=btn.textContent;
+    btn.textContent=ok?'Copied ✓':'Could not copy — select it manually'; setTimeout(()=>btn.textContent=o,2200); };
+  if(navigator.clipboard&&navigator.clipboard.writeText)
+    return navigator.clipboard.writeText(t).then(()=>done(true),()=>done(false));
+  try{ const ta=document.createElement('textarea'); ta.value=t;
+    ta.style.cssText='position:fixed;top:-999px'; document.body.appendChild(ta);
+    ta.select(); const ok=document.execCommand('copy'); ta.remove(); done(ok);
+  }catch(err){ done(false); }
+}
+function downloadText(t,name){
+  const b=new Blob([t],{type:'application/json'}), u=URL.createObjectURL(b);
+  const a=document.createElement('a'); a.href=u; a.download=name;
+  document.body.appendChild(a); a.click(); a.remove(); setTimeout(()=>URL.revokeObjectURL(u),1000);
+}
+
+/* ---- the groupings ----
+   All four already exist in the data, so all four are offered: the reader's mental
+   model of "category" is not knowable in advance, and by-source is the one an
+   author wants (read every Unchecked card in a sitting) while by-topic is the one
+   a student wants. A card with `alsoCrit` appears under each focus point it
+   covers — that is how the coverage gate counts it, and a browse view that
+   disagreed with the gate would send someone hunting for a card that is there. */
+function libModes(){
+  const gs=[{id:'topic',lab:'By topic'}];
+  if((PACK.criteria||[]).length) gs.push({id:'crit',lab:'By focus point'});
+  if(PACK.cards.some(c=>c.tier)) gs.push({id:'tier',lab:'By source'});
+  gs.push({id:'type',lab:'By question type'});
+  return gs;
+}
+const critName=id=>{const c=(PACK.criteria||[]).find(x=>x.id===id);return c?(c.name||c.id):id;};
+function libBuckets(mode){
+  const all=allCards(), mk=(id,name,cards,note)=>({id,name,cards,note:note||''});
+  let bs;
+  if(mode==='crit')
+    bs=(PACK.criteria||[]).map(cr=>mk(cr.id,cr.name||cr.id,
+      all.filter(c=>c.crit===cr.id||(c.alsoCrit||[]).includes(cr.id)), cr.blind?'never practised in the course':''));
+  else if(mode==='tier')
+    bs=['verbatim','taught','textbook','unverified'].map(t=>mk(t,PROV[t].lab,all.filter(c=>c.tier===t)))
+      .concat([mk('_none','No source recorded',all.filter(c=>!PROV[c.tier]))]);
+  else if(mode==='type')
+    bs=ALLTYPES.map(t=>mk(t,TYPELABEL[t],all.filter(c=>c.type===t)));
+  else
+    bs=PACK.topics.map(t=>mk(t.id,topicName(t.id),all.filter(c=>c.topic===t.id)))
+      .concat([mk('_none','Not in any topic',all.filter(c=>!PACK.topics.some(t=>t.id===c.topic)))]);
+  return bs.filter(b=>b.cards.length);
+}
+
+/* One card, standing still. Question and answer together by default, because the
+   job here is reading and checking rather than testing yourself — the queue is two
+   taps away for that. */
+function libCardHTML(c){
+  const f=flagOf(c.key), showA=S.libAns!==false;
+  return `<div class="libcard${f?' flagged':''}">
+    <div class="libmeta">
+      <span class="tag acc">${esc(topicName(c.topic))}</span>
+      <span class="tag">${TYPELABEL[c.type]||c.type}</span>
+      ${c.crit?`<span class="tag">${esc(critName(c.crit))}</span>`:''}
+      ${c.bg?`<span class="tag">not in the queue</span>`:''}
+      ${provHTML(c)}
+      ${flagBtnHTML(c.key)}
+    </div>
+    <div class="libq">${c.q}</div>
+    <div class="provslot"></div>
+    ${c.type==='cloze'&&!showA?`<div class="liba">${esc(strip(c.text||''))}</div>`:''}
+    ${figHTML(c)}
+    ${showA?`<div class="liba"><span class="lb">${c.type==='saq'?'Marking points':'Answer'}</span>${answerHTML(c)}</div>`:''}
+    ${showA&&(c.why||c.model)?`<div class="libwhy">💡 ${c.why||c.model}</div>`:''}
+    ${f?`<div class="libstale">⚑ You flagged this: <b>${esc(REASONLAB(f.r))}</b>${f.note?` — ${esc(f.note)}`:''}</div>`:''}
+    <div class="flagslot"></div>
+  </div>`;
+}
+
+function renderLibrary(){
+  if(S.libAt==='_flagged') return libFlagged();
+  const mode=S.libGroup||'topic', buckets=libBuckets(mode);
+  const at=S.libAt?buckets.find(b=>b.id===S.libAt):null;
+  if(at) return libGroup(at);
+  if(S.libAt&&!at){ S.libAt=null; save(); }        // grouping changed under a stored group
+  const nf=flagCount(), all=allCards(), nbg=all.filter(c=>c.bg).length;
+  view.innerHTML=`
+    <div class="card">
+      <h3>📇 All ${all.length} cards</h3>
+      <p style="color:var(--tx2);font-size:14px;line-height:1.6;margin:2px 0 10px">
+        The whole pack, standing still. Nothing is scheduled and nothing is left out${nbg?`, including the ${nbg} cards held back from the study queue`:''} — open a group and read the questions and their answers straight through.</p>
+      <p style="color:var(--tx2);font-size:14px;line-height:1.6;margin:0">
+        If a question or an answer looks wrong, hit <b>⚑ Flag</b> on it. The same button is on every card in Study and in the mock-test review.</p>
+    </div>
+    <div class="chips" style="margin-top:14px" id="libModes">
+      ${libModes().map(m=>`<button class="chip${m.id===mode?' on':''}" data-lm="${m.id}">${m.lab}</button>`).join('')}
+    </div>
+    ${nf?`<button class="libgrp flagsgrp" data-lib="_flagged"><span class="nm">⚑ Flagged</span><span class="n">${nf} card${nf===1?'':'s'}</span></button>`:''}
+    ${buckets.map(b=>{ const fb=flagsIn(b.cards);
+      return `<button class="libgrp" data-lib="${esc(b.id)}">
+        <span class="nm">${esc(b.name)}${b.note?`<br><span style="font-size:11.5px;color:var(--tx3);font-weight:600">${esc(b.note)}</span>`:''}</span>
+        ${fb?`<span class="fl">⚑ ${fb}</span>`:''}
+        <span class="n">${b.cards.length}</span></button>`; }).join('')}`;
+  $$('#libModes [data-lm]').forEach(ch=>ch.onclick=()=>{ S.libGroup=ch.dataset.lm; S.libAt=null; save(); renderLibrary(); });
+  $$('[data-lib]').forEach(b=>b.onclick=()=>{ S.libAt=b.dataset.lib; save(); renderLibrary(); window.scrollTo({top:0}); });
+}
+
+/* Filtering is live and re-renders the list, so the back button and the answers
+   toggle are wired ONCE against the header and the list is swapped underneath
+   them — the header is the only way out of a group, and rebuilding it on every
+   keystroke is how that kind of control quietly stops working. */
+function libGroup(b){
+  const showA=S.libAns!==false;
+  view.innerHTML=`
+    <div class="libhead">
+      <button class="btn ghost" id="libBack">← All cards</button>
+      <button class="btn ghost" id="libToggle">${showA?'Hide answers':'Show answers'}</button>
+    </div>
+    <div class="card" style="padding:16px 18px 14px">
+      <h3 style="margin:0">${esc(b.name)}</h3>
+      <p style="color:var(--tx2);font-size:13.5px;margin:5px 0 0">${b.cards.length} card${b.cards.length===1?'':'s'}${b.note?` · ${esc(b.note)}`:''}</p>
+    </div>
+    <div class="search" style="margin-top:12px"><input id="libq" placeholder="Filter within this group…" autocomplete="off"/></div>
+    <div id="liblist"></div>`;
+  $('#libBack').onclick=()=>{ S.libAt=null; save(); renderLibrary(); window.scrollTo({top:0}); };
+  $('#libToggle').onclick=()=>{ S.libAns=!(S.libAns!==false); save(); libGroup(b); };
+  const list=$('#liblist'), inp=$('#libq');
+  const draw=()=>{
+    const q=inp.value.trim().toLowerCase();
+    const hits=q?b.cards.filter(c=>strip([c.q,c.a,c.text,c.why,c.model].filter(Boolean).join(' ')).toLowerCase().includes(q)):b.cards;
+    list.innerHTML=hits.length?hits.map(libCardHTML).join(''):`<div class="empty">Nothing in this group matches "${esc(q)}".</div>`;
+  };
+  inp.oninput=draw; draw();
+}
+
+function libFlagged(){
+  const live=[], stale=[];
+  Object.entries(S.flags||{}).sort((a,b)=>(b[1].t||0)-(a[1].t||0)).forEach(([ck,f])=>{
+    const c=allCards().find(x=>x.key===ck);
+    (c?live:stale).push({ck,f,c});
+  });
+  view.innerHTML=`
+    <div class="libhead"><button class="btn ghost" id="libBack">← All cards</button></div>
+    <div class="card">
+      <h3>⚑ Flagged cards</h3>
+      <p style="color:var(--tx2);font-size:14px;line-height:1.6;margin:2px 0 10px">${
+        live.length+stale.length
+          ? `${live.length+stale.length} card${live.length+stale.length===1?'':'s'} you have marked as wrong or unclear. They live on this device — send them to whoever maintains this pack and they can be fixed at the source.`
+          : 'Nothing flagged yet. Hit ⚑ Flag on any card whose question or answer looks wrong.'}</p>
+      ${live.length+stale.length?`<div class="btnrow">
+        <button class="btn primary" id="flagCopy">Copy them</button>
+        <button class="btn ghost" id="flagDl">Download as a file</button>
+      </div>`:''}
+    </div>
+    ${stale.length?`<div class="card" style="margin-top:12px">
+      <h3>${stale.length} of these ${stale.length===1?'is':'are'} out of date</h3>
+      <p style="color:var(--tx2);font-size:13.5px;line-height:1.6;margin:2px 0 10px">The card you flagged is no longer in the pack in that exact wording, which usually means it has been rewritten — quite possibly because of the flag. They are kept here so nothing disappears silently.</p>
+      ${stale.map(x=>`<div class="auditrow"><span class="n">⚑</span><span><b>${esc(REASONLAB(x.f.r))}</b><br>
+        <span style="color:var(--tx3);font-size:12.5px">${esc((x.f.q||'').slice(0,160))}</span>
+        ${x.f.note?`<br><span style="color:var(--tx3);font-size:12.5px">“${esc(x.f.note)}”</span>`:''}
+        <br><button class="chip" data-fdrop="${x.ck}" style="margin-top:6px">Remove this flag</button></span></div>`).join('')}
+    </div>`:''}
+    <div style="margin-top:12px">${live.map(x=>libCardHTML(x.c)).join('')}</div>`;
+  $('#libBack').onclick=()=>{ S.libAt=null; save(); renderLibrary(); window.scrollTo({top:0}); };
+  const cp=$('#flagCopy'); if(cp) cp.onclick=()=>copyText(flagsJSON(),cp);
+  const dl=$('#flagDl');   if(dl) dl.onclick=()=>downloadText(flagsJSON(),`flags-${PACK.id}.json`);
+  $$('[data-fdrop]').forEach(b=>b.onclick=()=>{ delete S.flags[b.dataset.fdrop]; save(); libFlagged(); });
 }
 
 /* ---- nav ----
@@ -15078,14 +15466,14 @@ function renderAudit(){
    most of them will open twice. */
 let VIEW='study', CUR=null, EX=null;
 const view=$('#view');
-const SECOND=['search','stats','audit'];
+const SECOND=['cards','search','stats','audit'];
 const navBtns=()=>$$('#nav button[data-v], #nav2 button[data-v]');
 function showMore(on){
   $('#nav2').classList.toggle('hidden',!on);
   $('#navMore').classList.toggle('on',on);
   $('#navMore').setAttribute('aria-expanded',String(on));
 }
-const VIEWS={brief:renderBrief,study:renderStudy,exam:renderExamSetup,search:renderSearch,stats:renderStats,audit:renderAudit};
+const VIEWS={brief:renderBrief,study:renderStudy,exam:renderExamSetup,cards:renderLibrary,search:renderSearch,stats:renderStats,audit:renderAudit};
 /* learn / mcq / saq were three tabs before the queues merged. The hub deep-links by
    mode and a reader may have bookmarked one, so they alias onto Study rather than
    landing on a blank view. */
@@ -15616,11 +16004,14 @@ function renderStudy(){
   const c=CUR, tot=cardMarks(c);
   /* A flashcard's "1 mark" is an artefact of cardMarks defaulting, not something the
      paper awards. Showing it would put a number on the one card type that has none. */
+  /* The flag button rides the study card because this is where a broken card is
+     actually met. Sending someone to All cards to find the one they are looking at
+     is how a report never gets filed. */
   const head=`
       <div class="cmeta"><span class="tag acc">${topicName(c.topic)}</span>${
         c.type==='flash'?'':`<span class="tag">${tot} mark${tot>1?'s':''}</span>`}${
-        provHTML(c)}<span class="tag right">${TYPELABEL[c.type]}</span></div>
-      <div class="q">${c.q}</div><div class="provslot"></div>
+        provHTML(c)}<span class="cmend"><span class="tag right">${TYPELABEL[c.type]}</span>${flagBtnHTML(c.key)}</span></div>
+      <div class="q">${c.q}</div><div class="provslot"></div><div class="flagslot"></div>
       ${figHTML(c)}`;
   if(c.type==='flash')    studyFlash(G,head,c);
   else if(c.type==='saq') studyWritten(G,head,c);
@@ -15858,11 +16249,16 @@ function examResults(){
     ${EX.qs.map((q,i)=>{
       const m=EX.marks[i], ic=m.got===m.tot?'✅':m.got?'➖':'❌';
       const head=`<div class="rhead" data-i="${i}"><span class="ic">${ic}</span><span class="qq">${q.q}</span><span style="font-weight:800">${m.got}/${m.tot}</span></div>`;
+      /* Flagging appears in the REVIEW and never during the paper — same rule as the
+         source badges. Mid-question it would be a hint the real sitting will not
+         give you; afterwards, a mark you are sure is wrong is the single best
+         moment anyone ever gets to catch a bad answer key. */
+      const flag=`<div class="revflag">${flagBtnHTML(q.key)}</div><div class="flagslot"></div>`;
       if(q.type==='saq') return `<div class="rev">${head}
-        <div class="rbody hidden" id="rb${i}"><ul class="points">${q.points.map((p,k)=>`<li class="${m.ticks[k]?'got':''}"><span class="n">${k+1}</span><span>${p}</span></li>`).join('')}</ul></div></div>`;
+        <div class="rbody hidden" id="rb${i}"><ul class="points">${q.points.map((p,k)=>`<li class="${m.ticks[k]?'got':''}"><span class="n">${k+1}</span><span>${p}</span></li>`).join('')}</ul>${flag}</div></div>`;
       const r=makeRunner(q,EX.resp[i]); r.rev=true;
       return `<div class="rev">${head}
-        <div class="rbody hidden" id="rb${i}">${figHTML(q)}${runnerHTML(r)}${feedbackHTML(q,EX.resp[i])}</div></div>`;
+        <div class="rbody hidden" id="rb${i}">${figHTML(q)}${runnerHTML(r)}${feedbackHTML(q,EX.resp[i])}${flag}</div></div>`;
     }).join('')}
     <div class="btnrow"><button class="btn primary" id="again">Run it again</button><button class="btn ghost" id="toStats">Progress</button></div>`;
   $$('.rhead[data-i]').forEach(h=>h.onclick=()=>{const b=$('#rb'+h.dataset.i); if(b)b.classList.toggle('hidden');});
@@ -15886,16 +16282,10 @@ function renderSearch(){
                 [].concat(...(c.pairs||[])),
                 [].concat(...(c.blanks||[]).map(b=>b.options)));
       if(!bits.filter(Boolean).map(strip).join(' ').toLowerCase().includes(q)) return;
-      let a;
-      switch(c.type){
-        case 'flash': a=c.a; break;
-        case 'mcq':   a=`Answer: <b>${c.options[c.correct]}</b>${c.why?' — '+c.why:''}`; break;
-        case 'order': a=c.steps.map((s,i)=>`${i+1}. ${strip(s)}`).join('<br/>'); break;
-        case 'cloze': a=c.blanks.map((b,i)=>`${i+1}. <b>${strip(b.options[b.correct])}</b>`).join(' · '); break;
-        case 'tfset': a=c.statements.map(s=>`<b>${s.v?'T':'F'}</b> — ${strip(s.s)}`).join('<br/>'); break;
-        case 'match': a=c.pairs.map(p=>`${strip(p[0])} → <b>${strip(p[1])}</b>`).join('<br/>'); break;
-        default:      a=(c.points||[]).map((p,i)=>`${i+1}. ${p}`).join('<br/>');
-      }
+      /* This switch used to live here in its own, slightly different copy — a cloze
+         hit listed its blanks as "1. x · 2. y" while nothing showed the sentence
+         they belong to. One renderer now, shared with All cards. */
+      const a=answerHTML(c)+(c.why?`<br/>💡 ${c.why}`:'');
       hits.push({t:`${topicName(c.topic)} · ${(TYPELABEL[c.type]||c.type).toUpperCase()}`, q:c.q, a});
     });
     (PACK.glossary||[]).forEach(g=>{ if((g.term+' '+g.def).toLowerCase().includes(q)) hits.push({t:'📖 Glossary', q:`<b>${esc(g.term)}</b>`, a:esc(g.def)}); });
@@ -16100,7 +16490,7 @@ const tp=q.get('topic'), md=q.get('mode');
 if(tp&&PACK.topics.some(t=>t.id===tp)){ S.topic=tp; save(); }
 /* learn/mcq/saq are kept here on purpose: nav() aliases them onto Study, so a hub
    link or bookmark written before the merge still lands somewhere real. */
-if(md&&['brief','study','learn','mcq','saq','exam','search','stats','audit'].includes(md)) nav(md);
+if(md&&['brief','study','learn','mcq','saq','exam','cards','search','stats','audit'].includes(md)) nav(md);
 else if(tp) nav(VIEW);   // re-render so the topic chip change shows
 })();
 </script>
