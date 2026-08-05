@@ -15347,11 +15347,17 @@ function bgRow(types){
   const all=cardsOf(types,'all');
   const bg=all.filter(c=>c.bg).length, core=all.length-bg;
   if(!bg) return '';
+  /* Careful with the wording here. "Background reading" is already the BADGE on every
+     `textbook`-tier card, and 17 of those are in the queue because they are the only
+     cards their focus point has. Calling the demoted set "the background reading" put
+     that badge on a card sitting directly under a line saying background reading was
+     excluded. So the set is described by WHY it is out — it repeats ground the
+     lecturer's own questions already cover — and the badge keeps its meaning. */
   return S.bg
-    ? `<div class="bgrow"><span>Showing all <b>${all.length}</b> cards, including the <b>${bg}</b> filed as background reading.</span>
+    ? `<div class="bgrow"><span>Showing all <b>${all.length}</b> cards, including the <b>${bg}</b> that go back over ground the course's own questions already cover.</span>
          <button class="btn ghost" id="bgTog">− Just the ${core} the course has asked about</button></div>`
-    : `<div class="bgrow"><span>Showing the <b>${core}</b> cards the course has set questions on, or that cover ground no practice test touches. The other <b>${bg}</b> are <b>background reading</b> — standard physiology written to make those make sense. They are still in the Brief and in Search.</span>
-         <button class="btn ghost" id="bgTog">+ Add the ${bg} background cards</button></div>`;
+    : `<div class="bgrow"><span>Showing the <b>${core}</b> cards the course has set questions on, plus the ones covering focus points no practice test touches. The other <b>${bg}</b> go back over that same ground in more general terms — they are still in the Brief and in Search.</span>
+         <button class="btn ghost" id="bgTog">+ Add the other ${bg} cards</button></div>`;
 }
 /* Delegated, not wired per render, for the same reason #scopeClr is: every other
    post-render binding in this file attaches on a setTimeout and is documented as racy,
@@ -15384,8 +15390,9 @@ function gate(cb,types,readyNote){
       h.innerHTML = h.innerHTML ? '' : `<div class="doorhelp">
         <p><b>Both doors hold exactly the same cards.</b> The only difference is who
         decides what you see next.</p>
-        ${hasBG()?`<p>Both are also showing the same set — the <b>background reading</b>
-        switch below sits outside this choice and applies to either door.</p>`:''}
+        ${hasBG()?`<p>Both are also showing the same set — the switch below, for how
+        much of the pack is in the queue, sits outside this choice and applies to
+        either door.</p>`:''}
         <p><b>🎯 Get me ready</b> decides for you. You still get through every card${
           systemBlocks()?`, working through the course in its own order — one system
         finished before the next one starts. Inside each block it leads`:` —
@@ -15756,7 +15763,7 @@ function renderExamSetup(){
       <p>A full practice run under the real conditions: <b>${nA}</b> marked-for-you + <b>${nS}</b> written questions, every topic mixed${cfg.minutes?`, <b>${cfg.minutes} minutes</b> on the clock`:''}. Nothing is marked until the end. Marked ${passPhrase()}.</p>
       ${PASSTARGET()?`<p style="font-size:12.5px;color:var(--tx3);margin:-8px 0 14px">${passCaveat()}</p>`:''}
       ${cfg.noPaper?`<div class="packwarn">✋ <b>No rough paper.</b> That's the real condition — work the multi-step questions in your head, not on a pad.</div>`:''}
-      ${hasBG()&&!S.bg?`<p style="font-size:12.5px;color:var(--tx3);margin:-8px 0 14px">Drawn from the <b>${autoAll.length+saqAll.length}</b> questions you are studying, not the background reading — so it cannot ask you something the queue has never shown you. Add the background cards in <b>Study</b> and this widens with them.</p>`:''}
+      ${hasBG()&&!S.bg?`<p style="font-size:12.5px;color:var(--tx3);margin:-8px 0 14px">Drawn from the <b>${autoAll.length+saqAll.length}</b> questions you are studying — so it cannot ask you something the queue has never shown you. Add the other cards in <b>Study</b> and this widens with them.</p>`:''}
       ${nA+nS>0?`<button class="bigstart" id="start">START THE MOCK TEST</button>`:`<div class="empty">This pack has no questions to sit yet — a mock test needs at least one.</div>`}
       ${last?`<p style="margin:12px 0 0;text-align:center">Last attempt: <b>${last.score}%</b> ${last.pass?'✅':'❌'}</p>`:''}
       ${PACK.exam&&PACK.exam.date&&daysLeft()!=null&&daysLeft()>=0?`<p style="margin:8px 0 0;text-align:center;font-size:12.5px;color:var(--tx3)">${
@@ -15993,7 +16000,7 @@ function renderStats(){
         <div class="bar"><i style="width:${x.m==null?0:Math.round(x.m*100)}%"></i></div>
         <div class="sub">${x.m==null?'You have not answered anything on this one yet.':'Your weakest so far.'}
           <button class="wlink" style="margin-top:6px" data-brief="${x.cr.id}">→ Read it in the Brief</button></div></div>`).join('')}`:''}
-    ${hasBG()&&!S.bg?`<div class="doornote" style="border-left-color:var(--line2)">Counting the <b>${all.length}</b> cards you are studying. The background reading is not in these numbers — add it in <b>Study</b> and they recount.</div>`:''}
+    ${hasBG()&&!S.bg?`<div class="doornote" style="border-left-color:var(--line2)">Counting the <b>${all.length}</b> cards you are studying. The rest of the pack is not in these numbers — add it in <b>Study</b> and they recount.</div>`:''}
     <h2 class="sec">Topics</h2>
     ${PACK.topics.map(t=>{
       const cs=all.filter(c=>c.topic===t.id);
