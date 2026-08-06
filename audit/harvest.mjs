@@ -32,6 +32,13 @@ const QUIZ_TOPIC = [
   [/CVS REVIEW|CVS LAB REVIEW/i, 'cvs-anat'],
   [/Practice Lab 1/i, 'cvs-anat'],
   [/Practice Lab 2/i, 'resp-anat'],
+  /* The three Module 1.2 quizzes captured 6 Aug 2026. Without these the 27 questions
+     they contribute that name no routable keyword fall through to `terms` — a topic the
+     pack RETIRED, which apply-migration then silently re-files under resp-anat. Gas-law
+     and acid-base cards arriving in "Respiratory anatomy" is not a routing decision,
+     it is the absence of one. */
+  [/RESPIRATORY SYSTEM GAS LAWS|RESPIRATION BLOOD CARRYING GASES/i, 'resp-gas'],
+  [/STUDENT MARKED.*RESPIRATORY PRACTICE TEST/i, 'resp-anat'],
 ];
 const KEYWORD_TOPIC = [
   [/\bECG\b|P wave|QRS|repolaris|depolaris|heart sound|S1|S2|murmur|conduction/i, 'cvs-ecg'],
@@ -45,6 +52,16 @@ const KEYWORD_TOPIC = [
   [/vaccin|immunis|immuniz|antigen|antibody|lymphocyte|immune/i, 'immune'],
   [/valve|atri|ventricl|pericard|myocard|endocard|septum|heart wall/i, 'cvs-anat'],
   [/trachea|bronch|larynx|pharynx|nose|nasal|pleura|lung tissue/i, 'resp-anat'],
+  /* ── added 6 Aug 2026 with the gas-laws / blood-gases / practice-test captures ──
+     APPENDED, NEVER INSERTED. routeTopic returns on the first keyword hit, so a rule
+     placed above an existing one can quietly re-file cards that have been routing
+     correctly for three passes. Appended, these can only claim questions that reach
+     the end of the list — which today is 27 questions, all of them new. */
+  [/\bexternal respiration\b|\binternal respiration\b|gas law|atmospher/i, 'resp-gas'],
+  [/oxygen is transported|carbon dioxide is transported|carbon dixoide is transported|hypoxia|oxygen exchange/i, 'resp-gas'],
+  [/acidosis|alkalosis|blood pH|\bpH of\b/i, 'resp-control'],
+  [/inspiration|expiration|inhalation|exhalation|diaphragm|intercostal|elastic recoil/i, 'resp-mech'],
+  [/patent or open airway|trachealis|carina|self cleaning|muco-?cili/i, 'resp-anat'],
 ];
 
 function routeTopic(z, q) {

@@ -152,7 +152,10 @@
     {
       "k": "k15rez0i",
       "was": "Explain the meanings of cardiac reserve and ejection fraction. The answer below contains two errors in the underlined parts. Find the errors and replace them with alternatives that would make the definitions correct. Cardiac reserve The 1.m aximum capacity of the heart to increase its 2.input if put under stress e. g. by exercising Ejection fraction The % of the blood ejected per beat from the 3. ventricles . 4. 70% is good.",
-      "sub": [["the underlined parts", "the numbered parts below"]]
+      "sub": [["the underlined parts", "the numbered parts below"],
+              ["correct. Cardiac reserve The", "correct.<br><br><b>Cardiac reserve</b> — The"],
+              ["The 1.m aximum capacity", "The 1.maximum capacity"],
+              ["e. g. by exercising Ejection fraction", "e. g. by exercising<br><br><b>Ejection fraction</b> —"]]
     },
     {
       "k": "kr5igry",
@@ -172,7 +175,31 @@
     {
       "k": "k1e8t3wy",
       "was": "Describe the direct renal control of BP. The are two errors in the underlined numbered answers given below. Find them and correct them by choosing the correct pairs in the matching exercise. Low BP 1.Reduced blood flow to the kidney leads to 2. increased filtration leads to reduced urine output increasing blood volume leading to 3.reduced SV to increase BP. High BP 4.Increased blood flow to kidney leads to increased filtration leads to 5. Increased urine output reducing blood volume. Reduced blood volume leads to 6.decreased SV bringing BP down.",
-      "sub": [["The are two errors in the underlined numbered answers given below", "There are two errors in the numbered answers below"]]
+      "sub": [["The are two errors in the underlined numbered answers given below", "There are two errors in the numbered answers below"],
+              ["matching exercise. Low BP", "matching exercise.<br><br><b>Low BP</b> —"],
+              ["to increase BP. High BP", "to increase BP.<br><br><b>High BP</b> —"]]
+    },
+
+    {
+      "_group": "READER-FLAGGED, 6 Aug 2026. Five cards a reader marked as unclear, typo or wrong question in the live tool. Each was checked against the raw capture in questions.json FIRST — every defect below is present there, so none of them is a harvest bug, and all five are the lecturer's own text arriving exactly as Canvas served it.",
+
+      "k": "kmec3wz",
+      "was": ".",
+      "q": "Capillary types and the two circulations — complete each statement with the term that finishes it.",
+      "_why": "Canvas served this question's text as a single full stop: the raw capture reads `. [[IMG]] [[IMG:...]] [[IMG:...]]`, so the whole stem was carried by images. Two of the three bound (a pulmonary/systemic circuit diagram and a neurovascular-bundle micrograph) and neither states the task. This is the textbook case for a full replacement — a stem carrying no content at all — and the seven statements it is asking about are untouched, so the card still diffs against the capture."
+    },
+
+    {
+      "k": "kaximzl",
+      "was": "What is the difference between t he tricuspid and mitral valve?",
+      "sub": [["t he ", "the "]],
+      "_why": "Her typo, present in the capture. One space, nothing else moved."
+    },
+    {
+      "k": "k19lceeq",
+      "was": "What is the difference between t he semilunar and atrioventricular valves?",
+      "sub": [["t he ", "the "]],
+      "_why": "The same typo on the next question of the same quiz."
     }
   ]
 }

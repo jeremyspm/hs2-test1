@@ -1,5 +1,5 @@
 {
- "bound": 37,
+ "bound": 41,
  "figMissing": [
   {
    "quiz": "MODULE 1.1: CVS3 CARDIAC CONDUCTION & ECG (10 marks)",
@@ -106,6 +106,14 @@
    "q": "Examine the figure above of the pulmonary and systemic circulations. Describe the structur"
   },
   {
+   "quiz": "MODULE 1.2: (SAQ &MC) STUDENT MARKED: RESPIRATORY PRACTICE TEST (20 marks)",
+   "n": "Question 21",
+   "type": "match",
+   "hold": "incomplete",
+   "why": "the card names 5 figures (IMAGE E, IMAGE B, IMAGE A, IMAGE D, IMAGE C) but only 2 survived the capture",
+   "q": "A B C D E"
+  },
+  {
    "quiz": "MODULE 1.2: RESP BASIC ANATOMY (10 Marks)",
    "n": "Question 11",
    "type": "mcq",
@@ -144,6 +152,22 @@
    "hold": "decorative",
    "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
    "q": "The stripy muscle at the back of the trachea holds the ends of the C-shaped cartilage ring"
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATION BLOOD CARRYING GASES (15 Marks)",
+   "n": "Question 7",
+   "type": "cloze",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "Complete the passage. (MODULE 1.2) From the article linked above: \"initial O2 binding indu"
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATION BLOOD CARRYING GASES (15 Marks)",
+   "n": "Question 9",
+   "type": "match",
+   "hold": "incomplete",
+   "why": "the card names 8 figures (SLIDE 1, SLIDE 2, SLIDE 3, SLIDE 4, SLIDE 5, SLIDE 6, SLIDE 7, SLIDE 8) but only 5 survived the capture",
+   "q": "Match the slide numbers with the descriptions given. SLIDE 1 SLIDE 2 SLIDE 3 SLIDE 4 SLIDE"
   },
   {
    "quiz": "MODULE 1.3: QUIZ: DISEASES / TERMINOLOGY RELATED TO THE LYMPHATIC SYSTEM",
@@ -274,6 +298,7 @@
    "q": "The structure labelled B is the"
   }
  ],
- "noFigureNeeded": 150,
- "multi": 2
+ "noFigureNeeded": 197,
+ "multi": 2,
+ "incomplete": 2
 }

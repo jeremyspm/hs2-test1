@@ -1,12 +1,12 @@
 {
  "herCount": {
-  "resp-2": 43,
-  "resp-7": 11,
-  "resp-17": 9,
-  "cvs-2": 17,
+  "resp-2": 55,
+  "resp-7": 26,
+  "resp-17": 10,
+  "cvs-2": 18,
   "cvs-3": 15,
   "cvs-10": 2,
-  "resp-6": 6,
+  "resp-6": 11,
   "cvs-14": 12,
   "cvs-12": 11,
   "cvs-15": 32,
@@ -15,26 +15,26 @@
   "cvs-8": 30,
   "cvs-4": 10,
   "cvs-9": 15,
-  "resp-13": 8,
-  "cvs-11": 11,
+  "resp-13": 9,
+  "cvs-11": 12,
   "cvs-13": 3,
-  "resp-14": 11,
+  "resp-14": 18,
   "lymph-2": 14,
   "cs-vacc": 4,
   "cvs-7": 8,
+  "resp-5": 24,
+  "resp-4": 14,
+  "resp-12": 5,
+  "resp-1": 3,
+  "resp-9": 4,
+  "resp-8": 14,
+  "resp-11": 14,
   "resp-3": 5,
-  "resp-5": 12,
-  "resp-4": 9,
-  "resp-1": 4,
-  "resp-8": 4,
-  "resp-11": 8,
-  "resp-12": 2,
   "resp-10": 2,
   "lymph-4": 2,
   "lymph-1": 4,
   "lymph-3": 1,
-  "cs-bp": 4,
-  "resp-9": 1
+  "cs-bp": 4
  },
  "nowBlind": [
   "cvs-1",
@@ -929,6 +929,156 @@
    ]
   },
   {
+   "quiz": "MODULE 1.2: (SAQ &MC) STUDENT MARKED: RESPIRATORY PRACTICE TEST (20 marks)",
+   "n": "Question 1",
+   "crits": [
+    "resp-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: (SAQ &MC) STUDENT MARKED: RESPIRATORY PRACTICE TEST (20 marks)",
+   "n": "Question 2",
+   "crits": [
+    "resp-2",
+    "resp-4"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: (SAQ &MC) STUDENT MARKED: RESPIRATORY PRACTICE TEST (20 marks)",
+   "n": "Question 3",
+   "crits": [
+    "resp-12"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: (SAQ &MC) STUDENT MARKED: RESPIRATORY PRACTICE TEST (20 marks)",
+   "n": "Question 4",
+   "crits": [
+    "resp-1",
+    "resp-9"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: (SAQ &MC) STUDENT MARKED: RESPIRATORY PRACTICE TEST (20 marks)",
+   "n": "Question 5",
+   "crits": [
+    "resp-2",
+    "resp-4"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: (SAQ &MC) STUDENT MARKED: RESPIRATORY PRACTICE TEST (20 marks)",
+   "n": "Question 6",
+   "crits": [
+    "resp-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: (SAQ &MC) STUDENT MARKED: RESPIRATORY PRACTICE TEST (20 marks)",
+   "n": "Question 7",
+   "crits": [
+    "resp-6"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: (SAQ &MC) STUDENT MARKED: RESPIRATORY PRACTICE TEST (20 marks)",
+   "n": "Question 8",
+   "crits": [
+    "resp-6"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: (SAQ &MC) STUDENT MARKED: RESPIRATORY PRACTICE TEST (20 marks)",
+   "n": "Question 9",
+   "crits": [
+    "resp-2"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: (SAQ &MC) STUDENT MARKED: RESPIRATORY PRACTICE TEST (20 marks)",
+   "n": "Question 10",
+   "crits": [
+    "resp-8"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: (SAQ &MC) STUDENT MARKED: RESPIRATORY PRACTICE TEST (20 marks)",
+   "n": "Question 11",
+   "crits": [
+    "resp-7"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: (SAQ &MC) STUDENT MARKED: RESPIRATORY PRACTICE TEST (20 marks)",
+   "n": "Question 12",
+   "crits": [
+    "resp-8",
+    "resp-11"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: (SAQ &MC) STUDENT MARKED: RESPIRATORY PRACTICE TEST (20 marks)",
+   "n": "Question 13",
+   "crits": [
+    "resp-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: (SAQ &MC) STUDENT MARKED: RESPIRATORY PRACTICE TEST (20 marks)",
+   "n": "Question 14",
+   "crits": [
+    "resp-7"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: (SAQ &MC) STUDENT MARKED: RESPIRATORY PRACTICE TEST (20 marks)",
+   "n": "Question 15",
+   "crits": [
+    "resp-11"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: (SAQ &MC) STUDENT MARKED: RESPIRATORY PRACTICE TEST (20 marks)",
+   "n": "Question 16",
+   "crits": [
+    "resp-5",
+    "resp-6"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: (SAQ &MC) STUDENT MARKED: RESPIRATORY PRACTICE TEST (20 marks)",
+   "n": "Question 17",
+   "crits": [
+    "resp-5",
+    "resp-7",
+    "resp-8",
+    "resp-9"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: (SAQ &MC) STUDENT MARKED: RESPIRATORY PRACTICE TEST (20 marks)",
+   "n": "Question 20",
+   "crits": [
+    "resp-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: (SAQ &MC) STUDENT MARKED: RESPIRATORY PRACTICE TEST (20 marks)",
+   "n": "Question 21",
+   "crits": [
+    "cvs-2",
+    "resp-2",
+    "resp-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: (SAQ &MC) STUDENT MARKED: RESPIRATORY PRACTICE TEST (20 marks)",
+   "n": "Question 22",
+   "crits": [
+    "resp-2"
+   ]
+  },
+  {
    "quiz": "MODULE 1.2: RESP BASIC ANATOMY (10 Marks)",
    "n": "Question 1",
    "crits": [
@@ -1040,6 +1190,7 @@
    "crits": [
     "resp-2",
     "resp-5",
+    "resp-7",
     "resp-17"
    ]
   },
@@ -1082,6 +1233,109 @@
    ]
   },
   {
+   "quiz": "MODULE 1.2: RESPIRATION BLOOD CARRYING GASES (15 Marks)",
+   "n": "Question 1",
+   "crits": [
+    "resp-14"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATION BLOOD CARRYING GASES (15 Marks)",
+   "n": "Question 2",
+   "crits": [
+    "resp-14"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATION BLOOD CARRYING GASES (15 Marks)",
+   "n": "Question 3",
+   "crits": [
+    "resp-14"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATION BLOOD CARRYING GASES (15 Marks)",
+   "n": "Question 4",
+   "crits": [
+    "resp-14"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATION BLOOD CARRYING GASES (15 Marks)",
+   "n": "Question 5",
+   "crits": [
+    "resp-14"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATION BLOOD CARRYING GASES (15 Marks)",
+   "n": "Question 6",
+   "crits": [
+    "resp-14"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATION BLOOD CARRYING GASES (15 Marks)",
+   "n": "Question 7",
+   "crits": [
+    "resp-7",
+    "resp-8",
+    "resp-11"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATION BLOOD CARRYING GASES (15 Marks)",
+   "n": "Question 8",
+   "crits": [
+    "resp-11",
+    "resp-12"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATION BLOOD CARRYING GASES (15 Marks)",
+   "n": "Question 9",
+   "crits": [
+    "resp-2",
+    "resp-4",
+    "resp-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATION BLOOD CARRYING GASES (15 Marks)",
+   "n": "Question 10",
+   "crits": [
+    "resp-2"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATION BLOOD CARRYING GASES (15 Marks)",
+   "n": "Question 11",
+   "crits": [
+    "resp-2"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATION BLOOD CARRYING GASES (15 Marks)",
+   "n": "Question 12",
+   "crits": [
+    "resp-2"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATION BLOOD CARRYING GASES (15 Marks)",
+   "n": "Question 13",
+   "crits": [
+    "resp-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATION BLOOD CARRYING GASES (15 Marks)",
+   "n": "Question 14",
+   "crits": [
+    "resp-5"
+   ]
+  },
+  {
    "quiz": "MODULE 1.2: RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)",
    "n": "Question 1",
    "crits": [
@@ -1101,7 +1355,8 @@
    "quiz": "MODULE 1.2: RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)",
    "n": "Question 3",
    "crits": [
-    "resp-2"
+    "resp-2",
+    "resp-7"
    ]
   },
   {
@@ -1251,7 +1506,6 @@
    "quiz": "MODULE 1.2: RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)",
    "n": "Question 23",
    "crits": [
-    "resp-1",
     "resp-10"
    ]
   },
@@ -1274,6 +1528,158 @@
    "n": "Question 26",
    "crits": [
     "resp-11"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM GAS LAWS (20 marks)",
+   "n": "Question 1",
+   "crits": [
+    "resp-8"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM GAS LAWS (20 marks)",
+   "n": "Question 2",
+   "crits": [
+    "resp-7",
+    "resp-8"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM GAS LAWS (20 marks)",
+   "n": "Question 3",
+   "crits": [
+    "resp-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM GAS LAWS (20 marks)",
+   "n": "Question 4",
+   "crits": [
+    "resp-5",
+    "resp-7",
+    "resp-8",
+    "resp-9"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM GAS LAWS (20 marks)",
+   "n": "Question 5",
+   "crits": [
+    "resp-12"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM GAS LAWS (20 marks)",
+   "n": "Question 6",
+   "crits": [
+    "resp-6",
+    "resp-17"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM GAS LAWS (20 marks)",
+   "n": "Question 7",
+   "crits": [
+    "cvs-11",
+    "resp-7",
+    "resp-8"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM GAS LAWS (20 marks)",
+   "n": "Question 8",
+   "crits": [
+    "resp-7"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM GAS LAWS (20 marks)",
+   "n": "Question 9",
+   "crits": [
+    "resp-8",
+    "resp-14"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM GAS LAWS (20 marks)",
+   "n": "Question 10",
+   "crits": [
+    "resp-6"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM GAS LAWS (20 marks)",
+   "n": "Question 11",
+   "crits": [
+    "resp-2"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM GAS LAWS (20 marks)",
+   "n": "Question 12",
+   "crits": [
+    "resp-8",
+    "resp-11"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM GAS LAWS (20 marks)",
+   "n": "Question 13",
+   "crits": [
+    "resp-2",
+    "resp-4"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM GAS LAWS (20 marks)",
+   "n": "Question 14",
+   "crits": [
+    "resp-11"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM GAS LAWS (20 marks)",
+   "n": "Question 15",
+   "crits": [
+    "resp-7"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM GAS LAWS (20 marks)",
+   "n": "Question 16",
+   "crits": [
+    "resp-7"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM GAS LAWS (20 marks)",
+   "n": "Question 17",
+   "crits": [
+    "resp-7"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM GAS LAWS (20 marks)",
+   "n": "Question 18",
+   "crits": [
+    "resp-7"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM GAS LAWS (20 marks)",
+   "n": "Question 19",
+   "crits": [
+    "resp-7",
+    "resp-13"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM GAS LAWS (20 marks)",
+   "n": "Question 20",
+   "crits": [
+    "resp-2",
+    "resp-4"
    ]
   },
   {
@@ -1649,7 +2055,6 @@
    "quiz": "MODULE 1: SAQ & MC: FORMATIVE CVS, LYMPHATIC & RESPIRATORY SYSTEMS *(50 marks)",
    "n": "Question 13",
    "crits": [
-    "resp-1",
     "resp-2",
     "resp-5",
     "resp-7",

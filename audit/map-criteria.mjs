@@ -40,7 +40,13 @@ const RULES = [
   ['cvs-6',  /blood flow through|pulmonary (circuit|circulation)|systemic (circuit|circulation)|coronary (artery|arteries|circulation)|route of the|widow maker|foramen ovale|ductus|arch of the aorta|descending aorta|hepatic portal|inferior vena cava|superior vena cava|major (artery|blood vessels)|interventricular artery|circumflex|deoxygenated blood to the lungs/i],
   ['cvs-7',  /heart sound|\bS1\b|\bS2\b|\blub\b|\bdub\b|lub-?dub|murmur|auscultat|phono-?cardiogram/i],
   ['cvs-8',  /\bECG\b|EKG|P wave|QRS|T wave|SA node|AV node|sinoatrial|atrioventricular node|bundle of His|Purkinje|conduction system|cardiac cycle|automaticity|depolaris|repolaris/i],
-  ['cvs-9',  /cardiac output|stroke volume|\bCO = |heart rate.*control|sympathetic.*heart|parasympathetic.*heart|vagus|inotropic|chronotropic/i],
+  /* `vagus` needs heart context. Bare, it fired on "The nerve that excites the diaphragm
+     … is the" — a PHRENIC nerve question whose third distractor is "vagus nerve" — and
+     filed it under Cardiac output, so a respiratory card displayed a cardiovascular
+     focus point. The vagus does far more than the heart; only the cardiac half is
+     cvs-9. The one card that reaches cvs-9 through this rule alone and SHOULD (the
+     Module 1 formative passage) names the heart in the same breath and still matches. */
+  ['cvs-9',  /cardiac output|stroke volume|\bCO = |heart rate.*control|sympathetic.*heart|parasympathetic.*heart|vagus[^"]{0,70}(heart|cardiac|SA node|AV node|atria|rate)|(heart|cardiac|SA node|AV node|atria)[^"]{0,70}vagus|inotropic|chronotropic/i],
   ['cvs-10', /factors? affecting (heart rate|stroke volume|cardiac output)|\bages?\b|temperature.*heart rate/i],
   ['cvs-11', /venous return|preload|afterload|Frank-?Starling|electrolyte.*(cardiac|heart)|potassium.*heart|exercise.*(cardiac|heart)/i],
   ['cvs-12', /baroreceptor|vasomotor|renin|angiotensin|aldosterone|\bADH\b|antidiuretic|blood pressure.*(control|regulat)|regulat.*blood pressure/i],
@@ -48,20 +54,57 @@ const RULES = [
   ['cvs-14', /\bshock\b|hypovolaem|hypovolem|cardiogenic|anaphylactic|septic shock|distributive/i],
   ['cvs-15', /pulse|tissue perfusion|vasoconstrict|vasodilat|ischaem|ischem|myocardial infarction|angina|bradycard|tachycard|hypertens|hypotens|pericarditis|myocarditis|endocarditis|fibrillation|asystole/i],
 
-  ['resp-1',  /processes of respiration|pulmonary ventilation|external respiration|internal respiration|cellular respiration|four (processes|stages)|metabolic reason.*respiration/i],
+  /* `external respiration` and `internal respiration` were here and are GONE. resp-9 and
+     resp-10 exist for exactly those two processes, but resp-1 is listed first, so it won
+     every time and the specific criterion could never be the one displayed: "External
+     respiration is affected by all of the following factors except" showed up under
+     "Function of the respiratory system and the four processes" rather than under
+     "External respiration and the factors affecting gas exchange", which is the criterion
+     that names what the question is testing.
+
+     resp-1 keeps the wording that is about NAMING the four processes — "pulmonary
+     ventilation is also known as" is still its question. Three cards move, each to the
+     criterion that already listed it as an alsoCrit, so no coverage is lost and resp-10
+     (the thinnest respiratory point) gains one. */
+  ['resp-1',  /processes of respiration|pulmonary ventilation|cellular respiration|four (processes|stages)|metabolic reason.*respiration/i],
   ['resp-2',  /\bnose\b|nasal|sinus|pharyn|laryn|trache|bronch|pleura|lung.*(lobe|anatomy|tissue)|respiratory tract anatomy|sizes of the two lungs|pneumonia/i],
   ['resp-3',  /conducting zone|respiratory zone|upper respiratory|lower respiratory/i],
   ['resp-4',  /pathway of air|air pass|muco-?cili|cilia|vibrissae|cough|sneeze|carina|sound production|vocal/i],
-  ['resp-5',  /alveol\w+|surfactant|respiratory membrane|type (I|II|1|2) (cell|pneumocyte)|surface tension/i],
+  /* `penumocyte` is HER spelling, on the Blood-Carrying-Gases true/false. Spelt out as
+     its own alternative rather than fuzzed, the same way `hypovolaem|hypovolem` and
+     `ischaem|ischem` are: a rule that guesses at misspellings starts matching words
+     nobody wrote. */
+  ['resp-5',  /alveol\w+|surfactant|respiratory membrane|type (I|II|1|2) (cell|pneumocyte)|surface tension|p(?:neu|enu)mocyte/i],
   ['resp-6',  /lung volume|lung capacit|tidal volume|residual volume|vital capacity|inspiratory reserve|expiratory reserve|spirometr|\bFRC\b|\bTLC\b|peak flow/i],
-  ['resp-7',  /Boyle|intrapleural|intrapulmonary|pressure.*volume change|airway resistance|compliance|pneumothorax|atelectasis|bell jar|accessory muscles|forced (breathing|exhalation|inspiration)/i],
-  ['resp-8',  /atmospheric air|alveolar air|partial pressure|Dalton|composition of.*air|total atmospheric pressure/i],
+  /* The Gas-Laws quiz states ventilation mechanics as four true/false claims about quiet
+     and forced breathing — "Quiet expiration is a passive process involving mainly
+     elastic recoil" — and none of the wording above reaches them. `forced inhalation` is
+     added alongside the existing `forced inspiration` because she uses both words. */
+  ['resp-7',  /Boyle|intrapleural|intrapulmonary|pressure.*volume change|airway resistance|compliance|pneumothorax|atelectasis|bell jar|accessory muscles|forced (breathing|exhalation|inspiration|inhalation)|quiet (inspiration|expiration|breathing)|elastic recoil|intercostal/i],
+  ['resp-8',  /atmospheric air|alveolar air|partial pressure|Dalton|composition of.*air|total atmospheric pressure|\bin the atmosphere\b/i],
   ['resp-9',  /external respiration|pulmonary gas exchange|gas exchange.*(alveol|lung)|diffusion.*(alveol|membrane)/i],
   ['resp-10', /internal respiration|tissue gas exchange|gas exchange.*tissue/i],
-  ['resp-11', /oxygen transport|oxyhaemoglobin|oxyhemoglobin|h[ae]moglobin|dissociation curve|Bohr|heme group|affinity for which/i],
+  /* `h[ae]moglobin` is one character class and "haemoglobin" needs two — so the rule has
+     only ever matched the AMERICAN spelling, and every question of hers written the
+     British way fell through to no criterion at all. It is the same failure mode as the
+     missing `\b` documented above: nothing is visible in the output except a count that
+     comes out low. `ha?emoglobin` matches both.
+
+     The bare form is guarded against `carbamino`, which is the CO₂-bound molecule and
+     belongs to resp-12. Without that, "The majority of carbon dioxide is transported"
+     matched resp-11 on its own distractor — and because resp-11 is listed first, a
+     carbon-dioxide question displayed "Transport of oxygen in the blood". `carboxy` is
+     deliberately NOT guarded: that one is about the oxygen-carrying site. `carbino` is
+     guarded alongside it because that is how the practice test spells carbamino — the
+     same reason `penumocyte` is spelt out above. Without it, "The majority of carbon
+     dixoide is transported" displayed "Transport of oxygen in the blood". */
+  ['resp-11', /oxygen transport|oxyha?emoglobin|(?<!carbamino)(?<!carbino)ha?emoglobin|dissociation curve|Bohr|heme group|haeme group|affinity for which/i],
   ['resp-12', /carbon dioxide transport|bicarbonate|carbamino|carbonic anhydrase|chloride shift/i],
   ['resp-13', /respiratory centre|respiratory center|medulla|pons|\bDRG\b|\bVRG\b|pontine|basic rhythm/i],
-  ['resp-14', /chemoreceptor|\bpH\b.*(ventilation|respiration|breathing)|PCO2.*ventilation|hypercapn|hypoxi[ac]|acidosis|alkalosis|ketoacidosis|urge to breathe|acid.?base buffer/i],
+  /* Her Blood-Carrying-Gases quiz opens with six acid-base items that never say
+     "acidosis": they say "Normal blood pH is", "Blood with a pH of 7 is", and put
+     `acidotic`/`alkalotic` in the options. Same chemistry, different part of speech. */
+  ['resp-14', /chemoreceptor|\bpH\b.*(ventilation|respiration|breathing)|blood pH|\bpH of\b|acidotic|alkalotic|PCO2.*ventilation|hypercapn|hypoxi[ac]|acidosis|alkalosis|ketoacidosis|urge to breathe|acid.?base buffer/i],
   ['resp-15', /emotion|conscious control|voluntary.*breath|hypothalam.*breath|cortical.*breath|anxiety|panic/i],
   ['resp-16', /exercise.*ventilation|body temperature.*breath|pain.*breath|irritation.*airway|hyperpnoea/i],
   ['resp-17', /asthma|bronchitis|emphysema|tuberculosis|bronchodilator|dyspnoea|apnoea|eupnoea|tachypnoea|hyperventilat|hypoventilat|hypocapn|cyanosis/i],
@@ -87,6 +130,14 @@ const CONTROLS = [
   'Identify the structures in the image below', 'Match the following', 'Choose all that apply',
   'the cartilage', 'its percentage', 'the rib cage', 'lung damage', 'the average',
   'solubility in water', 'a hyperbaric chamber', 'Select the correct answer',
+  /* Controls for the alternatives added 6 Aug 2026 with the three Module 1.2 captures.
+     Each is the near-miss its own rule could plausibly have swallowed — an atmosphere
+     that is not the air's composition, a "ph of" inside another word, a quiet that is
+     not a breath, elastic that is not recoil, and the bleed that sits two letters from
+     haemoglobin. (`pneumonia` was tried here and is not a control: resp-2 matches it on
+     purpose, which is the list working.) */
+  'a relaxed atmosphere in the ward', 'the graph of blood flow over time',
+  'the patient was quiet and settled', 'elastic stockings', 'a haemorrhage',
 ];
 const leaks = [];
 for (const s of CONTROLS) {

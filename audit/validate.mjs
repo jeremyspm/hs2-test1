@@ -37,7 +37,14 @@ for (const it of items) {
   const t = it.o.tier;
   if (!t) { fail('G1', it.where, 'no `tier`', label(it.o)); continue; }
   if (!TIERS[t]) { fail('G1', it.where, `unknown tier "${t}"`, label(it.o)); continue; }
-  if (t === 'textbook') {
+  /* A rail is a ported chain, not a question: no stem, no key, so there is nothing to
+     diff against a capture and `ev` cannot be the proof. What pins it is `from` — the
+     hs2-module1 relation set it was built out of. Requiring that keeps this gate at full
+     strength for rails rather than exempting them: a rail with no provenance still fails. */
+  if (t === 'rail') {
+    if (it.o.type !== 'rail') fail('G1', it.where, 'tier "rail" on an item that is not a rail', label(it.o));
+    else if (!it.o.from) fail('G1', it.where, 'tier "rail" requires a `from` naming the hs2-module1 set it was ported from', label(it.o));
+  } else if (t === 'textbook') {
     /* `srcNote`, not `why`. `why` is the explanation a reader gets when they answer a
        drill card wrong, and filing the sourcing reason there meant 123 auto-marked
        cards answered "why was I wrong?" with "no citation — standard textbook content
@@ -237,13 +244,36 @@ for (const c of pack.cards) {
     (critCards[id] ??= []).push(c);
   }
 }
+/* THE FLOOR IS DECLARED, NOT ENFORCED — and this gate has to agree with build.mjs or
+   it reports 13 failures on a decision the pack made deliberately.
+
+   The floor used to mean "author until every focus point has 6 cards". That standing
+   order is exactly what produced the 338 manufactured cards the pack has since culled:
+   under the rule that only her material may ship, a floor can be cleared only by MINING
+   more of her material, and where there is none left the true number is the low one.
+
+   So a shortfall is a failure only when the pack has NOT declared it. `PACK.thin` is
+   the declaration the reader is shown, and the gate now checks the two things that can
+   actually go wrong with it: an undeclared shortfall (the pack is quietly thin), and a
+   declared count that disagrees with the cards really there (the declaration is stale,
+   and is telling the reader a number that is not true). An EMPTY focus point stays a
+   hard failure — that is a hole, not thin coverage. */
+const declaredThin = new Map((pack.thin ?? []).map(t => [t.id, t]));
 for (const crit of pack.criteria ?? []) {
   const cards = critCards[crit.id] ?? [];
   const floor = crit.blind ? COVERAGE.blindMin : COVERAGE.min;
-  if (cards.length < floor) {
-    fail('G9', `criterion ${crit.id}`, `${cards.length} card(s), floor is ${floor}${crit.blind ? ' (blind)' : ''}`, crit.name);
+  const thin = declaredThin.get(crit.id);
+  if (!cards.length) {
+    fail('G9', `criterion ${crit.id}`, 'NO cards at all — a focus point the reader cannot reach', crit.name);
+  } else if (cards.length < floor && !thin) {
+    fail('G9', `criterion ${crit.id}`, `${cards.length} card(s), floor is ${floor}${crit.blind ? ' (blind)' : ''} — and PACK.thin does not declare it, so the reader is never told`, crit.name);
+  } else if (thin && thin.n !== cards.length) {
+    fail('G9', `criterion ${crit.id}`, `PACK.thin declares ${thin.n} card(s) but the pack holds ${cards.length} — the reader is shown a stale number`, crit.name);
   }
-  if (crit.blind && COVERAGE.blindNeedsSaq && !cards.some(c => c.type === 'saq')) {
+  /* `blindNeedsSaq` goes the same way and for the same reason: resp-15 and resp-16 have
+     zero questions from her anywhere in the course, so demanding a written-answer card on
+     them is demanding an invented one. Declared-thin covers it. */
+  if (crit.blind && COVERAGE.blindNeedsSaq && !thin && !cards.some(c => c.type === 'saq')) {
     fail('G9', `criterion ${crit.id}`, 'blind criterion has no SAQ card', crit.name);
   }
   if (cards.length && cards.every(c => c.tier === 'textbook') && !(pack.acknowledgedGaps ?? []).includes(crit.id)) {

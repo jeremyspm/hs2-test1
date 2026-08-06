@@ -29,6 +29,12 @@ const EXPECT = [
   ['G1', 'requires a `srcNote`'],
   ['G1', 'duplicates `srcNote`'],
   ['G1', 'requires a non-empty `ev`'],
+  /* The rail tier arrived with the 46 ported chains and went in without a tripwire —
+     which is how 46 "unknown card type" failures sat in the report for a whole session
+     and buried the one real G11 hit under them. Both halves of the rule are checked:
+     a rail must say where it came from, and nothing else may wear the tier. */
+  ['G1', 'requires a `from`'],
+  ['G1', 'not a rail'],
   ['G2', 'unknown source'],
   ['G3', 'no such location'],
   ['G3', 'quote not present'],
@@ -43,6 +49,10 @@ const EXPECT = [
   ['G8', 'her own question says'],
   ['G9', 'floor is'],
   ['G9', 'no SAQ card'],
+  /* An empty focus point is a hole and stays a hard failure; a shortfall the pack has
+     DECLARED is not. These two prove the split did not collapse into "G9 never fires". */
+  ['G9', 'NO cards at all'],
+  ['G9', 'stale number'],
   ['G10', 'textbook-tier'],
   ['G11', 'refers to a figure'],
   ['G11', 'unresolved image marker'],

@@ -112,7 +112,19 @@ print("\n  largest after encoding:")
 for r in biggest:
     print(f"    {r['new_bytes']/1024:6.0f} KB  {r['new_wh'][0]}x{r['new_wh'][1]:<5} {r['kind']:<9} (was {r['wh'][0]}x{r['wh'][1]}, {r['orig_bytes']/1048576:.1f} MB)")
 BUDGET = 2 * 1048576
-print(f"\n  binary {new/1048576:.2f} MB  ->  ships as base64 {shipped/1048576:.2f} MB  (+33%)")
-print(f"  budget 2.00 MB of BASE64 — {'OK' if shipped <= BUDGET else 'OVER by %.2f MB' % ((shipped-BUDGET)/1048576)}")
+print(f"\n  binary {new/1048576:.2f} MB  ->  base64 {shipped/1048576:.2f} MB  (+33%)")
+# THIS NUMBER IS NOT THE SHIPPED PAYLOAD, and enforcing a budget on it was wrong in both
+# directions. It encodes every image any harvested card REFERENCES, including the cards
+# bind-images.mjs then holds — so it can fail a build whose real payload is comfortably
+# under. And it counts each image once, while bind-images inlines a full data URI per
+# card, so an image used by two cards ships twice: this said 2.33 MB for a payload that
+# actually inlined 2.46 MB, i.e. it passed nothing it claimed to pass.
+#
+# The budget is therefore enforced in bind-images.mjs, which is the only step that knows
+# what ships. What is printed here is an UPPER BOUND on the encode, kept because it is
+# the number to look at when deciding whether the profiles below need tightening.
+print(f"  budget 2.00 MB of base64 is enforced on the SHIPPED payload, in bind-images.mjs.")
+print(f"  this is an upper bound over every referenced image — {'inside' if shipped <= BUDGET else 'OVER'} it by "
+      f"{abs(shipped-BUDGET)/1048576:.2f} MB")
 print("\nwrote audit/images-optimised.json, images-report.json")
-sys.exit(0 if shipped <= BUDGET else 1)
+sys.exit(0)

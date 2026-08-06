@@ -721,11 +721,39 @@ const PACK = {
             ['Wall of a single endothelial layer','Capillary'],
             ['Large lumen, thin wall, collapses when empty','Vein'] ],
     distractors:['No endothelium at all','Cardiac muscle in the wall'] },
-  { type:'saq', topic:'cvs-vessels', crit:'cvs-2', src:'MODULE 1 Formative Test (Canvas) — Q26 model answer', q:'You are shown a micrograph of an artery and a vein side by side. Identify 3 things you CAN see that support the labels, and 2 differences you CANNOT see. (3 marks)', marks:3,
-    points:['CAN see: presence of the IEL (internal elastic lamina) in the artery; relatively thicker media in the artery; artery maintains its shape better than the vein',
-            'CAN see (also creditable): artery has a smaller lumen compared to the vessel wall; artery is smaller compared to the vein in overall diameter',
-            'CANNOT see: the vein will have valves; the vein is transporting blood to the heart, not from the heart; the vein will have lower pressure inside it'],
-    model:'The lecturer\'s own marking schedule from Module 1 Formative Test Q26, reproduced verbatim. The examiner is testing whether you can separate structural evidence from inference.' },
+  /* Her wording, from the formative capture (page 20): "Identify 3 things that support
+     the labels of the artery and the vein that you can see. Also identify 2 differences
+     between the artery and vein that you CANNOT see in the diagram."
+
+     Two things a reader flagged, both fixed here. The stem used to open "You are shown a
+     micrograph of an artery and a vein side by side" — this pack has no such micrograph,
+     so it promised an image that never appears. G11 had been failing on exactly that for
+     as long as the card has existed and nobody acted on it, which is the argument for
+     reading the validator's output rather than only its exit code. The image is not
+     needed: the answer is what an artery and a vein look like in general, not what one
+     particular slide shows, so the stem now asks the question without one and G11 passes
+     for the right reason. And it claimed "(3 marks)" while asking for five things —
+     nothing on that page of the capture states a mark value, so the unsourced claim goes,
+     the same way the lung-volumes SAQ lost its mark claim.
+
+     The marking points are her five visible and three invisible differences, one per
+     line as she listed them, instead of three lines with several crammed into each.
+
+     `marks:5` is 3 + 2 — the number of items her own question asks for, which is stated
+     in the question itself. It is NOT a claim about her mark allocation, and the engine
+     never prints it: `marks` only sets how heavily the mock test weights this card. It
+     has to be set explicitly, because `cardMarks` falls back to `points.length` for an
+     saq, and that is 8 here now the marking points are one per line. */
+  { type:'saq', topic:'cvs-vessels', crit:'cvs-2', src:'MODULE 1 Formative Test (Canvas) — Q26 model answer', q:'An artery and a vein sit side by side under the microscope, each already named. Identify <b>3 things you CAN see</b> that support the naming, and <b>2 differences you CANNOT see</b>.', marks:5,
+    points:['CAN see: the internal elastic lamina (IEL) is present in the artery',
+            'CAN see: the artery has a relatively thicker tunica media',
+            'CAN see: the artery holds its shape better than the vein',
+            'CAN see: the artery has a smaller lumen relative to the thickness of its wall',
+            'CAN see: the artery is smaller than the vein in overall diameter',
+            'CANNOT see: the vein has valves',
+            'CANNOT see: the vein carries blood towards the heart, not away from it',
+            'CANNOT see: the pressure inside the vein is lower'],
+    model:'Every point above is from the lecturer\'s own marking schedule for Module 1 Formative Test Q26. Hannetjie lists five visible differences and three invisible ones — you need only 3 and 2, so any three of the first group and any two of the second earn the marks. The examiner is testing whether you can separate structural evidence from inference.' },
 
   /* ══════════ cvs-3 · CAPILLARY FLUID DYNAMICS ══════════ */
   { type:'flash', topic:'cvs-vessels', crit:'cvs-3', src:'2026 CIRCULATION VESSELS CV1-2 slide 24', q:'What are the two opposing pressures governing fluid movement at a capillary?',
@@ -1549,12 +1577,19 @@ const PACK = {
             ['Respiratory membrane','Alveolar epithelium, fused basement membranes and capillary endothelium — 0.5 to 1 µm'] ],
     distractors:['Produces mucus for the escalator','Generates the respiratory rhythm'] },
   { type:'match', topic:'resp-mech', crit:'resp-6', fig:F('resp2-volumes'), figcap:FC('resp2-volumes'),
-    q:'Read the spirogram and match each label to its definition.',
+    q:'Using the spirogram above, match each lung volume or capacity to what it means.',
+    /* The volumes track the trace in the figure, which is the only spirogram the reader
+       is shown: 500 + 3000 + 1100 = 4600 vital capacity, + 1200 residual = 5800 total.
+       They used to read 3100 / 1200 / 4800 — a second, self-consistent textbook set that
+       contradicted the figure printed directly above them, which is what a reader flagged.
+       The course states only two of these: the lab workbook (page 41) gives TV 500 mL and
+       RV 1200 mL and leaves IRV, ERV and VC blank for the student to read off a graph, so
+       there is no lecture figure to prefer over the pack's own. */
     pairs:[ ['Tidal volume','Air moved in one quiet breath (~500 mL)'],
-            ['Inspiratory reserve volume','Extra air that can be inhaled beyond a tidal breath (~3100 mL)'],
-            ['Expiratory reserve volume','Extra air that can be exhaled beyond a tidal breath (~1200 mL)'],
+            ['Inspiratory reserve volume','Extra air that can be inhaled beyond a tidal breath (~3000 mL)'],
+            ['Expiratory reserve volume','Extra air that can be exhaled beyond a tidal breath (~1100 mL)'],
             ['Residual volume','Air that always remains and cannot be exhaled (~1200 mL)'],
-            ['Vital capacity','TV + IRV + ERV — the most air movable in one breath (~4800 mL)'] ],
+            ['Vital capacity','TV + IRV + ERV — the most air movable in one breath (~4600 mL)'] ],
     distractors:['Air in the conducting airways that never reaches the alveoli','Minute ventilation'] },
   { type:'tfset', topic:'resp-gas', crit:'resp-11', fig:F('resp3-odc'), figcap:FC('resp3-odc'),
     q:'Read the oxyhaemoglobin dissociation curve. Are these statements true or false?',

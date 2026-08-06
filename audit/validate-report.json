@@ -85,6 +85,18 @@
    "detail": "G10a: textbook-only criterion"
   },
   {
+   "gate": "G1",
+   "where": "card #22",
+   "msg": "tier \"rail\" requires a `from` naming the hs2-module1 set it was ported from",
+   "detail": ""
+  },
+  {
+   "gate": "G1",
+   "where": "card #23",
+   "msg": "tier \"rail\" on an item that is not a rail",
+   "detail": "G1g: rail tier on a flash card"
+  },
+  {
    "gate": "G2",
    "where": "card #5",
    "msg": "unknown source \"SRC-DOES-NOT-EXIST\"",
@@ -171,12 +183,12 @@
   {
    "gate": "G9",
    "where": "criterion c-floor",
-   "msg": "0 card(s), floor is 6"
+   "msg": "NO cards at all — a focus point the reader cannot reach"
   },
   {
    "gate": "G9",
    "where": "criterion c-blind",
-   "msg": "0 card(s), floor is 10 (blind)"
+   "msg": "NO cards at all — a focus point the reader cannot reach"
   },
   {
    "gate": "G9",
@@ -186,12 +198,17 @@
   {
    "gate": "G9",
    "where": "criterion c-textbook-only",
-   "msg": "1 card(s), floor is 6"
+   "msg": "1 card(s), floor is 6 — and PACK.thin does not declare it, so the reader is never told"
   },
   {
    "gate": "G10",
    "where": "criterion c-textbook-only",
    "msg": "covered ONLY by textbook-tier cards and not listed in pack.acknowledgedGaps"
+  },
+  {
+   "gate": "G9",
+   "where": "criterion c-stale-thin",
+   "msg": "PACK.thin declares 99 card(s) but the pack holds 1 — the reader is shown a stale number"
   },
   {
    "gate": "G11",
@@ -215,8 +232,9 @@
  "tiers": {
   "(none)": 1,
   "made-up": 1,
-  "textbook": 11,
+  "textbook": 12,
   "taught": 7,
-  "verbatim": 1
+  "verbatim": 1,
+  "rail": 2
  }
 }

@@ -1,23 +1,23 @@
 {
  "freeze": {
-  "at": "2026-08-05T03:11:15.062Z",
-  "commit": "f918d9b9fb9f42fe7b23317f77925f9d4f19b88e",
+  "at": "2026-08-06T05:08:01.171Z",
+  "commit": "64278d2ddd08e64d0c92e7724a003eca7a54c462",
   "files": {
    "pack.js": {
-    "bytes": 2454400,
-    "sha256": "de87ad30d5a88800beb9a26ab049642c426afcff922ccca79784cdd267201858"
+    "bytes": 2489496,
+    "sha256": "9bf4bf986c9d567f5aa06c842c9bfdb57c77c3a2049888a5f07322c469289085"
    },
    "index.html": {
-    "bytes": 3327875,
-    "sha256": "1edab9f28ca27a207d69efab22f74198128873722df6543ab6d878ec812491a1"
+    "bytes": 3459685,
+    "sha256": "e453378425fdb61e81945470be592ac5bd69b310bd273327c504184f1cd57de3"
    },
    "figs.js": {
     "bytes": 803534,
     "sha256": "ee0d312635146e073b6b6cfbbbfc08b2b168db2bce75154f4a82ae78a53e0c44"
    },
    "build.mjs": {
-    "bytes": 4041,
-    "sha256": "4142cf3144e40d21196698b7dc8dcf77726da7307556a83349ba9c2a74c32f80"
+    "bytes": 11529,
+    "sha256": "a2fccc1ba2a79e0d6fadfdb9a2cec8723be1b18d78f0ea7da0d1c39c537b4b39"
    }
   }
  },
@@ -27,8 +27,8 @@
   "withSrc": 86,
   "withoutSrc": 380,
   "srcUnresolved": 33,
-  "quantityMentions": 163,
-  "itemsWithQuantity": 80
+  "quantityMentions": 161,
+  "itemsWithQuantity": 78
  },
  "rows": [
   {
@@ -491,8 +491,8 @@
    "src": null,
    "srcInfo": null,
    "quantities": [],
-   "chars": 343,
-   "label": "An 78-year-old with shortness of breath and ankle oedema has an audible S3. This most like"
+   "chars": 342,
+   "label": "A 78-year-old with shortness of breath and ankle oedema has an audible S3. This most likel"
   },
   {
    "kind": "card",
@@ -2705,14 +2705,8 @@
    "hasFig": false,
    "src": null,
    "srcInfo": null,
-   "quantities": [
-    {
-     "value": "10",
-     "unit": "%",
-     "raw": "10%"
-    }
-   ],
-   "chars": 451,
+   "quantities": [],
+   "chars": 462,
    "label": "Name three mechanisms that cause OEDEMA in terms of capillary fluid dynamics."
   },
   {
@@ -2758,14 +2752,8 @@
    "hasFig": false,
    "src": null,
    "srcInfo": null,
-   "quantities": [
-    {
-     "value": "10",
-     "unit": "%",
-     "raw": "10%"
-    }
-   ],
-   "chars": 638,
+   "quantities": [],
+   "chars": 644,
    "label": "Complete the passage on capillary fluid exchange."
   },
   {
@@ -8438,26 +8426,6 @@
     "src": null
    }
   ],
-  "10%": [
-   {
-    "kind": "card",
-    "idx": 153,
-    "label": "Name three mechanisms that cause OEDEMA in terms of capillary fluid dynamics.",
-    "src": null
-   },
-   {
-    "kind": "card",
-    "idx": 156,
-    "label": "Complete the passage on capillary fluid exchange.",
-    "src": null
-   },
-   {
-    "kind": "card",
-    "idx": 316,
-    "label": "In what three forms is carbon dioxide carried in the blood?",
-    "src": "2026 RESP 3 slides 22–23"
-   }
-  ],
   "8mmHg": [
    {
     "kind": "card",
@@ -8873,6 +8841,14 @@
    }
   ],
   "70%": [
+   {
+    "kind": "card",
+    "idx": 316,
+    "label": "In what three forms is carbon dioxide carried in the blood?",
+    "src": "2026 RESP 3 slides 22–23"
+   }
+  ],
+  "10%": [
    {
     "kind": "card",
     "idx": 316,

@@ -32,24 +32,39 @@ const ckey = (c) => hash(c.type + '|' + strip(c.q) + '|' + csig(c));
 const { pack } = loadPack();
 const byKey = new Map(pack.cards.map(c => [ckey(c), c]));
 
-/* Does this file's ckey still agree with the one that built the pack? Every entry in
-   explanations.json was keyed by apply-migration's copy and the build refuses to ship
-   unless all of them attach, so they are a free fixture: if our keys resolve them, our
-   implementation matches. If it ever stops matching, EVERY flag would report as stale
-   and the honest-looking output would be entirely wrong — the one failure mode worth
-   spending ten lines to make impossible. */
+/* Does this file's ckey still agree with the one that built the pack? If it ever stops
+   agreeing, EVERY flag reports as stale and the honest-looking output below is entirely
+   wrong — the one failure mode worth spending ten lines to make impossible.
+
+   THE FIXTURE IS audit/ckey-fixture.json, written by apply-migration.mjs: the key of
+   every card that shipped, computed by the implementation that shipped it. Compared
+   position by position against the same cards read back out of pack.js.
+
+   It used to use explanations.json instead, on the reasoning that the build refuses to
+   ship unless every entry attaches, so they were a free fixture. They are not. Those
+   keys are computed BEFORE applyStems rewrites 28 of the questions and BEFORE the cull
+   drops the cards they were written for, so 49 of 178 could never resolve against the
+   shipped pack — and this script exited on that before printing a single flag. The hash
+   was fine the whole time; the fixture was measuring the wrong thing. */
 function checkKeyImpl() {
-  if (!existsSync('audit/explanations.json')) return;
-  const ex = JSON.parse(readFileSync('audit/explanations.json', 'utf8'));
-  const keys = [...(ex.why ?? []), ...(ex.model ?? [])].map(e => e.k);
-  if (!keys.length) return;
-  const miss = keys.filter(k => !byKey.has(k));
-  if (miss.length) {
-    console.error(`✗ ckey mismatch: ${miss.length} of ${keys.length} known-good keys do not resolve.`);
-    console.error('  This file\'s hash has drifted from apply-migration.mjs. Every result below would be wrong.');
+  const p = 'audit/ckey-fixture.json';
+  if (!existsSync(p)) {
+    console.error('✗ no audit/ckey-fixture.json — run: node audit/apply-migration.mjs --write');
     process.exit(1);
   }
-  console.log(`ckey verified against ${keys.length} known-good keys ✓`);
+  const fx = JSON.parse(readFileSync(p, 'utf8'));
+  if (fx.cards !== pack.cards.length) {
+    console.error(`✗ the fixture was built from a ${fx.cards}-card pack and pack.js has ${pack.cards.length} — regenerate it before trusting anything below.`);
+    process.exit(1);
+  }
+  const mine = pack.cards.map(ckey);
+  const miss = mine.filter((k, i) => k !== fx.keys[i]);
+  if (miss.length) {
+    console.error(`✗ ckey mismatch: ${miss.length} of ${mine.length} shipped cards hash differently here than they did in apply-migration.mjs.`);
+    console.error('  This file\'s hash has drifted. Every result below would be wrong.');
+    process.exit(1);
+  }
+  console.log(`ckey verified against all ${mine.length} shipped cards ✓`);
 }
 checkKeyImpl();
 

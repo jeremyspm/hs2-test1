@@ -1,5 +1,5 @@
 {
- "cards": 221,
+ "cards": 275,
  "skipped": [
   {
    "quiz": "Practice Lab 2: SAQ & MC Quiz (10 marks)",
@@ -84,6 +84,20 @@
    "type": "fill_in_multiple_blanks_question",
    "why": "fill-in-blank with no WORDLIST to match against (4 statement(s), 3 blank(s)) — options are accepted variants, not distractors",
    "q": "Fill in the blanks for the sequence of blood flow. 1. Superior vena cava -->2. right atriu"
+  },
+  {
+   "quiz": "MODULE 1.2: (SAQ &MC) STUDENT MARKED: RESPIRATORY PRACTICE TEST (20 marks)",
+   "n": "Question 18",
+   "type": "fill_in_multiple_blanks_question",
+   "why": "fill-in-blank with no WORDLIST to match against (0 statement(s), 2 blank(s)) — options are accepted variants, not distractors",
+   "q": "The peripheral chemoreceptors are found in the and the ."
+  },
+  {
+   "quiz": "MODULE 1.2: (SAQ &MC) STUDENT MARKED: RESPIRATORY PRACTICE TEST (20 marks)",
+   "n": "Question 19",
+   "type": "fill_in_multiple_blanks_question",
+   "why": "fill-in-blank with no WORDLIST to match against (0 statement(s), 4 blank(s)) — options are accepted variants, not distractors",
+   "q": "Decreased pH (called ) causes the respiratory centre to depth and rate of breathing, which"
   },
   {
    "quiz": "MODULE 1.2: RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)",

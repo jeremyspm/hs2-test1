@@ -31,27 +31,89 @@ uses. Mapping both formative tests onto it:
 
 **The formative tests directly drill only a third of them.** So the pack is authored
 from the focus points, and the formatives are used only to calibrate how each one
-gets asked. The eight `blind:true` ones (the seven above plus the Vaccination case
-study, which has zero immunology coverage anywhere in the course material) carry a
-higher card floor and are oversampled by the mock test. **`blind` renders as "never
-practised"** — it means *the course lists this as examinable and no practice test we
-can read covers it*, which is the sentence a student needs.
+gets asked.
+
+That table is the *formatives* alone, and it is why the pack never rested on them. The
+blind list is now recomputed on every build from all **21** captured quizzes, not
+inherited — `audit/map-criteria.mjs` maps each of her 292 questions onto the focus
+points and a point is blind only if **none of them** touches it. Eight became three:
+`cvs-1`, `resp-15` and `resp-16`. They carry a higher card floor and are oversampled by
+the mock test. **`blind` renders as "never practised"** — it means *the course lists
+this as examinable and no practice test we can read covers it*, which is the sentence a
+student needs.
 
 Full gap analysis: [`../HS2-TEST1-CRAM-SPEC.md`](../HS2-TEST1-CRAM-SPEC.md).
 
 ## Contents
 
-**586 cards** · 242 flash · 171 mcq · 54 match · 44 saq · 29 tfset · 29 cloze ·
-17 order · 74 glossary terms · 15 figures.
+**345 cards** · 157 mcq · 58 flash · 46 rail · 34 match · 19 cloze · 18 saq ·
+9 tfset · 4 order · 74 glossary terms · 15 ported figures · 56 cards carrying a
+figure lifted from the quiz that set them.
 
-Every card carries a `crit:` naming the focus point it covers, and **`node build.mjs`
-exits non-zero** if any drops below its floor (6 cards, or 10 plus a written answer
-for a never-practised one). The same command also refuses to ship if **any of the 300
-machine-marked cards has no explanation, or any of the 44 written answers has no model
-answer**. Those gates are what let the page stop warning the reader: validation output
+Every card carries a `crit:` naming the focus point it covers. **`node build.mjs`
+exits non-zero** if any focus point ends up with no card at all, and refuses to ship if
+**any of the 223 machine-marked cards has no explanation, or any of the 18 written
+answers has no model answer**. (The old *floor* of 6 cards stopped being a ship blocker
+when the manufactured cards were culled — see *One pool* below, and `PACK.thin`.)
+Those gates are what let the page stop warning the reader: validation output
 goes to the console and the **Sources** tab, `?dev=1` brings the banner back for
 authoring, and a failing pack simply does not build — `index.html` is written last, so
 a build that says NOT SHIPPING has not written one.
+
+## The three Module 1.2 quizzes, captured 6 Aug 2026
+
+`RESPIRATORY SYSTEM GAS LAWS (20)`, `RESPIRATION BLOOD CARRYING GASES (15)` and
+`(SAQ &MC) STUDENT MARKED: RESPIRATORY PRACTICE TEST (20)`. All three were captured
+from **submitted** attempts, so all three carry their answer keys: **56 of their 56
+questions were keyed**, against the 10 unkeyed questions in the whole rest of the set.
+The capture is now **21 quizzes · 292 questions · 235 keyed**, up from 18 · 236 · 180.
+
+They land exactly where the pack was thinnest. `resp-8` (composition of atmospheric vs
+alveolar air) leaves the thin list entirely; `resp-1` and `resp-12` more than double;
+`resp-7` gains 15 of her questions and `resp-5` 12.
+
+**`resp-9` stopped being an acknowledged gap.** Until now its only question was the
+asthmatic-bronchiole image item, which G11 holds because the figure is an external URL
+that was never captured — so everything shipping under *External respiration* was
+background reading, and `pack.acknowledgedGaps` said so in a note the reader could
+open. Three of her own questions now cover it, and the note went with them: it named
+one question where there are four, and called the coverage background reading where it
+is verbatim. `ACKNOWLEDGED` is now empty, which is the finding, not a disabled gate.
+
+Five things had to change for these to land cleanly, and each is a bug the new content
+exposed rather than one it caused:
+
+- **27 questions had no topic to go to.** `harvest.mjs` routes by keyword and then by
+  quiz title, and there was no title rule for any of the three — so every one of them
+  fell through to `terms`, a topic the pack RETIRED, which `apply-migration` then
+  silently re-filed under *Respiratory anatomy*. Gas-law and acid-base cards arriving
+  in anatomy is the absence of a routing decision, not one. Title rules plus five
+  keyword rules, **appended never inserted** so nothing already routing correctly moved.
+- **Two cards would have shipped unanswerable.** Her lung-histology matcher names five
+  images and her slide matcher names eight; only two and five survived the capture,
+  because the rest are external URLs. Because *some* images bound, the cards got a
+  `fig`, and G11 — which only asks whether a figure is missing entirely — passed them.
+  `bind-images.mjs` now counts the labels a card **names** ("Image C", "SLIDE 4")
+  against the figures it actually got, and holds the short ones. Arithmetic, not a
+  guess about wording: a card naming no labels is untouched, which is why the four
+  cards that merely lost a decorative image still ship.
+- **The image budget was measured in the wrong place.** `optimise-images.py` encoded
+  every *referenced* image, including those on cards that are then held, and counted
+  each image once although `bind-images` inlines a full data URI **per card**. It
+  reported 2.33 MB for a payload that really inlined 2.46 MB. The 2 MB budget now sits
+  in `bind-images.mjs`, over what actually ships — currently **1.95 MB**.
+- **`h[ae]moglobin` never matched "haemoglobin".** One character class, two letters: the
+  criteria rule had only ever matched the American spelling, so her questions written
+  the British way fell through to no focus point at all. Same failure mode as the
+  missing `\b` documented below — nothing visible but a count that comes out low.
+- **`node audit/flags.mjs` had been exiting before it printed anything**, since the
+  commit that restored the 28 stems. Its self-test required every key in
+  `explanations.json` to resolve against the shipped pack, which cannot work: those keys
+  are computed *before* `applyStems` rewrites 28 questions and *before* the cull drops
+  the cards they were written for, so 49 of 178 always missed. The hash was fine; the
+  fixture was measuring the wrong thing. `apply-migration` now writes
+  `audit/ckey-fixture.json` — the key of every card that actually shipped, computed by
+  the implementation that shipped it — and `flags.mjs` checks itself against that.
 
 ## Start in the Brief
 
@@ -67,7 +129,7 @@ opens by asking you to recall something; on a topic you only half-absorbed in th
 lecture, that is the slowest and most discouraging way in. Read the section, mark
 it read, then drill it.
 
-## Then Study — one queue, 586 cards
+## Then Study — one queue, 345 cards
 
 There is **one** practice tab. Every card in the pack is in it, and the card decides
 how it is presented: a flashcard flips and you grade yourself, a written question
@@ -79,23 +141,23 @@ with the questions Hannetjie has actually set before.
 
 This replaced three tabs (Learn, Drill, Written) that split the pack by how a card
 happened to be marked. That split made an honest card count impossible — Drill spoke
-for only the 300 machine-marked cards while Sources said 586 — and put all 44 written
-questions in two tabs at once.
+for only the machine-marked cards while Sources counted everything — and put every
+written question in two tabs at once.
 
-### 240 by default, 586 on request
+### One pool, because the manufactured cards are gone
 
-The queue holds **240** cards, not 586. The other **346** are background reading:
-standard physiology sitting on focus points Hannetjie's own questions already cover.
-Only **17** textbook cards are load-bearing — the ones holding up cvs-1, resp-9,
-resp-15 and resp-16, the four focus points with no sourced card anywhere — and those
-stay in.
+There is no background/foreground switch any longer, and no card carries `bg`. The pool
+was the right answer while the question was *how many cards is too many*; the cull
+answered a different one. **338 manufactured cards are dropped at build time**, not
+demoted: a card goes only if **every** focus point it touches already has a card sourced
+back to Hannetjie's own material, so the **25** textbook cards that remain are the
+load-bearing ones. What ships is 241 verbatim, 33 taught, 25 textbook and 46 rails.
 
-Nothing is deleted and nothing is locked. The switch sits above the queue under both
-doors and states both counts; the Brief and Search always show everything; the mock
-test draws from whichever pool you are studying, so it cannot ask you something the
-queue has never shown you; Progress counts that pool and says so. A card is demoted
-only if **every** focus point it touches already has a sourced card, and the build
-fails if that leaves any focus point with nothing to drill.
+Nothing is lost — the dropped cards are still in `pack.source.js` and
+`coverage-fill.js`, and `--keep-background` puts them back. Where that leaves a focus
+point thin, the pack **declares** it (`PACK.thin`) and the page tells the reader, rather
+than the build demanding more cards be written to clear a floor. An *empty* focus point
+is still a hard build failure.
 
 Both doors show all 38 focus points — **🎯 Get me ready** only reorders them, leading
 with the never-practised ones and whatever you are weakest on. Nothing is hidden
@@ -111,14 +173,14 @@ the content is not suspect, it just is not in the slides.
 
 ## All cards — read the pack, flag what is broken
 
-Behind the `···`. Every one of the 586 cards, standing still: group them by topic,
+Behind the `···`. Every one of the 345 cards, standing still: group them by topic,
 focus point, source or question type, open a group and read the questions with their
 answers straight through. It shows the background-reading cards too — like the Brief
 and Search, this is a view that has to be able to show *everything*.
 
 It exists because the queue is not a way to *read* a pack. Study deals one card and
 chooses it for you, Search needs the word you are looking for already, and the Brief
-is prose about focus points rather than the cards themselves — so most of these 586
+is prose about focus points rather than the cards themselves — so most of these 345
 could only be encountered, never inspected.
 
 That matters because **three of the answer keys imported from Hannetjie's own quizzes
@@ -177,12 +239,49 @@ has since been edited, which usually means it was already fixed. **It is not a b
 gate.** A flag is a reader's report, not a schema error.
 
 It does gate itself: it re-derives `ckey` in Node, so before printing anything it
-proves its copy of the hash still agrees with `apply-migration.mjs` by checking that
-all 178 keys in `explanations.json` resolve. A drifted hash would otherwise report
-every flag as stale, and look completely plausible doing it.
+proves its copy of the hash still agrees with `apply-migration.mjs` — against
+`audit/ckey-fixture.json`, the key of every card that shipped, written by the run that
+built the pack. A drifted hash would otherwise report every flag as stale, and look
+completely plausible doing it.
 
-Three answer keys in this pack were already wrong when they were imported (see
-*Four places where the course material disagrees with itself*). Assume there are more.
+That fixture replaced an earlier self-test that used `explanations.json` as a free
+fixture, on the reasoning that the build refuses to ship unless every entry attaches.
+It is not free and it never worked: those keys are computed *before* `applyStems`
+rewrites 28 questions and *before* the cull, so 49 of 178 could never resolve against
+the shipped pack and `flags.mjs` exited on them before printing a single flag.
+
+Four answer keys in this pack were already wrong when they were imported (see
+*Five places where the course material disagrees with itself*). Assume there are more.
+
+### The first round trip — 9 flags, 6 Aug 2026
+
+The ⚑ button was used in anger for the first time and returned **nine cards**. All nine
+are fixed; none was retired. Every one was checked against the raw `questions.json`
+capture **before** being touched, and in every case the defect was already there — so
+nine flags produced **zero** parser bugs and nine pieces of the lecturer's own text
+arriving exactly as Canvas served it.
+
+| Flagged | What was actually wrong | Fixed by |
+|---|---|---|
+| `.` as a whole question | Canvas served the stem as a single full stop — the raw capture is `. [[IMG]] [[IMG:…]] [[IMG:…]]`, so the question lived in images, and only two bound. | Full restem (`stems.json`); the seven statements are untouched. |
+| "t he tricuspid", "t he semilunar" | Her typo, on two consecutive questions of one quiz. | One-space `sub` each; originals kept as `qOrig`. |
+| Pericardium / epicardium / endocardium | **The answer was wrong.** It defined the pericardium as fibrous + parietal serous — which excludes the epicardium — then called the epicardium "the innermost layer of the sac". Self-contradictory, and it contradicted this pack's *own* card on the visceral and parietal pericardium. Her CVS 2-3 slides 7–8 list the visceral layer inside the coverings. | Rewritten in `selfmark-answers.json` to her layering. |
+| Numbered lung micrograph | The image is fine and **is** numbered 1–9. The authored answer never mentioned it — it listed lung histology in the abstract, so the reader was asked to identify numbered parts and told nothing about any number. | Answer rewritten to read *this* field. It names the structures the annotation actually pins and says plainly that there is no fixed key, because the question says *choose four* and Canvas published no schedule. |
+| Two "find the errors" matchers | Unreadable: her numbered answer ran into the stem as one wall of text, and one read "The 1.m aximum capacity" against a pair labelled "1.maximum capacity". | Extra `sub` pairs on the existing entries — line breaks and bold labels only, plus the one broken word. |
+| Spirogram matcher | **The figure printed different numbers from the answer key directly beneath it** — IRV 3000 vs 3100, ERV 1100 vs 1200, VC 4600 vs 4800. Both sets are internally consistent; having both on one card is the bug. | Card aligned to its own figure. The course states only TV 500 and RV 1200 (lab workbook p. 41) and leaves the rest blank for the student to read off a graph, so there is no lecture figure to prefer. |
+| Artery/vein written answer | Promised "you are shown a micrograph" that this pack does not have, and claimed "(3 marks)" while asking for five things. | Stem no longer depends on an image; the unsourced mark claim is gone; her five visible and three invisible differences are now one per line. |
+
+**G11 had been failing on that last card the whole time.** The validator was reporting it,
+and it was invisible because 92 other failures were sitting on top of it — 46 rails whose
+tier and card type the validator had never been taught, and 13 focus points below a floor
+the pack had already stopped enforcing on purpose. A gate that cries 105 wolves is a gate
+nobody reads, so all three are now correct: `rail` is a declared tier pinned by `from`
+(a rail with no provenance still fails), and G9 fails on an *undeclared* shortfall or a
+`PACK.thin` count that disagrees with the cards really there — but not on a shortfall the
+pack has declared to the reader. **`node audit/validate.mjs` is back to 0 failures**, and
+`validate-selftest.mjs` grew four new tripwires so none of those three can quietly die.
+
+The lesson is the cheap one: **read the validator's output, not just its exit code.**
 
 ## Editing content
 
@@ -216,17 +315,19 @@ Be clear about the split:
   Assessment Overview page.
 - **Which case studies are examinable** — blue = tests, yellow ★ = exam, stated
   outright in `Case Study Workbook 2026 S2.docx`.
-- **190 cards are Hannetjie's own questions**, copied unedited from a Canvas
-  capture, and **33 more** are pinned to a place in her nine Module 1 decks by a
-  quote the build re-greps out of the corpus. Both render an in-app badge you can
-  tap for the document and the quote.
+- **241 cards are Hannetjie's own questions**, copied unedited from a Canvas
+  capture (or, for the eight case-study cards, quoted from her workbook), and **33
+  more** are pinned to a place in her nine Module 1 decks by a quote the build
+  re-greps out of the corpus. Both render an in-app badge you can tap for the
+  document and the quote.
 - Every marking schedule labelled "verbatim" was copied from the lecturer's own
   model answer in the Canvas formative.
 
-**Not sourced from the lecture material:** the remaining 363 cards are standard
-anatomy and physiology written for this pack. They were then cross-checked against
-`hs2-module1`, which *was* built from Hannetjie's lecture slides with per-answer
-citations. Each carries a `srcNote` saying so.
+**Not sourced from the lecture material:** the remaining **25** cards are standard
+anatomy and physiology written for this pack, plus **46 rails** ported from
+`hs2-module1`. They were cross-checked against `hs2-module1`, which *was* built from
+Hannetjie's lecture slides with per-answer citations. Each carries a `srcNote` saying
+so. That number used to be 363; the cull is what changed it.
 
 ### `why` explains. `srcNote` sources. They are not the same field.
 
@@ -240,9 +341,10 @@ renders as the explanation of a wrong answer. Two consequences, both fixed here:
   into the shipped pack. Splitting the fields recovered them — **128 of 300 drill
   cards now carry an authored explanation, up from 31**, with no new writing.
 
-The remaining 172 have now been authored, in `audit/explanations.json`, along with a
-`model:` for the last 6 written answers. **Every machine-marked card in the pack
-explains itself, and the build refuses to ship one that does not.**
+The rest have been authored, in `audit/explanations.json` — **222 `why` entries and 6
+`model`**, the last 50 of them written for the three Module 1.2 quizzes captured on
+6 Aug 2026. **Every one of the 223 machine-marked cards in the pack explains itself,
+and the build refuses to ship one that does not.**
 
 They live in their own file rather than in the cards because most of them belong to
 harvested cards — the lecturer's own questions, reproduced unedited and proven so by a
@@ -289,12 +391,14 @@ Nine places where the content was wrong or unsupported. All fixed:
 | Starling cloze forced a numeric answer (35/17/25 mmHg) | rewritten to test **which pressure wins where** | She teaches the tug-of-war qualitatively and never gives numbers. |
 | Lung volumes SAQ labelled "3 marks" | mark claim removed | The formative scored that question at **1 point**. |
 | Artery/vein SAQ asked for "3 and 3" | **"3 you can see, 2 you cannot"** | That is the real question, and her 5th visible point was missing. |
+| Spirogram card: IRV 3100 / ERV 1200 / VC 4800 mL | **3000 / 1100 / 4600** | The figure printed above it says 3000 / 1100 / 4600. Both sets are self-consistent; a card contradicting its own diagram is not. The course states only TV 500 and RV 1200 (lab workbook p. 41). |
+| Pericardium = fibrous + parietal serous | **fibrous + serous (parietal *and* visceral)** | The old wording put the epicardium outside the pericardium and then called it the sac's innermost layer. Her CVS 2-3 slides 7–8 list the visceral layer among the coverings. |
 | Alveolar mixing volume "~2200 mL" | **~2400 mL (the FRC)** | Contradicted this pack's own lung-volume card. |
 | S1 "louder than S2" | **"longer and lower-pitched"** | Relative loudness depends on the auscultation site. |
 
-### Four places where the course material disagrees with itself, or with the rule
+### Five places where the course material disagrees with itself, or with the rule
 
-Writing an explanation for all 300 machine-marked cards meant reading every answer key
+Writing an explanation for all 223 machine-marked cards meant reading every answer key
 in the pack against what it claims. Four of them do not survive that reading. A
 **verbatim card is never edited** — it reproduces the lecturer's own question *and* her
 key, and that fidelity is the whole basis of the tier — so in each case the card ships
@@ -306,6 +410,7 @@ unchanged and its explanation says plainly what the disagreement is.
 | `MODULE 1.1 SHOCK QUIZ`: "Cardiogenic shock can be caused by" | fluid build-up in the pericardial space | **The same quiz's next question files that same cause under obstructive shock.** Both labels are defensible and both are in the course material; the explanation says so rather than picking one. |
 | Loop diuretic: which symptoms should the nurse expect | restlessness and agitation | The classic potassium picture — weak irregular pulse, poor muscle tone — is another option on the same card and is also a real effect of the same drug. The explanation gives both. |
 | `MODULE 1: FORMATIVE` MALT passage: the blood cell abundant in lymph, and its function | lymphocyte — "primary mediators of the rapid innate host defense against most bacterial and fungal pathogens" | The cell is right, the function belongs to the **neutrophil**. Lymphocytes are the *adaptive* arm: B cells make antibody, T cells kill infected cells. Verified against the raw capture, so again the source and not the import. The explanation flags it and teaches the innate/adaptive split. |
+| `RESPIRATION BLOOD CARRYING GASES` Q3: "A blood pH of 7.5 due to vomiting would be called metabolic acidosis" | True | Vomiting loses gastric **acid**, which is a metabolic **alkalosis** — and 7.5 is above 7.45, which **question 1 of the same quiz** defines as the top of normal. Her own RESP 3 summary slide files "Severe vomiting-loss of acid" under Metabolic Alkalosis. Three independent contradictions, so this one is not a judgement call. The card ships unchanged and the explanation says to answer it False and why. |
 
 Same rule as everywhere else in this tool: a study aid that quietly teaches a wrong
 answer because the answer key said so is worse than one that shows its working.
@@ -341,9 +446,20 @@ blind list is unchanged by all of this: still `cvs-1`, `resp-15`, `resp-16`.
 **Known and not fixed:** the rules match the whole card, *including its distractors*, so
 a wrong answer can still choose a card's focus point — that is why three pleura
 questions sit under `cvs-5` (the options mention "pericardium") and the hyperbaric
-question under `cvs-11` ("Frank-Starling"). About 15 cards are affected. Ranking a
+question under `cvs-11` ("Frank-Starling"). **16 cards** are affected. Ranking a
 criterion that matches the stem and the correct answer above one that only matches a
 distractor is the fix, and it reshuffles enough of the mapping to deserve its own pass.
+
+Three rules were tightened on 6 Aug 2026 where a distractor was dragging a card into the
+wrong *body system*, which is the version of this that a reader actually notices:
+`cvs-9` needed `vagus` to be near the heart (a **phrenic** nerve question whose third
+option is "vagus nerve" was filed under Cardiac output); `resp-11` needed guarding
+against `carbamino` and her `carbino` spelling of it (a **carbon dioxide** question was
+displaying "Transport of oxygen in the blood"); and `resp-1` gave up the words
+`external respiration` and `internal respiration`, which `resp-9` and `resp-10` exist
+for and could never win while resp-1 was listed first. Each was measured before it was
+made: together they move **two** cards that already existed, both to a more specific
+criterion that already listed them, and neither is one a reader had reached.
 Two harvested cards name no topic at all in their own wording and carry **no** focus
 point rather than a guessed one; that is the table's stated policy, not an oversight.
 
@@ -352,7 +468,7 @@ point rather than a guessed one; that is the table's stated policy, not an overs
 - **`lean:'exam'`** marks content the lecturer flagged as final-exam-only (the
   acidosis→chemoreceptor→phrenic cascade). It stays in Study and is
   excluded from the mock test.
-- **The 38 self-marked cards carry authored answers**, in `audit/selfmark-answers.json`.
+- **The 39 self-marked cards carry authored answers**, in `audit/selfmark-answers.json`.
   These are Hannetjie's own questions from quizzes Canvas marks yourself, so no marking
   schedule was ever published for them. They used to ship with the question and a
   paragraph explaining that fact and nothing else. Not having the schedule is a reason

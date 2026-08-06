@@ -440,6 +440,57 @@
   "action": "encoded"
  },
  {
+  "id": "c85b6ba9f489a86e",
+  "kind": "detail",
+  "orig_bytes": 11419,
+  "new_bytes": 7746,
+  "uri_bytes": 10351,
+  "wh": [
+   703,
+   436
+  ],
+  "new_wh": [
+   703,
+   436
+  ],
+  "quality": 82,
+  "action": "encoded"
+ },
+ {
+  "id": "f6a954a872659d5e",
+  "kind": "detail",
+  "orig_bytes": 104815,
+  "new_bytes": 56298,
+  "uri_bytes": 75087,
+  "wh": [
+   1068,
+   801
+  ],
+  "new_wh": [
+   1068,
+   801
+  ],
+  "quality": 82,
+  "action": "encoded"
+ },
+ {
+  "id": "90ab5fef183e1b8f",
+  "kind": "detail",
+  "orig_bytes": 1393105,
+  "new_bytes": 93538,
+  "uri_bytes": 124743,
+  "wh": [
+   1068,
+   801
+  ],
+  "new_wh": [
+   1068,
+   801
+  ],
+  "quality": 82,
+  "action": "encoded"
+ },
+ {
   "id": "da60b05191ec2173",
   "kind": "detail",
   "orig_bytes": 1229179,
@@ -554,6 +605,125 @@
   "new_wh": [
    1075,
    1387
+  ],
+  "quality": 82,
+  "action": "encoded"
+ },
+ {
+  "id": "e09f3a3ca35d5146",
+  "kind": "detail",
+  "orig_bytes": 376520,
+  "new_bytes": 26638,
+  "uri_bytes": 35543,
+  "wh": [
+   673,
+   650
+  ],
+  "new_wh": [
+   673,
+   650
+  ],
+  "quality": 82,
+  "action": "encoded"
+ },
+ {
+  "id": "4a28b9c457ce4488",
+  "kind": "detail",
+  "orig_bytes": 132695,
+  "new_bytes": 83332,
+  "uri_bytes": 111135,
+  "wh": [
+   1068,
+   801
+  ],
+  "new_wh": [
+   1068,
+   801
+  ],
+  "quality": 82,
+  "action": "encoded"
+ },
+ {
+  "id": "2a54eebcd6c49112",
+  "kind": "detail",
+  "orig_bytes": 150040,
+  "new_bytes": 93538,
+  "uri_bytes": 124743,
+  "wh": [
+   1068,
+   801
+  ],
+  "new_wh": [
+   1068,
+   801
+  ],
+  "quality": 82,
+  "action": "encoded"
+ },
+ {
+  "id": "82a6d5a7a1675522",
+  "kind": "detail",
+  "orig_bytes": 75353,
+  "new_bytes": 12234,
+  "uri_bytes": 16335,
+  "wh": [
+   300,
+   240
+  ],
+  "new_wh": [
+   300,
+   240
+  ],
+  "quality": 82,
+  "action": "encoded"
+ },
+ {
+  "id": "82ab5a801ddcc0ae",
+  "kind": "detail",
+  "orig_bytes": 110239,
+  "new_bytes": 4300,
+  "uri_bytes": 5759,
+  "wh": [
+   300,
+   168
+  ],
+  "new_wh": [
+   300,
+   168
+  ],
+  "quality": 82,
+  "action": "encoded"
+ },
+ {
+  "id": "9e5a617dd5e0822b",
+  "kind": "detail",
+  "orig_bytes": 181838,
+  "new_bytes": 24778,
+  "uri_bytes": 33063,
+  "wh": [
+   604,
+   567
+  ],
+  "new_wh": [
+   604,
+   567
+  ],
+  "quality": 82,
+  "action": "encoded"
+ },
+ {
+  "id": "fef044ac763cbae9",
+  "kind": "detail",
+  "orig_bytes": 77891,
+  "new_bytes": 23030,
+  "uri_bytes": 30731,
+  "wh": [
+   1024,
+   491
+  ],
+  "new_wh": [
+   1024,
+   491
   ],
   "quality": 82,
   "action": "encoded"

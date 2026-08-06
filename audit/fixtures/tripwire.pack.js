@@ -15,7 +15,16 @@ const PACK = {
     { id: 'c-floor' },                 // G9: no cards at all
     { id: 'c-blind', blind: true },    // G9: blind, under floor, no SAQ
     { id: 'c-textbook-only' },         // G10: only textbook cards
+    { id: 'c-stale-thin' },            // G9: PACK.thin declares a count the pack does not hold
   ],
+  /* G9 — the declaration is stale. One card is filed under `c-stale-thin`; `thin` claims
+     99. Since the floor stopped being a ship blocker and became something the pack
+     DECLARES to the reader, a wrong number here is the failure that matters: it is a
+     count shown on screen that is not true. */
+  thin: [{ id: 'c-stale-thin', n: 99, floor: 6 }],
+  /* Keeps G10 off `c-stale-thin`, which is textbook-only by construction — this fixture
+     is meant to trip each gate once, not to pile extra hits onto unrelated ones. */
+  acknowledgedGaps: ['c-stale-thin'],
   cards: [
     // G1 — no tier
     { type: 'flash', topic: 't', crit: 'c-ok', q: 'G1a: card with no tier', a: 'x' },
@@ -85,6 +94,17 @@ const PACK = {
     // G10 — a criterion covered only by textbook cards
     { type: 'flash', topic: 't', crit: 'c-textbook-only', tier: 'textbook', why: 'tripwire',
       q: 'G10a: textbook-only criterion', a: 'x' },
+    // G9 — the card `thin` is lying about: one here, 99 declared
+    { type: 'flash', topic: 't', crit: 'c-stale-thin', tier: 'textbook', srcNote: 'tripwire',
+      q: 'G9a: stale thin declaration', a: 'x' },
+    /* G1 — a rail with no provenance. Rails are exempt from `ev` because there is no
+       question to diff against a capture, but NOT from having to say where they came
+       from; this proves that exemption did not become a hole. */
+    { type: 'rail', topic: 't', tier: 'rail', name: 'G1f: rail with no from',
+      beads: ['A', 'B'], verbs: ['leads to'] },
+    // G1 — the rail tier worn by something that is not a rail
+    { type: 'flash', topic: 't', crit: 'c-ok', tier: 'rail', from: 'cvs1',
+      q: 'G1g: rail tier on a flash card', a: 'x' },
   ],
   glossary: [],
 };
