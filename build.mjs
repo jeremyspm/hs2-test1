@@ -55,39 +55,54 @@ console.log(`${P.cards.length} cards:`, Object.entries(types).sort((a, b) => b[1
 console.log('tiers:', Object.entries(tiers).sort((a, b) => b[1] - a[1]).map(([k, v]) => `${k} ${v}`).join(' · '));
 
 /* ── coverage gate ────────────────────────────────────────────────────────────
-   This used to print its findings and ship anyway, and the engine rendered the same
-   failures into the live page as a yellow banner — so a student's first sight of the
-   tool was a build-time lint result written in authoring vocabulary, telling them the
-   thing was broken before they had read a card.
+   THE FLOOR STOPPED BEING A SHIP BLOCKER when the manufactured cards were culled.
 
-   The banner is gone from the student build. That only works if the failure is caught
-   HERE instead, so this now exits non-zero. The rule matches the engine's
-   `validateCoverage` exactly, including counting `alsoCrit`: a build that passes must
-   mean a page with nothing to complain about. Open the page with `?dev=1` to see the
-   same list at runtime. */
+   It used to mean "author until every focus point has 6 cards", and it worked: the
+   build refused to ship a thin focus point, so one got written up to the line. Twelve
+   of them were standing on cards written for no other reason than to clear it —
+   measurably the least readable cards in the pack, sitting on ground the lecturer's
+   own questions already covered.
+
+   The pack now ships only what is sourced back to her material. Under that rule the
+   floor can only be cleared by MINING more of her material, and where there is no more
+   to mine the true number is the low one. A gate that fails the build on it is just a
+   standing order to manufacture — the exact thing being removed. So:
+
+     zero cards  → still a hard failure. An empty focus point is a hole, and the reader
+                   meets it as a topic with nothing in it.
+     below floor → DECLARED. `PACK.thin` carries it, the page tells the reader, and
+                   apply-migration prints it as the work list for the next mining pass.
+
+   `blindNeedsSaq` goes the same way and for the same reason: resp-15 and resp-16 have
+   zero questions from her anywhere in the course, so demanding a written-answer card
+   on them is demanding an invented one. */
 const counts = {};
-const liveCounts = {};   // same, but ignoring cards demoted to background reading
-for (const c of P.cards) for (const id of [c.crit, ...(c.alsoCrit ?? [])].filter(Boolean)) {
-  counts[id] = (counts[id] || 0) + 1;
-  if (!c.bg) liveCounts[id] = (liveCounts[id] || 0) + 1;
+for (const c of P.cards) for (const id of [c.crit, ...(c.alsoCrit ?? [])].filter(Boolean)) counts[id] = (counts[id] || 0) + 1;
+
+const empty = (P.criteria ?? []).filter(c => !counts[c.id]);
+if (empty.length) {
+  console.error(`✗ ${empty.length} focus point(s) with NO cards at all: ${empty.map(c => c.id).join(', ')}`);
+  console.error('\n✗ NOT SHIPPING. A focus point the reader cannot reach is a hole, not thin coverage.');
+  process.exit(1);
 }
-const { min: MIN = 6, blindMin: BLIND_MIN = 10, blindNeedsSaq = false } = P.coverage ?? {};
-const covErrs = [];
-for (const c of P.criteria ?? []) {
-  const floor = c.blind ? Math.max(MIN, BLIND_MIN) : MIN;
-  const n = counts[c.id] || 0;
-  if (n < floor) covErrs.push(`${c.id} has ${n} cards, needs ${floor}`);
-  /* Mirrors the engine's validateCoverage. The floor above counts the PACK; a focus
-     point can clear it on background cards alone and still be unreachable from the
-     default queue, which is a hole the reader meets as "no cards in this topic". */
-  if (n && !liveCounts[c.id]) covErrs.push(`${c.id} has ${n} cards but every one is background reading — nothing to drill in the default queue`);
-  if (c.blind && blindNeedsSaq && !P.cards.some(x => (x.crit === c.id || (x.alsoCrit ?? []).includes(c.id)) && x.type === 'saq'))
-    covErrs.push(`${c.id} is never practised anywhere in the course and has no written-answer card`);
+console.log(`all ${(P.criteria ?? []).length} focus points have at least one card ✓`);
+
+/* The declaration has to REACH the reader, or culling to honest numbers just means
+   quietly shipping thinner coverage. Prove the pack carries it and the engine renders
+   it, rather than trusting that it does. */
+const thin = P.thin ?? [];
+if (thin.length) {
+  console.log(`${thin.length} focus point(s) declared thin: ` + thin.map(t => `${t.id} ${t.n}/${t.floor}`).join(' · '));
+  const stale = thin.filter(t => (counts[t.id] || 0) !== t.n);
+  if (stale.length) {
+    console.error(`✗ PACK.thin disagrees with the cards actually in the pack: ${stale.map(t => `${t.id} says ${t.n}, pack has ${counts[t.id] || 0}`).join(' · ')}`);
+    process.exit(1);
+  }
+  if (!tpl.includes('PACK.thin')) {
+    console.error('✗ NOT SHIPPING. The pack declares thin focus points but the engine never reads PACK.thin — the reader would never be told.');
+    process.exit(1);
+  }
 }
-console.log(covErrs.length
-  ? `✗ ${covErrs.length} coverage failure(s): ` + covErrs.join(' · ')
-  : `all ${(P.criteria ?? []).length} focus points at or above their card floor ✓`);
-if (covErrs.length) { console.error('\n✗ NOT SHIPPING. Fix the coverage above — the page no longer warns the reader on your behalf.'); process.exit(1); }
 console.log(`${used.size} of ${Object.keys(FIG).length} ported figures wired to cards`);
 if (used.size === 0) { console.error('✗ no figures wired — pack.js has lost its F()/FC() calls'); process.exit(1); }
 
