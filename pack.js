@@ -104,12 +104,6 @@ const PACK = {
    "name": "Immunity & vaccination",
    "icon": "🛡️",
    "sys": "lymph"
-  },
-  {
-   "id": "terms",
-   "name": "Terminology",
-   "icon": "📖",
-   "sys": "terms"
   }
  ],
  "coverage": {
@@ -958,7 +952,7 @@ const PACK = {
   },
   {
    "type": "mcq",
-   "topic": "terms",
+   "topic": "resp-anat",
    "crit": "resp-17",
    "q": "Which of the following terms refers to air in the pleural space?",
    "options": [
@@ -8909,10 +8903,6 @@ const PACK = {
   {
    "id": "lymph",
    "name": "Lymphatic & immunity"
-  },
-  {
-   "id": "terms",
-   "name": "Terminology"
   }
  ],
  "acknowledgedGaps": [
