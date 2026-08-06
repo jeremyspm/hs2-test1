@@ -1592,7 +1592,7 @@ const PACK = {
     "n": "Question 1"
    },
    "type": "cloze",
-   "q": "Complete the passage. (Respiratory System)",
+   "q": "Respiratory terminology — name the condition each description defines.",
    "text": "Difficulty in breathing. [[1]] Presence of air in the pleural cavity. [[2]] Collapse of the lung. [[3]] Normal rate and depth of breathing. [[4]] Bluish discoloration of the skin and mucous membrane. [[5]]",
    "blanks": [
     {
@@ -1651,7 +1651,8 @@ const PACK = {
     "resp-7",
     "resp-17"
    ],
-   "why": "Build them from the parts: <b>dys-</b> difficult, <b>eu-</b> normal, <b>pneumo-thorax</b> air in the chest, <b>cyan-</b> blue. Atelectasis is the odd one out — it names the lung collapsing, whatever caused it."
+   "why": "Build them from the parts: <b>dys-</b> difficult, <b>eu-</b> normal, <b>pneumo-thorax</b> air in the chest, <b>cyan-</b> blue. Atelectasis is the odd one out — it names the lung collapsing, whatever caused it.",
+   "qOrig": "Complete the passage. (Respiratory System)"
   },
   {
    "topic": "cvs-vessels",
@@ -1663,7 +1664,7 @@ const PACK = {
     "n": "Question 2"
    },
    "type": "cloze",
-   "q": "Complete the passage. (Respiratory System)",
+   "q": "Flow and pressure vocabulary — name the term each description defines.",
    "text": "A measure which shows how easy or hard it is for air/blood to flow in a vessel [[1]] When a vessel or airway's diameter is reduced, usually due to the action of smooth muscle [[2]] When an area's capillaries have received blood [[3]] The force of water, for example on the wall of a blood vessel [[4]] Relating to the concentration of solutes in a fluid [[5]]",
    "blanks": [
     {
@@ -1722,7 +1723,8 @@ const PACK = {
    "alsoCrit": [
     "cvs-3"
    ],
-   "why": "These five words are the vocabulary the whole blood-flow section is built on. <b>Resistance</b> is how hard flow is, <b>constriction</b> is the smooth-muscle narrowing that raises it, and <b>perfusion</b> is the result — blood actually reaching the tissue."
+   "why": "These five words are the vocabulary the whole blood-flow section is built on. <b>Resistance</b> is how hard flow is, <b>constriction</b> is the smooth-muscle narrowing that raises it, and <b>perfusion</b> is the result — blood actually reaching the tissue.",
+   "qOrig": "Complete the passage. (Respiratory System)"
   },
   {
    "topic": "resp-anat",
@@ -2109,7 +2111,7 @@ const PACK = {
     "n": "Question 1"
    },
    "type": "cloze",
-   "q": "Complete the passage. (MODULE 1.1)",
+   "q": "Blood pressure = cardiac output × peripheral resistance. Complete what each half depends on, then the chemicals that raise and lower it.",
    "text": "The effect of general factors on blood pressure. Blood Pressure = Cardiac output x Peripheral resistance BP = CO X PR PR = PERIPHERAL RESISTANCE = PUSH BACK BY BLOODVESSELS So anything that affects the cardiac output and anything that affects the peripheral resistance will affect blood pressure. Cardiac output depends on [[1]] . It is measured in [[2]] . The formula for cardiac output: CO = [[3]] Peripheral Resistance depends on [[4]] Chemicals that Decrease Blood Pressure Atrial natriuretic peptide (ANP) –from heart [[5]] - decreases extracellular fluid (ECF) volume by increasing renal Na+ excretion. released when atria are stretched. Nitric oxide (NO) – potent [[6]] –relaxes muscles - decreases oxygen demand so is given to angina patients Inflammatory chemicals – histamine, kinins, etc. are potent vasodilators. A reason why acute inflammation can lead to shock as in anaphylactic shock. Chemicals that Increase Blood Pressure Adrenal [[7]] hormones – norepinephrine and epinephrine Antidiuretic hormone (ADH) (posterior [[8]] gland) The role of the kidneys in control of blood pressure Direct – urine output - In case of high blood pressure -more blood flow--> more filtrate and consequently more urine produced leading to a reduction in the blood volume which [[9]] the blood pressure. In case of low blood pressure, less blood flow. etc. Indirect – [[10]] -angiotensin-aldosterone (RAAS system)",
    "blanks": [
     {
@@ -2201,7 +2203,8 @@ const PACK = {
     "cvs-15",
     "resp-13"
    ],
-   "why": "Sort every chemical by which half of <b>BP = CO × PR</b> it touches: ANP and nitric oxide drop volume or dilate vessels, adrenaline and ADH raise rate or hold water back. And peripheral resistance itself depends on vessel <b>length and diameter</b>, not on the heart at all."
+   "why": "Sort every chemical by which half of <b>BP = CO × PR</b> it touches: ANP and nitric oxide drop volume or dilate vessels, adrenaline and ADH raise rate or hold water back. And peripheral resistance itself depends on vessel <b>length and diameter</b>, not on the heart at all.",
+   "qOrig": "Complete the passage. (MODULE 1.1)"
   },
   {
    "topic": "cvs-bp",
@@ -2213,7 +2216,7 @@ const PACK = {
     "n": "Question 2"
    },
    "type": "cloze",
-   "q": "Complete the passage. (MODULE 1.1)",
+   "q": "The renin–angiotensin–aldosterone system. Complete the table: what makes each hormone, where it acts, and what it does.",
    "text": "The long-term homeostatic control of blood pressure and the effect of general factors on blood pressure. This is where the RAAS system is activated. Renin-->Angiotensinogen --> Angiotensin 1 and 2 --> Aldosterone & ADH. Hormone/ Enzyme Made by Target Effect Renin [[1]] (granular) cells in kidney Angiotensinogen Converts Angiotensinogen to [[2]] Angiotensinogen formed by the [[3]] Angiotensin-converting Enzyme (ACE) lung (cell type 1) & capillary endothelia, kidney epithelia, Angiotensin I Converts Angiotensin I to Angiotensin II Angiotensin II Pulmonary epithelia where ACE is produced Adrenal cortex [[4]] pituitary [[5]] muscles in blood vessel walls Stimulates aldosterone & ADH secretion & vaso constriction Aldosterone Adrenal cortex [[6]] Stimulate [[7]] reabsorption [[8]] (vasopressin) Posterior Pituitary gland Collecting duct Stimulates [[9]] reabsorption",
    "blanks": [
     {
@@ -2304,7 +2307,8 @@ const PACK = {
     "cvs-3",
     "cvs-12"
    ],
-   "why": "Follow the chain in order and every blank sits somewhere on it: <b>renin</b> from the kidney acts on <b>angiotensinogen</b> from the liver, ACE in the lung makes angiotensin II, and angiotensin II then triggers <b>aldosterone</b> (sodium reabsorbed, water follows) and <b>ADH</b> (water reabsorbed directly)."
+   "why": "Follow the chain in order and every blank sits somewhere on it: <b>renin</b> from the kidney acts on <b>angiotensinogen</b> from the liver, ACE in the lung makes angiotensin II, and angiotensin II then triggers <b>aldosterone</b> (sodium reabsorbed, water follows) and <b>ADH</b> (water reabsorbed directly).",
+   "qOrig": "Complete the passage. (MODULE 1.1)"
   },
   {
    "topic": "cvs-anat",
@@ -2316,7 +2320,7 @@ const PACK = {
     "n": "Question 3"
    },
    "type": "cloze",
-   "q": "Complete the passage. (MODULE 1.1)",
+   "q": "Control of heart rate. Complete the conduction pathway, then the nerves, hormones and electrolytes that speed it up or slow it down.",
    "text": "The homeostatic mechanisms involved in the control of heart rate. Neural and hormonal control. The heart exhibits the property of [[1]] . This is the property of cardiac cells to generate spontaneous action potentials. It can beat independently from nervous or hormonal control, but can however be altered by neural and hormonal stimuli. The heart's electric impulses start at the [[2]] node (the pacemaker), then to the [[3]] , [[4]] , [[5]] and Purkinje fibres which stimulate the myocardial cells to contract. Normal heart rate - around 72 beats per minute [[6]] cardia = more than 100 beats per minute [[7]] cardia = less than 60 beats per minute If the heart rate is 75b/min. what is the time duration of each heartbeat (cardiac cycle)? [[8]] second Variations in heart rate - Gender - males – 64 to72 b/min - females – 72 to 80 b/min - Age? Normal heart rate in babies [[9]] than in adults. HEART PHYSIOLOGY Neural Control of Heart Rate Cardio-acceleratory centre in [[10]] – [[11]] nerves through the release of the catecholamine neurotransmitter [[12]] –excite the SA node, – increase HR Cardio-inhibitory centre – [[13]] nerves through the release of the neurotransmitter [[14]] -The tenth cranial nerve also called the [[15]] nerve travels to the heart carrying the inhibitory signals –inhibit the SA node, –decrease the HR Hormonal Control of Heart Rate HORMONES THAT INCREASE HEART RATE [[16]] Catecholamines - epinephrine & norepinephrine from sympathetic nervous system (SNS) [[17]] Hormone from Thyroid gland HORMONES THAT DECREASE HEART RATE [[18]] Hormone released by parasympathetic nervous system (PNS) OTHER CHEMICAL FACTORS THAT INFLUENCE HEART RATE hyperkalemia Excess [[19]] SLOW DOWN HEART hypercalcemia -Excess [[20]] = increase in contractility - INCREASES HEART RATE",
    "blanks": [
     {
@@ -2501,7 +2505,8 @@ const PACK = {
     "cvs-15",
     "resp-13"
    ],
-   "why": "Two spines hold this up. Anatomy: <b>SA node → AV node → bundle of His → bundle branches → Purkinje fibres</b>. Control: <b>sympathetic nerves and noradrenaline speed the SA node up, the vagus and acetylcholine slow it down</b>. The cycle-length blank is arithmetic — sixty seconds divided by the rate."
+   "why": "Two spines hold this up. Anatomy: <b>SA node → AV node → bundle of His → bundle branches → Purkinje fibres</b>. Control: <b>sympathetic nerves and noradrenaline speed the SA node up, the vagus and acetylcholine slow it down</b>. The cycle-length blank is arithmetic — sixty seconds divided by the rate.",
+   "qOrig": "Complete the passage. (MODULE 1.1)"
   },
   {
    "topic": "cvs-bp",
@@ -2513,7 +2518,7 @@ const PACK = {
     "n": "Question 4"
    },
    "type": "cloze",
-   "q": "Complete the passage. (MODULE 1.1)",
+   "q": "How venous return, plasma electrolytes, stress and exercise each change cardiac function and blood pressure.",
    "text": "The effects of venous return, plasma electrolytes, stress, and exercise on cardiac functions. Venous return An increase in venous return increases stroke volume and thereby cardiac output. It will [[1]] blood pressure (BP). Electrolytes An increase in the delivery of calcium ions into the heart muscle causes an increase in the [[2]] of the heart muscle. Thereby the force by which the heart contracts become greater which will increase BP. An increase in sodium ions will lead to an increase in blood [[3]] because of its effect on the osmolality of the blood. Thirst will increase and a person may drink more water. This may lead to an increase in Blood pressure. Potassium ions are crucial in regulating heart rhythm. High potassium levels are linked to [[4]] . Stress Chronic stress leads to an increase in the release of the corticosteroid from the cortex of the adrenal glands. Acute stress leads to an increase in the release of the catecholamine hormones (epinephrine or [[5]] ) and norepinephrine (nor-adrenaline) from the [[6]] on the inside of the adrenal glands. Exercise [[7]] is NOT an effect of exercise on cardiac activity as portrayed by this image. This means that the heart of a fit person pumps [[8]] . [[9]] is NOT an effect of exercise on peripheral resistance as portrayed by this image. This means that the peripheral resistance of a fit person is [[10]] despite an increased blood volume.",
    "blanks": [
     {
@@ -2604,7 +2609,8 @@ const PACK = {
     "cvs-13",
     "resp-13"
    ],
-   "why": "Everything here routes through <b>CO = SV × HR</b> and then BP = CO × PR. Calcium raises contractility, potassium slows the heart, and the trained heart pumps <b>slower but more forcefully</b> — the same output in fewer beats."
+   "why": "Everything here routes through <b>CO = SV × HR</b> and then BP = CO × PR. Calcium raises contractility, potassium slows the heart, and the trained heart pumps <b>slower but more forcefully</b> — the same output in fewer beats.",
+   "qOrig": "Complete the passage. (MODULE 1.1)"
   },
   {
    "topic": "cvs-output",
@@ -2616,7 +2622,7 @@ const PACK = {
     "n": "Question 5"
    },
    "type": "mcq",
-   "q": "The homeostatic mechanisms that are involved in stroke volume. Neural and hormonal control. The theory in 2020 CVS 3-1.pptx Download 2020 CVS 3-1.pptx STROKE VOLUME (SV): Volume of blood pumped out from each ventricle per beat –70 mL The ventricles do not pump out all the blood it receives 2/3 of the blood - approx. 70 ml/beat In a healthy heart - SV is relatively constant Cardiac output = stroke volume x heart rate CO = SV x HR the higher the stroke volume, the higher the cardiac output. Which of the following factors do NOT increase Stroke volume?[a]",
+   "q": "Stroke volume is the blood each ventricle pumps per beat — about 70 mL, roughly two thirds of what it received — and cardiac output = stroke volume × heart rate. Which of the following does NOT increase stroke volume?",
    "options": [
     "Increase in adrenaline and/or noradrenaline",
     "increased venous return to the heart",
@@ -2632,7 +2638,8 @@ const PACK = {
     "cvs-11",
     "cvs-15"
    ],
-   "why": "Everything else on the list either fills the ventricle more (venous return, blood volume) or makes it squeeze harder (adrenaline, sympathetic drive, calcium). <b>Raised potassium does the opposite</b> — it depresses the myocardium and slows conduction."
+   "why": "Everything else on the list either fills the ventricle more (venous return, blood volume) or makes it squeeze harder (adrenaline, sympathetic drive, calcium). <b>Raised potassium does the opposite</b> — it depresses the myocardium and slows conduction.",
+   "qOrig": "The homeostatic mechanisms that are involved in stroke volume. Neural and hormonal control. The theory in 2020 CVS 3-1.pptx Download 2020 CVS 3-1.pptx STROKE VOLUME (SV): Volume of blood pumped out from each ventricle per beat –70 mL The ventricles do not pump out all the blood it receives 2/3 of the blood - approx. 70 ml/beat In a healthy heart - SV is relatively constant Cardiac output = stroke volume x heart rate CO = SV x HR the higher the stroke volume, the higher the cardiac output. Which of the following factors do NOT increase Stroke volume?[a]"
   },
   {
    "topic": "cvs-bp",
@@ -2644,7 +2651,7 @@ const PACK = {
     "n": "Question 6"
    },
    "type": "cloze",
-   "q": "Complete the passage. (MODULE 1.1)",
+   "q": "The baroreceptor reflex. Complete both pathways — low blood pressure and high blood pressure — from receptor to effect.",
    "text": "The short-term homeostatic control of blood pressure. Baroreceptors in the carotid sinus and aortic arch are involved here. They sense blood pressure. Remember they differ from chemoreceptors (found in the carotid bodies and aortic bodies) that are involved in sensing the chemical composition of the blood e.g. oxygen and carbon dioxide concentrations, pH, and electrolytes. STIMULUS Receptor Information to Reflex Effect LOW BP Baroreceptors in Aortic arch & Carotid sinus [[1]] Cardio acceleratory centre in MO [[2]] & Vasomotor centre [[3]] [[4]] impulses to heart – Norepinephrine & Epinephrine Heart rate increases Vaso [[5]] Cardiac Output (CO) increases --> BP goes up HIGH BP Baroreceptors in Aortic arch & Carotid sinus stimulated Cardio inhibitory centre in MO [[6]] while the cardio accelerator centre is [[7]] & Vasomotor centre [[8]] [[9]] impulses to heart via the Vagus nerve– [[10]] Heart slows down to Vaso [[11]] CO decreases BP goes down",
    "blanks": [
     {
@@ -2737,7 +2744,8 @@ const PACK = {
     "resp-2",
     "resp-14"
    ],
-   "why": "One reflex, run in both directions. <b>Low BP: sympathetic outflow, faster heart, vasoconstriction, pressure up.</b> High BP: the vagus and acetylcholine slow the heart while the vasomotor centre is inhibited, so vessels dilate. Note the sensors are baroreceptors in the aortic arch and carotid <b>sinus</b>, not the bodies."
+   "why": "One reflex, run in both directions. <b>Low BP: sympathetic outflow, faster heart, vasoconstriction, pressure up.</b> High BP: the vagus and acetylcholine slow the heart while the vasomotor centre is inhibited, so vessels dilate. Note the sensors are baroreceptors in the aortic arch and carotid <b>sinus</b>, not the bodies.",
+   "qOrig": "Complete the passage. (MODULE 1.1)"
   },
   {
    "topic": "cvs-vessels",
@@ -3622,7 +3630,7 @@ const PACK = {
     "n": "Question 19"
    },
    "type": "mcq",
-   "q": "Link The valves that close off to prevent back-flow of blood when the ventricles contract are known as the",
+   "q": "The valves that close off to prevent back-flow of blood when the ventricles contract are known as the…",
    "options": [
     "tricuspid valves",
     "pulmonary valves",
@@ -3633,7 +3641,8 @@ const PACK = {
    "fig": "<img src=\"data:image/webp;base64,UklGRpIBAABXRUJQVlA4IIYBAADQDACdASqMAGQAPmEwlUgkIqIhIxVYkIAMCWlu3QOwGs+nMv3b/oeSP6F9gD9UP+D6s3UefrGIgaYCwFffoCitu3k9WJ+pqqNE/q8z83C4Zbiqb4kqiRr/yRT+JFzsRV8DQFGZabhmBUKgqc2Ti0AA/vz4QAiL3hQxOvyItN3gLyhLCoZrP2oviR/CbLQdJZA1cq8HC1xNtS865VYFBnAcv2NtufW48Gs0EXn/vqeDeBdW1nLorZC80KTuSnZsrpgrrDWpw4vGBRRLLXLRRKAsQI2LI/G+fjKsXltd/THmdpqKfaHpkUcQyDRDVQP3CphAO5L/MW9hbC7VKP0Rbxo/G/nmFp/bAq5rgH3weIolqaVD+cn4MT7PWcf5xMBdzLK9u+VaygellDWuz+7+1rqWhx8n2Coc8ZOiYx2AaFOCPnuzC/FTYUPylaiFUfoL7zo9piil8lIb3VDAE/OszFf/4Q3AcD17yrUPrgOkoXitqsrD62kEc2FF7ES9DjYosIuY1gAAAAA=\" alt=\"Figure from Hannetjie's quiz question\">",
    "figcap": "From MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks) · Question 19",
    "crit": "cvs-5",
-   "why": "The two sets of valves always work in opposition. When the ventricles contract the <b>AV valves shut</b> — that is the first heart sound — and the semilunar valves open."
+   "why": "The two sets of valves always work in opposition. When the ventricles contract the <b>AV valves shut</b> — that is the first heart sound — and the semilunar valves open.",
+   "qOrig": "Link The valves that close off to prevent back-flow of blood when the ventricles contract are known as the"
   },
   {
    "topic": "cvs-anat",
@@ -3689,7 +3698,7 @@ const PACK = {
     "n": "Question 25"
    },
    "type": "mcq",
-   "q": "The following statement about the heart is true: Link",
+   "q": "Which one of these statements about the heart is true?",
    "options": [
     "The heart septum is made of trabeculae",
     "The fossa ovale is visible in the interventricular septum",
@@ -3700,7 +3709,8 @@ const PACK = {
    "fig": "<img src=\"data:image/webp;base64,UklGRpIBAABXRUJQVlA4IIYBAADQDACdASqMAGQAPmEwlUgkIqIhIxVYkIAMCWlu3QOwGs+nMv3b/oeSP6F9gD9UP+D6s3UefrGIgaYCwFffoCitu3k9WJ+pqqNE/q8z83C4Zbiqb4kqiRr/yRT+JFzsRV8DQFGZabhmBUKgqc2Ti0AA/vz4QAiL3hQxOvyItN3gLyhLCoZrP2oviR/CbLQdJZA1cq8HC1xNtS865VYFBnAcv2NtufW48Gs0EXn/vqeDeBdW1nLorZC80KTuSnZsrpgrrDWpw4vGBRRLLXLRRKAsQI2LI/G+fjKsXltd/THmdpqKfaHpkUcQyDRDVQP3CphAO5L/MW9hbC7VKP0Rbxo/G/nmFp/bAq5rgH3weIolqaVD+cn4MT7PWcf5xMBdzLK9u+VaygellDWuz+7+1rqWhx8n2Coc8ZOiYx2AaFOCPnuzC/FTYUPylaiFUfoL7zo9piil8lIb3VDAE/OszFf/4Q3AcD17yrUPrgOkoXitqsrD62kEc2FF7ES9DjYosIuY1gAAAAA=\" alt=\"Figure from Hannetjie's quiz question\">",
    "figcap": "From MODULE 1.1: QUIZ: CVS2 THE HEART (25 marks) · Question 25",
    "crit": "cvs-5",
-   "why": "The three wrong options are all near-misses worth learning: the septum is muscle, the fossa ovalis sits in the <b>inter-atrial</b> septum, and the tricuspid is an AV valve, not a semilunar one."
+   "why": "The three wrong options are all near-misses worth learning: the septum is muscle, the fossa ovalis sits in the <b>inter-atrial</b> septum, and the tricuspid is an AV valve, not a semilunar one.",
+   "qOrig": "The following statement about the heart is true: Link"
   },
   {
    "topic": "cvs-ecg",
@@ -4163,7 +4173,7 @@ const PACK = {
     "n": "Question 13"
    },
    "type": "match",
-   "q": "Define: Blood pressure (BP) Cardiac output (CO) Stroke volume (SV) Peripheral resistance (PR) or Systemic Vascular resistance (SVR) The answer below contains two errors in the underlined parts. Find the errors and replace them with alternatives that would make the definitions correct. Blood pressure: pressure exerted by blood the blood on the 1. walls of the arteries Cardiac output (CO) total volume of blood pumped by 2.heart/sec : CO = HR x SV Stroke volume (SV) 3.amount of blood pumped out of heart's 4.ventricles per beat. Peripheral resistance (PR) or systemic vascular resistance (SVR) = 5. drag blood vessels exert against flow of blood.",
+   "q": "Define: Blood pressure (BP) Cardiac output (CO) Stroke volume (SV) Peripheral resistance (PR) or Systemic Vascular resistance (SVR) The answer below contains two errors in the numbered parts below. Find the errors and replace them with alternatives that would make the definitions correct. Blood pressure: pressure exerted by blood the blood on the 1. walls of the arteries Cardiac output (CO) total volume of blood pumped by 2.heart/sec : CO = HR x SV Stroke volume (SV) 3.amount of blood pumped out of heart's 4.ventricles per beat. Peripheral resistance (PR) or systemic vascular resistance (SVR) = 5. drag blood vessels exert against flow of blood.",
    "pairs": [
     [
      "1.walls of the arteries",
@@ -4192,7 +4202,8 @@ const PACK = {
     "cvs-5",
     "cvs-9"
    ],
-   "why": "Neither error is in the physiology, and both matter anyway: cardiac output is per <b>minute</b>, and stroke volume is quoted for the <b>left ventricle</b>. Get the first wrong and every calculation built on CO = HR × SV comes out wrong with it."
+   "why": "Neither error is in the physiology, and both matter anyway: cardiac output is per <b>minute</b>, and stroke volume is quoted for the <b>left ventricle</b>. Get the first wrong and every calculation built on CO = HR × SV comes out wrong with it.",
+   "qOrig": "Define: Blood pressure (BP) Cardiac output (CO) Stroke volume (SV) Peripheral resistance (PR) or Systemic Vascular resistance (SVR) The answer below contains two errors in the underlined parts. Find the errors and replace them with alternatives that would make the definitions correct. Blood pressure: pressure exerted by blood the blood on the 1. walls of the arteries Cardiac output (CO) total volume of blood pumped by 2.heart/sec : CO = HR x SV Stroke volume (SV) 3.amount of blood pumped out of heart's 4.ventricles per beat. Peripheral resistance (PR) or systemic vascular resistance (SVR) = 5. drag blood vessels exert against flow of blood."
   },
   {
    "topic": "cvs-anat",
@@ -4253,7 +4264,7 @@ const PACK = {
     "n": "Question 16"
    },
    "type": "match",
-   "q": "Explain the meanings of cardiac reserve and ejection fraction. The answer below contains two errors in the underlined parts. Find the errors and replace them with alternatives that would make the definitions correct. Cardiac reserve The 1.m aximum capacity of the heart to increase its 2.input if put under stress e. g. by exercising Ejection fraction The % of the blood ejected per beat from the 3. ventricles . 4. 70% is good.",
+   "q": "Explain the meanings of cardiac reserve and ejection fraction. The answer below contains two errors in the numbered parts below. Find the errors and replace them with alternatives that would make the definitions correct. Cardiac reserve The 1.m aximum capacity of the heart to increase its 2.input if put under stress e. g. by exercising Ejection fraction The % of the blood ejected per beat from the 3. ventricles . 4. 70% is good.",
    "pairs": [
     [
      "1.maximum capacity",
@@ -4273,7 +4284,8 @@ const PACK = {
     ]
    ],
    "crit": "cvs-5",
-   "why": "<b>Cardiac reserve is about output</b> — how much more the heart can pump than it does at rest — and ejection fraction is quoted for the <b>left ventricle</b>, because that is the side whose failure gets measured clinically."
+   "why": "<b>Cardiac reserve is about output</b> — how much more the heart can pump than it does at rest — and ejection fraction is quoted for the <b>left ventricle</b>, because that is the side whose failure gets measured clinically.",
+   "qOrig": "Explain the meanings of cardiac reserve and ejection fraction. The answer below contains two errors in the underlined parts. Find the errors and replace them with alternatives that would make the definitions correct. Cardiac reserve The 1.m aximum capacity of the heart to increase its 2.input if put under stress e. g. by exercising Ejection fraction The % of the blood ejected per beat from the 3. ventricles . 4. 70% is good."
   },
   {
    "topic": "cvs-output",
@@ -4397,7 +4409,7 @@ const PACK = {
     "n": "Question 21"
    },
    "type": "cloze",
-   "q": "Complete the passage. (MODULE 1.1)",
+   "q": "Artery against vein. Complete the comparison of their walls and lumens.",
    "text": "How is the structure of the artery different to that of the vein? Artery Vein [[1]] diameter [[2]] diameter Stiff appearance Floppy appearance [[3]] tunica media [[4]] tunica medi Thin tunica externa Thick tunica externa [[5]] internal elastic lanmina internal elastic lamina [[6]]",
    "blanks": [
     {
@@ -4445,7 +4457,8 @@ const PACK = {
     }
    ],
    "crit": "cvs-2",
-   "why": "One rule generates the whole table. The artery must <b>withstand pressure</b>, so its media and elastic laminae are thick and prominent around a small round lumen; the vein only carries volume back, so it is floppy with a large lumen and a thick outer coat."
+   "why": "One rule generates the whole table. The artery must <b>withstand pressure</b>, so its media and elastic laminae are thick and prominent around a small round lumen; the vein only carries volume back, so it is floppy with a large lumen and a thick outer coat.",
+   "qOrig": "Complete the passage. (MODULE 1.1)"
   },
   {
    "topic": "cvs-vessels",
@@ -4497,7 +4510,7 @@ const PACK = {
     "n": "Question 24"
    },
    "type": "match",
-   "q": "Reflect on the processes of filtration and absorption. Describe the forces acting across a blood capillary, at both the arteriolar and the venular end. You may wish to refer to your Human Anatomy & Physiology textbook CHAPTER 29: Blood circulations in Patton and Thibodeau The answer below contains one error in the underlined parts. Find the error and replace it with an alternative that would make the definitions correct. ANSWER Arterial side: high hydrostatic pressure because of pump action of heart, 1. favors filtration. Forces fluid from bloodvessel into 2.intestinum . Venous side: high 3.oncotic pressure because of higher osmotic pressure in bloodvessel with all the water that left leaving 4. proteins and cells behind, 5. favors reabsorption . Forces fluid from interstitium back into capillary.",
+   "q": "Reflect on the processes of filtration and absorption. Describe the forces acting across a blood capillary, at both the arteriolar and the venular end. You may wish to refer to your Human Anatomy & Physiology textbook CHAPTER 29: Blood circulations in Patton and Thibodeau The answer below contains one error in the numbered parts below. Find the error and replace it with an alternative that would make the definitions correct. ANSWER Arterial side: high hydrostatic pressure because of pump action of heart, 1. favors filtration. Forces fluid from bloodvessel into 2.intestinum . Venous side: high 3.oncotic pressure because of higher osmotic pressure in bloodvessel with all the water that left leaving 4. proteins and cells behind, 5. favors reabsorption . Forces fluid from interstitium back into capillary.",
    "pairs": [
     [
      "1. favors filtration",
@@ -4521,7 +4534,8 @@ const PACK = {
     ]
    ],
    "crit": "cvs-3",
-   "why": "The whole card is one tug-of-war: <b>hydrostatic pressure pushes fluid out</b> at the arteriolar end, and <b>oncotic pressure pulls it back</b> at the venular end because the plasma proteins stayed behind. The fluid leaves into the interstitium, the space between the cells."
+   "why": "The whole card is one tug-of-war: <b>hydrostatic pressure pushes fluid out</b> at the arteriolar end, and <b>oncotic pressure pulls it back</b> at the venular end because the plasma proteins stayed behind. The fluid leaves into the interstitium, the space between the cells.",
+   "qOrig": "Reflect on the processes of filtration and absorption. Describe the forces acting across a blood capillary, at both the arteriolar and the venular end. You may wish to refer to your Human Anatomy & Physiology textbook CHAPTER 29: Blood circulations in Patton and Thibodeau The answer below contains one error in the underlined parts. Find the error and replace it with an alternative that would make the definitions correct. ANSWER Arterial side: high hydrostatic pressure because of pump action of heart, 1. favors filtration. Forces fluid from bloodvessel into 2.intestinum . Venous side: high 3.oncotic pressure because of higher osmotic pressure in bloodvessel with all the water that left leaving 4. proteins and cells behind, 5. favors reabsorption . Forces fluid from interstitium back into capillary."
   },
   {
    "topic": "cvs-vessels",
@@ -4533,7 +4547,7 @@ const PACK = {
     "n": "Question 25"
    },
    "type": "match",
-   "q": "What will happen to fluid movement in the following conditions and why: Hypertension Dehydration Hypoalbuminaemia The answer below contains one error in the underlined parts. Find the error and replace it with an alternative that would make the definitions correct. ANSWER WITH ERROR Hypertension Higher hydrostatic pressure on arterial sides of capillary beds will 1.force more fluid out into the interstitium Dehydration Lower blood volume--> 2.Lower hydrostatic pressure on arterial sides of capillary beds will force 3. less fluid out into the interstitium Hypoalbuminaemia 4. Higher Oncotic pressure due to low protein levels on venous sides of capillary beds will lead to 5.l ower reabsorption from interstitium leading to edema.",
+   "q": "What will happen to fluid movement in the following conditions and why: Hypertension Dehydration Hypoalbuminaemia The answer below contains one error in the numbered parts below. Find the error and replace it with an alternative that would make the definitions correct. ANSWER WITH ERROR Hypertension Higher hydrostatic pressure on arterial sides of capillary beds will 1.force more fluid out into the interstitium Dehydration Lower blood volume--> 2.Lower hydrostatic pressure on arterial sides of capillary beds will force 3. less fluid out into the interstitium Hypoalbuminaemia 4. Higher Oncotic pressure due to low protein levels on venous sides of capillary beds will lead to 5.l ower reabsorption from interstitium leading to edema.",
    "pairs": [
     [
      "1.force more fluid out",
@@ -4556,7 +4570,8 @@ const PACK = {
    "alsoCrit": [
     "cvs-15"
    ],
-   "why": "Albumin is what creates the oncotic pull, so losing it makes that pull <b>weaker, not stronger</b> — less fluid is drawn back in and oedema follows. That is the planted error, and it is the mechanism behind the swollen abdomen of severe malnutrition."
+   "why": "Albumin is what creates the oncotic pull, so losing it makes that pull <b>weaker, not stronger</b> — less fluid is drawn back in and oedema follows. That is the planted error, and it is the mechanism behind the swollen abdomen of severe malnutrition.",
+   "qOrig": "What will happen to fluid movement in the following conditions and why: Hypertension Dehydration Hypoalbuminaemia The answer below contains one error in the underlined parts. Find the error and replace it with an alternative that would make the definitions correct. ANSWER WITH ERROR Hypertension Higher hydrostatic pressure on arterial sides of capillary beds will 1.force more fluid out into the interstitium Dehydration Lower blood volume--> 2.Lower hydrostatic pressure on arterial sides of capillary beds will force 3. less fluid out into the interstitium Hypoalbuminaemia 4. Higher Oncotic pressure due to low protein levels on venous sides of capillary beds will lead to 5.l ower reabsorption from interstitium leading to edema."
   },
   {
    "topic": "cvs-bp",
@@ -4568,7 +4583,7 @@ const PACK = {
     "n": "Question 26"
    },
    "type": "match",
-   "q": "Describe the body’s neural mechanisms for regulating blood pressure. The answer below contains two errors in the underlined parts. Find the errors and, in the matching exercise, replace them with alternatives that would make the definitions correct. ANSWER WITH ERRORS BP=HR x SV x PR Neural : 1. Chemoreceptors in 2.aortic & carotid bodies sense change in blood pressure. Signals sent to cardiac and vasomotor centres in 3.medulla oblongata from where the following centres are stimulated/ inhibited: a) Vasomotor centre to 4.dilate/constrict bloodvessels affecting PR; b) Cardiac centres (acceleratory centre (inhibit/stimulate) and inhibitory centre (inhibit/stimulate) having both a chronotropic and inotropic effect affecting 5.HR and SV .",
+   "q": "Describe the body’s neural mechanisms for regulating blood pressure. The answer below contains two errors in the numbered parts below. Find the errors and, in the matching exercise, replace them with alternatives that would make the definitions correct. ANSWER WITH ERRORS BP=HR x SV x PR Neural : 1. Chemoreceptors in 2.aortic & carotid bodies sense change in blood pressure. Signals sent to cardiac and vasomotor centres in 3.medulla oblongata from where the following centres are stimulated/ inhibited: a) Vasomotor centre to 4.dilate/constrict bloodvessels affecting PR; b) Cardiac centres (acceleratory centre (inhibit/stimulate) and inhibitory centre (inhibit/stimulate) having both a chronotropic and inotropic effect affecting 5.HR and SV .",
    "pairs": [
     [
      "1.Chemoreceptors",
@@ -4601,7 +4616,8 @@ const PACK = {
     "resp-13",
     "resp-14"
    ],
-   "why": "<b>Baroreceptors sense stretch, which means pressure; chemoreceptors sense chemistry.</b> Their addresses differ too — baroreceptors in the aortic arch and the carotid <b>sinus</b>, chemoreceptors in the aortic and carotid <b>bodies</b>. Both planted errors are that same swap."
+   "why": "<b>Baroreceptors sense stretch, which means pressure; chemoreceptors sense chemistry.</b> Their addresses differ too — baroreceptors in the aortic arch and the carotid <b>sinus</b>, chemoreceptors in the aortic and carotid <b>bodies</b>. Both planted errors are that same swap.",
+   "qOrig": "Describe the body’s neural mechanisms for regulating blood pressure. The answer below contains two errors in the underlined parts. Find the errors and, in the matching exercise, replace them with alternatives that would make the definitions correct. ANSWER WITH ERRORS BP=HR x SV x PR Neural : 1. Chemoreceptors in 2.aortic & carotid bodies sense change in blood pressure. Signals sent to cardiac and vasomotor centres in 3.medulla oblongata from where the following centres are stimulated/ inhibited: a) Vasomotor centre to 4.dilate/constrict bloodvessels affecting PR; b) Cardiac centres (acceleratory centre (inhibit/stimulate) and inhibitory centre (inhibit/stimulate) having both a chronotropic and inotropic effect affecting 5.HR and SV ."
   },
   {
    "topic": "cvs-anat",
@@ -4613,7 +4629,7 @@ const PACK = {
     "n": "Question 27"
    },
    "type": "match",
-   "q": "Describe the direct renal control of BP. The are two errors in the underlined numbered answers given below. Find them and correct them by choosing the correct pairs in the matching exercise. Low BP 1.Reduced blood flow to the kidney leads to 2. increased filtration leads to reduced urine output increasing blood volume leading to 3.reduced SV to increase BP. High BP 4.Increased blood flow to kidney leads to increased filtration leads to 5. Increased urine output reducing blood volume. Reduced blood volume leads to 6.decreased SV bringing BP down.",
+   "q": "Describe the direct renal control of BP. There are two errors in the numbered answers below. Find them and correct them by choosing the correct pairs in the matching exercise. Low BP 1.Reduced blood flow to the kidney leads to 2. increased filtration leads to reduced urine output increasing blood volume leading to 3.reduced SV to increase BP. High BP 4.Increased blood flow to kidney leads to increased filtration leads to 5. Increased urine output reducing blood volume. Reduced blood volume leads to 6.decreased SV bringing BP down.",
    "pairs": [
     [
      "1.Reduced",
@@ -4641,7 +4657,8 @@ const PACK = {
     ]
    ],
    "crit": "cvs-3",
-   "why": "Trace it as a volume story: low BP means less blood reaching the kidney, so <b>less filtrate and less urine</b>, so volume is kept, so venous return and stroke volume <b>rise</b> and push pressure back up. Both planted errors run that chain backwards."
+   "why": "Trace it as a volume story: low BP means less blood reaching the kidney, so <b>less filtrate and less urine</b>, so volume is kept, so venous return and stroke volume <b>rise</b> and push pressure back up. Both planted errors run that chain backwards.",
+   "qOrig": "Describe the direct renal control of BP. The are two errors in the underlined numbered answers given below. Find them and correct them by choosing the correct pairs in the matching exercise. Low BP 1.Reduced blood flow to the kidney leads to 2. increased filtration leads to reduced urine output increasing blood volume leading to 3.reduced SV to increase BP. High BP 4.Increased blood flow to kidney leads to increased filtration leads to 5. Increased urine output reducing blood volume. Reduced blood volume leads to 6.decreased SV bringing BP down."
   },
   {
    "topic": "cvs-bp",
@@ -6380,7 +6397,7 @@ const PACK = {
     "n": "Question 1"
    },
    "type": "cloze",
-   "q": "Complete the passage. (MODULE 1)",
+   "q": "Lagi's ECG. Put the five conduction events in the right order, then describe cardiac muscle fibres.",
    "text": "Lagi has an ECG to check his heart function. An ECG is measuring the electrical activity of his heart, as the different parts of the conduction system fire to cause contraction and relaxation. Look at the events below and select the answer which places them in the correct order [[1]] . I. The AV node conducts slowly, which allows time for the atria to contract completely II. The SA node acts as a pacemaker, and spontaneously depolarises (due to its electrogenic nature ) III. The Purkinje fibres conduct electrical charge rapidly to the myocardium IV. The Bundle of His (and it’s bundle branches) conducts electrical charge rapidly down the interventricular septum V. The atrial myocardium spreads electrical charge throughout the tissue via the intercalated discs of the cardiac muscle cells. Cardiac muscle fibres are [[2]] .",
    "blanks": [
     {
@@ -6407,7 +6424,8 @@ const PACK = {
     "cvs-8",
     "cs-bp"
    ],
-   "why": "The order follows the anatomy, and the step people drop is the one in the middle: the <b>atrial myocardium spreads the impulse cell to cell through intercalated discs</b> before the AV node holds it up."
+   "why": "The order follows the anatomy, and the step people drop is the one in the middle: the <b>atrial myocardium spreads the impulse cell to cell through intercalated discs</b> before the AV node holds it up.",
+   "qOrig": "Complete the passage. (MODULE 1)"
   },
   {
    "topic": "cvs-ecg",
@@ -6419,7 +6437,7 @@ const PACK = {
     "n": "Question 3"
    },
    "type": "cloze",
-   "q": "Complete the passage. (MODULE 1)",
+   "q": "Lagi's ECG, continued. What anchors the atrioventricular valves, and what does the QRS complex represent?",
    "text": "Lagi's ECG was normal but doctors are concerned about the anchorage of his atrioventricular valves. The atrio ventricular valves in the heart are anchored by chordae tendinae to [[1]] in the wall of the heart? On an ECG, the QRS complex represents [[2]] .",
    "blanks": [
     {
@@ -6446,7 +6464,8 @@ const PACK = {
     "cvs-8",
     "cs-bp"
    ],
-   "why": "The <b>papillary muscles</b> anchor the chordae tendineae, and they tighten just before the ventricle contracts — so the valve cusps cannot blow back into the atrium under pressure."
+   "why": "The <b>papillary muscles</b> anchor the chordae tendineae, and they tighten just before the ventricle contracts — so the valve cusps cannot blow back into the atrium under pressure.",
+   "qOrig": "Complete the passage. (MODULE 1)"
   },
   {
    "topic": "cvs-bp",
@@ -6458,7 +6477,7 @@ const PACK = {
     "n": "Question 4"
    },
    "type": "cloze",
-   "q": "Complete the passage. (MODULE 1)",
+   "q": "Lagi's blood pressure is 150/90 and his heart rate is 110. Work through his readings, the artery-and-vein micrograph, and how the body senses pressure and blood chemistry.",
    "text": "Lagi's blood pressure was 150/90. The nurse explains to him that these measurements show that he has [[1]] which may be due to high peripheral resistance and/or high blood volume and /or high heart rate. His heart rate is 110. This is known as [[2]] . The peripheral resistance which occurs within blood vessels will decrease when the blood [[3]] . The micrograph below is that of an artery and a vein. Study the images and answer the questions that follow: 4. The vein is shown by [[4]] because it has [[5]] . 5. The [[6]] of a blood vessel anchors blood vessels to the surrounding structures. 6. Veins are best described by [[7]] . 7. The LEAST permeable capillaries be found in the [[8]] . 8. The body senses the blood pressure using [[9]] . 9. The cardiac centre in the brain [[10]] . 10. The body senses the concentration of carbon dioxide and oxygen using [[11]] .",
    "blanks": [
     {
@@ -6575,7 +6594,8 @@ const PACK = {
     "lymph-2",
     "cs-bp"
    ],
-   "why": "Two ideas cover almost all of it: <b>BP = cardiac output × peripheral resistance</b>, and pressure is sensed by <b>baroreceptors</b> (aortic arch and carotid sinus) while blood chemistry is sensed by <b>chemoreceptors</b> (aortic and carotid bodies). Confusing those two receptor sets is the trap, and it is set here twice."
+   "why": "Two ideas cover almost all of it: <b>BP = cardiac output × peripheral resistance</b>, and pressure is sensed by <b>baroreceptors</b> (aortic arch and carotid sinus) while blood chemistry is sensed by <b>chemoreceptors</b> (aortic and carotid bodies). Confusing those two receptor sets is the trap, and it is set here twice.",
+   "qOrig": "Complete the passage. (MODULE 1)"
   },
   {
    "topic": "cvs-ecg",
@@ -6587,7 +6607,7 @@ const PACK = {
     "n": "Question 5"
    },
    "type": "cloze",
-   "q": "Complete the passage. (MODULE 1)",
+   "q": "Lagi has a murmur between the lub and the dub. Work through what makes the heart sounds, and what mitral regurgitation does.",
    "text": "The normal ECG shows that the electrical conduction system of Lagi's heart is normal and the heart muscle, known as the [[1]] is not affected. The sounds of his heart shows a murmur between the lub and dub sounds. Normal heart sounds “lub dub” are produced by [[2]] . In the heart, t he mitral valve is [[3]] . Mitral regurgitation is a condition where the mitral valve does not close properly and some of the blood [[4]] .",
    "blanks": [
     {
@@ -6634,7 +6654,8 @@ const PACK = {
     "resp-2",
     "cs-bp"
    ],
-   "why": "Heart sounds are <b>valves closing</b>, not muscle contracting. A murmur between lub and dub is therefore blood crossing a valve that should be shut — in mitral regurgitation, back into the <b>left atrium</b> while the ventricle contracts."
+   "why": "Heart sounds are <b>valves closing</b>, not muscle contracting. A murmur between lub and dub is therefore blood crossing a valve that should be shut — in mitral regurgitation, back into the <b>left atrium</b> while the ventricle contracts.",
+   "qOrig": "Complete the passage. (MODULE 1)"
   },
   {
    "topic": "cvs-bp",
@@ -6666,7 +6687,7 @@ const PACK = {
     "n": "Question 7"
    },
    "type": "cloze",
-   "q": "Complete the passage. (MODULE 1)",
+   "q": "From the diagram — name the blood vessel labelled X, and say where it returns blood to.",
    "text": "In the diagram below , the blood vessel labelled X is the [[1]] and returns blood to the [[2]] .",
    "blanks": [
     {
@@ -6695,7 +6716,8 @@ const PACK = {
     "cvs-6",
     "lymph-2"
    ],
-   "why": "Follow the drainage upstream: the <b>jugular</b> vein drains the head and empties into the <b>subclavian</b>, and the two together become the brachiocephalic vein before the superior vena cava."
+   "why": "Follow the drainage upstream: the <b>jugular</b> vein drains the head and empties into the <b>subclavian</b>, and the two together become the brachiocephalic vein before the superior vena cava.",
+   "qOrig": "Complete the passage. (MODULE 1)"
   },
   {
    "topic": "resp-anat",
@@ -6707,7 +6729,7 @@ const PACK = {
     "n": "Question 9"
    },
    "type": "cloze",
-   "q": "Complete the passage. (MODULE 1)",
+   "q": "Kalama is choking on a large piece of bread. Name the structure that let it happen, and the ones that normally keep the airway clear.",
    "text": "Kalama ate a large piece of bread which she swallowed without chewing it properly. She is now choking and struggles to breathe. This is because of a soft structure, the [[1]] , found at the posterior side of the trachea. It allows the trachea to change size to assist coughing and allow food to pass through the oesophagus. Food is kept out of the trachea by the elastic cartilage lid known as the [[2]] . If particles end up in the trachea they usually fail to reach the lungs because of the [[3]] . The vocal cods are found in the [[4]] .",
    "blanks": [
     {
@@ -6752,7 +6774,8 @@ const PACK = {
     "resp-3",
     "resp-4"
    ],
-   "why": "The soft back wall of the trachea is the <b>trachealis muscle</b>, and its softness is exactly why a large bolus in the oesophagus behind it can press forward into the airway. The epiglottis is the lid; the ciliated mucous lining is the escalator that stops particles going deeper."
+   "why": "The soft back wall of the trachea is the <b>trachealis muscle</b>, and its softness is exactly why a large bolus in the oesophagus behind it can press forward into the airway. The epiglottis is the lid; the ciliated mucous lining is the escalator that stops particles going deeper.",
+   "qOrig": "Complete the passage. (MODULE 1)"
   },
   {
    "topic": "resp-mech",
@@ -6764,7 +6787,7 @@ const PACK = {
     "n": "Question 10"
    },
    "type": "cloze",
-   "q": "Complete the passage. (MODULE 1)",
+   "q": "La'akea's broken rib has punctured her parietal pleura. Name the condition, and the correct term for the collapsed lung.",
    "text": "La'akea was admitted to the hospital with a broken rib that punctured her parietal pleura. That allowed air to get into her pleural cavity, a condition known as [[1]] .The correct terminology for a collapsed lung is [[2]] .",
    "blanks": [
     {
@@ -6790,7 +6813,8 @@ const PACK = {
    "alsoCrit": [
     "resp-7"
    ],
-   "why": "Separate the cause from the result: <b>pneumothorax is air in the pleural cavity</b>, and <b>atelectasis is the lung collapsing</b> because the negative pressure holding it open has been lost."
+   "why": "Separate the cause from the result: <b>pneumothorax is air in the pleural cavity</b>, and <b>atelectasis is the lung collapsing</b> because the negative pressure holding it open has been lost.",
+   "qOrig": "Complete the passage. (MODULE 1)"
   },
   {
    "topic": "cvs-bp",
@@ -6802,7 +6826,7 @@ const PACK = {
     "n": "Question 11"
    },
    "type": "cloze",
-   "q": "Complete the passage. (MODULE 1)",
+   "q": "Oliana has finished exercising and her blood pressure has to come back down. Put the reflex steps in order, then complete the vasomotor half.",
    "text": "Oliana that has been exercising intensely. While she exercised, her blood pressure has increased, to allow for increased blood delivery and tissue perfusion in the muscle. As she has comp leted her exercise, her brain must restore blood pressure back down to normal homeostatic levels. Her nervous system helps to lower blood pressure back to normal in the steps given below in the order [[1]] . A. The cardiac inhibitory centre in the MO is stimulated. B. This leads to a decrease in Blood pressure C. This leads to a decrease in heart rate D. The parasympathetic fibres of the vagus nerve take impulses to the SA node releasing acetylcholine. E. The baroreceptors in aortic arch and carotid sinus fire at a high rate At the same time the [[2]] is involved in decreasing the total peripheral resistance by [[3]] to achieve [[4]] .",
    "blanks": [
     {
@@ -6853,7 +6877,8 @@ const PACK = {
     "cvs-15",
     "resp-2"
    ],
-   "why": "The reflex always runs <b>receptor → centre → nerve → effector → result</b>: baroreceptors fire, the cardio-inhibitory centre is stimulated, the vagus releases acetylcholine at the SA node, rate falls, pressure falls. The vasomotor centre does the other half by relaxing vessel smooth muscle."
+   "why": "The reflex always runs <b>receptor → centre → nerve → effector → result</b>: baroreceptors fire, the cardio-inhibitory centre is stimulated, the vagus releases acetylcholine at the SA node, rate falls, pressure falls. The vasomotor centre does the other half by relaxing vessel smooth muscle.",
+   "qOrig": "Complete the passage. (MODULE 1)"
   },
   {
    "topic": "resp-anat",
@@ -6865,7 +6890,7 @@ const PACK = {
     "n": "Question 12"
    },
    "type": "cloze",
-   "q": "Complete the passage. (MODULE 1)",
+   "q": "A still-born baby's lung tissue sinks in water. Explain why.",
    "text": "Putting a piece of still - born baby’s lung tissue in a beaker of water one can see that it sinks. This is so because there is no [[1]] in the lung making the lung [[2]] .",
    "blanks": [
     {
@@ -6891,7 +6916,8 @@ const PACK = {
    "alsoCrit": [
     "resp-6"
    ],
-   "why": "A lung that has breathed keeps its <b>residual volume</b> — air that cannot be forced out — so it floats. A lung that never inflated has none, and sinks. This is a real forensic test."
+   "why": "A lung that has breathed keeps its <b>residual volume</b> — air that cannot be forced out — so it floats. A lung that never inflated has none, and sinks. This is a real forensic test.",
+   "qOrig": "Complete the passage. (MODULE 1)"
   },
   {
    "topic": "cvs-vessels",
@@ -6903,7 +6929,7 @@ const PACK = {
     "n": "Question 15"
    },
    "type": "cloze",
-   "q": "Complete the passage. (MODULE 1)",
+   "q": "Mesenteric adenitis and the MALT system — ten questions on lymphoid tissue, the cells in lymph, and lymphatic drainage.",
    "text": "Mesenteric adenitis is usually a mild condition following a sore throat or a cold or viral infection like chickenpox. It sometimes mimics appendicitis. The appendix is part of the MALT system. 1. The [[1]] is an endocrine gland that is NOT part of the MALT system. 2. Which of the following is also [[2]] NOT part of the MALT system? 3. Which item gives the best description of what the MALT system is? [[3]] 4. The MALT system forms part of the lymphatic system. What is the main function of the lymphatic system? [[4]] 5. The blood cells that are found abundantly in the lymph system are [[5]] . Their function is to [[6]] . 6. Sentinel lymph nodes are [[7]] . 7. A condition that develops when lymph is not draining away from an area is known as [[8]] . 6. A connective tissue type that is found particularly in lymphoid tissue and lymph nodes is [[9]] . 7. The largest lymph vessel in the body is the [[10]] .",
    "blanks": [
     {
@@ -7005,7 +7031,8 @@ const PACK = {
     "lymph-4",
     "cs-vacc"
    ],
-   "why": "Two facts unlock most of the blanks: <b>MALT is lymphoid tissue sitting in mucosal membranes</b>, so organs like the spleen and thymus are not MALT; and the lymphatic system's main job is <b>fluid balance</b> — immunity is what it does with that fluid on the way past. <b>One warning about the key on the cell-function blank.</b> The abundant cell in lymph is the lymphocyte, and that part is right — but this paper then marks its function as \"primary mediators of the rapid innate host defense\", which is the description of a <b>neutrophil</b>. Lymphocytes are the <b>adaptive</b> arm: B cells make antibody, T cells kill infected cells and direct the response. Answer the key to score the mark here, and hold on to the real division — innate and fast is the neutrophil, specific and remembered is the lymphocyte."
+   "why": "Two facts unlock most of the blanks: <b>MALT is lymphoid tissue sitting in mucosal membranes</b>, so organs like the spleen and thymus are not MALT; and the lymphatic system's main job is <b>fluid balance</b> — immunity is what it does with that fluid on the way past. <b>One warning about the key on the cell-function blank.</b> The abundant cell in lymph is the lymphocyte, and that part is right — but this paper then marks its function as \"primary mediators of the rapid innate host defense\", which is the description of a <b>neutrophil</b>. Lymphocytes are the <b>adaptive</b> arm: B cells make antibody, T cells kill infected cells and direct the response. Answer the key to score the mark here, and hold on to the real division — innate and fast is the neutrophil, specific and remembered is the lymphocyte.",
+   "qOrig": "Complete the passage. (MODULE 1)"
   },
   {
    "topic": "cvs-vessels",
@@ -7136,11 +7163,12 @@ const PACK = {
     "n": "Question 17"
    },
    "type": "flash",
-   "q": "Use the histological images and diagrams provided on CANVAS to draw diagrams of an artery and a vein. Label clearly to show the differences (structural) between them, and the three layers in their walls, included notes on the functional differences too.",
+   "q": "Draw an artery and a vein side by side. Label the three layers of each wall, show the structural differences between them, and note what each difference is for.",
    "pointsTier": "TODO",
    "crit": "cvs-2",
    "selfMark": true,
-   "a": "<b>The three layers, both vessels, inside out.</b><br><b>Tunica intima</b> — endothelium on a basement membrane. Smooth, so blood flows without clotting or friction. In a <b>vein</b> this layer folds inwards to form the <b>valves</b>.<br><b>Tunica media</b> — smooth muscle and elastic fibres, under sympathetic control; this is the layer that vasoconstricts and vasodilates. Much <b>thicker in an artery</b>, and an artery also has a distinct <b>internal elastic lamina</b> at its inner border.<br><b>Tunica externa (adventitia)</b> — collagen; anchors the vessel to surrounding tissue. Proportionally thicker in a vein.<br><br><b>What your labels must show — structural.</b> Artery: thick tunica media, visible internal elastic lamina, small round lumen, wall holds its shape. Vein: thin wall, <b>large and floppy lumen</b> that collapses, <b>valves</b> present.<br><br><b>Functional.</b> Artery: carries blood <b>away</b> from the heart, under high pulsatile pressure — the thick elastic media absorbs and smooths each ejection. Vein: carries blood <b>towards</b> the heart at low pressure, holds most of the blood volume as a reservoir, and depends on the skeletal muscle pump and its valves to move blood against gravity.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
+   "a": "<b>The three layers, both vessels, inside out.</b><br><b>Tunica intima</b> — endothelium on a basement membrane. Smooth, so blood flows without clotting or friction. In a <b>vein</b> this layer folds inwards to form the <b>valves</b>.<br><b>Tunica media</b> — smooth muscle and elastic fibres, under sympathetic control; this is the layer that vasoconstricts and vasodilates. Much <b>thicker in an artery</b>, and an artery also has a distinct <b>internal elastic lamina</b> at its inner border.<br><b>Tunica externa (adventitia)</b> — collagen; anchors the vessel to surrounding tissue. Proportionally thicker in a vein.<br><br><b>What your labels must show — structural.</b> Artery: thick tunica media, visible internal elastic lamina, small round lumen, wall holds its shape. Vein: thin wall, <b>large and floppy lumen</b> that collapses, <b>valves</b> present.<br><br><b>Functional.</b> Artery: carries blood <b>away</b> from the heart, under high pulsatile pressure — the thick elastic media absorbs and smooths each ejection. Vein: carries blood <b>towards</b> the heart at low pressure, holds most of the blood volume as a reservoir, and depends on the skeletal muscle pump and its valves to move blood against gravity.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>",
+   "qOrig": "Use the histological images and diagrams provided on CANVAS to draw diagrams of an artery and a vein. Label clearly to show the differences (structural) between them, and the three layers in their walls, included notes on the functional differences too."
   },
   {
    "topic": "cvs-anat",

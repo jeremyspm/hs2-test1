@@ -1,0 +1,178 @@
+{
+  "_readme": [
+    "AUTHORED STEMS — the recontextualisation layer.",
+    "",
+    "These cards are Hannetjie's, harvested from Canvas quiz captures. Canvas held the",
+    "context OUTSIDE the question: a quiz title, a group preamble, an underline, a link.",
+    "The harvest took the question and left the context behind, so the card arrives",
+    "saying things like 'Complete the passage. (MODULE 1.1)' — a title, not a question.",
+    "",
+    "ONLY THE STEM IS AUTHORED. The answer, the options, the passage, the blanks and the",
+    "marking points are untouched and still diff against the capture. The stem is",
+    "navigation: it says what you are being asked, using only terms already on the card",
+    "or in its own passage. The original is preserved on the card as `qOrig` and the",
+    "tool shows it under 'as it appeared in Canvas', so her wording is never lost.",
+    "",
+    "TWO MODES.",
+    "  q   — full replacement. For stems that carry no content, only a title.",
+    "  sub — surgical [find, replace] pairs, each of which MUST match exactly once.",
+    "        Used where the stem is long and mostly correct; retyping 100 words of her",
+    "        prose to fix one word is how transcription errors get introduced.",
+    "",
+    "KEYED ON THE FULL ckey (type | question | content signature), computed from the",
+    "card as it arrives from the harvest. apply-migration rebuilds from source on every",
+    "run, so at the moment this overlay runs the question is always the original — the",
+    "same reason selfmark-answers.json can key on `q` while writing `a`. Edit the source",
+    "question and the key stops matching, which fails the build instead of silently",
+    "restemming the wrong card.",
+    "",
+    "CONSEQUENCE, DELIBERATE: rewriting `q` changes the shipped card's ckey, so saved",
+    "progress and any flag on these 28 cards resets. That is correct — the card the",
+    "reader met is not the card they will meet now."
+  ],
+
+  "stems": [
+    {
+      "k": "krf756l",
+      "was": "Complete the passage. (Respiratory System)",
+      "q": "Respiratory terminology — name the condition each description defines."
+    },
+    {
+      "k": "k1rs32gi",
+      "was": "Complete the passage. (Respiratory System)",
+      "q": "Flow and pressure vocabulary — name the term each description defines."
+    },
+    {
+      "k": "k1rym1yr",
+      "was": "Complete the passage. (MODULE 1.1)",
+      "q": "Blood pressure = cardiac output × peripheral resistance. Complete what each half depends on, then the chemicals that raise and lower it."
+    },
+    {
+      "k": "kpa49oh",
+      "was": "Complete the passage. (MODULE 1.1)",
+      "q": "The renin–angiotensin–aldosterone system. Complete the table: what makes each hormone, where it acts, and what it does."
+    },
+    {
+      "k": "k145c8d2",
+      "was": "Complete the passage. (MODULE 1.1)",
+      "q": "Control of heart rate. Complete the conduction pathway, then the nerves, hormones and electrolytes that speed it up or slow it down."
+    },
+    {
+      "k": "k1duabu0",
+      "was": "Complete the passage. (MODULE 1.1)",
+      "q": "How venous return, plasma electrolytes, stress and exercise each change cardiac function and blood pressure."
+    },
+    {
+      "k": "k1w9vn4c",
+      "was": "Complete the passage. (MODULE 1.1)",
+      "q": "The baroreceptor reflex. Complete both pathways — low blood pressure and high blood pressure — from receptor to effect."
+    },
+    {
+      "k": "kog7cln",
+      "was": "Complete the passage. (MODULE 1.1)",
+      "q": "Artery against vein. Complete the comparison of their walls and lumens."
+    },
+    {
+      "k": "k1yedjnt",
+      "was": "Complete the passage. (MODULE 1)",
+      "q": "Lagi's ECG. Put the five conduction events in the right order, then describe cardiac muscle fibres."
+    },
+    {
+      "k": "k1pxurfv",
+      "was": "Complete the passage. (MODULE 1)",
+      "q": "Lagi's ECG, continued. What anchors the atrioventricular valves, and what does the QRS complex represent?"
+    },
+    {
+      "k": "k8nqtm0",
+      "was": "Complete the passage. (MODULE 1)",
+      "q": "Lagi's blood pressure is 150/90 and his heart rate is 110. Work through his readings, the artery-and-vein micrograph, and how the body senses pressure and blood chemistry."
+    },
+    {
+      "k": "k1vv1tqv",
+      "was": "Complete the passage. (MODULE 1)",
+      "q": "Lagi has a murmur between the lub and the dub. Work through what makes the heart sounds, and what mitral regurgitation does."
+    },
+    {
+      "k": "k1ujvbbs",
+      "was": "Complete the passage. (MODULE 1)",
+      "q": "From the diagram — name the blood vessel labelled X, and say where it returns blood to."
+    },
+    {
+      "k": "kv7m0s4",
+      "was": "Complete the passage. (MODULE 1)",
+      "q": "Kalama is choking on a large piece of bread. Name the structure that let it happen, and the ones that normally keep the airway clear."
+    },
+    {
+      "k": "k80cbe0",
+      "was": "Complete the passage. (MODULE 1)",
+      "q": "La'akea's broken rib has punctured her parietal pleura. Name the condition, and the correct term for the collapsed lung."
+    },
+    {
+      "k": "k12ge6st",
+      "was": "Complete the passage. (MODULE 1)",
+      "q": "Oliana has finished exercising and her blood pressure has to come back down. Put the reflex steps in order, then complete the vasomotor half."
+    },
+    {
+      "k": "k1mnzemr",
+      "was": "Complete the passage. (MODULE 1)",
+      "q": "A still-born baby's lung tissue sinks in water. Explain why."
+    },
+    {
+      "k": "kyblkaa",
+      "was": "Complete the passage. (MODULE 1)",
+      "q": "Mesenteric adenitis and the MALT system — ten questions on lymphoid tissue, the cells in lymph, and lymphatic drainage."
+    },
+
+    {
+      "k": "kxokc54",
+      "was": "Link The valves that close off to prevent back-flow of blood when the ventricles contract are known as the",
+      "q": "The valves that close off to prevent back-flow of blood when the ventricles contract are known as the…"
+    },
+    {
+      "k": "k1bx2vas",
+      "was": "The following statement about the heart is true: Link",
+      "q": "Which one of these statements about the heart is true?"
+    },
+    {
+      "k": "kvbjhdg",
+      "was": "The homeostatic mechanisms that are involved in stroke volume. Neural and hormonal control. The theory in 2020 CVS 3-1.pptx Download 2020 CVS 3-1.pptx STROKE VOLUME (SV): Volume of blood pumped out from each ventricle per beat –70 mL The ventricles do not pump out all the blood it receives 2/3 of the blood - approx. 70 ml/beat In a healthy heart - SV is relatively constant Cardiac output = stroke volume x heart rate CO = SV x HR the higher the stroke volume, the higher the cardiac output. Which of the following factors do NOT increase Stroke volume?[a]",
+      "q": "Stroke volume is the blood each ventricle pumps per beat — about 70 mL, roughly two thirds of what it received — and cardiac output = stroke volume × heart rate. Which of the following does NOT increase stroke volume?"
+    },
+    {
+      "k": "kj95sq2",
+      "was": "Use the histological images and diagrams provided on CANVAS to draw diagrams of an artery and a vein. Label clearly to show the differences (structural) between them, and the three layers in their walls, included notes on the functional differences too.",
+      "q": "Draw an artery and a vein side by side. Label the three layers of each wall, show the structural differences between them, and note what each difference is for."
+    },
+
+    {
+      "k": "k1xpzhtv",
+      "was": "Define: Blood pressure (BP) Cardiac output (CO) Stroke volume (SV) Peripheral resistance (PR) or Systemic Vascular resistance (SVR) The answer below contains two errors in the underlined parts. Find the errors and replace them with alternatives that would make the definitions correct. Blood pressure: pressure exerted by blood the blood on the 1. walls of the arteries Cardiac output (CO) total volume of blood pumped by 2.heart/sec : CO = HR x SV Stroke volume (SV) 3.amount of blood pumped out of heart's 4.ventricles per beat. Peripheral resistance (PR) or systemic vascular resistance (SVR) = 5. drag blood vessels exert against flow of blood.",
+      "sub": [["the underlined parts", "the numbered parts below"]]
+    },
+    {
+      "k": "k15rez0i",
+      "was": "Explain the meanings of cardiac reserve and ejection fraction. The answer below contains two errors in the underlined parts. Find the errors and replace them with alternatives that would make the definitions correct. Cardiac reserve The 1.m aximum capacity of the heart to increase its 2.input if put under stress e. g. by exercising Ejection fraction The % of the blood ejected per beat from the 3. ventricles . 4. 70% is good.",
+      "sub": [["the underlined parts", "the numbered parts below"]]
+    },
+    {
+      "k": "kr5igry",
+      "was": "Reflect on the processes of filtration and absorption. Describe the forces acting across a blood capillary, at both the arteriolar and the venular end. You may wish to refer to your Human Anatomy & Physiology textbook CHAPTER 29: Blood circulations in Patton and Thibodeau The answer below contains one error in the underlined parts. Find the error and replace it with an alternative that would make the definitions correct. ANSWER Arterial side: high hydrostatic pressure because of pump action of heart, 1. favors filtration. Forces fluid from bloodvessel into 2.intestinum . Venous side: high 3.oncotic pressure because of higher osmotic pressure in bloodvessel with all the water that left leaving 4. proteins and cells behind, 5. favors reabsorption . Forces fluid from interstitium back into capillary.",
+      "sub": [["the underlined parts", "the numbered parts below"]]
+    },
+    {
+      "k": "kly44op",
+      "was": "What will happen to fluid movement in the following conditions and why: Hypertension Dehydration Hypoalbuminaemia The answer below contains one error in the underlined parts. Find the error and replace it with an alternative that would make the definitions correct. ANSWER WITH ERROR Hypertension Higher hydrostatic pressure on arterial sides of capillary beds will 1.force more fluid out into the interstitium Dehydration Lower blood volume--> 2.Lower hydrostatic pressure on arterial sides of capillary beds will force 3. less fluid out into the interstitium Hypoalbuminaemia 4. Higher Oncotic pressure due to low protein levels on venous sides of capillary beds will lead to 5.l ower reabsorption from interstitium leading to edema.",
+      "sub": [["the underlined parts", "the numbered parts below"]]
+    },
+    {
+      "k": "k1b5qmqy",
+      "was": "Describe the body’s neural mechanisms for regulating blood pressure. The answer below contains two errors in the underlined parts. Find the errors and, in the matching exercise, replace them with alternatives that would make the definitions correct. ANSWER WITH ERRORS BP=HR x SV x PR Neural : 1. Chemoreceptors in 2.aortic & carotid bodies sense change in blood pressure. Signals sent to cardiac and vasomotor centres in 3.medulla oblongata from where the following centres are stimulated/ inhibited: a) Vasomotor centre to 4.dilate/constrict bloodvessels affecting PR; b) Cardiac centres (acceleratory centre (inhibit/stimulate) and inhibitory centre (inhibit/stimulate) having both a chronotropic and inotropic effect affecting 5.HR and SV .",
+      "sub": [["the underlined parts", "the numbered parts below"]]
+    },
+    {
+      "k": "k1e8t3wy",
+      "was": "Describe the direct renal control of BP. The are two errors in the underlined numbered answers given below. Find them and correct them by choosing the correct pairs in the matching exercise. Low BP 1.Reduced blood flow to the kidney leads to 2. increased filtration leads to reduced urine output increasing blood volume leading to 3.reduced SV to increase BP. High BP 4.Increased blood flow to kidney leads to increased filtration leads to 5. Increased urine output reducing blood volume. Reduced blood volume leads to 6.decreased SV bringing BP down.",
+      "sub": [["The are two errors in the underlined numbered answers given below", "There are two errors in the numbered answers below"]]
+    }
+  ]
+}
