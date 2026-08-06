@@ -334,6 +334,9 @@ h2.sec{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--tx
 /* The original question, behind a disclosure. Quiet by default — it is provenance, not
    the thing being studied — but full contrast once opened, because the whole point is
    that it can actually be read and checked. */
+.damaged{margin-top:9px;font-size:12.5px;line-height:1.55;color:var(--tx2);background:var(--gHard);
+  border:1px solid var(--bHard);border-radius:9px;padding:9px 12px}
+.damaged .dm2{display:block;margin-top:5px;color:var(--tx3);font-size:11.5px}
 .qorig{margin-top:8px}
 .qorig>summary{cursor:pointer;font-size:11.5px;font-weight:700;color:var(--tx3);list-style:none;
   display:inline-flex;align-items:center;gap:5px;padding:3px 9px;border-radius:7px;
@@ -5184,7 +5187,8 @@ const PACK = {
     "cvs-9",
     "cvs-11"
    ],
-   "why": "<b>Chrono means time, so rate; ino means force.</b> Sympathetic stimulation and noradrenaline raise both, by driving more calcium into the myocardial cells; acetylcholine from the vagus lowers rate."
+   "why": "<b>Chrono means time, so rate; ino means force.</b> Sympathetic stimulation and noradrenaline raise both, by driving more calcium into the myocardial cells; acetylcholine from the vagus lowers rate.",
+   "damaged": "The marking key published for this question is inconsistent: “Decreases both chronotropic output” is used as the answer to one prompt and as a prompt in its own right, and a seventh prompt reads “A tion of norepine on myocardial cellshrine”. Both are exactly as Canvas served them."
   },
   {
    "topic": "cvs-anat",
@@ -8788,6 +8792,24 @@ const hasBG=()=>_hasBG!==null?_hasBG:(_hasBG=PACK.cards.some(c=>c.bg));
 const bgOn=()=>!hasBG()||!!S.bg;
 const inPool=c=>!c.bg||bgOn();
 
+/* DAMAGED AT SOURCE — dealt to nobody, hidden from nobody.
+
+   A harvested pack occasionally carries a question that is broken in the COURSE, not
+   in the import. hs2-test1 has one: a matching exercise whose published key uses the
+   same string as both a prompt and an answer, and whose seventh prompt reads "A tion
+   of norepine on myocardial cellshrine". The capture is faithful — that is what
+   Canvas served — so the card is genuinely verbatim and genuinely unanswerable.
+
+   Neither obvious response is right. Editing it would break the one promise the
+   verbatim tier makes. Dealing it means marking a student wrong on a string that does
+   not parse, which teaches them nothing and makes them doubt themselves. Dropping it
+   silently would hide a real defect in material they are about to be examined on.
+
+   So: `damaged` holds the reason, the card stays in All cards, Search and the Brief
+   with that reason shown, and it is never dealt as a question. The reader gets to see
+   it, and to know the problem is not theirs. */
+const answerable=c=>!c.damaged;
+
 /* type may be a single type or an array of them (AUTO / RECALL).
    `all` here means every card of that type; callers that must respect the background
    setting filter with `inPool`. Search and the Brief deliberately do not. */
@@ -8893,6 +8915,13 @@ function provHTML(c){
    original is usually the less useful of the two — but never more than one tap away,
    and it is plain <details>, so it works with no JS and reads correctly to a screen
    reader. A pack that rewrites nothing renders nothing. */
+/* The reason a card is never dealt, shown wherever the card can be read. Silence here
+   would turn an honest exclusion into a hidden one. */
+function damagedHTML(c){
+  if(!c.damaged) return '';
+  return `<div class="damaged"><b>⚠ Not dealt as a question.</b> ${esc(c.damaged)}
+    <span class="dm2">It is kept here, exactly as published, because it is still ${esc(PACK.lecturer||'the lecturer')}'s material and worth reading — the problem is in the question, not in you.</span></div>`;
+}
 function origHTML(c){
   if(!c.qOrig) return '';
   return `<details class="qorig"><summary>Show it as it appeared in Canvas</summary><div class="qo">${c.qOrig}</div>
@@ -9533,7 +9562,7 @@ function libCardHTML(c){
       ${provHTML(c)}
       ${flagBtnHTML(c.key)}
     </div>
-    <div class="libq">${c.q}</div>${origHTML(c)}
+    <div class="libq">${c.q}</div>${origHTML(c)}${damagedHTML(c)}
     <div class="provslot"></div>
     ${c.type==='cloze'&&!showA?`<div class="liba">${esc(strip(c.text||''))}</div>`:''}
     ${figHTML(c)}
@@ -9759,8 +9788,8 @@ function deckSource(types){
   /* "Get me ready" ranks the whole pack; "I'll pick" honours the topic chip. A
      focus scope from the Brief overrides both, and falls back to the whole pack
      for that focus point if the current filter holds none of it. */
-  const all=cardsOf(types,'all').filter(inPool);
-  const base=S.door==='ready'?all:cardsOf(types,S.topic).filter(inPool);
+  const all=cardsOf(types,'all').filter(inPool).filter(answerable);
+  const base=S.door==='ready'?all:cardsOf(types,S.topic).filter(inPool).filter(answerable);
   const scoped=!S.crit?base:(critScope(base).length?critScope(base):critScope(all));
   /* Two cards with the same key are the same card — same type, same question, same
      answer. hs2-test1 carries five such pairs from a double-import in the harvest.
@@ -10031,7 +10060,7 @@ function critProse(id){
    and park them permanently at the top of "where the next half hour goes", pointing the
    reader at work the queue was never going to give them. */
 function critMastery(id){
-  const cs=critCards(id).filter(inPool); if(!cs.length) return null;
+  const cs=critCards(id).filter(inPool).filter(answerable); if(!cs.length) return null;
   const rec=cs.filter(isRecall), a=autoAcc(cs), parts=[];
   if(rec.some(c=>srsGet(c.key).seen>0)) parts.push(rec.filter(c=>srsGet(c.key).box>=2).length/rec.length);
   if(a) parts.push(a.pct/100);

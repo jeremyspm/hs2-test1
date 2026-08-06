@@ -4723,7 +4723,8 @@ const PACK = {
     "cvs-9",
     "cvs-11"
    ],
-   "why": "<b>Chrono means time, so rate; ino means force.</b> Sympathetic stimulation and noradrenaline raise both, by driving more calcium into the myocardial cells; acetylcholine from the vagus lowers rate."
+   "why": "<b>Chrono means time, so rate; ino means force.</b> Sympathetic stimulation and noradrenaline raise both, by driving more calcium into the myocardial cells; acetylcholine from the vagus lowers rate.",
+   "damaged": "The marking key published for this question is inconsistent: “Decreases both chronotropic output” is used as the answer to one prompt and as a prompt in its own right, and a seventh prompt reads “A tion of norepine on myocardial cellshrine”. Both are exactly as Canvas served them."
   },
   {
    "topic": "cvs-anat",
