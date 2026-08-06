@@ -39,6 +39,56 @@ for (const [i, m] of [...out.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/sc
     process.exit(1);
   }
 }
+/* ── runtime smoke test ───────────────────────────────────────────────────────
+   THE PARSE CHECK ABOVE IS NOT ENOUGH, and this exists because it let a dead build
+   through. A `const` declared 500 lines below its first use is syntactically perfect
+   and throws "Cannot access X before initialization" the moment the page runs — the
+   whole app died before rendering a single card, and every gate below still passed
+   because they read the pack object, not the page.
+
+   So: execute the shipped page's main script against a stub DOM and require it to reach
+   the end. This cannot prove the tool WORKS — only a browser does that — but it catches
+   the class of failure where the file is fine and the program is not, which is the one
+   the parse check is blind to and the one that ships silently. */
+{
+  const script = [...out.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/script>/g)].map(m => m[1]).sort((a, b) => b.length - a.length)[0];
+  const el = () => new Proxy({}, {
+    get: (t, k) => k === 'style' || k === 'classList' || k === 'dataset' ? el()
+      : k === 'innerHTML' || k === 'textContent' || k === 'value' || k === 'className' ? ''
+      : k === 'hidden' || k === 'checked' ? false
+      : typeof k === 'string' && k.startsWith('on') ? null
+      : el,
+    set: () => true,
+    apply: () => el(),
+  });
+  const doc = {
+    querySelector: () => el(), querySelectorAll: () => [],
+    addEventListener() {}, createElement: () => el(), documentElement: el(), body: el(),
+    get title() { return this._t ?? ''; }, set title(v) { this._t = v; },
+  };
+  const store = new Map();
+  const ctx = {
+    document: doc, console: { log() {}, warn() {}, error() {} },
+    localStorage: { getItem: k => store.has(k) ? store.get(k) : null, setItem: (k, v) => store.set(k, String(v)), removeItem: k => store.delete(k) },
+    location: { search: '', origin: 'file://', pathname: '/index.html', href: '' },
+    matchMedia: () => ({ matches: false, addEventListener() {} }),
+    setTimeout: () => 0, setInterval: () => 0, clearInterval() {}, requestAnimationFrame: () => 0,
+    URLSearchParams, Date, Math, JSON, Object, Array, String, Number, Boolean, RegExp, Set, Map, Proxy, isNaN, parseInt, parseFloat, encodeURIComponent, decodeURIComponent,
+  };
+  ctx.window = ctx; ctx.globalThis = ctx; ctx.self = ctx;
+  const vm = await import('node:vm');
+  vm.createContext(ctx);
+  try {
+    vm.runInContext(script + '\n;globalThis.__REACHED_END__=true;', ctx, { filename: 'index.html', timeout: 15000 });
+  } catch (e) {
+    console.error(`✗ the shipped page THROWS at run time: ${e.message}`);
+    console.error('  The file parses; the program does not run. Nothing below this would have caught it.');
+    process.exit(1);
+  }
+  if (!ctx.__REACHED_END__) { console.error('✗ the shipped page did not finish executing'); process.exit(1); }
+  console.log('shipped page executes end-to-end against a stub DOM ✓');
+}
+
 /* Stats come from LOADING the pack, not from regexing it. pack.js is now generated
    JSON, so patterns written for the old hand-authored style (type:'flash', crit:'cvs-7')
    matched nothing and every count silently read zero — a build that reported "0 cards"

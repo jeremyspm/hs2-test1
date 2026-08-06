@@ -334,6 +334,34 @@ h2.sec{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--tx
 /* The original question, behind a disclosure. Quiet by default — it is provenance, not
    the thing being studied — but full contrast once opened, because the whole point is
    that it can actually be read and checked. */
+/* One part of a long answer. Real separation, and a leading bold reads as the little
+   heading it was always written to be. `.run` is the marker for that; the space above
+   is larger than the space inside, so the eye groups each part correctly. */
+/* ── the rail ──────────────────────────────────────────────────────────────
+   A vertical line of stations, because it has to work at 375px and a horizontal
+   metro line does not — the bead labels here are whole clauses, not station names. */
+.railhead{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin:2px 0 12px}
+.rung{font-size:10px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;padding:3px 8px;border-radius:6px;
+  background:var(--gAcc,var(--card2));color:var(--acc);border:1px solid var(--bAcc);flex:0 0 auto}
+.rung.r3,.rung.r4{background:var(--gHard);color:var(--hard);border-color:var(--bHard)}
+.rask{font-size:13px;color:var(--tx2);line-height:1.5}
+.rail{display:flex;flex-direction:column;gap:0;margin:4px 0 2px}
+.bead{position:relative;font-size:14.5px;font-weight:700;color:var(--tx);line-height:1.45;
+  padding:9px 12px;border-radius:10px;background:var(--card2);border:1px solid var(--line)}
+.vrb{position:relative;font-size:12.5px;color:var(--tx2);line-height:1.4;padding:5px 12px 5px 8px;
+  display:flex;align-items:center;gap:6px;font-style:italic}
+.vrb .ar{color:var(--tx3);font-style:normal;font-weight:800}
+/* A hidden bead or verb is a hole to fill, so it reads as an empty slot rather than as
+   redacted text — dashed, dimmed, and the same height as what will replace it. */
+.bead.hid,.vrb.hid{color:var(--tx3);border:1px dashed var(--line2);background:transparent;font-style:normal}
+.vrb.hid{border-radius:8px;font-weight:700}
+/* On reveal, the parts that WERE hidden are marked, so you can see at a glance which
+   ones you were actually being asked for. */
+.bead.was{border-color:var(--bAcc);background:var(--gAcc,var(--card2))}
+.vrb.was{color:var(--acc);font-weight:700}
+.pblk{margin:0}
+.pblk+.pblk{margin-top:13px}
+.pblk.run>b:first-child{display:block;margin-bottom:3px;color:var(--tx);font-weight:800;letter-spacing:.005em}
 .damaged{margin-top:9px;font-size:12.5px;line-height:1.55;color:var(--tx2);background:var(--gHard);
   border:1px solid var(--bHard);border-radius:9px;padding:9px 12px}
 .damaged .dm2{display:block;margin-top:5px;color:var(--tx3);font-size:11.5px}
@@ -8052,6 +8080,866 @@ const PACK = {
     "<b>Protection:</b> clotting seals damaged vessels to prevent blood loss, and the blood delivers white cells and antibodies to infection"
    ],
    "model": "Any sensible split of the three headings scores. If you gave one transport point rather than two, give yourself the mark and add the direction you missed — the two-way traffic is the part worth remembering."
+  },
+  {
+   "type": "rail",
+   "topic": "cvs-vessels",
+   "tier": "rail",
+   "from": "cvs1",
+   "name": "Filtration — the arterial end",
+   "beads": [
+    "Pump action of the heart",
+    "Hydrostatic pressure",
+    "Arterial end of the capillary",
+    "Filtration",
+    "Interstitium"
+   ],
+   "verbs": [
+    "generates",
+    "is highest at the",
+    "favours",
+    "forces fluid from the blood vessel into the"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "cvs-vessels",
+   "tier": "rail",
+   "from": "cvs1",
+   "name": "Reabsorption — the venous end",
+   "beads": [
+    "Water leaving the capillary",
+    "Oncotic pressure",
+    "Venous end of the capillary",
+    "Reabsorption",
+    "Capillary"
+   ],
+   "verbs": [
+    "leaves plasma proteins behind, raising",
+    "is highest at the",
+    "favours",
+    "forces fluid from the interstitium back into the"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "cvs-vessels",
+   "tier": "rail",
+   "from": "cvs1",
+   "name": "Hypertension → oedema",
+   "beads": [
+    "Hypertension",
+    "Hydrostatic pressure",
+    "Interstitium",
+    "Oedema"
+   ],
+   "verbs": [
+    "raises",
+    "when raised, forces more fluid into the",
+    "accumulating fluid, becomes"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "cvs-vessels",
+   "tier": "rail",
+   "from": "cvs1",
+   "name": "Hypoalbuminaemia → oedema",
+   "beads": [
+    "Hypoalbuminaemia",
+    "Oncotic pressure",
+    "Reabsorption",
+    "Oedema"
+   ],
+   "verbs": [
+    "lowers plasma protein and so lowers",
+    "when too low, fails to drive",
+    "when it fails, leaves fluid in the tissues as"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "cvs-vessels",
+   "tier": "rail",
+   "from": "cvs1",
+   "name": "Dehydration → less filtration",
+   "beads": [
+    "Dehydration",
+    "Hydrostatic pressure",
+    "Interstitium"
+   ],
+   "verbs": [
+    "lowers blood volume and so lowers",
+    "when lowered, forces less fluid into the"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "cvs-vessels",
+   "tier": "rail",
+   "from": "cvs1",
+   "name": "Why the artery wall is thick",
+   "beads": [
+    "Artery",
+    "Tunica media",
+    "Vasoconstriction & vasodilation",
+    "Peripheral resistance"
+   ],
+   "verbs": [
+    "carries blood away from the heart at high pressure, so it has a thick",
+    "is smooth muscle, which performs",
+    "changes vessel diameter and so changes"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "cvs-vessels",
+   "tier": "rail",
+   "from": "cvs1",
+   "name": "Why the capillary is one cell thick",
+   "beads": [
+    "Capillary",
+    "Exchange",
+    "Tissue perfusion",
+    "Lethal"
+   ],
+   "verbs": [
+    "is one endothelial cell thick, which allows",
+    "of oxygen, nutrients and wastes maintains",
+    "when inadequate to vital organs, may be"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "cvs-anat",
+   "tier": "rail",
+   "from": "cvs2",
+   "name": "Blood flow through the heart",
+   "beads": [
+    "Superior vena cava",
+    "Right atrium",
+    "Tricuspid valve",
+    "Right ventricle",
+    "Pulmonary valve",
+    "Pulmonary artery",
+    "Lungs",
+    "Pulmonary vein",
+    "Left atrium",
+    "Bicuspid (mitral) valve",
+    "Left ventricle",
+    "Aortic valve",
+    "Aorta"
+   ],
+   "verbs": [
+    "returns deoxygenated blood to the",
+    "pushes blood through the",
+    "opens into the",
+    "ejects blood through the",
+    "opens into the",
+    "carries deoxygenated blood to the",
+    "oxygenate the blood and return it via the",
+    "delivers oxygenated blood to the",
+    "pushes blood through the",
+    "opens into the",
+    "ejects blood through the",
+    "opens into the"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "cvs-anat",
+   "tier": "rail",
+   "from": "cvs2",
+   "name": "Coronary circulation",
+   "beads": [
+    "Ascending aorta",
+    "Coronary arteries",
+    "Myocardium",
+    "Coronary sinus",
+    "Right atrium"
+   ],
+   "verbs": [
+    "carries ostia that open into the",
+    "supply the",
+    "drains its used blood into the",
+    "opens into the"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "cvs-anat",
+   "tier": "rail",
+   "from": "cvs2",
+   "name": "How the AV valves are held shut",
+   "beads": [
+    "Chordae tendineae",
+    "Papillary muscle",
+    "Heart wall"
+   ],
+   "verbs": [
+    "stop the AV valve flaps opening the wrong way, being anchored by the",
+    "anchors the chordae tendineae to the"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "cvs-ecg",
+   "tier": "rail",
+   "from": "cvs3",
+   "name": "The conduction pathway to the QRS",
+   "beads": [
+    "SA node",
+    "AV node",
+    "Bundle of His",
+    "Bundle branches",
+    "Purkinje fibres",
+    "Ventricular myocardium",
+    "QRS complex",
+    "Stroke volume"
+   ],
+   "verbs": [
+    "fires at ~70 b/min and passes the impulse on to the",
+    "delays it, then passes it to the",
+    "crosses the fibrous skeleton and divides into the",
+    "carry the impulse out to the",
+    "depolarise the",
+    "depolarising, writes on the ECG the",
+    "means the ventricles contract, ejecting the"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "cvs-ecg",
+   "tier": "rail",
+   "from": "cvs3",
+   "name": "The P wave",
+   "beads": [
+    "SA node",
+    "P wave",
+    "Contract"
+   ],
+   "verbs": [
+    "depolarises the atria, which writes on the ECG the",
+    "causes the atria to"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "cvs-ecg",
+   "tier": "rail",
+   "from": "cvs3",
+   "name": "The T wave",
+   "beads": [
+    "Ventricular repolarisation",
+    "T wave",
+    "Relax"
+   ],
+   "verbs": [
+    "writes on the ECG the",
+    "causes the ventricles to"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "cvs-ecg",
+   "tier": "rail",
+   "from": "cvs3",
+   "name": "Why the myocardium contracts as one",
+   "beads": [
+    "Intercalated discs",
+    "Conductivity",
+    "Wave"
+   ],
+   "verbs": [
+    "hold gap junctions that let the impulse pass fibre to fibre, giving",
+    "makes the myocardium contract as one coordinated"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "cvs-ecg",
+   "tier": "rail",
+   "from": "cvs3",
+   "name": "CO = SV × HR, BP = CO × PR",
+   "beads": [
+    "Stroke volume",
+    "Cardiac output",
+    "Blood pressure"
+   ],
+   "verbs": [
+    "multiplied by heart rate gives",
+    "multiplied by peripheral resistance gives"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "cvs-bp",
+   "tier": "rail",
+   "from": "cvs4",
+   "name": "Baroreflex — the cardiac arm",
+   "beads": [
+    "Low blood pressure",
+    "Baroreceptors",
+    "Medulla oblongata",
+    "Cardio-acceleratory centre",
+    "Cardiac output",
+    "Blood pressure"
+   ],
+   "verbs": [
+    "is detected by",
+    "in the aortic arch and carotid sinus signal the",
+    "stimulates the",
+    "raises heart rate and force of contraction, raising",
+    "multiplied by peripheral resistance restores"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "cvs-bp",
+   "tier": "rail",
+   "from": "cvs4",
+   "name": "Baroreflex — the vessel arm",
+   "beads": [
+    "Medulla oblongata",
+    "Vasomotor centre",
+    "Peripheral resistance",
+    "Blood pressure"
+   ],
+   "verbs": [
+    "stimulates the",
+    "constricts the blood vessels, raising",
+    "multiplied by cardiac output restores"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "cvs-bp",
+   "tier": "rail",
+   "from": "cvs4",
+   "name": "RAAS — the vasoconstriction arm",
+   "beads": [
+    "Low blood pressure",
+    "Kidney",
+    "Renin",
+    "Angiotensin I",
+    "Angiotensin II",
+    "Peripheral resistance"
+   ],
+   "verbs": [
+    "reduces blood flow to the",
+    "releases the enzyme",
+    "converts angiotensinogen from the liver into",
+    "is converted by ACE in the lungs into",
+    "causes vasoconstriction, raising"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "cvs-bp",
+   "tier": "rail",
+   "from": "cvs4",
+   "name": "RAAS — the ADH arm",
+   "beads": [
+    "Angiotensin II",
+    "ADH",
+    "Blood volume",
+    "Stroke volume",
+    "Blood pressure"
+   ],
+   "verbs": [
+    "makes the posterior pituitary release",
+    "makes the collecting ducts porous so water is reabsorbed, raising",
+    "stretches the vessels and fills the heart, raising",
+    "multiplied by heart rate and peripheral resistance sets"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "cvs-bp",
+   "tier": "rail",
+   "from": "cvs4",
+   "name": "RAAS — the aldosterone arm",
+   "beads": [
+    "Angiotensin II",
+    "Aldosterone",
+    "Blood volume"
+   ],
+   "verbs": [
+    "makes the adrenal cortex release",
+    "reabsorbs sodium, and water follows salt, raising"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "cvs-bp",
+   "tier": "rail",
+   "from": "cvs4",
+   "name": "Direct renal control",
+   "beads": [
+    "Kidney",
+    "Glomerular filtration rate",
+    "Urine output",
+    "Blood volume"
+   ],
+   "verbs": [
+    "receiving less blood flow, lowers its",
+    "when reduced, lowers",
+    "when reduced, keeps fluid in the blood, raising"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "cvs-bp",
+   "tier": "rail",
+   "from": "cvs4",
+   "name": "The chemoreflex",
+   "beads": [
+    "Rising CO₂, falling O₂ or falling pH",
+    "Chemoreceptors in the carotid and aortic bodies",
+    "Medulla oblongata"
+   ],
+   "verbs": [
+    "is detected by",
+    "signal the"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "cvs-output",
+   "tier": "rail",
+   "from": "shock",
+   "name": "Why shock kills",
+   "beads": [
+    "Circulatory shock",
+    "Tissue",
+    "Oxygen",
+    "Cell death",
+    "Organ failure"
+   ],
+   "verbs": [
+    "is inadequate blood flow to meet the needs of the",
+    "left unperfused, is starved of",
+    "starvation causes",
+    "accumulates into"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "cvs-output",
+   "tier": "rail",
+   "from": "shock",
+   "name": "Hypovolaemic shock",
+   "beads": [
+    "Hypovolaemic shock",
+    "Stroke volume",
+    "Cardiac output",
+    "Blood pressure",
+    "Circulatory shock"
+   ],
+   "verbs": [
+    "loses fluid volume, lowering",
+    "when reduced, lowers",
+    "when reduced, lowers",
+    "too low to perfuse the tissues, is"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "cvs-output",
+   "tier": "rail",
+   "from": "shock",
+   "name": "Distributive shock",
+   "beads": [
+    "Distributive shock",
+    "Peripheral resistance",
+    "Blood pressure"
+   ],
+   "verbs": [
+    "shifts fluid into the wrong compartment by extreme vasodilation, lowering",
+    "when it collapses, lowers"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "resp-anat",
+   "tier": "rail",
+   "from": "resp1",
+   "name": "The pathway of air",
+   "beads": [
+    "Nasal cavity",
+    "Pharynx",
+    "Larynx",
+    "Trachea",
+    "Main bronchi",
+    "Bronchioles",
+    "Terminal bronchioles",
+    "Respiratory bronchioles",
+    "Alveolar ducts",
+    "Alveoli"
+   ],
+   "verbs": [
+    "filters, warms and moistens air, passing it to the",
+    "passes air to the",
+    "passes air to the",
+    "branches at the carina into the",
+    "divide down into",
+    "narrow into",
+    "lead on to",
+    "open into",
+    "open into"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "resp-anat",
+   "tier": "rail",
+   "from": "resp1",
+   "name": "Why the alveolus can exchange gas",
+   "beads": [
+    "Alveoli",
+    "Respiratory membrane",
+    "Simple diffusion"
+   ],
+   "verbs": [
+    "are lined by type I pneumocytes, which form part of the",
+    "is thin enough (0.5–1 µm) for"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "resp-anat",
+   "tier": "rail",
+   "from": "resp1",
+   "name": "Surfactant keeps the alveoli open",
+   "beads": [
+    "Type II pneumocytes",
+    "Surfactant",
+    "Alveoli"
+   ],
+   "verbs": [
+    "secrete",
+    "reduces surface tension and so keeps open the"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "resp-anat",
+   "tier": "rail",
+   "from": "resp1",
+   "name": "The muco-ciliary escalator",
+   "beads": [
+    "Goblet cells",
+    "Muco-ciliary escalator",
+    "Pharynx"
+   ],
+   "verbs": [
+    "make mucus that traps dust, forming with the cilia the",
+    "sweeps trapped particles upward toward the"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "resp-anat",
+   "tier": "rail",
+   "from": "resp1",
+   "name": "The cough reflex",
+   "beads": [
+    "Carina",
+    "Cough reflex",
+    "Trachealis"
+   ],
+   "verbs": [
+    "is sensitive to particles and triggers the",
+    "contracts the"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "resp-mech",
+   "tier": "rail",
+   "from": "resp2",
+   "name": "Quiet inspiration",
+   "beads": [
+    "Diaphragm and external intercostals",
+    "Thoracic cavity",
+    "Intrapleural pressure",
+    "Intrapulmonary volume",
+    "Intrapulmonary pressure",
+    "Pressure gradient",
+    "Inspiration"
+   ],
+   "verbs": [
+    "contract, increasing the volume of the",
+    "expands, and the lung follows it because of the negative",
+    "being negative, makes the lung tissue follow, raising",
+    "rising, lowers by Boyle's law the",
+    "falling below atmospheric, creates a",
+    "drives air in until the pressures equalise —"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "resp-mech",
+   "tier": "rail",
+   "from": "resp2",
+   "name": "Quiet expiration is passive",
+   "beads": [
+    "Elastic recoil",
+    "Intrapulmonary volume",
+    "Intrapulmonary pressure",
+    "Expiration"
+   ],
+   "verbs": [
+    "of the stretched lungs, as the inspiratory muscles relax, reduces",
+    "falling, raises by Boyle's law the",
+    "rising above atmospheric, drives air out —"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "resp-mech",
+   "tier": "rail",
+   "from": "resp2",
+   "name": "How a pneumothorax collapses a lung",
+   "beads": [
+    "Pneumothorax",
+    "Intrapleural pressure",
+    "Atelectasis"
+   ],
+   "verbs": [
+    "puts air in the pleural cavity, destroying the negative",
+    "once lost, uncouples the lung from the chest wall, causing"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "resp-mech",
+   "tier": "rail",
+   "from": "resp2",
+   "name": "External respiration",
+   "beads": [
+    "Partial pressure gradient",
+    "Simple diffusion",
+    "External respiration"
+   ],
+   "verbs": [
+    "drives gases across the respiratory membrane by",
+    "moves O₂ into the blood and CO₂ into the alveoli — this is"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "resp-gas",
+   "tier": "rail",
+   "from": "resp3",
+   "name": "CO₂ becomes bicarbonate",
+   "beads": [
+    "CO₂",
+    "Carbonic acid",
+    "Bicarbonate",
+    "Transported CO₂"
+   ],
+   "verbs": [
+    "enters the red cell, where carbonic anhydrase joins it to water to form",
+    "dissociates into hydrogen ions and",
+    "diffuses into the plasma, carrying about 70% of the"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "resp-gas",
+   "tier": "rail",
+   "from": "resp3",
+   "name": "Hyperventilation → alkalosis",
+   "beads": [
+    "Hyperventilation",
+    "Hydrogen ions",
+    "Blood pH",
+    "Alkalosis"
+   ],
+   "verbs": [
+    "blows off CO₂, driving the buffer left and using up",
+    "falling in concentration, raise the",
+    "above 7.45, is"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "resp-gas",
+   "tier": "rail",
+   "from": "resp3",
+   "name": "Hypoventilation → acidosis",
+   "beads": [
+    "Hypoventilation",
+    "Hydrogen ions",
+    "Blood pH",
+    "Acidosis"
+   ],
+   "verbs": [
+    "retains CO₂, driving the buffer right and producing more",
+    "rising in concentration, lower the",
+    "below 7.35, is"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "resp-gas",
+   "tier": "rail",
+   "from": "resp3",
+   "name": "Oxygen loading",
+   "beads": [
+    "Haemoglobin",
+    "Oxyhaemoglobin",
+    "Oxygen"
+   ],
+   "verbs": [
+    "binds four oxygen molecules to become",
+    "carries 98.5% of the blood's"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "resp-gas",
+   "tier": "rail",
+   "from": "resp3",
+   "name": "The Bohr effect — unloading",
+   "beads": [
+    "Bohr effect",
+    "Haemoglobin",
+    "Tissues"
+   ],
+   "verbs": [
+    "in warm, acidic, CO₂-rich tissue lowers the oxygen affinity of",
+    "with lowered affinity, releases its oxygen to the"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "resp-gas",
+   "tier": "rail",
+   "from": "resp3",
+   "name": "Compensating for metabolic acidosis",
+   "beads": [
+    "Ketoacidosis",
+    "Chemoreceptors",
+    "CO₂",
+    "Hydrogen ions"
+   ],
+   "verbs": [
+    "raises hydrogen ions and drops blood pH, which is picked up by",
+    "call for faster breathing, which exhales more",
+    "falling, lets hydrogen ions and bicarbonate recombine, consuming"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "resp-control",
+   "tier": "rail",
+   "from": "resp4",
+   "name": "Rhythm → diaphragm",
+   "beads": [
+    "Ventral respiratory group",
+    "Phrenic nerve",
+    "Diaphragm",
+    "Inspiration"
+   ],
+   "verbs": [
+    "is self-exciting and sets the basic rhythm, firing down the",
+    "stimulates the",
+    "contracting, increases thoracic volume and produces"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "resp-control",
+   "tier": "rail",
+   "from": "resp4",
+   "name": "Rhythm → intercostals",
+   "beads": [
+    "Ventral respiratory group",
+    "Intercostal nerves",
+    "External intercostal muscles",
+    "Inspiration"
+   ],
+   "verbs": [
+    "also fires down the",
+    "stimulate the",
+    "contracting, lift the ribcage and produce"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "resp-control",
+   "tier": "rail",
+   "from": "resp4",
+   "name": "The strongest respiratory drive",
+   "beads": [
+    "Hypercapnia",
+    "Inspiratory centre",
+    "Breathing",
+    "CO₂"
+   ],
+   "verbs": [
+    "is the strongest stimulus, exciting the",
+    "when excited, increases the rate and depth of",
+    "increasing, blows off"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "lymph",
+   "tier": "rail",
+   "from": "lymph",
+   "name": "Where lymph goes",
+   "beads": [
+    "Blood capillary",
+    "Interstitium",
+    "Lymphatic capillaries",
+    "Collecting vessels",
+    "Lymph nodes",
+    "Lymphatic trunks",
+    "Subclavian vein"
+   ],
+   "verbs": [
+    "filters out more fluid than it reabsorbs, leaving the excess in the",
+    "is drained by blind-ended",
+    "feed into",
+    "carry lymph through the",
+    "filter it and pass it on to the",
+    "join the thoracic and right lymphatic ducts, which empty into the"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "lymph",
+   "tier": "rail",
+   "from": "lymph",
+   "name": "How the immune response is organised",
+   "beads": [
+    "Macrophages and B cells",
+    "T cells",
+    "Immune system"
+   ],
+   "verbs": [
+    "collect antigens and present them to",
+    "organise the"
+   ]
+  },
+  {
+   "type": "rail",
+   "topic": "lymph",
+   "tier": "rail",
+   "from": "lymph",
+   "name": "How lymphoedema happens",
+   "beads": [
+    "Obstruction of lymph flow",
+    "Interstitium",
+    "Lymphoedema"
+   ],
+   "verbs": [
+    "stops the drainage of the",
+    "accumulating fluid, becomes"
+   ]
   }
  ],
  "glossary": [
@@ -8604,20 +9492,39 @@ const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(M
 function hash(s){ let h=5381; for(let i=0;i<s.length;i++) h=((h<<5)+h+s.charCodeAt(i))|0; return 'k'+(h>>>0).toString(36); }
 function csig(c){
   return strip([c.a,c.text,(c.options||[]).join('~'),(c.statements||[]).map(s=>s.s).join('~'),
-    (c.pairs||[]).map(p=>p.join('>')).join('~'),(c.steps||[]).join('~'),(c.points||[]).join('~')]
+    (c.pairs||[]).map(p=>p.join('>')).join('~'),(c.steps||[]).join('~'),(c.points||[]).join('~'),
+    /* A rail has no `q` and no answer — its identity IS its chain. Both beads and verbs
+       go in, so re-labelling a relationship resets that rail's progress, which is right:
+       the thing being remembered has changed. */
+    (c.beads||[]).join('~'),(c.verbs||[]).join('~')]
     .filter(Boolean).join('|'));
 }
-function ckey(c){ return hash(c.type+'|'+strip(c.q)+'|'+csig(c)); }
+function ckey(c){ return hash(c.type+'|'+strip(c.q||c.name||'')+'|'+csig(c)); }
 const ckeyLegacy=c=>hash(c.type+'|'+strip(c.q));   // v2 keys, for migration only
 
 /* ---- card taxonomy ----
    AUTO   = machine-marked; live in the Drill view
    RECALL = you grade yourself; live in Learn on the Leitner SRS          */
+/* The top Leitner box. Declared HERE, with the other taxonomy constants, and not
+   next to srsRate where it is used — validatePack() runs at module init and the rail
+   ladder's reachability assertion reads it, so a declaration further down the file put
+   it in the temporal dead zone and threw "Cannot access 'MAXBOX' before initialization"
+   before a single card rendered. The build's parse check cannot see that: the file is
+   syntactically perfect and dies at run time. Load the built page before believing it.
+
+   It is named at all because the ladder has to map four rungs onto this range, and the
+   two were written apart: the ladder first used thresholds of 2/4/6 against a box that
+   stops at 4, so its hardest rung could never be reached by any reader. */
+const MAXBOX=4;
 const AUTO=['mcq','order','cloze','tfset','match'];
-const RECALL=['flash','saq'];
+/* `rail` is RECALL, not AUTO: you rebuild it from memory and grade yourself, exactly
+   like a flashcard. It is deliberately not machine-marked — the answer is a chain of
+   ideas, and string-matching a reader's reconstruction against the authored wording
+   would fail them for saying the same thing differently. */
+const RECALL=['flash','saq','rail'];
 const ALLTYPES=AUTO.concat(RECALL);
 const isAuto=c=>AUTO.includes(c.type), isRecall=c=>RECALL.includes(c.type);
-const TYPELABEL={mcq:'multichoice',order:'put in order',cloze:'fill the blanks',tfset:'true / false',match:'matching',saq:'written answer',flash:'flashcard'};
+const TYPELABEL={mcq:'multichoice',order:'put in order',cloze:'fill the blanks',tfset:'true / false',match:'matching',saq:'written answer',flash:'flashcard',rail:'rebuild the chain'};
 
 /* marks per card — mirrors how the real Canvas paper scores each type:
    ordering and cloze pay per correct position/blank, matching per pair,
@@ -8644,11 +9551,31 @@ function validatePack(p){
   (p.cards||[]).forEach((c,i)=>{
     const at=`card ${i} (${c.type||'?'})`;
     if(!tids.has(c.topic)) errs.push(`${at}: unknown topic "${c.topic}"`);
-    if(!c.q) errs.push(`${at}: no question`);
+    /* A rail carries no question — it is a chain to rebuild, headed by its route name. */
+    if(!c.q&&c.type!=='rail') errs.push(`${at}: no question`);
     if(c.crit&&cids.size&&!cids.has(c.crit)) errs.push(`${at}: unknown criterion "${c.crit}"`);
     if(!ALLTYPES.includes(c.type)){ errs.push(`${at}: unknown type "${c.type}"`); return; }
     if(c.type==='mcq'&&(!c.options||c.options.length<2||c.options.length>6||c.correct==null||c.options[c.correct]==null)) errs.push(`${at}: mcq needs 2–6 options and a valid correct index`);
     if(c.type==='flash'&&!c.a) errs.push(`${at}: flash has no answer`);
+    if(c.type==='rail'){
+      /* Every rung must be reachable by some box the SRS can actually produce. This
+         caught the ladder shipping with its hardest rung above MAXBOX, where no reader
+         could ever have seen it — a silent third of the feature missing. Checked once,
+         on the first rail only, because it is a property of the ladder not the card. */
+      if(!errs.__rungChecked){
+        errs.__rungChecked=1;
+        const reach=new Set(); for(let b=0;b<=MAXBOX;b++) reach.add(railRung(b));
+        for(const want of [1,2,3,4]) if(!reach.has(want))
+          errs.push(`rail ladder: rung ${want} is unreachable — no Leitner box from 0 to ${MAXBOX} produces it`);
+      }
+      const nb=(c.beads||[]).length, nv=(c.verbs||[]).length;
+      if(nb<2) errs.push(`${at}: rail needs at least 2 beads`);
+      /* n beads and n-1 verbs, always. Any other shape means the chain was assembled
+         wrong and the renderer would silently drop or invent a step. */
+      else if(nv!==nb-1) errs.push(`${at}: rail has ${nb} beads but ${nv} verbs — needs exactly ${nb-1}`);
+      if((c.beads||[]).some(b=>!String(b||'').trim())) errs.push(`${at}: rail has an empty bead`);
+      if((c.verbs||[]).some(v=>!String(v||'').trim())) errs.push(`${at}: rail has an empty relationship`);
+    }
     if(c.type==='saq'&&(!c.points||!c.points.length)) errs.push(`${at}: saq has no marking points`);
     if(c.type==='order'){
       if(!c.steps||c.steps.length<3) errs.push(`${at}: order needs at least 3 steps, in the CORRECT sequence`);
@@ -9180,7 +10107,7 @@ const IVL=[0, 10*60e3, 24*3600e3, 3*24*3600e3, 7*24*3600e3]; // per box, ms
 function srsGet(i){ return S.srs[i]||{box:0,due:0,seen:0}; }
 function srsRate(i,r){ // r: 0 again, 1 hard, 2 good, 3 easy
   const st=srsGet(i);
-  st.box = r===0?0 : r===1?st.box : Math.min(4, st.box+(r===3?2:1));
+  st.box = r===0?0 : r===1?st.box : Math.min(MAXBOX, st.box+(r===3?2:1));
   st.due = Date.now()+IVL[st.box];
   st.seen++;
   S.srs[i]=st; save();
@@ -9367,10 +10294,33 @@ function clozeFilled(c){
    Three of this pack's imported keys have already turned out to be wrong, every one
    caught by a human reading the card. Hiding the options is hiding the evidence. The
    same applied to a match card's distractors and a cloze blank's options. */
+/* PARAGRAPHS, FROM STRUCTURE THAT WAS ALREADY THERE.
+
+   The long answers are not shapeless — 38 of the 40 answers over 90 words are already
+   written as "<b>1. Where its blood comes from.</b> …<br><br><b>2. What it perfuses.</b> …".
+   The structure is in the markup and the renderer was throwing it away: a doubled <br>
+   collapses to one thin line break, so a 274-word answer with three clearly labelled
+   parts arrived as one grey slab. That is the "paragraph for a card" complaint, and it
+   is a typography bug rather than an authoring one.
+
+   So: split on doubled breaks and give each part a real block, with a leading <b> read
+   as a run-in heading. Purely presentational — the stored text is untouched, nothing is
+   reordered or dropped, and an answer with no doubled break simply becomes one block.
+   Done here rather than in the pack so every card gets it, including the lecturer's own
+   verbatim ones, which may not be edited. */
+function proseHTML(html){
+  const s=String(html==null?'':html);
+  if(!s.trim()) return '';
+  const parts=s.split(/(?:<br\s*\/?>\s*){2,}/i).map(x=>x.trim()).filter(Boolean);
+  if(parts.length<2) return `<div class="pblk">${s}</div>`;
+  return parts.map(p=>`<div class="pblk${/^<b>/i.test(p)?' run':''}">${p}</div>`).join('');
+}
 const optLine=(txt,ok)=>`<div class="optl${ok?' ok':''}"><span class="mk">${ok?'✓':'·'}</span><span>${txt}</span></div>`;
 function answerHTML(c){
   switch(c.type){
-    case 'flash': return c.a||'';
+    case 'flash': return proseHTML(c.a);
+    /* Fully revealed. All cards is for READING the pack, not being tested by it. */
+    case 'rail':  return railHTML(c,{hideBeads:[],hideVerbs:[]},true);
     case 'mcq':   return (c.options||[]).map((o,i)=>optLine(o,i===c.correct)).join('');
     /* The completed passage, not a numbered list of the blanks. A cloze card's
        answer IS the sentence read through with the gaps filled — checking one
@@ -9562,7 +10512,7 @@ function libCardHTML(c){
       ${provHTML(c)}
       ${flagBtnHTML(c.key)}
     </div>
-    <div class="libq">${c.q}</div>${origHTML(c)}${damagedHTML(c)}
+    <div class="libq">${c.type==='rail'?esc(c.name||'Rebuild this chain'):c.q}</div>${origHTML(c)}${damagedHTML(c)}
     <div class="provslot"></div>
     ${c.type==='cloze'&&!showA?`<div class="liba">${esc(strip(c.text||''))}</div>`:''}
     ${figHTML(c)}
@@ -10092,7 +11042,7 @@ function thinNote(id){
 }
 function factHTML(c){
   const body=c.type==='flash'
-    ? `<div class="facta">${c.a}</div>`
+    ? `<div class="facta">${proseHTML(c.a)}</div>`
     : `<ul class="factpts">${(c.points||[]).map(p=>`<li>${p}</li>`).join('')}</ul>`;
   return `<div class="fact"><div class="factq">${c.q}${provHTML(c)}</div>${body}${figHTML(c)}<div class="provslot"></div></div>`;
 }
@@ -10230,9 +11180,10 @@ function renderStudy(){
       <div class="cmeta"><span class="tag acc">${topicName(c.topic)}</span>${
         c.type==='flash'?'':`<span class="tag">${tot} mark${tot>1?'s':''}</span>`}${
         provHTML(c)}<span class="cmend"><span class="tag right">${TYPELABEL[c.type]}</span>${flagBtnHTML(c.key)}</span></div>
-      <div class="q">${c.q}</div>${origHTML(c)}<div class="provslot"></div><div class="flagslot"></div>
+      <div class="q">${c.type==='rail'?esc(c.name||'Rebuild this chain'):c.q}</div>${origHTML(c)}<div class="provslot"></div><div class="flagslot"></div>
       ${figHTML(c)}`;
-  if(c.type==='flash')    studyFlash(G,head,c);
+  if(c.type==='rail')     studyRail(G,head,c);
+  else if(c.type==='flash')studyFlash(G,head,c);
   else if(c.type==='saq') studyWritten(G,head,c);
   else                    studyAuto(G,head,c,tot);
 }
@@ -10254,12 +11205,86 @@ function wireRate(c){
 }
 
 /* ---- flashcard: recall it, flip it, grade yourself ---- */
+/* ══════════════ THE RAIL — progressive reconstruction ══════════════
+   Ported from gigastudyapp/lib/store/drill.js (buildDrillItem). A rail is a run of
+   labelled relations — bead —verb→ bead —verb→ bead — and you rebuild it from memory.
+
+   Every other card here is a string with a hole at the end. A rail is a STRUCTURE with
+   holes in it, which is why it cannot decay into the wall of text this pack spent a
+   rebuild removing, and why it tests what an exam actually asks: not "what is oncotic
+   pressure" but "what follows from what".
+
+   THE LADDER, and the one place it deviates from Giga. Giga grades each CONNECTION
+   separately — the connection is its atom of memory — and derives the rung from the
+   weakest edge in the chain. That needs per-edge SRS, a storage schema this engine does
+   not have and would have to migrate every saved record to gain. Here the whole rail is
+   one card with one SRS record, and the rung comes off its own Leitner box:
+
+     box 0     →  one bead blanked            (recognise the step)
+     box 1     →  one verb hidden             (name the relationship, the harder half)
+     box 2-3   →  rebuild from the midpoint   (carry it on)
+     box MAXBOX→  rebuild from the seed alone (the whole thing, from one concept)
+
+   Derived from MAXBOX, never hardcoded. Written against fixed thresholds first, the
+   top rung sat above a box the SRS cannot reach and was dead code in a shipped build.
+
+   Coarser than Giga, and honest about it: a 6-link rail is graded as one unit, so a
+   reader who nails five links and misses one grades the lot down. For a cram tool with
+   a fixed date that is the right trade — it re-queues the whole run, which is what you
+   want the week before a test. If this ever needs to be per-edge, the change is a
+   storage migration, not a rewrite of this function.
+
+   WHICH bead or verb is hidden is derived from the card key and the box, not random:
+   the same rail at the same box hides the same thing, so a second look is the same
+   question rather than a new one, and the reader can tell whether they have improved. */
+function railRung(box){ return box>=MAXBOX?4:box>=2?3:box>=1?2:1; }
+function railItem(c,box){
+  const n=c.verbs.length, lvl=railRung(box);
+  // a 1-link rail cannot be "rebuilt"; cap it where there is still something to hide
+  const eff=n<2?Math.min(lvl,2):lvl;
+  let h=5381; for(const ch of (c.key||'')) h=((h<<5)+h+ch.charCodeAt(0))|0;
+  const pick=Math.abs(h)%n;
+  if(eff===1) return {lvl:1,hideBeads:[pick+1],hideVerbs:[],ask:'Name the missing concept.'};
+  if(eff===2) return {lvl:2,hideBeads:[],hideVerbs:[pick],ask:'Name the missing relationship — what does one do to the other?'};
+  if(eff===3){ const mid=Math.max(1,Math.floor(n/2));
+    return {lvl:3,hideBeads:Array.from({length:n-mid},(_,i)=>mid+1+i),hideVerbs:Array.from({length:n-mid},(_,i)=>mid+i),
+            ask:'Carry it on — rebuild the rest of the chain from where it stops.'}; }
+  return {lvl:4,hideBeads:Array.from({length:n},(_,i)=>i+1),hideVerbs:Array.from({length:n},(_,i)=>i),
+          ask:'Rebuild the whole chain from the first concept alone.'};
+}
+function railHTML(c,item,reveal){
+  const parts=[];
+  for(let i=0;i<c.beads.length;i++){
+    const hidB=!reveal&&item.hideBeads.includes(i);
+    parts.push(`<div class="bead${hidB?' hid':''}${reveal&&item.hideBeads.includes(i)?' was':''}">${hidB?'?':esc(c.beads[i])}</div>`);
+    if(i<c.verbs.length){
+      const hidV=!reveal&&item.hideVerbs.includes(i);
+      parts.push(`<div class="vrb${hidV?' hid':''}${reveal&&item.hideVerbs.includes(i)?' was':''}"><span class="ar">↓</span>${hidV?'?':esc(c.verbs[i])}</div>`);
+    }
+  }
+  return `<div class="rail">${parts.join('')}</div>`;
+}
+function studyRail(G,head,c){
+  const box=srsGet(c.key).box||0, item=railItem(c,box);
+  const LVL=['','Fill the gap','Name the link','Carry it on','From the seed'][item.lvl];
+  view.innerHTML=G+`<div class="card">${head}
+      <div class="railhead"><span class="rung r${item.lvl}">${LVL}</span><span class="rask">${item.ask}</span></div>
+      ${railHTML(c,item,false)}
+      <div id="ansZone"><div class="btnrow"><button class="btn primary" id="flip">Show the chain ↵</button></div></div>
+    </div>`;
+  const flip=()=>{
+    $('#ansZone').innerHTML=`<div class="answer"><div class="lab">The whole chain</div>${railHTML(c,item,true)}${srcHTML(c)}</div>`+RATEROW;
+    wireRate(c);
+  };
+  $('#flip').onclick=flip;
+  document.onkeydown=e=>{ if(VIEW==='study'&&e.key==='Enter'&&$('#flip')) flip(); };
+}
 function studyFlash(G,head,c){
   view.innerHTML=G+`<div class="card">${head}
       <div id="ansZone"><div class="btnrow"><button class="btn primary" id="flip">Show answer ↵</button></div></div>
     </div>`;
   const flip=()=>{
-    $('#ansZone').innerHTML=`<div class="answer"><div class="lab">Answer</div><div class="txt">${c.a}</div>${srcHTML(c)}</div>`+RATEROW;
+    $('#ansZone').innerHTML=`<div class="answer"><div class="lab">Answer</div><div class="txt">${proseHTML(c.a)}</div>${srcHTML(c)}</div>`+RATEROW;
     wireRate(c);
   };
   $('#flip').onclick=flip;
@@ -10351,7 +11376,7 @@ function renderSearch(){
     if(q.length<2){ box.innerHTML=`<div class="empty">Type at least 2 characters.</div>`; return; }
     const hits=[];
     PACK.cards.forEach(c=>{
-      const bits=[c.q,c.a,c.text,c.why,c.model]
+      const bits=[c.q,c.name,c.a,c.text,c.why,c.model,...(c.beads||[]),...(c.verbs||[])]
         .concat(c.points||[],c.options||[],c.steps||[],
                 (c.statements||[]).map(s=>s.s),
                 [].concat(...(c.pairs||[])),
