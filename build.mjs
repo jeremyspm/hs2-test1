@@ -78,8 +78,34 @@ for (const [i, m] of [...out.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/sc
   ctx.window = ctx; ctx.globalThis = ctx; ctx.self = ctx;
   const vm = await import('node:vm');
   vm.createContext(ctx);
+  /* ── G13: every filter option delivers the number it advertises ──────────────
+     "Rep only…" prints a count on each chip and then deals a queue. Those are two
+     predicates over the same cards, and they drifted the day they were written: the
+     panel counted "No source recorded" with `provOf` (which files the 46 rails
+     there, as every other view does) while the queue matched on `c.tier` raw, so the
+     chip promised 46 cards and dealt nought. A reader cannot tell a filter that
+     matches nothing from a pack that contains nothing.
+
+     Appended to the shipped script rather than run against `ctx`, because `const`
+     declarations in a classic script are script-scoped and never become properties
+     of the vm's global — reaching them from outside would silently find `undefined`
+     and pass. Same rule as the ckey fixture: check the artifact, in its own scope. */
+  const GATE = `
+    ;(function(){
+      const bad=[], keep=JSON.stringify(S.filters);
+      for(const d of filtDims(ALLTYPES)) for(const o of d.opts){
+        S.filters=FILT0(); S.filters[d.id]=[o.id];
+        const n=deckSource(ALLTYPES).length;
+        const fresh=filtDims(ALLTYPES).find(x=>x.id===d.id).opts.find(x=>x.id===o.id);
+        if(!fresh||fresh.n!==n) bad.push(d.id+'/'+o.id+': the chip says '+(fresh?fresh.n:'gone')+', the queue deals '+n);
+      }
+      S.filters=JSON.parse(keep);
+      globalThis.__FILTMISMATCH__=bad;
+      globalThis.__FILTCHECKED__=filtDims(ALLTYPES).reduce((a,d)=>a+d.opts.length,0);
+    })();
+  `;
   try {
-    vm.runInContext(script + '\n;globalThis.__REACHED_END__=true;', ctx, { filename: 'index.html', timeout: 15000 });
+    vm.runInContext(script + GATE + '\n;globalThis.__REACHED_END__=true;', ctx, { filename: 'index.html', timeout: 15000 });
   } catch (e) {
     console.error(`✗ the shipped page THROWS at run time: ${e.message}`);
     console.error('  The file parses; the program does not run. Nothing below this would have caught it.');
@@ -87,6 +113,35 @@ for (const [i, m] of [...out.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/sc
   }
   if (!ctx.__REACHED_END__) { console.error('✗ the shipped page did not finish executing'); process.exit(1); }
   console.log('shipped page executes end-to-end against a stub DOM ✓');
+
+  const mm = ctx.__FILTMISMATCH__ ?? null;
+  if (mm === null) { console.error('✗ the filter gate did not run — has filtDims/deckSource been renamed?'); process.exit(1); }
+  if (mm.length) {
+    console.error(`✗ ${mm.length} filter option(s) advertise a count they do not deal:`);
+    for (const m of mm.slice(0, 10)) console.error('    ' + m);
+    console.error('\n✗ NOT SHIPPING. A chip that promises 46 cards and deals none is worse than no filter.');
+    process.exit(1);
+  }
+  console.log(`all ${ctx.__FILTCHECKED__} "Rep only…" options deal exactly the count they advertise ✓`);
+
+  /* ── G14: All cards' "as tested" view is the study card, not a copy of it ─────
+     The whole claim of that view is that a card looks there exactly as it looks when
+     you are being tested on it, and the only thing making that true is that both go
+     through `cardHeadHTML` and `faceHTML`. A well-meant future fix that inlines the
+     markup instead — to tweak a size, to drop a button — breaks the claim silently,
+     because both pages still look plausible. Cheap structural check, in the artifact. */
+  const face = script.match(/function libTestCardHTML\(c\)\{[\s\S]*?\n\}/);
+  if (!face) { console.error('✗ libTestCardHTML not found — the as-tested view has been renamed or removed'); process.exit(1); }
+  const missing = ['cardHeadHTML(', 'faceHTML('].filter(fn => !face[0].includes(fn));
+  if (missing.length) {
+    console.error(`✗ NOT SHIPPING. libTestCardHTML no longer calls ${missing.join(' or ')} — "as tested" would be a lookalike, not the card.`);
+    process.exit(1);
+  }
+  if ((script.match(/function faceHTML\(/g) || []).length !== 1) {
+    console.error('✗ NOT SHIPPING. More than one faceHTML — the study card and the browse view can now drift.');
+    process.exit(1);
+  }
+  console.log('“as tested” renders through the study card’s own head/face functions ✓');
 }
 
 /* Stats come from LOADING the pack, not from regexing it. pack.js is now generated

@@ -277,10 +277,34 @@ h2.sec{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--tx
 .fact .figwrap{margin:11px 0 0}
 .brfact{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
 .brfact .btn{flex:1 1 132px;padding:11px 14px;font-size:13.5px}
-.scopebar{display:flex;align-items:center;gap:10px;background:var(--acc-soft);border:1px solid var(--bAcc);border-radius:11px;padding:10px 13px;margin-bottom:12px;font-size:13px;color:var(--tx);line-height:1.45}
-.scopebar b{color:var(--acc-tx)}
-.scopebar button{margin-left:auto;flex:0 0 auto;font-size:12px;font-weight:800;color:var(--tx2);border:1px solid var(--line2);border-radius:8px;padding:6px 10px}
-.scopebar button:hover{color:var(--tx);border-color:var(--acc)}
+/* ---- narrowing the queue -----------------------------------------------------
+   The bar wraps rather than shrinks: at 375px a row holding a button, a count and a
+   clear-all has no business trying to stay on one line, and the count is the part
+   that must never be truncated. `.fpills` is the announcement — it is deliberately
+   loud (accent border, own row) because it is the only thing standing between a
+   reader and a queue that is quietly missing four fifths of the pack. */
+.filtbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.filtbar .btn{flex:0 0 auto;padding:9px 13px;font-size:13px;font-weight:700}
+.filtbar .btn.open{border-color:var(--acc);color:var(--tx)}
+.filtbar .fn{display:inline-block;min-width:18px;margin-left:6px;padding:1px 6px;border-radius:20px;background:var(--acc);color:#fff;font-size:11px;font-weight:800}
+.filtbar .fnote{font-size:12.5px;color:var(--tx2);font-variant-numeric:tabular-nums}
+.filtbar .fnote b{color:var(--tx)}
+.fpills{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.fpill{display:inline-flex;align-items:center;gap:6px;max-width:100%;padding:6px 10px;border-radius:20px;
+  background:var(--acc-soft);border:1px solid var(--bAcc);color:var(--acc-tx);font-size:12px;font-weight:700;line-height:1.3;text-align:left}
+.fpill span{font-size:11px;opacity:.8}
+.fpill:hover{border-color:var(--acc);color:var(--tx)}
+.fpill.clr{background:none;border-color:var(--line2);color:var(--tx2)}
+.filtpanel{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:14px 15px 6px;margin-bottom:12px}
+.filtpanel .fintro{margin:0 0 12px;font-size:12.5px;line-height:1.55;color:var(--tx2)}
+.filtpanel .fintro.last{margin:2px 0 8px;padding-top:10px;border-top:1px solid var(--line);color:var(--tx3)}
+.filtpanel .fintro b{color:var(--tx)}
+.filtrow{margin-bottom:12px}
+.filtrow .fhead{display:flex;align-items:baseline;gap:9px;margin-bottom:6px;font-size:13px;color:var(--tx)}
+.filtrow .fclr{font-size:11px;font-weight:800;color:var(--tx3);text-transform:uppercase;letter-spacing:.4px}
+.filtrow .fclr:hover{color:var(--bad)}
+.filtrow .fsub{font-size:12px;color:var(--tx3);margin-bottom:7px;line-height:1.45}
+.filtrow .chips{margin-bottom:0}
 /* ---- two doors ---- */
 .doors{display:flex;gap:8px;margin-bottom:10px;align-items:stretch}
 .door{flex:1;padding:12px 10px;border-radius:12px;background:var(--card);border:1px solid var(--line);font-size:13.5px;font-weight:800;color:var(--tx2);line-height:1.3;transition:.14s}
@@ -322,6 +346,30 @@ h2.sec{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--tx
 .libgrp.flagsgrp{border-color:var(--bHard);background:var(--gHard)}
 .libhead{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
 .libhead .btn{flex:0 0 auto;padding:9px 14px;font-size:13px}
+/* The view switch is the page's own segmented control, so it inherits `.seg` whole
+   and only takes a margin. Full-width at phone size: three labels at 12.5px wrap to
+   two lines inside a shrink-to-fit box and the middle one lands under the first. */
+.libseg{margin:12px 0 0;width:100%}
+.libseg button{flex:1 1 0;min-width:0;text-align:center}
+.libnote{margin-top:10px;font-size:12.5px;line-height:1.55;color:var(--tx2);background:var(--card2);
+  border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:9px;padding:10px 12px}
+.libnote b{color:var(--tx)}
+/* AS TESTED. The card wears the study card's own classes — .cmeta, .q, .opts, .seq,
+   .tfrow — because it IS the study card's markup, so almost nothing is needed here.
+   `.q` is dialled back only in size: at 19px in a list of sixty it stops reading as a
+   list. Everything that carries meaning (the mark count, the option lettering, the
+   right/wrong colouring) is untouched, because changing it would make this view a
+   lookalike instead of the thing itself. */
+.libcard.test{padding:16px 16px 14px}
+.libcard.test .q{font-size:16.5px;margin-bottom:2px}
+.libcard.test .cmeta{margin-bottom:11px}
+.libcard.test .tface{margin-top:11px}
+.libcard.test .tbtns{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.libcard.test .tbtns .btn{flex:1 1 150px;padding:10px 13px;font-size:13px}
+.libcard.test .tans:not(:empty){margin-top:12px}
+.libcard.test .tres{font-size:13.5px;line-height:1.5;color:var(--tx2);margin-bottom:8px}
+.libcard.test .tres b{color:var(--tx)}
+.libcard.test .liba{border-top:none;padding-top:0}
 .libcard{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:14px 15px;margin-bottom:9px}
 .libcard.flagged{border-color:var(--bHard);box-shadow:0 0 0 2px var(--gHard)}
 .libmeta{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-bottom:8px}
@@ -10701,6 +10749,20 @@ if(packErrs.length){
 }
 
 /* ---- state ---- */
+/* THE SCOPE OBJECT. Every way the reader can narrow the queue lives in one place,
+   as five independent lists that are ANDed together (and ORed inside each list).
+
+   It replaces `S.topic` (one topic at a time) and `S.crit` (one focus point, set by
+   the Brief), which were two hand-rolled filters with two different shapes, two
+   different clear buttons and no way to combine them — you could not ask for "the
+   multichoice questions on the heart" at all, which is the thing a reader actually
+   wants the night before a paper. Both migrate in below.
+
+   Declared HERE, above `load()`'s first call, for the MAXBOX reason: a const used
+   during module init and declared further down the file is a temporal-dead-zone
+   throw that no parse check can see. */
+const FILTDIMS=['topics','types','tiers','crits','status'];
+const FILT0=()=>({topics:[],types:[],tiers:[],crits:[],status:[]});
 const KEY='cramengine.'+PACK.id;
 let S=load();
 if(window.Cloud) Cloud.sync([KEY]);   // syncs this pack's progress across devices when signed in; no-op otherwise
@@ -10714,7 +10776,7 @@ function load(){
      build still carries it and dropping it on load would be a destructive write to a
      Cloud.sync'd record for no gain. It is simply never read again. */
   return {v:3,theme:'dark',topic:'all',door:'ready',bg:false,srs:{},mcq:{},read:{},saq:{},
-          flags:{},libGroup:'topic',libAt:null,libAns:true};
+          flags:{},libGroup:'topic',libAt:null,libAns:true,filters:FILT0(),libView:'read'};
 }
 /* v1 keyed progress by card index · v2 by a hash of the question · v3 adds the
    card's content signature so cards sharing a question stem stop sharing a record. */
@@ -10743,6 +10805,29 @@ function migrate(s){
 function save(){ localStorage.setItem(KEY,JSON.stringify(S)); }
 if(!S.door) S.door='ready';        // saves made before the two doors existed
 if(!S.flags) S.flags={};           // …and before cards could be flagged
+/* …and before the queue could be narrowed by anything but one topic.
+   `migrate()` returns early on a v3 blob, so this cannot live there: a reader who
+   already has v3 saved progress with a topic chip selected still has to arrive in
+   the new scope object holding what they had chosen. Carried across rather than
+   dropped, because dropping it silently widens the queue under someone who
+   deliberately narrowed it. The legacy keys are left on the blob — Cloud.sync
+   carries this record and a destructive write for tidiness is not worth it. */
+let MIGRATED_SCOPE=false;
+if(!S.filters||FILTDIMS.some(d=>!Array.isArray(S.filters[d]))){
+  MIGRATED_SCOPE=true;
+  const f=Object.assign(FILT0(),S.filters&&typeof S.filters==='object'?S.filters:null);
+  FILTDIMS.forEach(d=>{ if(!Array.isArray(f[d])) f[d]=[]; });
+  /* Only when it was actually IN EFFECT. `S.topic` was honoured under the "I'll
+     pick" door and inert under "Get me ready", where filters now apply to both — so
+     carrying a stale chip across would silently narrow a queue that had been showing
+     everything, which is precisely the failure this whole surface exists to stop. */
+  if(!f.topics.length&&S.door==='pick'&&S.topic&&S.topic!=='all') f.topics=[S.topic];
+  if(!f.crits.length&&S.crit) f.crits=[S.crit];
+  S.filters=f;
+}
+/* Two booleans became three states when "exactly as it is when you are tested on
+   it" arrived, so the old answers-on/answers-off flag folds into the new one. */
+if(!S.libView) S.libView=S.libAns===false?'q':'read';
 const topicName=id=>{const t=PACK.topics.find(t=>t.id===id);return t?`${t.icon} ${t.name}`:id;};
 
 /* ---- background reading -------------------------------------------------------
@@ -10787,6 +10872,78 @@ const answerable=c=>!c.damaged;
    setting filter with `inPool`. Search and the Brief deliberately do not. */
 const cardsOf=(type,topic)=>{ const ts=Array.isArray(type)?type:[type];
   return PACK.cards.map((c,i)=>({...c,key:ckey(c),idx:i})).filter(c=>ts.includes(c.type)&&(topic==='all'||c.topic===topic)); };
+
+/* ============ narrowing the queue ==========================================
+   "Rep only the multichoice questions on the heart." "Rep only the ones I keep
+   getting wrong." "Rep only the written answers." None of that was possible: the
+   queue could be narrowed to ONE topic, or to ONE focus point if you arrived from
+   the Brief, and the two could not be combined or even seen at the same time.
+
+   Five dimensions, because five is what the data actually has — topic, question
+   type, where the card came from, focus point, and how you are doing on it. Every
+   one of them is already a grouping in All cards, which is the tell: the reader can
+   already SEE the pack cut those five ways, and could not then study any of the
+   slices. Selecting inside a dimension is OR (multichoice or matching), across
+   dimensions is AND (multichoice, on the heart, that I keep getting wrong).
+
+   Three rules this must not break, all of them house rules learnt the hard way:
+     · it applies under BOTH doors, like the background switch — it is a property of
+       the pool, not of who chooses the order, so it does not belong to a door;
+     · a narrowed queue ANNOUNCES itself, every filter individually removable, and
+       the way out is delegated so it can never come unbound. A filter you cannot
+       see or cannot clear is a lock, and we do not lock;
+     · it narrows the QUEUE, not the pack. Progress, the Brief, Search, All cards
+       and the hub's ⚡ bus all keep reading the whole thing, exactly as they do
+       through the background switch.                                            */
+const STATUS=[
+  {id:'unseen', lab:'Never attempted',  hint:'you have not answered these even once'},
+  {id:'wrong',  lab:'Getting wrong',    hint:'attempted, and not sticking yet'},
+  {id:'due',    lab:'Due for review',   hint:'recall cards the spacing says to see again now'},
+  {id:'strong', lab:'Getting right',    hint:'attempted and holding up'},
+  {id:'flagged',lab:'⚑ Flagged',        hint:'cards you marked as wrong or unclear'},
+];
+/* Derived from the SAME predicates the ordering uses, never re-implemented, so a
+   card the door calls weak and a card this calls "getting wrong" are the same card.
+   `cardWeak` counts never-attempted as weak on purpose — right for ranking, wrong
+   as a label — so `seen` splits it back apart here, the same way deckStats does. */
+function cardStatus(c){
+  const out=[], seen=cardSeen(c);
+  if(flagOf(c.key)) out.push('flagged');
+  if(!seen) return (out.push('unseen'),out);
+  out.push(cardWeak(c)?'wrong':'strong');
+  /* Only recall cards have a due date, and only once they have been seen — an
+     untouched card's due is 0, so without `seen` this would report the entire deck
+     as due for review and mean nothing. */
+  if(isRecall(c)&&srsGet(c.key).due<=Date.now()) out.push('due');
+  return out;
+}
+const filtOn=()=>FILTDIMS.some(d=>S.filters[d].length);
+const filtCount=()=>FILTDIMS.reduce((n,d)=>n+S.filters[d].length,0);
+/* `skip` leaves one dimension out. That is how the panel counts what a chip would
+   actually get you — a count taken against the whole pack would promise 41 matching
+   cards and deliver 3 once the other four dimensions are applied, and a reader who
+   is told a number and handed a different one stops believing the numbers. */
+function passFilters(c,skip){
+  const f=S.filters;
+  if(skip!=='topics'&&f.topics.length&&!f.topics.includes(c.topic)) return false;
+  if(skip!=='types' &&f.types.length &&!f.types.includes(c.type)) return false;
+  /* `provOf`, not `c.tier`. A pack may carry a tier string the badge scale does not
+     know — hs2-test1 gives its 46 rails `tier:'rail'` — and every other view already
+     files those under "No source recorded" via provOf. Reading `c.tier` raw here made
+     the panel offer "No source recorded · 46" and the queue then deal none of them:
+     the option counted one predicate and the filter applied another. Two predicates
+     for one idea is the bug; there is now one. */
+  if(skip!=='tiers' &&f.tiers.length &&!f.tiers.includes(provOf(c)||'_none')) return false;
+  if(skip!=='crits' &&f.crits.length &&!f.crits.some(id=>c.crit===id||(c.alsoCrit||[]).includes(id))) return false;
+  if(skip!=='status'&&f.status.length){ const st=cardStatus(c); if(!f.status.some(s=>st.includes(s))) return false; }
+  return true;
+}
+const filtClear=()=>{ S.filters=FILT0(); save(); };
+function filtToggle(dim,id){
+  const a=S.filters[dim], i=a.indexOf(id);
+  if(i<0) a.push(id); else a.splice(i,1);
+  save();
+}
 
 /* ============ interactive question runners (the AUTO types) ============
    A "runner" holds one attempt at one card: the shuffled presentation
@@ -11469,7 +11626,16 @@ function wireFlagPanel(slot,ck,btn){
     save();
     if(VIEW==='cards'&&S.libAt==='_flagged'){ libFlagged(); return; }
     const lc=btn.closest('.libcard'), c=allCards().find(x=>x.key===ck);
-    if(lc&&c){ lc.outerHTML=libCardHTML(c); return; }   // delegated handlers, so the fresh node is live
+    if(lc&&c){
+      const parent=lc.parentNode;
+      lc.outerHTML=libCardHTML(c);                      // delegated handlers, so the fresh node is live
+      /* …except the runner, which is not delegated and cannot be: a replaced test
+         card would keep its options and stop responding to them. Re-query rather
+         than reuse `lc`, which this line has just detached. */
+      const fresh=parent&&parent.querySelector(`.libcard[data-ck="${ck}"]`);
+      if(fresh) libWireCard(fresh,c);
+      return;
+    }
     refreshBtn(); close();                              // study card
   };
   if(sv) sv.onclick=()=>{
@@ -11543,12 +11709,61 @@ function libBuckets(mode){
   return bs.filter(b=>b.cards.length);
 }
 
+/* ---- three ways to look at a card ----------------------------------------------
+   READ is question and answer together: the job is checking the pack, and a wrong
+   answer key is only findable by someone reading the key.
+
+   QUESTIONS ONLY is the same list with the answers withheld, for self-testing off
+   the page.
+
+   AS TESTED is the card wearing the clothes it wears in the queue — the actual
+   options as buttons, the actual dropdowns, the chain with its beads knocked out,
+   the mark count, everything. It exists because READ answers "is this card right?"
+   and cannot answer "what will this look like when it is put to me?", which is a
+   different and equally reasonable question, and until now the only way to find out
+   was to be dealt the card by chance. On a 345-card pack that is not a way.
+
+   It is not a lookalike. `cardHeadHTML` and `faceHTML` are the functions Study
+   itself renders through, called here with the same arguments — so this view cannot
+   drift from the real thing without the real thing changing too. Answering is live
+   for the same reason; a static screenshot of a multichoice card is not what being
+   tested on it looks like. What it deliberately does NOT do is write to your
+   progress: this is a browse view, and a browse view that quietly marks cards as
+   attempted would corrupt every readiness number in the tool. The card says so, and
+   points at the button that does count. */
+const LIBVIEWS=[{id:'read',lab:'📖 Read'},{id:'q',lab:'🙈 Questions only'},{id:'test',lab:'🎯 As tested'}];
+/* Runners live across re-renders, keyed by card. The list redraws on every keystroke
+   in the filter box; without this, typing one letter would reshuffle every set of
+   options on screen and throw away answers half-entered. Cleared when the group or
+   the view mode changes, which is the point at which a fresh deal is what you want. */
+let LIBR={};
+function libTestCardHTML(c){
+  const f=flagOf(c.key);
+  /* A damaged card is never dealt, so there is no "as tested" for it — showing one
+     would be inventing a version of the card the reader will never meet. It keeps
+     its head and its reason, and hands over the answer as READ mode shows it. */
+  if(c.damaged) return `<div class="libcard test${f?' flagged':''}" data-ck="${c.key}">
+    ${cardHeadHTML(c)}${damagedHTML(c)}
+    <div class="liba"><span class="lb">Answer</span>${answerHTML(c)}</div>
+    <div class="flagslot"></div></div>`;
+  const r=LIBR[c.key]||(LIBR[c.key]=makeRunner(c));
+  const item=c.type==='rail'?railItem(c,srsGet(c.key).box||0):null;
+  const showLab=c.type==='saq'?'Show the marking points':c.type==='rail'?'Show the chain':'Show the answer';
+  return `<div class="libcard test${f?' flagged':''}" data-ck="${c.key}">
+    ${cardHeadHTML(c)}
+    <div class="tface">${faceHTML(c,r,item)}</div>
+    <div class="tbtns">${isAuto(c)&&c.type!=='mcq'?`<button class="btn ghost" data-tcheck="1" disabled>Check answer</button>`:''}
+      <button class="btn ghost" data-tshow="1">${showLab}</button></div>
+    <div class="tans"></div>
+    <div class="flagslot"></div></div>`;
+}
 /* One card, standing still. Question and answer together by default, because the
    job here is reading and checking rather than testing yourself — the queue is two
    taps away for that. */
 function libCardHTML(c){
-  const f=flagOf(c.key), showA=S.libAns!==false;
-  return `<div class="libcard${f?' flagged':''}">
+  if(S.libView==='test') return libTestCardHTML(c);
+  const f=flagOf(c.key), showA=S.libView!=='q';
+  return `<div class="libcard${f?' flagged':''}" data-ck="${c.key}">
     <div class="libmeta">
       <span class="tag acc">${esc(topicName(c.topic))}</span>
       <span class="tag">${TYPELABEL[c.type]||c.type}</span>
@@ -11568,6 +11783,92 @@ function libCardHTML(c){
   </div>`;
 }
 
+/* Wiring one test card. Per-card and per-draw rather than delegated, because a
+   runner holds state that a delegated handler would have to look up, and the flag
+   panel — which IS delegated — proves why the two are different problems: a flag is
+   a fact about a card, a half-answered matching exercise is a fact about this
+   rendering of it. Every path that replaces a card's markup has to call this again,
+   which is exactly one path (the flag save) plus the draw. */
+function libWireCard(el,c){
+  if(S.libView!=='test'||!c||c.damaged) return;
+  const r=LIBR[c.key]; if(!r) return;
+  const face=el.querySelector('.tface'), slot=el.querySelector('.tans');
+  const btns=el.querySelector('.tbtns');
+  if(!face||!slot||!btns) return;
+  const chk=btns.querySelector('[data-tcheck]'), show=btns.querySelector('[data-tshow]');
+  const done=()=>{ btns.remove(); };
+  /* Marked exactly as the queue marks it, and then NOT written down. The one line
+     studyAuto has that this must not have is the S.mcq write — see the note above. */
+  const mark=()=>{
+    r.rev=true;
+    const tot=cardMarks(c), {got}=markAuto(c,r.resp);
+    face.innerHTML=faceHTML(c,r);
+    slot.innerHTML=`<div class="tres">${got===tot?'✅':got?'➖':'❌'} <b>${got} / ${tot} mark${tot>1?'s':''}</b> — a look, not an attempt: nothing here is recorded.</div>`
+      +feedbackHTML(c,r.resp,'')+srcHTML(c);
+    done();
+  };
+  const reveal=()=>{
+    if(isAuto(c)){ r.rev=true; face.innerHTML=faceHTML(c,r); }
+    slot.innerHTML=`<div class="liba"><span class="lb">${c.type==='saq'?'Marking points':c.type==='rail'?'The whole chain':'Answer'}</span>${answerHTML(c)}</div>`
+      +((c.why||c.model)?`<div class="libwhy">💡 ${c.why||c.model}</div>`:'')+srcHTML(c);
+    done();
+  };
+  const refresh=()=>{
+    /* `order` is the one type whose face rebuilds on every tap — the bank and the
+       slots swap — so it re-wires, the same way studyAuto does. */
+    if(c.type==='order'){ face.innerHTML=faceHTML(c,r); wireRunner(face,r,refresh); }
+    if(chk) chk.disabled=!runnerDone(r);
+    if(c.type==='mcq'&&runnerDone(r)) mark();      // mcq marks on pick, exactly as in the queue
+  };
+  if(isAuto(c)) wireRunner(face,r,refresh);
+  if(chk) chk.onclick=mark;
+  if(show) show.onclick=reveal;
+}
+/* Re-wires whatever test cards are currently on screen. */
+function libWireAll(root,cards){
+  if(S.libView!=='test') return;
+  const by={}; cards.forEach(c=>by[c.key]=c);
+  root.querySelectorAll('.libcard.test').forEach(el=>libWireCard(el,by[el.dataset.ck]));
+}
+/* The three-way view switch, rendered by every screen in All cards that lists cards
+   so the choice is never somewhere the reader has to go back for. */
+function libViewSeg(){
+  return `<div class="seg libseg">${LIBVIEWS.map(v=>
+    `<button class="${v.id===S.libView?'on':''}" data-lv="${v.id}">${v.lab}</button>`).join('')}</div>`;
+}
+function wireLibView(redraw){
+  /* `libAns` is kept in step although nothing reads it any more. This state blob is
+     Cloud.sync'd, and a phone still holding the previous build reads that key — a
+     stale `true` there would show it answers while the laptop shows none. */
+  $$('[data-lv]').forEach(b=>b.onclick=()=>{ S.libView=b.dataset.lv; S.libAns=S.libView!=='q'; LIBR={}; save(); redraw(); });
+}
+/* ⚡ REP THESE — the browse view's way into the queue.
+   Reading a group and then wanting to be tested on exactly that group is the obvious
+   next move, and the two features are the same feature from opposite ends: this
+   button turns whatever you are looking at into the filter that produces it. Every
+   grouping maps onto a filter dimension one-for-one, which is not a coincidence —
+   they are the same five facts about a card. */
+const LIBREP={topic:'topics',crit:'crits',tier:'tiers',type:'types'};
+function libRepBtn(mode,id){
+  if(id==='_flagged') return `<button class="btn primary" data-rep="status:flagged">⚡ Rep these in Study</button>`;
+  const dim=LIBREP[mode];
+  /* "Not in any topic" and "No source recorded" are catch-alls in the browse view,
+     and only one of them is a real filter value. A card in no declared topic cannot
+     be asked for by topic id, so the button is simply not offered rather than
+     offered and then dealing nothing. */
+  if(!dim||(id==='_none'&&mode!=='tier')) return '';
+  return `<button class="btn primary" data-rep="${dim}:${esc(id)}">⚡ Rep these in Study</button>`;
+}
+document.addEventListener('click',e=>{
+  const b=e.target.closest('[data-rep]'); if(!b) return;
+  const [dim,val]=b.dataset.rep.split(':');
+  /* Replaces the whole scope rather than adding to it. "Rep these" has to deal the
+     group you are looking at; leaving a leftover filter on from an hour ago would
+     hand back a subset of it with no explanation. The pill row shows the result. */
+  S.filters=FILT0(); S.filters[dim]=[val]; save();
+  nav('study'); window.scrollTo({top:0});
+});
+
 function renderLibrary(){
   if(S.libAt==='_flagged') return libFlagged();
   const mode=S.libGroup||'topic', buckets=libBuckets(mode);
@@ -11580,6 +11881,8 @@ function renderLibrary(){
       <h3>📇 All ${all.length} cards</h3>
       <p style="color:var(--tx2);font-size:14px;line-height:1.6;margin:2px 0 10px">
         The whole pack, standing still. Nothing is scheduled and nothing is left out${nbg?`, including the ${nbg} cards held back from the study queue`:''} — open a group and read the questions and their answers straight through.</p>
+      <p style="color:var(--tx2);font-size:14px;line-height:1.6;margin:0 0 10px">
+        Inside a group you can switch to <b>🎯 As tested</b> and see every card exactly as it is put to you in the queue — the real options, the real blanks, answerable — or hit <b>⚡ Rep these in Study</b> to be dealt just that group.</p>
       <p style="color:var(--tx2);font-size:14px;line-height:1.6;margin:0">
         If a question or an answer looks wrong, hit <b>⚑ Flag</b> on it. The same button is on every card in Study.</p>
     </div>
@@ -11601,25 +11904,27 @@ function renderLibrary(){
    them — the header is the only way out of a group, and rebuilding it on every
    keystroke is how that kind of control quietly stops working. */
 function libGroup(b){
-  const showA=S.libAns!==false;
   view.innerHTML=`
     <div class="libhead">
       <button class="btn ghost" id="libBack">← All cards</button>
-      <button class="btn ghost" id="libToggle">${showA?'Hide answers':'Show answers'}</button>
+      ${libRepBtn(S.libGroup||'topic',b.id)}
     </div>
     <div class="card" style="padding:16px 18px 14px">
       <h3 style="margin:0">${esc(b.name)}</h3>
       <p style="color:var(--tx2);font-size:13.5px;margin:5px 0 0">${b.cards.length} card${b.cards.length===1?'':'s'}${b.note?` · ${esc(b.note)}`:''}</p>
     </div>
+    ${libViewSeg()}
+    ${S.libView==='test'?`<div class="libnote">Every card below is drawn by the same code the queue draws it with — the same options, the same blanks, the same mark count. You can answer them; <b>nothing here is recorded against your progress</b>. Use <b>⚡ Rep these in Study</b> for that.</div>`:''}
     <div class="search" style="margin-top:12px"><input id="libq" placeholder="Filter within this group…" autocomplete="off"/></div>
     <div id="liblist"></div>`;
   $('#libBack').onclick=()=>{ S.libAt=null; save(); renderLibrary(); window.scrollTo({top:0}); };
-  $('#libToggle').onclick=()=>{ S.libAns=!(S.libAns!==false); save(); libGroup(b); };
+  wireLibView(()=>libGroup(b));
   const list=$('#liblist'), inp=$('#libq');
   const draw=()=>{
     const q=inp.value.trim().toLowerCase();
     const hits=q?b.cards.filter(c=>strip([c.q,c.a,c.text,c.why,c.model].filter(Boolean).join(' ')).toLowerCase().includes(q)):b.cards;
     list.innerHTML=hits.length?hits.map(libCardHTML).join(''):`<div class="empty">Nothing in this group matches "${esc(q)}".</div>`;
+    libWireAll(list,hits);
   };
   inp.oninput=draw; draw();
 }
@@ -11631,7 +11936,7 @@ function libFlagged(){
     (c?live:stale).push({ck,f,c});
   });
   view.innerHTML=`
-    <div class="libhead"><button class="btn ghost" id="libBack">← All cards</button></div>
+    <div class="libhead"><button class="btn ghost" id="libBack">← All cards</button>${live.length?libRepBtn('_x','_flagged'):''}</div>
     <div class="card">
       <h3>⚑ Flagged cards</h3>
       <p style="color:var(--tx2);font-size:14px;line-height:1.6;margin:2px 0 10px">${
@@ -11651,8 +11956,11 @@ function libFlagged(){
         ${x.f.note?`<br><span style="color:var(--tx3);font-size:12.5px">“${esc(x.f.note)}”</span>`:''}
         <br><button class="chip" data-fdrop="${x.ck}" style="margin-top:6px">Remove this flag</button></span></div>`).join('')}
     </div>`:''}
-    <div style="margin-top:12px">${live.map(x=>libCardHTML(x.c)).join('')}</div>`;
+    ${live.length?libViewSeg():''}
+    <div style="margin-top:12px" id="liblist">${live.map(x=>libCardHTML(x.c)).join('')}</div>`;
   $('#libBack').onclick=()=>{ S.libAt=null; save(); renderLibrary(); window.scrollTo({top:0}); };
+  wireLibView(libFlagged);
+  libWireAll($('#liblist'),live.map(x=>x.c));
   const cp=$('#flagCopy'); if(cp) cp.onclick=()=>copyText(flagsJSON(),cp);
   const dl=$('#flagDl');   if(dl) dl.onclick=()=>downloadText(flagsJSON(),`flags-${PACK.id}.json`);
   $$('[data-fdrop]').forEach(b=>b.onclick=()=>{ delete S.flags[b.dataset.fdrop]; save(); libFlagged(); });
@@ -11790,12 +12098,12 @@ function strideMerge(groups,N){
   return out.sort((a,b)=>a.pos-b.pos).map(x=>x.c);
 }
 function deckSource(types){
-  /* "Get me ready" ranks the whole pack; "I'll pick" honours the topic chip. A
-     focus scope from the Brief overrides both, and falls back to the whole pack
-     for that focus point if the current filter holds none of it. */
+  /* One filter pass under both doors. The door decides the ORDER of what is dealt
+     and, in "I'll pick", supplies a topic shortcut into the same scope object — it
+     no longer owns a filter of its own. Whatever is narrowed stays narrowed when
+     you change doors, and says so, rather than silently widening. */
   const all=cardsOf(types,'all').filter(inPool).filter(answerable);
-  const base=S.door==='ready'?all:cardsOf(types,S.topic).filter(inPool).filter(answerable);
-  const scoped=!S.crit?base:(critScope(base).length?critScope(base):critScope(all));
+  const scoped=filtOn()?all.filter(passFilters):all;
   /* Two cards with the same key are the same card — same type, same question, same
      answer. hs2-test1 carries five such pairs from a double-import in the harvest.
      They share one progress record by definition, so dealing both just serves the
@@ -11847,7 +12155,9 @@ function buildDeck(types){
 /* In memory only — a deck is a sitting, not saved progress. */
 const DECK={};
 const deckKey=t=>Array.isArray(t)?t.join('+'):t;
-const deckSig=()=>[S.door,S.topic,S.crit,bgOn()].join('|');   // toggling background rebuilds the deck
+/* Any change to the scope must rebuild the deck, or the reader keeps being dealt
+   cards from the pool they just narrowed away from. The filters go in whole. */
+const deckSig=()=>[S.door,bgOn(),FILTDIMS.map(d=>S.filters[d].join(',')).join(';')].join('|');
 function nextCard(types){
   const k=deckKey(types), sig=deckSig();
   let d=DECK[k];
@@ -11899,13 +12209,29 @@ function topicReady(tid){
   if(acc) parts.push(acc.pct/100);
   return parts.length?Math.round(parts.reduce((a,b)=>a+b,0)/parts.length*100):null;
 }
+/* The "I'll pick" door's topic chips. MULTI-SELECT now, and writing into the same
+   `filters.topics` the panel below edits — one piece of state with two ways to reach
+   it, rather than two filters that could disagree. Tapping a second topic adds it
+   instead of replacing it, which is what everyone tried to do with the old row. */
 function chipRow(cb){
   const anyData=PACK.topics.some(t=>topicReady(t.id)!=null);
-  const html=`<div class="chips"><button class="chip ${S.topic==='all'?'on':''}" data-t="all">✨ All topics</button>${
+  const sel=S.filters.topics;
+  /* SCOPED to this row, and it has to be. The old wiring was `$$('.chip')`, which
+     was safe when the chips were the only chips on the page — the filter panel now
+     renders chips too, and a blanket selector would rebind every one of them to the
+     topic handler. `[data-t]` alone is no better: the true/false runner marks its T
+     and F buttons `data-t="0"`, so a global sweep would silently replace answering a
+     tfset card with switching topics, under the one door where both are on screen.
+     Wire what you rendered, from the node you rendered it into. */
+  const html=`<div class="chips" id="topicChips"><button class="chip ${sel.length?'':'on'}" data-t="_all">✨ All topics</button>${
     PACK.topics.map(t=>{ const r=topicReady(t.id);
-      return `<button class="chip ${S.topic===t.id?'on':''}" data-t="${t.id}">${t.icon} ${esc(t.name)}${r!=null?`<span class="pc">${r}%</span>`:''}</button>`;
-    }).join('')}</div>${anyData?'':`<div class="doornote">No attempts yet — readiness percentages appear here once you have actually drilled something.</div>`}`;
-  setTimeout(()=>$$('.chip').forEach(c=>c.onclick=()=>{S.topic=c.dataset.t;save();cb();}),0);
+      return `<button class="chip ${sel.includes(t.id)?'on':''}" data-t="${t.id}">${t.icon} ${esc(t.name)}${r!=null?`<span class="pc">${r}%</span>`:''}</button>`;
+    }).join('')}</div>${sel.length>1?`<div class="doornote">Showing <b>${sel.length}</b> topics together. Tap a lit chip to drop it.</div>`:''}${
+    anyData?'':`<div class="doornote">No attempts yet — readiness percentages appear here once you have actually drilled something.</div>`}`;
+  setTimeout(()=>$$('#topicChips [data-t]').forEach(c=>c.onclick=()=>{
+    if(c.dataset.t==='_all'){ S.filters.topics=[]; save(); } else filtToggle('topics',c.dataset.t);
+    cb();
+  }),0);
   return html;
 }
 /* The door note has to describe the deck the reader is actually about to be dealt.
@@ -11929,6 +12255,17 @@ function deckNote(P){
   const held=hasBG()&&!S.bg;
   const all=held?' in that set':'';
   const named=(P.blocks||[]).map(x=>`<b>${esc(x.name)}</b>`);
+  /* THE SAME TRAP THE BACKGROUND SWITCH SPRANG, one filter along. "All N cards are
+     in the rotation … nothing is held back" is a sentence about an UNFILTERED deck,
+     and printed above a bar listing four active filters it is simply false — every
+     word of it individually true of the N cards left, and the claim it makes is not.
+     So a narrowed deck gets its own sentence, and neither "all" nor "nothing is held
+     back" appears in it. */
+  if(filtOn()){
+    return `<div class="doornote"><b>${P.total}</b> card${P.total===1?'':'s'} match what you have narrowed to${
+      P.total?', and the rotation deals every one of them before repeating any':''}.${
+      useful?` Most useful first: ${useful}.`:''} The rest of the pack is still there — clear a filter above to bring it back.</div>`;
+  }
   if(named.length>1){
     return `<div class="doornote">All <b>${P.total}</b> cards are in the rotation, worked through in course order — ${
       named.join(', then ')}.${useful?` Inside each block the most useful come first: ${useful}.`:''} Nothing${all} is held back.</div>`;
@@ -11950,10 +12287,15 @@ function bgRow(types){
      that badge on a card sitting directly under a line saying background reading was
      excluded. So the set is described by WHY it is out — it repeats ground the
      lecturer's own questions already cover — and the badge keeps its meaning. */
+  /* "Showing N cards" was true when this was the last word on the size of the queue.
+     It is not any more: with filters on, the bar above states a smaller number, and
+     two counts on one screen both claiming to be what you are seeing is the exact
+     shape of the bug this row was written to avoid. So it now describes the POOL it
+     owns — what the queue draws from — and leaves the queue's own count to the bar. */
   return S.bg
-    ? `<div class="bgrow"><span>Showing all <b>${all.length}</b> cards, including the <b>${bg}</b> that go back over ground the course's own questions already cover.</span>
+    ? `<div class="bgrow"><span>Drawing from all <b>${all.length}</b> cards, including the <b>${bg}</b> that go back over ground the course's own questions already cover.</span>
          <button class="btn ghost" id="bgTog">− Just the ${core} the course has asked about</button></div>`
-    : `<div class="bgrow"><span>Showing the <b>${core}</b> cards the course has set questions on, plus the ones covering focus points no practice test touches. The other <b>${bg}</b> go back over that same ground in more general terms — they are still in the Brief and in Search.</span>
+    : `<div class="bgrow"><span>Drawing from the <b>${core}</b> cards the course has set questions on, plus the ones covering focus points no practice test touches. The other <b>${bg}</b> go back over that same ground in more general terms — they are still in the Brief and in Search.</span>
          <button class="btn ghost" id="bgTog">+ Add the other ${bg} cards</button></div>`;
 }
 /* Delegated, not wired per render, for the same reason #scopeClr is: every other
@@ -11965,17 +12307,98 @@ document.addEventListener('click',e=>{
   if(!e.target.closest('#bgTog')) return;
   S.bg=!S.bg; save(); nav(VIEW);
 });
+/* ---- the narrow-the-queue surface -------------------------------------------
+   Dimensions are derived from the pack, never declared, so a pack with no focus
+   points and no tiers simply gets three of them and no configuration. An option
+   that matches nothing is not offered — except when it is already selected, because
+   a chip that disappears while it is still filtering the queue is a lock with extra
+   steps. The bar below the doors lists what is on whatever the panel is doing. */
+const TIERFILT=['verbatim','taught','textbook','unverified'];
+function filtDims(types){
+  const all=cardsOf(types,'all').filter(inPool).filter(answerable);
+  const mk=(id,lab,note,opts)=>({id,lab,note,opts:opts
+    .map(o=>({...o,n:all.filter(c=>o.pred(c)&&passFilters(c,id)).length}))
+    .filter(o=>o.n||S.filters[id].includes(o.id))});
+  const ds=[
+    mk('topics','Topic','',PACK.topics.map(t=>({id:t.id,lab:`${t.icon} ${t.name}`,pred:c=>c.topic===t.id}))),
+    mk('types','Question type','The form the question takes — the same split the real paper has.',
+       ALLTYPES.map(t=>({id:t,lab:TYPELABEL[t],pred:c=>c.type===t}))),
+  ];
+  if(PACK.cards.some(c=>c.tier))
+    ds.push(mk('tiers','Where the card came from','',TIERFILT.map(t=>({id:t,lab:PROV[t].lab,pred:c=>provOf(c)===t}))
+      .concat([{id:'_none',lab:'No source recorded',pred:c=>!provOf(c)}])));
+  if((PACK.criteria||[]).length)
+    ds.push(mk('crits','Focus point','The course’s own published list.',
+      PACK.criteria.map(cr=>({id:cr.id,lab:cr.name||cr.id,pred:c=>c.crit===cr.id||(c.alsoCrit||[]).includes(cr.id)}))));
+  ds.push(mk('status','How you are doing on it','Worked out from your own answers, so it moves as you go.',
+    STATUS.map(s=>({id:s.id,lab:s.lab,hint:s.hint,pred:c=>cardStatus(c).includes(s.id)}))));
+  return ds.filter(d=>d.opts.length);
+}
+/* A panel is a moment, not a preference — it opens where you are and is gone next
+   time. Deliberately NOT in S: a filter panel that is still open three sessions
+   later is just chrome. */
+let FPANEL=false;
+const filtLabel=(dim,id)=>{
+  if(dim==='topics') return topicName(id);
+  if(dim==='types')  return TYPELABEL[id]||id;
+  if(dim==='tiers')  return id==='_none'?'No source recorded':(PROV[id]?PROV[id].lab:id);
+  if(dim==='crits')  return critName(id);
+  const s=STATUS.find(x=>x.id===id); return s?s.lab:id;
+};
+function filterUI(cb,types){
+  const n=deckSource(types).length, on=filtOn();
+  const pills=!on?'':`<div class="fpills">${FILTDIMS.map(d=>S.filters[d].map(id=>
+      `<button class="fpill" data-fx="off" data-fd="${d}" data-fv="${esc(id)}" title="Stop filtering by this">${esc(filtLabel(d,id))}<span>✕</span></button>`).join('')).join('')}
+    <button class="fpill clr" data-fx="clear">Clear all filters</button></div>`;
+  const bar=`<div class="filtbar">
+      <button class="btn ghost${FPANEL?' open':''}" data-fx="panel" aria-expanded="${FPANEL}">🔎 Rep only… ${on?`<span class="fn">${filtCount()}</span>`:''}</button>
+      <!-- NOT "whole pack — 344 cards". The pack is 345; one is damaged at source and
+           never dealt, and All cards says 345 two taps away. Stating the queue's own
+           number and calling it the pack is how a tool ends up with two card counts
+           that are each true and cannot be reconciled from the screen. It says what it
+           is: nothing narrowed, and this many in the queue. -->
+      <span class="fnote">${on?`<b>${n}</b> card${n===1?'':'s'} in the queue`:`nothing narrowed — <b>${n}</b> in the queue`}</span>
+    </div>${pills}`;
+  if(!FPANEL) return bar;
+  const dims=filtDims(types);
+  return bar+`<div class="filtpanel">
+    <p class="fintro">Pick as many as you like. Inside a row they add up (<b>multichoice <i>or</i> matching</b>); across rows they narrow (<b>multichoice, <i>and</i> on the heart</b>). The number on each is how many cards it leaves you once everything else you have picked is applied.</p>
+    ${dims.map(d=>`<div class="filtrow">
+      <div class="fhead"><b>${esc(d.lab)}</b>${S.filters[d.id].length?`<button class="fclr" data-fx="clrdim" data-fd="${d.id}">clear</button>`:''}</div>
+      ${d.note?`<div class="fsub">${d.note}</div>`:''}
+      <div class="chips">${d.opts.map(o=>`<button class="chip${S.filters[d.id].includes(o.id)?' on':''}" data-fx="tog" data-fd="${d.id}" data-fv="${esc(o.id)}"${o.hint?` title="${esc(o.hint)}"`:''}>${esc(o.lab)}<span class="pc">${o.n}</span></button>`).join('')}</div>
+    </div>`).join('')}
+    <p class="fintro last">This narrows the <b>queue</b> only. The Brief, Search, All cards and your Progress keep counting the whole pack.</p>
+  </div>`;
+}
+/* Delegated, every control of it, for the reason #bgTog and the old #scopeClr are:
+   these buttons are the only route out of a narrowed queue, and every other
+   post-render binding in this file attaches on a setTimeout that a fast tab switch
+   can beat. A filter you cannot turn off is a lock. */
+document.addEventListener('click',e=>{
+  const b=e.target.closest('[data-fx]'); if(!b) return;
+  const fx=b.dataset.fx;
+  if(fx==='panel') FPANEL=!FPANEL;
+  else if(fx==='clear'){ filtClear(); }
+  else if(fx==='clrdim'){ S.filters[b.dataset.fd]=[]; save(); }
+  else if(fx==='off'||fx==='tog') filtToggle(b.dataset.fd,b.dataset.fv);
+  nav(VIEW);
+});
 /* `readyNote` lets a view describe its own "Get me ready" behaviour. The Brief
    orders the focus points rather than drawing a card queue, so the card-count note
    would be meaningless there. */
 function gate(cb,types,readyNote){
   const P=(S.door==='ready'&&readyNote===undefined)?deckStats(types):null;
+  /* The filter surface sits between the doors and the note, not after it, because
+     the note now describes a deck the filters have already cut — "clear a filter
+     above" has to be pointing at something above it. */
   const html=`<div class="doors">
       <button class="door ${S.door==='ready'?'on':''}" data-d="ready">🎯 Get me ready</button>
       <button class="door ${S.door==='pick'?'on':''}" data-d="pick">🗂 I'll pick</button>
       <button class="iconbtn" id="doorWhy" title="What the difference is">?</button>
     </div>
     <div id="doorHelp"></div>
+    ${readyNote===undefined?filterUI(cb,types):''}
     ${S.door!=='ready'?'':readyNote!==undefined?readyNote:P?deckNote(P):''}`;
   setTimeout(()=>{
     // Pre-existing race: this fires a tick after render, and switching tabs quickly
@@ -11990,6 +12413,10 @@ function gate(cb,types,readyNote){
         ${hasBG()?`<p>Both are also showing the same set — the switch below, for how
         much of the pack is in the queue, sits outside this choice and applies to
         either door.</p>`:''}
+        <p><b>🔎 Rep only…</b> sits outside this choice too. It cuts the queue down to
+        exactly what you want to rep — one question type, one topic, the ones you keep
+        getting wrong, or any combination — and stays on until you clear it, under
+        either door. Whatever is on is listed under it and each one comes off in a tap.</p>
         <p><b>🎯 Get me ready</b> decides for you. You still get through every card${
           systemBlocks()?`, working through the course in its own order — one system
         finished before the next one starts. Inside each block it leads`:` —
@@ -12109,7 +12536,7 @@ function renderBrief(){
 
   let list=all.slice();
   if(S.door==='ready') list.sort((a,b)=>critRank(a)-critRank(b)||pos[a.id]-pos[b.id]);
-  else if(S.topic!=='all') list=list.filter(c=>critTopic(c.id)===S.topic);
+  else if(S.filters.topics.length) list=list.filter(c=>S.filters.topics.includes(critTopic(c.id)));
 
   const nRead=all.filter(c=>S.read[c.id]).length;
   const tiers={};
@@ -12161,25 +12588,25 @@ function renderBrief(){
     if(pr) pr.textContent=`${n} of ${all.length} read`;
     if(pb) pb.style.width=(all.length?n/all.length*100:0)+'%';
   });
-  $$('[data-drill]').forEach(b=>b.onclick=()=>{ S.crit=b.dataset.drill; save(); nav('study'); window.scrollTo({top:0}); });
+  $$('[data-drill]').forEach(b=>b.onclick=()=>{ drillCrit(b.dataset.drill); nav('study'); window.scrollTo({top:0}); });
 }
 
 /* ---- criterion scope, set by the Brief's ▸ Drill this ----
-   Always announced with a one-tap clear. A filter the reader cannot see is a
-   lock, and the house rule is that we never lock. */
-function scopeBanner(){
-  if(!S.crit) return '';
-  const cr=(PACK.criteria||[]).find(c=>c.id===S.crit);
-  return `<div class="scopebar">Focused on <b>${esc(cr?(cr.name||cr.id):S.crit)}</b><button id="scopeClr">Clear ✕</button></div>`;
+   This used to be its own banner with its own clear button, because it was its own
+   one-off filter. It is now just the `crits` dimension of the scope object, so the
+   announcement and the one-tap clear come from the same pill row as everything else
+   and there is one place a reader has to look to see what is narrowing their queue.
+   The rule it was built for is unchanged: a filter the reader cannot see is a lock,
+   and the house rule is that we never lock. */
+function drillCrit(id){
+  /* Clear a topic filter that would hide the thing just asked for. Two filters that
+     intersect to nothing is the one dead end this surface can produce, and arriving
+     at "0 cards match" straight off a ▸ Drill this button reads as the button being
+     broken. The pill row shows what changed, so it is visible rather than silent. */
+  const tp=critTopic(id);
+  if(S.filters.topics.length&&tp&&!S.filters.topics.includes(tp)) S.filters.topics=[];
+  S.filters.crits=[id]; save();
 }
-/* Delegated rather than wired per render. The other post-render wiring in this file
-   binds on a setTimeout and is documented as racy; here that race would leave the
-   reader inside a scope with no way out — a lock, which the two-doors rule forbids.
-   Delegation cannot come unbound. */
-document.addEventListener('click',e=>{
-  if(!e.target.closest('#scopeClr')) return;
-  S.crit=null; save(); nav(VIEW);
-});
 /* "→ Read the full explanation" — the return leg of ▸ Drill this. Delegated for the
    same reason: this is the one route out of a wrong answer and into the prose, and a
    racy per-render binding would silently drop it.
@@ -12192,13 +12619,13 @@ document.addEventListener('click',e=>{
 document.addEventListener('click',e=>{
   const b=e.target.closest('[data-brief]'); if(!b) return;
   const id=b.dataset.brief;
-  if(S.door==='pick'&&S.topic!=='all'&&critTopic(id)!==S.topic){ S.topic='all'; save(); }
+  const tp=critTopic(id);
+  if(S.filters.topics.length&&tp&&!S.filters.topics.includes(tp)){ S.filters.topics=[]; save(); }
   nav('brief');
   const el=document.getElementById('brf-'+id);
   if(el){ el.scrollIntoView({block:'start',behavior:'smooth'}); el.classList.add('lit'); setTimeout(()=>el.classList.remove('lit'),1800); }
   else window.scrollTo({top:0});
 });
-const critScope=cs=>S.crit?cs.filter(c=>c.crit===S.crit||(c.alsoCrit||[]).includes(S.crit)):cs;
 
 /* ============================== Study ==============================
    ONE queue holding every card the pack has, dealt from one deck.
@@ -12222,25 +12649,63 @@ const critScope=cs=>S.crit?cs.filter(c=>c.crit===S.crit||(c.alsoCrit||[]).includ
    answered and marked — but that is now an INTERACTION the card chooses, not a
    destination the reader has to choose first.                                  */
 function renderStudy(){
-  const G=gate(renderStudy,ALLTYPES)+scopeBanner();
+  const G=gate(renderStudy,ALLTYPES);
   CUR=nextCard(ALLTYPES);
-  if(!CUR){ view.innerHTML=G+`<div class="empty">No cards in this topic yet.</div>`; return; }
-  const c=CUR, tot=cardMarks(c);
-  /* A flashcard's "1 mark" is an artefact of cardMarks defaulting, not something the
-     paper awards. Showing it would put a number on the one card type that has none. */
-  /* The flag button rides the study card because this is where a broken card is
-     actually met. Sending someone to All cards to find the one they are looking at
-     is how a report never gets filed. */
-  const head=`
+  /* An empty queue used to say "No cards in this topic yet", which was true of the
+     one filter that existed then and is a dead end now: five dimensions can
+     intersect to nothing, and the reader has to be told WHICH combination did it and
+     handed the way out in the same breath. */
+  if(!CUR){ view.innerHTML=G+`<div class="empty">${filtOn()
+      ? `${filtCount()>1?`Nothing matches all <b>${filtCount()}</b> of those filters at once. Drop one above, or`:`Nothing matches that filter right now —`} <button class="btn ghost" data-fx="clear" style="margin-left:6px">clear ${filtCount()>1?'them all':'it'}</button>`
+      : 'No cards here yet.'}</div>`; return; }
+  const c=CUR, tot=cardMarks(c), head=cardHeadHTML(c);
+  if(c.type==='rail')     studyRail(G,head,c);
+  else if(c.type==='flash')studyFlash(G,head,c);
+  else if(c.type==='saq') studyWritten(G,head,c);
+  else                    studyAuto(G,head,c,tot);
+}
+
+/* ════════ THE CARD AS THE READER MEETS IT — one renderer, two callers ════════
+   `cardHeadHTML` and `faceHTML` are what a card looks like at the moment you are
+   being tested on it: the meta row, the question, the figure, and then the thing you
+   actually interact with — options, blanks, dropdowns, a half-hidden chain.
+
+   They are FUNCTIONS rather than markup living inside renderStudy because All cards
+   now shows every card exactly as the queue deals it, and "exactly" cannot survive
+   two implementations. A second renderer written to match this one is a copy that
+   drifts the first time either side is touched, and the drift is invisible: both
+   pages look plausible, and the browse view quietly stops being evidence of what the
+   reader will meet. Same rule as porting a surface between projects — copy it, do
+   not describe it. Here we can do better than copy: there is one of it.
+
+   A flashcard's "1 mark" is an artefact of cardMarks defaulting, not something the
+   paper awards, so it is the one type that shows no mark count.
+
+   The flag button rides the card itself because this is where a broken card is
+   actually met. Sending someone to All cards to find the one they are looking at is
+   how a report never gets filed. */
+function cardHeadHTML(c){
+  const tot=cardMarks(c);
+  return `
       <div class="cmeta"><span class="tag acc">${topicName(c.topic)}</span>${
         c.type==='flash'?'':`<span class="tag">${tot} mark${tot>1?'s':''}</span>`}${
         provHTML(c)}<span class="cmend"><span class="tag right">${TYPELABEL[c.type]}</span>${flagBtnHTML(c.key)}</span></div>
       <div class="q">${c.type==='rail'?esc(c.name||'Rebuild this chain'):c.q}</div>${origHTML(c)}<div class="provslot"></div><div class="flagslot"></div>
       ${figHTML(c)}`;
-  if(c.type==='rail')     studyRail(G,head,c);
-  else if(c.type==='flash')studyFlash(G,head,c);
-  else if(c.type==='saq') studyWritten(G,head,c);
-  else                    studyAuto(G,head,c,tot);
+}
+/* The one place "SAQ" is glossed. A student does meet the abbreviation in the course,
+   so hiding it entirely would be its own confusion — but they should meet it here,
+   next to the plain words, rather than as a tab name. */
+const SAQHINT=`<div class="hinttxt">A <b>written</b> question — what the course calls an <b>SAQ</b>. Say or write your full answer first, then reveal the marking points and mark yourself honestly.</div>`;
+const railAskHTML=item=>`<div class="railhead"><span class="rung r${item.lvl}">${
+  ['','Fill the gap','Name the link','Carry it on','From the seed'][item.lvl]}</span><span class="rask">${item.ask}</span></div>`;
+function faceHTML(c,r,item){
+  switch(c.type){
+    case 'rail':  return railAskHTML(item)+railHTML(c,item,false);
+    case 'flash': return '';                 // the question IS the whole face
+    case 'saq':   return SAQHINT;
+    default:      return runnerHTML(r);
+  }
 }
 
 /* Self-graded recall, shared by flashcards and (after scoring) written answers. */
@@ -12321,10 +12786,8 @@ function railHTML(c,item,reveal){
 }
 function studyRail(G,head,c){
   const box=srsGet(c.key).box||0, item=railItem(c,box);
-  const LVL=['','Fill the gap','Name the link','Carry it on','From the seed'][item.lvl];
   view.innerHTML=G+`<div class="card">${head}
-      <div class="railhead"><span class="rung r${item.lvl}">${LVL}</span><span class="rask">${item.ask}</span></div>
-      ${railHTML(c,item,false)}
+      ${faceHTML(c,null,item)}
       <div id="ansZone"><div class="btnrow"><button class="btn primary" id="flip">Show the chain ↵</button></div></div>
     </div>`;
   const flip=()=>{
@@ -12335,7 +12798,7 @@ function studyRail(G,head,c){
   document.onkeydown=e=>{ if(VIEW==='study'&&e.key==='Enter'&&$('#flip')) flip(); };
 }
 function studyFlash(G,head,c){
-  view.innerHTML=G+`<div class="card">${head}
+  view.innerHTML=G+`<div class="card">${head}${faceHTML(c,null)}
       <div id="ansZone"><div class="btnrow"><button class="btn primary" id="flip">Show answer ↵</button></div></div>
     </div>`;
   const flip=()=>{
@@ -12348,11 +12811,7 @@ function studyFlash(G,head,c){
 
 /* ---- written answer: say it, reveal the marking points, tick honestly ---- */
 function studyWritten(G,head,c){
-  view.innerHTML=G+`<div class="card">${head}
-      <!-- The one place "SAQ" is glossed. A student does meet the abbreviation in the
-           course, so hiding it entirely would be its own confusion — but they should
-           meet it here, next to the plain words, rather than as a tab name. -->
-      <div class="hinttxt">A <b>written</b> question — what the course calls an <b>SAQ</b>. Say or write your full answer first, then reveal the marking points and mark yourself honestly.</div>
+  view.innerHTML=G+`<div class="card">${head}${faceHTML(c,null)}
       <div id="ansZone"><div class="btnrow"><button class="btn primary" id="flip">Reveal marking points ↵</button></div></div>
     </div>`;
   const reveal=()=>{
@@ -12381,7 +12840,7 @@ function studyWritten(G,head,c){
 function studyAuto(G,head,c,tot){
   const r=makeRunner(c);
   view.innerHTML=G+`<div class="card">${head}
-      <div id="body">${runnerHTML(r)}</div>
+      <div id="body">${faceHTML(c,r)}</div>
       <div id="fb">${c.type==='mcq'?'':`<div class="btnrow"><button class="btn primary" id="submit" disabled>Check answer ↵</button></div>`}</div>
     </div>`;
   const refresh=()=>{
@@ -12570,6 +13029,24 @@ if(HASBRIEF()) $('#navBrief').hidden=false;
 /* A reader with no history lands in the Brief. Learn would open by asking them to
    retrieve a fact they have not encoded yet, which is the slowest way to start and
    the most discouraging. Once there is any progress, Learn is the right landing. */
+/* ONE-TIME REPAIR, and only for a scope that came from before the filters existed.
+
+   The old code let a topic and a focus point be set at once and quietly ignored the
+   topic when the two held nothing in common — `critScope` fell back to the whole pack
+   for that focus point. Carried across literally, that saved state becomes an
+   intersection of two filters that is genuinely empty, so a reader who left the tool
+   mid-drill would come back after the update to "Nothing matches", on a combination
+   they never made and cannot remember making.
+
+   So the migrated case reproduces exactly what it used to do — the focus point wins,
+   the topic is dropped — and the pill row shows the result. It is gated on
+   MIGRATED_SCOPE and not on "the queue is empty", because widening a scope the reader
+   built themselves, silently, is the behaviour this whole surface exists to remove.
+   Here rather than in the migration block itself: `deckSource` reaches `cardsOf`,
+   which is declared further down and would be in its temporal dead zone up there. */
+if(MIGRATED_SCOPE&&S.filters.topics.length&&S.filters.crits.length&&!deckSource(ALLTYPES).length){
+  S.filters.topics=[]; save();
+}
 const coldStart=!Object.keys(S.srs).length&&!Object.keys(S.mcq).length;
 renderOnboard();
 nav(HASBRIEF()&&coldStart?'brief':'study');
@@ -12643,12 +13120,17 @@ if(PACK.studybus&&PACK.id){
 
 /* deep links: land in the right view/topic */
 const q=new URLSearchParams(location.search);
-const tp=q.get('topic'), md=q.get('mode');
-if(tp&&PACK.topics.some(t=>t.id===tp)){ S.topic=tp; save(); }
+const tp=q.get('topic'), md=q.get('mode'), ty=q.get('type');
+/* ?topic= and ?type= both land in the scope object, so a hub link can drop someone
+   straight into "just the multichoice on the heart". Each REPLACES that dimension
+   rather than adding to it — a link has to mean the same thing every time it is
+   opened, whatever the reader happened to have narrowed to last session. */
+if(tp&&PACK.topics.some(t=>t.id===tp)){ S.filters.topics=[tp]; save(); }
+if(ty){ const ts=ty.split(',').filter(t=>ALLTYPES.includes(t)); if(ts.length){ S.filters.types=ts; save(); } }
 /* learn/mcq/saq are kept here on purpose: nav() aliases them onto Study, so a hub
    link or bookmark written before the merge still lands somewhere real. */
 if(md&&['brief','study','learn','mcq','saq','cards','search','stats','audit'].includes(md)) nav(md);
-else if(tp) nav(VIEW);   // re-render so the topic chip change shows
+else if(tp||ty) nav(VIEW);   // re-render so the scope change shows
 })();
 </script>
 </body>

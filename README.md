@@ -171,12 +171,47 @@ used to be a red-orange ⚠️ firing on 61% of all cards, which is not a warnin
 a texture that teaches a reader to distrust the whole tool — and it was never true:
 the content is not suspect, it just is not in the slides.
 
-## All cards — read the pack, flag what is broken
+## Rep only… — the queue, cut any way you want
+
+Above the queue on Study, under both doors. Five dimensions, ANDed across and ORed
+within: **topic · question type · where the card came from · focus point · how you are
+doing on it**. "Just the 157 multichoice." "The 17 multichoice on heart anatomy." "The
+ones I keep getting wrong." "Only Hannetjie's own questions." "Only the flagged ones."
+
+Whatever is on is listed as pills under the doors, each one removable in a tap, with a
+clear-all — a filter you cannot see is a lock. It narrows the **queue** only: the Brief,
+Search, All cards, Progress and the hub's ⚡ bus all keep counting the whole 345.
+
+Every chip carries the number of cards it leaves you *once everything else you have
+picked is applied*, so a chip that says 17 deals 17. `node build.mjs` proves that for
+every option in every dimension before it will ship (G13) — it was written because the
+two predicates had already drifted apart once.
+
+This replaced the old single-topic chip row and the Brief's separate focus banner, which
+could not be combined; **▸ Drill this** now just sets the focus-point filter, and shows
+up as a pill like everything else.
+
+## All cards — read the pack, see it as tested, flag what is broken
 
 Behind the `···`. Every one of the 345 cards, standing still: group them by topic,
 focus point, source or question type, open a group and read the questions with their
 answers straight through. It shows the background-reading cards too — like the Brief
 and Search, this is a view that has to be able to show *everything*.
+
+Each group has a three-way switch: **📖 Read** · **🙈 Questions only** · **🎯 As tested**.
+
+*As tested* is the card **exactly as the queue deals it** — the real options as buttons,
+the real dropdowns inside the real passage, the rail with its beads knocked out, the
+mark count, the source badge — and you can answer it. **Nothing there is recorded
+against your progress**, so it stays a browse view; the button that does count is
+**⚡ Rep these in Study**, on every group, which turns whatever you are looking at into
+the queue filter that produces it.
+
+It is not a lookalike. It calls `cardHeadHTML` and `faceHTML` — the two functions Study
+itself renders through — so it cannot drift from the real card without the real card
+moving too, and the build refuses to ship if that stops being true (G14). The one
+`damaged` card has no as-tested form, because it is never dealt and inventing one would
+show a version of the card that does not exist.
 
 It exists because the queue is not a way to *read* a pack. Study deals one card and
 chooses it for you, Search needs the word you are looking for already, and the Brief
