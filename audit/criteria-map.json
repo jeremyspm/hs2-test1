@@ -3,7 +3,7 @@
   "resp-17": 10,
   "resp-2": 61,
   "resp-7": 31,
-  "cvs-3": 12,
+  "cvs-3": 13,
   "resp-4": 18,
   "resp-5": 32,
   "resp-6": 13,
@@ -11,7 +11,7 @@
   "cvs-12": 26,
   "cvs-15": 47,
   "cvs-5": 108,
-  "cvs-6": 57,
+  "cvs-6": 58,
   "cvs-8": 36,
   "cvs-4": 18,
   "cvs-9": 26,
@@ -19,11 +19,11 @@
   "cvs-13": 2,
   "cvs-11": 10,
   "cvs-2": 20,
-  "lymph-2": 14,
+  "lymph-2": 13,
   "cvs-7": 9,
+  "resp-9": 7,
   "resp-12": 5,
   "resp-1": 3,
-  "resp-9": 4,
   "resp-8": 15,
   "resp-11": 14,
   "resp-3": 6,
@@ -31,7 +31,7 @@
   "resp-13": 4,
   "resp-10": 2,
   "lymph-4": 2,
-  "lymph-1": 4,
+  "lymph-1": 3,
   "cs-vacc": 3,
   "lymph-3": 1,
   "cs-bp": 5
@@ -172,8 +172,8 @@
    "quiz": "MODULE 1.1 SHOCK QUIZ (5 Marks)",
    "n": "Question 2",
    "crits": [
-    "cvs-12",
     "cvs-14",
+    "cvs-12",
     "cvs-15"
    ]
   },
@@ -197,8 +197,8 @@
    "quiz": "MODULE 1.1 SHOCK QUIZ (5 Marks)",
    "n": "Question 5",
    "crits": [
-    "cvs-5",
     "cvs-14",
+    "cvs-5",
     "cvs-15"
    ]
   },
@@ -421,9 +421,9 @@
    "quiz": "MODULE 1.1: CVS3 CARDIAC CONDUCTION & ECG (10 marks)",
    "n": "Question 6",
    "crits": [
+    "cvs-11",
     "cvs-5",
     "cvs-9",
-    "cvs-11",
     "cvs-15"
    ]
   },
@@ -967,6 +967,7 @@
    "quiz": "MODULE 1.2: (SAQ &MC) STUDENT MARKED: RESPIRATORY PRACTICE TEST (20 marks)",
    "n": "Question 1",
    "crits": [
+    "resp-9",
     "resp-5"
    ]
   },
@@ -1047,8 +1048,8 @@
    "quiz": "MODULE 1.2: (SAQ &MC) STUDENT MARKED: RESPIRATORY PRACTICE TEST (20 marks)",
    "n": "Question 12",
    "crits": [
-    "resp-8",
-    "resp-11"
+    "resp-11",
+    "resp-8"
    ]
   },
   {
@@ -1124,24 +1125,24 @@
    "quiz": "MODULE 1.2: RESP BASIC ANATOMY (10 Marks)",
    "n": "Question 2",
    "crits": [
-    "cvs-5",
-    "resp-2"
+    "resp-2",
+    "cvs-5"
    ]
   },
   {
    "quiz": "MODULE 1.2: RESP BASIC ANATOMY (10 Marks)",
    "n": "Question 3",
    "crits": [
-    "cvs-5",
-    "resp-2"
+    "resp-2",
+    "cvs-5"
    ]
   },
   {
    "quiz": "MODULE 1.2: RESP BASIC ANATOMY (10 Marks)",
    "n": "Question 4",
    "crits": [
-    "cvs-5",
-    "resp-2"
+    "resp-2",
+    "cvs-5"
    ]
   },
   {
@@ -1223,8 +1224,8 @@
    "quiz": "MODULE 1.2: RESP BASIC ANATOMY (10 Marks)",
    "n": "Question 14",
    "crits": [
-    "resp-2",
     "resp-5",
+    "resp-2",
     "resp-7",
     "resp-17"
    ]
@@ -1389,17 +1390,17 @@
    "quiz": "MODULE 1.2: RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)",
    "n": "Question 2",
    "crits": [
+    "resp-7",
     "resp-2",
-    "resp-5",
-    "resp-7"
+    "resp-5"
    ]
   },
   {
    "quiz": "MODULE 1.2: RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)",
    "n": "Question 3",
    "crits": [
-    "resp-2",
-    "resp-7"
+    "resp-7",
+    "resp-2"
    ]
   },
   {
@@ -1421,14 +1422,15 @@
    "quiz": "MODULE 1.2: RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)",
    "n": "Question 6",
    "crits": [
-    "resp-7",
-    "resp-8"
+    "resp-8",
+    "resp-7"
    ]
   },
   {
    "quiz": "MODULE 1.2: RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)",
    "n": "Question 7",
    "crits": [
+    "resp-9",
     "resp-5"
    ]
   },
@@ -1464,8 +1466,8 @@
    "quiz": "MODULE 1.2: RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)",
    "n": "Question 12",
    "crits": [
-    "cvs-11",
     "resp-7",
+    "cvs-11",
     "resp-8"
    ]
   },
@@ -1487,8 +1489,8 @@
    "quiz": "MODULE 1.2: RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)",
    "n": "Question 15",
    "crits": [
-    "resp-8",
-    "resp-11"
+    "resp-11",
+    "resp-8"
    ]
   },
   {
@@ -1503,9 +1505,9 @@
    "quiz": "MODULE 1.2: RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)",
    "n": "Question 17",
    "crits": [
+    "resp-5",
     "resp-2",
     "resp-4",
-    "resp-5",
     "resp-14"
    ]
   },
@@ -1584,14 +1586,15 @@
    "quiz": "MODULE 1.2: RESPIRATORY SYSTEM GAS LAWS (20 marks)",
    "n": "Question 2",
    "crits": [
-    "resp-7",
-    "resp-8"
+    "resp-8",
+    "resp-7"
    ]
   },
   {
    "quiz": "MODULE 1.2: RESPIRATORY SYSTEM GAS LAWS (20 marks)",
    "n": "Question 3",
    "crits": [
+    "resp-9",
     "resp-5"
    ]
   },
@@ -1624,8 +1627,8 @@
    "quiz": "MODULE 1.2: RESPIRATORY SYSTEM GAS LAWS (20 marks)",
    "n": "Question 7",
    "crits": [
-    "cvs-11",
     "resp-7",
+    "cvs-11",
     "resp-8"
    ]
   },
@@ -1662,8 +1665,8 @@
    "quiz": "MODULE 1.2: RESPIRATORY SYSTEM GAS LAWS (20 marks)",
    "n": "Question 12",
    "crits": [
-    "resp-8",
-    "resp-11"
+    "resp-11",
+    "resp-8"
    ]
   },
   {
@@ -1746,9 +1749,9 @@
    "quiz": "MODULE 1.3: QUIZ: DISEASES / TERMINOLOGY RELATED TO THE LYMPHATIC SYSTEM",
    "n": "Question 3",
    "crits": [
+    "lymph-1",
     "cvs-3",
-    "cvs-14",
-    "lymph-1"
+    "cvs-14"
    ]
   },
   {
@@ -1847,7 +1850,7 @@
    "quiz": "MODULE 1.3:SAQ & MC: FLUID, ELECTROLYTE & FLUID BALANCE (10 marks)",
    "n": "Question 6",
    "crits": [
-    "lymph-1"
+    "cvs-3"
    ]
   },
   {
@@ -2123,7 +2126,7 @@
    "quiz": "Practice Lab 1: SAQ & MC Quiz (20 marks)",
    "n": "Question 1",
    "crits": [
-    "lymph-2"
+    "cvs-6"
    ]
   },
   {
@@ -2820,8 +2823,8 @@
    "quiz": "MODULE 1.2: AIRWAYS, BARO- & CHEMORECEPTORS (10 marks)",
    "n": "Question 1",
    "crits": [
-    "resp-2",
-    "resp-4"
+    "resp-4",
+    "resp-2"
    ]
   },
   {

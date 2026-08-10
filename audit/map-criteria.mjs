@@ -236,7 +236,12 @@ for (const c of BOUND) {
    Every entry is proven to still bite (see the gates below). An entry that has stopped
    matching, or that no longer changes anything, fails the build instead of rotting. */
 const ROUTES = JSON.parse(fs.readFileSync(path.join(HERE, 'routes.json'), 'utf8')).routes ?? [];
-const norm = (s) => String(s ?? '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+/* `[[IMG:…]]` markers are stripped before comparing: harvest.mjs checks the same `was`
+   against the pre-bind card, which still carries the marker, and this script checks it
+   against the bound card, where bind-images has replaced it. One anchor has to satisfy
+   both, and the anchor is a claim about the WORDS of the question, not about which phase
+   of the pipeline has run. */
+const norm = (s) => String(s ?? '').replace(/\[\[IMG[^\]]*\]\]/g, ' ').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
 {
   const problems = [];
   const seen = new Set();
@@ -268,7 +273,12 @@ const norm = (s) => String(s ?? '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ')
       if (next[0] === r.crit && !(r.add ?? []).includes(r.crit)) { problems.push(`${at}: ${r.crit} is already first — the entry changes nothing`); continue; }
       next = [r.crit, ...next.filter((x) => x !== r.crit)];
     }
-    if (!(r.crit || (r.add ?? []).length || (r.drop ?? []).length)) { problems.push(`${at}: does nothing — needs at least one of crit/add/drop`); continue; }
+    /* `topic` counts as doing something, but it is HARVEST's field, not this script's —
+       harvest.mjs applies it and enforces its own contract on it (anchor still opens the
+       question, declared topic actually differs from the rules'). Without it here, a
+       topic-only entry fails as "does nothing" even though it is doing the one thing it
+       was written to do. */
+    if (!(r.crit || (r.add ?? []).length || (r.drop ?? []).length || r.topic)) { problems.push(`${at}: does nothing — needs at least one of crit/add/drop/topic`); continue; }
     for (const id of next) if (!(pack.criteria ?? []).some((cr) => cr.id === id)) problems.push(`${at}: ${id} is not a focus point this pack declares`);
     ruleHits.set(c, next);
   }

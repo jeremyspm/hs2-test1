@@ -313,9 +313,27 @@ const GATE_NAMES = {
 
 console.log('══ VALIDATOR ═══════════════════════════════════════');
 console.log(`  ${pack.cards.length} cards · ${pack.glossary.length} glossary · ${pack.criteria.length} criteria`);
-const tiers = {};
-for (const it of items) tiers[it.o.tier ?? '(none)'] = (tiers[it.o.tier ?? '(none)'] ?? 0) + 1;
-console.log(`  tiers: ${Object.entries(tiers).map(([k, v]) => `${k} ${v}`).join(' · ')}\n`);
+/* Counted per KIND, not over `items`. The gates below rightly span cards and glossary
+   together, but this line is read as "how much of the pack is not from her material" —
+   and folding the 74 glossary entries (all `textbook` by construction) into the card
+   tiers printed "textbook 99" for a pack with 25 textbook CARDS, in the same breath as
+   "415 cards", from a tally summing to 489. The student-facing Sources tab always had
+   this right; only the builder's own console was inflating it fourfold. */
+const tally = (list) => {
+  const t = {};
+  for (const it of list) t[it.o.tier ?? '(none)'] = (t[it.o.tier ?? '(none)'] ?? 0) + 1;
+  return t;
+};
+const tiers = tally(items.filter(it => it.kind === 'card'));
+const glossTiers = tally(items.filter(it => it.kind === 'glossary'));
+const fmt = (t) => Object.entries(t).sort((a, b) => b[1] - a[1]).map(([k, v]) => `${k} ${v}`).join(' · ');
+const sum = (t) => Object.values(t).reduce((a, b) => a + b, 0);
+console.log(`  card tiers    : ${fmt(tiers)}   (${sum(tiers)})`);
+console.log(`  glossary tiers: ${fmt(glossTiers)}   (${sum(glossTiers)})\n`);
+if (sum(tiers) !== pack.cards.length) {
+  console.error(`✗ tier tally ${sum(tiers)} does not equal ${pack.cards.length} cards — the summary is counting something that is not a card`);
+  process.exit(1);
+}
 
 /* How many items each gate could even look at. A gate with nothing in scope must not
    print a green tick — "passing" and "had nothing to check" are different facts, and
@@ -345,6 +363,6 @@ for (const g of Object.keys(GATE_NAMES)) {
 }
 
 console.log(`\n${failures.length} total failure(s)`);
-fs.writeFileSync(path.join(HERE, 'validate-report.json'), JSON.stringify({ failures, tiers }, null, 1));
+fs.writeFileSync(path.join(HERE, 'validate-report.json'), JSON.stringify({ failures, tiers, glossTiers }, null, 1));
 console.log('wrote audit/validate-report.json');
 if (failures.length) process.exit(1);

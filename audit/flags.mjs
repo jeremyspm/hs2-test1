@@ -15,19 +15,23 @@
    question as it read when it was flagged, never silently dropped and never
    re-attached to whatever card now happens to be nearby.
 
-   The hash is copied verbatim from apply-migration.mjs (step 7, `dedupe`), which is
-   itself a copy of the engine's. Four lines duplicated across three places is a
-   drift risk, so this script PROVES its copy still agrees with the one that built
-   the pack before it trusts a single result — see checkKeyImpl below. */
+   THE HASH IS IMPORTED, NOT COPIED. It used to be four lines duplicated here from
+   apply-migration.mjs, and audit/ckey.mjs was extracted on 11 Aug 2026 to be the one
+   implementation — but this file was left on its own copy, and the copy had drifted by
+   a single `?? ''`:
+
+       here:      const strip = (s) => String(s).replace(...)
+       ckey.mjs:  const strip = (s) => String(s ?? '').replace(...)
+
+   A rail has no `q`, so this file hashed `rail|undefined|` where the build hashed
+   `rail||`. All 46 rails mismatched, checkKeyImpl exited, and the script printed no
+   flags at all — the SECOND time this tool has silently stopped working, the first
+   being the explanations.json fixture described below. A hash whose whole job is to be
+   identical everywhere must exist once; the check below now guards a drift that can
+   only come from the fixture being stale, not from a second copy of the code. */
 import { readFileSync, existsSync } from 'node:fs';
 import { loadPack } from './load-pack.mjs';
-
-const strip = (s) => String(s).replace(/<[^>]+>/g, '');
-const hash = (s) => { let h = 5381; for (let i = 0; i < s.length; i++) h = ((h << 5) + h + s.charCodeAt(i)) | 0; return 'k' + (h >>> 0).toString(36); };
-const csig = (c) => strip([c.a, c.text, (c.options ?? []).join('~'), (c.statements ?? []).map(s => s.s).join('~'),
-  (c.pairs ?? []).map(p => p.join('>')).join('~'), (c.steps ?? []).join('~'), (c.points ?? []).join('~')]
-  .filter(Boolean).join('|'));
-const ckey = (c) => hash(c.type + '|' + strip(c.q) + '|' + csig(c));
+import { ckey } from './ckey.mjs';
 
 const { pack } = loadPack();
 const byKey = new Map(pack.cards.map(c => [ckey(c), c]));

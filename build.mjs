@@ -24,7 +24,26 @@ const figBlock =
   'const FIGCAP={' + [...used].map(id => `'${id}':${JSON.stringify(FIG[id].cap)}`).join(',') + '};\n' +
   'const F=id=>FIGART[id]||\'\', FC=id=>FIGCAP[id]||\'\';\n';
 
-const out = tpl.slice(0, a + START.length) + '\n' + figBlock + pack.trim() + '\n' + tpl.slice(b);
+let out = tpl.slice(0, a + START.length) + '\n' + figBlock + pack.trim() + '\n' + tpl.slice(b);
+
+/* ── the <title> in the head ─────────────────────────────────────────────────
+   The splice only replaces what sits between the two markers, so the shipped page kept
+   the TEMPLATE's title — "Cram Engine — Example Pack" — and hs2-test1 was the only one
+   of the seven tools carrying it. The engine sets document.title from PACK at runtime,
+   which is why nobody noticed: it self-corrects the moment the script runs. It does not
+   self-correct in the static HTML, which is what a link preview, a search result, and
+   the tab during a 3.5 MB load actually read.
+
+   Taken from PACK.title rather than hardcoded, and it must actually change something —
+   a template whose <title> has been renamed should say so rather than silently do
+   nothing. */
+{
+  const title = (pack.match(/^\s*"title":\s*("(?:[^"\\]|\\.)*")/m) ?? [])[1];
+  if (!title) { console.error('✗ pack.js has no "title" — cannot set the page <title>'); process.exit(1); }
+  const before = out;
+  out = out.replace(/<title>[^<]*<\/title>/, `<title>${JSON.parse(title)}</title>`);
+  if (out === before) { console.error('✗ no <title> found in the template to replace'); process.exit(1); }
+}
 
 /* Filled by the runtime smoke test below (the shipped page counting its own rings) and
    checked against audit/spine.mjs further down, where the pack object is loaded. */
@@ -263,6 +282,45 @@ console.log(`all ${(P.criteria ?? []).length} focus points have at least one car
   }
   const worst = drillable.map(c => ({ n: critsOf(c).length, p: partsOf(c) })).sort((a, b) => (b.n - b.p) - (a.n - a.p))[0];
   console.log(`no card claims more focus points than it can test ✓  (closest: ${worst.n} points over ${worst.p} part(s))`);
+
+  /* ── G16: the two classifiers have to agree on the body system ───────────────
+     A card carries TWO independently-derived labels, and the reader sees both on the
+     same row: `topic` is the browse tab, decided by harvest.mjs from the question's
+     wording and the quiz it came from; `crit` is the focus point, decided by
+     map-criteria.mjs from a separate rule table. Nothing made them agree, and on
+     11 Aug 2026 twenty-six shipped cards disagreed — "👃 RESPIRATORY ANATOMY ·
+     FUNCTIONAL ANATOMY OF THE HEART AND GREAT VESSELS · The right and left coronary
+     arteries arise from the …", a card contradicting itself on its own label row.
+
+     Comparing two independently-derived fields is the only check that catches this;
+     neither classifier can see its own error, and the counts each produces look
+     healthy. Keep them independent and gate the agreement — deriving one from the
+     other would remove the error and the detector in the same move.
+
+     Compared at SYSTEM level, not topic level: which of five cardiovascular tabs a
+     card sits in is a judgement call, but a respiratory question under a
+     cardiovascular focus point is a defect. The case studies are the declared
+     exception — cs-bp is answered from cvs-bp cards and cs-vacc from immune ones, so
+     they legitimately cross. */
+  const TOPIC_SYS = Object.fromEntries((P.topics ?? []).map(t => [t.id, t.sys]));
+  const critSys = (id) => /^cvs-/.test(id) ? 'cvs' : /^resp-/.test(id) ? 'resp' : /^lymph-/.test(id) ? 'lymph' : 'case';
+  const crossed = P.cards.filter((c) => {
+    if (c.type === 'rail' || !c.crit) return false;
+    const cs = critSys(c.crit);
+    return cs !== 'case' && TOPIC_SYS[c.topic] !== cs;
+  });
+  if (crossed.length) {
+    console.error(`✗ ${crossed.length} card(s) whose browse tab and focus point name different body systems:`);
+    for (const c of crossed.slice(0, 12)) {
+      console.error(`    ${String(c.topic).padEnd(12)} (${TOPIC_SYS[c.topic]})  vs  ${String(c.crit).padEnd(9)} (${critSys(c.crit)})  ${String(c.q ?? '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').slice(0, 58)}`);
+    }
+    console.error('\n   One of the two is wrong. Fix the FOCUS POINT with `crit`/`add`/`drop` in');
+    console.error('   audit/routes.json, or the BROWSE TAB with `topic` in the same file (or a rule');
+    console.error('   in harvest.mjs — APPEND, never insert).');
+    console.error('\n✗ NOT SHIPPING. A card that contradicts itself on its own label row reads as broken.');
+    process.exit(1);
+  }
+  console.log(`browse tab and focus point agree on the body system for all ${P.cards.filter(c => c.crit && c.type !== 'rail').length} labelled cards ✓`);
 
   /* C5 — what the SPINE CARD of each focus point is made of.
      Ring 0 deals one card per focus point and says, in effect, "answer this and you have

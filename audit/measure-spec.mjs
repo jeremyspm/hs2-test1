@@ -39,8 +39,8 @@ for (const c of D) if (c.crit) primaryCount[c.crit] = (primaryCount[c.crit] ?? 0
 const spine = spineOf(P);
 
 const claims = [
-  ['§intro', 'cards in the shipped pack', 415, CARDS.length],
-  ['§intro', 'drillable cards (the pack minus the rails)', 369, D.length],
+  ['§intro', 'cards in the shipped pack', 414, CARDS.length],
+  ['§intro', 'drillable cards (the pack minus the rails)', 368, D.length],
   ['§1', 'machine-marked cards carrying an authored `why`', 293,
     D.filter((c) => MARKED.includes(c.type) && String(c.why ?? '').trim()).length],
   ['§1', 'machine-marked cards in total', 293, D.filter((c) => MARKED.includes(c.type)).length],
@@ -72,9 +72,9 @@ const claims = [
   /* The ring sizes as the engine DEALS them, from the same module the engine is gated
      against — not "every card on a thin focus point", which double-counts the 15 spine
      cards that sit on one and are dealt in Ring 0. */
-  ['§4', 'cards in Ring 1 — the thin points, spine cards excluded', 14, ringCounts(P, ckey)[1]],
+  ['§4', 'cards in Ring 1 — the thin points, spine cards excluded', 16, ringCounts(P, ckey)[1]],
   ['§4', 'cards in Ring 2 — the rest of her questions', 274, ringCounts(P, ckey)[2]],
-  ['§4', 'cards in Ring 3 — background', 88, ringCounts(P, ckey)[3]],
+  ['§4', 'cards in Ring 3 — background', 85, ringCounts(P, ckey)[3]],
 
   ['§6 C1', 'cards carrying no focus point at all — CLOSED 11 Aug', 0,
     D.filter((c) => !critsOf(c).length).length],
@@ -96,7 +96,7 @@ const claims = [
       const any = new Set(D.filter((c) => c.type === 'saq' || c.selfMark).flatMap(critsOf));
       return CRITS.filter((c) => !any.has(c.id)).length;
     })()],
-  ['§6 C3', 'written-answer cards carrying a marking schedule', 18, D.filter((c) => c.type === 'saq').length],
+  ['§6 C3', 'written-answer cards carrying a marking schedule', 17, D.filter((c) => c.type === 'saq').length],
   ['§6 C3', 'her essay questions reproduced with a pack-written answer', 39, D.filter((c) => c.selfMark).length],
   ['§6 C4', 'self-marked questions of hers still carrying no answer at all', 0,
     D.filter((c) => c.selfMark && !String(c.a ?? '').trim()).length],
@@ -106,7 +106,7 @@ const claims = [
     spine.filter((s) => s.card && s.card.tier !== 'verbatim')
       .filter((s) => { const cr = CRITS.find((c) => c.id === s.id); return cr.blind || cr.acknowledgedGap; }).length],
   ['§6 C6', 'most focus points claimed by one card', 10, Math.max(...D.map((c) => critsOf(c).length))],
-  ['§6 C6', 'average focus points per card (×100, to keep this integer)', 159,
+  ['§6 C6', 'average focus points per card (×100, to keep this integer)', 160,
     Math.round(100 * D.reduce((a, c) => a + critsOf(c).length, 0) / D.length)],
   ['§6 C6', 'cards claiming more focus points than they have parts to test', 0,
     D.filter((c) => critsOf(c).length > partsOf(c) + 3).length],

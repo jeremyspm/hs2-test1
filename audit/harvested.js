@@ -425,7 +425,7 @@ export const HARVESTED = [
   "needsSchedule": true
  },
  {
-  "topic": "resp-anat",
+  "topic": "resp-mech",
   "tier": "verbatim",
   "ev": {
    "quiz": "Respiratory (SAQ & MC) Pre-Lab Quiz",
@@ -433,7 +433,7 @@ export const HARVESTED = [
    "captureSha": "1c2211938c661257d308c4291b3a849e437ed67e851ac1af29a2a40b92ef04c5",
    "n": "Question 3"
   },
-  "routedBy": "quiz",
+  "routedBy": "keyword",
   "type": "saq",
   "q": "SELF MARK Define: Pneumothorax Atelectasis and explain the relationship between these terms",
   "marks": 1,
@@ -5781,7 +5781,7 @@ export const HARVESTED = [
   "correct": 4
  },
  {
-  "topic": "lymph",
+  "topic": "cvs-vessels",
   "tier": "verbatim",
   "ev": {
    "quiz": "MODULE 1.3:SAQ & MC: FLUID, ELECTROLYTE & FLUID BALANCE (10 marks)",
@@ -5801,7 +5801,7 @@ export const HARVESTED = [
   "correct": 0
  },
  {
-  "topic": "lymph",
+  "topic": "cvs-vessels",
   "tier": "verbatim",
   "ev": {
    "quiz": "MODULE 1.3:SAQ & MC: FLUID, ELECTROLYTE & FLUID BALANCE (10 marks)",
@@ -5821,7 +5821,7 @@ export const HARVESTED = [
   "correct": 2
  },
  {
-  "topic": "lymph",
+  "topic": "cvs-vessels",
   "tier": "verbatim",
   "ev": {
    "quiz": "MODULE 1.3:SAQ & MC: FLUID, ELECTROLYTE & FLUID BALANCE (10 marks)",
@@ -5841,7 +5841,7 @@ export const HARVESTED = [
   "correct": 3
  },
  {
-  "topic": "lymph",
+  "topic": "resp-control",
   "tier": "verbatim",
   "ev": {
    "quiz": "MODULE 1.3:SAQ & MC: FLUID, ELECTROLYTE & FLUID BALANCE (10 marks)",
@@ -5849,7 +5849,7 @@ export const HARVESTED = [
    "captureSha": "eb4ec893d597bbfd5eae64f7cb6af8ed66480c9cbb3443fa38bc44c6308949e9",
    "n": "Question 4"
   },
-  "routedBy": "quiz",
+  "routedBy": "keyword",
   "type": "tfset",
   "q": "The lungs act as an acid–base buffer by:",
   "statements": [
@@ -5872,7 +5872,7 @@ export const HARVESTED = [
   ]
  },
  {
-  "topic": "lymph",
+  "topic": "resp-control",
   "tier": "verbatim",
   "ev": {
    "quiz": "MODULE 1.3:SAQ & MC: FLUID, ELECTROLYTE & FLUID BALANCE (10 marks)",
@@ -5880,7 +5880,7 @@ export const HARVESTED = [
    "captureSha": "eb4ec893d597bbfd5eae64f7cb6af8ed66480c9cbb3443fa38bc44c6308949e9",
    "n": "Question 5"
   },
-  "routedBy": "quiz",
+  "routedBy": "keyword",
   "type": "mcq",
   "q": "A patient has the following arterial blood gas results: pH 7.52; Pa co 2 30 mmHg (4 kPa); HCO 3 – 24 mmol/L. The nurse determines that these results indicate:",
   "options": [
@@ -5892,7 +5892,7 @@ export const HARVESTED = [
   "correct": 1
  },
  {
-  "topic": "lymph",
+  "topic": "cvs-vessels",
   "tier": "verbatim",
   "ev": {
    "quiz": "MODULE 1.3:SAQ & MC: FLUID, ELECTROLYTE & FLUID BALANCE (10 marks)",
@@ -5912,7 +5912,7 @@ export const HARVESTED = [
   "correct": 2
  },
  {
-  "topic": "lymph",
+  "topic": "cvs-vessels",
   "tier": "verbatim",
   "ev": {
    "quiz": "MODULE 1.3:SAQ & MC: FLUID, ELECTROLYTE & FLUID BALANCE (10 marks)",
@@ -5929,7 +5929,7 @@ export const HARVESTED = [
   "needsSchedule": true
  },
  {
-  "topic": "lymph",
+  "topic": "cvs-vessels",
   "tier": "verbatim",
   "ev": {
    "quiz": "MODULE 1.3:SAQ & MC: FLUID, ELECTROLYTE & FLUID BALANCE (10 marks)",
@@ -6876,7 +6876,7 @@ export const HARVESTED = [
   "needsSchedule": true
  },
  {
-  "topic": "cvs-vessels",
+  "topic": "lymph",
   "tier": "verbatim",
   "ev": {
    "quiz": "MODULE 1: SAQ & MC: FORMATIVE CVS, LYMPHATIC & RESPIRATORY SYSTEMS *(50 marks)",
@@ -6884,7 +6884,7 @@ export const HARVESTED = [
    "captureSha": "e75693d8558950ebc30b2c72c7bb3abb12e58f857f5d607d34d3bc7fd2c4082a",
    "n": "Question 15"
   },
-  "routedBy": "keyword",
+  "routedBy": "declared",
   "type": "cloze",
   "q": "Complete the passage. (MODULE 1)",
   "text": "Mesenteric adenitis is usually a mild condition following a sore throat or a cold or viral infection like chickenpox. It sometimes mimics appendicitis. The appendix is part of the MALT system. 1. The [[1]] is an endocrine gland that is NOT part of the MALT system. 2. Which of the following is also [[2]] NOT part of the MALT system? 3. Which item gives the best description of what the MALT system is? [[3]] 4. The MALT system forms part of the lymphatic system. What is the main function of the lymphatic system? [[4]] 5. The blood cells that are found abundantly in the lymph system are [[5]] . Their function is to [[6]] . 6. Sentinel lymph nodes are [[7]] . 7. A condition that develops when lymph is not draining away from an area is known as [[8]] . 6. A connective tissue type that is found particularly in lymphoid tissue and lymph nodes is [[9]] . 7. The largest lymph vessel in the body is the [[10]] .",
@@ -7625,7 +7625,7 @@ export const HARVESTED = [
   "correct": 1
  },
  {
-  "topic": "terms",
+  "topic": "cvs-bp",
   "tier": "verbatim",
   "ev": {
    "quiz": "MODULE 1.1: CVS4 BLOOD PRESSURE (10 marks)",
@@ -7633,7 +7633,7 @@ export const HARVESTED = [
    "captureSha": "734c9b19df8adfb093c8807a6239a339b78f9c87882f7239b0e99a20b979c1c1",
    "n": "Question 4"
   },
-  "routedBy": "fallback",
+  "routedBy": "quiz",
   "type": "mcq",
   "q": "The hormone adrenaline released in times of acute stress causes bradycardia .",
   "options": [
@@ -7696,7 +7696,7 @@ export const HARVESTED = [
   "correct": 0
  },
  {
-  "topic": "terms",
+  "topic": "cvs-output",
   "tier": "verbatim",
   "ev": {
    "quiz": "MODULE 1.1: CVS4 BLOOD PRESSURE (10 marks)",
@@ -7704,7 +7704,7 @@ export const HARVESTED = [
    "captureSha": "734c9b19df8adfb093c8807a6239a339b78f9c87882f7239b0e99a20b979c1c1",
    "n": "Question 7"
   },
-  "routedBy": "fallback",
+  "routedBy": "declared",
   "type": "mcq",
   "q": "The heart rate in a trained athlete is lower than in untrained individuals.",
   "options": [
@@ -7732,7 +7732,7 @@ export const HARVESTED = [
   "correct": 1
  },
  {
-  "topic": "terms",
+  "topic": "cvs-vessels",
   "tier": "verbatim",
   "ev": {
    "quiz": "MODULE 1.1: CVS4 BLOOD PRESSURE (10 marks)",
@@ -7740,7 +7740,7 @@ export const HARVESTED = [
    "captureSha": "734c9b19df8adfb093c8807a6239a339b78f9c87882f7239b0e99a20b979c1c1",
    "n": "Question 9"
   },
-  "routedBy": "fallback",
+  "routedBy": "declared",
   "type": "mcq",
   "q": "Of the following cardiovascular components, which contains the majority of the body’s blood volume at any one time?",
   "options": [
@@ -7772,7 +7772,7 @@ export const HARVESTED = [
   "correct": 2
  },
  {
-  "topic": "terms",
+  "topic": "cvs-anat",
   "tier": "verbatim",
   "ev": {
    "quiz": "MODULE 1.1: CVS4 BLOOD PRESSURE (10 marks)",
@@ -7780,7 +7780,7 @@ export const HARVESTED = [
    "captureSha": "734c9b19df8adfb093c8807a6239a339b78f9c87882f7239b0e99a20b979c1c1",
    "n": "Question 11"
   },
-  "routedBy": "fallback",
+  "routedBy": "declared",
   "type": "mcq",
   "q": "What kind of a blood system do humans have?",
   "options": [
@@ -7846,7 +7846,7 @@ export const HARVESTED = [
   "correct": 0
  },
  {
-  "topic": "terms",
+  "topic": "cvs-bp",
   "tier": "verbatim",
   "ev": {
    "quiz": "MODULE 1.1: CVS4 BLOOD PRESSURE (10 marks)",
@@ -7854,7 +7854,7 @@ export const HARVESTED = [
    "captureSha": "734c9b19df8adfb093c8807a6239a339b78f9c87882f7239b0e99a20b979c1c1",
    "n": "Question 15"
   },
-  "routedBy": "fallback",
+  "routedBy": "quiz",
   "type": "mcq",
   "q": "The cardio-acceleratory and inhibitory centres are located in the .............. [[IMG]]",
   "options": [
@@ -8157,7 +8157,7 @@ export const HARVESTED = [
   "correct": 0
  },
  {
-  "topic": "terms",
+  "topic": "cvs-anat",
   "tier": "verbatim",
   "ev": {
    "quiz": "MODULE 1.1: HEART OVERVIEW MC QUESTIONS (20 marks)",
@@ -8165,7 +8165,7 @@ export const HARVESTED = [
    "captureSha": "608b3ef56bfec72f70b2ea4a61ce1d20bfa475f10ab424a2d64679f2fa19f959",
    "n": "Question 10"
   },
-  "routedBy": "fallback",
+  "routedBy": "quiz",
   "type": "match",
   "q": "Heart internal view [[IMG:b4ccc0d3fcb80b7c]]",
   "pairs": [
@@ -8326,7 +8326,7 @@ export const HARVESTED = [
   ]
  },
  {
-  "topic": "terms",
+  "topic": "cvs-anat",
   "tier": "verbatim",
   "ev": {
    "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
@@ -8334,7 +8334,7 @@ export const HARVESTED = [
    "captureSha": "89b37040c4a26baa02d875fb35fdc8863c6e1b945d9d8b982c737c28a90a2e24",
    "n": "Question 1"
   },
-  "routedBy": "fallback",
+  "routedBy": "quiz",
   "type": "match",
   "q": "Anatomical Structures of the Heart Match the items to correctly identify the structures in the image below. [[IMG]]",
   "pairs": [
@@ -8357,7 +8357,7 @@ export const HARVESTED = [
   ]
  },
  {
-  "topic": "terms",
+  "topic": "cvs-anat",
   "tier": "verbatim",
   "ev": {
    "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
@@ -8365,7 +8365,7 @@ export const HARVESTED = [
    "captureSha": "89b37040c4a26baa02d875fb35fdc8863c6e1b945d9d8b982c737c28a90a2e24",
    "n": "Question 2"
   },
-  "routedBy": "fallback",
+  "routedBy": "quiz",
   "type": "match",
   "q": "Anatomical Structures of the Heart Match the items to correctly identify the structures in the image below. [[IMG]]",
   "pairs": [
@@ -8388,7 +8388,7 @@ export const HARVESTED = [
   ]
  },
  {
-  "topic": "terms",
+  "topic": "cvs-anat",
   "tier": "verbatim",
   "ev": {
    "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
@@ -8396,7 +8396,7 @@ export const HARVESTED = [
    "captureSha": "89b37040c4a26baa02d875fb35fdc8863c6e1b945d9d8b982c737c28a90a2e24",
    "n": "Question 3"
   },
-  "routedBy": "fallback",
+  "routedBy": "quiz",
   "type": "match",
   "q": "Anatomical Structures of the Heart Match the items to correctly identify the structures in the image below. [[IMG]]",
   "pairs": [
@@ -8469,7 +8469,7 @@ export const HARVESTED = [
   ]
  },
  {
-  "topic": "terms",
+  "topic": "cvs-anat",
   "tier": "verbatim",
   "ev": {
    "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
@@ -8477,7 +8477,7 @@ export const HARVESTED = [
    "captureSha": "89b37040c4a26baa02d875fb35fdc8863c6e1b945d9d8b982c737c28a90a2e24",
    "n": "Question 5"
   },
-  "routedBy": "fallback",
+  "routedBy": "quiz",
   "type": "mcq",
   "q": "The right and left coronary arteries arise from the",
   "options": [
@@ -8744,7 +8744,7 @@ export const HARVESTED = [
   "correct": 0
  },
  {
-  "topic": "terms",
+  "topic": "cvs-bp",
   "tier": "verbatim",
   "ev": {
    "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
@@ -8752,7 +8752,7 @@ export const HARVESTED = [
    "captureSha": "89b37040c4a26baa02d875fb35fdc8863c6e1b945d9d8b982c737c28a90a2e24",
    "n": "Question 17"
   },
-  "routedBy": "fallback",
+  "routedBy": "declared",
   "type": "match",
   "q": "Mix and match",
   "pairs": [
@@ -8779,7 +8779,7 @@ export const HARVESTED = [
   ]
  },
  {
-  "topic": "terms",
+  "topic": "cvs-bp",
   "tier": "verbatim",
   "ev": {
    "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
@@ -8787,7 +8787,7 @@ export const HARVESTED = [
    "captureSha": "89b37040c4a26baa02d875fb35fdc8863c6e1b945d9d8b982c737c28a90a2e24",
    "n": "Question 18"
   },
-  "routedBy": "fallback",
+  "routedBy": "declared",
   "type": "mcq",
   "q": "Which formula shows the relationship between BP, CO & SVR",
   "options": [
@@ -8891,7 +8891,7 @@ export const HARVESTED = [
   "correct": 1
  },
  {
-  "topic": "terms",
+  "topic": "cvs-bp",
   "tier": "verbatim",
   "ev": {
    "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
@@ -8899,7 +8899,7 @@ export const HARVESTED = [
    "captureSha": "89b37040c4a26baa02d875fb35fdc8863c6e1b945d9d8b982c737c28a90a2e24",
    "n": "Question 24"
   },
-  "routedBy": "fallback",
+  "routedBy": "declared",
   "type": "match",
   "q": "Match the following terms to their definitions:",
   "pairs": [
@@ -9027,7 +9027,7 @@ export const HARVESTED = [
   "correct": 0
  },
  {
-  "topic": "terms",
+  "topic": "cvs-vessels",
   "tier": "verbatim",
   "ev": {
    "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
@@ -9035,7 +9035,7 @@ export const HARVESTED = [
    "captureSha": "89b37040c4a26baa02d875fb35fdc8863c6e1b945d9d8b982c737c28a90a2e24",
    "n": "Question 29"
   },
-  "routedBy": "fallback",
+  "routedBy": "declared",
   "type": "match",
   "q": "Match the causes of edema and the mechanisms:",
   "pairs": [
@@ -9353,7 +9353,7 @@ export const HARVESTED = [
   "correct": 0
  },
  {
-  "topic": "cvs-vessels",
+  "topic": "resp-control",
   "tier": "verbatim",
   "ev": {
    "quiz": "MODULE 1.2: AIRWAYS, BARO- & CHEMORECEPTORS (10 marks)",
@@ -9361,7 +9361,7 @@ export const HARVESTED = [
    "captureSha": "2843698b96e3ca91d6b30152bba85be48396dd3f163ff1cc9687f914068a526f",
    "n": "Question 4"
   },
-  "routedBy": "keyword",
+  "routedBy": "declared",
   "type": "mcq",
   "q": "You cannot kill yourself by holding your breath since the chemoreceptors in the aorta, carotid artery, and brain will sense the increase in carbon dioxide and make you start breathing again.",
   "options": [
@@ -9571,7 +9571,7 @@ export const HARVESTED = [
   "correct": 0
  },
  {
-  "topic": "terms",
+  "topic": "resp-mech",
   "tier": "verbatim",
   "ev": {
    "quiz": "MODULE 1.2: AIRWAYS, BARO- & CHEMORECEPTORS (10 marks)",
@@ -9579,7 +9579,7 @@ export const HARVESTED = [
    "captureSha": "2843698b96e3ca91d6b30152bba85be48396dd3f163ff1cc9687f914068a526f",
    "n": "Question 16"
   },
-  "routedBy": "fallback",
+  "routedBy": "keyword",
   "type": "mcq",
   "q": "Pneumothorax: Air in the space outside the lung as would happen if the rib cage is punctured.",
   "options": [

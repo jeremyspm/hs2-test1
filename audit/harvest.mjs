@@ -28,7 +28,12 @@ const QUIZ_TOPIC = [
   [/SHOCK QUIZ/i, 'cvs-output'],
   [/RESP BASIC ANATOMY|Pre-Lab|Terminology Assessment/i, 'resp-anat'],
   [/RESPIRATORY SYSTEM BASIC PHYSIOLOGY|SAQ RESPIRATORY/i, 'resp-mech'],
-  [/LYMPHATIC|FLUID, ELECTROLYTE/i, 'lymph'],
+  /* `FLUID, ELECTROLYTE` used to share this rule with `LYMPHATIC` and so filed the whole
+     of Module 1.3's fluid-balance quiz under the Lymphatic tab — dehydration, loop
+     diuretics and two arterial-blood-gas questions included. Their criteria are cvs-3,
+     cvs-15 and resp-14; none of them is lymphatic. Split, and the fluid-balance quiz is
+     picked up by its own rule at the end of this list. */
+  [/LYMPHATIC/i, 'lymph'],
   [/CVS REVIEW|CVS LAB REVIEW/i, 'cvs-anat'],
   [/Practice Lab 1/i, 'cvs-anat'],
   [/Practice Lab 2/i, 'resp-anat'],
@@ -39,6 +44,16 @@ const QUIZ_TOPIC = [
      it is the absence of one. */
   [/RESPIRATORY SYSTEM GAS LAWS|RESPIRATION BLOOD CARRYING GASES/i, 'resp-gas'],
   [/STUDENT MARKED.*RESPIRATORY PRACTICE TEST/i, 'resp-anat'],
+  /* ── added 11 Aug 2026, after the same trap caught the 11 Aug capture round ──
+     These four quizzes had no rule at all, so 15 of their questions fell through to
+     `terms` and were re-filed as Respiratory anatomy — putting "The right and left
+     coronary arteries arise from the" under a nose-to-pleura heading. The fall-through
+     is now fatal (see routeTopic), which is what makes a missing rule visible instead
+     of merely wrong. */
+  [/CVS4 BLOOD PRESSURE/i, 'cvs-bp'],
+  [/THE CVS: HEART ANATOMY|HEART OVERVIEW/i, 'cvs-anat'],
+  [/AIRWAYS, BARO/i, 'resp-anat'],
+  [/FLUID, ELECTROLYTE/i, 'cvs-vessels'],
 ];
 const KEYWORD_TOPIC = [
   [/\bECG\b|P wave|QRS|repolaris|depolaris|heart sound|S1|S2|murmur|conduction/i, 'cvs-ecg'],
@@ -62,12 +77,72 @@ const KEYWORD_TOPIC = [
   [/acidosis|alkalosis|blood pH|\bpH of\b/i, 'resp-control'],
   [/inspiration|expiration|inhalation|exhalation|diaphragm|intercostal|elastic recoil/i, 'resp-mech'],
   [/patent or open airway|trachealis|carina|self cleaning|muco-?cili/i, 'resp-anat'],
+  /* ── added 11 Aug 2026, also appended ──
+     `acid–base` in her wording uses an EN DASH (U+2013), not a hyphen, so a plain
+     `acid-?base` matches nothing — the same family of bug as `h[ae]moglobin` matching
+     only the American spelling. The character class covers hyphen, en dash, em dash and
+     a plain space. */
+  [/acid[-–—\s]?base|arterial blood gas|\bABG\b/i, 'resp-control'],
+  [/pneumothorax/i, 'resp-mech'],
 ];
 
+/* Every topic id the pack declares. Asserted against both rule tables and against
+   routes.json below, so a typo in a rule is a build failure and not a silent bucket. */
+const TOPICS = new Set([
+  'cvs-anat', 'cvs-ecg', 'cvs-vessels', 'cvs-bp', 'cvs-output',
+  'resp-anat', 'resp-mech', 'resp-gas', 'resp-control', 'lymph', 'immune',
+]);
+{
+  const bad = [...QUIZ_TOPIC, ...KEYWORD_TOPIC].map(([, t]) => t).filter((t) => !TOPICS.has(t));
+  if (bad.length) { console.error(`✗ routing rule names topic(s) the pack does not declare: ${[...new Set(bad)].join(', ')}`); process.exit(1); }
+}
+
+/* ── declared topic, per question ────────────────────────────────────────────
+   The same routes.json map-criteria.mjs reads for criteria, and the same contract: the
+   quiz+n must address exactly one question, `was` must still open it, and the declared
+   topic must actually differ from what the rules produced. `crit`/`add`/`drop` belong to
+   map-criteria and are ignored here; `topic` belongs here and is ignored there. */
+const ROUTES = JSON.parse(fs.readFileSync(path.join(HERE, 'routes.json'), 'utf8')).routes ?? [];
+const TOPIC_ROUTES = ROUTES.filter((r) => r.topic);
+{
+  const bad = TOPIC_ROUTES.map((r) => r.topic).filter((t) => !TOPICS.has(t));
+  if (bad.length) { console.error(`✗ routes.json declares topic(s) the pack does not declare: ${[...new Set(bad)].join(', ')}`); process.exit(1); }
+}
+/* Must match map-criteria.mjs's `norm` exactly — the two scripts check the same `was`
+   against the same question at different phases, and bind-images resolves `[[IMG:…]]`
+   in between. */
+const normQ = (s) => String(s ?? '').replace(/\[\[IMG[^\]]*\]\]/g, ' ').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+const topicRouteUsed = new Map();
+
+/* A question that matches no keyword and comes from a quiz with no rule used to be
+   routed to `terms`, which apply-migration then remapped to `resp-anat`. That is not a
+   routing decision, it is the absence of one, and it is invisible: the card ships with a
+   confident topic tag naming the wrong body system. It now returns null and the run
+   FAILS at the end of the harvest with the full list, so a capture round that introduces
+   a new quiz cannot quietly file it under Respiratory anatomy. */
 function routeTopic(z, q) {
   for (const [re, topic] of KEYWORD_TOPIC) if (re.test(q.q)) return { topic, routedBy: 'keyword' };
   for (const [re, topic] of QUIZ_TOPIC) if (re.test(z.title)) return { topic, routedBy: 'quiz' };
-  return { topic: 'terms', routedBy: 'fallback' };
+  return { topic: null, routedBy: 'fallback' };
+}
+
+/* Applied as a post-pass over the BUILT cards, not inside routeTopic, because the anchor
+   has to be checked against the card's own question — and for a multiple-dropdown item
+   the harvester replaces the Canvas stem with its group title ("Complete the passage.
+   (MODULE 1)"), so the raw text and the card's text are different strings. routes.json's
+   `was` means "the opening of the card's question", the same thing it means to
+   map-criteria.mjs, and this is the only place that is knowable. */
+function applyDeclaredTopics(cards) {
+  for (const c of cards) {
+    const at = `${c.ev.quiz} ${c.ev.n}`;
+    const r = TOPIC_ROUTES.find((x) => x.quiz === c.ev.quiz && x.n === c.ev.n);
+    if (!r) continue;
+    topicRouteUsed.set(at, (topicRouteUsed.get(at) ?? 0) + 1);
+    if (!normQ(c.q).startsWith(normQ(r.was))) { topicRouteUsed.set(at, 'ANCHOR'); continue; }
+    if (r.topic === c.topic) { topicRouteUsed.set(at, 'NOOP'); continue; }
+    c.topic = r.topic;
+    c.routedBy = 'declared';
+  }
 }
 
 /* ── shared card fields ──────────────────────────────────────────────────── */
@@ -216,6 +291,51 @@ for (const z of quizzes) {
     }
 
     skip(z, q, `unhandled question type "${q.type}"`);
+  }
+}
+
+/* Declared topics are applied BEFORE anything is serialised. When this ran after the
+   template literal below, `out` had already captured the pre-mutation cards: the summary
+   line counted nine cards routed `declared` — because it counts the live array — while
+   the file on disk contained none of them. The console was right and the artifact was
+   wrong, which is the least detectable way for this to fail. Serialise last. */
+applyDeclaredTopics(cards);
+
+/* ── GATES, before anything is written ───────────────────────────────────────
+   A failing run must not leave a fresh harvested.js on disk for the next phase to pick
+   up: the whole point is that the pipeline stops here rather than shipping a card whose
+   topic tag names the wrong body system. */
+{
+  const problems = [];
+
+  const orphans = cards.filter((c) => !c.topic);
+  if (orphans.length) {
+    problems.push(`${orphans.length} question(s) match no keyword and come from a quiz with no rule:`);
+    const byQuiz = {};
+    for (const c of orphans) (byQuiz[c.ev.quiz] ??= []).push(c);
+    for (const [quiz, cs] of Object.entries(byQuiz)) {
+      problems.push(`     ${quiz}  (${cs.length})`);
+      for (const c of cs.slice(0, 6)) problems.push(`        ${c.ev.n}: ${String(c.q).replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').slice(0, 68)}`);
+    }
+    problems.push(`     → add a QUIZ_TOPIC rule for the quiz, or a KEYWORD_TOPIC rule (APPEND, never insert),`);
+    problems.push(`       or declare the question in routes.json with a "topic".`);
+  }
+
+  /* Same contract routes.json carries for criteria: an entry that has stopped biting is
+     a failure, not a line that sits there looking useful. */
+  for (const r of TOPIC_ROUTES) {
+    const at = `${r.quiz} ${r.n}`;
+    const used = topicRouteUsed.get(at);
+    if (used === undefined) problems.push(`routes.json topic ${at}: matches no harvested question`);
+    else if (used === 'ANCHOR') problems.push(`routes.json topic ${at}: "was" no longer opens this question`);
+    else if (used === 'NOOP') problems.push(`routes.json topic ${at}: declares "${r.topic}", which is already what the rules give — the entry changes nothing`);
+    else if (used > 1) problems.push(`routes.json topic ${at}: addresses ${used} questions, needs exactly 1`);
+  }
+
+  if (problems.length) {
+    console.error('\n✗ HARVEST GATE\n   ' + problems.join('\n   '));
+    console.error('\n   NOTHING WRITTEN.');
+    process.exit(1);
   }
 }
 
