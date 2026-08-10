@@ -98,10 +98,25 @@ const claims = [
     D.filter((c) => !critsOf(c).length).length],
   ['§6 C2', 'focus points that are no card\'s primary subject — CLOSED 11 Aug', 0,
     CRITS.filter((c) => !primaryCount[c.id]).length],
-  ['§6 C3', 'focus points with at least one written answer', 5,
+  /* The three rows of the C3 table. A `saq` carries a marking schedule; a `selfMark` flash
+     is one of her essay questions with an answer written for this pack and no schedule,
+     because Canvas published none. Both are written practice; only one can be marked. */
+  ['§6 C3', 'focus points with a written answer AND a marking schedule', 5,
     new Set(D.filter((c) => c.type === 'saq').flatMap(critsOf)).size],
-  ['§6 C3', 'written-answer cards in the pack', 18, D.filter((c) => c.type === 'saq').length],
-  ['§6 C4', 'self-marked questions of hers still carrying no model answer', 0,
+  ['§6 C3', 'focus points with written practice but no schedule', 15,
+    (() => {
+      const sched = new Set(D.filter((c) => c.type === 'saq').flatMap(critsOf));
+      return new Set(D.filter((c) => c.selfMark).flatMap(critsOf)).size
+        - [...new Set(D.filter((c) => c.selfMark).flatMap(critsOf))].filter((id) => sched.has(id)).length;
+    })()],
+  ['§6 C3', 'focus points with nothing to write at all', 18,
+    (() => {
+      const any = new Set(D.filter((c) => c.type === 'saq' || c.selfMark).flatMap(critsOf));
+      return CRITS.filter((c) => !any.has(c.id)).length;
+    })()],
+  ['§6 C3', 'written-answer cards carrying a marking schedule', 18, D.filter((c) => c.type === 'saq').length],
+  ['§6 C3', 'her essay questions reproduced with a pack-written answer', 39, D.filter((c) => c.selfMark).length],
+  ['§6 C4', 'self-marked questions of hers still carrying no answer at all', 0,
     D.filter((c) => c.selfMark && !String(c.a ?? '').trim()).length],
   ['§6 C5', 'focus points whose spine card is not one of her questions', 3,
     spine.filter((s) => s.card && s.card.tier !== 'verbatim').length],
