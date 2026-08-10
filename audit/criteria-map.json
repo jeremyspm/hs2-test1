@@ -1,40 +1,40 @@
 {
  "herCount": {
-  "resp-2": 55,
-  "resp-7": 26,
+  "resp-2": 70,
+  "resp-7": 31,
   "resp-17": 10,
-  "cvs-2": 18,
-  "cvs-3": 15,
+  "cvs-2": 25,
+  "cvs-3": 18,
+  "resp-4": 18,
+  "resp-5": 32,
+  "cs-vacc": 7,
+  "resp-6": 12,
   "cvs-10": 2,
-  "resp-6": 11,
-  "cvs-14": 12,
-  "cvs-12": 11,
-  "cvs-15": 32,
-  "cvs-5": 73,
-  "cvs-6": 38,
-  "cvs-8": 30,
-  "cvs-4": 10,
-  "cvs-9": 15,
-  "resp-13": 9,
-  "cvs-11": 12,
+  "cvs-14": 14,
+  "cvs-12": 24,
+  "cvs-15": 47,
+  "cvs-5": 108,
+  "cvs-6": 55,
+  "cvs-8": 36,
+  "cvs-4": 16,
+  "cvs-9": 24,
+  "resp-13": 17,
+  "cvs-11": 15,
   "cvs-13": 3,
-  "resp-14": 18,
+  "resp-14": 22,
   "lymph-2": 14,
-  "cs-vacc": 4,
-  "cvs-7": 8,
-  "resp-5": 24,
-  "resp-4": 14,
+  "cvs-7": 9,
   "resp-12": 5,
   "resp-1": 3,
   "resp-9": 4,
-  "resp-8": 14,
+  "resp-8": 15,
   "resp-11": 14,
   "resp-3": 5,
-  "resp-10": 2,
+  "resp-10": 3,
   "lymph-4": 2,
   "lymph-1": 4,
   "lymph-3": 1,
-  "cs-bp": 4
+  "cs-bp": 6
  },
  "nowBlind": [
   "cvs-1",
@@ -43,6 +43,24 @@
  ],
  "wasBlindNowCovered": [],
  "unmapped": [
+  {
+   "quiz": "Practice Lab 2: SAQ & MC Quiz (10 marks)",
+   "n": "Question 3",
+   "type": "mcq",
+   "q": "The structure labelled at B is a"
+  },
+  {
+   "quiz": "Practice Lab 2: SAQ & MC Quiz (10 marks)",
+   "n": "Question 6",
+   "type": "mcq",
+   "q": "The white shiny part of this structure labelled at A (in the first image) and 1 (in the se"
+  },
+  {
+   "quiz": "Practice Lab 2: SAQ & MC Quiz (10 marks)",
+   "n": "Question 9",
+   "type": "mcq",
+   "q": "The respiratory capacities are a combined of 2 or more volumes. The volumes are indicated "
+  },
   {
    "quiz": "MODULE 1.2: RESP BASIC ANATOMY (10 Marks)",
    "n": "Question 20",
@@ -54,6 +72,36 @@
    "n": "Question 3",
    "type": "cloze",
    "q": "Complete the passage. (Practice Lab 1)"
+  },
+  {
+   "quiz": "MODULE 1.1: CVS4 BLOOD PRESSURE (10 marks)",
+   "n": "Question 1",
+   "type": "mcq",
+   "q": "The aortic arch gives rise to three branches: The brachiocephalic artery, the left common "
+  },
+  {
+   "quiz": "MODULE 1.1: CVS4 BLOOD PRESSURE (10 marks)",
+   "n": "Question 7",
+   "type": "mcq",
+   "q": "The heart rate in a trained athlete is lower than in untrained individuals."
+  },
+  {
+   "quiz": "MODULE 1.1: CVS4 BLOOD PRESSURE (10 marks)",
+   "n": "Question 9",
+   "type": "mcq",
+   "q": "Of the following cardiovascular components, which contains the majority of the body’s bloo"
+  },
+  {
+   "quiz": "MODULE 1.1: CVS4 BLOOD PRESSURE (10 marks)",
+   "n": "Question 11",
+   "type": "mcq",
+   "q": "What kind of a blood system do humans have?"
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 27",
+   "type": "mcq",
+   "q": "Pressure is the highest in the arteries and the lowest in the venae cavae since the heart "
   }
  ],
  "mapped": [
@@ -72,6 +120,59 @@
    "crits": [
     "cvs-2",
     "cvs-3"
+   ]
+  },
+  {
+   "quiz": "Practice Lab 2: SAQ & MC Quiz (10 marks)",
+   "n": "Question 1",
+   "crits": [
+    "resp-4",
+    "resp-5"
+   ]
+  },
+  {
+   "quiz": "Practice Lab 2: SAQ & MC Quiz (10 marks)",
+   "n": "Question 2",
+   "crits": [
+    "resp-2"
+   ]
+  },
+  {
+   "quiz": "Practice Lab 2: SAQ & MC Quiz (10 marks)",
+   "n": "Question 4",
+   "crits": [
+    "resp-2"
+   ]
+  },
+  {
+   "quiz": "Practice Lab 2: SAQ & MC Quiz (10 marks)",
+   "n": "Question 5",
+   "crits": [
+    "resp-4",
+    "cs-vacc"
+   ]
+  },
+  {
+   "quiz": "Practice Lab 2: SAQ & MC Quiz (10 marks)",
+   "n": "Question 7",
+   "crits": [
+    "resp-2"
+   ]
+  },
+  {
+   "quiz": "Practice Lab 2: SAQ & MC Quiz (10 marks)",
+   "n": "Question 8",
+   "crits": [
+    "resp-2",
+    "resp-5",
+    "resp-7"
+   ]
+  },
+  {
+   "quiz": "Practice Lab 2: SAQ & MC Quiz (10 marks)",
+   "n": "Question 10",
+   "crits": [
+    "resp-6"
    ]
   },
   {
@@ -2215,6 +2316,680 @@
    "n": "Question 21",
    "crits": [
     "cvs-8"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1 CARDIOVASCULAR SYSTEM FILL THE BLANKS (12.5 marks)",
+   "n": "Question 1",
+   "crits": [
+    "cvs-2",
+    "cvs-3",
+    "cvs-4",
+    "cvs-5",
+    "cvs-6",
+    "cvs-9",
+    "resp-2"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS4 BLOOD PRESSURE (10 marks)",
+   "n": "Question 2",
+   "crits": [
+    "cvs-9"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS4 BLOOD PRESSURE (10 marks)",
+   "n": "Question 3",
+   "crits": [
+    "cvs-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS4 BLOOD PRESSURE (10 marks)",
+   "n": "Question 4",
+   "crits": [
+    "cvs-15"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS4 BLOOD PRESSURE (10 marks)",
+   "n": "Question 5",
+   "crits": [
+    "cvs-4",
+    "cvs-12",
+    "cvs-15",
+    "resp-13",
+    "cs-bp"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS4 BLOOD PRESSURE (10 marks)",
+   "n": "Question 6",
+   "crits": [
+    "cvs-12"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS4 BLOOD PRESSURE (10 marks)",
+   "n": "Question 8",
+   "crits": [
+    "cvs-14",
+    "cs-bp"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS4 BLOOD PRESSURE (10 marks)",
+   "n": "Question 10",
+   "crits": [
+    "cvs-2"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS4 BLOOD PRESSURE (10 marks)",
+   "n": "Question 12",
+   "crits": [
+    "cvs-4",
+    "cvs-15"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS4 BLOOD PRESSURE (10 marks)",
+   "n": "Question 13",
+   "crits": [
+    "cvs-12",
+    "cvs-15"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS4 BLOOD PRESSURE (10 marks)",
+   "n": "Question 14",
+   "crits": [
+    "cvs-9",
+    "cvs-15"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS4 BLOOD PRESSURE (10 marks)",
+   "n": "Question 15",
+   "crits": [
+    "resp-13"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS4 BLOOD PRESSURE (10 marks)",
+   "n": "Question 16",
+   "crits": [
+    "cvs-12",
+    "resp-13"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS4 BLOOD PRESSURE (10 marks)",
+   "n": "Question 17",
+   "crits": [
+    "cvs-15"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS4 BLOOD PRESSURE (10 marks)",
+   "n": "Question 18",
+   "crits": [
+    "cvs-5",
+    "cvs-12"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: CVS4 BLOOD PRESSURE (10 marks)",
+   "n": "Question 19",
+   "crits": [
+    "cvs-4",
+    "cvs-9",
+    "cvs-12",
+    "cvs-15",
+    "resp-2",
+    "resp-13"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: HEART OVERVIEW MC QUESTIONS (20 marks)",
+   "n": "Question 1",
+   "crits": [
+    "cvs-5",
+    "cvs-9"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: HEART OVERVIEW MC QUESTIONS (20 marks)",
+   "n": "Question 2",
+   "crits": [
+    "cvs-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: HEART OVERVIEW MC QUESTIONS (20 marks)",
+   "n": "Question 3",
+   "crits": [
+    "cvs-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: HEART OVERVIEW MC QUESTIONS (20 marks)",
+   "n": "Question 4",
+   "crits": [
+    "cvs-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: HEART OVERVIEW MC QUESTIONS (20 marks)",
+   "n": "Question 5",
+   "crits": [
+    "cvs-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: HEART OVERVIEW MC QUESTIONS (20 marks)",
+   "n": "Question 6",
+   "crits": [
+    "cvs-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: HEART OVERVIEW MC QUESTIONS (20 marks)",
+   "n": "Question 7",
+   "crits": [
+    "cvs-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: HEART OVERVIEW MC QUESTIONS (20 marks)",
+   "n": "Question 8",
+   "crits": [
+    "cvs-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: HEART OVERVIEW MC QUESTIONS (20 marks)",
+   "n": "Question 9",
+   "crits": [
+    "cvs-5",
+    "cvs-6"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: HEART OVERVIEW MC QUESTIONS (20 marks)",
+   "n": "Question 10",
+   "crits": [
+    "cvs-5",
+    "cvs-6"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: HEART OVERVIEW MC QUESTIONS (20 marks)",
+   "n": "Question 11",
+   "crits": [
+    "cvs-2",
+    "cvs-5",
+    "resp-2"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: HEART OVERVIEW MC QUESTIONS (20 marks)",
+   "n": "Question 12",
+   "crits": [
+    "cvs-5",
+    "cvs-6",
+    "cvs-7"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 1",
+   "crits": [
+    "cvs-6"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 2",
+   "crits": [
+    "cvs-5",
+    "cvs-6"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 3",
+   "crits": [
+    "cvs-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 4",
+   "crits": [
+    "cvs-5",
+    "cvs-6"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 5",
+   "crits": [
+    "cvs-5",
+    "cvs-6"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 6",
+   "crits": [
+    "cvs-6"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 7",
+   "crits": [
+    "cvs-2",
+    "cvs-5",
+    "cvs-6"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 8",
+   "crits": [
+    "cvs-6"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 9",
+   "crits": [
+    "cvs-2",
+    "cvs-5",
+    "cvs-6"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 10",
+   "crits": [
+    "cvs-5",
+    "cvs-11",
+    "resp-2"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 11",
+   "crits": [
+    "cvs-5",
+    "cvs-8",
+    "cvs-15"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 12",
+   "crits": [
+    "cvs-5",
+    "cvs-8"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 13",
+   "crits": [
+    "cvs-8"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 14",
+   "crits": [
+    "cvs-8"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 15",
+   "crits": [
+    "cvs-5",
+    "cvs-8"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 16",
+   "crits": [
+    "cvs-8",
+    "cvs-15"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 17",
+   "crits": [
+    "cvs-15"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 18",
+   "crits": [
+    "cvs-4"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 19",
+   "crits": [
+    "cvs-9"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 20",
+   "crits": [
+    "cvs-9"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 21",
+   "crits": [
+    "cvs-11"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 22",
+   "crits": [
+    "cvs-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 23",
+   "crits": [
+    "cvs-11",
+    "cvs-15"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 24",
+   "crits": [
+    "cvs-4",
+    "cvs-5",
+    "cvs-6",
+    "cvs-9"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 25",
+   "crits": [
+    "cvs-2"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 26",
+   "crits": [
+    "cvs-2"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 28",
+   "crits": [
+    "cvs-3"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 29",
+   "crits": [
+    "cvs-3",
+    "cvs-12",
+    "cvs-15"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 30",
+   "crits": [
+    "cvs-12",
+    "cvs-15"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 31",
+   "crits": [
+    "cvs-12",
+    "cvs-15",
+    "resp-13"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 32",
+   "crits": [
+    "cvs-12"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 33",
+   "crits": [
+    "cvs-6"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1:CVS2 MIX & MATCH: HEART & VALVES (10 marks)",
+   "n": "Question 2",
+   "crits": [
+    "cvs-5",
+    "cvs-6"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1:CVS2 MIX & MATCH: HEART & VALVES (10 marks)",
+   "n": "Question 3",
+   "crits": [
+    "cvs-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1:CVS2 MIX & MATCH: HEART & VALVES (10 marks)",
+   "n": "Question 4",
+   "crits": [
+    "cvs-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1:CVS2 MIX & MATCH: HEART & VALVES (10 marks)",
+   "n": "Question 5",
+   "crits": [
+    "cvs-5",
+    "cvs-6",
+    "resp-2"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1:CVS2 MIX & MATCH: HEART & VALVES (10 marks)",
+   "n": "Question 6",
+   "crits": [
+    "cvs-5",
+    "cvs-9",
+    "cvs-14"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1:CVS2 MIX & MATCH: HEART & VALVES (10 marks)",
+   "n": "Question 7",
+   "crits": [
+    "cvs-5",
+    "cvs-6"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1:CVS2 MIX & MATCH: HEART & VALVES (10 marks)",
+   "n": "Question 8",
+   "crits": [
+    "cvs-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.1:CVS2 MIX & MATCH: HEART & VALVES (10 marks)",
+   "n": "Question 9",
+   "crits": [
+    "cvs-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: AIRWAYS, BARO- & CHEMORECEPTORS (10 marks)",
+   "n": "Question 1",
+   "crits": [
+    "resp-2",
+    "resp-4"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: AIRWAYS, BARO- & CHEMORECEPTORS (10 marks)",
+   "n": "Question 2",
+   "crits": [
+    "resp-4",
+    "resp-5",
+    "cs-vacc"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: AIRWAYS, BARO- & CHEMORECEPTORS (10 marks)",
+   "n": "Question 3",
+   "crits": [
+    "resp-2",
+    "resp-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: AIRWAYS, BARO- & CHEMORECEPTORS (10 marks)",
+   "n": "Question 4",
+   "crits": [
+    "resp-14"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: AIRWAYS, BARO- & CHEMORECEPTORS (10 marks)",
+   "n": "Question 5",
+   "crits": [
+    "cvs-12"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: AIRWAYS, BARO- & CHEMORECEPTORS (10 marks)",
+   "n": "Question 6",
+   "crits": [
+    "resp-14"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: AIRWAYS, BARO- & CHEMORECEPTORS (10 marks)",
+   "n": "Question 7",
+   "crits": [
+    "resp-13",
+    "resp-14"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: AIRWAYS, BARO- & CHEMORECEPTORS (10 marks)",
+   "n": "Question 8",
+   "crits": [
+    "cvs-12",
+    "cvs-15",
+    "resp-2",
+    "resp-13"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: AIRWAYS, BARO- & CHEMORECEPTORS (10 marks)",
+   "n": "Question 9",
+   "crits": [
+    "cvs-12",
+    "cs-vacc"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: AIRWAYS, BARO- & CHEMORECEPTORS (10 marks)",
+   "n": "Question 10",
+   "crits": [
+    "resp-14"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: AIRWAYS, BARO- & CHEMORECEPTORS (10 marks)",
+   "n": "Question 11",
+   "crits": [
+    "resp-5"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: AIRWAYS, BARO- & CHEMORECEPTORS (10 marks)",
+   "n": "Question 12",
+   "crits": [
+    "resp-5",
+    "resp-10"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: AIRWAYS, BARO- & CHEMORECEPTORS (10 marks)",
+   "n": "Question 13",
+   "crits": [
+    "resp-2",
+    "resp-7"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: AIRWAYS, BARO- & CHEMORECEPTORS (10 marks)",
+   "n": "Question 14",
+   "crits": [
+    "resp-2",
+    "resp-7"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: AIRWAYS, BARO- & CHEMORECEPTORS (10 marks)",
+   "n": "Question 15",
+   "crits": [
+    "resp-2",
+    "resp-5",
+    "resp-7"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: AIRWAYS, BARO- & CHEMORECEPTORS (10 marks)",
+   "n": "Question 16",
+   "crits": [
+    "resp-7"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: AIRWAYS, BARO- & CHEMORECEPTORS (10 marks)",
+   "n": "Question 17",
+   "crits": [
+    "resp-13"
+   ]
+  },
+  {
+   "quiz": "MODULE 1.2: AIRWAYS, BARO- & CHEMORECEPTORS (10 marks)",
+   "n": "Question 18",
+   "crits": [
+    "resp-5",
+    "resp-8"
    ]
   }
  ]

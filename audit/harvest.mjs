@@ -98,6 +98,17 @@ for (const z of quizzes) {
       skip(z, q, 'stem is essentially just an external image'); continue;
     }
 
+    /* A "question" that tells the reader to go and do something elsewhere and write down
+       what they scored is an admin prompt, not an assessable question. MODULE 1.2:
+       RESPIRATORY KHAN is entirely this — a link out to an external quiz plus "RECORD
+       YOUR SCORE OUT OF 7 ______". Harvested, it became a self-marked SAQ carrying a
+       marking schedule that cannot exist, which then failed the selfmark gate by
+       demanding an answer be authored for it. There is no answer to author, and writing
+       one would put an invented card under a `verbatim` badge. */
+    if (/record your (quiz )?(result|score)|do the linked quiz/i.test(stem)) {
+      skip(z, q, 'an instruction to sit an external quiz and self-report a score, not a question'); continue;
+    }
+
     if (q.type === 'essay_question') {
       /* Her question, verbatim. The marking schedule is NOT hers — Canvas holds no key
          for a self-marked question — so it is left empty here and authored in a

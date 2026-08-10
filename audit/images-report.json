@@ -3,74 +3,110 @@
   "id": "039436fe7995c462",
   "kind": "detail",
   "orig_bytes": 2105281,
+  "new_bytes": 21292,
+  "uri_bytes": 28415,
   "wh": [
    1920,
    1080
   ],
-  "action": "skipped",
-  "why": "not referenced by any harvested card"
+  "new_wh": [
+   800,
+   450
+  ],
+  "quality": 75,
+  "action": "encoded"
  },
  {
   "id": "fa5d4c0ce5d692a6",
   "kind": "detail",
   "orig_bytes": 1055713,
+  "new_bytes": 39818,
+  "uri_bytes": 53115,
   "wh": [
    795,
    725
   ],
-  "action": "skipped",
-  "why": "not referenced by any harvested card"
+  "new_wh": [
+   795,
+   725
+  ],
+  "quality": 75,
+  "action": "encoded"
  },
  {
   "id": "292a809722a8d732",
   "kind": "detail",
   "orig_bytes": 1147951,
+  "new_bytes": 11752,
+  "uri_bytes": 15695,
   "wh": [
    1199,
    855
   ],
-  "action": "skipped",
-  "why": "not referenced by any harvested card"
+  "new_wh": [
+   800,
+   570
+  ],
+  "quality": 75,
+  "action": "encoded"
  },
  {
   "id": "7c07a56727a1d61a",
   "kind": "detail",
   "orig_bytes": 928187,
+  "new_bytes": 10038,
+  "uri_bytes": 13407,
   "wh": [
    1131,
    789
   ],
-  "action": "skipped",
-  "why": "not referenced by any harvested card"
+  "new_wh": [
+   800,
+   558
+  ],
+  "quality": 75,
+  "action": "encoded"
  },
  {
   "id": "86050527954cfe20",
   "kind": "detail",
   "orig_bytes": 25273,
+  "new_bytes": 15364,
+  "uri_bytes": 20511,
   "wh": [
    555,
    552
   ],
-  "action": "skipped",
-  "why": "not referenced by any harvested card"
+  "new_wh": [
+   555,
+   552
+  ],
+  "quality": 75,
+  "action": "encoded"
  },
  {
   "id": "cf226db57b319cbc",
   "kind": "detail",
   "orig_bytes": 95024,
+  "new_bytes": 4174,
+  "uri_bytes": 5591,
   "wh": [
    385,
    414
   ],
-  "action": "skipped",
-  "why": "not referenced by any harvested card"
+  "new_wh": [
+   385,
+   414
+  ],
+  "quality": 75,
+  "action": "encoded"
  },
  {
   "id": "9faf8a9dc009168b",
   "kind": "detail",
   "orig_bytes": 73153,
-  "new_bytes": 55874,
-  "uri_bytes": 74523,
+  "new_bytes": 42942,
+  "uri_bytes": 57279,
   "wh": [
    745,
    538
@@ -79,15 +115,15 @@
    745,
    538
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "8bfbdf9b1cf0ae37",
   "kind": "detail",
   "orig_bytes": 39424,
-  "new_bytes": 15176,
-  "uri_bytes": 20259,
+  "new_bytes": 12066,
+  "uri_bytes": 16111,
   "wh": [
    381,
    132
@@ -96,15 +132,15 @@
    381,
    132
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "f0ee3a12caeb5ab0",
   "kind": "detail",
   "orig_bytes": 529484,
-  "new_bytes": 40024,
-  "uri_bytes": 53391,
+  "new_bytes": 31948,
+  "uri_bytes": 42623,
   "wh": [
    800,
    1000
@@ -113,15 +149,15 @@
    800,
    1000
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "27d3e3eebcd7771c",
   "kind": "detail",
   "orig_bytes": 6763,
-  "new_bytes": 7728,
-  "uri_bytes": 10327,
+  "new_bytes": 5942,
+  "uri_bytes": 7947,
   "wh": [
    250,
    202
@@ -130,15 +166,15 @@
    250,
    202
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "af946093274bd96a",
   "kind": "detail",
   "orig_bytes": 17522,
-  "new_bytes": 17696,
-  "uri_bytes": 23619,
+  "new_bytes": 15428,
+  "uri_bytes": 20595,
   "wh": [
    400,
    300
@@ -147,32 +183,32 @@
    400,
    300
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "b1650676df12cb5a",
   "kind": "detail",
   "orig_bytes": 131891,
-  "new_bytes": 77268,
-  "uri_bytes": 103047,
+  "new_bytes": 42998,
+  "uri_bytes": 57355,
   "wh": [
    1500,
    720
   ],
   "new_wh": [
-   1100,
-   528
+   800,
+   384
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "b5bc3e5206f71d7d",
   "kind": "detail",
   "orig_bytes": 52045,
-  "new_bytes": 22814,
-  "uri_bytes": 30443,
+  "new_bytes": 19238,
+  "uri_bytes": 25675,
   "wh": [
    599,
    456
@@ -181,15 +217,15 @@
    599,
    456
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "d99c4245f907af41",
   "kind": "detail",
   "orig_bytes": 31048,
-  "new_bytes": 27384,
-  "uri_bytes": 36535,
+  "new_bytes": 21858,
+  "uri_bytes": 29167,
   "wh": [
    638,
    479
@@ -198,15 +234,15 @@
    638,
    479
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "0b53b2d764215cad",
   "kind": "detail",
   "orig_bytes": 15598,
-  "new_bytes": 10580,
-  "uri_bytes": 14131,
+  "new_bytes": 8446,
+  "uri_bytes": 11287,
   "wh": [
    354,
    512
@@ -215,100 +251,100 @@
    354,
    512
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "0a65234385b64be1",
   "kind": "detail",
   "orig_bytes": 9005711,
-  "new_bytes": 170304,
-  "uri_bytes": 227095,
+  "new_bytes": 77884,
+  "uri_bytes": 103871,
   "wh": [
    2592,
    1944
   ],
   "new_wh": [
-   1100,
-   825
+   800,
+   600
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "01b247465911acf6",
   "kind": "detail",
   "orig_bytes": 1086215,
-  "new_bytes": 105066,
-  "uri_bytes": 140111,
+  "new_bytes": 72594,
+  "uri_bytes": 96815,
   "wh": [
    887,
    629
   ],
   "new_wh": [
-   887,
-   629
+   800,
+   567
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "575ffbe77b01488c",
   "kind": "detail",
   "orig_bytes": 584924,
-  "new_bytes": 28770,
-  "uri_bytes": 38383,
+  "new_bytes": 11978,
+  "uri_bytes": 15995,
   "wh": [
    1838,
    282
   ],
   "new_wh": [
-   1100,
-   169
+   800,
+   123
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "c245de246747161f",
   "kind": "detail",
   "orig_bytes": 80900,
-  "new_bytes": 48440,
-  "uri_bytes": 64611,
+  "new_bytes": 38628,
+  "uri_bytes": 51527,
   "wh": [
    819,
    727
   ],
   "new_wh": [
-   819,
-   727
+   800,
+   710
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "086357ff8e7203d2",
   "kind": "detail",
   "orig_bytes": 375668,
-  "new_bytes": 39970,
-  "uri_bytes": 53319,
+  "new_bytes": 30830,
+  "uri_bytes": 41131,
   "wh": [
    820,
    444
   ],
   "new_wh": [
-   820,
-   444
+   800,
+   433
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "bde781ca231cf4f9",
   "kind": "detail",
   "orig_bytes": 131501,
-  "new_bytes": 16940,
-  "uri_bytes": 22611,
+  "new_bytes": 13886,
+  "uri_bytes": 18539,
   "wh": [
    350,
    310
@@ -317,15 +353,15 @@
    350,
    310
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "ce7c1fb37720461a",
   "kind": "detail",
   "orig_bytes": 157076,
-  "new_bytes": 26922,
-  "uri_bytes": 35919,
+  "new_bytes": 22268,
+  "uri_bytes": 29715,
   "wh": [
    457,
    490
@@ -334,15 +370,15 @@
    457,
    490
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "e721136c79bb7486",
   "kind": "detail",
   "orig_bytes": 1114,
-  "new_bytes": 410,
-  "uri_bytes": 571,
+  "new_bytes": 352,
+  "uri_bytes": 495,
   "wh": [
    140,
    100
@@ -351,15 +387,15 @@
    140,
    100
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "24364ece2a44ed02",
   "kind": "detail",
   "orig_bytes": 32276,
-  "new_bytes": 18240,
-  "uri_bytes": 24343,
+  "new_bytes": 14226,
+  "uri_bytes": 18991,
   "wh": [
    515,
    673
@@ -368,15 +404,15 @@
    515,
    673
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "a616ac380ccdcc75",
   "kind": "detail",
   "orig_bytes": 146696,
-  "new_bytes": 10488,
-  "uri_bytes": 14007,
+  "new_bytes": 8260,
+  "uri_bytes": 11039,
   "wh": [
    345,
    321
@@ -385,15 +421,15 @@
    345,
    321
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "e8ad7ccb471c196f",
   "kind": "detail",
   "orig_bytes": 102547,
-  "new_bytes": 8684,
-  "uri_bytes": 11603,
+  "new_bytes": 6876,
+  "uri_bytes": 9191,
   "wh": [
    325,
    320
@@ -402,15 +438,15 @@
    325,
    320
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "18dc0efe3c2fac52",
   "kind": "detail",
   "orig_bytes": 191137,
-  "new_bytes": 5666,
-  "uri_bytes": 7579,
+  "new_bytes": 4478,
+  "uri_bytes": 5995,
   "wh": [
    447,
    335
@@ -419,15 +455,15 @@
    447,
    335
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "3d88e8ae9d20a66b",
   "kind": "detail",
   "orig_bytes": 43720,
-  "new_bytes": 19444,
-  "uri_bytes": 25951,
+  "new_bytes": 15238,
+  "uri_bytes": 20343,
   "wh": [
    697,
    378
@@ -436,15 +472,15 @@
    697,
    378
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "c85b6ba9f489a86e",
   "kind": "detail",
   "orig_bytes": 11419,
-  "new_bytes": 7746,
-  "uri_bytes": 10351,
+  "new_bytes": 6528,
+  "uri_bytes": 8727,
   "wh": [
    703,
    436
@@ -453,168 +489,168 @@
    703,
    436
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "f6a954a872659d5e",
   "kind": "detail",
   "orig_bytes": 104815,
-  "new_bytes": 56298,
-  "uri_bytes": 75087,
+  "new_bytes": 28318,
+  "uri_bytes": 37783,
   "wh": [
    1068,
    801
   ],
   "new_wh": [
-   1068,
-   801
+   800,
+   600
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "90ab5fef183e1b8f",
   "kind": "detail",
   "orig_bytes": 1393105,
-  "new_bytes": 93538,
-  "uri_bytes": 124743,
+  "new_bytes": 44086,
+  "uri_bytes": 58807,
   "wh": [
    1068,
    801
   ],
   "new_wh": [
-   1068,
-   801
+   800,
+   600
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "da60b05191ec2173",
   "kind": "detail",
   "orig_bytes": 1229179,
-  "new_bytes": 46534,
-  "uri_bytes": 62071,
+  "new_bytes": 21686,
+  "uri_bytes": 28939,
   "wh": [
    1422,
    800
   ],
   "new_wh": [
-   1100,
-   619
+   800,
+   450
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "96141276edbb08ff",
   "kind": "detail",
   "orig_bytes": 133924,
-  "new_bytes": 31766,
-  "uri_bytes": 42379,
+  "new_bytes": 18380,
+  "uri_bytes": 24531,
   "wh": [
    1024,
    732
   ],
   "new_wh": [
-   1024,
-   732
+   800,
+   572
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "5c76e3bccbdbb78f",
   "kind": "detail",
   "orig_bytes": 159004,
-  "new_bytes": 31006,
-  "uri_bytes": 41367,
+  "new_bytes": 17152,
+  "uri_bytes": 22895,
   "wh": [
    1024,
    732
   ],
   "new_wh": [
-   1024,
-   732
+   800,
+   572
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "14c95d2de34357cf",
   "kind": "detail",
   "orig_bytes": 6803296,
-  "new_bytes": 50320,
-  "uri_bytes": 67119,
+  "new_bytes": 24094,
+  "uri_bytes": 32151,
   "wh": [
    2592,
    1944
   ],
   "new_wh": [
-   1100,
-   825
+   800,
+   600
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "6506af99ba45febf",
   "kind": "detail",
   "orig_bytes": 7863290,
-  "new_bytes": 98554,
-  "uri_bytes": 131431,
+  "new_bytes": 42788,
+  "uri_bytes": 57075,
   "wh": [
    2592,
    1944
   ],
   "new_wh": [
-   1100,
-   825
+   800,
+   600
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "69e5200759cf127c",
   "kind": "detail",
   "orig_bytes": 1233535,
-  "new_bytes": 43426,
-  "uri_bytes": 57927,
+  "new_bytes": 21286,
+  "uri_bytes": 28407,
   "wh": [
    1397,
    786
   ],
   "new_wh": [
-   1100,
-   619
+   800,
+   450
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "46a4cf5a79d64979",
   "kind": "detail",
   "orig_bytes": 1907863,
-  "new_bytes": 167692,
-  "uri_bytes": 223615,
+  "new_bytes": 91326,
+  "uri_bytes": 121791,
   "wh": [
    1075,
    1387
   ],
   "new_wh": [
-   1075,
-   1387
+   800,
+   1032
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "e09f3a3ca35d5146",
   "kind": "detail",
   "orig_bytes": 376520,
-  "new_bytes": 26638,
-  "uri_bytes": 35543,
+  "new_bytes": 21056,
+  "uri_bytes": 28099,
   "wh": [
    673,
    650
@@ -623,49 +659,49 @@
    673,
    650
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "4a28b9c457ce4488",
   "kind": "detail",
   "orig_bytes": 132695,
-  "new_bytes": 83332,
-  "uri_bytes": 111135,
+  "new_bytes": 40262,
+  "uri_bytes": 53707,
   "wh": [
    1068,
    801
   ],
   "new_wh": [
-   1068,
-   801
+   800,
+   600
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "2a54eebcd6c49112",
   "kind": "detail",
   "orig_bytes": 150040,
-  "new_bytes": 93538,
-  "uri_bytes": 124743,
+  "new_bytes": 44086,
+  "uri_bytes": 58807,
   "wh": [
    1068,
    801
   ],
   "new_wh": [
-   1068,
-   801
+   800,
+   600
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "82a6d5a7a1675522",
   "kind": "detail",
   "orig_bytes": 75353,
-  "new_bytes": 12234,
-  "uri_bytes": 16335,
+  "new_bytes": 9418,
+  "uri_bytes": 12583,
   "wh": [
    300,
    240
@@ -674,15 +710,15 @@
    300,
    240
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "82ab5a801ddcc0ae",
   "kind": "detail",
   "orig_bytes": 110239,
-  "new_bytes": 4300,
-  "uri_bytes": 5759,
+  "new_bytes": 3160,
+  "uri_bytes": 4239,
   "wh": [
    300,
    168
@@ -691,15 +727,15 @@
    300,
    168
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "9e5a617dd5e0822b",
   "kind": "detail",
   "orig_bytes": 181838,
-  "new_bytes": 24778,
-  "uri_bytes": 33063,
+  "new_bytes": 20280,
+  "uri_bytes": 27063,
   "wh": [
    604,
    567
@@ -708,32 +744,32 @@
    604,
    567
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "fef044ac763cbae9",
   "kind": "detail",
   "orig_bytes": 77891,
-  "new_bytes": 23030,
-  "uri_bytes": 30731,
+  "new_bytes": 14714,
+  "uri_bytes": 19643,
   "wh": [
    1024,
    491
   ],
   "new_wh": [
-   1024,
-   491
+   800,
+   384
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "24ad61e108127ac2",
   "kind": "detail",
   "orig_bytes": 31196,
-  "new_bytes": 28430,
-  "uri_bytes": 37931,
+  "new_bytes": 24406,
+  "uri_bytes": 32567,
   "wh": [
    638,
    479
@@ -742,15 +778,15 @@
    638,
    479
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "8c32b09c7ac2030d",
   "kind": "detail",
   "orig_bytes": 37562,
-  "new_bytes": 16234,
-  "uri_bytes": 21671,
+  "new_bytes": 13694,
+  "uri_bytes": 18283,
   "wh": [
    378,
    291
@@ -759,15 +795,15 @@
    378,
    291
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "92a771c27c42d748",
   "kind": "detail",
   "orig_bytes": 107870,
-  "new_bytes": 50522,
-  "uri_bytes": 67387,
+  "new_bytes": 39900,
+  "uri_bytes": 53223,
   "wh": [
    512,
    384
@@ -776,32 +812,32 @@
    512,
    384
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "ca1321c607997e0b",
   "kind": "detail",
   "orig_bytes": 308177,
-  "new_bytes": 21468,
-  "uri_bytes": 28647,
+  "new_bytes": 12716,
+  "uri_bytes": 16979,
   "wh": [
    1024,
    711
   ],
   "new_wh": [
-   1024,
-   711
+   800,
+   555
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
   "id": "4f9225661a626825",
   "kind": "detail",
   "orig_bytes": 34337,
-  "new_bytes": 13672,
-  "uri_bytes": 18255,
+  "new_bytes": 10738,
+  "uri_bytes": 14343,
   "wh": [
    500,
    478
@@ -810,7 +846,7 @@
    500,
    478
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
  },
  {
@@ -828,17 +864,396 @@
   "id": "22b0a913b591cca7",
   "kind": "detail",
   "orig_bytes": 288512,
-  "new_bytes": 31666,
-  "uri_bytes": 42247,
+  "new_bytes": 16234,
+  "uri_bytes": 21671,
   "wh": [
    1920,
    1080
   ],
   "new_wh": [
-   1100,
-   619
+   800,
+   450
   ],
-  "quality": 82,
+  "quality": 75,
   "action": "encoded"
+ },
+ {
+  "id": "baa75f091cb6c0b8",
+  "kind": "detail",
+  "orig_bytes": 23506,
+  "new_bytes": 13012,
+  "uri_bytes": 17375,
+  "wh": [
+   354,
+   383
+  ],
+  "new_wh": [
+   354,
+   383
+  ],
+  "quality": 75,
+  "action": "encoded"
+ },
+ {
+  "id": "155557e38e28ed77",
+  "kind": "detail",
+  "orig_bytes": 590843,
+  "new_bytes": 19684,
+  "uri_bytes": 26271,
+  "wh": [
+   1942,
+   1350
+  ],
+  "new_wh": [
+   800,
+   556
+  ],
+  "quality": 75,
+  "action": "encoded"
+ },
+ {
+  "id": "b4ccc0d3fcb80b7c",
+  "kind": "detail",
+  "orig_bytes": 245878,
+  "new_bytes": 31712,
+  "uri_bytes": 42307,
+  "wh": [
+   768,
+   768
+  ],
+  "new_wh": [
+   768,
+   768
+  ],
+  "quality": 75,
+  "action": "encoded"
+ },
+ {
+  "id": "f116d6a3268d8cd8",
+  "kind": "detail",
+  "orig_bytes": 1708562,
+  "new_bytes": 33156,
+  "uri_bytes": 44231,
+  "wh": [
+   1472,
+   1080
+  ],
+  "new_wh": [
+   800,
+   587
+  ],
+  "quality": 75,
+  "action": "encoded"
+ },
+ {
+  "id": "6f320b007958bc3e",
+  "kind": "detail",
+  "orig_bytes": 77930,
+  "new_bytes": 8580,
+  "uri_bytes": 11463,
+  "wh": [
+   368,
+   239
+  ],
+  "new_wh": [
+   368,
+   239
+  ],
+  "quality": 75,
+  "action": "encoded"
+ },
+ {
+  "id": "c7b3d1e0b9160e2c",
+  "kind": "detail",
+  "orig_bytes": 773401,
+  "new_bytes": 24074,
+  "uri_bytes": 32123,
+  "wh": [
+   1344,
+   1200
+  ],
+  "new_wh": [
+   800,
+   714
+  ],
+  "quality": 75,
+  "action": "encoded"
+ },
+ {
+  "id": "742a054dff7c6658",
+  "kind": "detail",
+  "orig_bytes": 318431,
+  "new_bytes": 26640,
+  "uri_bytes": 35543,
+  "wh": [
+   750,
+   562
+  ],
+  "new_wh": [
+   750,
+   562
+  ],
+  "quality": 75,
+  "action": "encoded"
+ },
+ {
+  "id": "01d343b6dfbb8ce4",
+  "kind": "detail",
+  "orig_bytes": 14978,
+  "new_bytes": 4006,
+  "uri_bytes": 5367,
+  "wh": [
+   290,
+   219
+  ],
+  "new_wh": [
+   290,
+   219
+  ],
+  "quality": 75,
+  "action": "encoded"
+ },
+ {
+  "id": "397f360eda362c14",
+  "kind": "detail",
+  "orig_bytes": 16355,
+  "new_bytes": 2750,
+  "uri_bytes": 3691,
+  "wh": [
+   361,
+   247
+  ],
+  "new_wh": [
+   361,
+   247
+  ],
+  "quality": 75,
+  "action": "encoded"
+ },
+ {
+  "id": "f8fe38dc2f2ab822",
+  "kind": "detail",
+  "orig_bytes": 221174,
+  "new_bytes": 8384,
+  "uri_bytes": 11203,
+  "wh": [
+   715,
+   290
+  ],
+  "new_wh": [
+   715,
+   290
+  ],
+  "quality": 75,
+  "action": "encoded"
+ },
+ {
+  "id": "4000555ad968a487",
+  "kind": "detail",
+  "orig_bytes": 46642,
+  "new_bytes": 4508,
+  "uri_bytes": 6035,
+  "wh": [
+   179,
+   168
+  ],
+  "new_wh": [
+   179,
+   168
+  ],
+  "quality": 75,
+  "action": "encoded"
+ },
+ {
+  "id": "c1062fd09be88510",
+  "kind": "detail",
+  "orig_bytes": 95368,
+  "new_bytes": 14788,
+  "uri_bytes": 19743,
+  "wh": [
+   581,
+   209
+  ],
+  "new_wh": [
+   581,
+   209
+  ],
+  "quality": 75,
+  "action": "encoded"
+ },
+ {
+  "id": "b4c063b4e62137bc",
+  "kind": "detail",
+  "orig_bytes": 2305645,
+  "new_bytes": 35610,
+  "uri_bytes": 47503,
+  "wh": [
+   1920,
+   1080
+  ],
+  "new_wh": [
+   800,
+   450
+  ],
+  "quality": 75,
+  "action": "encoded"
+ },
+ {
+  "id": "b49fe6cf7f9fdf7f",
+  "kind": "detail",
+  "orig_bytes": 320284,
+  "new_bytes": 19978,
+  "uri_bytes": 26663,
+  "wh": [
+   375,
+   433
+  ],
+  "new_wh": [
+   375,
+   433
+  ],
+  "quality": 75,
+  "action": "encoded"
+ },
+ {
+  "id": "99a1b784680f52b9",
+  "kind": "detail",
+  "orig_bytes": 240077,
+  "new_bytes": 10868,
+  "uri_bytes": 14515,
+  "wh": [
+   374,
+   504
+  ],
+  "new_wh": [
+   374,
+   504
+  ],
+  "quality": 75,
+  "action": "encoded"
+ },
+ {
+  "id": "2f4f79aab79090b8",
+  "kind": "detail",
+  "orig_bytes": 134458,
+  "new_bytes": 22846,
+  "uri_bytes": 30487,
+  "wh": [
+   512,
+   437
+  ],
+  "new_wh": [
+   512,
+   437
+  ],
+  "quality": 75,
+  "action": "encoded"
+ },
+ {
+  "id": "8f5e29442c6044c3",
+  "kind": "detail",
+  "orig_bytes": 37123,
+  "new_bytes": 17896,
+  "uri_bytes": 23887,
+  "wh": [
+   500,
+   666
+  ],
+  "new_wh": [
+   500,
+   666
+  ],
+  "quality": 75,
+  "action": "encoded"
+ },
+ {
+  "id": "e954e60abdf57df6",
+  "kind": "detail",
+  "orig_bytes": 247564,
+  "new_bytes": 30078,
+  "uri_bytes": 40127,
+  "wh": [
+   500,
+   431
+  ],
+  "new_wh": [
+   500,
+   431
+  ],
+  "quality": 75,
+  "action": "encoded"
+ },
+ {
+  "id": "4920fbc566cf6a6a",
+  "kind": "detail",
+  "orig_bytes": 542011,
+  "new_bytes": 68356,
+  "uri_bytes": 91167,
+  "wh": [
+   1280,
+   872
+  ],
+  "new_wh": [
+   800,
+   545
+  ],
+  "quality": 75,
+  "action": "encoded"
+ },
+ {
+  "id": "3e14484b910945da",
+  "kind": "detail",
+  "orig_bytes": 74239,
+  "new_bytes": 8214,
+  "uri_bytes": 10975,
+  "wh": [
+   317,
+   193
+  ],
+  "new_wh": [
+   317,
+   193
+  ],
+  "quality": 75,
+  "action": "encoded"
+ },
+ {
+  "id": "560e940db6a4f3c1",
+  "kind": "detail",
+  "orig_bytes": 41911,
+  "new_bytes": 23432,
+  "uri_bytes": 31267,
+  "wh": [
+   277,
+   717
+  ],
+  "new_wh": [
+   277,
+   717
+  ],
+  "quality": 75,
+  "action": "encoded"
+ },
+ {
+  "id": "42c91dafff3ddf99",
+  "kind": "detail",
+  "orig_bytes": 274306,
+  "wh": [
+   600,
+   464
+  ],
+  "action": "skipped",
+  "why": "not referenced by any harvested card"
+ },
+ {
+  "id": "2b50710b88379c65",
+  "kind": "detail",
+  "orig_bytes": 405529,
+  "wh": [
+   475,
+   516
+  ],
+  "action": "skipped",
+  "why": "not referenced by any harvested card"
  }
 ]

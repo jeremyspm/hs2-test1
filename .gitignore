@@ -27,6 +27,10 @@ audit/images-optimised.json
 # sidecar for build-corpus, superseded by corpus.json
 audit/pdf-units.json
 
+# a worklist, regenerated on demand by `apply-migration.mjs --emit-missing`.
+# Committing it would leave a stale list of cards that already have explanations.
+audit/missing-explanations.json
+
 # apply-migration.mjs writes both of these on every run. pack.js is the artifact.
 pack.new.js
 pack.backup.js

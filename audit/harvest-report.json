@@ -1,76 +1,6 @@
 {
- "cards": 275,
+ "cards": 376,
  "skipped": [
-  {
-   "quiz": "Practice Lab 2: SAQ & MC Quiz (10 marks)",
-   "n": "Question 1",
-   "type": "matching_question",
-   "why": "no \"correct answer was\" title on any option",
-   "q": "[[IMG:resp system numbered.png]] Source https://www.pngitem.com/pimgs/m/21-217508_diagram-"
-  },
-  {
-   "quiz": "Practice Lab 2: SAQ & MC Quiz (10 marks)",
-   "n": "Question 2",
-   "type": "multiple_dropdowns_question",
-   "why": "no answer_group blocks found",
-   "q": "In the lab and lab book, you're asked to cut a piece of lung tissue away and place it insi"
-  },
-  {
-   "quiz": "Practice Lab 2: SAQ & MC Quiz (10 marks)",
-   "n": "Question 3",
-   "type": "multiple_choice_question",
-   "why": "no option carried weight 100 or class correct_answer",
-   "q": "[[IMG:trachea cross section.PNG]] The structure labelled at B is a"
-  },
-  {
-   "quiz": "Practice Lab 2: SAQ & MC Quiz (10 marks)",
-   "n": "Question 4",
-   "type": "multiple_choice_question",
-   "why": "no option carried weight 100 or class correct_answer",
-   "q": "[[IMG]] [[IMG:039436fe7995c462]] These images show the main tube connecting to the lungs c"
-  },
-  {
-   "quiz": "Practice Lab 2: SAQ & MC Quiz (10 marks)",
-   "n": "Question 5",
-   "type": "multiple_choice_question",
-   "why": "no option carried weight 100 or class correct_answer",
-   "q": "[[IMG:fa5d4c0ce5d692a6]] The part of the image labelled B is"
-  },
-  {
-   "quiz": "Practice Lab 2: SAQ & MC Quiz (10 marks)",
-   "n": "Question 6",
-   "type": "multiple_choice_question",
-   "why": "no option carried weight 100 or class correct_answer",
-   "q": "[[IMG:292a809722a8d732]] [[IMG]] The white shiny part of this structure labelled at A (in "
-  },
-  {
-   "quiz": "Practice Lab 2: SAQ & MC Quiz (10 marks)",
-   "n": "Question 7",
-   "type": "multiple_choice_question",
-   "why": "no option carried weight 100 or class correct_answer",
-   "q": "[[IMG:7c07a56727a1d61a]] Shown in the image is a bubble that has formed in the structure t"
-  },
-  {
-   "quiz": "Practice Lab 2: SAQ & MC Quiz (10 marks)",
-   "n": "Question 8",
-   "type": "multiple_choice_question",
-   "why": "no option carried weight 100 or class correct_answer",
-   "q": "[[IMG:bell jar numbered.png]] https://o.quizlet.com/EA259LISgIL.ANxXiTDh4A_b.png Links to "
-  },
-  {
-   "quiz": "Practice Lab 2: SAQ & MC Quiz (10 marks)",
-   "n": "Question 9",
-   "type": "multiple_choice_question",
-   "why": "no option carried weight 100 or class correct_answer",
-   "q": "The respiratory capacities are a combined of 2 or more volumes. The volumes are indicated "
-  },
-  {
-   "quiz": "Practice Lab 2: SAQ & MC Quiz (10 marks)",
-   "n": "Question 10",
-   "type": "multiple_choice_question",
-   "why": "no option carried weight 100 or class correct_answer",
-   "q": "Peak Flow meters can be used to estimate someones respiratory function [[IMG:cf226db57b319"
-  },
   {
    "quiz": "Respiratory (SAQ & MC) Pre-Lab Quiz",
    "n": "Question 4",
@@ -119,6 +49,174 @@
    "type": "multiple_choice_question",
    "why": "her question offers 7 options; the engine renders 2-6 and dropping one would change the question",
    "q": "The blood vessel labelled A is the [[IMG:artery image lab quiz 1.png]]"
+  },
+  {
+   "quiz": "MODULE 1.1 & 3.3: BIOPHYSICAL PRINCIPLES OF BLOOD FLOW & PRESSURE (20 marks)",
+   "n": "Question 1",
+   "type": "multiple_choice_question",
+   "why": "no option carried weight 100 or class correct_answer",
+   "q": "Name the site where resistance to blood flow is greatest."
+  },
+  {
+   "quiz": "MODULE 1.1 & 3.3: BIOPHYSICAL PRINCIPLES OF BLOOD FLOW & PRESSURE (20 marks)",
+   "n": "Question 2",
+   "type": "multiple_choice_question",
+   "why": "no option carried weight 100 or class correct_answer",
+   "q": "Name the site where the velocity of blood flow is the fastest."
+  },
+  {
+   "quiz": "MODULE 1.1 & 3.3: BIOPHYSICAL PRINCIPLES OF BLOOD FLOW & PRESSURE (20 marks)",
+   "n": "Question 3",
+   "type": "multiple_choice_question",
+   "why": "no option carried weight 100 or class correct_answer",
+   "q": "What is the normal body temperature?"
+  },
+  {
+   "quiz": "MODULE 1.1 & 3.3: BIOPHYSICAL PRINCIPLES OF BLOOD FLOW & PRESSURE (20 marks)",
+   "n": "Question 4",
+   "type": "multiple_choice_question",
+   "why": "no option carried weight 100 or class correct_answer",
+   "q": "On a day when the room temperature is normal most of the body heat is lost by which of the"
+  },
+  {
+   "quiz": "MODULE 1.1 & 3.3: BIOPHYSICAL PRINCIPLES OF BLOOD FLOW & PRESSURE (20 marks)",
+   "n": "Question 5",
+   "type": "multiple_answers_question",
+   "why": "no option carried weight 100 or class correct_answer",
+   "q": "Your teenager has come down with a viral fever and is feeling cold, shivering and pale. He"
+  },
+  {
+   "quiz": "MODULE 1.1 & 3.3: BIOPHYSICAL PRINCIPLES OF BLOOD FLOW & PRESSURE (20 marks)",
+   "n": "Question 6",
+   "type": "multiple_choice_question",
+   "why": "no option carried weight 100 or class correct_answer",
+   "q": "The resting membrane potential of a neuron:"
+  },
+  {
+   "quiz": "MODULE 1.1 & 3.3: BIOPHYSICAL PRINCIPLES OF BLOOD FLOW & PRESSURE (20 marks)",
+   "n": "Question 7",
+   "type": "multiple_choice_question",
+   "why": "no option carried weight 100 or class correct_answer",
+   "q": "Surgical diathermy is used to cauterise blood vessels or cut tissues. Diathermy does not g"
+  },
+  {
+   "quiz": "MODULE 1.1 & 3.3: BIOPHYSICAL PRINCIPLES OF BLOOD FLOW & PRESSURE (20 marks)",
+   "n": "Question 8",
+   "type": "multiple_choice_question",
+   "why": "no option carried weight 100 or class correct_answer",
+   "q": "Which of the following statement is true in relation to ultraviolet rays?"
+  },
+  {
+   "quiz": "MODULE 1.1 & 3.3: BIOPHYSICAL PRINCIPLES OF BLOOD FLOW & PRESSURE (20 marks)",
+   "n": "Question 9",
+   "type": "multiple_answers_question",
+   "why": "no option carried weight 100 or class correct_answer",
+   "q": "Which of the following statements on myopia (short-sightedness) are true. Select all true "
+  },
+  {
+   "quiz": "MODULE 1.1 & 3.3: BIOPHYSICAL PRINCIPLES OF BLOOD FLOW & PRESSURE (20 marks)",
+   "n": "Question 10",
+   "type": "multiple_choice_question",
+   "why": "no option carried weight 100 or class correct_answer",
+   "q": "In glaucoma fluid builds up in the eye which if left untreated can damage the retina. Whic"
+  },
+  {
+   "quiz": "MODULE 1.1 & 3.3: BIOPHYSICAL PRINCIPLES OF BLOOD FLOW & PRESSURE (20 marks)",
+   "n": "Question 11",
+   "type": "multiple_choice_question",
+   "why": "no option carried weight 100 or class correct_answer",
+   "q": "Which of the following is a type of sensorineural deafness?"
+  },
+  {
+   "quiz": "MODULE 1.1 & 3.3: BIOPHYSICAL PRINCIPLES OF BLOOD FLOW & PRESSURE (20 marks)",
+   "n": "Question 12",
+   "type": "multiple_choice_question",
+   "why": "no option carried weight 100 or class correct_answer",
+   "q": "Which of the following is not a part of the middle ear?"
+  },
+  {
+   "quiz": "MODULE 1.1 & 3.3: BIOPHYSICAL PRINCIPLES OF BLOOD FLOW & PRESSURE (20 marks)",
+   "n": "Question 13",
+   "type": "matching_question",
+   "why": "no \"correct answer was\" title on any option",
+   "q": "The human ear consists of a collecting system, an amplifier system, sensors, and a transmi"
+  },
+  {
+   "quiz": "MODULE 1.1 & 3.3: BIOPHYSICAL PRINCIPLES OF BLOOD FLOW & PRESSURE (20 marks)",
+   "n": "Question 14",
+   "type": "multiple_choice_question",
+   "why": "no option carried weight 100 or class correct_answer",
+   "q": "The human ear is most sensitive to the sound frequency range of:"
+  },
+  {
+   "quiz": "MODULE 1.1 & 3.3: BIOPHYSICAL PRINCIPLES OF BLOOD FLOW & PRESSURE (20 marks)",
+   "n": "Question 15",
+   "type": "matching_question",
+   "why": "no \"correct answer was\" title on any option",
+   "q": "Match the following investigations/technology with their descriptions."
+  },
+  {
+   "quiz": "MODULE 1.1 & 3.3: BIOPHYSICAL PRINCIPLES OF BLOOD FLOW & PRESSURE (20 marks)",
+   "n": "Question 16",
+   "type": "matching_question",
+   "why": "no \"correct answer was\" title on any option",
+   "q": "match the following forms of radiation with their descriptions."
+  },
+  {
+   "quiz": "MODULE 1.1 & 3.3: BIOPHYSICAL PRINCIPLES OF BLOOD FLOW & PRESSURE (20 marks)",
+   "n": "Question 17",
+   "type": "multiple_answers_question",
+   "why": "no option carried weight 100 or class correct_answer",
+   "q": "Which of the following statements on ionising radiatons are true? Select all true options."
+  },
+  {
+   "quiz": "MODULE 1.1 & 3.3: BIOPHYSICAL PRINCIPLES OF BLOOD FLOW & PRESSURE (20 marks)",
+   "n": "Question 18",
+   "type": "multiple_choice_question",
+   "why": "no option carried weight 100 or class correct_answer",
+   "q": "Colonoscopy refers to the examination of the colon using a colonoscope . What type of tech"
+  },
+  {
+   "quiz": "MODULE 1.1 & 3.3: BIOPHYSICAL PRINCIPLES OF BLOOD FLOW & PRESSURE (20 marks)",
+   "n": "Question 19",
+   "type": "multiple_choice_question",
+   "why": "no option carried weight 100 or class correct_answer",
+   "q": "R adiotherapy is used for treatment of some cancers. It causes side effects affecting the "
+  },
+  {
+   "quiz": "MODULE 1.1 & 3.3: BIOPHYSICAL PRINCIPLES OF BLOOD FLOW & PRESSURE (20 marks)",
+   "n": "Question 20",
+   "type": "multiple_answers_question",
+   "why": "no option carried weight 100 or class correct_answer",
+   "q": "The following tissues are classed as excitable tissues because when stimulated these gener"
+  },
+  {
+   "quiz": "MODULE 1.1 & 3.3: BIOPHYSICAL PRINCIPLES OF BLOOD FLOW & PRESSURE (20 marks)",
+   "n": "Question 21",
+   "type": "multiple_choice_question",
+   "why": "no option carried weight 100 or class correct_answer",
+   "q": "Select the false statement on action potential."
+  },
+  {
+   "quiz": "MODULE 1.1:CVS2 MIX & MATCH: HEART & VALVES (10 marks)",
+   "n": "Question 1",
+   "type": "matching_question",
+   "why": "stem is essentially just an external image",
+   "q": "Mix and match. [[IMG:heart labelled.JPG]]"
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY KHAN (7 marks)",
+   "n": "",
+   "type": "text_only_question",
+   "why": "no option carried weight 100 or class correct_answer",
+   "q": "ABOUT THE ISSUES ADDRESSED IN THE QUIZ The effects of inflamed bronchioles as in asthma Du"
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY KHAN (7 marks)",
+   "n": "Question 1",
+   "type": "essay_question",
+   "why": "an instruction to sit an external quiz and self-report a score, not a question",
+   "q": "Do the linked quiz. It requires a lot of thinking. Record your quiz result out of ten belo"
   }
  ]
 }

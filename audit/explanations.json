@@ -31,275 +31,1548 @@
   "No third-person pronouns for the lecturer: apply-migration.mjs re-scans `why` and",
   "`model` and fails the build on one."
  ],
-
  "why": [
-
-  {"k":"k9leq5y","q":"Match each substance to what the cardiovascular system does","t":"The theme is <b>transport</b>. Every one of these is the same system moving something from where it is made or absorbed to where it is used or excreted — note that urea travels liver to kidney, not the other way."},
-
-  {"k":"k1rs32gi","q":"A measure which shows how easy or hard it is for air/blood to flow","t":"These five words are the vocabulary the whole blood-flow section is built on. <b>Resistance</b> is how hard flow is, <b>constriction</b> is the smooth-muscle narrowing that raises it, and <b>perfusion</b> is the result — blood actually reaching the tissue."},
-  {"k":"kpa49oh","q":"This is where the RAAS system is activated","t":"Follow the chain in order and every blank sits somewhere on it: <b>renin</b> from the kidney acts on <b>angiotensinogen</b> from the liver, ACE in the lung makes angiotensin II, and angiotensin II then triggers <b>aldosterone</b> (sodium reabsorbed, water follows) and <b>ADH</b> (water reabsorbed directly)."},
-  {"k":"kog7cln","q":"How is the structure of the artery different to that of the vein","t":"One rule generates the whole table. The artery must <b>withstand pressure</b>, so its media and elastic laminae are thick and prominent around a small round lumen; the vein only carries volume back, so it is floppy with a large lumen and a thick outer coat."},
-  {"k":"k8nqtm0","q":"The nurse explains to him that these measurements show that he has","t":"Two ideas cover almost all of it: <b>BP = cardiac output × peripheral resistance</b>, and pressure is sensed by <b>baroreceptors</b> (aortic arch and carotid sinus) while blood chemistry is sensed by <b>chemoreceptors</b> (aortic and carotid bodies). Confusing those two receptor sets is the trap, and it is set here twice."},
-  {"k":"k8pfmpk","q":"Match each vessel feature to the vessel it belongs to","t":"Read the wall and the vessel names itself: <b>elastic media means pressure</b> (artery), <b>valves mean flow against gravity</b> (vein), <b>one cell thick means exchange</b> (capillary)."},
-  {"k":"kmec3wz","q":"forming a tight barrier between the blood and the nervous tissue","t":"Capillary type follows the job of the organ: <b>continuous</b> where nothing may leak (brain), <b>fenestrated</b> where small molecules must filter out (kidney), <b>sinusoidal</b> where whole cells must cross (bone marrow). The rest is just right ventricle to lungs, left ventricle to body."},
-  {"k":"k1pi7qvn","q":"Blood is pumped to the lungs and body tissues through","t":"The layer names are built from their position — <b>endo</b>cardium lines the inside, so it is what the valves are made of; <b>myo</b>cardium is the muscle. Same logic names the septa for the chambers they sit between."},
-  {"k":"k43f5bt","q":"One of the underlined terms is incorrect","t":"Blood pressure is defined and measured in the <b>arteries</b> — that is the only planted error. The rest of that answer is the standard definition, including pulse pressure as the gap between the two readings."},
-  {"k":"k1xpzhtv","q":"The answer below contains two errors in the underlined parts","t":"Neither error is in the physiology, and both matter anyway: cardiac output is per <b>minute</b>, and stroke volume is quoted for the <b>left ventricle</b>. Get the first wrong and every calculation built on CO = HR × SV comes out wrong with it."},
-  {"k":"kdia54p","q":"Correctly identify the structures in the image below by matching the letters","t":"Work outwards from the lumen — <b>intima, media, externa</b> — then use shape to tell the vessels apart: thick-walled and round is the artery, floppy with a valve is the vein, a single-layer tube is the capillary."},
-  {"k":"kdy1y6r","q":"which conduct blood toward the heart, regardless of oxygen content","t":"The definition is about <b>direction, not oxygen</b>. Veins run towards the heart even when the blood in them is oxygenated, which is exactly what the pulmonary veins do."},
-  {"k":"k1c79tlz","q":"which are responsible for the exchange of gases and nutrients","t":"Exchange needs a <b>wall one cell thick</b> and slow flow. Only the capillary has both — everything else is plumbing."},
-  {"k":"kqrg4qx","q":"which is the most critical in regulating systemic blood pressure","t":"The <b>smooth muscle</b> in the media is what changes a vessel's diameter, and diameter is what sets peripheral resistance — the other half of BP = CO × PR."},
-  {"k":"kbvrfkk","q":"actively causes vasoconstriction and vasodilation","t":"Same point again: <b>only the media has smooth muscle</b>. The endothelium can signal a vessel to relax (nitric oxide), but it cannot contract."},
-  {"k":"k1nnmitv","q":"Why can’t you feel a pulse in a vein","t":"A pulse is the pressure wave from ventricular ejection, and the <b>capillary bed damps it out</b> before the blood reaches any vein. Thin walls are a consequence of low pressure, not the reason the pulse is missing."},
-
-  {"k":"k1duabu0","q":"The effects of venous return, plasma electrolytes, stress, and exercise","t":"Everything here routes through <b>CO = SV × HR</b> and then BP = CO × PR. Calcium raises contractility, potassium slows the heart, and the trained heart pumps <b>slower but more forcefully</b> — the same output in fewer beats."},
-  {"k":"k12ge6st","q":"Her nervous system helps to lower blood pressure back to normal","t":"The reflex always runs <b>receptor → centre → nerve → effector → result</b>: baroreceptors fire, the cardio-inhibitory centre is stimulated, the vagus releases acetylcholine at the SA node, rate falls, pressure falls. The vasomotor centre does the other half by relaxing vessel smooth muscle."},
-  {"k":"kyblkaa","q":"Mesenteric adenitis is usually a mild condition","t":"Two facts unlock most of the blanks: <b>MALT is lymphoid tissue sitting in mucosal membranes</b>, so organs like the spleen and thymus are not MALT; and the lymphatic system's main job is <b>fluid balance</b> — immunity is what it does with that fluid on the way past. <b>One warning about the key on the cell-function blank.</b> The abundant cell in lymph is the lymphocyte, and that part is right — but this paper then marks its function as \"primary mediators of the rapid innate host defense\", which is the description of a <b>neutrophil</b>. Lymphocytes are the <b>adaptive</b> arm: B cells make antibody, T cells kill infected cells and direct the response. Answer the key to score the mark here, and hold on to the real division — innate and fast is the neutrophil, specific and remembered is the lymphocyte."},
-  {"k":"kr5igry","q":"Describe the forces acting across a blood capillary","t":"The whole card is one tug-of-war: <b>hydrostatic pressure pushes fluid out</b> at the arteriolar end, and <b>oncotic pressure pulls it back</b> at the venular end because the plasma proteins stayed behind. The fluid leaves into the interstitium, the space between the cells."},
-  {"k":"kly44op","q":"What will happen to fluid movement in the following conditions","t":"Albumin is what creates the oncotic pull, so losing it makes that pull <b>weaker, not stronger</b> — less fluid is drawn back in and oedema follows. That is the planted error, and it is the mechanism behind the swollen abdomen of severe malnutrition."},
-  {"k":"k1e8t3wy","q":"Describe the direct renal control of BP","t":"Trace it as a volume story: low BP means less blood reaching the kidney, so <b>less filtrate and less urine</b>, so volume is kept, so venous return and stroke volume <b>rise</b> and push pressure back up. Both planted errors run that chain backwards."},
-  {"k":"k1onuyp6","q":"Answer the question to ensure that the conditions and their descriptions match","t":"The word-parts do most of the work: <b>-oedema</b> is fluid, <b>-itis</b> is inflammation, <b>-adenopathy</b> is any node disease, <b>-oma</b> is a tumour. Only elephantiasis (a parasitic worm) and buboes have to be learned as plain facts."},
-  {"k":"k747e3v","q":"The primary mechanism driving filtration in capillary beds","t":"Filtration is driven by <b>the pressure inside the capillary</b> — the heart's push, still present at the arteriolar end. Osmotic and oncotic pressure work the other way, pulling fluid back in."},
-  {"k":"krr0zej","q":"Which of the following is NOT a function of the lymphatic system","t":"The three real ones are fluid balance, absorbing fat from the gut, and immunity. <b>Blood sugar is endocrine</b> — pancreas and liver — and has nothing to do with lymph."},
-  {"k":"k1vrzoso","q":"higher osmolality than the fluid within a red blood cell","t":"Only <b>water</b> moves here. When the solute concentration differs across a membrane, water crosses towards the more concentrated side until they match — no carrier, no energy, so it is osmosis rather than any form of diffusion or transport."},
-
-  {"k":"k1rym1yr","q":"The effect of general factors on blood pressure","t":"Sort every chemical by which half of <b>BP = CO × PR</b> it touches: ANP and nitric oxide drop volume or dilate vessels, adrenaline and ADH raise rate or hold water back. And peripheral resistance itself depends on vessel <b>length and diameter</b>, not on the heart at all."},
-  {"k":"k1kl9zr","q":"Match each change to its effect on blood pressure","t":"Everything routes through <b>BP = cardiac output × peripheral resistance</b>: vessel diameter and blood viscosity move the resistance term, blood volume moves the cardiac output term."},
-  {"k":"k1b5qmqy","q":"Describe the body’s neural mechanisms for regulating blood pressure","t":"<b>Baroreceptors sense stretch, which means pressure; chemoreceptors sense chemistry.</b> Their addresses differ too — baroreceptors in the aortic arch and the carotid <b>sinus</b>, chemoreceptors in the aortic and carotid <b>bodies</b>. Both planted errors are that same swap."},
-  {"k":"k1odjw2h","q":"Predict the change in peripheral resistance as blood vessel diameter","t":"Resistance falls very steeply as a vessel widens — a small change in <b>diameter</b> does far more to flow than any change in vessel length or blood viscosity. That is why the arterioles, not the arteries, are the resistance vessels."},
-  {"k":"k1twa4cl","q":"Write a formula showing the relationship between BP, CO & SVR","t":"Pressure is what you get when flow meets resistance, so the two <b>multiply</b>. Rearranged the other way, CO = BP ÷ SVR — worth being able to do in either direction."},
-  {"k":"km7gvc5","q":"changes to the heart you can detect by examining an ECG","t":"An ECG records <b>electrical activity only</b>. Rate, rhythm and injury patterns are electrical; pressure, resistance and the volume actually pumped are mechanical, and no trace can show them."},
-
-  {"k":"k145c8d2","q":"The homeostatic mechanisms involved in the control of heart rate","t":"Two spines hold this up. Anatomy: <b>SA node → AV node → bundle of His → bundle branches → Purkinje fibres</b>. Control: <b>sympathetic nerves and noradrenaline speed the SA node up, the vagus and acetylcholine slow it down</b>. The cycle-length blank is arithmetic — sixty seconds divided by the rate."},
-  {"k":"k1yedjnt","q":"Lagi has an ECG to check his heart function","t":"The order follows the anatomy, and the step people drop is the one in the middle: the <b>atrial myocardium spreads the impulse cell to cell through intercalated discs</b> before the AV node holds it up."},
-  {"k":"k1pxurfv","q":"concerned about the anchorage of his atrioventricular valves","t":"The <b>papillary muscles</b> anchor the chordae tendineae, and they tighten just before the ventricle contracts — so the valve cusps cannot blow back into the atrium under pressure."},
-  {"k":"k1vv1tqv","q":"The sounds of his heart shows a murmur between the lub and dub","t":"Heart sounds are <b>valves closing</b>, not muscle contracting. A murmur between lub and dub is therefore blood crossing a valve that should be shut — in mitral regurgitation, back into the <b>left atrium</b> while the ventricle contracts."},
-  {"k":"k1ujvbbs","q":"the blood vessel labelled X is the","t":"Follow the drainage upstream: the <b>jugular</b> vein drains the head and empties into the <b>subclavian</b>, and the two together become the brachiocephalic vein before the superior vena cava."},
-  {"k":"k1t60jky","q":"Match each heart structure to its description","t":"The prefixes place them: <b>endo-</b> inside, <b>myo-</b> muscle, <b>peri-</b> around. Chordae tendineae and the septa are named for what they hold and what they separate."},
-  {"k":"k17oe7j0","q":"Using the superior view of the valves","t":"Name each valve by what is <b>downstream</b> of it — the pulmonary valve guards the pulmonary trunk, the aortic valve the aorta. The two AV valves are told apart by side: <b>tricuspid right, mitral left</b>."},
-  {"k":"k1bui087","q":"Match the different parts of an ECG wave","t":"Depolarisation comes before repolarisation, and atria before ventricles: <b>P, then QRS, then T</b>. Atrial repolarisation does happen — it is just buried inside the QRS, which is why there is no wave for it."},
-  {"k":"kijio9l","q":"Match the progress of the electrical impulse through the heart","t":"The flat parts matter as much as the spikes. The <b>PR segment is the AV node delay</b> that lets the atria finish filling the ventricles, and the <b>ST segment</b> is the ventricles fully depolarised and contracting — which is why it shifts in a STEMI."},
-  {"k":"k1la46ar","q":"Match the names with the numbers on the diagram","t":"Work through the flow rather than memorising numbers: right atrium, tricuspid, right ventricle, pulmonary valve on one side; left ventricle, aortic valve, aortic arch on the other."},
-  {"k":"k9oppt0","q":"The pumping chambers of the heart are the","t":"<b>Systole is contraction, diastole is the filling pause</b> — the two halves of every cardiac cycle. Stroke volume is simply what one systole manages to eject."},
-  {"k":"km1ohlr","q":"The larger partition between the two sides of the heart","t":"Two cusps means bicuspid, which is the mitral valve. And the coronary arteries feed the <b>myocardium</b> — which is why blocking one kills muscle rather than lining."},
-  {"k":"kar43wo","q":"Label the five components of the conduction system","t":"It is the same chain top to bottom every time — <b>SA node, AV node, bundle of His, bundle branches, Purkinje fibres</b> — so the labels run in that order down the diagram."},
-  {"k":"k7a2ym3","q":"Explain what the following waves of the ECG represent","t":"Every wave on an ECG is a <b>voltage change, not a contraction</b>, and a chamber must depolarise before it can contract. That one word is the planted error."},
-  {"k":"k15rez0i","q":"Explain the meanings of cardiac reserve and ejection fraction","t":"<b>Cardiac reserve is about output</b> — how much more the heart can pump than it does at rest — and ejection fraction is quoted for the <b>left ventricle</b>, because that is the side whose failure gets measured clinically."},
-  {"k":"koworns","q":"understanding of the terms chronotropic and inotropic","t":"<b>Chrono means time, so rate; ino means force.</b> Sympathetic stimulation and noradrenaline raise both, by driving more calcium into the myocardial cells; acetylcholine from the vagus lowers rate."},
-  {"k":"kqkc2mv","q":"These kinds of shock are directly linked to the heart","t":"Group shock by what has failed: pump (cardiogenic), volume (hypovolaemic), vessel tone (septic, anaphylactic, neurogenic), or a <b>physical block to filling or ejection</b> — tamponade, tension pneumothorax, massive clot — which is obstructive."},
-  {"k":"kvbjhdg","q":"The homeostatic mechanisms that are involved in stroke volume","t":"Everything else on the list either fills the ventricle more (venous return, blood volume) or makes it squeeze harder (adrenaline, sympathetic drive, calcium). <b>Raised potassium does the opposite</b> — it depresses the myocardium and slows conduction."},
-  {"k":"k84fjns","q":"Which kind of blood vessels have valves to prevent backflow","t":"Valves are needed wherever pressure is too low to keep blood moving one way on its own. That is the <b>veins</b>, especially in the limbs, where the skeletal muscle pump does the pushing."},
-  {"k":"ktflk9n","q":"The trabeculae carneae muscles in the ventricles","t":"Trabeculae carneae are the muscular ridges lining the ventricles. Do not confuse them with the <b>chordae tendineae</b>, the thread-like cords that hold the valve cusps down."},
-  {"k":"k1qd62x8","q":"Exercise ...","t":"The skeletal muscle pump and deeper breathing push more blood back to the heart; a fuller ventricle stretches further and contracts harder. That is <b>Starling's law</b>, and it is why a trained heart can pump more per beat."},
-  {"k":"k1latcqb","q":"the flow of blood in the INCORRECT sequence","t":"Check any sequence against the single loop: <b>body → vena cava → right atrium → tricuspid → right ventricle → pulmonary artery → lungs → pulmonary vein → left atrium → mitral → left ventricle → aorta</b>. The odd one out puts a chamber or a valve out of that order."},
-  {"k":"k13relho","q":"The mitral valve has two large cusps","t":"<b>Bicuspid</b> is the other name for it — two cusps on the left, three on the right. The names are simply a count."},
-  {"k":"k2yrk5z","q":"The openings to the coronary arteries open when the aortic valve closes","t":"The heart feeds itself in <b>diastole</b>. While the aortic valve is open its cusps sit over the coronary openings; only when it shuts does blood recoil back and enter them — which is why a very fast heart rate starves the myocardium."},
-  {"k":"k1jj96y1","q":"The LAD artery is also known as the widow maker","t":"The <b>left anterior descending</b> supplies most of the left ventricle and the septum, so occluding it takes out the muscle the body cannot manage without."},
-  {"k":"kq2hvxx","q":"An opening between the atria in the heart that closes to become","t":"Every fetal shunt bypasses something not yet working: the <b>foramen ovale</b> and the ductus arteriosus bypass the lungs, the ductus venosus bypasses the liver. Each leaves a ligament or a dimple behind after birth."},
-  {"k":"kxokc54","q":"prevent back-flow of blood when the ventricles contract","t":"The two sets of valves always work in opposition. When the ventricles contract the <b>AV valves shut</b> — that is the first heart sound — and the semilunar valves open."},
-  {"k":"k19wx7l5","q":"Which layer of the heart use the most energy","t":"It is the only layer that <b>does mechanical work</b>, contracting every second of a lifetime. That is also why it gets its own arterial supply rather than living off the blood inside the chambers."},
-  {"k":"k1bx2vas","q":"The following statement about the heart is true","t":"The three wrong options are all near-misses worth learning: the septum is muscle, the fossa ovalis sits in the <b>inter-atrial</b> septum, and the tricuspid is an AV valve, not a semilunar one."},
-  {"k":"k1k4fr2d","q":"electrical conduction system is true","t":"The route never varies, always <b>top down</b>: SA node, AV node, then the bundle and its branches, then the Purkinje fibres. An option that starts at the AV node is describing an escape rhythm, not the normal path. (Note the option lists the bundle of His and the atrioventricular bundle as separate steps — they are two names for the same structure.)"},
-  {"k":"k1lpsr7u","q":"automaticity","t":"This is why a transplanted heart still beats. The <b>SA node leads simply because it depolarises fastest</b>; nerves and hormones only speed that up or slow it down."},
-  {"k":"k1lc4j2y","q":"refracticity","t":"The long refractory period is protective: cardiac muscle <b>cannot be tetanised</b> the way skeletal muscle can, so the ventricle is forced to relax and refill between beats."},
-  {"k":"k18dlgdn","q":"During depolarisation sodium ions move into the myocardial cells","t":"Depolarisation is sodium rushing <b>in</b>, cancelling the negative charge inside the cell. The waves on the trace then just report where in the heart that is happening."},
-  {"k":"k17ufpdi","q":"if the force of contraction (myocardial contractility)","t":"Adrenaline drives more calcium into the myocardial cell, the fibres shorten further within the same beat, and <b>more of what is in the ventricle gets ejected</b> — a bigger stroke volume from the same filling."},
-  {"k":"k1r22e52","q":"What is the potential space between the two lungs called","t":"The <b>mediastinum</b> is the space between the lungs that holds the heart, great vessels, trachea and oesophagus. Pleura and pericardium are membranes, not spaces."},
-  {"k":"k1n8obb9","q":"The membrane that forms the shiny layer on the lung surface","t":"<b>Visceral means on the organ</b> — the same word is used of the pericardium and the peritoneum. Parietal is always the layer lining the wall."},
-  {"k":"k57z0v3","q":"The double membrane that surrounds the lung","t":"Same rule, in order: the membrane as a whole is the pleura, the layer stuck to the <b>lung</b> is visceral, and the layer lining the <b>thoracic wall</b> is parietal. The film of fluid between them is what stops the lung pulling away."},
-  {"k":"k1nu1tq6","q":"Hyperbaric chambers are clinical applications of which gas law","t":"The chamber itself works by <b>compressing gas</b> — pressure up, volume down — which is Boyle. Henry's law is what then explains the extra oxygen dissolving into the blood, so read carefully which half of the process a question is asking about."},
-  {"k":"kcf5t6r","q":"Blood from inside this structure will next flow into what other structure","t":"If the next stop is a ventricle, what you are looking at must be an <b>atrium</b> — on both sides blood runs atrium → ventricle → artery, never backwards."},
-  {"k":"k4599g6","q":"A trauma patient is progressing rapidly into circulatory shock","t":"Two clues drive it. A <b>bruised abdomen with no visible bleeding</b> points to concealed haemorrhage, and <b>neck pain in a trauma patient</b> raises a cervical cord injury, which removes sympathetic tone and lets the vessels dilate. Afebrile rules out sepsis, and no drug was given."},
-  {"k":"k1p4e31j","q":"Cardiogenic shock can be caused by","t":"Cardiogenic means the <b>pump itself cannot deliver</b> — the coronary clot starves the muscle, the pericardial fluid stops the ventricle filling. Be aware that another past question in this pack files pericardial fluid under <b>obstructive</b> shock; both labels are used in the course material, so read the stem before choosing."},
-
-  {"k":"kfsddxf","q":"Match the names with the numbers on the diagram","t":"Use position rather than the numbers: the two <b>venae cavae enter the right atrium from above and below</b>, the pulmonary artery leaves the right ventricle, and the pulmonary veins come back into the left atrium."},
-  {"k":"k8odyn4","q":"Anatomical Structures of the Heart Identify the structures","t":"The branches off the arch run <b>right to left</b>: brachiocephalic first, then left common carotid, then left subclavian. The brachiocephalic is the only one that divides again, which is what makes it recognisable."},
-  {"k":"k13uy7in","q":"What is a coronary angiogram and what is the purpose","t":"A <b>coronary</b> angiogram looks at the heart's own arteries; carotid is the neck. The other planted error swaps dissolving a clot with a drug for pulling it out mechanically."},
-  {"k":"k1y3l3rb","q":"Blood is returned to the heart via the","t":"Do not forget the third route: the <b>coronary sinus</b> returns the heart's own venous blood straight into the right atrium, alongside both venae cavae."},
-  {"k":"k1kd2mfk","q":"The major vessel delivering deoxygenated blood to the lungs","t":"It is the one artery carrying <b>deoxygenated</b> blood — vessels are named for the direction they travel, not the blood they hold."},
-  {"k":"k1fm4bjy","q":"The pulmonary circulation is a higher pressure circulation","t":"The pulmonary circuit is <b>short and low pressure</b>, which is why the right ventricle wall is so much thinner. Systemic pressures there would push fluid straight into the alveoli."},
-  {"k":"k9ctj13","q":"Another name for the left anterior interventricular artery","t":"They are the <b>two branches of the left coronary artery</b>: the anterior interventricular (the LAD) runs down the front of the septum, the circumflex curves around the left side."},
-  {"k":"keoehv3","q":"A blood vessel that allows placental blood to bypass the liver","t":"Sort the three fetal shunts by what each one skips: <b>ductus venosus</b> the liver, <b>foramen ovale</b> and <b>ductus arteriosus</b> the lungs."},
-  {"k":"kmm9mb9","q":"The coronary ostia are found in the","t":"The coronaries are the <b>first branches off the aorta</b>, just above the aortic valve. The heart supplies itself before anything else gets any blood."},
-  {"k":"kt7s149","q":"Name the major blood vessels in the neck","t":"The question asks for vessels <b>in the neck</b> — the subclavian pair sit under the clavicle, at the shoulder, which is what their name says."},
-
-  {"k":"k1t6uzki","q":"Match each heart sound to its cause","t":"Sounds are <b>valves closing</b>: S1 the AV valves at the start of ventricular contraction, S2 the semilunar valves at its end. S3 and S4 are filling sounds — blood rushing in, and the atrium pushing against a stiff ventricle."},
-  {"k":"ksgqnlv","q":"roughly equivalent","t":"Diffusion depends on the gradient <b>and</b> on solubility. Carbon dioxide is far more soluble in water than oxygen is, so a much smaller pressure gradient still shifts the same amount of gas."},
-  {"k":"kq6dkut","q":"The poor solubility of oxygen in water","t":"Only a small fraction of oxygen can dissolve in plasma, nowhere near enough for metabolism, so almost all of it travels <b>bound to haemoglobin</b>. Anaemia limits oxygen delivery for exactly this reason."},
-
-  {"k":"kevwth3","q":"Match each conduction structure to its feature","t":"Every part of the chain has its own intrinsic rate, and the <b>fastest one sets the pace</b> — normally the SA node. The AV delay is not a flaw: it is what lets the atria empty before the ventricles fire."},
-  {"k":"klcee3h","q":"Match each deflection to what it represents","t":"Read it as <b>depolarise, depolarise, repolarise</b> — atria, then ventricles, then ventricles again — with the P–R interval as the pause at the AV node in between."},
-  {"k":"k10pm9hp","q":"Order the sequence of the flow of electrical impulses","t":"The same chain every time, and each step earns its place: the AV node <b>delays</b>, the bundle branches carry the signal fast down the septum, and the Purkinje fibres make the ventricles contract <b>from the apex upwards</b>, squeezing blood towards the outflow valves."},
-  {"k":"k1l0djfn","q":"What does an ECG record","t":"An ECG picks up the <b>whole heart</b>, atria included — the P wave is atrial. Restricting it to ventricular muscle is the planted error."},
-  {"k":"ki6v76q","q":"Label the ECG recording below","t":"Read left to right: the small bump is P, then the three parts of the QRS complex (<b>Q down, R up, S down</b>), then the broader T."},
-  {"k":"k1kkqmea","q":"A patient with the following ECG result is going into shock","t":"An ECG can only show you the <b>pump</b>. If the trace itself explains the shock, the answer is cardiogenic — the other three are diagnosed from the history (an allergen, an infection, an obstruction), not from a rhythm strip."},
-  {"k":"k1sbj3j7","q":"often called the pacemaker","t":"It leads because it depolarises <b>fastest</b>. Every other part of the chain can pace the heart if the SA node fails, just more slowly — which is what an escape rhythm is."},
-
-  {"k":"k1w9vn4c","q":"The short-term homeostatic control of blood pressure","t":"One reflex, run in both directions. <b>Low BP: sympathetic outflow, faster heart, vasoconstriction, pressure up.</b> High BP: the vagus and acetylcholine slow the heart while the vasomotor centre is inhibited, so vessels dilate. Note the sensors are baroreceptors in the aortic arch and carotid <b>sinus</b>, not the bodies."},
-  {"k":"k9vz1nq","q":"What is the normal heart rate, stroke volume and cardiac output at rest","t":"The three are tied together by <b>CO = SV × HR</b> — multiply the middle of the first two ranges and the third falls out. Learn the relationship and you can reconstruct any one of them."},
-
-  {"k":"krf756l","q":"Presence of air in the pleural cavity","t":"Build them from the parts: <b>dys-</b> difficult, <b>eu-</b> normal, <b>pneumo-thorax</b> air in the chest, <b>cyan-</b> blue. Atelectasis is the odd one out — it names the lung collapsing, whatever caused it."},
-  {"k":"kv7m0s4","q":"Kalama ate a large piece of bread","t":"The soft back wall of the trachea is the <b>trachealis muscle</b>, and its softness is exactly why a large bolus in the oesophagus behind it can press forward into the airway. The epiglottis is the lid; the ciliated mucous lining is the escalator that stops particles going deeper."},
-  {"k":"k80cbe0","q":"That allowed air to get into","t":"Separate the cause from the result: <b>pneumothorax is air in the pleural cavity</b>, and <b>atelectasis is the lung collapsing</b> because the negative pressure holding it open has been lost."},
-  {"k":"k1mnzemr","q":"lung tissue in a beaker of water","t":"A lung that has breathed keeps its <b>residual volume</b> — air that cannot be forced out — so it floats. A lung that never inflated has none, and sinks. This is a real forensic test."},
-  {"k":"k1ehu0j2","q":"Match each factor to its effect on heart rate","t":"Everything here is <b>sympathetic drive up or down</b>, with one exception: in endurance training the resting rate falls because a bigger stroke volume delivers the same cardiac output in fewer beats."},
-  {"k":"kmvd1wf","q":"have cartilage in their walls to keep them open","t":"Cartilage holds the <b>conducting</b> airways open, and it runs out at the bronchioles. That is precisely why bronchioles can constrict in asthma and the trachea cannot."},
-  {"k":"k1ypxio1","q":"The cuboidal epithelium visible in this image","t":"The epithelium thins as the airway narrows: <b>pseudostratified columnar in the trachea, cuboidal in the bronchiole, simple squamous in the alveolus</b>. Cuboidal cells with no cartilage in the wall is the giveaway."},
-  {"k":"k1djb4oi","q":"This is a section through a trachea","t":"The trachea does contain hyaline cartilage — but read what the label is actually sitting on. Answering from the organ rather than from the structure the arrow points at is the trap here."},
-  {"k":"k1j0y5xv","q":"The pressure exerted by each gas in a mixture is proportional","t":"<b>Dalton is about a mixture</b>: each gas contributes pressure in proportion to how much of the mixture it makes up. Boyle relates pressure to volume; Henry describes how much gas dissolves in a liquid."},
-  {"k":"kermbys","q":"All of the following statements are true of inspiration except","t":"Quiet inspiration is <b>active</b>: the diaphragm contracts and flattens, the thorax enlarges, and the pressure inside the lungs falls below atmospheric so air moves in. It is quiet expiration that is passive."},
-  {"k":"kbbtgg","q":"What effect will a decrease in pH have on the respiration rate","t":"A falling pH means excess hydrogen ions, and blowing off carbon dioxide removes acid. <b>Ventilation rises to correct acidosis</b> — the same reflex behind the deep sighing breaths of diabetic ketoacidosis."},
-  {"k":"k73rk7r","q":"which factors directly influence a persons lung capacity","t":"Lung capacity is set by <b>body size and physiology</b> — height, sex and age, plus the reference ranges that are adjusted for ethnic background. The distractors are all social rather than biological."},
-
-  {"k":"k2ux4u3","q":"if there is increased venous return to the heart","t":"More filling stretches the ventricle further, and a stretched cardiac fibre contracts more strongly. That is <b>Starling's law</b>, and it is how the heart matches its output to what comes back to it."},
-  {"k":"k1vxojcz","q":"if arterial vessels are constricted","t":"<b>Afterload is the pressure the ventricle has to beat against.</b> Raise it and less blood leaves per beat — which is why untreated hypertension eventually wears the left ventricle out."},
-
-  {"k":"kaco8rh","q":"Match each component of blood pressure regulation","t":"Two timescales in one list. <b>Baroreceptors and the vasomotor centre act in seconds</b>; <b>renin, aldosterone and ADH work over hours</b>, and they work by changing volume rather than vessel diameter."},
-  {"k":"kkl3nwp","q":"Cold and clammy skin, tachycardia, and rapid breathing","t":"Cold clammy skin with a racing heart is the classic <b>fight-or-flight</b> picture — vasoconstriction shunting blood to the core. The renin pathway matters in shock too, but it is slower and does not produce these signs."},
-
-  {"k":"k10yc7uy","q":"Choose the correct cause of each of the following types of shock","t":"Name the thing that failed: <b>volume</b> (hypovolaemic), <b>pump</b> (cardiogenic), or <b>vessel tone</b> — which is what sepsis and anaphylaxis both destroy, by different routes."},
-  {"k":"keonewe","q":"Shock is defined as a life-threatening, emergency condition","t":"The definition is about <b>perfusion, not blood pressure</b>. A patient can be in shock while the blood pressure still reads normal, because compensation props it up right until it fails."},
-  {"k":"kr93sfw","q":"The commonest cause of septic shock is","t":"<b>The infection is the cause; the shock is the vasodilation it produces.</b> Gram-negative organisms are the classic trigger, through the endotoxin in their cell wall."},
-  {"k":"k1orvyr5","q":"complete C-5 spinal cord transection","t":"<b>Bradycardia together with hypotension</b> is the tell. Every other kind of shock drives the heart rate up; when a cord injury cuts sympathetic outflow the vessels dilate and the heart cannot speed up to compensate."},
-  {"k":"kmqo1g6","q":"A patient that is in septic shock commonly has","t":"Early septic shock is <b>warm and fast</b> — vessels dilated, skin warm, heart and breathing racing. Cold clammy skin belongs to hypovolaemic and cardiogenic shock, or to sepsis only once it is very late."},
-
-  {"k":"k13eferj","q":"Match each cardiovascular term to its meaning","t":"Read the endings: <b>-aemia</b> concerns blood, <b>-itis</b> is inflammation, <b>a-systole</b> is literally no contraction. Angina is ischaemia that is still reversible; infarction is when it no longer is."},
-  {"k":"k17wb5hq","q":"Cardiac muscle tissue is distinctive because of their cohesiveness","t":"<b>Desmosomes hold the cells together; gap junctions let ions pass between them.</b> The stem hands you the first, so the connecting channels must be the second — and that is what lets the myocardium contract as one unit."},
-  {"k":"kow4cjn","q":"An elderly woman was admitted to the medical unit with dehydration","t":"Fluid has weight, so acute <b>weight loss</b> is the most reliable measure of how much has been lost. Engorged neck veins and a full bounding pulse are signs of the opposite problem — fluid overload."},
-  {"k":"ktgr8d1","q":"A patient is receiving a loop diuretic","t":"A loop diuretic strips <b>fluid and electrolytes together</b>, so more than one option here describes a real risk. This key takes the fluid and sodium route (restlessness and agitation); keep the potassium picture — a weak irregular pulse and poor muscle tone — in mind as the same drug's other classic effect."},
-
-  {"k":"k14nta1t","q":"Match each respiratory function to its structure or mechanism","t":"The lungs do a great deal more than gas exchange: <b>speech, smell, pH control and the activation of angiotensin II</b> all happen here. That last one is why the respiratory system keeps turning up in the blood-pressure story."},
-  {"k":"k19bto3m","q":"For what metabolic reason does respiration occur","t":"Respiration exists to serve <b>cellular metabolism</b> — oxygen in so the mitochondria can make ATP, carbon dioxide out because it is the waste. Everything else the lungs do is secondary to that trade."},
-  {"k":"k101608j","q":"would not favour internal respiration","t":"Internal respiration is oxygen <b>leaving the blood for the cells</b>, so it is helped by whatever a hard-working tissue looks like: warm, acidic, high in carbon dioxide. A tissue already rich in oxygen has no gradient left to drive it."},
-
-  {"k":"kl6z6z3","q":"Match each respiratory structure to its distinguishing feature","t":"Each one is defined by the job its shape does: the <b>cricoid is a complete ring</b> because it must never collapse, the conchae make air swirl so it is warmed and filtered, and the carina is nerve-rich so anything reaching it triggers a cough."},
-  {"k":"kti7lm7","q":"Comment on the relative sizes of the two lungs","t":"The heart sits left of the midline, so the left lung gives up the space — the <b>cardiac notch</b>, and two lobes instead of three. It is also why inhaled objects tend to end up on the right, where the bronchus is wider and steeper."},
-  {"k":"k19vjhiy","q":"The conducting zone includes the nose, pharynx, larynx","t":"The <b>respiratory</b> bronchioles do not belong to the conducting zone: they already have alveoli budding off their walls, so gas exchange has begun by then. The word that makes this false is <b>all</b>."},
-  {"k":"kbxlfk4","q":"The respiratory zone includes the parts of the lungs","t":"The rule is simple — if <b>alveoli are attached to it</b>, it is respiratory zone. Everything upstream only moves, warms, filters and humidifies the air."},
-  {"k":"k1fj7rff","q":"only the epiglottis does not have a gaseous exchange function","t":"Of that list <b>only the alveolus exchanges gas</b>. Trachea, carina and nasopharynx are all conducting structures too, so singling out the epiglottis makes the statement false several times over."},
-  {"k":"k1nbveib","q":"only the alveolus is in the respiratory zone","t":"The <b>respiratory bronchiole</b> is in the respiratory zone as well, along with the alveolar ducts and sacs. Again the word <b>only</b> is what makes it false."},
-  {"k":"kv3m9im","q":"shows the respiratory system parts in the correct order","t":"Learn it as three stretches: <b>nose to larynx</b>, then the branching <b>bronchial tree</b> narrowing at every division, then the <b>alveolar</b> end where exchange happens. Any sequence question is just testing that map."},
-  {"k":"kto9via","q":"Emphysema is a condition that causes the","t":"Emphysema destroys the walls <b>between alveoli</b>. Losing that elastic tissue means the lung cannot recoil to push air out, so air is trapped — the problem is expiration, not inspiration."},
-  {"k":"k1y8pvcm","q":"At the point where the trachea branches into two bronchiole","t":"The carina and the cough reflex are both right; the word <b>bronchiole</b> is wrong. The trachea divides into two main <b>bronchi</b>, which are many generations larger."},
-  {"k":"k1244ch","q":"The pressure in the alveoli is known as","t":"Keep the three straight: <b>intrapulmonary</b> is inside the alveoli, <b>intrapleural</b> is in the pleural space and is always the lower of the two, and transpulmonary is the difference between them — the pressure that actually holds the lung open."},
-  {"k":"koc0mye","q":"Air is forced out of the lungs during normal expiration","t":"Quiet expiration is <b>passive</b>: the inspiratory muscles simply stop and the stretched elastic tissue springs back. Muscles are only recruited when expiration is forced."},
-  {"k":"k1ysoo40","q":"During an asthma attack, bronchioles become severely","t":"Asthma is <b>bronchoconstriction</b> plus mucus and inflammation. Adrenaline relaxes airway smooth muscle through its beta-2 receptors, which is exactly why it is the emergency drug."},
-  {"k":"k13oek3h","q":"When the trachealis muscle contracts during coughing","t":"Narrowing the tube makes the same volume of air travel <b>faster</b>, and speed is what shifts mucus. Warming and humidifying happened much earlier, in the nose."},
-  {"k":"k1m5ao4c","q":"Infant respiratory distress syndrome occurs because premature infants","t":"Without <b>surfactant</b> the water lining each alveolus pulls it shut, so the baby has to generate enormous pressure on every single breath. Type II cells only start producing it late in pregnancy, which is what makes prematurity the risk."},
-
-  {"k":"k1bngwd0","q":"Match each airway level to its wall structure","t":"Two things change all the way down the tree: <b>cartilage disappears and the epithelium gets thinner</b>, until the alveolar wall is a single flat cell — thin enough for gas to cross in a fraction of a second."},
-
-  {"k":"ki087ct","q":"Match the terms found in the alveoli with their correct function","t":"Two cell types, two jobs: <b>type I is the thin wall gas crosses</b>, <b>type II makes surfactant</b>. The macrophage is the cleaner, because everything inhaled that got past the cilia ends up here."},
-  {"k":"k1d2na6x","q":"Using the alveolus diagram","t":"The respiratory membrane is only three thin layers pressed together — <b>alveolar cell, fused basement membranes, capillary cell</b>. Anything that thickens it, whether fluid in pulmonary oedema or scarring in fibrosis, slows gas exchange down."},
-  {"k":"k17v65jh","q":"Even the most forceful exhalation leaves air in the lungs","t":"If the alveoli emptied completely they would stick shut and need enormous pressure to reopen. <b>Residual volume</b> is what keeps them open — and it is also why this is the one volume a spirometer cannot measure."},
-
-  {"k":"kr4l7cu","q":"match each lung volume or capacity to what it means","t":"<b>Volumes add up to capacities.</b> Vital capacity is the three you can move — tidal plus both reserves — and residual volume is the one you cannot, so it is never part of vital capacity. Check it on the trace: 500 + 3000 + 1100 = 4600 mL vital capacity, and adding the 1200 mL you can never exhale gives the 5800 mL total lung capacity."},
-  {"k":"kdzqrlc","q":"expired forcibly after maximal inspiration","t":"Read the wording closely: <b>after a maximal inspiration</b> means the entire usable range in one breath, not just the reserve at one end of it."},
-  {"k":"kri4egq","q":"The amount of air that can be inspired above the tidal volume","t":"<b>Reserve means what is left over</b> beyond a normal quiet breath — inspiratory reserve above it, expiratory reserve below it."},
-
-  {"k":"k1if7he0","q":"Match the muscles to their action","t":"Quiet breathing uses the <b>diaphragm and the external intercostals</b>, and nothing else. The neck muscles, the internal intercostals and the abdominals are recruited only once breathing becomes forced."},
-
-  {"k":"kmcenmv","q":"Match each partial pressure to where it is found","t":"The gradient is the whole point: oxygen falls <b>atmosphere → alveolus → blood → cell</b> and carbon dioxide runs the other way. Alveolar air is poorer in oxygen than the atmosphere because it has been humidified and mixed with the air that never left."},
-  {"k":"k67gzs3","q":"Two gases contribute to 99","t":"Air is roughly four-fifths <b>nitrogen</b> and one-fifth <b>oxygen</b>. Carbon dioxide is a trace gas by comparison, which is why atmospheric PCO₂ is so tiny next to the alveolar figure."},
-  {"k":"k1nzg744","q":"not a factor that promotes oxygen dissociation from hemoglobin","t":"The real modifiers are the ones that change inside a working tissue — <b>heat, acid, carbon dioxide, 2,3-BPG, and a low oxygen pressure</b>. White cells play no part in oxygen carriage at all."},
-
-  {"k":"kt4sikd","q":"Match each value to the correct location","t":"Arterial blood arrives nearly saturated and leaves the tissues still carrying most of its oxygen. That leftover is the <b>venous reserve</b> — what a tissue draws on the moment it starts working harder."},
-
-  {"k":"kxqurhh","q":"Hemoglobin has the highest affinity for which of the following gases","t":"Haemoglobin binds <b>carbon monoxide far more tightly than oxygen</b> and will not release it. That is why carbon monoxide poisoning suffocates a patient whose skin and blood still look healthily red."},
-  {"k":"kf8kx2f","q":"Hemoglobin molecules are fully saturated when bound to","t":"One haem group per subunit, <b>four subunits per molecule</b>. Each oxygen that binds also makes the next one bind more easily, which is what gives the dissociation curve its S shape."},
-  {"k":"k1egwrpc","q":"In its relaxed state, hemoglobin tends to","t":"Haemoglobin has two shapes: <b>relaxed binds oxygen, tense releases it</b>. Anything that makes a tissue acidic or hot pushes the molecule towards the tense form, so the oxygen comes off where it is needed."},
-  {"k":"k1uv1cob","q":"Oxygen is uploaded by the heme groups","t":"They ride on <b>different parts of the same molecule</b>, so haemoglobin can carry both at once — which is exactly what it is doing on the journey back from the tissues."},
-  {"k":"ko4c7hf","q":"The Bohr effect refers to the change in","t":"The point of the Bohr effect is that it is <b>self-targeting</b>: the conditions that shift the curve are the conditions inside a hard-working tissue, so oxygen is unloaded precisely where demand is highest."},
-
-  {"k":"k1copyoy","q":"The majority of carbon dioxide is transported","t":"Most carbon dioxide is converted inside the red cell into <b>bicarbonate</b> and then carried in the plasma. That same reaction releases hydrogen ions, which is the link between breathing and acid–base balance."},
-
-  {"k":"k33eudc","q":"Match each control centre to its role","t":"The rhythm is generated in the <b>medulla</b> and only smoothed by the pons; the phrenic nerve is the wire out to the diaphragm. That is why an injury above the mid-cervical cord stops breathing altogether."},
-
-  {"k":"knwp6nq","q":"The pulmonary inflation reflex depends upon stimulation","t":"The inflation reflex is <b>mechanical</b>: stretch receptors in the airways cut inspiration short before the lung is overinflated. Chemoreceptors watch chemistry, not volume."},
-  {"k":"k522vfi","q":"When holding our breath for a long time","t":"Breathing is driven mainly by <b>rising carbon dioxide</b> and the acid it produces, not by falling oxygen. It is also why hyperventilating before a breath-hold is dangerous — it delays the urge without adding meaningful oxygen."},
-  {"k":"k1oo8oyw","q":"arterial blood gas results","t":"Read the three values against each other. The pH is <b>alkalotic</b>, the PaCO₂ is <b>low</b>, the bicarbonate is <b>normal</b> — pH and carbon dioxide moving in opposite directions is the signature of a <b>respiratory</b> problem, and a normal bicarbonate rules the metabolic one out. This past paper marks the answer as metabolic alkalosis; the values as printed do not support that, so learn the rule rather than this key: pH and CO₂ opposite means respiratory, pH and bicarbonate together means metabolic."},
-  {"k":"ktewuho","q":"The lungs act as an acid","t":"Only one direction makes sense: <b>more carbon dioxide means more acid, so ventilation must go up</b> to blow it off. The other three statements all move the wrong way, which is what makes them false."},
-
-  {"k":"k1relnq3","q":"Match each influence on breathing to its source","t":"Breathing has <b>three sets of controllers</b> — voluntary from the cortex, emotional from the limbic system, and automatic from the chemoreceptors. The chemical one always wins in the end, which is why a voluntary breath-hold always finishes with a breath being taken for you."},
-
-  {"k":"k1pv84eb","q":"Match each stimulus to its effect on breathing","t":"The exercise one is the surprise: rate and depth rise <b>before</b> the blood gases have changed at all, because the motor cortex and the joint receptors signal the medulla directly. The two irritant reflexes divide by level — sneeze above the larynx, cough below it."},
-  {"k":"kieze6o","q":"Match each acclimatisation change to what it achieves","t":"Every change here does one of two things: <b>carry more oxygen</b>, or <b>deliver it closer to the mitochondria</b>. That is why acclimatisation takes weeks — the adjustments are structural, not just a faster rate of breathing."},
-
-  {"k":"kvsst2h","q":"Match each clinical description to its correct term","t":"The same word-parts again, and the pair worth separating carefully is <b>pneumothorax</b> (air where it should not be) and <b>atelectasis</b> (the collapse that the air causes)."},
-
-  {"k":"keopzdk","q":"the major function of the lymphatic system","t":"By volume the lymphatics are a <b>drainage system</b> — they return the fluid the capillaries leak, which would otherwise become oedema. Immunity is what happens to that fluid as it filters through the nodes on the way."},
-  {"k":"ky9purr","q":"The typical fluid replacement for the patient","t":"<b>Match the fluid to the deficit.</b> Isotonic fluid restores volume without shifting water between compartments; hypotonic fluid is what drives water into the cells, and hypertonic pulls it out. Always check which compartment a question is asking you to refill."},
-
-  {"k":"k1mf03z0","q":"Axillary lymph nodes are often removed in breast cancer cases","t":"Breast lymph drains mostly to the <b>axilla</b>, so that is where spread shows up first. Sampling the sentinel node is what spares many patients a full clearance — and the arm lymphoedema that can follow one."},
-  {"k":"k97m7jg","q":"NOT specifically associated with the lymphatic system","t":"Bone marrow counts because it is where lymphocytes are <b>made</b>. The kidneys handle fluid too, but by filtering blood, not lymph."},
-  {"k":"kq53x3i","q":"What is the vein labelled A","t":"This is where the two systems join: the <b>thoracic duct empties into the left subclavian vein</b>, handing the lymph back to the bloodstream."},
-
-  {"k":"k1ur7y0v","q":"Lymph flows towards the thoracic cavity due to the positive pressure","t":"Inhalation creates a <b>negative</b> pressure in the thorax, and that is what draws lymph upwards. Skeletal muscle movement is the other pump — lymph has no heart of its own, which is why immobility causes swelling."},
-
-  {"k":"k420k7h","q":"Match each lymphatic term to its meaning","t":"Two of these are signs to recognise on sight: <b>red streaks tracking from a wound</b> is lymphangitis, and <b>left shoulder-tip pain</b> after abdominal trauma is Kehr's sign of a ruptured spleen."},
-
-  {"k":"k1l91rb9","q":"Match each immune cell or structure to its role","t":"Split them by job: <b>B cells make antibody</b> (as plasma cells) and <b>T cells act on cells</b> — CD8 killing infected ones, CD4 directing everybody else. The dendritic cell is the one that starts the whole thing, by carrying antigen to the node."},
-
-  {"k":"k1q7e971","q":"rate of carbon dioxide and oxygen exchange is roughly the same","t":"Diffusion depends on the gradient <b>and</b> on solubility, and here the two almost cancel. Oxygen has much the steeper partial-pressure gradient, but carbon dioxide dissolves far more readily in the watery film and plasma it must cross, so similar amounts move in the same time. Neither gas is actively transported anywhere in the lung — <b>both move by simple diffusion</b>, which rules out two of the distractors outright."},
-  {"k":"k1upb3cn","q":"trachealis muscle contracts","t":"The trachealis closes the gap at the back of the C-shaped cartilage rings. Narrowing the tube makes the same air travel <b>faster</b>, and a cough clears mucus only because of that velocity. The rings are what hold the airway open; the muscle exists to make it briefly smaller. Warming and moistening are done in the nose, and swallowing is the oesophagus's own muscle."},
-  {"k":"k1b96knn","q":"majority of carbon dixoide is transported","t":"About <b>70%</b> travels as bicarbonate. Carbon dioxide enters the red blood cell, carbonic anhydrase converts it to carbonic acid, and that splits into H⁺ and bicarbonate, which leaves for the plasma. So the reaction happens <b>in the red cell</b> but the carrying happens in the plasma — one distractor puts the finished product in the wrong compartment. Carbonic acid itself is only a momentary intermediate, never a transport form."},
-  {"k":"k1pht6s3","q":"Pulmonary ventilation is also known as","t":"Learn the four processes as a set: <b>pulmonary ventilation</b> (breathing — moving air in and out), <b>external respiration</b> (exchange at the alveoli), <b>transport</b> of gases in the blood, and <b>internal respiration</b> (exchange at the tissues). Cellular respiration is a fifth and separate thing — the metabolism inside the cell that consumes the oxygen. Only the first is air movement; the rest are exchange or delivery."},
-  {"k":"k19ozcm0","q":"cells that line the airways of the nasal cavity","t":"The conducting airways are lined with <b>ciliated pseudostratified columnar</b> epithelium, which is exactly what the mucociliary escalator needs: goblet cells to make the mucus, cilia to sweep it. Remove the cilia and there is no escalator — which is what smoking does. Simple squamous belongs to the alveoli, where a short diffusion distance matters more than cleaning."},
-  {"k":"k1iwtyzg","q":"function of alveolar type 1 cells","t":"Split the alveolar cells by shape. <b>Type I are flat</b> and cover most of the surface, so gas crosses them quickly; <b>type II are rounded</b> and secrete surfactant. Propelling mucus is the job of cilia further up the tree, and phagocytosis belongs to the alveolar macrophage — three different cells with three different jobs, all visible in the same micrograph."},
-  {"k":"k1m3bd0o","q":"inspired above the normal tidal volume","t":"Read it as a position on the spirometry trace. Tidal volume is the quiet breath; the <b>inspiratory reserve</b> is what you can still drag in on top of it, and the expiratory reserve is the same idea downwards. Vital capacity is not a reserve at all — it is the whole usable range, IRV plus TV plus ERV — and 'reserve air' is not a term this course uses."},
-  {"k":"k192pain","q":"Match the letters on the diagram showing different lung volumes","t":"Work from the trace rather than from the names. The <b>volumes</b> are the four single blocks — tidal, inspiratory reserve, expiratory reserve, residual — and the <b>capacities</b> are sums of two or more, so they are the tall brackets spanning several blocks. Vital capacity is everything except residual volume; total lung capacity is everything including it. Residual volume is the block that never moves, which is what separates that pair."},
-  {"k":"kk38ne7","q":"maintain a patent or open airway","t":"Patent simply means open. The <b>larynx</b> is built of cartilage, so it holds its own shape and cannot collapse inwards. The pharynx is a muscular tube that can. The conchae only swirl and warm incoming air, and the hyoid bone is an anchor for muscles rather than part of the airway wall."},
-  {"k":"kuz0sbn","q":"roughly 99% of the air in the atmosphere","t":"Nitrogen is about <b>78%</b> and oxygen about <b>21%</b>, which leaves barely 1% for everything else — argon, water vapour and carbon dioxide together. That is why carbon dioxide in inspired air exerts so tiny a partial pressure, and therefore why the gradient carrying it out of the blood does not need to be steep."},
-  {"k":"kknbgq6","q":"true during inspiration except","t":"Inspiration is the <b>active</b> phase: the diaphragm contracts and flattens, the rib cage swings up and out, the thorax enlarges, and because the volume rose the pressure inside falls below atmospheric — Boyle's law — so air flows in. Every other statement is a consequence of that one contraction, which is what leaves the relaxed diaphragm as the odd one out. It describes quiet <b>expiration</b>."},
-  {"k":"k1g4tscg","q":"NOT a factor that promotes oxygen dissociation","t":"Offloading is triggered by signs that a tissue is working hard: <b>more carbon dioxide, more acid, more heat</b>, and a falling PO₂. All of those shift the dissociation curve to the right and loosen haemoglobin's grip — the Bohr effect — which is how exercising muscle extracts more oxygen from the same blood. White cells are immune cells and appear nowhere on that curve."},
-  {"k":"khna7sq","q":"Alveoli are prevented from collapsing","t":"The threat is <b>surface tension</b>: the water film lining an alveolus pulls it inwards, and the smaller the alveolus the harder it pulls. Surfactant from type II cells breaks up that film and lowers the tension. Shape alone does not save it — which is precisely what neonatal respiratory distress syndrome demonstrates, since those alveoli are the right shape and still collapse."},
-  {"k":"kgnlggd","q":"nerve that excites the diaphragm","t":"The diaphragm is skeletal muscle, so it does nothing without a motor nerve, and that nerve is the <b>phrenic</b> — from cervical roots C3, C4 and C5. That is why a high cervical spinal injury stops breathing while a lower one does not. The intercostal nerves supply the rib muscles, and the vagus is parasympathetic to the viscera; neither drives the diaphragm."},
-  {"k":"k1xhpkhs","q":"saturated haemoglobin molecule","t":"Each haemoglobin carries <b>four haem groups</b>, each holding one iron atom and binding one oxygen molecule, so saturation is a count out of four rather than a yes or no. Oxygen binds to the <b>iron</b>, not to the amino acids of the globin chains. Each molecule bound makes the next bind more easily, and that cooperativity is what gives the dissociation curve its S shape."},
-  {"k":"kp9bp2s","q":"lung volume is affected by","t":"Both, and they work against each other. <b>Elasticity</b> is the recoil that empties the lung; <b>surfactant</b> is what stops that recoil from closing the alveoli altogether. Together they set compliance — how much volume you gain for a given effort — so an option offering either one alone is offering half of the mechanism."},
-  {"k":"k1g2wmvk","q":"External respiration is affected by all the following except","t":"External respiration is <b>diffusion across the respiratory membrane</b>, and diffusion is governed by surface area, membrane thickness, the solubility of the gas and the partial-pressure gradient. Airway resistance is a <b>ventilation</b> problem: it limits how much air reaches the alveolus, not how gas crosses once it is there. Sorting factors into 'gets air there' and 'gets gas across' answers most questions on this focus point."},
-  {"k":"k4egzsn","q":"respiratory membrane is made up of alveolar cells and surfactant","t":"The respiratory membrane is everything gas must cross: <b>alveolar epithelium, the fused basement membranes, and capillary endothelium</b> — three layers totalling only 0.5–1 µm. Surfactant coats the inner surface and lowers surface tension, but it is not one of the diffusion layers. Omitting the capillary wall is what makes the statement false."},
-
-  {"k":"kr7joc2","q":"Normal blood pH is","t":"Narrower than it looks: roughly 6.8 to 7.8 is survivable, and <b>7.35–7.45</b> is the slice the body actively defends. Note that it is <b>alkaline</b>, not neutral — so a pH of 7.2 is an acidosis even though 7.2 is still above 7 on the scale. That single point is the trap in almost every acid-base question."},
-  {"k":"k8uvgiu","q":"very high levels of CO 2 would have a pH of","t":"Carbon dioxide is an acid in disguise: dissolved CO₂ plus water makes carbonic acid, which splits into H⁺ and bicarbonate. <b>More carbon dioxide means more H⁺, which means a lower pH.</b> Because the cause is the lungs failing to clear it, this is specifically a <b>respiratory</b> acidosis — and running the same chain backwards is what makes overbreathing a respiratory alkalosis."},
-  {"k":"k1xgy5ip","q":"blood pH of 7.5 due to vomiting","t":"<b>The answer key on this card is wrong, and a verbatim card is never edited</b> — it reproduces the question and the key exactly as Canvas served them, so read this one and move on. Vomiting loses <b>gastric acid</b>, leaving the blood relatively more alkaline: that is a metabolic <b>alkalosis</b>. The number says the same thing — 7.5 is above 7.45, and question 1 of this very quiz defines normal as 7.35–7.45, so 7.5 cannot be an acidosis of any kind. Hannetjie's own RESP 3 summary slide lists 'Severe vomiting-loss of acid' under Metabolic Alkalosis. Answer it False in your head, and know why."},
-  {"k":"k7gf6z4","q":"Blood with a pH of 7 is","t":"Anything below 7.35 is acidotic, and 7 is well below it. The trap is reading 7 as 'neutral', which it is for <b>pure water</b> — but blood is held deliberately alkaline, so water-neutral blood would be a life-threatening acidosis. Acidotic describes the blood; acidosis is the process that made it that way."},
-  {"k":"k1s6py23","q":"diabetic patient metabolising fates and producing ketones","t":"Two things make this <b>metabolic</b> rather than respiratory: the acid is <b>produced by metabolism</b> — ketone bodies from fat breakdown when glucose cannot enter the cells — and the lungs are not the cause. Compare the carbon-dioxide questions on this quiz: the same low pH, a completely different origin. Expect deep sighing Kussmaul breathing here, which is the lungs blowing off CO₂ to compensate for an acid they did not create."},
-  {"k":"k518wrr","q":"Fast and deep breathing gets rid of more carbon dioxide","t":"Follow the chain: blowing off carbon dioxide removes the source of H⁺, so pH <b>rises</b>. It is <b>respiratory</b> because the lungs caused it and <b>alkalosis</b> because the pH went up — the two halves of the name answer two different questions, and each distractor gets one half right. This is the panic-attack picture, and the reason rebreathing helps."},
-  {"k":"k1i6atwd","q":"About hemoglobin","t":"The prefix names what is attached: <b>oxy-</b> oxygen, <b>carbamino-</b> carbon dioxide, <b>carboxy-</b> carbon monoxide, <b>deoxy-</b> nothing at all. Carbamino and carboxy are the two most often swapped, and the difference is clinical: carbon monoxide binds far more tightly than oxygen and will not release, which is what makes it lethal. <b>Heme</b> is the iron-holding part itself, and 2,3-BPG is the red cell's own regulator, loosening the grip so oxygen is handed over to tissues. One caution on the figures printed here: Hannetjie's RESP 3 slide puts the carbamino fraction at 20–30%, not the 10–20% on this card."},
-  {"k":"kecmc59","q":"parts of the bronchial tree in the correct order","t":"Follow the air, and watch the order of the two bronchioles. <b>Terminal</b> bronchioles end the conducting zone — no alveoli, no gas exchange — and <b>respiratory</b> bronchioles begin the respiratory zone, because alveoli start budding from their walls. Terminal comes first even though the word sounds final: it is the end of conduction, not the end of the tree."},
-  {"k":"k1i83chq","q":"Bronchiole are lined with cuboidal epithelium","t":"The lining thins as the tube narrows: pseudostratified columnar in trachea and bronchi, simple <b>cuboidal</b> in bronchioles, simple squamous at the alveolus. It thins for the same reason the cartilage disappears — less need to condition and clear the air, more need for a short diffusion distance."},
-  {"k":"k19pxad7","q":"Bronchi are supported by cartilage","t":"This is the most useful single landmark for telling the two apart down a microscope. Cartilage holds the larger airways permanently open; bronchioles have <b>smooth muscle instead</b>, so their diameter is adjustable — which is exactly why an asthma attack constricts bronchioles rather than bronchi."},
-  {"k":"kjzqexo","q":"Penumocytes types 1 and 2","t":"Only type I is squamous — flat, and thin enough for gas to cross. <b>Type II is cuboidal</b>, and its bulk is the point: it needs room for the machinery that manufactures surfactant. The general rule is worth carrying: a cell built for exchange is flat, a cell built for secretion is not."},
-  {"k":"k10gn447","q":"Neonatal respiratory distress syndrome","t":"Surfactant production ramps up late in gestation, so a premature lung is structurally present but <b>chemically unfinished</b>. Without surfactant, surface tension wins and alveoli collapse at the end of each breath, so every one has to be reinflated from scratch — which is why the work of breathing becomes unsustainable. It is the clinical proof of what surfactant is for."},
-  {"k":"k8rzdth","q":"Two gases contribute to 99% of the total atmospheric pressure","t":"Nitrogen about <b>78%</b>, oxygen about <b>21%</b>. It matters because of Dalton's law: each gas contributes pressure in proportion to its share, so nitrogen supplies most of the total pressure at sea level while playing no physiological part at all, and oxygen's roughly one-fifth share is what sets the partial pressure driving diffusion into the blood."},
-
-  {"k":"k1qvho37","q":"pressure exerted by each gas in a mixture is proportional to its percentage","t":"Attach each name to its own idea. <b>Dalton</b> is about a mixture: each gas contributes pressure in proportion to its share. <b>Boyle</b> is about one gas and its container: squeeze the volume and the pressure rises, which is what breathing does. <b>Henry</b> is about a gas meeting a liquid: how much dissolves depends on its partial pressure and its solubility. Two distractors deliberately bolt the right name onto the wrong law."},
-  {"k":"k3gwxqb","q":"rate of CO 2 exchange roughly equivalent to that of O 2","t":"Solubility is the second half of the diffusion story and the half that gets forgotten. Oxygen has the steeper partial-pressure gradient, but carbon dioxide dissolves far more readily in the fluid it has to cross, and the two effects roughly cancel out. Neither gas is actively transported and neither binds the other in transit — <b>simple diffusion, in both directions</b>."},
-  {"k":"k8p8oya","q":"External respiration is affected by all of the following factors except","t":"The three that do belong are the terms of the diffusion equation: <b>membrane thickness</b>, <b>gas solubility</b> and the <b>partial-pressure gradient</b> — with surface area as the fourth. Airway resistance sits one step upstream: it limits how much air arrives, which is <b>ventilation</b>, not exchange. Real lung disease blurs the two; this question deliberately does not."},
-  {"k":"k1b9kmua","q":"majority of carbon dioxide is transported","t":"Roughly <b>70%</b> as bicarbonate, 20–30% bound to haemoglobin as carbamino compounds, and only 7–10% simply dissolved. Carbonic acid is not one of the three: it exists for an instant inside the red cell before splitting into H⁺ and bicarbonate. That same reaction is why carbon dioxide transport and blood pH are really one topic."},
-  {"k":"kwkr55t","q":"amount of air that can be expired forcibly after maximal inspiration","t":"The passage defines it two sentences before it asks: vital capacity is the sum of the inspiratory reserve, tidal and expiratory reserve volumes — <b>everything you can move</b>, which is exactly what 'forcibly expired after a maximal inspiration' describes. Long stems like this usually carry their own answer, and the skill being tested is finding the definition rather than recalling it."},
-  {"k":"k15pgq0n","q":"Hyperbaric chambers are clinical applications","t":"Two laws, because the chamber does two things at once. Raising the pressure <b>compresses trapped gas</b> — Boyle — which is how it treats decompression sickness and air embolism. It also <b>forces far more oxygen into solution</b> in the plasma — Henry — which is how it treats carbon monoxide poisoning, where haemoglobin itself is unavailable. Frank-Starling is a cardiac law and is present only as a distractor."},
-  {"k":"k10h5s9g","q":"true of inspiration except","t":"Every other statement follows from the diaphragm <b>contracting</b>: the thorax enlarges, and because the volume rose the intrapulmonary pressure fell below atmospheric — Boyle's law — so air moves in. Air always follows a pressure gradient; it is never pulled or pushed directly. A relaxed diaphragm describes quiet expiration instead."},
-  {"k":"k1eafe16","q":"Possible causes of hypoxia","t":"Hypoxia is <b>too little oxygen reaching the tissues</b>, and altitude is the classic cause: the percentage of oxygen is unchanged, but the total pressure is lower, so its partial pressure — the thing that actually drives diffusion — falls with it. Rapid deep breathing does the opposite. And note the swap in the last option: the <b>oesophagus</b> carries food, so obstructing it does not obstruct breathing."},
-  {"k":"k3plwbe","q":"inspired above the tidal volume","t":"Reserve means 'on top of what you already did'. Above a quiet breath in sits the <b>inspiratory reserve</b>; below a quiet breath out sits the expiratory reserve. Vital capacity is the total span of both plus the tidal volume in between, and 'reserve air' is not a term this course uses."},
-  {"k":"k1fjqh3c","q":"not a role of the pleura","t":"The pleura is a two-layered sac wrapping <b>each lung</b>; it is not a partition. The thorax is divided into left, right and mediastinum by anatomy the pleura sits inside rather than by the pleura itself. The other three options are genuine: serous fluid removes friction during breathing, each sealed sac limits infection spreading from one side to the other, and the negative intrapleural pressure it maintains assists venous return to the heart."},
-  {"k":"k10updhg","q":"NOT a factor that promotes oxygen dissociation","t":"The factors that loosen haemoglobin's grip are all markers of a hard-working tissue: <b>rising carbon dioxide, rising acidity, rising temperature and falling PO₂</b>. Three of the four options are on that list. White cell count is an immune measure and never appears on the dissociation curve — which identifies it as the odd one out even if the rest will not come to mind."},
-  {"k":"k1wjg5if","q":"trachealis muscle contracts it reduces the diameter","t":"Narrowing the trachea forces the same air through a smaller opening, so it travels <b>faster</b> — and a cough shifts mucus only because of that velocity. The cartilage rings are C-shaped, open at the back, precisely so the trachealis can draw the ends together. Warming and moistening happen in the nose, and moving food is the oesophagus's own muscle."},
-  {"k":"kbotwce","q":"majority of Oxygen is transported in the blood","t":"About <b>98.5%</b> rides on haemoglobin and only around 1.5% dissolves in the plasma — which is why anaemia causes tissue hypoxia even when the lungs are working perfectly. Two distractors are traps of wording: oxygen binds as a whole <b>molecule</b> rather than as ions, and carboxyhaemoglobin is haemoglobin bound to carbon <b>monoxide</b>, not to oxygen."},
-  {"k":"kmqlcg0","q":"Quiet expiration is a passive process","t":"Quiet expiration is the one phase of quiet breathing that costs nothing: the inspiratory muscles simply <b>stop contracting</b>, and the stretched lung and chest wall spring back. Stretching them during inspiration is what stored the energy in the first place. Expiration only becomes active when it is forced — then the abdominal and internal intercostal muscles take over."},
-  {"k":"kj1onw2","q":"Quiet inspiration is an active process","t":"Both muscle groups, and the diaphragm does roughly <b>two-thirds</b> of the work: it flattens downwards while the external intercostals lift the ribs up and out. Quiet inspiration is always active, and that asymmetry against a passive quiet expiration is the whole point of the pairing."},
-  {"k":"kdsdofe","q":"Forced exhalation is an active process","t":"Notice the intercostals appear in both directions under different labels: <b>external</b> intercostals lift the ribs to breathe in, <b>internal</b> intercostals pull them down to force air out. The abdominal muscles add to it by driving the viscera up against the diaphragm. Any statement pairing 'external intercostals' with expiration has them the wrong way round."},
-  {"k":"kqigwa1","q":"Forced inhalation involves the contraction of the following muscles","t":"These are the <b>accessory muscles</b> of inspiration, and they are worth knowing as a clinical sign rather than as a list: a patient recruiting neck and shoulder muscles to breathe is visibly in trouble. Each one works by lifting some part of the rib cage or sternum, enlarging the thorax beyond what the diaphragm alone can manage."},
-  {"k":"knxtxp4","q":"Ventral Respiratory Centre is involved in the forced expiration","t":"The first sentence is correct and the second is not, which makes the statement as a whole false. The <b>dorsal</b> group drives <b>quiet</b> inspiration — it sets the basic rhythm and fires the diaphragm and external intercostals. The <b>ventral</b> group is largely silent during quiet breathing and switches on when demand rises, driving forced inspiration <b>and</b> forced expiration. So forced inspiration belongs to the ventral group, not the dorsal one."},
-  {"k":"k1aisp5","q":"tracheal carina is the most sensitive area","t":"The carina is the ridge where the trachea divides into the two main bronchi, and it is the most cough-sensitive point in the whole airway. That makes sense as a last line of defence: anything reaching it is about to enter a lung. It is why suctioning to that depth provokes violent coughing, and why an inhaled object lodging there is an emergency."}
+  {
+   "k": "k9leq5y",
+   "q": "Match each substance to what the cardiovascular system does",
+   "t": "The theme is <b>transport</b>. Every one of these is the same system moving something from where it is made or absorbed to where it is used or excreted — note that urea travels liver to kidney, not the other way."
+  },
+  {
+   "k": "k1rs32gi",
+   "q": "A measure which shows how easy or hard it is for air/blood to flow",
+   "t": "These five words are the vocabulary the whole blood-flow section is built on. <b>Resistance</b> is how hard flow is, <b>constriction</b> is the smooth-muscle narrowing that raises it, and <b>perfusion</b> is the result — blood actually reaching the tissue."
+  },
+  {
+   "k": "kpa49oh",
+   "q": "This is where the RAAS system is activated",
+   "t": "Follow the chain in order and every blank sits somewhere on it: <b>renin</b> from the kidney acts on <b>angiotensinogen</b> from the liver, ACE in the lung makes angiotensin II, and angiotensin II then triggers <b>aldosterone</b> (sodium reabsorbed, water follows) and <b>ADH</b> (water reabsorbed directly)."
+  },
+  {
+   "k": "kog7cln",
+   "q": "How is the structure of the artery different to that of the vein",
+   "t": "One rule generates the whole table. The artery must <b>withstand pressure</b>, so its media and elastic laminae are thick and prominent around a small round lumen; the vein only carries volume back, so it is floppy with a large lumen and a thick outer coat."
+  },
+  {
+   "k": "k8nqtm0",
+   "q": "The nurse explains to him that these measurements show that he has",
+   "t": "Two ideas cover almost all of it: <b>BP = cardiac output × peripheral resistance</b>, and pressure is sensed by <b>baroreceptors</b> (aortic arch and carotid sinus) while blood chemistry is sensed by <b>chemoreceptors</b> (aortic and carotid bodies). Confusing those two receptor sets is the trap, and it is set here twice."
+  },
+  {
+   "k": "k8pfmpk",
+   "q": "Match each vessel feature to the vessel it belongs to",
+   "t": "Read the wall and the vessel names itself: <b>elastic media means pressure</b> (artery), <b>valves mean flow against gravity</b> (vein), <b>one cell thick means exchange</b> (capillary)."
+  },
+  {
+   "k": "kmec3wz",
+   "q": "forming a tight barrier between the blood and the nervous tissue",
+   "t": "Capillary type follows the job of the organ: <b>continuous</b> where nothing may leak (brain), <b>fenestrated</b> where small molecules must filter out (kidney), <b>sinusoidal</b> where whole cells must cross (bone marrow). The rest is just right ventricle to lungs, left ventricle to body."
+  },
+  {
+   "k": "k1pi7qvn",
+   "q": "Blood is pumped to the lungs and body tissues through",
+   "t": "The layer names are built from their position — <b>endo</b>cardium lines the inside, so it is what the valves are made of; <b>myo</b>cardium is the muscle. Same logic names the septa for the chambers they sit between."
+  },
+  {
+   "k": "k43f5bt",
+   "q": "One of the underlined terms is incorrect",
+   "t": "Blood pressure is defined and measured in the <b>arteries</b> — that is the only planted error. The rest of that answer is the standard definition, including pulse pressure as the gap between the two readings."
+  },
+  {
+   "k": "k1xpzhtv",
+   "q": "The answer below contains two errors in the underlined parts",
+   "t": "Neither error is in the physiology, and both matter anyway: cardiac output is per <b>minute</b>, and stroke volume is quoted for the <b>left ventricle</b>. Get the first wrong and every calculation built on CO = HR × SV comes out wrong with it."
+  },
+  {
+   "k": "kdia54p",
+   "q": "Correctly identify the structures in the image below by matching the letters",
+   "t": "Work outwards from the lumen — <b>intima, media, externa</b> — then use shape to tell the vessels apart: thick-walled and round is the artery, floppy with a valve is the vein, a single-layer tube is the capillary."
+  },
+  {
+   "k": "kdy1y6r",
+   "q": "which conduct blood toward the heart, regardless of oxygen content",
+   "t": "The definition is about <b>direction, not oxygen</b>. Veins run towards the heart even when the blood in them is oxygenated, which is exactly what the pulmonary veins do."
+  },
+  {
+   "k": "k1c79tlz",
+   "q": "which are responsible for the exchange of gases and nutrients",
+   "t": "Exchange needs a <b>wall one cell thick</b> and slow flow. Only the capillary has both — everything else is plumbing."
+  },
+  {
+   "k": "kqrg4qx",
+   "q": "which is the most critical in regulating systemic blood pressure",
+   "t": "The <b>smooth muscle</b> in the media is what changes a vessel's diameter, and diameter is what sets peripheral resistance — the other half of BP = CO × PR."
+  },
+  {
+   "k": "kbvrfkk",
+   "q": "actively causes vasoconstriction and vasodilation",
+   "t": "Same point again: <b>only the media has smooth muscle</b>. The endothelium can signal a vessel to relax (nitric oxide), but it cannot contract."
+  },
+  {
+   "k": "k1nnmitv",
+   "q": "Why can’t you feel a pulse in a vein",
+   "t": "A pulse is the pressure wave from ventricular ejection, and the <b>capillary bed damps it out</b> before the blood reaches any vein. Thin walls are a consequence of low pressure, not the reason the pulse is missing."
+  },
+  {
+   "k": "k1duabu0",
+   "q": "The effects of venous return, plasma electrolytes, stress, and exercise",
+   "t": "Everything here routes through <b>CO = SV × HR</b> and then BP = CO × PR. Calcium raises contractility, potassium slows the heart, and the trained heart pumps <b>slower but more forcefully</b> — the same output in fewer beats."
+  },
+  {
+   "k": "k12ge6st",
+   "q": "Her nervous system helps to lower blood pressure back to normal",
+   "t": "The reflex always runs <b>receptor → centre → nerve → effector → result</b>: baroreceptors fire, the cardio-inhibitory centre is stimulated, the vagus releases acetylcholine at the SA node, rate falls, pressure falls. The vasomotor centre does the other half by relaxing vessel smooth muscle."
+  },
+  {
+   "k": "kyblkaa",
+   "q": "Mesenteric adenitis is usually a mild condition",
+   "t": "Two facts unlock most of the blanks: <b>MALT is lymphoid tissue sitting in mucosal membranes</b>, so organs like the spleen and thymus are not MALT; and the lymphatic system's main job is <b>fluid balance</b> — immunity is what it does with that fluid on the way past. <b>One warning about the key on the cell-function blank.</b> The abundant cell in lymph is the lymphocyte, and that part is right — but this paper then marks its function as \"primary mediators of the rapid innate host defense\", which is the description of a <b>neutrophil</b>. Lymphocytes are the <b>adaptive</b> arm: B cells make antibody, T cells kill infected cells and direct the response. Answer the key to score the mark here, and hold on to the real division — innate and fast is the neutrophil, specific and remembered is the lymphocyte."
+  },
+  {
+   "k": "kr5igry",
+   "q": "Describe the forces acting across a blood capillary",
+   "t": "The whole card is one tug-of-war: <b>hydrostatic pressure pushes fluid out</b> at the arteriolar end, and <b>oncotic pressure pulls it back</b> at the venular end because the plasma proteins stayed behind. The fluid leaves into the interstitium, the space between the cells."
+  },
+  {
+   "k": "kly44op",
+   "q": "What will happen to fluid movement in the following conditions",
+   "t": "Albumin is what creates the oncotic pull, so losing it makes that pull <b>weaker, not stronger</b> — less fluid is drawn back in and oedema follows. That is the planted error, and it is the mechanism behind the swollen abdomen of severe malnutrition."
+  },
+  {
+   "k": "k1e8t3wy",
+   "q": "Describe the direct renal control of BP",
+   "t": "Trace it as a volume story: low BP means less blood reaching the kidney, so <b>less filtrate and less urine</b>, so volume is kept, so venous return and stroke volume <b>rise</b> and push pressure back up. Both planted errors run that chain backwards."
+  },
+  {
+   "k": "k1onuyp6",
+   "q": "Answer the question to ensure that the conditions and their descriptions match",
+   "t": "The word-parts do most of the work: <b>-oedema</b> is fluid, <b>-itis</b> is inflammation, <b>-adenopathy</b> is any node disease, <b>-oma</b> is a tumour. Only elephantiasis (a parasitic worm) and buboes have to be learned as plain facts."
+  },
+  {
+   "k": "k747e3v",
+   "q": "The primary mechanism driving filtration in capillary beds",
+   "t": "Filtration is driven by <b>the pressure inside the capillary</b> — the heart's push, still present at the arteriolar end. Osmotic and oncotic pressure work the other way, pulling fluid back in."
+  },
+  {
+   "k": "krr0zej",
+   "q": "Which of the following is NOT a function of the lymphatic system",
+   "t": "The three real ones are fluid balance, absorbing fat from the gut, and immunity. <b>Blood sugar is endocrine</b> — pancreas and liver — and has nothing to do with lymph."
+  },
+  {
+   "k": "k1vrzoso",
+   "q": "higher osmolality than the fluid within a red blood cell",
+   "t": "Only <b>water</b> moves here. When the solute concentration differs across a membrane, water crosses towards the more concentrated side until they match — no carrier, no energy, so it is osmosis rather than any form of diffusion or transport."
+  },
+  {
+   "k": "k1rym1yr",
+   "q": "The effect of general factors on blood pressure",
+   "t": "Sort every chemical by which half of <b>BP = CO × PR</b> it touches: ANP and nitric oxide drop volume or dilate vessels, adrenaline and ADH raise rate or hold water back. And peripheral resistance itself depends on vessel <b>length and diameter</b>, not on the heart at all."
+  },
+  {
+   "k": "k1kl9zr",
+   "q": "Match each change to its effect on blood pressure",
+   "t": "Everything routes through <b>BP = cardiac output × peripheral resistance</b>: vessel diameter and blood viscosity move the resistance term, blood volume moves the cardiac output term."
+  },
+  {
+   "k": "k1b5qmqy",
+   "q": "Describe the body’s neural mechanisms for regulating blood pressure",
+   "t": "<b>Baroreceptors sense stretch, which means pressure; chemoreceptors sense chemistry.</b> Their addresses differ too — baroreceptors in the aortic arch and the carotid <b>sinus</b>, chemoreceptors in the aortic and carotid <b>bodies</b>. Both planted errors are that same swap."
+  },
+  {
+   "k": "k1odjw2h",
+   "q": "Predict the change in peripheral resistance as blood vessel diameter",
+   "t": "Resistance falls very steeply as a vessel widens — a small change in <b>diameter</b> does far more to flow than any change in vessel length or blood viscosity. That is why the arterioles, not the arteries, are the resistance vessels."
+  },
+  {
+   "k": "k1twa4cl",
+   "q": "Write a formula showing the relationship between BP, CO & SVR",
+   "t": "Pressure is what you get when flow meets resistance, so the two <b>multiply</b>. Rearranged the other way, CO = BP ÷ SVR — worth being able to do in either direction."
+  },
+  {
+   "k": "km7gvc5",
+   "q": "changes to the heart you can detect by examining an ECG",
+   "t": "An ECG records <b>electrical activity only</b>. Rate, rhythm and injury patterns are electrical; pressure, resistance and the volume actually pumped are mechanical, and no trace can show them."
+  },
+  {
+   "k": "k145c8d2",
+   "q": "The homeostatic mechanisms involved in the control of heart rate",
+   "t": "Two spines hold this up. Anatomy: <b>SA node → AV node → bundle of His → bundle branches → Purkinje fibres</b>. Control: <b>sympathetic nerves and noradrenaline speed the SA node up, the vagus and acetylcholine slow it down</b>. The cycle-length blank is arithmetic — sixty seconds divided by the rate."
+  },
+  {
+   "k": "k1yedjnt",
+   "q": "Lagi has an ECG to check his heart function",
+   "t": "The order follows the anatomy, and the step people drop is the one in the middle: the <b>atrial myocardium spreads the impulse cell to cell through intercalated discs</b> before the AV node holds it up."
+  },
+  {
+   "k": "k1pxurfv",
+   "q": "concerned about the anchorage of his atrioventricular valves",
+   "t": "The <b>papillary muscles</b> anchor the chordae tendineae, and they tighten just before the ventricle contracts — so the valve cusps cannot blow back into the atrium under pressure."
+  },
+  {
+   "k": "k1vv1tqv",
+   "q": "The sounds of his heart shows a murmur between the lub and dub",
+   "t": "Heart sounds are <b>valves closing</b>, not muscle contracting. A murmur between lub and dub is therefore blood crossing a valve that should be shut — in mitral regurgitation, back into the <b>left atrium</b> while the ventricle contracts."
+  },
+  {
+   "k": "k1ujvbbs",
+   "q": "the blood vessel labelled X is the",
+   "t": "Follow the drainage upstream: the <b>jugular</b> vein drains the head and empties into the <b>subclavian</b>, and the two together become the brachiocephalic vein before the superior vena cava."
+  },
+  {
+   "k": "k1t60jky",
+   "q": "Match each heart structure to its description",
+   "t": "The prefixes place them: <b>endo-</b> inside, <b>myo-</b> muscle, <b>peri-</b> around. Chordae tendineae and the septa are named for what they hold and what they separate."
+  },
+  {
+   "k": "k17oe7j0",
+   "q": "Using the superior view of the valves",
+   "t": "Name each valve by what is <b>downstream</b> of it — the pulmonary valve guards the pulmonary trunk, the aortic valve the aorta. The two AV valves are told apart by side: <b>tricuspid right, mitral left</b>."
+  },
+  {
+   "k": "k1bui087",
+   "q": "Match the different parts of an ECG wave",
+   "t": "Depolarisation comes before repolarisation, and atria before ventricles: <b>P, then QRS, then T</b>. Atrial repolarisation does happen — it is just buried inside the QRS, which is why there is no wave for it."
+  },
+  {
+   "k": "kijio9l",
+   "q": "Match the progress of the electrical impulse through the heart",
+   "t": "The flat parts matter as much as the spikes. The <b>PR segment is the AV node delay</b> that lets the atria finish filling the ventricles, and the <b>ST segment</b> is the ventricles fully depolarised and contracting — which is why it shifts in a STEMI."
+  },
+  {
+   "k": "k1la46ar",
+   "q": "Match the names with the numbers on the diagram",
+   "t": "Work through the flow rather than memorising numbers: right atrium, tricuspid, right ventricle, pulmonary valve on one side; left ventricle, aortic valve, aortic arch on the other."
+  },
+  {
+   "k": "k9oppt0",
+   "q": "The pumping chambers of the heart are the",
+   "t": "<b>Systole is contraction, diastole is the filling pause</b> — the two halves of every cardiac cycle. Stroke volume is simply what one systole manages to eject."
+  },
+  {
+   "k": "km1ohlr",
+   "q": "The larger partition between the two sides of the heart",
+   "t": "Two cusps means bicuspid, which is the mitral valve. And the coronary arteries feed the <b>myocardium</b> — which is why blocking one kills muscle rather than lining."
+  },
+  {
+   "k": "kar43wo",
+   "q": "Label the five components of the conduction system",
+   "t": "It is the same chain top to bottom every time — <b>SA node, AV node, bundle of His, bundle branches, Purkinje fibres</b> — so the labels run in that order down the diagram."
+  },
+  {
+   "k": "k7a2ym3",
+   "q": "Explain what the following waves of the ECG represent",
+   "t": "Every wave on an ECG is a <b>voltage change, not a contraction</b>, and a chamber must depolarise before it can contract. That one word is the planted error."
+  },
+  {
+   "k": "k15rez0i",
+   "q": "Explain the meanings of cardiac reserve and ejection fraction",
+   "t": "<b>Cardiac reserve is about output</b> — how much more the heart can pump than it does at rest — and ejection fraction is quoted for the <b>left ventricle</b>, because that is the side whose failure gets measured clinically."
+  },
+  {
+   "k": "koworns",
+   "q": "understanding of the terms chronotropic and inotropic",
+   "t": "<b>Chrono means time, so rate; ino means force.</b> Sympathetic stimulation and noradrenaline raise both, by driving more calcium into the myocardial cells; acetylcholine from the vagus lowers rate."
+  },
+  {
+   "k": "kqkc2mv",
+   "q": "These kinds of shock are directly linked to the heart",
+   "t": "Group shock by what has failed: pump (cardiogenic), volume (hypovolaemic), vessel tone (septic, anaphylactic, neurogenic), or a <b>physical block to filling or ejection</b> — tamponade, tension pneumothorax, massive clot — which is obstructive."
+  },
+  {
+   "k": "kvbjhdg",
+   "q": "The homeostatic mechanisms that are involved in stroke volume",
+   "t": "Everything else on the list either fills the ventricle more (venous return, blood volume) or makes it squeeze harder (adrenaline, sympathetic drive, calcium). <b>Raised potassium does the opposite</b> — it depresses the myocardium and slows conduction."
+  },
+  {
+   "k": "k84fjns",
+   "q": "Which kind of blood vessels have valves to prevent backflow",
+   "t": "Valves are needed wherever pressure is too low to keep blood moving one way on its own. That is the <b>veins</b>, especially in the limbs, where the skeletal muscle pump does the pushing."
+  },
+  {
+   "k": "ktflk9n",
+   "q": "The trabeculae carneae muscles in the ventricles",
+   "t": "Trabeculae carneae are the muscular ridges lining the ventricles. Do not confuse them with the <b>chordae tendineae</b>, the thread-like cords that hold the valve cusps down."
+  },
+  {
+   "k": "k1qd62x8",
+   "q": "Exercise ...",
+   "t": "The skeletal muscle pump and deeper breathing push more blood back to the heart; a fuller ventricle stretches further and contracts harder. That is <b>Starling's law</b>, and it is why a trained heart can pump more per beat."
+  },
+  {
+   "k": "k1latcqb",
+   "q": "the flow of blood in the INCORRECT sequence",
+   "t": "Check any sequence against the single loop: <b>body → vena cava → right atrium → tricuspid → right ventricle → pulmonary artery → lungs → pulmonary vein → left atrium → mitral → left ventricle → aorta</b>. The odd one out puts a chamber or a valve out of that order."
+  },
+  {
+   "k": "k13relho",
+   "q": "The mitral valve has two large cusps",
+   "t": "<b>Bicuspid</b> is the other name for it — two cusps on the left, three on the right. The names are simply a count."
+  },
+  {
+   "k": "k2yrk5z",
+   "q": "The openings to the coronary arteries open when the aortic valve closes",
+   "t": "The heart feeds itself in <b>diastole</b>. While the aortic valve is open its cusps sit over the coronary openings; only when it shuts does blood recoil back and enter them — which is why a very fast heart rate starves the myocardium."
+  },
+  {
+   "k": "k1jj96y1",
+   "q": "The LAD artery is also known as the widow maker",
+   "t": "The <b>left anterior descending</b> supplies most of the left ventricle and the septum, so occluding it takes out the muscle the body cannot manage without."
+  },
+  {
+   "k": "kq2hvxx",
+   "q": "An opening between the atria in the heart that closes to become",
+   "t": "Every fetal shunt bypasses something not yet working: the <b>foramen ovale</b> and the ductus arteriosus bypass the lungs, the ductus venosus bypasses the liver. Each leaves a ligament or a dimple behind after birth."
+  },
+  {
+   "k": "kxokc54",
+   "q": "prevent back-flow of blood when the ventricles contract",
+   "t": "The two sets of valves always work in opposition. When the ventricles contract the <b>AV valves shut</b> — that is the first heart sound — and the semilunar valves open."
+  },
+  {
+   "k": "k19wx7l5",
+   "q": "Which layer of the heart use the most energy",
+   "t": "It is the only layer that <b>does mechanical work</b>, contracting every second of a lifetime. That is also why it gets its own arterial supply rather than living off the blood inside the chambers."
+  },
+  {
+   "k": "k1bx2vas",
+   "q": "The following statement about the heart is true",
+   "t": "The three wrong options are all near-misses worth learning: the septum is muscle, the fossa ovalis sits in the <b>inter-atrial</b> septum, and the tricuspid is an AV valve, not a semilunar one."
+  },
+  {
+   "k": "k1k4fr2d",
+   "q": "electrical conduction system is true",
+   "t": "The route never varies, always <b>top down</b>: SA node, AV node, then the bundle and its branches, then the Purkinje fibres. An option that starts at the AV node is describing an escape rhythm, not the normal path. (Note the option lists the bundle of His and the atrioventricular bundle as separate steps — they are two names for the same structure.)"
+  },
+  {
+   "k": "k1lpsr7u",
+   "q": "automaticity",
+   "t": "This is why a transplanted heart still beats. The <b>SA node leads simply because it depolarises fastest</b>; nerves and hormones only speed that up or slow it down."
+  },
+  {
+   "k": "k1lc4j2y",
+   "q": "refracticity",
+   "t": "The long refractory period is protective: cardiac muscle <b>cannot be tetanised</b> the way skeletal muscle can, so the ventricle is forced to relax and refill between beats."
+  },
+  {
+   "k": "k18dlgdn",
+   "q": "During depolarisation sodium ions move into the myocardial cells",
+   "t": "Depolarisation is sodium rushing <b>in</b>, cancelling the negative charge inside the cell. The waves on the trace then just report where in the heart that is happening."
+  },
+  {
+   "k": "k17ufpdi",
+   "q": "if the force of contraction (myocardial contractility)",
+   "t": "Adrenaline drives more calcium into the myocardial cell, the fibres shorten further within the same beat, and <b>more of what is in the ventricle gets ejected</b> — a bigger stroke volume from the same filling."
+  },
+  {
+   "k": "k1r22e52",
+   "q": "What is the potential space between the two lungs called",
+   "t": "The <b>mediastinum</b> is the space between the lungs that holds the heart, great vessels, trachea and oesophagus. Pleura and pericardium are membranes, not spaces."
+  },
+  {
+   "k": "k1n8obb9",
+   "q": "The membrane that forms the shiny layer on the lung surface",
+   "t": "<b>Visceral means on the organ</b> — the same word is used of the pericardium and the peritoneum. Parietal is always the layer lining the wall."
+  },
+  {
+   "k": "k57z0v3",
+   "q": "The double membrane that surrounds the lung",
+   "t": "Same rule, in order: the membrane as a whole is the pleura, the layer stuck to the <b>lung</b> is visceral, and the layer lining the <b>thoracic wall</b> is parietal. The film of fluid between them is what stops the lung pulling away."
+  },
+  {
+   "k": "k1nu1tq6",
+   "q": "Hyperbaric chambers are clinical applications of which gas law",
+   "t": "The chamber itself works by <b>compressing gas</b> — pressure up, volume down — which is Boyle. Henry's law is what then explains the extra oxygen dissolving into the blood, so read carefully which half of the process a question is asking about."
+  },
+  {
+   "k": "kcf5t6r",
+   "q": "Blood from inside this structure will next flow into what other structure",
+   "t": "If the next stop is a ventricle, what you are looking at must be an <b>atrium</b> — on both sides blood runs atrium → ventricle → artery, never backwards."
+  },
+  {
+   "k": "k4599g6",
+   "q": "A trauma patient is progressing rapidly into circulatory shock",
+   "t": "Two clues drive it. A <b>bruised abdomen with no visible bleeding</b> points to concealed haemorrhage, and <b>neck pain in a trauma patient</b> raises a cervical cord injury, which removes sympathetic tone and lets the vessels dilate. Afebrile rules out sepsis, and no drug was given."
+  },
+  {
+   "k": "k1p4e31j",
+   "q": "Cardiogenic shock can be caused by",
+   "t": "Cardiogenic means the <b>pump itself cannot deliver</b> — the coronary clot starves the muscle, the pericardial fluid stops the ventricle filling. Be aware that another past question in this pack files pericardial fluid under <b>obstructive</b> shock; both labels are used in the course material, so read the stem before choosing."
+  },
+  {
+   "k": "kfsddxf",
+   "q": "Match the names with the numbers on the diagram",
+   "t": "Use position rather than the numbers: the two <b>venae cavae enter the right atrium from above and below</b>, the pulmonary artery leaves the right ventricle, and the pulmonary veins come back into the left atrium."
+  },
+  {
+   "k": "k8odyn4",
+   "q": "Anatomical Structures of the Heart Identify the structures",
+   "t": "The branches off the arch run <b>right to left</b>: brachiocephalic first, then left common carotid, then left subclavian. The brachiocephalic is the only one that divides again, which is what makes it recognisable."
+  },
+  {
+   "k": "k13uy7in",
+   "q": "What is a coronary angiogram and what is the purpose",
+   "t": "A <b>coronary</b> angiogram looks at the heart's own arteries; carotid is the neck. The other planted error swaps dissolving a clot with a drug for pulling it out mechanically."
+  },
+  {
+   "k": "k1y3l3rb",
+   "q": "Blood is returned to the heart via the",
+   "t": "Do not forget the third route: the <b>coronary sinus</b> returns the heart's own venous blood straight into the right atrium, alongside both venae cavae."
+  },
+  {
+   "k": "k1kd2mfk",
+   "q": "The major vessel delivering deoxygenated blood to the lungs",
+   "t": "It is the one artery carrying <b>deoxygenated</b> blood — vessels are named for the direction they travel, not the blood they hold."
+  },
+  {
+   "k": "k1fm4bjy",
+   "q": "The pulmonary circulation is a higher pressure circulation",
+   "t": "The pulmonary circuit is <b>short and low pressure</b>, which is why the right ventricle wall is so much thinner. Systemic pressures there would push fluid straight into the alveoli."
+  },
+  {
+   "k": "k9ctj13",
+   "q": "Another name for the left anterior interventricular artery",
+   "t": "They are the <b>two branches of the left coronary artery</b>: the anterior interventricular (the LAD) runs down the front of the septum, the circumflex curves around the left side."
+  },
+  {
+   "k": "keoehv3",
+   "q": "A blood vessel that allows placental blood to bypass the liver",
+   "t": "Sort the three fetal shunts by what each one skips: <b>ductus venosus</b> the liver, <b>foramen ovale</b> and <b>ductus arteriosus</b> the lungs."
+  },
+  {
+   "k": "kmm9mb9",
+   "q": "The coronary ostia are found in the",
+   "t": "The coronaries are the <b>first branches off the aorta</b>, just above the aortic valve. The heart supplies itself before anything else gets any blood."
+  },
+  {
+   "k": "kt7s149",
+   "q": "Name the major blood vessels in the neck",
+   "t": "The question asks for vessels <b>in the neck</b> — the subclavian pair sit under the clavicle, at the shoulder, which is what their name says."
+  },
+  {
+   "k": "k1t6uzki",
+   "q": "Match each heart sound to its cause",
+   "t": "Sounds are <b>valves closing</b>: S1 the AV valves at the start of ventricular contraction, S2 the semilunar valves at its end. S3 and S4 are filling sounds — blood rushing in, and the atrium pushing against a stiff ventricle."
+  },
+  {
+   "k": "ksgqnlv",
+   "q": "roughly equivalent",
+   "t": "Diffusion depends on the gradient <b>and</b> on solubility. Carbon dioxide is far more soluble in water than oxygen is, so a much smaller pressure gradient still shifts the same amount of gas."
+  },
+  {
+   "k": "kq6dkut",
+   "q": "The poor solubility of oxygen in water",
+   "t": "Only a small fraction of oxygen can dissolve in plasma, nowhere near enough for metabolism, so almost all of it travels <b>bound to haemoglobin</b>. Anaemia limits oxygen delivery for exactly this reason."
+  },
+  {
+   "k": "kevwth3",
+   "q": "Match each conduction structure to its feature",
+   "t": "Every part of the chain has its own intrinsic rate, and the <b>fastest one sets the pace</b> — normally the SA node. The AV delay is not a flaw: it is what lets the atria empty before the ventricles fire."
+  },
+  {
+   "k": "klcee3h",
+   "q": "Match each deflection to what it represents",
+   "t": "Read it as <b>depolarise, depolarise, repolarise</b> — atria, then ventricles, then ventricles again — with the P–R interval as the pause at the AV node in between."
+  },
+  {
+   "k": "k10pm9hp",
+   "q": "Order the sequence of the flow of electrical impulses",
+   "t": "The same chain every time, and each step earns its place: the AV node <b>delays</b>, the bundle branches carry the signal fast down the septum, and the Purkinje fibres make the ventricles contract <b>from the apex upwards</b>, squeezing blood towards the outflow valves."
+  },
+  {
+   "k": "k1l0djfn",
+   "q": "What does an ECG record",
+   "t": "An ECG picks up the <b>whole heart</b>, atria included — the P wave is atrial. Restricting it to ventricular muscle is the planted error."
+  },
+  {
+   "k": "ki6v76q",
+   "q": "Label the ECG recording below",
+   "t": "Read left to right: the small bump is P, then the three parts of the QRS complex (<b>Q down, R up, S down</b>), then the broader T."
+  },
+  {
+   "k": "k1kkqmea",
+   "q": "A patient with the following ECG result is going into shock",
+   "t": "An ECG can only show you the <b>pump</b>. If the trace itself explains the shock, the answer is cardiogenic — the other three are diagnosed from the history (an allergen, an infection, an obstruction), not from a rhythm strip."
+  },
+  {
+   "k": "k1sbj3j7",
+   "q": "often called the pacemaker",
+   "t": "It leads because it depolarises <b>fastest</b>. Every other part of the chain can pace the heart if the SA node fails, just more slowly — which is what an escape rhythm is."
+  },
+  {
+   "k": "k1w9vn4c",
+   "q": "The short-term homeostatic control of blood pressure",
+   "t": "One reflex, run in both directions. <b>Low BP: sympathetic outflow, faster heart, vasoconstriction, pressure up.</b> High BP: the vagus and acetylcholine slow the heart while the vasomotor centre is inhibited, so vessels dilate. Note the sensors are baroreceptors in the aortic arch and carotid <b>sinus</b>, not the bodies."
+  },
+  {
+   "k": "k9vz1nq",
+   "q": "What is the normal heart rate, stroke volume and cardiac output at rest",
+   "t": "The three are tied together by <b>CO = SV × HR</b> — multiply the middle of the first two ranges and the third falls out. Learn the relationship and you can reconstruct any one of them."
+  },
+  {
+   "k": "krf756l",
+   "q": "Presence of air in the pleural cavity",
+   "t": "Build them from the parts: <b>dys-</b> difficult, <b>eu-</b> normal, <b>pneumo-thorax</b> air in the chest, <b>cyan-</b> blue. Atelectasis is the odd one out — it names the lung collapsing, whatever caused it."
+  },
+  {
+   "k": "kv7m0s4",
+   "q": "Kalama ate a large piece of bread",
+   "t": "The soft back wall of the trachea is the <b>trachealis muscle</b>, and its softness is exactly why a large bolus in the oesophagus behind it can press forward into the airway. The epiglottis is the lid; the ciliated mucous lining is the escalator that stops particles going deeper."
+  },
+  {
+   "k": "k80cbe0",
+   "q": "That allowed air to get into",
+   "t": "Separate the cause from the result: <b>pneumothorax is air in the pleural cavity</b>, and <b>atelectasis is the lung collapsing</b> because the negative pressure holding it open has been lost."
+  },
+  {
+   "k": "k1mnzemr",
+   "q": "lung tissue in a beaker of water",
+   "t": "A lung that has breathed keeps its <b>residual volume</b> — air that cannot be forced out — so it floats. A lung that never inflated has none, and sinks. This is a real forensic test."
+  },
+  {
+   "k": "k1ehu0j2",
+   "q": "Match each factor to its effect on heart rate",
+   "t": "Everything here is <b>sympathetic drive up or down</b>, with one exception: in endurance training the resting rate falls because a bigger stroke volume delivers the same cardiac output in fewer beats."
+  },
+  {
+   "k": "kmvd1wf",
+   "q": "have cartilage in their walls to keep them open",
+   "t": "Cartilage holds the <b>conducting</b> airways open, and it runs out at the bronchioles. That is precisely why bronchioles can constrict in asthma and the trachea cannot."
+  },
+  {
+   "k": "k1ypxio1",
+   "q": "The cuboidal epithelium visible in this image",
+   "t": "The epithelium thins as the airway narrows: <b>pseudostratified columnar in the trachea, cuboidal in the bronchiole, simple squamous in the alveolus</b>. Cuboidal cells with no cartilage in the wall is the giveaway."
+  },
+  {
+   "k": "k1djb4oi",
+   "q": "This is a section through a trachea",
+   "t": "The trachea does contain hyaline cartilage — but read what the label is actually sitting on. Answering from the organ rather than from the structure the arrow points at is the trap here."
+  },
+  {
+   "k": "k1j0y5xv",
+   "q": "The pressure exerted by each gas in a mixture is proportional",
+   "t": "<b>Dalton is about a mixture</b>: each gas contributes pressure in proportion to how much of the mixture it makes up. Boyle relates pressure to volume; Henry describes how much gas dissolves in a liquid."
+  },
+  {
+   "k": "kermbys",
+   "q": "All of the following statements are true of inspiration except",
+   "t": "Quiet inspiration is <b>active</b>: the diaphragm contracts and flattens, the thorax enlarges, and the pressure inside the lungs falls below atmospheric so air moves in. It is quiet expiration that is passive."
+  },
+  {
+   "k": "kbbtgg",
+   "q": "What effect will a decrease in pH have on the respiration rate",
+   "t": "A falling pH means excess hydrogen ions, and blowing off carbon dioxide removes acid. <b>Ventilation rises to correct acidosis</b> — the same reflex behind the deep sighing breaths of diabetic ketoacidosis."
+  },
+  {
+   "k": "k73rk7r",
+   "q": "which factors directly influence a persons lung capacity",
+   "t": "Lung capacity is set by <b>body size and physiology</b> — height, sex and age, plus the reference ranges that are adjusted for ethnic background. The distractors are all social rather than biological."
+  },
+  {
+   "k": "k2ux4u3",
+   "q": "if there is increased venous return to the heart",
+   "t": "More filling stretches the ventricle further, and a stretched cardiac fibre contracts more strongly. That is <b>Starling's law</b>, and it is how the heart matches its output to what comes back to it."
+  },
+  {
+   "k": "k1vxojcz",
+   "q": "if arterial vessels are constricted",
+   "t": "<b>Afterload is the pressure the ventricle has to beat against.</b> Raise it and less blood leaves per beat — which is why untreated hypertension eventually wears the left ventricle out."
+  },
+  {
+   "k": "kaco8rh",
+   "q": "Match each component of blood pressure regulation",
+   "t": "Two timescales in one list. <b>Baroreceptors and the vasomotor centre act in seconds</b>; <b>renin, aldosterone and ADH work over hours</b>, and they work by changing volume rather than vessel diameter."
+  },
+  {
+   "k": "kkl3nwp",
+   "q": "Cold and clammy skin, tachycardia, and rapid breathing",
+   "t": "Cold clammy skin with a racing heart is the classic <b>fight-or-flight</b> picture — vasoconstriction shunting blood to the core. The renin pathway matters in shock too, but it is slower and does not produce these signs."
+  },
+  {
+   "k": "k10yc7uy",
+   "q": "Choose the correct cause of each of the following types of shock",
+   "t": "Name the thing that failed: <b>volume</b> (hypovolaemic), <b>pump</b> (cardiogenic), or <b>vessel tone</b> — which is what sepsis and anaphylaxis both destroy, by different routes."
+  },
+  {
+   "k": "keonewe",
+   "q": "Shock is defined as a life-threatening, emergency condition",
+   "t": "The definition is about <b>perfusion, not blood pressure</b>. A patient can be in shock while the blood pressure still reads normal, because compensation props it up right until it fails."
+  },
+  {
+   "k": "kr93sfw",
+   "q": "The commonest cause of septic shock is",
+   "t": "<b>The infection is the cause; the shock is the vasodilation it produces.</b> Gram-negative organisms are the classic trigger, through the endotoxin in their cell wall."
+  },
+  {
+   "k": "k1orvyr5",
+   "q": "complete C-5 spinal cord transection",
+   "t": "<b>Bradycardia together with hypotension</b> is the tell. Every other kind of shock drives the heart rate up; when a cord injury cuts sympathetic outflow the vessels dilate and the heart cannot speed up to compensate."
+  },
+  {
+   "k": "kmqo1g6",
+   "q": "A patient that is in septic shock commonly has",
+   "t": "Early septic shock is <b>warm and fast</b> — vessels dilated, skin warm, heart and breathing racing. Cold clammy skin belongs to hypovolaemic and cardiogenic shock, or to sepsis only once it is very late."
+  },
+  {
+   "k": "k13eferj",
+   "q": "Match each cardiovascular term to its meaning",
+   "t": "Read the endings: <b>-aemia</b> concerns blood, <b>-itis</b> is inflammation, <b>a-systole</b> is literally no contraction. Angina is ischaemia that is still reversible; infarction is when it no longer is."
+  },
+  {
+   "k": "k17wb5hq",
+   "q": "Cardiac muscle tissue is distinctive because of their cohesiveness",
+   "t": "<b>Desmosomes hold the cells together; gap junctions let ions pass between them.</b> The stem hands you the first, so the connecting channels must be the second — and that is what lets the myocardium contract as one unit."
+  },
+  {
+   "k": "kow4cjn",
+   "q": "An elderly woman was admitted to the medical unit with dehydration",
+   "t": "Fluid has weight, so acute <b>weight loss</b> is the most reliable measure of how much has been lost. Engorged neck veins and a full bounding pulse are signs of the opposite problem — fluid overload."
+  },
+  {
+   "k": "ktgr8d1",
+   "q": "A patient is receiving a loop diuretic",
+   "t": "A loop diuretic strips <b>fluid and electrolytes together</b>, so more than one option here describes a real risk. This key takes the fluid and sodium route (restlessness and agitation); keep the potassium picture — a weak irregular pulse and poor muscle tone — in mind as the same drug's other classic effect."
+  },
+  {
+   "k": "k14nta1t",
+   "q": "Match each respiratory function to its structure or mechanism",
+   "t": "The lungs do a great deal more than gas exchange: <b>speech, smell, pH control and the activation of angiotensin II</b> all happen here. That last one is why the respiratory system keeps turning up in the blood-pressure story."
+  },
+  {
+   "k": "k19bto3m",
+   "q": "For what metabolic reason does respiration occur",
+   "t": "Respiration exists to serve <b>cellular metabolism</b> — oxygen in so the mitochondria can make ATP, carbon dioxide out because it is the waste. Everything else the lungs do is secondary to that trade."
+  },
+  {
+   "k": "k101608j",
+   "q": "would not favour internal respiration",
+   "t": "Internal respiration is oxygen <b>leaving the blood for the cells</b>, so it is helped by whatever a hard-working tissue looks like: warm, acidic, high in carbon dioxide. A tissue already rich in oxygen has no gradient left to drive it."
+  },
+  {
+   "k": "kl6z6z3",
+   "q": "Match each respiratory structure to its distinguishing feature",
+   "t": "Each one is defined by the job its shape does: the <b>cricoid is a complete ring</b> because it must never collapse, the conchae make air swirl so it is warmed and filtered, and the carina is nerve-rich so anything reaching it triggers a cough."
+  },
+  {
+   "k": "kti7lm7",
+   "q": "Comment on the relative sizes of the two lungs",
+   "t": "The heart sits left of the midline, so the left lung gives up the space — the <b>cardiac notch</b>, and two lobes instead of three. It is also why inhaled objects tend to end up on the right, where the bronchus is wider and steeper."
+  },
+  {
+   "k": "k19vjhiy",
+   "q": "The conducting zone includes the nose, pharynx, larynx",
+   "t": "The <b>respiratory</b> bronchioles do not belong to the conducting zone: they already have alveoli budding off their walls, so gas exchange has begun by then. The word that makes this false is <b>all</b>."
+  },
+  {
+   "k": "kbxlfk4",
+   "q": "The respiratory zone includes the parts of the lungs",
+   "t": "The rule is simple — if <b>alveoli are attached to it</b>, it is respiratory zone. Everything upstream only moves, warms, filters and humidifies the air."
+  },
+  {
+   "k": "k1fj7rff",
+   "q": "only the epiglottis does not have a gaseous exchange function",
+   "t": "Of that list <b>only the alveolus exchanges gas</b>. Trachea, carina and nasopharynx are all conducting structures too, so singling out the epiglottis makes the statement false several times over."
+  },
+  {
+   "k": "k1nbveib",
+   "q": "only the alveolus is in the respiratory zone",
+   "t": "The <b>respiratory bronchiole</b> is in the respiratory zone as well, along with the alveolar ducts and sacs. Again the word <b>only</b> is what makes it false."
+  },
+  {
+   "k": "kv3m9im",
+   "q": "shows the respiratory system parts in the correct order",
+   "t": "Learn it as three stretches: <b>nose to larynx</b>, then the branching <b>bronchial tree</b> narrowing at every division, then the <b>alveolar</b> end where exchange happens. Any sequence question is just testing that map."
+  },
+  {
+   "k": "kto9via",
+   "q": "Emphysema is a condition that causes the",
+   "t": "Emphysema destroys the walls <b>between alveoli</b>. Losing that elastic tissue means the lung cannot recoil to push air out, so air is trapped — the problem is expiration, not inspiration."
+  },
+  {
+   "k": "k1y8pvcm",
+   "q": "At the point where the trachea branches into two bronchiole",
+   "t": "The carina and the cough reflex are both right; the word <b>bronchiole</b> is wrong. The trachea divides into two main <b>bronchi</b>, which are many generations larger."
+  },
+  {
+   "k": "k1244ch",
+   "q": "The pressure in the alveoli is known as",
+   "t": "Keep the three straight: <b>intrapulmonary</b> is inside the alveoli, <b>intrapleural</b> is in the pleural space and is always the lower of the two, and transpulmonary is the difference between them — the pressure that actually holds the lung open."
+  },
+  {
+   "k": "koc0mye",
+   "q": "Air is forced out of the lungs during normal expiration",
+   "t": "Quiet expiration is <b>passive</b>: the inspiratory muscles simply stop and the stretched elastic tissue springs back. Muscles are only recruited when expiration is forced."
+  },
+  {
+   "k": "k1ysoo40",
+   "q": "During an asthma attack, bronchioles become severely",
+   "t": "Asthma is <b>bronchoconstriction</b> plus mucus and inflammation. Adrenaline relaxes airway smooth muscle through its beta-2 receptors, which is exactly why it is the emergency drug."
+  },
+  {
+   "k": "k13oek3h",
+   "q": "When the trachealis muscle contracts during coughing",
+   "t": "Narrowing the tube makes the same volume of air travel <b>faster</b>, and speed is what shifts mucus. Warming and humidifying happened much earlier, in the nose."
+  },
+  {
+   "k": "k1m5ao4c",
+   "q": "Infant respiratory distress syndrome occurs because premature infants",
+   "t": "Without <b>surfactant</b> the water lining each alveolus pulls it shut, so the baby has to generate enormous pressure on every single breath. Type II cells only start producing it late in pregnancy, which is what makes prematurity the risk."
+  },
+  {
+   "k": "k1bngwd0",
+   "q": "Match each airway level to its wall structure",
+   "t": "Two things change all the way down the tree: <b>cartilage disappears and the epithelium gets thinner</b>, until the alveolar wall is a single flat cell — thin enough for gas to cross in a fraction of a second."
+  },
+  {
+   "k": "ki087ct",
+   "q": "Match the terms found in the alveoli with their correct function",
+   "t": "Two cell types, two jobs: <b>type I is the thin wall gas crosses</b>, <b>type II makes surfactant</b>. The macrophage is the cleaner, because everything inhaled that got past the cilia ends up here."
+  },
+  {
+   "k": "k1d2na6x",
+   "q": "Using the alveolus diagram",
+   "t": "The respiratory membrane is only three thin layers pressed together — <b>alveolar cell, fused basement membranes, capillary cell</b>. Anything that thickens it, whether fluid in pulmonary oedema or scarring in fibrosis, slows gas exchange down."
+  },
+  {
+   "k": "k17v65jh",
+   "q": "Even the most forceful exhalation leaves air in the lungs",
+   "t": "If the alveoli emptied completely they would stick shut and need enormous pressure to reopen. <b>Residual volume</b> is what keeps them open — and it is also why this is the one volume a spirometer cannot measure."
+  },
+  {
+   "k": "kr4l7cu",
+   "q": "match each lung volume or capacity to what it means",
+   "t": "<b>Volumes add up to capacities.</b> Vital capacity is the three you can move — tidal plus both reserves — and residual volume is the one you cannot, so it is never part of vital capacity. Check it on the trace: 500 + 3000 + 1100 = 4600 mL vital capacity, and adding the 1200 mL you can never exhale gives the 5800 mL total lung capacity."
+  },
+  {
+   "k": "kdzqrlc",
+   "q": "expired forcibly after maximal inspiration",
+   "t": "Read the wording closely: <b>after a maximal inspiration</b> means the entire usable range in one breath, not just the reserve at one end of it."
+  },
+  {
+   "k": "kri4egq",
+   "q": "The amount of air that can be inspired above the tidal volume",
+   "t": "<b>Reserve means what is left over</b> beyond a normal quiet breath — inspiratory reserve above it, expiratory reserve below it."
+  },
+  {
+   "k": "k1if7he0",
+   "q": "Match the muscles to their action",
+   "t": "Quiet breathing uses the <b>diaphragm and the external intercostals</b>, and nothing else. The neck muscles, the internal intercostals and the abdominals are recruited only once breathing becomes forced."
+  },
+  {
+   "k": "kmcenmv",
+   "q": "Match each partial pressure to where it is found",
+   "t": "The gradient is the whole point: oxygen falls <b>atmosphere → alveolus → blood → cell</b> and carbon dioxide runs the other way. Alveolar air is poorer in oxygen than the atmosphere because it has been humidified and mixed with the air that never left."
+  },
+  {
+   "k": "k67gzs3",
+   "q": "Two gases contribute to 99",
+   "t": "Air is roughly four-fifths <b>nitrogen</b> and one-fifth <b>oxygen</b>. Carbon dioxide is a trace gas by comparison, which is why atmospheric PCO₂ is so tiny next to the alveolar figure."
+  },
+  {
+   "k": "k1nzg744",
+   "q": "not a factor that promotes oxygen dissociation from hemoglobin",
+   "t": "The real modifiers are the ones that change inside a working tissue — <b>heat, acid, carbon dioxide, 2,3-BPG, and a low oxygen pressure</b>. White cells play no part in oxygen carriage at all."
+  },
+  {
+   "k": "kt4sikd",
+   "q": "Match each value to the correct location",
+   "t": "Arterial blood arrives nearly saturated and leaves the tissues still carrying most of its oxygen. That leftover is the <b>venous reserve</b> — what a tissue draws on the moment it starts working harder."
+  },
+  {
+   "k": "kxqurhh",
+   "q": "Hemoglobin has the highest affinity for which of the following gases",
+   "t": "Haemoglobin binds <b>carbon monoxide far more tightly than oxygen</b> and will not release it. That is why carbon monoxide poisoning suffocates a patient whose skin and blood still look healthily red."
+  },
+  {
+   "k": "kf8kx2f",
+   "q": "Hemoglobin molecules are fully saturated when bound to",
+   "t": "One haem group per subunit, <b>four subunits per molecule</b>. Each oxygen that binds also makes the next one bind more easily, which is what gives the dissociation curve its S shape."
+  },
+  {
+   "k": "k1egwrpc",
+   "q": "In its relaxed state, hemoglobin tends to",
+   "t": "Haemoglobin has two shapes: <b>relaxed binds oxygen, tense releases it</b>. Anything that makes a tissue acidic or hot pushes the molecule towards the tense form, so the oxygen comes off where it is needed."
+  },
+  {
+   "k": "k1uv1cob",
+   "q": "Oxygen is uploaded by the heme groups",
+   "t": "They ride on <b>different parts of the same molecule</b>, so haemoglobin can carry both at once — which is exactly what it is doing on the journey back from the tissues."
+  },
+  {
+   "k": "ko4c7hf",
+   "q": "The Bohr effect refers to the change in",
+   "t": "The point of the Bohr effect is that it is <b>self-targeting</b>: the conditions that shift the curve are the conditions inside a hard-working tissue, so oxygen is unloaded precisely where demand is highest."
+  },
+  {
+   "k": "k1copyoy",
+   "q": "The majority of carbon dioxide is transported",
+   "t": "Most carbon dioxide is converted inside the red cell into <b>bicarbonate</b> and then carried in the plasma. That same reaction releases hydrogen ions, which is the link between breathing and acid–base balance."
+  },
+  {
+   "k": "k33eudc",
+   "q": "Match each control centre to its role",
+   "t": "The rhythm is generated in the <b>medulla</b> and only smoothed by the pons; the phrenic nerve is the wire out to the diaphragm. That is why an injury above the mid-cervical cord stops breathing altogether."
+  },
+  {
+   "k": "knwp6nq",
+   "q": "The pulmonary inflation reflex depends upon stimulation",
+   "t": "The inflation reflex is <b>mechanical</b>: stretch receptors in the airways cut inspiration short before the lung is overinflated. Chemoreceptors watch chemistry, not volume."
+  },
+  {
+   "k": "k522vfi",
+   "q": "When holding our breath for a long time",
+   "t": "Breathing is driven mainly by <b>rising carbon dioxide</b> and the acid it produces, not by falling oxygen. It is also why hyperventilating before a breath-hold is dangerous — it delays the urge without adding meaningful oxygen."
+  },
+  {
+   "k": "k1oo8oyw",
+   "q": "arterial blood gas results",
+   "t": "Read the three values against each other. The pH is <b>alkalotic</b>, the PaCO₂ is <b>low</b>, the bicarbonate is <b>normal</b> — pH and carbon dioxide moving in opposite directions is the signature of a <b>respiratory</b> problem, and a normal bicarbonate rules the metabolic one out. This past paper marks the answer as metabolic alkalosis; the values as printed do not support that, so learn the rule rather than this key: pH and CO₂ opposite means respiratory, pH and bicarbonate together means metabolic."
+  },
+  {
+   "k": "ktewuho",
+   "q": "The lungs act as an acid",
+   "t": "Only one direction makes sense: <b>more carbon dioxide means more acid, so ventilation must go up</b> to blow it off. The other three statements all move the wrong way, which is what makes them false."
+  },
+  {
+   "k": "k1relnq3",
+   "q": "Match each influence on breathing to its source",
+   "t": "Breathing has <b>three sets of controllers</b> — voluntary from the cortex, emotional from the limbic system, and automatic from the chemoreceptors. The chemical one always wins in the end, which is why a voluntary breath-hold always finishes with a breath being taken for you."
+  },
+  {
+   "k": "k1pv84eb",
+   "q": "Match each stimulus to its effect on breathing",
+   "t": "The exercise one is the surprise: rate and depth rise <b>before</b> the blood gases have changed at all, because the motor cortex and the joint receptors signal the medulla directly. The two irritant reflexes divide by level — sneeze above the larynx, cough below it."
+  },
+  {
+   "k": "kieze6o",
+   "q": "Match each acclimatisation change to what it achieves",
+   "t": "Every change here does one of two things: <b>carry more oxygen</b>, or <b>deliver it closer to the mitochondria</b>. That is why acclimatisation takes weeks — the adjustments are structural, not just a faster rate of breathing."
+  },
+  {
+   "k": "kvsst2h",
+   "q": "Match each clinical description to its correct term",
+   "t": "The same word-parts again, and the pair worth separating carefully is <b>pneumothorax</b> (air where it should not be) and <b>atelectasis</b> (the collapse that the air causes)."
+  },
+  {
+   "k": "keopzdk",
+   "q": "the major function of the lymphatic system",
+   "t": "By volume the lymphatics are a <b>drainage system</b> — they return the fluid the capillaries leak, which would otherwise become oedema. Immunity is what happens to that fluid as it filters through the nodes on the way."
+  },
+  {
+   "k": "ky9purr",
+   "q": "The typical fluid replacement for the patient",
+   "t": "<b>Match the fluid to the deficit.</b> Isotonic fluid restores volume without shifting water between compartments; hypotonic fluid is what drives water into the cells, and hypertonic pulls it out. Always check which compartment a question is asking you to refill."
+  },
+  {
+   "k": "k1mf03z0",
+   "q": "Axillary lymph nodes are often removed in breast cancer cases",
+   "t": "Breast lymph drains mostly to the <b>axilla</b>, so that is where spread shows up first. Sampling the sentinel node is what spares many patients a full clearance — and the arm lymphoedema that can follow one."
+  },
+  {
+   "k": "k97m7jg",
+   "q": "NOT specifically associated with the lymphatic system",
+   "t": "Bone marrow counts because it is where lymphocytes are <b>made</b>. The kidneys handle fluid too, but by filtering blood, not lymph."
+  },
+  {
+   "k": "kq53x3i",
+   "q": "What is the vein labelled A",
+   "t": "This is where the two systems join: the <b>thoracic duct empties into the left subclavian vein</b>, handing the lymph back to the bloodstream."
+  },
+  {
+   "k": "k1ur7y0v",
+   "q": "Lymph flows towards the thoracic cavity due to the positive pressure",
+   "t": "Inhalation creates a <b>negative</b> pressure in the thorax, and that is what draws lymph upwards. Skeletal muscle movement is the other pump — lymph has no heart of its own, which is why immobility causes swelling."
+  },
+  {
+   "k": "k420k7h",
+   "q": "Match each lymphatic term to its meaning",
+   "t": "Two of these are signs to recognise on sight: <b>red streaks tracking from a wound</b> is lymphangitis, and <b>left shoulder-tip pain</b> after abdominal trauma is Kehr's sign of a ruptured spleen."
+  },
+  {
+   "k": "k1l91rb9",
+   "q": "Match each immune cell or structure to its role",
+   "t": "Split them by job: <b>B cells make antibody</b> (as plasma cells) and <b>T cells act on cells</b> — CD8 killing infected ones, CD4 directing everybody else. The dendritic cell is the one that starts the whole thing, by carrying antigen to the node."
+  },
+  {
+   "k": "k1q7e971",
+   "q": "rate of carbon dioxide and oxygen exchange is roughly the same",
+   "t": "Diffusion depends on the gradient <b>and</b> on solubility, and here the two almost cancel. Oxygen has much the steeper partial-pressure gradient, but carbon dioxide dissolves far more readily in the watery film and plasma it must cross, so similar amounts move in the same time. Neither gas is actively transported anywhere in the lung — <b>both move by simple diffusion</b>, which rules out two of the distractors outright."
+  },
+  {
+   "k": "k1upb3cn",
+   "q": "trachealis muscle contracts",
+   "t": "The trachealis closes the gap at the back of the C-shaped cartilage rings. Narrowing the tube makes the same air travel <b>faster</b>, and a cough clears mucus only because of that velocity. The rings are what hold the airway open; the muscle exists to make it briefly smaller. Warming and moistening are done in the nose, and swallowing is the oesophagus's own muscle."
+  },
+  {
+   "k": "k1b96knn",
+   "q": "majority of carbon dixoide is transported",
+   "t": "About <b>70%</b> travels as bicarbonate. Carbon dioxide enters the red blood cell, carbonic anhydrase converts it to carbonic acid, and that splits into H⁺ and bicarbonate, which leaves for the plasma. So the reaction happens <b>in the red cell</b> but the carrying happens in the plasma — one distractor puts the finished product in the wrong compartment. Carbonic acid itself is only a momentary intermediate, never a transport form."
+  },
+  {
+   "k": "k1pht6s3",
+   "q": "Pulmonary ventilation is also known as",
+   "t": "Learn the four processes as a set: <b>pulmonary ventilation</b> (breathing — moving air in and out), <b>external respiration</b> (exchange at the alveoli), <b>transport</b> of gases in the blood, and <b>internal respiration</b> (exchange at the tissues). Cellular respiration is a fifth and separate thing — the metabolism inside the cell that consumes the oxygen. Only the first is air movement; the rest are exchange or delivery."
+  },
+  {
+   "k": "k19ozcm0",
+   "q": "cells that line the airways of the nasal cavity",
+   "t": "The conducting airways are lined with <b>ciliated pseudostratified columnar</b> epithelium, which is exactly what the mucociliary escalator needs: goblet cells to make the mucus, cilia to sweep it. Remove the cilia and there is no escalator — which is what smoking does. Simple squamous belongs to the alveoli, where a short diffusion distance matters more than cleaning."
+  },
+  {
+   "k": "k1iwtyzg",
+   "q": "function of alveolar type 1 cells",
+   "t": "Split the alveolar cells by shape. <b>Type I are flat</b> and cover most of the surface, so gas crosses them quickly; <b>type II are rounded</b> and secrete surfactant. Propelling mucus is the job of cilia further up the tree, and phagocytosis belongs to the alveolar macrophage — three different cells with three different jobs, all visible in the same micrograph."
+  },
+  {
+   "k": "k1m3bd0o",
+   "q": "inspired above the normal tidal volume",
+   "t": "Read it as a position on the spirometry trace. Tidal volume is the quiet breath; the <b>inspiratory reserve</b> is what you can still drag in on top of it, and the expiratory reserve is the same idea downwards. Vital capacity is not a reserve at all — it is the whole usable range, IRV plus TV plus ERV — and 'reserve air' is not a term this course uses."
+  },
+  {
+   "k": "k192pain",
+   "q": "Match the letters on the diagram showing different lung volumes",
+   "t": "Work from the trace rather than from the names. The <b>volumes</b> are the four single blocks — tidal, inspiratory reserve, expiratory reserve, residual — and the <b>capacities</b> are sums of two or more, so they are the tall brackets spanning several blocks. Vital capacity is everything except residual volume; total lung capacity is everything including it. Residual volume is the block that never moves, which is what separates that pair."
+  },
+  {
+   "k": "kk38ne7",
+   "q": "maintain a patent or open airway",
+   "t": "Patent simply means open. The <b>larynx</b> is built of cartilage, so it holds its own shape and cannot collapse inwards. The pharynx is a muscular tube that can. The conchae only swirl and warm incoming air, and the hyoid bone is an anchor for muscles rather than part of the airway wall."
+  },
+  {
+   "k": "kuz0sbn",
+   "q": "roughly 99% of the air in the atmosphere",
+   "t": "Nitrogen is about <b>78%</b> and oxygen about <b>21%</b>, which leaves barely 1% for everything else — argon, water vapour and carbon dioxide together. That is why carbon dioxide in inspired air exerts so tiny a partial pressure, and therefore why the gradient carrying it out of the blood does not need to be steep."
+  },
+  {
+   "k": "kknbgq6",
+   "q": "true during inspiration except",
+   "t": "Inspiration is the <b>active</b> phase: the diaphragm contracts and flattens, the rib cage swings up and out, the thorax enlarges, and because the volume rose the pressure inside falls below atmospheric — Boyle's law — so air flows in. Every other statement is a consequence of that one contraction, which is what leaves the relaxed diaphragm as the odd one out. It describes quiet <b>expiration</b>."
+  },
+  {
+   "k": "k1g4tscg",
+   "q": "NOT a factor that promotes oxygen dissociation",
+   "t": "Offloading is triggered by signs that a tissue is working hard: <b>more carbon dioxide, more acid, more heat</b>, and a falling PO₂. All of those shift the dissociation curve to the right and loosen haemoglobin's grip — the Bohr effect — which is how exercising muscle extracts more oxygen from the same blood. White cells are immune cells and appear nowhere on that curve."
+  },
+  {
+   "k": "khna7sq",
+   "q": "Alveoli are prevented from collapsing",
+   "t": "The threat is <b>surface tension</b>: the water film lining an alveolus pulls it inwards, and the smaller the alveolus the harder it pulls. Surfactant from type II cells breaks up that film and lowers the tension. Shape alone does not save it — which is precisely what neonatal respiratory distress syndrome demonstrates, since those alveoli are the right shape and still collapse."
+  },
+  {
+   "k": "kgnlggd",
+   "q": "nerve that excites the diaphragm",
+   "t": "The diaphragm is skeletal muscle, so it does nothing without a motor nerve, and that nerve is the <b>phrenic</b> — from cervical roots C3, C4 and C5. That is why a high cervical spinal injury stops breathing while a lower one does not. The intercostal nerves supply the rib muscles, and the vagus is parasympathetic to the viscera; neither drives the diaphragm."
+  },
+  {
+   "k": "k1xhpkhs",
+   "q": "saturated haemoglobin molecule",
+   "t": "Each haemoglobin carries <b>four haem groups</b>, each holding one iron atom and binding one oxygen molecule, so saturation is a count out of four rather than a yes or no. Oxygen binds to the <b>iron</b>, not to the amino acids of the globin chains. Each molecule bound makes the next bind more easily, and that cooperativity is what gives the dissociation curve its S shape."
+  },
+  {
+   "k": "kp9bp2s",
+   "q": "lung volume is affected by",
+   "t": "Both, and they work against each other. <b>Elasticity</b> is the recoil that empties the lung; <b>surfactant</b> is what stops that recoil from closing the alveoli altogether. Together they set compliance — how much volume you gain for a given effort — so an option offering either one alone is offering half of the mechanism."
+  },
+  {
+   "k": "k1g2wmvk",
+   "q": "External respiration is affected by all the following except",
+   "t": "External respiration is <b>diffusion across the respiratory membrane</b>, and diffusion is governed by surface area, membrane thickness, the solubility of the gas and the partial-pressure gradient. Airway resistance is a <b>ventilation</b> problem: it limits how much air reaches the alveolus, not how gas crosses once it is there. Sorting factors into 'gets air there' and 'gets gas across' answers most questions on this focus point."
+  },
+  {
+   "k": "k4egzsn",
+   "q": "respiratory membrane is made up of alveolar cells and surfactant",
+   "t": "The respiratory membrane is everything gas must cross: <b>alveolar epithelium, the fused basement membranes, and capillary endothelium</b> — three layers totalling only 0.5–1 µm. Surfactant coats the inner surface and lowers surface tension, but it is not one of the diffusion layers. Omitting the capillary wall is what makes the statement false."
+  },
+  {
+   "k": "kr7joc2",
+   "q": "Normal blood pH is",
+   "t": "Narrower than it looks: roughly 6.8 to 7.8 is survivable, and <b>7.35–7.45</b> is the slice the body actively defends. Note that it is <b>alkaline</b>, not neutral — so a pH of 7.2 is an acidosis even though 7.2 is still above 7 on the scale. That single point is the trap in almost every acid-base question."
+  },
+  {
+   "k": "k8uvgiu",
+   "q": "very high levels of CO 2 would have a pH of",
+   "t": "Carbon dioxide is an acid in disguise: dissolved CO₂ plus water makes carbonic acid, which splits into H⁺ and bicarbonate. <b>More carbon dioxide means more H⁺, which means a lower pH.</b> Because the cause is the lungs failing to clear it, this is specifically a <b>respiratory</b> acidosis — and running the same chain backwards is what makes overbreathing a respiratory alkalosis."
+  },
+  {
+   "k": "k1xgy5ip",
+   "q": "blood pH of 7.5 due to vomiting",
+   "t": "<b>The answer key on this card is wrong, and a verbatim card is never edited</b> — it reproduces the question and the key exactly as Canvas served them, so read this one and move on. Vomiting loses <b>gastric acid</b>, leaving the blood relatively more alkaline: that is a metabolic <b>alkalosis</b>. The number says the same thing — 7.5 is above 7.45, and question 1 of this very quiz defines normal as 7.35–7.45, so 7.5 cannot be an acidosis of any kind. Hannetjie's own RESP 3 summary slide lists 'Severe vomiting-loss of acid' under Metabolic Alkalosis. Answer it False in your head, and know why."
+  },
+  {
+   "k": "k7gf6z4",
+   "q": "Blood with a pH of 7 is",
+   "t": "Anything below 7.35 is acidotic, and 7 is well below it. The trap is reading 7 as 'neutral', which it is for <b>pure water</b> — but blood is held deliberately alkaline, so water-neutral blood would be a life-threatening acidosis. Acidotic describes the blood; acidosis is the process that made it that way."
+  },
+  {
+   "k": "k1s6py23",
+   "q": "diabetic patient metabolising fates and producing ketones",
+   "t": "Two things make this <b>metabolic</b> rather than respiratory: the acid is <b>produced by metabolism</b> — ketone bodies from fat breakdown when glucose cannot enter the cells — and the lungs are not the cause. Compare the carbon-dioxide questions on this quiz: the same low pH, a completely different origin. Expect deep sighing Kussmaul breathing here, which is the lungs blowing off CO₂ to compensate for an acid they did not create."
+  },
+  {
+   "k": "k518wrr",
+   "q": "Fast and deep breathing gets rid of more carbon dioxide",
+   "t": "Follow the chain: blowing off carbon dioxide removes the source of H⁺, so pH <b>rises</b>. It is <b>respiratory</b> because the lungs caused it and <b>alkalosis</b> because the pH went up — the two halves of the name answer two different questions, and each distractor gets one half right. This is the panic-attack picture, and the reason rebreathing helps."
+  },
+  {
+   "k": "k1i6atwd",
+   "q": "About hemoglobin",
+   "t": "The prefix names what is attached: <b>oxy-</b> oxygen, <b>carbamino-</b> carbon dioxide, <b>carboxy-</b> carbon monoxide, <b>deoxy-</b> nothing at all. Carbamino and carboxy are the two most often swapped, and the difference is clinical: carbon monoxide binds far more tightly than oxygen and will not release, which is what makes it lethal. <b>Heme</b> is the iron-holding part itself, and 2,3-BPG is the red cell's own regulator, loosening the grip so oxygen is handed over to tissues. One caution on the figures printed here: Hannetjie's RESP 3 slide puts the carbamino fraction at 20–30%, not the 10–20% on this card."
+  },
+  {
+   "k": "kecmc59",
+   "q": "parts of the bronchial tree in the correct order",
+   "t": "Follow the air, and watch the order of the two bronchioles. <b>Terminal</b> bronchioles end the conducting zone — no alveoli, no gas exchange — and <b>respiratory</b> bronchioles begin the respiratory zone, because alveoli start budding from their walls. Terminal comes first even though the word sounds final: it is the end of conduction, not the end of the tree."
+  },
+  {
+   "k": "k1i83chq",
+   "q": "Bronchiole are lined with cuboidal epithelium",
+   "t": "The lining thins as the tube narrows: pseudostratified columnar in trachea and bronchi, simple <b>cuboidal</b> in bronchioles, simple squamous at the alveolus. It thins for the same reason the cartilage disappears — less need to condition and clear the air, more need for a short diffusion distance."
+  },
+  {
+   "k": "k19pxad7",
+   "q": "Bronchi are supported by cartilage",
+   "t": "This is the most useful single landmark for telling the two apart down a microscope. Cartilage holds the larger airways permanently open; bronchioles have <b>smooth muscle instead</b>, so their diameter is adjustable — which is exactly why an asthma attack constricts bronchioles rather than bronchi."
+  },
+  {
+   "k": "kjzqexo",
+   "q": "Penumocytes types 1 and 2",
+   "t": "Only type I is squamous — flat, and thin enough for gas to cross. <b>Type II is cuboidal</b>, and its bulk is the point: it needs room for the machinery that manufactures surfactant. The general rule is worth carrying: a cell built for exchange is flat, a cell built for secretion is not."
+  },
+  {
+   "k": "k10gn447",
+   "q": "Neonatal respiratory distress syndrome",
+   "t": "Surfactant production ramps up late in gestation, so a premature lung is structurally present but <b>chemically unfinished</b>. Without surfactant, surface tension wins and alveoli collapse at the end of each breath, so every one has to be reinflated from scratch — which is why the work of breathing becomes unsustainable. It is the clinical proof of what surfactant is for."
+  },
+  {
+   "k": "k8rzdth",
+   "q": "Two gases contribute to 99% of the total atmospheric pressure",
+   "t": "Nitrogen about <b>78%</b>, oxygen about <b>21%</b>. It matters because of Dalton's law: each gas contributes pressure in proportion to its share, so nitrogen supplies most of the total pressure at sea level while playing no physiological part at all, and oxygen's roughly one-fifth share is what sets the partial pressure driving diffusion into the blood."
+  },
+  {
+   "k": "k1qvho37",
+   "q": "pressure exerted by each gas in a mixture is proportional to its percentage",
+   "t": "Attach each name to its own idea. <b>Dalton</b> is about a mixture: each gas contributes pressure in proportion to its share. <b>Boyle</b> is about one gas and its container: squeeze the volume and the pressure rises, which is what breathing does. <b>Henry</b> is about a gas meeting a liquid: how much dissolves depends on its partial pressure and its solubility. Two distractors deliberately bolt the right name onto the wrong law."
+  },
+  {
+   "k": "k3gwxqb",
+   "q": "rate of CO 2 exchange roughly equivalent to that of O 2",
+   "t": "Solubility is the second half of the diffusion story and the half that gets forgotten. Oxygen has the steeper partial-pressure gradient, but carbon dioxide dissolves far more readily in the fluid it has to cross, and the two effects roughly cancel out. Neither gas is actively transported and neither binds the other in transit — <b>simple diffusion, in both directions</b>."
+  },
+  {
+   "k": "k8p8oya",
+   "q": "External respiration is affected by all of the following factors except",
+   "t": "The three that do belong are the terms of the diffusion equation: <b>membrane thickness</b>, <b>gas solubility</b> and the <b>partial-pressure gradient</b> — with surface area as the fourth. Airway resistance sits one step upstream: it limits how much air arrives, which is <b>ventilation</b>, not exchange. Real lung disease blurs the two; this question deliberately does not."
+  },
+  {
+   "k": "k1b9kmua",
+   "q": "majority of carbon dioxide is transported",
+   "t": "Roughly <b>70%</b> as bicarbonate, 20–30% bound to haemoglobin as carbamino compounds, and only 7–10% simply dissolved. Carbonic acid is not one of the three: it exists for an instant inside the red cell before splitting into H⁺ and bicarbonate. That same reaction is why carbon dioxide transport and blood pH are really one topic."
+  },
+  {
+   "k": "kwkr55t",
+   "q": "amount of air that can be expired forcibly after maximal inspiration",
+   "t": "The passage defines it two sentences before it asks: vital capacity is the sum of the inspiratory reserve, tidal and expiratory reserve volumes — <b>everything you can move</b>, which is exactly what 'forcibly expired after a maximal inspiration' describes. Long stems like this usually carry their own answer, and the skill being tested is finding the definition rather than recalling it."
+  },
+  {
+   "k": "k15pgq0n",
+   "q": "Hyperbaric chambers are clinical applications",
+   "t": "Two laws, because the chamber does two things at once. Raising the pressure <b>compresses trapped gas</b> — Boyle — which is how it treats decompression sickness and air embolism. It also <b>forces far more oxygen into solution</b> in the plasma — Henry — which is how it treats carbon monoxide poisoning, where haemoglobin itself is unavailable. Frank-Starling is a cardiac law and is present only as a distractor."
+  },
+  {
+   "k": "k10h5s9g",
+   "q": "true of inspiration except",
+   "t": "Every other statement follows from the diaphragm <b>contracting</b>: the thorax enlarges, and because the volume rose the intrapulmonary pressure fell below atmospheric — Boyle's law — so air moves in. Air always follows a pressure gradient; it is never pulled or pushed directly. A relaxed diaphragm describes quiet expiration instead."
+  },
+  {
+   "k": "k1eafe16",
+   "q": "Possible causes of hypoxia",
+   "t": "Hypoxia is <b>too little oxygen reaching the tissues</b>, and altitude is the classic cause: the percentage of oxygen is unchanged, but the total pressure is lower, so its partial pressure — the thing that actually drives diffusion — falls with it. Rapid deep breathing does the opposite. And note the swap in the last option: the <b>oesophagus</b> carries food, so obstructing it does not obstruct breathing."
+  },
+  {
+   "k": "k3plwbe",
+   "q": "inspired above the tidal volume",
+   "t": "Reserve means 'on top of what you already did'. Above a quiet breath in sits the <b>inspiratory reserve</b>; below a quiet breath out sits the expiratory reserve. Vital capacity is the total span of both plus the tidal volume in between, and 'reserve air' is not a term this course uses."
+  },
+  {
+   "k": "k1fjqh3c",
+   "q": "not a role of the pleura",
+   "t": "The pleura is a two-layered sac wrapping <b>each lung</b>; it is not a partition. The thorax is divided into left, right and mediastinum by anatomy the pleura sits inside rather than by the pleura itself. The other three options are genuine: serous fluid removes friction during breathing, each sealed sac limits infection spreading from one side to the other, and the negative intrapleural pressure it maintains assists venous return to the heart."
+  },
+  {
+   "k": "k10updhg",
+   "q": "NOT a factor that promotes oxygen dissociation",
+   "t": "The factors that loosen haemoglobin's grip are all markers of a hard-working tissue: <b>rising carbon dioxide, rising acidity, rising temperature and falling PO₂</b>. Three of the four options are on that list. White cell count is an immune measure and never appears on the dissociation curve — which identifies it as the odd one out even if the rest will not come to mind."
+  },
+  {
+   "k": "k1wjg5if",
+   "q": "trachealis muscle contracts it reduces the diameter",
+   "t": "Narrowing the trachea forces the same air through a smaller opening, so it travels <b>faster</b> — and a cough shifts mucus only because of that velocity. The cartilage rings are C-shaped, open at the back, precisely so the trachealis can draw the ends together. Warming and moistening happen in the nose, and moving food is the oesophagus's own muscle."
+  },
+  {
+   "k": "kbotwce",
+   "q": "majority of Oxygen is transported in the blood",
+   "t": "About <b>98.5%</b> rides on haemoglobin and only around 1.5% dissolves in the plasma — which is why anaemia causes tissue hypoxia even when the lungs are working perfectly. Two distractors are traps of wording: oxygen binds as a whole <b>molecule</b> rather than as ions, and carboxyhaemoglobin is haemoglobin bound to carbon <b>monoxide</b>, not to oxygen."
+  },
+  {
+   "k": "kmqlcg0",
+   "q": "Quiet expiration is a passive process",
+   "t": "Quiet expiration is the one phase of quiet breathing that costs nothing: the inspiratory muscles simply <b>stop contracting</b>, and the stretched lung and chest wall spring back. Stretching them during inspiration is what stored the energy in the first place. Expiration only becomes active when it is forced — then the abdominal and internal intercostal muscles take over."
+  },
+  {
+   "k": "kj1onw2",
+   "q": "Quiet inspiration is an active process",
+   "t": "Both muscle groups, and the diaphragm does roughly <b>two-thirds</b> of the work: it flattens downwards while the external intercostals lift the ribs up and out. Quiet inspiration is always active, and that asymmetry against a passive quiet expiration is the whole point of the pairing."
+  },
+  {
+   "k": "kdsdofe",
+   "q": "Forced exhalation is an active process",
+   "t": "Notice the intercostals appear in both directions under different labels: <b>external</b> intercostals lift the ribs to breathe in, <b>internal</b> intercostals pull them down to force air out. The abdominal muscles add to it by driving the viscera up against the diaphragm. Any statement pairing 'external intercostals' with expiration has them the wrong way round."
+  },
+  {
+   "k": "kqigwa1",
+   "q": "Forced inhalation involves the contraction of the following muscles",
+   "t": "These are the <b>accessory muscles</b> of inspiration, and they are worth knowing as a clinical sign rather than as a list: a patient recruiting neck and shoulder muscles to breathe is visibly in trouble. Each one works by lifting some part of the rib cage or sternum, enlarging the thorax beyond what the diaphragm alone can manage."
+  },
+  {
+   "k": "knxtxp4",
+   "q": "Ventral Respiratory Centre is involved in the forced expiration",
+   "t": "The first sentence is correct and the second is not, which makes the statement as a whole false. The <b>dorsal</b> group drives <b>quiet</b> inspiration — it sets the basic rhythm and fires the diaphragm and external intercostals. The <b>ventral</b> group is largely silent during quiet breathing and switches on when demand rises, driving forced inspiration <b>and</b> forced expiration. So forced inspiration belongs to the ventral group, not the dorsal one."
+  },
+  {
+   "k": "k1aisp5",
+   "q": "tracheal carina is the most sensitive area",
+   "t": "The carina is the ridge where the trachea divides into the two main bronchi, and it is the most cough-sensitive point in the whole airway. That makes sense as a last line of defence: anything reaching it is about to enter a lung. It is why suctioning to that depth provokes violent coughing, and why an inhaled object lodging there is an emergency."
+  },
+  {
+   "k": "kmfqg8h",
+   "q": "These images show the main tube connecting to the lungs cut open",
+   "t": "Both the trachea and a main bronchus are ringed with cartilage, so the rings alone do not decide it. The trachea is the <b>single</b> tube above the carina and its cartilage is <b>C-shaped, incomplete at the back</b>, closed by the trachealis muscle where it meets the oesophagus. Once the airway divides, that regular ring gives way to irregular plates."
+  },
+  {
+   "k": "k6alv4a",
+   "q": "The part of the image labelled B is",
+   "t": "Microvilli and cilia both look like a brush border, which is the whole trap. <b>Cilia beat</b> — they are motile and sweep the mucus blanket upward; microvilli never move and belong to absorptive surfaces like the gut. In airway epithelium the layer being tested is the one that moves."
+  },
+  {
+   "k": "k1ovx6ef",
+   "q": "The white shiny part of this structure",
+   "t": "Colour is the tell in gross anatomy: <b>collagen is white and glistening</b>, elastin is yellow. Anything described as a shiny white cord or sheet is dense collagenous tissue — elastic fibres are what stretch and recoil, not what shines."
+  },
+  {
+   "k": "k16v3pmq",
+   "q": "the structure that covers the surface of the lung",
+   "t": "Both pleural roles offered are real, which is why this is hard. Lubrication only reduces friction; it is the <b>surface tension of the thin fluid film</b> that couples the visceral layer to the parietal one, so the lung is dragged outward when the thoracic cage expands. Lose that coupling and there is no friction problem — and no ventilation either."
+  },
+  {
+   "k": "koqb5vl",
+   "q": "the combination of volumes that makes up FUNCTIONAL RESIDUAL CAPACITY",
+   "t": "Functional residual capacity is what is <b>left in the lungs after a normal quiet breath out</b> — expiratory reserve plus residual volume. It cannot be measured directly on a spirometer trace, because residual volume is the part you can never exhale, which is exactly why it has to be worked out rather than read off."
+  },
+  {
+   "k": "k15hvaa7",
+   "q": "Peak Flow meters can be used to estimate someones respiratory function",
+   "t": "Peak flow and forced expiratory volume measure how fast air can be driven out, so they track <b>airway resistance</b> rather than effort or willpower. A higher number means air is leaving less obstructed — which is why the value drops in an asthma attack and climbs again after a bronchodilator."
+  },
+  {
+   "k": "kmmzgav",
+   "q": "The aortic arch gives rise to three branches",
+   "t": "Order matters more than the count: <b>brachiocephalic, then left common carotid, then left subclavian</b>. The asymmetry is the examinable part — the right common carotid and right subclavian branch off the brachiocephalic, so only the left pair leave the arch directly."
+  },
+  {
+   "k": "kdy14uw",
+   "q": "Cardiac output is determined by",
+   "t": "<b>Cardiac reserve is not a determinant, it is a consequence</b> — the gap between resting output and the maximum the heart could manage. Only the two quantities you multiply together set cardiac output itself."
+  },
+  {
+   "k": "k1sl2r2",
+   "q": "The chordae tendineae of the heart anchor the semilunar valves",
+   "t": "Chordae tendineae and papillary muscles exist because the <b>atrioventricular</b> cusps have to be held shut against full ventricular pressure. Semilunar valves have no cords at all — their pocket shape catches back-flow and closes them passively."
+  },
+  {
+   "k": "k46v84k",
+   "q": "The hormone adrenaline released in times of acute stress",
+   "t": "Split the word: <b>brady-</b> is slow, <b>tachy-</b> is fast. Acute stress is a sympathetic response, and the entire point of adrenaline is to drive rate and force of contraction up."
+  },
+  {
+   "k": "k15zd4j5",
+   "q": "When rising to your feet from a supine",
+   "t": "This is a <b>negative feedback loop</b>, so every step has to push pressure back toward normal: the fall is detected, sympathetic outflow rises, vessels constrict and the heart speeds up. Check each step against that direction and a scrambled order gives itself away."
+  },
+  {
+   "k": "k1lfeome",
+   "q": "The kidneys play an important role in correcting sustained changes to blood pressure",
+   "t": "The distinction being tested is <b>speed</b>. Baroreceptors correct a sudden drop within seconds using nerves; the kidney answers a <b>sustained</b> drop over minutes to hours using hormones, through renin and the RAAS. Both raise pressure, on very different clocks."
+  },
+  {
+   "k": "k16hg961",
+   "q": "The heart rate in a trained athlete",
+   "t": "Resting cardiac output is fixed by the body's oxygen demand, so if <b>stroke volume</b> rises with training, rate must fall to keep the product constant. A trained heart is a larger, stronger pump doing the same job in fewer beats."
+  },
+  {
+   "k": "k1nn7mq3",
+   "q": "One of the e mergency drug administered in this scenario",
+   "t": "Aspirin is an <b>antiplatelet</b> — it stops clots forming, which is why it features in a suspected heart attack, and it does nothing to vascular tone. Raising pressure in shock needs a vasopressor such as adrenaline. Being the famous cardiac drug is not the same as being the right drug here."
+  },
+  {
+   "k": "kjhxcok",
+   "q": "which contains the majority of the body’s blood volume",
+   "t": "Veins and venules are the <b>capacitance</b> vessels — thin-walled and distensible, holding roughly two thirds of the blood at any moment. That reservoir is why venoconstriction can shift a large volume back to the heart quickly."
+  },
+  {
+   "k": "k18zprqf",
+   "q": "Compression of which vessel could cause unconsciousness",
+   "t": "Unconsciousness follows loss of blood <b>supply to</b> the brain, so it has to be an artery carrying blood up, not a vein draining it away. Compressing a vein backs blood up and raises pressure in the head; compressing the common carotid cuts the supply off."
+  },
+  {
+   "k": "k1e6j0u5",
+   "q": "What kind of a blood system do humans have",
+   "t": "<b>Closed</b> because blood stays inside vessels instead of bathing tissue directly, and <b>double</b> because it passes through the heart twice per circuit — once round the lungs, once round the body. The double design is what allows systemic pressure to be high while the pulmonary circuit stays low."
+  },
+  {
+   "k": "kcjkber",
+   "q": "Vasoconstriction increases peripheral resistance",
+   "t": "Resistance depends on vessel radius far more steeply than on anything else — a small narrowing raises it sharply. That sensitivity is why arteriolar tone, not vessel length or blood volume, is the body's main minute-to-minute pressure control."
+  },
+  {
+   "k": "k1j58s9q",
+   "q": "Activation of the sympathetic nervous system causes an increase in blood pressure",
+   "t": "Sympathetic outflow hits <b>both terms of BP = CO × SVR at once</b>: rate and contractility rise at the heart while the peripheral vessels constrict. Acting on both is why the response is so fast and so large."
+  },
+  {
+   "k": "knq3rkk",
+   "q": "In which part of the brain stem do we find the vasomotor centre",
+   "t": "Two traps in one question. The vasomotor centre sits in the <b>medulla oblongata</b> alongside the cardiac centres, not the pons or midbrain. And the vessels of skeletal muscle are dilated by <b>sympathetic</b> activity — fight-or-flight redirects blood into muscle, so dilation there is sympathetic even though dilation elsewhere is not."
+  },
+  {
+   "k": "kbrfre3",
+   "q": "Penile erection depends on vasodilation",
+   "t": "A standard autonomic pairing: <b>parasympathetic drives erection, sympathetic drives emission</b>. Parasympathetic activity is the rest-and-digest state, and vasodilation of those vessels fits that pattern rather than the fight-or-flight one."
+  },
+  {
+   "k": "k1lullmp",
+   "q": "Chemical factors that contribute to increased blood pressure",
+   "t": "Sort them by direction rather than memorising six facts. <b>Aldosterone and angiotensin II raise pressure by retaining sodium and water and constricting vessels; adrenaline raises it through the heart.</b> The three that lower it are two vasodilators and one volume-dumper — atrial natriuretic peptide exists precisely to make the kidney shed sodium when the atria are over-stretched."
+  },
+  {
+   "k": "k6fqj3",
+   "q": "Put the following sequence of events in the correct order",
+   "t": "Note how counter-intuitive the first step is: a <b>fall</b> in pressure means <b>fewer</b> impulses from the baroreceptors, and it is that reduction which releases the vasomotor centre. They report stretch, so less stretch is less firing — the reflex works by removing inhibition, not by adding a signal."
+  },
+  {
+   "k": "k1hns78p",
+   "q": "The volume of blood pumped out from a ventricle with each beat",
+   "t": "Take the words literally: <b>volume per beat</b> is stroke volume, volume per minute is cardiac output. Multiply the first by heart rate to get the second — which is why only one of the two can be expressed in millilitres alone."
+  },
+  {
+   "k": "kznvv65",
+   "q": "The membrane from which the heart valves are formed",
+   "t": "Order the three layers from the blood outward: <b>endo-</b> is the innermost lining in contact with blood, myo- is the muscle, epi- is the outer surface. The valves are folds of that inner lining, so they carry its name."
+  },
+  {
+   "k": "kcn7evd",
+   "q": "By far the thickest layer of the heart wall",
+   "t": "<b>Myo-</b> means muscle, and the muscle is what does the work, so it is necessarily the thickest layer. The left ventricle's is thickest of all because it has to drive the entire systemic circuit."
+  },
+  {
+   "k": "k1ok7ytf",
+   "q": "The thin-walled upper septum",
+   "t": "The clue is <b>upper</b> and <b>thin</b>. Atria sit above and only push blood into the ventricles just below them, so the wall between them is thin; the interventricular septum has to withstand full ventricular pressure and is thick and muscular."
+  },
+  {
+   "k": "k8kfhf7",
+   "q": "which has lubricating fluid in it is called the epicardial space",
+   "t": "The space between the visceral layer (epicardium) and the parietal layer is the <b>pericardial cavity</b>, and the fluid in it is pericardial fluid. Naming a cavity after only one of the two membranes bounding it is the giveaway."
+  },
+  {
+   "k": "k5qly3",
+   "q": "The left atrioventricular valve is thicker than the right",
+   "t": "Two cusps on the left, three on the right — <b>bi</b>cuspid against <b>tri</b>cuspid. The left one is built thicker because it has to hold shut against the pressure the left ventricle generates for the whole body."
+  },
+  {
+   "k": "k1x28h4g",
+   "q": "Situated between the right ventricle and the pulmonary artery",
+   "t": "Name a semilunar valve after the <b>vessel it opens into</b>, not the chamber behind it: right ventricle into pulmonary artery is the pulmonary valve, left ventricle into aorta is the aortic valve."
+  },
+  {
+   "k": "kmz9g33",
+   "q": "The covering of the heart that covers the myocardium exteriorly",
+   "t": "<b>Epi-</b> means upon. The layer lying on the outside of the myocardium is also the visceral pericardium — one membrane with two names, depending on whether you are describing the heart wall or the sac around it."
+  },
+  {
+   "k": "k1l46vwf",
+   "q": "The branches of the aorta that provide oxygen and nutrients to the myocardium",
+   "t": "The myocardium is far too thick to feed itself by diffusion from the blood inside its chambers. The <b>coronary</b> arteries leave the aorta immediately above the aortic valve, making the heart the first organ served by its own output."
+  },
+  {
+   "k": "k1ldpsdd",
+   "q": "Heart internal view",
+   "t": "Work from the flow rather than hunting labels one at a time: the right side carries deoxygenated blood from the venae cavae out to the pulmonary artery, the left takes it from the pulmonary veins out to the aorta. Fix the <b>two structures you are certain of</b> and position constrains the rest."
+  },
+  {
+   "k": "ka7bk2m",
+   "q": "Thicker myocardium of left ventricle compared to right ventricle",
+   "t": "Two pairings, each a pair of opposites: <b>atria receive, ventricles pump</b>; <b>systole contracts, diastole relaxes</b>. Getting either half right forces the other, so check them against each other instead of recalling four separate facts."
+  },
+  {
+   "k": "k6j6gt7",
+   "q": "Ligamentum arteriosum",
+   "t": "The heart sounds are valves <b>closing, not opening</b>: LUB is the atrioventricular valves at the start of ventricular systole, DUB the semilunars at the end. The embryonic remnants pair the same way — fossa ovalis is the closed interatrial opening, ligamentum arteriosum the closed duct, and a duct that fails to close is patent."
+  },
+  {
+   "k": "k1k8a3e8",
+   "q": "The right and left coronary arteries arise from the",
+   "t": "The coronary openings sit just above the aortic valve cusps, so the coronaries fill during <b>diastole</b>, when the valve shuts and blood falls back against it. That is why a very fast heart rate, which shortens diastole, starves the myocardium."
+  },
+  {
+   "k": "k1fnlfju",
+   "q": "The two branches of the left coronary artery",
+   "t": "The names describe the route each vessel takes: the <b>left anterior descending</b> runs down the front in the interventricular groove, the <b>circumflex</b> curves around the left side in the atrioventricular groove."
+  },
+  {
+   "k": "kq811jv",
+   "q": "The branches of the left coronary artery supply the left atrium",
+   "t": "Follow the vessel: the left anterior descending runs down the <b>front</b> of the heart, so left coronary territory includes the anterior ventricular wall. Lung tissue is supplied by bronchial arteries, never by coronaries."
+  },
+  {
+   "k": "k1ivz6dw",
+   "q": "The branches of the right coronary are the marginal artery and the",
+   "t": "Mirror the left side: the right coronary gives a <b>marginal</b> branch along the right border and a <b>posterior interventricular</b> branch down the back groove. The circumflex belongs to the left, so it cannot appear on this list."
+  },
+  {
+   "k": "k1focyr5",
+   "q": "These branches of the right coronary artery supply the posterior ventricular walls",
+   "t": "The right coronary supplies the right side and the posterior surface, and its <b>marginal</b> branch is named for the right margin it runs along. Left lateral wall is circumflex territory."
+  },
+  {
+   "k": "kifz2p8",
+   "q": "The venous return from the myocardium is through the coronary veins",
+   "t": "Cardiac veins do not join the vena cava. They drain into the <b>coronary sinus</b> in the posterior atrioventricular groove, which empties straight into the right atrium — so the heart returns its own venous blood to itself, upstream of the lungs."
+  },
+  {
+   "k": "k1elut38",
+   "q": "Which statement is false regarding the conduction system of the heart",
+   "t": "The conduction system is a <b>hierarchy of pacemakers</b>, not a single one. The sinoatrial node is fastest so it normally sets the rhythm, but the atrioventricular node and the ventricular conducting tissue each have their own slower intrinsic rate and take over if it fails — which is exactly what the word 'totally' denies."
+  },
+  {
+   "k": "k18e6h1i",
+   "q": "Label the five components of the conduction system",
+   "t": "Label it as a <b>path, not five separate names</b>: the impulse starts in the sinoatrial node high in the right atrium, is deliberately delayed at the atrioventricular node, runs down the atrioventricular bundle, splits into the bundle branches within the septum, and spreads through the Purkinje fibres. The sequence is the answer."
+  },
+  {
+   "k": "k1fvhra9",
+   "q": "An ECG records the",
+   "t": "The electrodes are on the skin, so an ECG can only record <b>electrical</b> events. Sounds need a stethoscope, pressures need a catheter and volumes need imaging — matching instrument to signal settles this without recall."
+  },
+  {
+   "k": "kokhxek",
+   "q": "Explain what the following waves of the ECG represent",
+   "t": "Three of the four electrical events appear on the trace; <b>atrial repolarisation is buried inside the QRS</b> and never gets a wave of its own. Depolarisation precedes contraction, so P comes before atrial systole and QRS before ventricular systole."
+  },
+  {
+   "k": "k1up7qm8",
+   "q": "Which ONE of the following can it NOT show",
+   "t": "An ECG records electrical activity, so it detects anything disturbing <b>rhythm or conduction</b>. A leaking or narrowed valve is a mechanical fault — it shows on echocardiography or as a murmur, and only reaches the ECG indirectly, once chambers have enlarged in response."
+  },
+  {
+   "k": "k1olj6b0",
+   "q": "A blood pressure of 160/90 in the arteries",
+   "t": "Sort these by <b>what defines each term</b>, not by the numbers. High versus low is a magnitude call; orthostatic is defined by its <b>trigger</b> — standing up — rather than by any particular reading; and primary or essential means no underlying cause was found, which is a statement about aetiology, not about pressure."
+  },
+  {
+   "k": "kpqy60f",
+   "q": "Which formula shows the relationship between BP, CO & SVR",
+   "t": "Pressure is flow times resistance — the circulatory form of Ohm's law. Read it as a lever: raise either <b>output</b> or <b>resistance</b> and pressure rises, which is precisely the two places every antihypertensive drug works."
+  },
+  {
+   "k": "k5i1n9a",
+   "q": "The normal heart rate, stroke volume and cardiac output for a 70Kg man",
+   "t": "The arithmetic is the check: 70 beats/min × 70 mL is about 4,900 mL, so roughly <b>5 litres a minute</b> — near enough the whole blood volume every minute at rest. Hold any two of the three and the third is forced."
+  },
+  {
+   "k": "k7c42wa",
+   "q": "The cardiac reserve is the difference between cardiac output",
+   "t": "Two ratios that are easy to swap. <b>Cardiac reserve</b> compares resting output with maximum output — how much more the heart could do. <b>Ejection fraction</b> compares stroke volume with the volume the ventricle held before contracting — how completely it empties on one beat."
+  },
+  {
+   "k": "k1nspqt2",
+   "q": "What will happen to SV if the force of contraction",
+   "t": "Contractility is force <b>at a given filling volume</b>, so a stronger squeeze empties the ventricle more completely and stroke volume rises. This is inotropy, and it is separate from preload — nothing about the volume arriving has changed."
+  },
+  {
+   "k": "k1ynzi0z",
+   "q": "What will happen to SV if arterial vessels are constricted",
+   "t": "Afterload is the pressure the ventricle must overcome before the aortic valve will open. Raise it and the ventricle ejects <b>less</b> per beat for the same effort — which is why untreated hypertension eventually wears the left ventricle out."
+  },
+  {
+   "k": "kgujks0",
+   "q": "Match the following terms to their definitions",
+   "t": "The trap is <b>per beat against per minute</b>: stroke volume is one beat's worth, cardiac output a minute's worth. Pressure terms describe force against the wall, volume terms describe how much moves — sort each item into force or volume first and the matching falls out."
+  },
+  {
+   "k": "k18depab",
+   "q": "The structure of the artery differs from that of a vein",
+   "t": "Arteries take the pulse straight from the ventricle, so they need a thick <b>tunica media</b> and a prominent elastic lamina to stretch and recoil with each beat. Veins carry the same volume at low pressure, so they get thinner walls, wider lumens and valves instead."
+  },
+  {
+   "k": "kcbjve0",
+   "q": "On the arterial side of a capillary bed, filtration is favored",
+   "t": "One pressure changes along the capillary and the other barely does. <b>Hydrostatic pressure falls</b> from the arterial to the venous end while oncotic pressure stays roughly constant — so the balance tips from pushing fluid out to drawing it back in without either force having to reverse."
+  },
+  {
+   "k": "k1rwwp5h",
+   "q": "Match the causes of edema and the mechanisms",
+   "t": "Every cause acts through <b>one of the four Starling terms</b>: raise capillary hydrostatic pressure, drop plasma oncotic pressure, make the wall leaky, or block lymphatic drainage. Name which term a given cause moves and the matching becomes mechanical."
+  },
+  {
+   "k": "kwofal3",
+   "q": "The RAAS system is an indirect renal mechanism regulating blood pressure",
+   "t": "The cascade is two enzymes and two hormones in a fixed order: <b>renin</b> makes angiotensin I from angiotensinogen, <b>ACE</b> converts that to angiotensin II, and angiotensin II then triggers aldosterone and ADH. Renin and ACE are the enzymes — treating either as a hormone puts the step in the wrong place."
+  },
+  {
+   "k": "k1mlsz7p",
+   "q": "ACE inhibitors are medications that modify the renin-angiotensin-aldosterone pathway",
+   "t": "The name states the target: they block the <b>enzyme</b>, not the receptor, so angiotensin II is never formed at all. Less angiotensin II means less vasoconstriction and less aldosterone, which is why both pressure and sodium retention fall."
+  },
+  {
+   "k": "k8evkdp",
+   "q": "A coronary angiogram is a medical imaging scanning procedure",
+   "t": "The dye is the whole point: blood and soft tissue absorb X-rays almost identically, so a vessel is invisible until <b>contrast</b> fills its lumen. What the image shows is the shape of the blood column — a narrowing or a blockage — rather than the vessel wall itself."
+  },
+  {
+   "k": "klu5zxe",
+   "q": "The human heart has 3 chambers",
+   "t": "Four chambers, and the reason is the <b>double circuit</b>: two atria receive and two ventricles pump, one side to the lungs and one to the body. Three-chambered hearts belong to animals that tolerate mixing oxygenated and deoxygenated blood."
+  },
+  {
+   "k": "k1ht25x5",
+   "q": "This septum is incomplete before birth",
+   "t": "Fetal lungs are collapsed and not yet in use, so blood is shunted past them through the <b>foramen ovale</b> in the interatrial septum. It closes at birth and leaves the fossa ovalis — the shallow depression still visible in an adult heart."
+  },
+  {
+   "k": "k66qky3",
+   "q": "the aortic valve has ostia",
+   "t": "Both semilunar valves have three pockets and look much alike, so identify them by <b>what lies immediately above the cusps</b>. Only the aorta carries the coronary openings — the heart takes its own supply at the first opportunity."
+  },
+  {
+   "k": "k6o838j",
+   "q": "also known as the mitral valve because it resembles the mitre of a bishop",
+   "t": "The <b>mitre</b> belongs to the left: two cusps, like a bishop's hat. The right atrioventricular valve has three and is the tricuspid — the name is a cusp count, and the right side has one more."
+  },
+  {
+   "k": "klsc9wd",
+   "q": "Another name for the epicardium is the visceral pericardium",
+   "t": "One membrane with two names, depending on which structure you are describing it as part of — the outer layer of the <b>heart wall</b>, or the inner (visceral) layer of the <b>pericardial sac</b>. The parietal layer is the one lining the fibrous sac itself."
+  },
+  {
+   "k": "k1gw2ji7",
+   "q": "Which statement is false regarding the Carina",
+   "t": "The carina is a ridge of <b>cartilage</b> at the tracheal bifurcation, and cartilage contains no muscle, so it cannot contract. Everything else on the list follows from it being the most cough-sensitive point in the airway."
+  },
+  {
+   "k": "k1eo5kci",
+   "q": "The mucociliary escalator does NOT include",
+   "t": "The escalator needs <b>cilia to sweep and goblet cells to make mucus</b>, so it exists only where the epithelium is ciliated — as far down as the bronchioles. Alveoli are single-cell-thin squamous surfaces built for diffusion; cilia and mucus there would obstruct the very exchange they exist for."
+  },
+  {
+   "k": "k1avmak4",
+   "q": "The bronchial tree consists of",
+   "t": "The tree is the <b>conducting</b> airway — the branching tubes that move air without exchanging any gas. Alveolar sacs are where exchange happens, making them the destination rather than part of the tree."
+  },
+  {
+   "k": "k1aj27sr",
+   "q": "You cannot kill yourself by holding your breath",
+   "t": "The drive to breathe is built on <b>rising CO₂</b>, not falling oxygen, and it becomes irresistible long before oxygen runs low. If it were somehow resisted, consciousness is lost first — at which point automatic control simply resumes."
+  },
+  {
+   "k": "kv2j4uz",
+   "q": "The aortic and carotid bodies also act as baroreceptors",
+   "t": "One word separates them. The <b>bodies</b> are chemoreceptors, sampling oxygen, CO₂ and pH; the <b>sinus and arch</b> hold the stretch-sensitive baroreceptors reading pressure. Same neighbourhood, different sense."
+  },
+  {
+   "k": "k1dwkc2",
+   "q": "The chemoreceptors in aortic and carotid bodies are more sensitive to a change in the oxygen",
+   "t": "<b>CO₂ is the routine controller</b> — small rises change ventilation straight away. The oxygen sensors are a reserve, only taking over once arterial PO₂ has fallen a long way, which is why breathing is regulated minute to minute by carbon dioxide."
+  },
+  {
+   "k": "k1ky91wr",
+   "q": "The fast acting peripheral chemoreceptors in the aortic and carotid bodies",
+   "t": "Divide them by <b>what they sit in</b>. Peripheral bodies sample arterial blood directly, so they can sense oxygen and can respond fast. Central receptors sit behind the blood–brain barrier in CSF, which is why they answer to CO₂ arriving as H⁺, are the slower of the two, and are effectively blind to oxygen."
+  },
+  {
+   "k": "kq2dksi",
+   "q": "Blood pressure is monitored by high-pressure baroreceptors",
+   "t": "They are <b>stretch</b> receptors, so they measure pressure only indirectly, through how far the vessel wall is distended. Their sites guard the two things that matter most — the output to the whole body at the arch, and the supply to the brain at the carotid sinus."
+  },
+  {
+   "k": "k60onhr",
+   "q": "The juxtaglomerular apparatus with juxtaglomerular cells",
+   "t": "Sort the apparatus by job. The <b>granular (juxtaglomerular) cells</b> in the afferent arteriole wall are the secretory half and release renin; the <b>macula densa</b> is the sensory half, a patch of distal tubule cells reading the sodium content of the filtrate. One releases, one senses."
+  },
+  {
+   "k": "k1384b9a",
+   "q": "Variations in the pH of the cerebrospinal fluid",
+   "t": "CO₂ crosses the blood–brain barrier easily; <b>H⁺ does not</b>. So a rise in blood CO₂ becomes carbonic acid within the CSF, and the central receptors read the resulting pH shift — they detect carbon dioxide by proxy, through acidity."
+  },
+  {
+   "k": "k1e2psbd",
+   "q": "The alveolar cell type 2 makes surfactant",
+   "t": "Two cell types, two jobs: <b>type 1</b> is the thin sheet the gases cross, <b>type 2</b> is the cuboidal cell that manufactures surfactant. Surfactant lowers surface tension so alveoli do not collapse at the end of expiration — its absence is why very premature infants struggle to breathe."
+  },
+  {
+   "k": "k7gpazz",
+   "q": "Negative pressure between the visceral and parietal layers of the pleura",
+   "t": "Nothing muscular attaches lung to ribcage; the coupling is entirely the <b>negative pressure in the pleural space</b>. Break that seal and the lung recoils inward while the chest springs outward — the bellows still moves, but the lung no longer moves with it."
+  },
+  {
+   "k": "k1jhahlx",
+   "q": "Atelectasis: The deflation and collapse of alveoli",
+   "t": "Atelectasis is collapse of <b>alveoli inside the lung</b>, from a blocked airway, external compression or lost surfactant. Keep it apart from pneumothorax, which is air in the pleural space outside the lung — one is a problem with the tissue, the other with the space around it."
+  },
+  {
+   "k": "k1le54u3",
+   "q": "Pneumothorax: Air in the space outside the lung",
+   "t": "Air entering the <b>pleural space</b> destroys the negative pressure holding the lung expanded, so the lung recoils away from the chest wall. The lung tissue itself is undamaged — what has failed is the seal around it."
+  },
+  {
+   "k": "klyutez",
+   "q": "The apneustic centre, that promotes inhalation",
+   "t": "The cerebellum has no respiratory centre at all — it coordinates movement. Both the <b>apneustic</b> and <b>pneumotaxic</b> centres lie in the <b>pons</b>, shaping the rhythm the medulla generates. Any statement placing a breathing centre outside the medulla or pons is wrong on that ground alone."
+  },
+  {
+   "k": "k1a7mkoh",
+   "q": "Surfactant affects ventilation since it enables the alveoli to expand fully",
+   "t": "Read this as a chain rather than three separate claims. Gradients do not drive the bellows; <b>ventilation refreshes alveolar gas and therefore sets the gradients</b>, and exchange then runs down them. The arrow points one way, and reversing it is the error being tested."
+  }
  ],
-
  "model": [
-  {"k":"kuav0vm","q":"Where in the body are B- and T- lymphocytes made and stored","t":"The memory hook is <b>B for bone marrow, T for thymus</b> — both cell lines are made in marrow, and only the T cells travel to mature. Write made, mature and stored as separate statements: the marking points are awarded separately for each."},
-  {"k":"k1349aha","q":"What is the structure of a lymph nodes","t":"Three marks, three parts: <b>capsule, contents, function</b>. Adding that a node has more vessels coming in than going out — so flow slows and the macrophages get time to filter it — shows why the structure suits the job."},
-  {"k":"k3f1r2","q":"Which cells in the body will find antigens in the body","t":"The phrase worth writing down is <b>antigen presenting cells</b>. Dendritic cells belong in that group too, though the marking points name macrophages and B lymphocytes."},
-  {"k":"keci6a0","q":"Which cells will stimulate a full on immune response","t":"Keep the sequence in the answer: <b>present, then T cells organise, then B cells make antibody</b>. The marks are for the mechanism, not for naming the cells."},
-  {"k":"k1ptcw57","q":"How does vaccination work","t":"Two halves, and the second is the one that gets forgotten under pressure: answer <b>vaccination in general</b> (the antigen without the disease, memory cells stored) and then the <b>mRNA mechanism</b> specifically. Herd immunity is worth a line."},
-  {"k":"kdnjm9g","q":"What is the difference between vaccination and immunisation","t":"One mark each way: <b>vaccination is the act, immunisation is the result</b>. Noting that immunisation can also follow the infection itself makes the distinction unmistakable — and it is why a vaccine can fail."}
+  {
+   "k": "kuav0vm",
+   "q": "Where in the body are B- and T- lymphocytes made and stored",
+   "t": "The memory hook is <b>B for bone marrow, T for thymus</b> — both cell lines are made in marrow, and only the T cells travel to mature. Write made, mature and stored as separate statements: the marking points are awarded separately for each."
+  },
+  {
+   "k": "k1349aha",
+   "q": "What is the structure of a lymph nodes",
+   "t": "Three marks, three parts: <b>capsule, contents, function</b>. Adding that a node has more vessels coming in than going out — so flow slows and the macrophages get time to filter it — shows why the structure suits the job."
+  },
+  {
+   "k": "k3f1r2",
+   "q": "Which cells in the body will find antigens in the body",
+   "t": "The phrase worth writing down is <b>antigen presenting cells</b>. Dendritic cells belong in that group too, though the marking points name macrophages and B lymphocytes."
+  },
+  {
+   "k": "keci6a0",
+   "q": "Which cells will stimulate a full on immune response",
+   "t": "Keep the sequence in the answer: <b>present, then T cells organise, then B cells make antibody</b>. The marks are for the mechanism, not for naming the cells."
+  },
+  {
+   "k": "k1ptcw57",
+   "q": "How does vaccination work",
+   "t": "Two halves, and the second is the one that gets forgotten under pressure: answer <b>vaccination in general</b> (the antigen without the disease, memory cells stored) and then the <b>mRNA mechanism</b> specifically. Herd immunity is worth a line."
+  },
+  {
+   "k": "kdnjm9g",
+   "q": "What is the difference between vaccination and immunisation",
+   "t": "One mark each way: <b>vaccination is the act, immunisation is the result</b>. Noting that immunisation can also follow the infection itself makes the distinction unmistakable — and it is why a vaccine can fail."
+  }
  ]
 }

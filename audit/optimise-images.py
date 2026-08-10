@@ -38,8 +38,15 @@ REFERENCED = set(re.findall(r"\[\[IMG:([0-9a-f]{16})\]\]", harvested))
 # aggressive one is applied only if the total misses budget.
 PROFILES = {
     #                 max width, webp quality
-    "detail":        (1100, 82),   # default — assume text is present until proven otherwise
-    "photo":         (900, 75),    # fallback, only used if `detail` misses budget
+    # 1100/82 fitted the budget until the 11 Aug capture round roughly doubled the number
+    # of figure-bearing cards — Practice Lab 2 alone is 11 labelled diagrams — and pushed
+    # the payload to 3.01 MB against a 2.00 MB cap. Width is cut before quality on
+    # purpose: WEBP artefacts smear thin label strokes, whereas fewer pixels of a clean
+    # encode still pinch-zoom legibly. 900 is well clear of MIN_WIDTH below, so the floor
+    # that protects her diagrams is untouched. Do NOT raise the budget instead: it is a
+    # phone-memory constraint, not a preference.
+    "detail":        (800, 75),    # default — assume text is present until proven otherwise
+    "photo":         (700, 70),    # fallback, only used if `detail` misses budget
 }
 
 # Below this the labels on her diagrams stop being readable at 375px with pinch-zoom.

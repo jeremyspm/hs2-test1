@@ -1,6 +1,38 @@
 {
- "bound": 41,
+ "bound": 64,
  "figMissing": [
+  {
+   "quiz": "Practice Lab 2: SAQ & MC Quiz (10 marks)",
+   "n": "Question 1",
+   "type": "match",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "Source Give the numbers which label the structures given below"
+  },
+  {
+   "quiz": "Practice Lab 2: SAQ & MC Quiz (10 marks)",
+   "n": "Question 2",
+   "type": "cloze",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "Complete the passage. (Practice Lab 2) In the lab and lab book, you're asked to cut a piec"
+  },
+  {
+   "quiz": "Practice Lab 2: SAQ & MC Quiz (10 marks)",
+   "n": "Question 3",
+   "type": "mcq",
+   "hold": "dependent",
+   "why": "the stem cannot be answered without a figure the pack does not have",
+   "q": "The structure labelled at B is a"
+  },
+  {
+   "quiz": "Practice Lab 2: SAQ & MC Quiz (10 marks)",
+   "n": "Question 8",
+   "type": "mcq",
+   "hold": "dependent",
+   "why": "the stem cannot be answered without a figure the pack does not have",
+   "q": "Above is a diagram showing a labelled bell jar, which you watched a video of working in yo"
+  },
   {
    "quiz": "MODULE 1.1: CVS3 CARDIAC CONDUCTION & ECG (10 marks)",
    "n": "Question 8",
@@ -296,9 +328,129 @@
    "hold": "dependent",
    "why": "the stem cannot be answered without a figure the pack does not have",
    "q": "The structure labelled B is the"
+  },
+  {
+   "quiz": "MODULE 1.1 CARDIOVASCULAR SYSTEM FILL THE BLANKS (12.5 marks)",
+   "n": "Question 1",
+   "type": "cloze",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "Complete the passage. (MODULE 1.1 CARDIOVASCULAR SYSTEM FILL THE BLANKS (12.5 marks)) At t"
+  },
+  {
+   "quiz": "MODULE 1.1: CVS4 BLOOD PRESSURE (10 marks)",
+   "n": "Question 13",
+   "type": "mcq",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "ACE inhibitors cause an increase in blood pressure due to their diuretic effects (via inhi"
+  },
+  {
+   "quiz": "MODULE 1.1: CVS4 BLOOD PRESSURE (10 marks)",
+   "n": "Question 15",
+   "type": "mcq",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "The cardio-acceleratory and inhibitory centres are located in the .............."
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 1",
+   "type": "match",
+   "hold": "dependent",
+   "why": "the stem cannot be answered without a figure the pack does not have",
+   "q": "Anatomical Structures of the Heart Match the items to correctly identify the structures in"
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 2",
+   "type": "match",
+   "hold": "dependent",
+   "why": "the stem cannot be answered without a figure the pack does not have",
+   "q": "Anatomical Structures of the Heart Match the items to correctly identify the structures in"
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 3",
+   "type": "match",
+   "hold": "dependent",
+   "why": "the stem cannot be answered without a figure the pack does not have",
+   "q": "Anatomical Structures of the Heart Match the items to correctly identify the structures in"
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 4",
+   "type": "cloze",
+   "hold": "dependent",
+   "why": "the stem cannot be answered without a figure the pack does not have",
+   "q": "Complete the passage. (MODULE 1.1) Examine the figure above of the pulmonary and systemic "
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 25",
+   "type": "match",
+   "hold": "dependent",
+   "why": "the stem cannot be answered without a figure the pack does not have",
+   "q": "Blood Vessel Walls Drag and drop each label to correctly identify the structures in the im"
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 27",
+   "type": "mcq",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "Pressure is the highest in the arteries and the lowest in the venae cavae since the heart "
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 31",
+   "type": "mcq",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "Neural control of BP involves the cardiovascular centers located in the medulla oblongata."
+  },
+  {
+   "quiz": "MODULE 1.1:CVS2 MIX & MATCH: HEART & VALVES (10 marks)",
+   "n": "Question 2",
+   "type": "mcq",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "Starting with the Superior Vena Cava, place the following items in the correct order of bl"
+  },
+  {
+   "quiz": "MODULE 1.1:CVS2 MIX & MATCH: HEART & VALVES (10 marks)",
+   "n": "Question 5",
+   "type": "mcq",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "Blood vessels that enter the right atrium with deoxygenated blood are: Coronary sinus with"
+  },
+  {
+   "quiz": "MODULE 1.1:CVS2 MIX & MATCH: HEART & VALVES (10 marks)",
+   "n": "Question 6",
+   "type": "mcq",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "Cardiac tamponade is a life-threatening condition when fluid accumulates in the space betw"
+  },
+  {
+   "quiz": "MODULE 1.2: AIRWAYS, BARO- & CHEMORECEPTORS (10 marks)",
+   "n": "Question 12",
+   "type": "mcq",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "The thin squamous epithelial cells seen in the alveoli, provides a short distance for gase"
+  },
+  {
+   "quiz": "MODULE 1.2: AIRWAYS, BARO- & CHEMORECEPTORS (10 marks)",
+   "n": "Question 13",
+   "type": "mcq",
+   "hold": "decorative",
+   "why": "the source question carried an image that is not recoverable offline, but the card reads without it",
+   "q": "A pneumothorax occurs when air leaks into the pleural space between the lung and chest wal"
   }
  ],
- "noFigureNeeded": 197,
- "multi": 2,
+ "noFigureNeeded": 256,
+ "multi": 5,
  "incomplete": 2
 }

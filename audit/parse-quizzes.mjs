@@ -187,18 +187,54 @@ const captures = [];
   }
 })(EXPORT);
 
-const quizzes = [];
+/* ── de-duplicate by CONTENT, and keep the RICHEST copy, not the first one ─────
+   The same quiz gets captured more than once — three export runs now overlap in
+   `_inbox`, and a quiz re-taken to expose its answer key is deliberately a second
+   capture of the same questions. Both land here with an identical fingerprint,
+   because the fingerprint is the title plus the question text and neither changes
+   when you submit an attempt.
+
+   This used to keep whichever file `captures.sort()` reached first, which is a
+   filename comparison and therefore meaningless. It cost real work: an export run
+   unpacked to `HS2_MERGED/...` sorts ahead of a top-level filename, so five freshly
+   captured, SUBMITTED quizzes were discarded in favour of 5 August copies saved
+   before submission — including all three essay quizzes and Practice Lab 2, whose
+   whole reason for being re-captured was that the first copy had no keys. The parser
+   reported "11 Q, 0 keyed" both times and looked entirely healthy doing it.
+
+   Canvas only reveals the key once an attempt is submitted, so between two captures
+   of one quiz the one with more recovered keys is strictly the better evidence.
+   Rank on that, then on questions recovered, then on how much answer structure
+   survived; `file` last so the result is deterministic rather than filesystem-order.
+   The losers stay in `dupes` WITH their score, so a wrong pick is visible in the
+   artifact instead of having to be re-derived from the filenames. */
+const score = p => [
+  p.questions.filter(q => q.key != null).length,
+  p.questions.length,
+  p.questions.reduce((n, q) => n + (q.answers || []).filter(a => a.weight != null || a.correctClass).length, 0),
+];
+const better = (a, b) => {                       // is a strictly better than b?
+  const [x, y] = [score(a), score(b)];
+  for (let i = 0; i < x.length; i++) if (x[i] !== y[i]) return x[i] > y[i];
+  return a.file < b.file;
+};
+
 const dupes = [];
-const seen = new Map();
+const best = new Map();                          // fingerprint -> parsed
+const order = [];                                // fingerprints, first-seen order
 for (const f of captures.sort()) {
   const parsed = parseQuiz(f);
   if (!parsed.questions.length) { dupes.push({ file: parsed.file, why: 'no display_question blocks — not a quiz results page' }); continue; }
   const fingerprint = crypto.createHash('sha1')
     .update(parsed.title + '|' + parsed.questions.map(q => q.q).join('|')).digest('hex');
-  if (seen.has(fingerprint)) { dupes.push({ file: parsed.file, sameAs: seen.get(fingerprint) }); continue; }
-  seen.set(fingerprint, parsed.file);
-  quizzes.push(parsed);
+  const held = best.get(fingerprint);
+  if (!held) { best.set(fingerprint, parsed); order.push(fingerprint); continue; }
+  const [win, lose] = better(parsed, held) ? [parsed, held] : [held, parsed];
+  best.set(fingerprint, win);
+  const [k, n] = score(lose);
+  dupes.push({ file: lose.file, sameAs: win.file, droppedScore: `${k} keyed of ${n}`, keptScore: `${score(win)[0]} keyed of ${score(win)[1]}` });
 }
+const quizzes = order.map(fp => best.get(fp));
 
 fs.writeFileSync(path.join(HERE, 'questions.json'), JSON.stringify({ quizzes, dupes }, null, 1));
 fs.writeFileSync(path.join(HERE, 'question-images.json'), JSON.stringify(Object.fromEntries(IMAGES)));

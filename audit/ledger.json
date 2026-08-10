@@ -1,23 +1,23 @@
 {
  "freeze": {
-  "at": "2026-08-06T05:08:01.171Z",
-  "commit": "64278d2ddd08e64d0c92e7724a003eca7a54c462",
+  "at": "2026-08-10T13:14:57.781Z",
+  "commit": "e98db57713367e2502cae1f1ecc6d61107e81353",
   "files": {
    "pack.js": {
-    "bytes": 2489496,
-    "sha256": "9bf4bf986c9d567f5aa06c842c9bfdb57c77c3a2049888a5f07322c469289085"
+    "bytes": 2492075,
+    "sha256": "3eadd41fa26b32920da490419d846a23f6b5e1372d71ef1e3c05e40167798fd5"
    },
    "index.html": {
-    "bytes": 3459685,
-    "sha256": "e453378425fdb61e81945470be592ac5bd69b310bd273327c504184f1cd57de3"
+    "bytes": 3533251,
+    "sha256": "c5c9f460ea6bfb0a470f5bcc536129bc253b64eaa6eb02d74c368a288cbf77ba"
    },
    "figs.js": {
     "bytes": 803534,
     "sha256": "ee0d312635146e073b6b6cfbbbfc08b2b168db2bce75154f4a82ae78a53e0c44"
    },
    "build.mjs": {
-    "bytes": 11529,
-    "sha256": "a2fccc1ba2a79e0d6fadfdb9a2cec8723be1b18d78f0ea7da0d1c39c537b4b39"
+    "bytes": 15032,
+    "sha256": "dfed816bc8bd42a0efd272c34ae43b2f1253bbab6aa765bbb39b1647e2103ea6"
    }
   }
  },
@@ -26,7 +26,7 @@
   "glossary": 74,
   "withSrc": 86,
   "withoutSrc": 380,
-  "srcUnresolved": 33,
+  "srcUnresolved": 20,
   "quantityMentions": 161,
   "itemsWithQuantity": 78
  },
@@ -115,6 +115,8 @@
     "head": "2026 Lymphatic system",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\7of11\\10 MODULE 1.3 LYMPHATIC SYSTEM\\Files\\2026 Lymphatic system.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.3  LYMPHATIC SYSTEM\\2026  Lymphatic system.pptx",
      "MODULE 1.3  LYMPHATIC SYSTEM\\2026  Lymphatic system.pptx"
     ]
    },
@@ -305,7 +307,8 @@
     "resolved": true,
     "candidates": [
      "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.docx",
-     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.pdf"
+     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.pdf",
+     "HEALTH SCIENCE 2\\1of11\\05 ESSENTIAL DOCUMENTS & LINKS\\Files\\Case Study Workbook 2026 S2.docx"
     ]
    },
    "quantities": [],
@@ -340,6 +343,8 @@
     "head": "2026 Cardiovascular system 2-3",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\2of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\2026 Cardiovascular system 2-3.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\2026 Cardiovascular system 2-3.pptx",
      "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\2026 Cardiovascular system 2-3.pptx"
     ]
    },
@@ -361,6 +366,8 @@
     "head": "2026 Cardiovascular system 2-3",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\2of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\2026 Cardiovascular system 2-3.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\2026 Cardiovascular system 2-3.pptx",
      "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\2026 Cardiovascular system 2-3.pptx"
     ]
    },
@@ -410,6 +417,8 @@
     "head": "2026 Cardiovascular system 2-3",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\2of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\2026 Cardiovascular system 2-3.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\2026 Cardiovascular system 2-3.pptx",
      "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\2026 Cardiovascular system 2-3.pptx"
     ]
    },
@@ -431,6 +440,8 @@
     "head": "2026 Cardiovascular system 2-3",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\2of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\2026 Cardiovascular system 2-3.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\2026 Cardiovascular system 2-3.pptx",
      "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\2026 Cardiovascular system 2-3.pptx"
     ]
    },
@@ -830,6 +841,8 @@
     "head": "2026 RESP2",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\5of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\2026 RESP2.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP2.pptx",
      "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP2.pptx"
     ]
    },
@@ -1312,6 +1325,8 @@
     "head": "2026 RESP 3",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\5of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\2026 RESP 3.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP 3.pptx",
      "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP 3.pptx"
     ]
    },
@@ -1504,6 +1519,8 @@
     "head": "2026 RESP4",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\6of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\2026 RESP4-1.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx",
      "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx"
     ]
    },
@@ -1525,6 +1542,8 @@
     "head": "2026 RESP4",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\6of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\2026 RESP4-1.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx",
      "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx"
     ]
    },
@@ -1700,6 +1719,8 @@
     "head": "2026 RESP4",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\6of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\2026 RESP4-1.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx",
      "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx"
     ]
    },
@@ -1721,6 +1742,8 @@
     "head": "2026 RESP4",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\6of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\2026 RESP4-1.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx",
      "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx"
     ]
    },
@@ -1784,6 +1807,8 @@
     "head": "2026 RESP4",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\6of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\2026 RESP4-1.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx",
      "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx"
     ]
    },
@@ -2100,7 +2125,8 @@
     "resolved": true,
     "candidates": [
      "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.docx",
-     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.pdf"
+     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.pdf",
+     "HEALTH SCIENCE 2\\1of11\\05 ESSENTIAL DOCUMENTS & LINKS\\Files\\Case Study Workbook 2026 S2.docx"
     ]
    },
    "quantities": [],
@@ -2122,7 +2148,8 @@
     "resolved": true,
     "candidates": [
      "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.docx",
-     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.pdf"
+     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.pdf",
+     "HEALTH SCIENCE 2\\1of11\\05 ESSENTIAL DOCUMENTS & LINKS\\Files\\Case Study Workbook 2026 S2.docx"
     ]
    },
    "quantities": [
@@ -2150,7 +2177,8 @@
     "resolved": true,
     "candidates": [
      "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.docx",
-     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.pdf"
+     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.pdf",
+     "HEALTH SCIENCE 2\\1of11\\05 ESSENTIAL DOCUMENTS & LINKS\\Files\\Case Study Workbook 2026 S2.docx"
     ]
    },
    "quantities": [],
@@ -2224,7 +2252,8 @@
     "resolved": true,
     "candidates": [
      "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.docx",
-     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.pdf"
+     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.pdf",
+     "HEALTH SCIENCE 2\\1of11\\05 ESSENTIAL DOCUMENTS & LINKS\\Files\\Case Study Workbook 2026 S2.docx"
     ]
    },
    "quantities": [],
@@ -2246,7 +2275,8 @@
     "resolved": true,
     "candidates": [
      "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.docx",
-     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.pdf"
+     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.pdf",
+     "HEALTH SCIENCE 2\\1of11\\05 ESSENTIAL DOCUMENTS & LINKS\\Files\\Case Study Workbook 2026 S2.docx"
     ]
    },
    "quantities": [],
@@ -2268,7 +2298,8 @@
     "resolved": true,
     "candidates": [
      "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.docx",
-     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.pdf"
+     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.pdf",
+     "HEALTH SCIENCE 2\\1of11\\05 ESSENTIAL DOCUMENTS & LINKS\\Files\\Case Study Workbook 2026 S2.docx"
     ]
    },
    "quantities": [],
@@ -2304,7 +2335,8 @@
     "resolved": true,
     "candidates": [
      "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.docx",
-     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.pdf"
+     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.pdf",
+     "HEALTH SCIENCE 2\\1of11\\05 ESSENTIAL DOCUMENTS & LINKS\\Files\\Case Study Workbook 2026 S2.docx"
     ]
    },
    "quantities": [],
@@ -2340,7 +2372,8 @@
     "resolved": true,
     "candidates": [
      "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.docx",
-     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.pdf"
+     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.pdf",
+     "HEALTH SCIENCE 2\\1of11\\05 ESSENTIAL DOCUMENTS & LINKS\\Files\\Case Study Workbook 2026 S2.docx"
     ]
    },
    "quantities": [],
@@ -2362,7 +2395,8 @@
     "resolved": true,
     "candidates": [
      "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.docx",
-     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.pdf"
+     "ESSENTIAL DOCUMENTS & LINKS\\Case Study Workbook 2026 S2.pdf",
+     "HEALTH SCIENCE 2\\1of11\\05 ESSENTIAL DOCUMENTS & LINKS\\Files\\Case Study Workbook 2026 S2.docx"
     ]
    },
    "quantities": [],
@@ -2607,8 +2641,8 @@
     "candidates": []
    },
    "quantities": [],
-   "chars": 823,
-   "label": "You are shown a micrograph of an artery and a vein side by side. Identify 3 things you CAN"
+   "chars": 1052,
+   "label": "An artery and a vein sit side by side under the microscope, each already named. Identify <"
   },
   {
    "kind": "card",
@@ -2624,6 +2658,8 @@
     "head": "2026 CIRCULATION VESSELS CV1-2",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\2of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\2026 CIRCULATION VESSELS CV1-2.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\2026 CIRCULATION VESSELS CV1-2.pptx",
      "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\2026 CIRCULATION VESSELS CV1-2.pptx"
     ]
    },
@@ -2721,8 +2757,12 @@
    "srcInfo": {
     "raw": "BN2 Formative Test PDF Model Answers — Q2",
     "head": "BN2 Formative Test PDF Model Answers",
-    "resolved": false,
-    "candidates": []
+    "resolved": true,
+    "candidates": [
+     "HEALTH SCIENCE 2\\7of11\\11 Module 1 Revision Materials\\Files\\BN2 Formative Test PDF Model Answers.pdf",
+     "HS2_canvas_extract\\02_modules\\11_Module 1 Revision Materials\\PDF of In Class Formative Model Answers\\BN2 Formative Test PDF Model Answers.pdf",
+     "HS2_canvas_extract\\02_modules\\11_Module 1 Revision Materials\\PDF of In Class Formative Model Answers\\BN2 Formative Test PDF Model Answers.pdf.meta.json"
+    ]
    },
    "quantities": [],
    "chars": 424,
@@ -2980,8 +3020,12 @@
    "srcInfo": {
     "raw": "BN2 Formative Test PDF Model Answers — Q9",
     "head": "BN2 Formative Test PDF Model Answers",
-    "resolved": false,
-    "candidates": []
+    "resolved": true,
+    "candidates": [
+     "HEALTH SCIENCE 2\\7of11\\11 Module 1 Revision Materials\\Files\\BN2 Formative Test PDF Model Answers.pdf",
+     "HS2_canvas_extract\\02_modules\\11_Module 1 Revision Materials\\PDF of In Class Formative Model Answers\\BN2 Formative Test PDF Model Answers.pdf",
+     "HS2_canvas_extract\\02_modules\\11_Module 1 Revision Materials\\PDF of In Class Formative Model Answers\\BN2 Formative Test PDF Model Answers.pdf.meta.json"
+    ]
    },
    "quantities": [],
    "chars": 341,
@@ -3146,6 +3190,8 @@
     "head": "2026 CVS 3",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\3of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\2026 CVS 3.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\2026 CVS 3.pptx",
      "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\2026 CVS 3.pptx"
     ]
    },
@@ -3167,6 +3213,8 @@
     "head": "2026 CVS 3",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\3of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\Files\\2026 CVS 3.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\2026 CVS 3.pptx",
      "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\2026 CVS 3.pptx"
     ]
    },
@@ -3236,6 +3284,8 @@
     "head": "2026 Cardiovascular system 2-3",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\2of11\\08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\2026 Cardiovascular system 2-3.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\2026 Cardiovascular system 2-3.pptx",
      "MODULE 1.1 THE CARDIOVASCULAR SYSTEM\\2026 Cardiovascular system 2-3.pptx"
     ]
    },
@@ -3255,8 +3305,12 @@
    "srcInfo": {
     "raw": "BN2 Formative Test PDF Model Answers — Q1",
     "head": "BN2 Formative Test PDF Model Answers",
-    "resolved": false,
-    "candidates": []
+    "resolved": true,
+    "candidates": [
+     "HEALTH SCIENCE 2\\7of11\\11 Module 1 Revision Materials\\Files\\BN2 Formative Test PDF Model Answers.pdf",
+     "HS2_canvas_extract\\02_modules\\11_Module 1 Revision Materials\\PDF of In Class Formative Model Answers\\BN2 Formative Test PDF Model Answers.pdf",
+     "HS2_canvas_extract\\02_modules\\11_Module 1 Revision Materials\\PDF of In Class Formative Model Answers\\BN2 Formative Test PDF Model Answers.pdf.meta.json"
+    ]
    },
    "quantities": [],
    "chars": 316,
@@ -3274,8 +3328,12 @@
    "srcInfo": {
     "raw": "BN2 Formative Test PDF Model Answers — Q5",
     "head": "BN2 Formative Test PDF Model Answers",
-    "resolved": false,
-    "candidates": []
+    "resolved": true,
+    "candidates": [
+     "HEALTH SCIENCE 2\\7of11\\11 Module 1 Revision Materials\\Files\\BN2 Formative Test PDF Model Answers.pdf",
+     "HS2_canvas_extract\\02_modules\\11_Module 1 Revision Materials\\PDF of In Class Formative Model Answers\\BN2 Formative Test PDF Model Answers.pdf",
+     "HS2_canvas_extract\\02_modules\\11_Module 1 Revision Materials\\PDF of In Class Formative Model Answers\\BN2 Formative Test PDF Model Answers.pdf.meta.json"
+    ]
    },
    "quantities": [],
    "chars": 371,
@@ -4031,8 +4089,12 @@
    "srcInfo": {
     "raw": "BN2 Formative Test PDF Model Answers — Q12",
     "head": "BN2 Formative Test PDF Model Answers",
-    "resolved": false,
-    "candidates": []
+    "resolved": true,
+    "candidates": [
+     "HEALTH SCIENCE 2\\7of11\\11 Module 1 Revision Materials\\Files\\BN2 Formative Test PDF Model Answers.pdf",
+     "HS2_canvas_extract\\02_modules\\11_Module 1 Revision Materials\\PDF of In Class Formative Model Answers\\BN2 Formative Test PDF Model Answers.pdf",
+     "HS2_canvas_extract\\02_modules\\11_Module 1 Revision Materials\\PDF of In Class Formative Model Answers\\BN2 Formative Test PDF Model Answers.pdf.meta.json"
+    ]
    },
    "quantities": [],
    "chars": 224,
@@ -4453,8 +4515,12 @@
    "srcInfo": {
     "raw": "BN2 Formative Test PDF Model Answers — Q8",
     "head": "BN2 Formative Test PDF Model Answers",
-    "resolved": false,
-    "candidates": []
+    "resolved": true,
+    "candidates": [
+     "HEALTH SCIENCE 2\\7of11\\11 Module 1 Revision Materials\\Files\\BN2 Formative Test PDF Model Answers.pdf",
+     "HS2_canvas_extract\\02_modules\\11_Module 1 Revision Materials\\PDF of In Class Formative Model Answers\\BN2 Formative Test PDF Model Answers.pdf",
+     "HS2_canvas_extract\\02_modules\\11_Module 1 Revision Materials\\PDF of In Class Formative Model Answers\\BN2 Formative Test PDF Model Answers.pdf.meta.json"
+    ]
    },
    "quantities": [],
    "chars": 252,
@@ -4653,6 +4719,8 @@
     "head": "2026 RESP2",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\5of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\2026 RESP2.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP2.pptx",
      "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP2.pptx"
     ]
    },
@@ -4962,6 +5030,8 @@
     "head": "2026 RESP4",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\6of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\2026 RESP4-1.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx",
      "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx"
     ]
    },
@@ -4989,6 +5059,8 @@
     "head": "2026 RESP4",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\6of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\2026 RESP4-1.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx",
      "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx"
     ]
    },
@@ -5080,8 +5152,12 @@
    "srcInfo": {
     "raw": "BN2 Formative Test PDF Model Answers — Q3",
     "head": "BN2 Formative Test PDF Model Answers",
-    "resolved": false,
-    "candidates": []
+    "resolved": true,
+    "candidates": [
+     "HEALTH SCIENCE 2\\7of11\\11 Module 1 Revision Materials\\Files\\BN2 Formative Test PDF Model Answers.pdf",
+     "HS2_canvas_extract\\02_modules\\11_Module 1 Revision Materials\\PDF of In Class Formative Model Answers\\BN2 Formative Test PDF Model Answers.pdf",
+     "HS2_canvas_extract\\02_modules\\11_Module 1 Revision Materials\\PDF of In Class Formative Model Answers\\BN2 Formative Test PDF Model Answers.pdf.meta.json"
+    ]
    },
    "quantities": [],
    "chars": 295,
@@ -5295,6 +5371,8 @@
     "head": "2026 RESP 3",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\5of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\2026 RESP 3.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP 3.pptx",
      "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP 3.pptx"
     ]
    },
@@ -5398,8 +5476,12 @@
    "srcInfo": {
     "raw": "BN2 Formative Test PDF Model Answers — Q11",
     "head": "BN2 Formative Test PDF Model Answers",
-    "resolved": false,
-    "candidates": []
+    "resolved": true,
+    "candidates": [
+     "HEALTH SCIENCE 2\\7of11\\11 Module 1 Revision Materials\\Files\\BN2 Formative Test PDF Model Answers.pdf",
+     "HS2_canvas_extract\\02_modules\\11_Module 1 Revision Materials\\PDF of In Class Formative Model Answers\\BN2 Formative Test PDF Model Answers.pdf",
+     "HS2_canvas_extract\\02_modules\\11_Module 1 Revision Materials\\PDF of In Class Formative Model Answers\\BN2 Formative Test PDF Model Answers.pdf.meta.json"
+    ]
    },
    "quantities": [
     {
@@ -5490,6 +5572,8 @@
     "head": "2026 RESP 3",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\5of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\2026 RESP 3.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP 3.pptx",
      "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP 3.pptx"
     ]
    },
@@ -5567,8 +5651,12 @@
    "srcInfo": {
     "raw": "BN2 Formative Test PDF Model Answers — Q16 (adapted)",
     "head": "BN2 Formative Test PDF Model Answers",
-    "resolved": false,
-    "candidates": []
+    "resolved": true,
+    "candidates": [
+     "HEALTH SCIENCE 2\\7of11\\11 Module 1 Revision Materials\\Files\\BN2 Formative Test PDF Model Answers.pdf",
+     "HS2_canvas_extract\\02_modules\\11_Module 1 Revision Materials\\PDF of In Class Formative Model Answers\\BN2 Formative Test PDF Model Answers.pdf",
+     "HS2_canvas_extract\\02_modules\\11_Module 1 Revision Materials\\PDF of In Class Formative Model Answers\\BN2 Formative Test PDF Model Answers.pdf.meta.json"
+    ]
    },
    "quantities": [],
    "chars": 639,
@@ -5621,6 +5709,8 @@
     "head": "2026 RESP4",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\6of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\2026 RESP4-1.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx",
      "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx"
     ]
    },
@@ -5726,6 +5816,8 @@
     "head": "2026 RESP4",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\6of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\2026 RESP4-1.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx",
      "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx"
     ]
    },
@@ -5747,6 +5839,8 @@
     "head": "2026 RESP4",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\6of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\2026 RESP4-1.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx",
      "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx"
     ]
    },
@@ -6012,8 +6106,12 @@
    "srcInfo": {
     "raw": "BN2 Formative Test PDF Model Answers — Q7",
     "head": "BN2 Formative Test PDF Model Answers",
-    "resolved": false,
-    "candidates": []
+    "resolved": true,
+    "candidates": [
+     "HEALTH SCIENCE 2\\7of11\\11 Module 1 Revision Materials\\Files\\BN2 Formative Test PDF Model Answers.pdf",
+     "HS2_canvas_extract\\02_modules\\11_Module 1 Revision Materials\\PDF of In Class Formative Model Answers\\BN2 Formative Test PDF Model Answers.pdf",
+     "HS2_canvas_extract\\02_modules\\11_Module 1 Revision Materials\\PDF of In Class Formative Model Answers\\BN2 Formative Test PDF Model Answers.pdf.meta.json"
+    ]
    },
    "quantities": [],
    "chars": 216,
@@ -6033,6 +6131,8 @@
     "head": "2026 Lymphatic system",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\7of11\\10 MODULE 1.3 LYMPHATIC SYSTEM\\Files\\2026 Lymphatic system.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.3  LYMPHATIC SYSTEM\\2026  Lymphatic system.pptx",
      "MODULE 1.3  LYMPHATIC SYSTEM\\2026  Lymphatic system.pptx"
     ]
    },
@@ -6060,6 +6160,8 @@
     "head": "2026 Lymphatic system",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\7of11\\10 MODULE 1.3 LYMPHATIC SYSTEM\\Files\\2026 Lymphatic system.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.3  LYMPHATIC SYSTEM\\2026  Lymphatic system.pptx",
      "MODULE 1.3  LYMPHATIC SYSTEM\\2026  Lymphatic system.pptx"
     ]
    },
@@ -6093,8 +6195,12 @@
    "srcInfo": {
     "raw": "BN2 Formative Test PDF Model Answers — Q6",
     "head": "BN2 Formative Test PDF Model Answers",
-    "resolved": false,
-    "candidates": []
+    "resolved": true,
+    "candidates": [
+     "HEALTH SCIENCE 2\\7of11\\11 Module 1 Revision Materials\\Files\\BN2 Formative Test PDF Model Answers.pdf",
+     "HS2_canvas_extract\\02_modules\\11_Module 1 Revision Materials\\PDF of In Class Formative Model Answers\\BN2 Formative Test PDF Model Answers.pdf",
+     "HS2_canvas_extract\\02_modules\\11_Module 1 Revision Materials\\PDF of In Class Formative Model Answers\\BN2 Formative Test PDF Model Answers.pdf.meta.json"
+    ]
    },
    "quantities": [],
    "chars": 283,
@@ -6148,6 +6254,8 @@
     "head": "2026 Lymphatic system",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\7of11\\10 MODULE 1.3 LYMPHATIC SYSTEM\\Files\\2026 Lymphatic system.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.3  LYMPHATIC SYSTEM\\2026  Lymphatic system.pptx",
      "MODULE 1.3  LYMPHATIC SYSTEM\\2026  Lymphatic system.pptx"
     ]
    },
@@ -6169,6 +6277,8 @@
     "head": "2026 Lymphatic system",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\7of11\\10 MODULE 1.3 LYMPHATIC SYSTEM\\Files\\2026 Lymphatic system.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.3  LYMPHATIC SYSTEM\\2026  Lymphatic system.pptx",
      "MODULE 1.3  LYMPHATIC SYSTEM\\2026  Lymphatic system.pptx"
     ]
    },
@@ -6218,6 +6328,8 @@
     "head": "2026 Lymphatic system",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\7of11\\10 MODULE 1.3 LYMPHATIC SYSTEM\\Files\\2026 Lymphatic system.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.3  LYMPHATIC SYSTEM\\2026  Lymphatic system.pptx",
      "MODULE 1.3  LYMPHATIC SYSTEM\\2026  Lymphatic system.pptx"
     ]
    },
@@ -6239,6 +6351,8 @@
     "head": "2026 Lymphatic system",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\7of11\\10 MODULE 1.3 LYMPHATIC SYSTEM\\Files\\2026 Lymphatic system.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.3  LYMPHATIC SYSTEM\\2026  Lymphatic system.pptx",
      "MODULE 1.3  LYMPHATIC SYSTEM\\2026  Lymphatic system.pptx"
     ]
    },
@@ -6293,6 +6407,8 @@
     "head": "2026 Lymphatic system",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\7of11\\10 MODULE 1.3 LYMPHATIC SYSTEM\\Files\\2026 Lymphatic system.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.3  LYMPHATIC SYSTEM\\2026  Lymphatic system.pptx",
      "MODULE 1.3  LYMPHATIC SYSTEM\\2026  Lymphatic system.pptx"
     ]
    },
@@ -6314,6 +6430,8 @@
     "head": "2026 Lymphatic system",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\7of11\\10 MODULE 1.3 LYMPHATIC SYSTEM\\Files\\2026 Lymphatic system.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.3  LYMPHATIC SYSTEM\\2026  Lymphatic system.pptx",
      "MODULE 1.3  LYMPHATIC SYSTEM\\2026  Lymphatic system.pptx"
     ]
    },
@@ -6347,8 +6465,12 @@
    "srcInfo": {
     "raw": "BN2 Formative Test PDF Model Answers — Q4",
     "head": "BN2 Formative Test PDF Model Answers",
-    "resolved": false,
-    "candidates": []
+    "resolved": true,
+    "candidates": [
+     "HEALTH SCIENCE 2\\7of11\\11 Module 1 Revision Materials\\Files\\BN2 Formative Test PDF Model Answers.pdf",
+     "HS2_canvas_extract\\02_modules\\11_Module 1 Revision Materials\\PDF of In Class Formative Model Answers\\BN2 Formative Test PDF Model Answers.pdf",
+     "HS2_canvas_extract\\02_modules\\11_Module 1 Revision Materials\\PDF of In Class Formative Model Answers\\BN2 Formative Test PDF Model Answers.pdf.meta.json"
+    ]
    },
    "quantities": [],
    "chars": 270,
@@ -6366,8 +6488,12 @@
    "srcInfo": {
     "raw": "BN2 Formative Test PDF Model Answers — Q10",
     "head": "BN2 Formative Test PDF Model Answers",
-    "resolved": false,
-    "candidates": []
+    "resolved": true,
+    "candidates": [
+     "HEALTH SCIENCE 2\\7of11\\11 Module 1 Revision Materials\\Files\\BN2 Formative Test PDF Model Answers.pdf",
+     "HS2_canvas_extract\\02_modules\\11_Module 1 Revision Materials\\PDF of In Class Formative Model Answers\\BN2 Formative Test PDF Model Answers.pdf",
+     "HS2_canvas_extract\\02_modules\\11_Module 1 Revision Materials\\PDF of In Class Formative Model Answers\\BN2 Formative Test PDF Model Answers.pdf.meta.json"
+    ]
    },
    "quantities": [],
    "chars": 401,
@@ -6550,9 +6676,14 @@
      "raw": "500 mL"
     },
     {
-     "value": "3100",
+     "value": "3000",
      "unit": "mL",
-     "raw": "3100 mL"
+     "raw": "3000 mL"
+    },
+    {
+     "value": "1100",
+     "unit": "mL",
+     "raw": "1100 mL"
     },
     {
      "value": "1200",
@@ -6560,18 +6691,13 @@
      "raw": "1200 mL"
     },
     {
-     "value": "1200",
+     "value": "4600",
      "unit": "mL",
-     "raw": "1200 mL"
-    },
-    {
-     "value": "4800",
-     "unit": "mL",
-     "raw": "4800 mL"
+     "raw": "4600 mL"
     }
    ],
-   "chars": 621,
-   "label": "Read the spirogram and match each label to its definition."
+   "chars": 642,
+   "label": "Using the spirogram above, match each lung volume or capacity to what it means."
   },
   {
    "kind": "card",
@@ -6640,6 +6766,8 @@
     "head": "2026 Lymphatic system",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\7of11\\10 MODULE 1.3 LYMPHATIC SYSTEM\\Files\\2026 Lymphatic system.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.3  LYMPHATIC SYSTEM\\2026  Lymphatic system.pptx",
      "MODULE 1.3  LYMPHATIC SYSTEM\\2026  Lymphatic system.pptx"
     ]
    },
@@ -6661,6 +6789,8 @@
     "head": "2026 RESP4",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\6of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\2026 RESP4-1.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx",
      "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx"
     ]
    },
@@ -6688,6 +6818,8 @@
     "head": "2026 RESP4",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\6of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\2026 RESP4-1.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx",
      "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx"
     ]
    },
@@ -6709,6 +6841,8 @@
     "head": "2026 RESP4",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\6of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\2026 RESP4-1.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx",
      "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx"
     ]
    },
@@ -6751,6 +6885,8 @@
     "head": "2026 RESP4",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\6of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\2026 RESP4-1.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx",
      "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx"
     ]
    },
@@ -6772,6 +6908,8 @@
     "head": "2026 RESP4",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\6of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\2026 RESP4-1.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx",
      "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx"
     ]
    },
@@ -6793,6 +6931,8 @@
     "head": "2026 RESP4",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\6of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\2026 RESP4-1.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx",
      "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx"
     ]
    },
@@ -6814,6 +6954,8 @@
     "head": "2026 RESP4",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\6of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\2026 RESP4-1.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx",
      "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx"
     ]
    },
@@ -6835,6 +6977,8 @@
     "head": "2026 RESP4",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\6of11\\09 MODULE 1.2 THE RESPIRATORY SYSTEM\\Files\\2026 RESP4-1.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx",
      "MODULE 1.2  THE RESPIRATORY SYSTEM\\2026 RESP4-1.pptx"
     ]
    },
@@ -6862,6 +7006,8 @@
     "head": "2026 Lymphatic system",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\7of11\\10 MODULE 1.3 LYMPHATIC SYSTEM\\Files\\2026 Lymphatic system.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.3  LYMPHATIC SYSTEM\\2026  Lymphatic system.pptx",
      "MODULE 1.3  LYMPHATIC SYSTEM\\2026  Lymphatic system.pptx"
     ]
    },
@@ -6883,6 +7029,8 @@
     "head": "2026 Lymphatic system",
     "resolved": true,
     "candidates": [
+     "HEALTH SCIENCE 2\\7of11\\10 MODULE 1.3 LYMPHATIC SYSTEM\\Files\\2026 Lymphatic system.pptx",
+     "HS2_MERGED\\02_module_export\\MODULE 1.3  LYMPHATIC SYSTEM\\2026  Lymphatic system.pptx",
      "MODULE 1.3  LYMPHATIC SYSTEM\\2026  Lymphatic system.pptx"
     ]
    },
@@ -8212,7 +8360,7 @@
    {
     "kind": "card",
     "idx": 377,
-    "label": "Read the spirogram and match each label to its definition.",
+    "label": "Using the spirogram above, match each lung volume or capacity to what it means.",
     "src": null
    }
   ],
@@ -8648,12 +8796,6 @@
     "idx": 282,
     "label": "Define the four lung VOLUMES and give typical adult male values.",
     "src": null
-   },
-   {
-    "kind": "card",
-    "idx": 377,
-    "label": "Read the spirogram and match each label to its definition.",
-    "src": null
    }
   ],
   "1200mL": [
@@ -8672,13 +8814,7 @@
    {
     "kind": "card",
     "idx": 377,
-    "label": "Read the spirogram and match each label to its definition.",
-    "src": null
-   },
-   {
-    "kind": "card",
-    "idx": 377,
-    "label": "Read the spirogram and match each label to its definition.",
+    "label": "Using the spirogram above, match each lung volume or capacity to what it means.",
     "src": null
    }
   ],
@@ -8695,12 +8831,6 @@
     "kind": "card",
     "idx": 283,
     "label": "Define the four lung CAPACITIES and how each is calculated.",
-    "src": null
-   },
-   {
-    "kind": "card",
-    "idx": 377,
-    "label": "Read the spirogram and match each label to its definition.",
     "src": null
    }
   ],
@@ -8919,6 +9049,30 @@
     "kind": "card",
     "idx": 352,
     "label": "Are the following true or false?",
+    "src": null
+   }
+  ],
+  "3000mL": [
+   {
+    "kind": "card",
+    "idx": 377,
+    "label": "Using the spirogram above, match each lung volume or capacity to what it means.",
+    "src": null
+   }
+  ],
+  "1100mL": [
+   {
+    "kind": "card",
+    "idx": 377,
+    "label": "Using the spirogram above, match each lung volume or capacity to what it means.",
+    "src": null
+   }
+  ],
+  "4600mL": [
+   {
+    "kind": "card",
+    "idx": 377,
+    "label": "Using the spirogram above, match each lung volume or capacity to what it means.",
     "src": null
    }
   ],

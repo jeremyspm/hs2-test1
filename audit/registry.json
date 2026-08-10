@@ -1,30 +1,14 @@
 {
- "SRC-ARCHIVE-REPORT": {
-  "path": "_inbox/HEALTH SCIENCE 2/00 COURSE OVERVIEW & EXTRAS/_ARCHIVE REPORT.txt",
-  "sha256": "84517d7ca4a853072e639fe6e89f74d62dbe24eeeadc6ede93bc209d82a4df8b",
-  "kind": "txt",
-  "label": "_ARCHIVE REPORT",
-  "units": 26,
-  "authority": "lecturer"
- },
- "SRC-FULL-SLIDES-MS": {
-  "path": "_inbox/HEALTH SCIENCE 2/10of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Files/Full Slides MS.pptx",
-  "sha256": "044a2812fa71480e34bb7d12110b5f23d03698434d267759ca7d47999fda8e52",
+ "SRC-2024-REVISION-MOD-1-16-SLIDE": {
+  "path": "_inbox/Health Science 2 Export Module 1/2024 Revision mod 1 16 slide.pptx",
+  "sha256": "35837e069dcdb18956a3bf5211544478f039c1b9f67c2b2fb2df492a5b850278",
   "kind": "pptx",
-  "label": "Full Slides MS",
-  "units": 75,
-  "authority": "lecturer"
- },
- "SRC-SKELETAL-NOTES-LECTURER-VERSION": {
-  "path": "_inbox/HEALTH SCIENCE 2/10of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Files/Skeletal notes lecturer version.docx",
-  "sha256": "e864f71f90b50c4e68a326df95fef6144c548a660fb6aa81b5dd3c4f4bb76b49",
-  "kind": "docx",
-  "label": "Skeletal notes lecturer version",
-  "units": 126,
+  "label": "2024 Revision mod 1 16 slide",
+  "units": 16,
   "authority": "lecturer"
  },
  "SRC-2023-CASE-STUDIES-NS": {
-  "path": "_inbox/HEALTH SCIENCE 2/11of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Files/2023 Case studies NS.pptx",
+  "path": "_inbox/Health Science 2 Export Module 1/ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/2023 Case studies NS.pptx",
   "sha256": "3ca2cb6ed192dcdf66dd6031303d3fe55ae8d9ceadfeac6bd790df0dbdd6cb2b",
   "kind": "pptx",
   "label": "2023 Case studies NS",
@@ -32,23 +16,15 @@
   "authority": "lecturer"
  },
  "SRC-2024-CASE-STUDIES-MOD-ANS-JOINTS": {
-  "path": "_inbox/HEALTH SCIENCE 2/11of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Files/2024 Case studies mod ans-joints.pptx",
+  "path": "_inbox/Health Science 2 Export Module 1/ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/2024 Case studies mod ans-joints.pptx",
   "sha256": "6d38d29309e287adc1afd89d146643658b3ebfef9f735b4553f8f53bedbee85f",
   "kind": "pptx",
   "label": "2024 Case studies mod ans-joints",
   "units": 12,
   "authority": "lecturer"
  },
- "SRC-2024-NS-CASE-STUDIES-ANSWERS": {
-  "path": "_inbox/HEALTH SCIENCE 2/11of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Files/2024 NS Case studies answers.pptx",
-  "sha256": "48ddbad1f7364499828c800222b347c11072547ec26b306b4b014b881ca723f9",
-  "kind": "pptx",
-  "label": "2024 NS Case studies answers",
-  "units": 15,
-  "authority": "lecturer"
- },
  "SRC-ANATOMY-15-NOTES-PNS-AND-THE-REFLEX-ARC": {
-  "path": "_inbox/HEALTH SCIENCE 2/11of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Files/Anatomy 15 Notes - PNS and the Reflex Arc.docx",
+  "path": "_inbox/Health Science 2 Export Module 1/ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Anatomy 15 Notes - PNS and the Reflex Arc.docx",
   "sha256": "9e57fe4402473a74fc1ce48e59192724e71fc7623a7696fc6b4aef3ac6a41ab3",
   "kind": "docx",
   "label": "Anatomy 15 Notes - PNS and the Reflex Arc",
@@ -56,7 +32,7 @@
   "authority": "lecturer"
  },
  "SRC-ANATOMY-9-NOTES": {
-  "path": "_inbox/HEALTH SCIENCE 2/11of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Files/Anatomy 9 Notes.docx",
+  "path": "_inbox/Health Science 2 Export Module 1/ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Anatomy 9 Notes.docx",
   "sha256": "8594de022090981d5074d9ddb5ad3e1d2bfa6edf011c3e3e852cf7b6289e6e14",
   "kind": "docx",
   "label": "Anatomy 9 Notes",
@@ -64,7 +40,7 @@
   "authority": "lecturer"
  },
  "SRC-CASE-STUDIES-2003-MODEL-ANSWERS": {
-  "path": "_inbox/HEALTH SCIENCE 2/11of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Files/Case studies 2003 model answers-.pptx",
+  "path": "_inbox/Health Science 2 Export Module 1/ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Case studies 2003 model answers-.pptx",
   "sha256": "a00e092090a25b835c1661ce62602e885995585ffdc43a3c3dc5ab961ac5e830",
   "kind": "pptx",
   "label": "Case studies 2003 model answers-",
@@ -72,299 +48,11 @@
   "authority": "lecturer"
  },
  "SRC-CELLS-OF-NS-NOTES": {
-  "path": "_inbox/HEALTH SCIENCE 2/11of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Files/Cells of NS Notes.docx",
+  "path": "_inbox/Health Science 2 Export Module 1/ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Cells of NS Notes.docx",
   "sha256": "6fb4cbde499a7068f549d7a915d2fbafb2e370c71e02d3f79f7da72d421e80b9",
   "kind": "docx",
   "label": "Cells of NS Notes",
   "units": 28,
-  "authority": "lecturer"
- },
- "SRC-MUSCLE-TISSUE-NOTES": {
-  "path": "_inbox/HEALTH SCIENCE 2/11of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Files/Muscle tissue notes.docx",
-  "sha256": "167c71e41ada2a1fe648eeb4fe48f218b4be5f1fc5f1eb729c05052cc8f86693",
-  "kind": "docx",
-  "label": "Muscle tissue notes",
-  "units": 38,
-  "authority": "lecturer"
- },
- "SRC-CASE-STUDY-WORKBOOK-2025-S2": {
-  "path": "_inbox/HEALTH SCIENCE 2/11of11/17 SAQ PRACTICE DISCUSSIONS PEER MARKED/Files/Case Study Workbook 2025 s2.docx",
-  "sha256": "f0966a96e45e19b5eb053f10dc389f79e75d58d825aca942858173c1d1ec1550",
-  "kind": "docx",
-  "label": "Case Study Workbook 2025 s2",
-  "units": 232,
-  "authority": "student-peer"
- },
- "SRC-2020-GENETIC-DISEASE-HUNTINGTONS-2": {
-  "path": "_inbox/HEALTH SCIENCE 2/11of11/19 OTHER DISCUSSIONS & UNLINKED FILES/Files/2020 genetic disease Huntingtons-2.pptx",
-  "sha256": "90ee8dcc8f4148ce80c62da18d3d2a07964226af6d47f16b290ce053446aabf9",
-  "kind": "pptx",
-  "label": "2020 genetic disease Huntingtons-2",
-  "units": 14,
-  "authority": "lecturer"
- },
- "SRC-SPECIAL-SENSES-1-EYE-BN2-LECTURE": {
-  "path": "_inbox/HEALTH SCIENCE 2/11of11/19 OTHER DISCUSSIONS & UNLINKED FILES/Files/SPECIAL SENSES 1 EYE BN2 LECTURE.pptx",
-  "sha256": "a3086a5ea279ee364ba9c05ba70a14ed7b10a91245beab5c4de29aa8f05aa88d",
-  "kind": "pptx",
-  "label": "SPECIAL SENSES 1 EYE BN2 LECTURE",
-  "units": 32,
-  "authority": "lecturer"
- },
- "SRC-2026-2-722-537-541-552-COURSE-LAB-WORKBOOK-FF": {
-  "path": "_inbox/HEALTH SCIENCE 2/1of11/05 ESSENTIAL DOCUMENTS & LINKS/Files/2026 (2) 722.537 541 552 Course Lab Workbook ff.docx",
-  "sha256": "c5a4532fab69a68d534ec1f5248efcd988531cec71b5f707d885286712501129",
-  "kind": "docx",
-  "label": "2026 (2) 722.537 541 552 Course Lab Workbook ff",
-  "units": 2233,
-  "authority": "course-doc"
- },
- "SRC-CASE-STUDY-WORKBOOK-2026-S2": {
-  "path": "_inbox/HEALTH SCIENCE 2/1of11/05 ESSENTIAL DOCUMENTS & LINKS/Files/Case Study Workbook 2026 S2.docx",
-  "sha256": "5c6dde8325cdc50e3ef257b9d405d6479e9e211fffc50e9b4764acf957d89253",
-  "kind": "docx",
-  "label": "Case Study Workbook 2026 S2",
-  "units": 286,
-  "authority": "course-doc"
- },
- "SRC-EXTENSION-REQUEST-FORM": {
-  "path": "_inbox/HEALTH SCIENCE 2/1of11/05 ESSENTIAL DOCUMENTS & LINKS/Files/Extension Request Form.docx",
-  "sha256": "e0d4aa9c9d79b17c0e8d41c286aea42f2a77a809f6916e0057806ff1f2034b02",
-  "kind": "docx",
-  "label": "Extension Request Form",
-  "units": 23,
-  "authority": "course-doc"
- },
- "SRC-SCIENCE-2-DETAILED-CONTENT": {
-  "path": "_inbox/HEALTH SCIENCE 2/1of11/05 ESSENTIAL DOCUMENTS & LINKS/Files/Science 2 Detailed Content.docx",
-  "sha256": "2e24000ed96f5bda0ef9c7b3e9b9099538dff6f4580bdcffecd55823057df7b0",
-  "kind": "docx",
-  "label": "Science 2 Detailed Content",
-  "units": 154,
-  "authority": "course-doc"
- },
- "SRC-2020A-REVISION-MOD-1-16-SLIDE-1": {
-  "path": "_inbox/HEALTH SCIENCE 2/1of11/07 MODULE 1/Files/2020a Revision mod 1 16 slide-1.pptx",
-  "sha256": "15204a1394d56fac45476dd22041c0a7509c1dd3e8b24ab457ac39aeb3152487",
-  "kind": "pptx",
-  "label": "2020a Revision mod 1 16 slide-1",
-  "units": 16,
-  "authority": "lecturer"
- },
- "SRC-2024-REVISION-MOD-1-16-SLIDE": {
-  "path": "_inbox/HEALTH SCIENCE 2/1of11/07 MODULE 1/Files/2024 Revision mod 1 16 slide.pptx",
-  "sha256": "35837e069dcdb18956a3bf5211544478f039c1b9f67c2b2fb2df492a5b850278",
-  "kind": "pptx",
-  "label": "2024 Revision mod 1 16 slide",
-  "units": 16,
-  "authority": "lecturer"
- },
- "SRC-2026-CIRCULATION-VESSELS-CV1-2": {
-  "path": "_inbox/HEALTH SCIENCE 2/2of11/08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM/2026 CIRCULATION VESSELS CV1-2.pptx",
-  "sha256": "4dc83e1eb420e40d343823131cd7f3d772e3b1d9b38ce1b082b1f34d8069522e",
-  "kind": "pptx",
-  "label": "2026 CIRCULATION VESSELS CV1-2",
-  "units": 38,
-  "authority": "lecturer"
- },
- "SRC-2026-CARDIOVASCULAR-SYSTEM-2-3": {
-  "path": "_inbox/HEALTH SCIENCE 2/2of11/08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM/2026 Cardiovascular system 2-3.pptx",
-  "sha256": "8137f43f6b02947c60321872130663eebfe7a3f886e20f6c73af79f455170d60",
-  "kind": "pptx",
-  "label": "2026 Cardiovascular system 2-3",
-  "units": 37,
-  "authority": "lecturer"
- },
- "SRC-CAPILLARIES-FLUID-AND-FLOW": {
-  "path": "_inbox/HEALTH SCIENCE 2/2of11/08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM/Capillaries, Fluid and Flow.pptx",
-  "sha256": "2cd15241eb7c61e7300084500b9d767518d395c86af6746c719fab6de85acdc7",
-  "kind": "pptx",
-  "label": "Capillaries, Fluid and Flow",
-  "units": 30,
-  "authority": "lecturer"
- },
- "SRC-2026-CVS-3": {
-  "path": "_inbox/HEALTH SCIENCE 2/3of11/08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM/Files/2026 CVS 3.pptx",
-  "sha256": "04189f3f74f1139dccd53ac51a49e425a66851a7776b86d387f3d3e38a98cd0e",
-  "kind": "pptx",
-  "label": "2026 CVS 3",
-  "units": 38,
-  "authority": "lecturer"
- },
- "SRC-CARDIOVASCULAR-SYSTEM-2-1": {
-  "path": "_inbox/HEALTH SCIENCE 2/3of11/08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM/Files/Cardiovascular system 2 -1.pptx",
-  "sha256": "7893a7ce8206e210dd41b2083e59825868dcc9fdb9801baa97c939fbcf8de37a",
-  "kind": "pptx",
-  "label": "Cardiovascular system 2 -1",
-  "units": 29,
-  "authority": "lecturer"
- },
- "SRC-CARDIOVASCULAR-SYSTEM-2-ANNOTATED": {
-  "path": "_inbox/HEALTH SCIENCE 2/3of11/08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM/Files/Cardiovascular system 2 Annotated.pptx",
-  "sha256": "b0b2947793c9d35f18895ca426b455afaa1dc621762624f19ad2964125355ded",
-  "kind": "pptx",
-  "label": "Cardiovascular system 2 Annotated",
-  "units": 29,
-  "authority": "lecturer"
- },
- "SRC-2026-CARDIOVASCULAR-SYSTEM-4-2": {
-  "path": "_inbox/HEALTH SCIENCE 2/4of11/08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM/Files/2026 Cardiovascular System 4-2.pptx",
-  "sha256": "a092411ee091436d5aabd337657cde7369804413722d0f6366e9334b958a770b",
-  "kind": "pptx",
-  "label": "2026 Cardiovascular System 4-2",
-  "units": 30,
-  "authority": "lecturer"
- },
- "SRC-CARDIOVASCULAR-SYSTEM-3-ANNOTATED": {
-  "path": "_inbox/HEALTH SCIENCE 2/4of11/08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM/Files/Cardiovascular System 3 - Annotated.pptx",
-  "sha256": "3d3b80be25e1834b32ad77f414b84e0e50cd516ea0d15b7cb22db18c68b14499",
-  "kind": "pptx",
-  "label": "Cardiovascular System 3 - Annotated",
-  "units": 23,
-  "authority": "lecturer"
- },
- "SRC-CARDIOVASCULAR-SYSTEM-4-ANNOTATED": {
-  "path": "_inbox/HEALTH SCIENCE 2/4of11/08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM/Files/Cardiovascular System 4 - Annotated.pptx",
-  "sha256": "ebbfbaaf82cbbe319b52bf9635ff4784cf4200af61c5f99a4f7e287ad65e16db",
-  "kind": "pptx",
-  "label": "Cardiovascular System 4 - Annotated",
-  "units": 16,
-  "authority": "lecturer"
- },
- "SRC-2026-RESP-1": {
-  "path": "_inbox/HEALTH SCIENCE 2/5of11/09 MODULE 1.2 THE RESPIRATORY SYSTEM/Files/2026 RESP 1.pptx",
-  "sha256": "6363d83cf68026ae42b3ca53939a74505171656a4e8088d5598e89855fea4715",
-  "kind": "pptx",
-  "label": "2026 RESP 1",
-  "units": 34,
-  "authority": "lecturer"
- },
- "SRC-2026-RESP-3": {
-  "path": "_inbox/HEALTH SCIENCE 2/5of11/09 MODULE 1.2 THE RESPIRATORY SYSTEM/Files/2026 RESP 3.pptx",
-  "sha256": "7e926674da29aa1bb4f2e6f6e23e0ec2b46842f338678f4b51d187eeba3cd442",
-  "kind": "pptx",
-  "label": "2026 RESP 3",
-  "units": 37,
-  "authority": "lecturer"
- },
- "SRC-2026-RESP2": {
-  "path": "_inbox/HEALTH SCIENCE 2/5of11/09 MODULE 1.2 THE RESPIRATORY SYSTEM/Files/2026 RESP2.pptx",
-  "sha256": "0c0e102fdf564daa84438a22ce1b01b733851f72337648d78a52c690fd4c7c79",
-  "kind": "pptx",
-  "label": "2026 RESP2",
-  "units": 34,
-  "authority": "lecturer"
- },
- "SRC-EMMA-S-RESPIRATION-1-LECTURE-ANNOTATED-1": {
-  "path": "_inbox/HEALTH SCIENCE 2/5of11/09 MODULE 1.2 THE RESPIRATORY SYSTEM/Files/Emma's Respiration 1 lecture - Annotated-1.pptx",
-  "sha256": "0305dd45f9144b948e96ed6108d7c9a8abb623932aeb3a4b64a998b300145ec3",
-  "kind": "pptx",
-  "label": "Emma's Respiration 1 lecture - Annotated-1",
-  "units": 32,
-  "authority": "lecturer"
- },
- "SRC-EMMA-S-RESPIRATION-2-LECTURE-ANNOTATED": {
-  "path": "_inbox/HEALTH SCIENCE 2/5of11/09 MODULE 1.2 THE RESPIRATORY SYSTEM/Files/Emma's Respiration 2 lecture - Annotated.pptx",
-  "sha256": "ce6b5441da6fd5eea52563ff09336480d8c5c151f92e7586819aa1d8fb7e2f2d",
-  "kind": "pptx",
-  "label": "Emma's Respiration 2 lecture - Annotated",
-  "units": 20,
-  "authority": "lecturer"
- },
- "SRC-2026-RESP4-1": {
-  "path": "_inbox/HEALTH SCIENCE 2/6of11/09 MODULE 1.2 THE RESPIRATORY SYSTEM/Files/2026 RESP4-1.pptx",
-  "sha256": "9226cc5ea37bbe86b05b01ea805bca162df8bd0bc08ba3731083bf961a728da4",
-  "kind": "pptx",
-  "label": "2026 RESP4-1",
-  "units": 24,
-  "authority": "lecturer"
- },
- "SRC-EMMA-S-RESPIRATION-3-LECTURE-ANNOTATED": {
-  "path": "_inbox/HEALTH SCIENCE 2/6of11/09 MODULE 1.2 THE RESPIRATORY SYSTEM/Files/Emma's Respiration 3 lecture - Annotated.pptx",
-  "sha256": "efe4ceb941602c4162d4c33e00354a31a4aad56fbdad80f23ccf839fc52479e3",
-  "kind": "pptx",
-  "label": "Emma's Respiration 3 lecture - Annotated",
-  "units": 21,
-  "authority": "lecturer"
- },
- "SRC-RESPIRATORY-SYSTEM-4-BN2-LECTURE-JL": {
-  "path": "_inbox/HEALTH SCIENCE 2/6of11/09 MODULE 1.2 THE RESPIRATORY SYSTEM/Files/RESPIRATORY SYSTEM 4 BN2 Lecture (JL).pptx",
-  "sha256": "c931ba77d6d5ff71bf0970a0f518d6c7a7fe3d263493e20ad36c6e943675a1ae",
-  "kind": "pptx",
-  "label": "RESPIRATORY SYSTEM 4 BN2 Lecture (JL)",
-  "units": 21,
-  "authority": "lecturer"
- },
- "SRC-RESP-4-ANNOTATED": {
-  "path": "_inbox/HEALTH SCIENCE 2/6of11/09 MODULE 1.2 THE RESPIRATORY SYSTEM/Files/Resp 4 Annotated.pptx",
-  "sha256": "3e38db7769aacdb51ac4631ac8a7114431dde521edfb126acfb1cb02bb50ef1d",
-  "kind": "pptx",
-  "label": "Resp 4 Annotated",
-  "units": 21,
-  "authority": "lecturer"
- },
- "SRC-RESPIRATORY-3-SLIDES": {
-  "path": "_inbox/HEALTH SCIENCE 2/6of11/09 MODULE 1.2 THE RESPIRATORY SYSTEM/Files/Respiratory 3 Slides.pptx",
-  "sha256": "c49a2c6a9a8f1da64f34341a5e5b9a4aa28bd1b42bd880700016892b40758494",
-  "kind": "pptx",
-  "label": "Respiratory 3 Slides",
-  "units": 24,
-  "authority": "lecturer"
- },
- "SRC-RESPIRATORY-REGULATION-AND-ACIDBASE-BALANCE": {
-  "path": "_inbox/HEALTH SCIENCE 2/7of11/09 MODULE 1.2 THE RESPIRATORY SYSTEM/Files/Respiratory Regulation and AcidBase Balance.pptx",
-  "sha256": "7c03a86231856c97ee0c040dc500de5852b237573d82b4b4729fc38ba8408b9a",
-  "kind": "pptx",
-  "label": "Respiratory Regulation and AcidBase Balance",
-  "units": 24,
-  "authority": "lecturer"
- },
- "SRC-2026-LYMPHATIC-SYSTEM": {
-  "path": "_inbox/HEALTH SCIENCE 2/7of11/10 MODULE 1.3 LYMPHATIC SYSTEM/Files/2026 Lymphatic system.pptx",
-  "sha256": "e4b925be1534d8ba22c4202d8bf80444a2ccb23297a60d1b35af85d68b8f3ae9",
-  "kind": "pptx",
-  "label": "2026 Lymphatic system",
-  "units": 32,
-  "authority": "lecturer"
- },
- "SRC-ONLINE-LYMPHATICS-LECTURE-MATERIAL-ANNOTATED": {
-  "path": "_inbox/HEALTH SCIENCE 2/7of11/10 MODULE 1.3 LYMPHATIC SYSTEM/Files/Online Lymphatics Lecture Material - Annotated.pptx",
-  "sha256": "a36887a997601260bc9200994106781e00d35b9163db5eebf847ef0effaf1a3d",
-  "kind": "pptx",
-  "label": "Online Lymphatics Lecture Material - Annotated",
-  "units": 16,
-  "authority": "lecturer"
- },
- "SRC-BN2-FORMATIVE-TEST-MODEL-ANSWERS-FOR-CANVAS": {
-  "path": "_inbox/HEALTH SCIENCE 2/7of11/11 Module 1 Revision Materials/Files/BN2 Formative Test - Model Answers for Canvas.pptx",
-  "sha256": "d808c7c362e2ce30c07beeeec090a46636d01028c0b662fa9ac0ad1bc4e3da8f",
-  "kind": "pptx",
-  "label": "BN2 Formative Test - Model Answers for Canvas",
-  "units": 43,
-  "authority": "lecturer"
- },
- "SRC-BN2-FORMATIVE-TEST-QUESTIONS-ONLY": {
-  "path": "_inbox/HEALTH SCIENCE 2/7of11/11 Module 1 Revision Materials/Files/BN2 Formative Test - Questions Only.pptx",
-  "sha256": "0ade2746c645829baede0b67d8e11c7e0e43808e4fa7bd80dab669315b4ccfc2",
-  "kind": "pptx",
-  "label": "BN2 Formative Test - Questions Only",
-  "units": 22,
-  "authority": "lecturer"
- },
- "SRC-APPLICATION-FOR-LATE-SIT-OF-CONTINUOUS-TEST": {
-  "path": "_inbox/HEALTH SCIENCE 2/Application for late sit of continuous test.docx",
-  "sha256": "93622672ee97c52254790b914c237b01ad7f6dc00e5d39c3e7553342d48e7c09",
-  "kind": "docx",
-  "label": "Application for late sit of continuous test",
-  "units": 44,
-  "authority": "lecturer"
- },
- "SRC-MAKING-FRIENDS-WITH-THE-TEXT": {
-  "path": "_inbox/HEALTH SCIENCE 2/Making friends with the text.docx",
-  "sha256": "9a727cb16a9b85360fe6b6fd6c528bab2885a791599ca69e320bf625e756f0b8",
-  "kind": "docx",
-  "label": "Making friends with the text",
-  "units": 130,
   "authority": "lecturer"
  },
  "SRC-DISCUSSION-ANATOMY-2-DISCUSSION-BOARD-LEARNING": {
@@ -398,6 +86,22 @@
   "label": "DISCUSSION_MODULE 1.1- BLOOD VESSELS AS AN IMPORTANT PART OF YOUR TRAINING",
   "units": 14,
   "authority": "student-peer"
+ },
+ "SRC-FULL-SLIDES-MS": {
+  "path": "_inbox/Health Science 2 Export Module 1/ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Full Slides MS.pptx",
+  "sha256": "044a2812fa71480e34bb7d12110b5f23d03698434d267759ca7d47999fda8e52",
+  "kind": "pptx",
+  "label": "Full Slides MS",
+  "units": 75,
+  "authority": "lecturer"
+ },
+ "SRC-MUSCLE-TISSUE-NOTES": {
+  "path": "_inbox/Health Science 2 Export Module 1/ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Muscle tissue notes.docx",
+  "sha256": "167c71e41ada2a1fe648eeb4fe48f218b4be5f1fc5f1eb729c05052cc8f86693",
+  "kind": "docx",
+  "label": "Muscle tissue notes",
+  "units": 38,
+  "authority": "lecturer"
  },
  "SRC-PAGE-ANATOMY-MONDAYS-1-BLOOD-VESSELS-AND-HEART": {
   "path": "_inbox/Health Science 2 Export Module 1/ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/PAGE_Anatomy Mondays 1- Blood vessels and Heart structure.txt",
@@ -631,6 +335,54 @@
   "units": 89,
   "authority": "lecturer"
  },
+ "SRC-SKELETAL-NOTES-LECTURER-VERSION": {
+  "path": "_inbox/Health Science 2 Export Module 1/ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Skeletal notes lecturer version.docx",
+  "sha256": "e864f71f90b50c4e68a326df95fef6144c548a660fb6aa81b5dd3c4f4bb76b49",
+  "kind": "docx",
+  "label": "Skeletal notes lecturer version",
+  "units": 126,
+  "authority": "lecturer"
+ },
+ "SRC-2026-2-722-537-541-552-COURSE-LAB-WORKBOOK-FF": {
+  "path": "_inbox/Health Science 2 Export Module 1/ESSENTIAL DOCUMENTS & LINKS/2026 (2) 722.537 541 552 Course Lab Workbook ff.docx",
+  "sha256": "c5a4532fab69a68d534ec1f5248efcd988531cec71b5f707d885286712501129",
+  "kind": "docx",
+  "label": "2026 (2) 722.537 541 552 Course Lab Workbook ff",
+  "units": 2233,
+  "authority": "course-doc"
+ },
+ "SRC-APPLICATION-FOR-LATE-SIT-OF-CONTINUOUS-TEST": {
+  "path": "_inbox/Health Science 2 Export Module 1/ESSENTIAL DOCUMENTS & LINKS/APPLICATION FOR LATE SIT OF CONTINUOUS TEST.docx",
+  "sha256": "93622672ee97c52254790b914c237b01ad7f6dc00e5d39c3e7553342d48e7c09",
+  "kind": "docx",
+  "label": "APPLICATION FOR LATE SIT OF CONTINUOUS TEST",
+  "units": 44,
+  "authority": "course-doc"
+ },
+ "SRC-ASSESSMENT-CRITERIA": {
+  "path": "_inbox/Health Science 2 Export Module 1/ESSENTIAL DOCUMENTS & LINKS/ASSESSMENT CRITERIA.docx",
+  "sha256": "2e24000ed96f5bda0ef9c7b3e9b9099538dff6f4580bdcffecd55823057df7b0",
+  "kind": "docx",
+  "label": "ASSESSMENT CRITERIA",
+  "units": 154,
+  "authority": "course-doc"
+ },
+ "SRC-CASE-STUDY-WORKBOOK-2026-S2": {
+  "path": "_inbox/Health Science 2 Export Module 1/ESSENTIAL DOCUMENTS & LINKS/Case Study Workbook 2026 S2.docx",
+  "sha256": "5c6dde8325cdc50e3ef257b9d405d6479e9e211fffc50e9b4764acf957d89253",
+  "kind": "docx",
+  "label": "Case Study Workbook 2026 S2",
+  "units": 286,
+  "authority": "course-doc"
+ },
+ "SRC-EXTENSION-REQUEST-FORM": {
+  "path": "_inbox/Health Science 2 Export Module 1/ESSENTIAL DOCUMENTS & LINKS/EXTENSION REQUEST FORM.docx",
+  "sha256": "e0d4aa9c9d79b17c0e8d41c286aea42f2a77a809f6916e0057806ff1f2034b02",
+  "kind": "docx",
+  "label": "EXTENSION REQUEST FORM",
+  "units": 23,
+  "authority": "course-doc"
+ },
  "SRC-PAGE-CASE-STUDY-BOOKLET-A": {
   "path": "_inbox/Health Science 2 Export Module 1/ESSENTIAL DOCUMENTS & LINKS/PAGE_CASE STUDY BOOKLET A.txt",
   "sha256": "8deb8364c6f8bd7890798e21e792fee1232e3d0040f134674c019abe1109e8db",
@@ -671,8 +423,1912 @@
   "units": 74,
   "authority": "course-doc"
  },
+ "SRC-ARCHIVE-REPORT": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/00 COURSE OVERVIEW & EXTRAS/_ARCHIVE REPORT.txt",
+  "sha256": "84517d7ca4a853072e639fe6e89f74d62dbe24eeeadc6ede93bc209d82a4df8b",
+  "kind": "txt",
+  "label": "_ARCHIVE REPORT",
+  "units": 26,
+  "authority": "lecturer"
+ },
+ "SRC-2024-NS-CASE-STUDIES-ANSWERS": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/11of11/15 ANATOMY MONDAYS- Anatomy and Terminology lecturer-directed content/Files/2024 NS Case studies answers.pptx",
+  "sha256": "48ddbad1f7364499828c800222b347c11072547ec26b306b4b014b881ca723f9",
+  "kind": "pptx",
+  "label": "2024 NS Case studies answers",
+  "units": 15,
+  "authority": "lecturer"
+ },
+ "SRC-CASE-STUDY-WORKBOOK-2025-S2": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/11of11/17 SAQ PRACTICE DISCUSSIONS PEER MARKED/Files/Case Study Workbook 2025 s2.docx",
+  "sha256": "f0966a96e45e19b5eb053f10dc389f79e75d58d825aca942858173c1d1ec1550",
+  "kind": "docx",
+  "label": "Case Study Workbook 2025 s2",
+  "units": 232,
+  "authority": "student-peer"
+ },
+ "SRC-2020-GENETIC-DISEASE-HUNTINGTONS-2": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/11of11/19 OTHER DISCUSSIONS & UNLINKED FILES/Files/2020 genetic disease Huntingtons-2.pptx",
+  "sha256": "90ee8dcc8f4148ce80c62da18d3d2a07964226af6d47f16b290ce053446aabf9",
+  "kind": "pptx",
+  "label": "2020 genetic disease Huntingtons-2",
+  "units": 14,
+  "authority": "lecturer"
+ },
+ "SRC-SPECIAL-SENSES-1-EYE-BN2-LECTURE": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/11of11/19 OTHER DISCUSSIONS & UNLINKED FILES/Files/SPECIAL SENSES 1 EYE BN2 LECTURE.pptx",
+  "sha256": "a3086a5ea279ee364ba9c05ba70a14ed7b10a91245beab5c4de29aa8f05aa88d",
+  "kind": "pptx",
+  "label": "SPECIAL SENSES 1 EYE BN2 LECTURE",
+  "units": 32,
+  "authority": "lecturer"
+ },
+ "SRC-2020A-REVISION-MOD-1-16-SLIDE-1": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/1of11/07 MODULE 1/Files/2020a Revision mod 1 16 slide-1.pptx",
+  "sha256": "15204a1394d56fac45476dd22041c0a7509c1dd3e8b24ab457ac39aeb3152487",
+  "kind": "pptx",
+  "label": "2020a Revision mod 1 16 slide-1",
+  "units": 16,
+  "authority": "lecturer"
+ },
+ "SRC-2026-CIRCULATION-VESSELS-CV1-2": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/2of11/08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM/2026 CIRCULATION VESSELS CV1-2.pptx",
+  "sha256": "4dc83e1eb420e40d343823131cd7f3d772e3b1d9b38ce1b082b1f34d8069522e",
+  "kind": "pptx",
+  "label": "2026 CIRCULATION VESSELS CV1-2",
+  "units": 38,
+  "authority": "lecturer"
+ },
+ "SRC-2026-CARDIOVASCULAR-SYSTEM-2-3": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/2of11/08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM/2026 Cardiovascular system 2-3.pptx",
+  "sha256": "8137f43f6b02947c60321872130663eebfe7a3f886e20f6c73af79f455170d60",
+  "kind": "pptx",
+  "label": "2026 Cardiovascular system 2-3",
+  "units": 37,
+  "authority": "lecturer"
+ },
+ "SRC-CAPILLARIES-FLUID-AND-FLOW": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/2of11/08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM/Capillaries, Fluid and Flow.pptx",
+  "sha256": "2cd15241eb7c61e7300084500b9d767518d395c86af6746c719fab6de85acdc7",
+  "kind": "pptx",
+  "label": "Capillaries, Fluid and Flow",
+  "units": 30,
+  "authority": "lecturer"
+ },
+ "SRC-2026-CVS-3": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/3of11/08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM/Files/2026 CVS 3.pptx",
+  "sha256": "04189f3f74f1139dccd53ac51a49e425a66851a7776b86d387f3d3e38a98cd0e",
+  "kind": "pptx",
+  "label": "2026 CVS 3",
+  "units": 38,
+  "authority": "lecturer"
+ },
+ "SRC-CARDIOVASCULAR-SYSTEM-2-1": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/3of11/08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM/Files/Cardiovascular system 2 -1.pptx",
+  "sha256": "7893a7ce8206e210dd41b2083e59825868dcc9fdb9801baa97c939fbcf8de37a",
+  "kind": "pptx",
+  "label": "Cardiovascular system 2 -1",
+  "units": 29,
+  "authority": "lecturer"
+ },
+ "SRC-CARDIOVASCULAR-SYSTEM-2-ANNOTATED": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/3of11/08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM/Files/Cardiovascular system 2 Annotated.pptx",
+  "sha256": "b0b2947793c9d35f18895ca426b455afaa1dc621762624f19ad2964125355ded",
+  "kind": "pptx",
+  "label": "Cardiovascular system 2 Annotated",
+  "units": 29,
+  "authority": "lecturer"
+ },
+ "SRC-2026-CARDIOVASCULAR-SYSTEM-4-2": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/4of11/08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM/Files/2026 Cardiovascular System 4-2.pptx",
+  "sha256": "a092411ee091436d5aabd337657cde7369804413722d0f6366e9334b958a770b",
+  "kind": "pptx",
+  "label": "2026 Cardiovascular System 4-2",
+  "units": 30,
+  "authority": "lecturer"
+ },
+ "SRC-CARDIOVASCULAR-SYSTEM-3-ANNOTATED": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/4of11/08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM/Files/Cardiovascular System 3 - Annotated.pptx",
+  "sha256": "3d3b80be25e1834b32ad77f414b84e0e50cd516ea0d15b7cb22db18c68b14499",
+  "kind": "pptx",
+  "label": "Cardiovascular System 3 - Annotated",
+  "units": 23,
+  "authority": "lecturer"
+ },
+ "SRC-CARDIOVASCULAR-SYSTEM-4-ANNOTATED": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/4of11/08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM/Files/Cardiovascular System 4 - Annotated.pptx",
+  "sha256": "ebbfbaaf82cbbe319b52bf9635ff4784cf4200af61c5f99a4f7e287ad65e16db",
+  "kind": "pptx",
+  "label": "Cardiovascular System 4 - Annotated",
+  "units": 16,
+  "authority": "lecturer"
+ },
+ "SRC-2026-RESP-1": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/5of11/09 MODULE 1.2 THE RESPIRATORY SYSTEM/Files/2026 RESP 1.pptx",
+  "sha256": "6363d83cf68026ae42b3ca53939a74505171656a4e8088d5598e89855fea4715",
+  "kind": "pptx",
+  "label": "2026 RESP 1",
+  "units": 34,
+  "authority": "lecturer"
+ },
+ "SRC-2026-RESP-3": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/5of11/09 MODULE 1.2 THE RESPIRATORY SYSTEM/Files/2026 RESP 3.pptx",
+  "sha256": "7e926674da29aa1bb4f2e6f6e23e0ec2b46842f338678f4b51d187eeba3cd442",
+  "kind": "pptx",
+  "label": "2026 RESP 3",
+  "units": 37,
+  "authority": "lecturer"
+ },
+ "SRC-2026-RESP2": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/5of11/09 MODULE 1.2 THE RESPIRATORY SYSTEM/Files/2026 RESP2.pptx",
+  "sha256": "0c0e102fdf564daa84438a22ce1b01b733851f72337648d78a52c690fd4c7c79",
+  "kind": "pptx",
+  "label": "2026 RESP2",
+  "units": 34,
+  "authority": "lecturer"
+ },
+ "SRC-EMMA-S-RESPIRATION-1-LECTURE-ANNOTATED-1": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/5of11/09 MODULE 1.2 THE RESPIRATORY SYSTEM/Files/Emma's Respiration 1 lecture - Annotated-1.pptx",
+  "sha256": "0305dd45f9144b948e96ed6108d7c9a8abb623932aeb3a4b64a998b300145ec3",
+  "kind": "pptx",
+  "label": "Emma's Respiration 1 lecture - Annotated-1",
+  "units": 32,
+  "authority": "lecturer"
+ },
+ "SRC-EMMA-S-RESPIRATION-2-LECTURE-ANNOTATED": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/5of11/09 MODULE 1.2 THE RESPIRATORY SYSTEM/Files/Emma's Respiration 2 lecture - Annotated.pptx",
+  "sha256": "ce6b5441da6fd5eea52563ff09336480d8c5c151f92e7586819aa1d8fb7e2f2d",
+  "kind": "pptx",
+  "label": "Emma's Respiration 2 lecture - Annotated",
+  "units": 20,
+  "authority": "lecturer"
+ },
+ "SRC-2026-RESP4-1": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/6of11/09 MODULE 1.2 THE RESPIRATORY SYSTEM/Files/2026 RESP4-1.pptx",
+  "sha256": "9226cc5ea37bbe86b05b01ea805bca162df8bd0bc08ba3731083bf961a728da4",
+  "kind": "pptx",
+  "label": "2026 RESP4-1",
+  "units": 24,
+  "authority": "lecturer"
+ },
+ "SRC-EMMA-S-RESPIRATION-3-LECTURE-ANNOTATED": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/6of11/09 MODULE 1.2 THE RESPIRATORY SYSTEM/Files/Emma's Respiration 3 lecture - Annotated.pptx",
+  "sha256": "efe4ceb941602c4162d4c33e00354a31a4aad56fbdad80f23ccf839fc52479e3",
+  "kind": "pptx",
+  "label": "Emma's Respiration 3 lecture - Annotated",
+  "units": 21,
+  "authority": "lecturer"
+ },
+ "SRC-RESPIRATORY-SYSTEM-4-BN2-LECTURE-JL": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/6of11/09 MODULE 1.2 THE RESPIRATORY SYSTEM/Files/RESPIRATORY SYSTEM 4 BN2 Lecture (JL).pptx",
+  "sha256": "c931ba77d6d5ff71bf0970a0f518d6c7a7fe3d263493e20ad36c6e943675a1ae",
+  "kind": "pptx",
+  "label": "RESPIRATORY SYSTEM 4 BN2 Lecture (JL)",
+  "units": 21,
+  "authority": "lecturer"
+ },
+ "SRC-RESP-4-ANNOTATED": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/6of11/09 MODULE 1.2 THE RESPIRATORY SYSTEM/Files/Resp 4 Annotated.pptx",
+  "sha256": "3e38db7769aacdb51ac4631ac8a7114431dde521edfb126acfb1cb02bb50ef1d",
+  "kind": "pptx",
+  "label": "Resp 4 Annotated",
+  "units": 21,
+  "authority": "lecturer"
+ },
+ "SRC-RESPIRATORY-3-SLIDES": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/6of11/09 MODULE 1.2 THE RESPIRATORY SYSTEM/Files/Respiratory 3 Slides.pptx",
+  "sha256": "c49a2c6a9a8f1da64f34341a5e5b9a4aa28bd1b42bd880700016892b40758494",
+  "kind": "pptx",
+  "label": "Respiratory 3 Slides",
+  "units": 24,
+  "authority": "lecturer"
+ },
+ "SRC-RESPIRATORY-REGULATION-AND-ACIDBASE-BALANCE": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/7of11/09 MODULE 1.2 THE RESPIRATORY SYSTEM/Files/Respiratory Regulation and AcidBase Balance.pptx",
+  "sha256": "7c03a86231856c97ee0c040dc500de5852b237573d82b4b4729fc38ba8408b9a",
+  "kind": "pptx",
+  "label": "Respiratory Regulation and AcidBase Balance",
+  "units": 24,
+  "authority": "lecturer"
+ },
+ "SRC-2026-LYMPHATIC-SYSTEM": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/7of11/10 MODULE 1.3 LYMPHATIC SYSTEM/Files/2026 Lymphatic system.pptx",
+  "sha256": "e4b925be1534d8ba22c4202d8bf80444a2ccb23297a60d1b35af85d68b8f3ae9",
+  "kind": "pptx",
+  "label": "2026 Lymphatic system",
+  "units": 32,
+  "authority": "lecturer"
+ },
+ "SRC-ONLINE-LYMPHATICS-LECTURE-MATERIAL-ANNOTATED": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/7of11/10 MODULE 1.3 LYMPHATIC SYSTEM/Files/Online Lymphatics Lecture Material - Annotated.pptx",
+  "sha256": "a36887a997601260bc9200994106781e00d35b9163db5eebf847ef0effaf1a3d",
+  "kind": "pptx",
+  "label": "Online Lymphatics Lecture Material - Annotated",
+  "units": 16,
+  "authority": "lecturer"
+ },
+ "SRC-BN2-FORMATIVE-TEST-MODEL-ANSWERS-FOR-CANVAS": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/7of11/11 Module 1 Revision Materials/Files/BN2 Formative Test - Model Answers for Canvas.pptx",
+  "sha256": "d808c7c362e2ce30c07beeeec090a46636d01028c0b662fa9ac0ad1bc4e3da8f",
+  "kind": "pptx",
+  "label": "BN2 Formative Test - Model Answers for Canvas",
+  "units": 43,
+  "authority": "lecturer"
+ },
+ "SRC-BN2-FORMATIVE-TEST-QUESTIONS-ONLY": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/7of11/11 Module 1 Revision Materials/Files/BN2 Formative Test - Questions Only.pptx",
+  "sha256": "0ade2746c645829baede0b67d8e11c7e0e43808e4fa7bd80dab669315b4ccfc2",
+  "kind": "pptx",
+  "label": "BN2 Formative Test - Questions Only",
+  "units": 22,
+  "authority": "lecturer"
+ },
+ "SRC-MAKING-FRIENDS-WITH-THE-TEXT": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/Making friends with the text.docx",
+  "sha256": "9a727cb16a9b85360fe6b6fd6c528bab2885a791599ca69e320bf625e756f0b8",
+  "kind": "docx",
+  "label": "Making friends with the text",
+  "units": 130,
+  "authority": "lecturer"
+ },
+ "SRC-COURSE-INFO": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/00_course_info/course_info.txt",
+  "sha256": "a5b7b439940feee593a8f7e2651b3489f7501d5b06f8c6e18334a91ae06d4bc4",
+  "kind": "txt",
+  "label": "course_info",
+  "units": 120,
+  "authority": "lecturer"
+ },
+ "SRC-NAVIGATION-TABS": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/00_course_info/navigation_tabs.txt",
+  "sha256": "b4f7a79941bed1586a5be7ca47c5b16efb2bb6325782edfe82e62cf7d2027ce9",
+  "kind": "txt",
+  "label": "navigation_tabs",
+  "units": 17,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/01_WELCOME TO HS2/Homepage/page.txt",
+  "sha256": "5f6a567a16819f59f8fc0eeef13ac8b4628baf96fe90df84471cf0149fcd0284",
+  "kind": "txt",
+  "label": "page",
+  "units": 58,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-2": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/01_WELCOME TO HS2/Semester Timetable/page.txt",
+  "sha256": "f9e97ea14760032eefc3ffc46cb94f71b6bb4ae770cfad383045ed6c27c635b6",
+  "kind": "txt",
+  "label": "page",
+  "units": 180,
+  "authority": "lecturer"
+ },
+ "SRC-ITEMS-INDEX": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/01_WELCOME TO HS2/items_index.txt",
+  "sha256": "9ab69219d63086120da014e730200f3da622c1e6b8e73fd9d505f038c2fa574c",
+  "kind": "txt",
+  "label": "items_index",
+  "units": 2,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-3": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/02_THE TOOLS AND THE RULES/Course Descriptor 722.541/page.txt",
+  "sha256": "b54033692712d80a894e4ee489801e9c15e2b27c2cefe15e8ee190c8ac032737",
+  "kind": "txt",
+  "label": "page",
+  "units": 5,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-4": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/02_THE TOOLS AND THE RULES/Literacy & Numeracy/page.txt",
+  "sha256": "5a43a9a701ee0a09a2037a09c26349eb60aacf4a1aa2278cfad0dc6dfc8408a6",
+  "kind": "txt",
+  "label": "page",
+  "units": 44,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-5": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/02_THE TOOLS AND THE RULES/Regulations and Policies for Students/page.txt",
+  "sha256": "48b44339c19eb429a52d60d7eb4666d62ee21c1a18c29c0cb744988bef58e249",
+  "kind": "txt",
+  "label": "page",
+  "units": 37,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-6": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/02_THE TOOLS AND THE RULES/Staying well while studying/page.txt",
+  "sha256": "23592b85fb13aa11538f583c5a99b1d1c23ede7575b8689d88a2ed510dd16e06",
+  "kind": "txt",
+  "label": "page",
+  "units": 27,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-7": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/02_THE TOOLS AND THE RULES/Using AI Tools in Assessments/page.txt",
+  "sha256": "982b87d674f6417c9b5cb87a05238ff011efcbec9a76261b9bd7e93ee99ed934",
+  "kind": "txt",
+  "label": "page",
+  "units": 37,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-8": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/02_THE TOOLS AND THE RULES/You Said We Did/page.txt",
+  "sha256": "a7f3c929558e42fe4fe6d7de384606de4983495be1e7a780dd99836cfd608142",
+  "kind": "txt",
+  "label": "page",
+  "units": 130,
+  "authority": "lecturer"
+ },
+ "SRC-ITEMS-INDEX-2": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/02_THE TOOLS AND THE RULES/items_index.txt",
+  "sha256": "87f04ff95ef4c043128787b12c98090ca5fce8968d4f248c75b980b4304cd487",
+  "kind": "txt",
+  "label": "items_index",
+  "units": 6,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-9": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/03_PREPARING FOR HS2/Continuing Year One Science/page.txt",
+  "sha256": "ab283b010fb6b11a7cfa6e07fadf7c3279d3d6e579a6b75ebcbcbb1bc7603318",
+  "kind": "txt",
+  "label": "page",
+  "units": 20,
+  "authority": "lecturer"
+ },
+ "SRC-QUESTIONS-RESTRICTED": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/03_PREPARING FOR HS2/HS2 Orientation Quiz (10 marks)/QUESTIONS_RESTRICTED.txt",
+  "sha256": "1600d5c6505699e8f91ddc43bae73f9d2ea4db1c9e39a383573081a789ddd27f",
+  "kind": "txt",
+  "label": "QUESTIONS_RESTRICTED",
+  "units": 5,
+  "authority": "lecturer"
+ },
+ "SRC-DESCRIPTION": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/03_PREPARING FOR HS2/HS2 Orientation Quiz (10 marks)/description.txt",
+  "sha256": "4f0e69cc58cbce01db34043230bb5496a26fb09c7e6971ea6c89aba9ccf9b021",
+  "kind": "txt",
+  "label": "description",
+  "units": 1,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-10": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/03_PREPARING FOR HS2/Introduction to HS2, LOs, Syllabus and Assessments/page.txt",
+  "sha256": "8cbdf1ed3e7a49cae73fb705f58657af234b5976716e7525e41e089976b3ffa0",
+  "kind": "txt",
+  "label": "page",
+  "units": 24,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-11": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/03_PREPARING FOR HS2/Study tips - how to study smarter, not harder!/page.txt",
+  "sha256": "b64f87fb5d958bf2c012b35c14cdcc8f6e652f33bccf3eb639462e06671fe589",
+  "kind": "txt",
+  "label": "page",
+  "units": 58,
+  "authority": "lecturer"
+ },
+ "SRC-ITEMS-INDEX-3": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/03_PREPARING FOR HS2/items_index.txt",
+  "sha256": "68ca518b01c983d9121417cb181bbf5436c5490e97084ef3f6947f4db7e20dbc",
+  "kind": "txt",
+  "label": "items_index",
+  "units": 4,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-12": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/04_COMMUNICATION CHANNELS & RECORDINGS FROM THE PAST & PRESENT/About Online Classes/page.txt",
+  "sha256": "b9a7071dc09560709530a23abfe360b8f18e1f64fa2338ab0e577e9f9a23817e",
+  "kind": "txt",
+  "label": "page",
+  "units": 14,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-13": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/04_COMMUNICATION CHANNELS & RECORDINGS FROM THE PAST & PRESENT/About Social Media/page.txt",
+  "sha256": "790e9d9d30c0bc2bdcf5e2ff6726d09c92771e17af00b55a48fbc7979bb1461d",
+  "kind": "txt",
+  "label": "page",
+  "units": 29,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-14": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/04_COMMUNICATION CHANNELS & RECORDINGS FROM THE PAST & PRESENT/Communication Channel Links and Details [TEAMS, PROCTORU, FB]/page.txt",
+  "sha256": "ef42f0608f45f785fa530a3efdf2778c817f96548f109907892111aa6a6bb31d",
+  "kind": "txt",
+  "label": "page",
+  "units": 10,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-15": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/04_COMMUNICATION CHANNELS & RECORDINGS FROM THE PAST & PRESENT/Introduction to ProctorU/page.txt",
+  "sha256": "e8d440d9d8f5f837b40a6340a7b385a9dfbe4f39a8a91f90244bb41b7e55e6ef",
+  "kind": "txt",
+  "label": "page",
+  "units": 32,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-16": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/04_COMMUNICATION CHANNELS & RECORDINGS FROM THE PAST & PRESENT/RECORDINGS 2022 ONWARDS/page.txt",
+  "sha256": "22986800b79e3b998c0f7b4499ce933a077dd819e4441611ea7cdf2b79b23011",
+  "kind": "txt",
+  "label": "page",
+  "units": 13,
+  "authority": "lecturer"
+ },
+ "SRC-ITEMS-INDEX-4": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/04_COMMUNICATION CHANNELS & RECORDINGS FROM THE PAST & PRESENT/items_index.txt",
+  "sha256": "0ae20282316f97a2f25c779e5d3aa70dd8c881bc27fbd59d9c25b60f1b6e1306",
+  "kind": "txt",
+  "label": "items_index",
+  "units": 5,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-17": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/05_ESSENTIAL DOCUMENTS & LINKS/CASE STUDY BOOKLET A/page.txt",
+  "sha256": "c85350aa340526a2b6de0f62ac08fc93fa2301775cd136add00961f09240b9ed",
+  "kind": "txt",
+  "label": "page",
+  "units": 37,
+  "authority": "course-doc"
+ },
+ "SRC-PAGE-18": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/05_ESSENTIAL DOCUMENTS & LINKS/CLINICAL KEY TEXTBOOKS & LINKS/page.txt",
+  "sha256": "f73be7744cc1079a7be23c7e0c35aa82a6122267ae55441184efe3c582992486",
+  "kind": "txt",
+  "label": "page",
+  "units": 11,
+  "authority": "course-doc"
+ },
+ "SRC-PAGE-19": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/05_ESSENTIAL DOCUMENTS & LINKS/IMAGES FROM THE LABS/page.txt",
+  "sha256": "f3b563579a3ceafbca48837e179c7f5b08e7ca5d7d2de9a3ad8745f4b33fe322",
+  "kind": "txt",
+  "label": "page",
+  "units": 6,
+  "authority": "course-doc"
+ },
+ "SRC-PAGE-20": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/05_ESSENTIAL DOCUMENTS & LINKS/LAB_WORK BOOKS/page.txt",
+  "sha256": "f9f40ed465c7dc363c6c1a2ee89c6894965cc5970baa377765b33f36699130b7",
+  "kind": "txt",
+  "label": "page",
+  "units": 5,
+  "authority": "course-doc"
+ },
+ "SRC-DESCRIPTION-2": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/05_ESSENTIAL DOCUMENTS & LINKS/NEW Year 1 & 2 Laboratory Health & Safety Orientation_ COMPULSORY/description.txt",
+  "sha256": "e9a3a2cb9fa7158dd8927641d00a08c34967988cee2b530052d143a0a28684de",
+  "kind": "txt",
+  "label": "description",
+  "units": 6,
+  "authority": "course-doc"
+ },
+ "SRC-PAGE-21": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/05_ESSENTIAL DOCUMENTS & LINKS/PRACTICAL LABORATORY ARRANGEMENTS/page.txt",
+  "sha256": "27869c6fbae7b9808b515d21d795cee1d99758e6b9c09df1c22f157abb733191",
+  "kind": "txt",
+  "label": "page",
+  "units": 40,
+  "authority": "course-doc"
+ },
+ "SRC-ITEMS-INDEX-5": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/05_ESSENTIAL DOCUMENTS & LINKS/items_index.txt",
+  "sha256": "ba7ecae036fbf0f9a16533a7ef7334852a558b456a07382b160b683365359aa7",
+  "kind": "txt",
+  "label": "items_index",
+  "units": 9,
+  "authority": "course-doc"
+ },
+ "SRC-DESCRIPTION-3": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/06_SUMMATIVE ASSESSMENTS (pass_fail depends on performance in these)/722.541 2026 PROCTORU TRIAL TEST/description.txt",
+  "sha256": "07100b6401d7936896f351d7f2a467936c2f5b8c47ba05f47a3dd7013b60e1cc",
+  "kind": "txt",
+  "label": "description",
+  "units": 1,
+  "authority": "course-doc"
+ },
+ "SRC-PAGE-22": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/06_SUMMATIVE ASSESSMENTS (pass_fail depends on performance in these)/ASSESSMENT OVERVIEW/page.txt",
+  "sha256": "d294eac31f33a7afa598b2b396298f948585104561acaf02180a2959953ed5f8",
+  "kind": "txt",
+  "label": "page",
+  "units": 69,
+  "authority": "course-doc"
+ },
+ "SRC-ITEMS-INDEX-6": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/06_SUMMATIVE ASSESSMENTS (pass_fail depends on performance in these)/items_index.txt",
+  "sha256": "a7428c299879343005c1afd3f0764cb5d5d81faccc1120e2834add824098d8a2",
+  "kind": "txt",
+  "label": "items_index",
+  "units": 2,
+  "authority": "course-doc"
+ },
+ "SRC-FULL-DISCUSSION": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/07_MODULE 1/MODULE 1 HELPLINE/full_discussion.txt",
+  "sha256": "1c6a9a01f1abdd5109b0572a359a49e464997a3ea7372075e0cf6b92cbe6f1f3",
+  "kind": "txt",
+  "label": "full_discussion",
+  "units": 8,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-23": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/07_MODULE 1/MODULE 1.1, 1.2 & 1.3 RESOURCES/page.txt",
+  "sha256": "6d5796ad2b86f938a9d41072e9a06deffd03697e2ebbd8ce4571d5ec2c681b65",
+  "kind": "txt",
+  "label": "page",
+  "units": 105,
+  "authority": "lecturer"
+ },
+ "SRC-ITEMS-INDEX-7": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/07_MODULE 1/items_index.txt",
+  "sha256": "6d3175c6fb14c575953bca744dd4cf45e2436ce073d63d98ca5a5a7e1cb21550",
+  "kind": "txt",
+  "label": "items_index",
+  "units": 3,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-24": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/08_MODULE 1.1 THE CARDIOVASCULAR SYSTEM/LEARNING PAGE CVS 1_ BLOOD VESSELS/page.txt",
+  "sha256": "5e5e5f1f989533c2e7394186523cac56bdb6030c03710d74d085d6f496cd14f2",
+  "kind": "txt",
+  "label": "page",
+  "units": 83,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-25": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/08_MODULE 1.1 THE CARDIOVASCULAR SYSTEM/LEARNING PAGE CVS 2_ THE HEART & BLOOD FLOW/page.txt",
+  "sha256": "2f0b7758efebdb2a094679469e90d37f5105eea65281b98f9a577fadb23ecd53",
+  "kind": "txt",
+  "label": "page",
+  "units": 142,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-26": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/08_MODULE 1.1 THE CARDIOVASCULAR SYSTEM/LEARNING PAGE CVS 3_ CARDIAC PHYSIOLOGY/page.txt",
+  "sha256": "d6b90df91d1070badbcc07fd892b0ac674da42129e83607334815857a3381c71",
+  "kind": "txt",
+  "label": "page",
+  "units": 70,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-27": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/08_MODULE 1.1 THE CARDIOVASCULAR SYSTEM/LEARNING PAGE CVS 4_ REGULATION OF BLOOD PRESSURE/page.txt",
+  "sha256": "1e2b5a7042fa0115706af2251f3f79083a1543238acc53d10a070fccde89a41b",
+  "kind": "txt",
+  "label": "page",
+  "units": 178,
+  "authority": "lecturer"
+ },
+ "SRC-DESCRIPTION-4": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/08_MODULE 1.1 THE CARDIOVASCULAR SYSTEM/MODULE 1.1 SHOCK QUIZ (5 Marks)/description.txt",
+  "sha256": "38f1074a5101335533996566740007d72c7995571d0dbc9e81a8613db48779c6",
+  "kind": "txt",
+  "label": "description",
+  "units": 1,
+  "authority": "lecturer"
+ },
+ "SRC-DESCRIPTION-5": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/08_MODULE 1.1 THE CARDIOVASCULAR SYSTEM/MODULE 1.1_ CVS HOMEOSTASIS (30 Marks) (classic)/description.txt",
+  "sha256": "ecd8d54d3d02f56d73ee8bfa8ed9eae68bf69a57ee569379b650b75d4f27b98c",
+  "kind": "txt",
+  "label": "description",
+  "units": 9,
+  "authority": "lecturer"
+ },
+ "SRC-DESCRIPTION-6": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/08_MODULE 1.1 THE CARDIOVASCULAR SYSTEM/MODULE 1.1_ CVS1 BLOOD VESSELS (10 marks)/description.txt",
+  "sha256": "51791b05c1a7a3941af32a3e75509c634c30947fb7d840546faf244b62947091",
+  "kind": "txt",
+  "label": "description",
+  "units": 1,
+  "authority": "lecturer"
+ },
+ "SRC-DESCRIPTION-7": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/08_MODULE 1.1 THE CARDIOVASCULAR SYSTEM/MODULE 1.1_ CVS3 CARDIAC CONDUCTION & ECG (10 marks)/description.txt",
+  "sha256": "e29e7c81502d17fe192acfe2dd6749ff3c074bc9e2eb072311cc4e5b9170a946",
+  "kind": "txt",
+  "label": "description",
+  "units": 3,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-28": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/08_MODULE 1.1 THE CARDIOVASCULAR SYSTEM/MODULE 1.1_ Circulatory Shock/page.txt",
+  "sha256": "00ec3d270f2712421b05691a293c7bcd5917f704ffa78c9a60eb3661cca2ba78",
+  "kind": "txt",
+  "label": "page",
+  "units": 61,
+  "authority": "lecturer"
+ },
+ "SRC-FULL-DISCUSSION-2": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/08_MODULE 1.1 THE CARDIOVASCULAR SYSTEM/MODULE 1.1_ DISCUSSION_ DVT/full_discussion.txt",
+  "sha256": "1c37f2811dce9866effbdf549ee3190d4b2401d9ee35ce9e11cded694776cc53",
+  "kind": "txt",
+  "label": "full_discussion",
+  "units": 269,
+  "authority": "student-peer"
+ },
+ "SRC-DESCRIPTION-8": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/08_MODULE 1.1 THE CARDIOVASCULAR SYSTEM/MODULE 1.1_ HEART COVERINGS & STRUCTURES IN THE RIGHT & LEFT HALVES OF THE HEART (15 marks) (classic)/description.txt",
+  "sha256": "9e252b698aceed7ab82f31edcc6126a15cff2926f4bfc2ff55be6a54a8941ceb",
+  "kind": "txt",
+  "label": "description",
+  "units": 58,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-29": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/08_MODULE 1.1 THE CARDIOVASCULAR SYSTEM/MODULE 1.1_ HOMEOSTASIS/page.txt",
+  "sha256": "9332c021c4dd9744386939817dc9ff865f80eeffd66cf54b3d3e1905f81a9530",
+  "kind": "txt",
+  "label": "page",
+  "units": 39,
+  "authority": "lecturer"
+ },
+ "SRC-DESCRIPTION-9": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/08_MODULE 1.1 THE CARDIOVASCULAR SYSTEM/MODULE 1.1_ QUIZ_ CVS2 THE HEART (25 marks)/description.txt",
+  "sha256": "95308334b19a7e1bd4fbb5387e568cb324e61534506addd7d0d79b68b18a3dd3",
+  "kind": "txt",
+  "label": "description",
+  "units": 1,
+  "authority": "lecturer"
+ },
+ "SRC-DESCRIPTION-10": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/08_MODULE 1.1 THE CARDIOVASCULAR SYSTEM/MODULE 1.1_ SAQ & MC_ CVS REVIEW _(35 marks )/description.txt",
+  "sha256": "0f4a4b440e33b5323071b489f66939e6cb41c92ebec602cca35ceceecbbcc2b5",
+  "kind": "txt",
+  "label": "description",
+  "units": 2,
+  "authority": "lecturer"
+ },
+ "SRC-FULL-DISCUSSION-3": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/08_MODULE 1.1 THE CARDIOVASCULAR SYSTEM/MODULE 1.1_ TEST CASE STUDY 1_ BLOOD PRESSURE/full_discussion.txt",
+  "sha256": "19dc36e727fa7a1e76127a057fc03084be2faa694c5e6ecae5602fc1a0ef2571",
+  "kind": "txt",
+  "label": "full_discussion",
+  "units": 44,
+  "authority": "lecturer"
+ },
+ "SRC-ITEMS-INDEX-8": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/08_MODULE 1.1 THE CARDIOVASCULAR SYSTEM/items_index.txt",
+  "sha256": "1be28883cd5b21230d6f47d3e12f3c59c6c1e2fe11de4c9c2e3289e2eb975783",
+  "kind": "txt",
+  "label": "items_index",
+  "units": 15,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-30": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/09_MODULE 1.2 THE RESPIRATORY SYSTEM/LEARNING PAGE RESP 1_ Respiratory tract anatomy/page.txt",
+  "sha256": "69afa4930e958bb4a8021494f838bcd130fa73ff48825c2b9cf8bad44ccb013d",
+  "kind": "txt",
+  "label": "page",
+  "units": 91,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-31": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/09_MODULE 1.2 THE RESPIRATORY SYSTEM/LEARNING PAGE RESP 2_ The physiology of the respiratory tract/page.txt",
+  "sha256": "dcf5cfcf7c2c652ab232bb26c5dcbb067e58224fb8309da840b7ae1c0a9a724f",
+  "kind": "txt",
+  "label": "page",
+  "units": 48,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-32": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/09_MODULE 1.2 THE RESPIRATORY SYSTEM/LEARNING PAGE RESP 3_ Gas exchange and gas transport/page.txt",
+  "sha256": "dc15e69fc79142cad4249ee1c0074ab595f45ff098e04ce3206fae54a426b034",
+  "kind": "txt",
+  "label": "page",
+  "units": 149,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-33": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/09_MODULE 1.2 THE RESPIRATORY SYSTEM/LEARNING PAGE RESP 4_ Regulation of respiratory system/page.txt",
+  "sha256": "184492d02c08310ec253c1db8983e960ca08f3b80c7f64ed578fb54b2442e6e8",
+  "kind": "txt",
+  "label": "page",
+  "units": 164,
+  "authority": "lecturer"
+ },
+ "SRC-FULL-DISCUSSION-4": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/09_MODULE 1.2 THE RESPIRATORY SYSTEM/MODULE 1 EXAM CASE 3_ _ASTHMA_ DISCUSSION/full_discussion.txt",
+  "sha256": "b397f47e8bdfcb900b55f5b8c1e0c8bac4545b49ec4f6317568c308d2c431cc0",
+  "kind": "txt",
+  "label": "full_discussion",
+  "units": 120,
+  "authority": "lecturer"
+ },
+ "SRC-FULL-DISCUSSION-5": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/09_MODULE 1.2 THE RESPIRATORY SYSTEM/MODULE 1 EXAM CASE 4_ _PANIC ATTACK DISCUSSION/full_discussion.txt",
+  "sha256": "fbd7cb9ec41d074e551a354315d7eb4d54f469edf77fd8cc51d74d86eb002d67",
+  "kind": "txt",
+  "label": "full_discussion",
+  "units": 8,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-34": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/09_MODULE 1.2 THE RESPIRATORY SYSTEM/MODULE 1.2_ HOMEOSTASIS/page.txt",
+  "sha256": "37e3844364e1faa92604b237063981a6d7e71a72bb7db240e2c75766b2df1a0d",
+  "kind": "txt",
+  "label": "page",
+  "units": 17,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-35": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/09_MODULE 1.2 THE RESPIRATORY SYSTEM/MODULE 1.2_ Helpful Respiratory Videos/page.txt",
+  "sha256": "2b869fb2426ad75b264a13c5078736934b742e4582e2fe81d57ea54d6357f01d",
+  "kind": "txt",
+  "label": "page",
+  "units": 6,
+  "authority": "lecturer"
+ },
+ "SRC-FULL-DISCUSSION-6": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/09_MODULE 1.2 THE RESPIRATORY SYSTEM/MODULE 1.2_ LUNG TISSUE UNDER THE MICROSCOPE WITH FIND THE ERRORS/full_discussion.txt",
+  "sha256": "b0beae2c357d4b26a0c172549689c812ebd4fe980ff15856b2031875c0255b70",
+  "kind": "txt",
+  "label": "full_discussion",
+  "units": 75,
+  "authority": "lecturer"
+ },
+ "SRC-DESCRIPTION-11": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/09_MODULE 1.2 THE RESPIRATORY SYSTEM/MODULE 1.2_ RESPIRATORY SYSTEM BASIC PHYSIOLOGY (15 marks)/description.txt",
+  "sha256": "6d1330b86f331ec14a239be26c215c38e4ccd75719891b127641a44748f5a5d2",
+  "kind": "txt",
+  "label": "description",
+  "units": 1,
+  "authority": "lecturer"
+ },
+ "SRC-FULL-DISCUSSION-7": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/09_MODULE 1.2 THE RESPIRATORY SYSTEM/MODULE 1.2_ RESPIRATORY SYSTEM DISCUSSION BOARD (RESP LEARNING PAGES 1,2,3 & 4)/full_discussion.txt",
+  "sha256": "92339ae4231ff76bc8414e18f2b90a429e4f7a0dfa7c83a1b241b2ccb1860cf3",
+  "kind": "txt",
+  "label": "full_discussion",
+  "units": 116,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-36": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/09_MODULE 1.2 THE RESPIRATORY SYSTEM/MODULE 1.2_ Respiratory Regulation, Acid_Base Balance and Tutorial/page.txt",
+  "sha256": "29fa33d3809dadc2acbad79a44c47ca3fe1c31e06d5459a799a826515a7f92cf",
+  "kind": "txt",
+  "label": "page",
+  "units": 11,
+  "authority": "lecturer"
+ },
+ "SRC-ITEMS-INDEX-9": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/09_MODULE 1.2 THE RESPIRATORY SYSTEM/items_index.txt",
+  "sha256": "c3744673cfde4f7d467a25a0421c9557553f993830115ccb4d291b50f8620238",
+  "kind": "txt",
+  "label": "items_index",
+  "units": 14,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-37": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/10_MODULE 1.3 LYMPHATIC SYSTEM/LEARNING PAGE_ Lymphatic System/page.txt",
+  "sha256": "0d36717463b8ad99b93649c4e41b98a1fedfda22da5fd2f44c302c3a92c63adb",
+  "kind": "txt",
+  "label": "page",
+  "units": 158,
+  "authority": "lecturer"
+ },
+ "SRC-FULL-DISCUSSION-8": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/10_MODULE 1.3 LYMPHATIC SYSTEM/MODULE 1 EXAM CASE 2_ DISCUSSION_ _LYMPH NODE REMOVAL/full_discussion.txt",
+  "sha256": "539f35b969308b2458fa6614fc908ec2d54e77159b7fd14c2a0834a725f03c61",
+  "kind": "txt",
+  "label": "full_discussion",
+  "units": 59,
+  "authority": "student-peer"
+ },
+ "SRC-FULL-DISCUSSION-9": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/10_MODULE 1.3 LYMPHATIC SYSTEM/MODULE 1 TEST CASE STUDY 5_ DISCUSSION_ VACCINATION AND IMMUNISATION/full_discussion.txt",
+  "sha256": "0fc497fc9631402ef499031d84e1599ec9c4f73e9b79b15301d19379a2f18b57",
+  "kind": "txt",
+  "label": "full_discussion",
+  "units": 76,
+  "authority": "student-peer"
+ },
+ "SRC-PAGE-38": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/10_MODULE 1.3 LYMPHATIC SYSTEM/MODULE 1.3_ HOMEOSTASIS/page.txt",
+  "sha256": "ee868b1c1dd3162a9f504f942c003c1f79b6814a2eaf1737f9518c9428852d1d",
+  "kind": "txt",
+  "label": "page",
+  "units": 24,
+  "authority": "lecturer"
+ },
+ "SRC-ITEMS-INDEX-10": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/10_MODULE 1.3 LYMPHATIC SYSTEM/items_index.txt",
+  "sha256": "7a516cfd7d005b9eca0a95b7ee80a3c138d1fdd1780898dc7bd691aa385093f0",
+  "kind": "txt",
+  "label": "items_index",
+  "units": 7,
+  "authority": "lecturer"
+ },
+ "SRC-FULL-DISCUSSION-10": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/11_Module 1 Revision Materials/MARKED ANSWERS_ MOD 1 TEST CASE STUDIES 1 (BLOOD PRESSURE) & 5 (VACCINATION). BY PREVIOUS SEMESTER'S STUDENTS/full_discussion.txt",
+  "sha256": "d896ee5965045beb7a70b181087f8793a3e0aa16b0f95f87709450b5cb54c48e",
+  "kind": "txt",
+  "label": "full_discussion",
+  "units": 221,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-39": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/11_Module 1 Revision Materials/MODULE 1 KAHOOTS (3 OF THEM)/page.txt",
+  "sha256": "b4049e27bc6ba290856cf75f3c95fdbaaff1686563ad31ce6f480857ce74ee5f",
+  "kind": "txt",
+  "label": "page",
+  "units": 201,
+  "authority": "lecturer"
+ },
+ "SRC-DESCRIPTION-12": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/11_Module 1 Revision Materials/MODULE 1 _ Formative Test/description.txt",
+  "sha256": "fc3746082a22317a4c131a3ab09d40f806d4ec1c6e4460b3fb1350942d836681",
+  "kind": "txt",
+  "label": "description",
+  "units": 3,
+  "authority": "lecturer"
+ },
+ "SRC-FULL-DISCUSSION-11": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/11_Module 1 Revision Materials/Module 1 Completion/full_discussion.txt",
+  "sha256": "6034056acb2ef425c8176b0d14fa559c62c2f3036d32ad90631ebcaa65db3982",
+  "kind": "txt",
+  "label": "full_discussion",
+  "units": 15,
+  "authority": "lecturer"
+ },
+ "SRC-ITEMS-INDEX-11": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/11_Module 1 Revision Materials/items_index.txt",
+  "sha256": "4f8c891932dfefed3739e1533fd0a73a7de1669af3b36a135e835a0347f59282",
+  "kind": "txt",
+  "label": "items_index",
+  "units": 7,
+  "authority": "lecturer"
+ },
+ "SRC-ITEMS-INDEX-12": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/23_LABORATORIES/items_index.txt",
+  "sha256": "956202d40a282b7808b5c4c6e547f4bb8876f3c4ffbfdc6dde613b5b8a5a79e1",
+  "kind": "txt",
+  "label": "items_index",
+  "units": 3,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-40": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/24_Lab 1 prep - Cardiovascular System/IMAGES FROM LAB 1 CVS a/page.txt",
+  "sha256": "38195052d006b153fd566356dc9e623d94e853523bf7eee2da48ba11fb8f2e9b",
+  "kind": "txt",
+  "label": "page",
+  "units": 89,
+  "authority": "lecturer"
+ },
+ "SRC-DESCRIPTION-13": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/24_Lab 1 prep - Cardiovascular System/Lab 1_ Online lab participation (50% achievement may serve as evidence of participation))/description.txt",
+  "sha256": "078f843c65d12b965116ef1ec1a38c199fb41bf31d11846d7fadfc844d9a468b",
+  "kind": "txt",
+  "label": "description",
+  "units": 20,
+  "authority": "lecturer"
+ },
+ "SRC-DESCRIPTION-14": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/24_Lab 1 prep - Cardiovascular System/Practice Lab 1_ SAQ & MC Quiz (20 marks)/description.txt",
+  "sha256": "b443d4c6787ecf492abd65f6fc7bb81bbad8f7c8519ef69ef115d0ff006edc90",
+  "kind": "txt",
+  "label": "description",
+  "units": 12,
+  "authority": "lecturer"
+ },
+ "SRC-DESCRIPTION-15": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/24_Lab 1 prep - Cardiovascular System/Pre-Lab_ Getting you prepared for CVS Lab/description.txt",
+  "sha256": "d36750d1cfffc90266efc2bf0bf925ba6d19297f25e2edc30092661b62a65646",
+  "kind": "txt",
+  "label": "description",
+  "units": 1,
+  "authority": "lecturer"
+ },
+ "SRC-ITEMS-INDEX-13": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/24_Lab 1 prep - Cardiovascular System/items_index.txt",
+  "sha256": "e6293ea4bce6c309f994136148f5d16543a7ce1fb4e2ae80900aa3ba10d4348e",
+  "kind": "txt",
+  "label": "items_index",
+  "units": 5,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-41": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/25_Lab 2 - Respiratory System/IMAGES FROM LAB 2/page.txt",
+  "sha256": "8b126ed804a620c6b6e74dbb24ee52e50e938f1bf86768ce4e26f68baeaf72fd",
+  "kind": "txt",
+  "label": "page",
+  "units": 141,
+  "authority": "lecturer"
+ },
+ "SRC-DESCRIPTION-16": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/25_Lab 2 - Respiratory System/Lab 2_ Online lab participation (50% achievement may serve as evidence of participation)/description.txt",
+  "sha256": "1fb6eff35eabe9d4b6b351997c140863bc19a95be0f70fa637a3e81463ed1a9a",
+  "kind": "txt",
+  "label": "description",
+  "units": 5,
+  "authority": "lecturer"
+ },
+ "SRC-DESCRIPTION-17": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/25_Lab 2 - Respiratory System/Practice Lab 2_ SAQ & MC Quiz (10 marks)/description.txt",
+  "sha256": "57c8011348585bb9969713b40a6c9c4a6b79d2d1f828da4e17c71a9bfae05dc4",
+  "kind": "txt",
+  "label": "description",
+  "units": 12,
+  "authority": "lecturer"
+ },
+ "SRC-DESCRIPTION-18": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/25_Lab 2 - Respiratory System/Respiratory (SAQ & MC) Pre-Lab Quiz/description.txt",
+  "sha256": "7f51183eb403a909813c1f3c95c89066964fe59b5713153ff7ae396e18508483",
+  "kind": "txt",
+  "label": "description",
+  "units": 1,
+  "authority": "lecturer"
+ },
+ "SRC-ITEMS-INDEX-14": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/25_Lab 2 - Respiratory System/items_index.txt",
+  "sha256": "1c03d1b02a94ed1ec773d3c29ff9f26b4e35a3a42f97aba720f251c7e0533453",
+  "kind": "txt",
+  "label": "items_index",
+  "units": 4,
+  "authority": "lecturer"
+ },
+ "SRC-FULL-DISCUSSION-12": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/30_ANATOMY MONDAYS_ Anatomy and Terminology lecturer-directed content/Anatomy 2 Discussion Board_ Learning together by sharing answers/full_discussion.txt",
+  "sha256": "ee18b5bb4d36f898dfba4130ddf5980759cc9a8e4a080ed86c398490079a470e",
+  "kind": "txt",
+  "label": "full_discussion",
+  "units": 28,
+  "authority": "lecturer"
+ },
+ "SRC-FULL-DISCUSSION-13": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/30_ANATOMY MONDAYS_ Anatomy and Terminology lecturer-directed content/Anatomy 3_ Discussion Board_ Learning together about the Respiratory system/full_discussion.txt",
+  "sha256": "569bb24e6f06ad58ce652f92e8a0ad0dd1d4308a2b2745b98d7366fd9f5863e6",
+  "kind": "txt",
+  "label": "full_discussion",
+  "units": 12,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-42": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/30_ANATOMY MONDAYS_ Anatomy and Terminology lecturer-directed content/Anatomy Mondays 10_ Spinal cord, Spinal nerves and Reflexes/page.txt",
+  "sha256": "7dd1511d549df2c91eb0dde952f672ee817a3987f35b6ccf1756c2cd2001e2cf",
+  "kind": "txt",
+  "label": "page",
+  "units": 68,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-43": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/30_ANATOMY MONDAYS_ Anatomy and Terminology lecturer-directed content/Anatomy Mondays 11_ Cranial nerves, Nerve plexuses, Olfaction, Taste and Endocrine Disorders/page.txt",
+  "sha256": "4b4a58e6a46d4108941d5c9792b20da9a932793a4fcfd96e82a2c5934a1da0dc",
+  "kind": "txt",
+  "label": "page",
+  "units": 116,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-44": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/30_ANATOMY MONDAYS_ Anatomy and Terminology lecturer-directed content/Anatomy Mondays 12_ Ear, Eye, Nose, Lactation & Sperm morphology/page.txt",
+  "sha256": "506291a667e90251285c46b5bc841b7508d9b6ba070eabb911d8e61a686c17fc",
+  "kind": "txt",
+  "label": "page",
+  "units": 65,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-45": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/30_ANATOMY MONDAYS_ Anatomy and Terminology lecturer-directed content/Anatomy Mondays 12_ Reproductive systems, Eye, Ear & Intro to Genetics terminology/page.txt",
+  "sha256": "d32b187ba2ddd45133e63453de407a2e481461744705412ce9861e675ed7724a",
+  "kind": "txt",
+  "label": "page",
+  "units": 59,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-46": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/30_ANATOMY MONDAYS_ Anatomy and Terminology lecturer-directed content/Anatomy Mondays 13_ Light, Sound, waves and Special senses/page.txt",
+  "sha256": "f462f334b5960bffb9c997cf18a280b09930d084c0cd3aefb7142601d9f8eaa2",
+  "kind": "txt",
+  "label": "page",
+  "units": 24,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-47": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/30_ANATOMY MONDAYS_ Anatomy and Terminology lecturer-directed content/Anatomy Mondays 14 Case Study Booklet and Vision/page.txt",
+  "sha256": "2496c3281303294be2633ca1f563fd1358e2c72d98b14611723a7dae488de0d0",
+  "kind": "txt",
+  "label": "page",
+  "units": 5,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-48": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/30_ANATOMY MONDAYS_ Anatomy and Terminology lecturer-directed content/Anatomy Mondays 15 Exam Prep/page.txt",
+  "sha256": "18a495a60eaa713ac2568c16ebf96a9e9f7e967d694d75b8084279495856469e",
+  "kind": "txt",
+  "label": "page",
+  "units": 53,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-49": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/30_ANATOMY MONDAYS_ Anatomy and Terminology lecturer-directed content/Anatomy Mondays 1_ Blood vessels and Heart structure/page.txt",
+  "sha256": "64cbd32921009a62489fd28d9e7420ad0fa90ff16fd79f37d8a5a5102f3faece",
+  "kind": "txt",
+  "label": "page",
+  "units": 39,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-50": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/30_ANATOMY MONDAYS_ Anatomy and Terminology lecturer-directed content/Anatomy Mondays 2_ Heart Physiology & Lymphatics/page.txt",
+  "sha256": "fc372c02a480a476c2d0196a06e4eb02524272e202dc8126c5743e0d801b7400",
+  "kind": "txt",
+  "label": "page",
+  "units": 35,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-51": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/30_ANATOMY MONDAYS_ Anatomy and Terminology lecturer-directed content/Anatomy Mondays 3 Electrical conduction in heart and Respiratory Intro/page.txt",
+  "sha256": "610846a84adf4637e9205f5a8c78832d48656e77be50d7f9e11e2230202fc79e",
+  "kind": "txt",
+  "label": "page",
+  "units": 20,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-52": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/30_ANATOMY MONDAYS_ Anatomy and Terminology lecturer-directed content/Anatomy Mondays 4_ Gas Transport and Exchange & Test Preparation/page.txt",
+  "sha256": "f885ed0e59b647cabe91f792cf61de6dcc3e0856df564e1c610181cfa85c4336",
+  "kind": "txt",
+  "label": "page",
+  "units": 51,
+  "authority": "lecturer"
+ },
+ "SRC-FULL-DISCUSSION-14": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/30_ANATOMY MONDAYS_ Anatomy and Terminology lecturer-directed content/Anatomy Mondays 5-9_ Ask your lecturer questions here!/full_discussion.txt",
+  "sha256": "8c0d53d6044190e92452a3495417fbc28273c3176706d01edc7674af19f5eb3b",
+  "kind": "txt",
+  "label": "full_discussion",
+  "units": 8,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-53": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/30_ANATOMY MONDAYS_ Anatomy and Terminology lecturer-directed content/Anatomy Mondays 5_ Skeleton and Muscles/page.txt",
+  "sha256": "f629bc55e0460da65b37701f14a4b61357199245e24a555b67afc1800515c6e4",
+  "kind": "txt",
+  "label": "page",
+  "units": 73,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-54": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/30_ANATOMY MONDAYS_ Anatomy and Terminology lecturer-directed content/Anatomy Mondays 6_ Muscles and Intro to Nervous system/page.txt",
+  "sha256": "bb211302d1e090a2bda77c5fbbb5cc7db9f350e881cd12cb77bcdc75948beb61",
+  "kind": "txt",
+  "label": "page",
+  "units": 56,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-55": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/30_ANATOMY MONDAYS_ Anatomy and Terminology lecturer-directed content/Anatomy Mondays 7_ Test Review_ Muscle actions, Movements and Lever systems/page.txt",
+  "sha256": "2db0285ef725919f355fa0558185431ea5fd93d2b18796039845ba7d5bdb423f",
+  "kind": "txt",
+  "label": "page",
+  "units": 43,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-56": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/30_ANATOMY MONDAYS_ Anatomy and Terminology lecturer-directed content/Anatomy Mondays 8_ The Brain and Endocrine glands/page.txt",
+  "sha256": "8fea1ec17d286568f2545c238b86c4bc1942cbbdbc988322e5d9e644508a2364",
+  "kind": "txt",
+  "label": "page",
+  "units": 47,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-57": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/30_ANATOMY MONDAYS_ Anatomy and Terminology lecturer-directed content/Anatomy Mondays 9_ Brain parts and their functions, Blood sugar regulation and Stress/page.txt",
+  "sha256": "be545acaccb1b9c27b424d97d9b304cba04de28ea1f43c57144f948aa28c3565",
+  "kind": "txt",
+  "label": "page",
+  "units": 52,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-58": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/30_ANATOMY MONDAYS_ Anatomy and Terminology lecturer-directed content/Answers for 10_ Spinal cord, Spinal nerves and Reflexes/page.txt",
+  "sha256": "f015e55cb3ae9c38562bf5fa571fe032fb0c4a3dc3d304710743a2efa2fcc03b",
+  "kind": "txt",
+  "label": "page",
+  "units": 42,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-59": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/30_ANATOMY MONDAYS_ Anatomy and Terminology lecturer-directed content/Answers for 12_ Ear, Eye, Nose, Lactation & Sperm morphology/page.txt",
+  "sha256": "8d4cf2f40b48794488ff3b030bc465790c10da0e6f151fc7a36bd0a0018c8b6b",
+  "kind": "txt",
+  "label": "page",
+  "units": 79,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-60": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/30_ANATOMY MONDAYS_ Anatomy and Terminology lecturer-directed content/Answers for 7_ Muscle actions, Movements and Lever systems/page.txt",
+  "sha256": "4af66fcba22fd7c46a190c1071ba648ce2c9fb9d2ebcf27f12774814d722bffc",
+  "kind": "txt",
+  "label": "page",
+  "units": 38,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-61": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/30_ANATOMY MONDAYS_ Anatomy and Terminology lecturer-directed content/Answers for 8_ The Brain and Endocrine glands/page.txt",
+  "sha256": "4e9706e7752f208bb956f81057c25f5649048360ac73905dbac21ea3b5a3fff9",
+  "kind": "txt",
+  "label": "page",
+  "units": 47,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-62": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/30_ANATOMY MONDAYS_ Anatomy and Terminology lecturer-directed content/Answers for 9_ Brain parts and their functions, Blood sugar regulation and Stress/page.txt",
+  "sha256": "f784c06fc8d6bc760c08c19f040ca23d276b8d546c8ecb984b9f9bd8d8a0ca5a",
+  "kind": "txt",
+  "label": "page",
+  "units": 61,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-63": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/30_ANATOMY MONDAYS_ Anatomy and Terminology lecturer-directed content/Answers for AM 11_ Cranial nerves, Nerve plexuses, Olfaction, Taste and Endocrine Disorders/page.txt",
+  "sha256": "5568929c14e6aaa66638d3dc1ff4e56ecb2e2dd151f2ec59fad86ae8d6d6356f",
+  "kind": "txt",
+  "label": "page",
+  "units": 79,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-64": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/30_ANATOMY MONDAYS_ Anatomy and Terminology lecturer-directed content/Answers for AM 12_ Reproductive systems, Eye, Ear and Genetics Terminology/page.txt",
+  "sha256": "04189bf9899e7bdc54da9dc7f007123d99ca283423dd4371a218a2c20b2532f1",
+  "kind": "txt",
+  "label": "page",
+  "units": 62,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-65": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/30_ANATOMY MONDAYS_ Anatomy and Terminology lecturer-directed content/Answers for AM 13_ Light, Sound, waves and Special senses/page.txt",
+  "sha256": "482737b87b1fba47a6f57111eb259b6f89998e97d1ca4a2e95f4605e959008ea",
+  "kind": "txt",
+  "label": "page",
+  "units": 27,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-66": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/30_ANATOMY MONDAYS_ Anatomy and Terminology lecturer-directed content/Answers for AM 1_ Blood vessels and Heart structure/page.txt",
+  "sha256": "680ed2e45cc11b8e181996c2a82c130fa0930e82b4066fda3c4b911302b7d10e",
+  "kind": "txt",
+  "label": "page",
+  "units": 33,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-67": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/30_ANATOMY MONDAYS_ Anatomy and Terminology lecturer-directed content/Answers for AM 2/page.txt",
+  "sha256": "88e7537eba1c307fa16c8ec5a840aaea3fcc0cce2dafb56378ccdc59f78906a1",
+  "kind": "txt",
+  "label": "page",
+  "units": 26,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-68": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/30_ANATOMY MONDAYS_ Anatomy and Terminology lecturer-directed content/Answers for AM 5_ Skeleton and Muscles/page.txt",
+  "sha256": "8271f274005924400c936a0a3d97adf8b36714d2d4c4cdc2d6e686ea6970ec9f",
+  "kind": "txt",
+  "label": "page",
+  "units": 37,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-69": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/30_ANATOMY MONDAYS_ Anatomy and Terminology lecturer-directed content/Answers for AM 6_ Muscles and Intro to Nervous system/page.txt",
+  "sha256": "22bfc7f34649bbfd4c78a8b0334c0f2cfaa442f5dafa4aed718d678d451c7056",
+  "kind": "txt",
+  "label": "page",
+  "units": 57,
+  "authority": "lecturer"
+ },
+ "SRC-FULL-DISCUSSION-15": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/30_ANATOMY MONDAYS_ Anatomy and Terminology lecturer-directed content/MODULE 1.1_ BLOOD VESSELS AS AN IMPORTANT PART OF YOUR TRAINING/full_discussion.txt",
+  "sha256": "f6b44808a903085a294fe22006db6d4d4485e3bc04422dddf0a1d1756e502d11",
+  "kind": "txt",
+  "label": "full_discussion",
+  "units": 263,
+  "authority": "lecturer"
+ },
+ "SRC-EXTERNAL-URL": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/30_ANATOMY MONDAYS_ Anatomy and Terminology lecturer-directed content/Prefixes and Suffixes 1/external_url.txt",
+  "sha256": "984e5d40aa8d983b6fdd6902e5a1162d1808a5e1492f1a56690292437da237fb",
+  "kind": "txt",
+  "label": "external_url",
+  "units": 3,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-70": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/30_ANATOMY MONDAYS_ Anatomy and Terminology lecturer-directed content/What are Anatomy Mondays_/page.txt",
+  "sha256": "226b72e4e48d97defc4ebe4fb6f83bf28c48f1aa20fe2d0da0ffb6af3253a4ba",
+  "kind": "txt",
+  "label": "page",
+  "units": 35,
+  "authority": "lecturer"
+ },
+ "SRC-ITEMS-INDEX-15": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/30_ANATOMY MONDAYS_ Anatomy and Terminology lecturer-directed content/items_index.txt",
+  "sha256": "86540ec70367f6e64a19fbd8b50c2315df681cac337e76b2fb3ca5953aef0a3f",
+  "kind": "txt",
+  "label": "items_index",
+  "units": 36,
+  "authority": "lecturer"
+ },
+ "SRC-ITEMS-INDEX-16": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/31_SAQ QUIZZES (STUDENT MARKED) (_ESSENTIAL)/items_index.txt",
+  "sha256": "0f8478d15225d95b4177b51d23f108cf8fbddec7c8ef936beb9affc50cf85e5d",
+  "kind": "txt",
+  "label": "items_index",
+  "units": 7,
+  "authority": "lecturer"
+ },
+ "SRC-FULL-DISCUSSION-16": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/32_SAQ PRACTICE DISCUSSIONS PEER MARKED/MODULE 1.1_ CVS DISCUSSION BOARD (SCENARIO LINKED)/full_discussion.txt",
+  "sha256": "b2f1489c1a24bb2fdf413cc6ccc0306d18c2d187031339ee5a7b987f3212b5f0",
+  "kind": "txt",
+  "label": "full_discussion",
+  "units": 118,
+  "authority": "student-peer"
+ },
+ "SRC-FULL-DISCUSSION-17": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/32_SAQ PRACTICE DISCUSSIONS PEER MARKED/MODULE 1.1_ HEART COVERINGS & STRUCTURES IN THE RIGHT & LEFT HALVES OF THE HEART/full_discussion.txt",
+  "sha256": "9c01bca7b8d814eaf6e7775b45ad17b729f56a3fed743d8dcb900e2f56c3039c",
+  "kind": "txt",
+  "label": "full_discussion",
+  "units": 86,
+  "authority": "student-peer"
+ },
+ "SRC-FULL-DISCUSSION-18": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/32_SAQ PRACTICE DISCUSSIONS PEER MARKED/MODULE 1.2_ RESPIRATORY_ DISCUSSION_ (SCENARIO LINKED)/full_discussion.txt",
+  "sha256": "54533753d07fde781ae476c29b63ce07a484e7bc5ec97e6f3e42ebcad054ce57",
+  "kind": "txt",
+  "label": "full_discussion",
+  "units": 118,
+  "authority": "student-peer"
+ },
+ "SRC-FULL-DISCUSSION-19": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/32_SAQ PRACTICE DISCUSSIONS PEER MARKED/MODULE 1.2_ USEFUL VIDEOS EXPLAINING THE RESPIRATORY SYSTEM/full_discussion.txt",
+  "sha256": "88c92ae4aad4e88dbcb59d182dc0a72d10f82cbeec41634d652837192796f2bb",
+  "kind": "txt",
+  "label": "full_discussion",
+  "units": 60,
+  "authority": "student-peer"
+ },
+ "SRC-FULL-DISCUSSION-20": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/32_SAQ PRACTICE DISCUSSIONS PEER MARKED/MODULE 1.3_ LYMPHATIC SYSTEM_ DISCUSSION_ (SCENARIO LINKED)/full_discussion.txt",
+  "sha256": "570670947b4f4d0f60977bad55b424a2d732bee9a6ebb285c1109c89e3c21136",
+  "kind": "txt",
+  "label": "full_discussion",
+  "units": 75,
+  "authority": "student-peer"
+ },
+ "SRC-FULL-DISCUSSION-21": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/32_SAQ PRACTICE DISCUSSIONS PEER MARKED/MODULE 1_ ANSWERS_ DISCUSSION BOARD LYMPHATIC SYSTEM, CARDIOVASCULAR SYSTEM & RESPIRATORY SYSTEM_ LEARNING TOG/full_discussion.txt",
+  "sha256": "67ae2044e19beebd97a49a7cbff2b72a86f82cce47d63669cc07cc35d61ddd5e",
+  "kind": "txt",
+  "label": "full_discussion",
+  "units": 8,
+  "authority": "student-peer"
+ },
+ "SRC-FULL-DISCUSSION-22": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/32_SAQ PRACTICE DISCUSSIONS PEER MARKED/MODULE 1_ DISCUSSION BOARD LYMPHATIC SYSTEM, CARDIOVASCULAR SYSTEM & RESPIRATORY SYSTEM_ LEARNING TOGETHER/full_discussion.txt",
+  "sha256": "e09d8e0f5b34b809c33978fe729fb44100a66318b83f1f0096a9761668728dda",
+  "kind": "txt",
+  "label": "full_discussion",
+  "units": 148,
+  "authority": "student-peer"
+ },
+ "SRC-ITEMS-INDEX-17": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/32_SAQ PRACTICE DISCUSSIONS PEER MARKED/items_index.txt",
+  "sha256": "535f22390709df38be0c43d37a7cfc723ed26860c117b3a08264c3850e3114dc",
+  "kind": "txt",
+  "label": "items_index",
+  "units": 11,
+  "authority": "student-peer"
+ },
+ "SRC-PAGE-71": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/33_PROFESSIONALISM IN NURSING/Academic Integrity & Plagiarism/page.txt",
+  "sha256": "01d0b1d8afde41027ba007b274ee76a9e094e1e4f51a432a148915dc4e13c683",
+  "kind": "txt",
+  "label": "page",
+  "units": 17,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-72": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/33_PROFESSIONALISM IN NURSING/Being Professional Online/page.txt",
+  "sha256": "a37842eeed79bca51f682b7d5d7c52976f828350689dc9e99df7c7fbf0e5c0c8",
+  "kind": "txt",
+  "label": "page",
+  "units": 16,
+  "authority": "lecturer"
+ },
+ "SRC-FULL-DISCUSSION-23": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/33_PROFESSIONALISM IN NURSING/Code of Conduct FAQs/full_discussion.txt",
+  "sha256": "8cc0b85be297611b5cb5edc7bf5b5f74ad4458493c05000036e8ff8ca6ef65cb",
+  "kind": "txt",
+  "label": "full_discussion",
+  "units": 14,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-73": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/33_PROFESSIONALISM IN NURSING/Code of Conduct Introduction/page.txt",
+  "sha256": "98aa3188f00894957f932e8360322f890ceb5349305f5b3427cda6fd84eb0279",
+  "kind": "txt",
+  "label": "page",
+  "units": 25,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-74": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/33_PROFESSIONALISM IN NURSING/Concerns and Appeals/page.txt",
+  "sha256": "c5455c31b521715c72edc9bde3c507082eb12a8dfdee0f17f3bbdac6c3d8ea03",
+  "kind": "txt",
+  "label": "page",
+  "units": 29,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-75": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/33_PROFESSIONALISM IN NURSING/Key Regulations/page.txt",
+  "sha256": "f2ed6485502c6695c9823240008de766081671549a446c9e8235186fb151de0c",
+  "kind": "txt",
+  "label": "page",
+  "units": 17,
+  "authority": "lecturer"
+ },
+ "SRC-DESCRIPTION-19": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/33_PROFESSIONALISM IN NURSING/Knowledge Check Quiz/description.txt",
+  "sha256": "e6b70ee5f7d75701f9c808376237c943a09674c2ba908bc0ab78ab8b3295bdd7",
+  "kind": "txt",
+  "label": "description",
+  "units": 5,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-76": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/33_PROFESSIONALISM IN NURSING/MIT Nursing Student - That's you/page.txt",
+  "sha256": "3690dab871ca151f9b7d04802fdd4063a20a9090730b41c8ef28b0f9f1a711dc",
+  "kind": "txt",
+  "label": "page",
+  "units": 19,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-77": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/33_PROFESSIONALISM IN NURSING/Misconduct - Clinical Placement/page.txt",
+  "sha256": "d7921a79fc31e95158d7677d1e0d989c6df4ad858e443eaf475af684de71b289",
+  "kind": "txt",
+  "label": "page",
+  "units": 18,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-78": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/33_PROFESSIONALISM IN NURSING/Misconduct - Online Exams/page.txt",
+  "sha256": "f09e9385533398e5232f54ce63daa3abf6a286865583b34694e4cb3a9f4e82cd",
+  "kind": "txt",
+  "label": "page",
+  "units": 18,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-79": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/33_PROFESSIONALISM IN NURSING/Misconduct/page.txt",
+  "sha256": "b2abce04a9a7636a9e73a74f12880bd5b4604a184c127eedaa326afb55bb959c",
+  "kind": "txt",
+  "label": "page",
+  "units": 29,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-80": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/33_PROFESSIONALISM IN NURSING/Online Networks and Misconduct/page.txt",
+  "sha256": "a12e639c0018952dde94cdaa43f7464f9e334f691c1f5d782209b038bff7a85e",
+  "kind": "txt",
+  "label": "page",
+  "units": 21,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-81": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/33_PROFESSIONALISM IN NURSING/Student Regulations/page.txt",
+  "sha256": "af3532fb17777da3c24d15664568071a999fe61b1978de6dd0f4f1e5b3a37450",
+  "kind": "txt",
+  "label": "page",
+  "units": 30,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-82": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/33_PROFESSIONALISM IN NURSING/Summary/page.txt",
+  "sha256": "9eff23d3c7da45c308d341a8c35be60e2ba5433c2dfc6623ea327f77497d17a9",
+  "kind": "txt",
+  "label": "page",
+  "units": 14,
+  "authority": "lecturer"
+ },
+ "SRC-FULL-DISCUSSION-24": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/33_PROFESSIONALISM IN NURSING/Valuation Alignment/full_discussion.txt",
+  "sha256": "624052ceb49dc5f816eb0c05f929e48ed12a2e8deac11715ea478c24d99d4064",
+  "kind": "txt",
+  "label": "full_discussion",
+  "units": 16,
+  "authority": "lecturer"
+ },
+ "SRC-FULL-DISCUSSION-25": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/33_PROFESSIONALISM IN NURSING/What are your Values_/full_discussion.txt",
+  "sha256": "cb6c7c05481c234e48642077005146705a1156ad7f206cb4fe10037c6dbb3c6c",
+  "kind": "txt",
+  "label": "full_discussion",
+  "units": 15,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-83": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/33_PROFESSIONALISM IN NURSING/What you need to know for Assessments/page.txt",
+  "sha256": "79c142bab30aa65c44345dd795c07344f8d30f2afd6bd54e081140c278146418",
+  "kind": "txt",
+  "label": "page",
+  "units": 32,
+  "authority": "lecturer"
+ },
+ "SRC-PAGE-84": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/33_PROFESSIONALISM IN NURSING/Where to begin/page.txt",
+  "sha256": "3d58d2ee09443a257a1573d51fef1b849696abce4f0bbb731068ffe8eb234c9c",
+  "kind": "txt",
+  "label": "page",
+  "units": 13,
+  "authority": "lecturer"
+ },
+ "SRC-ITEMS-INDEX-18": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/02_modules/33_PROFESSIONALISM IN NURSING/items_index.txt",
+  "sha256": "276db0fc3eeb4c85878bac0a20fdf62c5a29b24028fdf6f7366028404175b53a",
+  "kind": "txt",
+  "label": "items_index",
+  "units": 18,
+  "authority": "lecturer"
+ },
+ "SRC-FULL-DISCUSSION-26": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/06_discussions/Anatomy 11_ Smell, Taste and COVID19/full_discussion.txt",
+  "sha256": "972fe909e7cd1474cde43ea12fe25ab644c94ef2e334c4e220f22f3b10db61e4",
+  "kind": "txt",
+  "label": "full_discussion",
+  "units": 7,
+  "authority": "lecturer"
+ },
+ "SRC-FULL-DISCUSSION-27": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/06_discussions/DIAGRAMS & PROCESSES IN TEST 2/full_discussion.txt",
+  "sha256": "72c51fde97e0390175e6444a90295fd47f31a8f738fb1d8b3fad9f17fd4e1155",
+  "kind": "txt",
+  "label": "full_discussion",
+  "units": 112,
+  "authority": "lecturer"
+ },
+ "SRC-FULL-DISCUSSION-28": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/06_discussions/Do you have a question_/full_discussion.txt",
+  "sha256": "eb7332b62d4dfbe26f020b701f1ab04265bde34ec436dd1d90465471a6492cbc",
+  "kind": "txt",
+  "label": "full_discussion",
+  "units": 18,
+  "authority": "lecturer"
+ },
+ "SRC-FULL-DISCUSSION-29": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/06_discussions/HELP WITH MODULE 3 TOPICS/full_discussion.txt",
+  "sha256": "ac025147c0bb2c073e7e669011b3e875acd19b9b162d0492a95760006c3eb092",
+  "kind": "txt",
+  "label": "full_discussion",
+  "units": 21,
+  "authority": "lecturer"
+ },
+ "SRC-FULL-DISCUSSION-30": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/06_discussions/MODULE 1.2_ DISCUSSION BOARD Respiratory System 1 Online Learning/full_discussion.txt",
+  "sha256": "a70e6a1db5fb8962f155884e8148bab8759377d60ce50ee5a8fa300cc4732dcd",
+  "kind": "txt",
+  "label": "full_discussion",
+  "units": 62,
+  "authority": "lecturer"
+ },
+ "SRC-FULL-DISCUSSION-31": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/06_discussions/Musculoskeletal System Online Learning Module Answers/full_discussion.txt",
+  "sha256": "7c4c7fa555f653c4282493898f15b3549f66047ed86c698c3af223868f2201da",
+  "kind": "txt",
+  "label": "full_discussion",
+  "units": 149,
+  "authority": "lecturer"
+ },
+ "SRC-FULL-DISCUSSION-32": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/06_discussions/Musculoskeletal System Online Learning Module/full_discussion.txt",
+  "sha256": "746dbe2d8fb2906860ebdc874884bc5d66e35346b04317fc2c8eec5e1e7b4e73",
+  "kind": "txt",
+  "label": "full_discussion",
+  "units": 184,
+  "authority": "lecturer"
+ },
+ "SRC-29-07-PROGRAMME": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/07_announcements/29_07 PROGRAMME.txt",
+  "sha256": "837c3ec670913d43af3ed91846161d494cc3c40fd8c2aafd5d44286168dc32b0",
+  "kind": "txt",
+  "label": "29_07 PROGRAMME",
+  "units": 16,
+  "authority": "lecturer"
+ },
+ "SRC-3-HEART-CHAMBERS-IT-IS-POSSIBLE": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/07_announcements/3 HEART CHAMBERS_ IT IS POSSIBLE!.txt",
+  "sha256": "7dd660672a596b94ad51d7c46ea8c0807d58df99dd4088239b6b32eef6a5ab0e",
+  "kind": "txt",
+  "label": "3 HEART CHAMBERS_ IT IS POSSIBLE!",
+  "units": 6,
+  "authority": "lecturer"
+ },
+ "SRC-3-HEART-CHAMBERS-IT-IS-POSSIBLE-WITH-REPLIES": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/07_announcements/3 HEART CHAMBERS_ IT IS POSSIBLE!_with_replies.txt",
+  "sha256": "26cd9c9eed941b0ca3bdb688cfadc353e0228c3162889c3353e984e71eb5920d",
+  "kind": "txt",
+  "label": "3 HEART CHAMBERS_ IT IS POSSIBLE!_with_replies",
+  "units": 14,
+  "authority": "lecturer"
+ },
+ "SRC-AI-STILL-HAS-A-LOT-TO-LEARN": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/07_announcements/AI STILL HAS A LOT TO LEARN.txt",
+  "sha256": "9cc67f67acb8c304c09d263747aa09773411364c95dffcb84ce9ac878bd2bf31",
+  "kind": "txt",
+  "label": "AI STILL HAS A LOT TO LEARN",
+  "units": 12,
+  "authority": "lecturer"
+ },
+ "SRC-ALTERNATIVE-COMMUNICATION-CHANNEL": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/07_announcements/ALTERNATIVE COMMUNICATION CHANNEL.txt",
+  "sha256": "97fb503182ef7986eac26590a62fc65b8cc71e11aea7b80c57763e3193bdb133",
+  "kind": "txt",
+  "label": "ALTERNATIVE COMMUNICATION CHANNEL",
+  "units": 16,
+  "authority": "lecturer"
+ },
+ "SRC-BOOKING-FOR-TEST-1": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/07_announcements/BOOKING FOR TEST 1.txt",
+  "sha256": "831e5a081c1b510234e53c7a4b11c836e4bda47fd78a6e1081d0318b04dcf961",
+  "kind": "txt",
+  "label": "BOOKING FOR TEST 1",
+  "units": 17,
+  "authority": "lecturer"
+ },
+ "SRC-CHECK-YOUR-GRADES-FOR-BN1-COURSES": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/07_announcements/Check your grades for bn1 courses.txt",
+  "sha256": "8871a3fccd9cf22ef298255e4124270b7a68245ca98175aab98b8a56da169ede",
+  "kind": "txt",
+  "label": "Check your grades for bn1 courses",
+  "units": 23,
+  "authority": "lecturer"
+ },
+ "SRC-FACTORS-AFFECTING-VENTILATION": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/07_announcements/FACTORS AFFECTING VENTILATION.txt",
+  "sha256": "8d494bbb5d93b5425b1761d4f35d13567de58f5b12d1796240f538a4e49a8448",
+  "kind": "txt",
+  "label": "FACTORS AFFECTING VENTILATION",
+  "units": 6,
+  "authority": "lecturer"
+ },
+ "SRC-HELP-AVAILABLE-PASS-SESSIONS": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/07_announcements/HELP AVAILABLE_ PASS SESSIONS.txt",
+  "sha256": "68349ac1d3dfd38a3835e77ade8a1e5f7b49788e21ced1fa4936673a9ee614ca",
+  "kind": "txt",
+  "label": "HELP AVAILABLE_ PASS SESSIONS",
+  "units": 6,
+  "authority": "lecturer"
+ },
+ "SRC-HOMEOSTASIS": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/07_announcements/HOMEOSTASIS.txt",
+  "sha256": "ba376f2db81ced45be8f1a40fc45833bfdab6e99576bf87618479dae567b2493",
+  "kind": "txt",
+  "label": "HOMEOSTASIS",
+  "units": 11,
+  "authority": "lecturer"
+ },
+ "SRC-HS2-DAY-1": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/07_announcements/HS2 DAY 1.txt",
+  "sha256": "7787f462033cd766977bb8765b701f164dc4c50e6de7da4d3f73c3aee4588f1e",
+  "kind": "txt",
+  "label": "HS2 DAY 1",
+  "units": 62,
+  "authority": "lecturer"
+ },
+ "SRC-HS2-DAY-2": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/07_announcements/HS2 DAY 2.txt",
+  "sha256": "0e8f03cb4b6b77dc4f88daa7033647e420c5e889eeb6a9ec6667286bdd7e7f88",
+  "kind": "txt",
+  "label": "HS2 DAY 2",
+  "units": 73,
+  "authority": "lecturer"
+ },
+ "SRC-HS2-DAY-3": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/07_announcements/HS2 DAY 3.txt",
+  "sha256": "4e699f6153ed0846cab4a936ef0320866ba2d7bc4b596d1887f527c553f96add",
+  "kind": "txt",
+  "label": "HS2 DAY 3",
+  "units": 19,
+  "authority": "lecturer"
+ },
+ "SRC-HS2-DAY-4-CVS-3-4": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/07_announcements/HS2 DAY 4 CVS 3 & 4.txt",
+  "sha256": "b25d3e7d7489179624ab78780526f3c722f11c09ae3f4c0e1d9ee9a7a84f1f23",
+  "kind": "txt",
+  "label": "HS2 DAY 4 CVS 3 & 4",
+  "units": 24,
+  "authority": "lecturer"
+ },
+ "SRC-HS2-OPENING-ON-CANVAS-MONDAY-27-07-1ST-CLASS-O": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/07_announcements/HS2 OPENING ON CANVAS MONDAY 27_07. 1ST CLASS ON 29_07 IN 201.txt",
+  "sha256": "3f3a014a490857013b4cba04be1d89bb7e8fa7e6ab8aecdcf2fb31ffc485456d",
+  "kind": "txt",
+  "label": "HS2 OPENING ON CANVAS MONDAY 27_07. 1ST CLASS ON 29_07 IN 201",
+  "units": 21,
+  "authority": "lecturer"
+ },
+ "SRC-HS2-WEEK-1-ON-CAMPUS-CLASSES": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/07_announcements/HS2 WEEK 1 ON-CAMPUS CLASSES.txt",
+  "sha256": "c571c8856687f866a135e0ed8271da15afeb5d857037752a8e8c7100972295a2",
+  "kind": "txt",
+  "label": "HS2 WEEK 1 ON-CAMPUS CLASSES",
+  "units": 17,
+  "authority": "lecturer"
+ },
+ "SRC-LAB-1-H-S-REMINDER": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/07_announcements/LAB 1, H&S REMINDER.txt",
+  "sha256": "ef6ee687c4af0eec821bdb9662bd82a17f5c8c5e811bd3323f1b10f75c681d23",
+  "kind": "txt",
+  "label": "LAB 1, H&S REMINDER",
+  "units": 13,
+  "authority": "lecturer"
+ },
+ "SRC-LAB-QUIZ-CVS-DISCUSSION-BOARD-FEEDBACK": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/07_announcements/LAB QUIZ & CVS DISCUSSION BOARD FEEDBACK.txt",
+  "sha256": "1359e0388c9ac80f8a6837c6c6a683cbf4a6fcfca9cd852593acca96b8e0995c",
+  "kind": "txt",
+  "label": "LAB QUIZ & CVS DISCUSSION BOARD FEEDBACK",
+  "units": 11,
+  "authority": "lecturer"
+ },
+ "SRC-MODULE-1-1-1-2-1-3-RESOURCES": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/07_announcements/MODULE 1.1, 1.2 & 1.3 RESOURCES.txt",
+  "sha256": "30b6077285f159f8b3eacaba620daebbb9649cdfc8fb9e790363fae49098f659",
+  "kind": "txt",
+  "label": "MODULE 1.1, 1.2 & 1.3 RESOURCES",
+  "units": 16,
+  "authority": "lecturer"
+ },
+ "SRC-PASS-SESSION": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/07_announcements/PASS SESSION.txt",
+  "sha256": "961240b9f5182be77d45c50f4a4b52940bda3376da608202cf11f4fc230d7538",
+  "kind": "txt",
+  "label": "PASS SESSION",
+  "units": 5,
+  "authority": "lecturer"
+ },
+ "SRC-PEOPLE-ON-THE-LIST-BELOW-PLEASE-GET-YOU-LAB-BO": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/07_announcements/PEOPLE ON THE LIST BELOW- PLEASE GET YOU LAB BOOKS TODAY.txt",
+  "sha256": "80261771e4c8dcf321c80487fae851e66e3b451387baf3b57eefc02800fda805",
+  "kind": "txt",
+  "label": "PEOPLE ON THE LIST BELOW- PLEASE GET YOU LAB BOOKS TODAY",
+  "units": 43,
+  "authority": "lecturer"
+ },
+ "SRC-PRE-TEST-READING-THE-RULES-OF-THE-GAME": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/07_announcements/PRE TEST READING_ THE RULES OF THE GAME.txt",
+  "sha256": "7e494858c78593d1aebcf59d893c937b23ddd8d12e516fa242573fc387b502f6",
+  "kind": "txt",
+  "label": "PRE TEST READING_ THE RULES OF THE GAME",
+  "units": 51,
+  "authority": "lecturer"
+ },
+ "SRC-PRE-TEST-READING-THE-RULES-OF-THE-GAME-WITH-RE": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/07_announcements/PRE TEST READING_ THE RULES OF THE GAME_with_replies.txt",
+  "sha256": "be599bf3b06c9e7ab5f892f1e52732566f438d95ed8f977e566d20fc3952d0db",
+  "kind": "txt",
+  "label": "PRE TEST READING_ THE RULES OF THE GAME_with_replies",
+  "units": 70,
+  "authority": "lecturer"
+ },
+ "SRC-PREMATURE-ANNOUNCEMENT": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/07_announcements/PREMATURE ANNOUNCEMENT.txt",
+  "sha256": "0a5c7ea0b9b8e475c64fb13ea60c62a236f99613d06f07d4c490b279e9fe20a7",
+  "kind": "txt",
+  "label": "PREMATURE ANNOUNCEMENT",
+  "units": 5,
+  "authority": "lecturer"
+ },
+ "SRC-PREPARING-FOR-LAB-2": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/07_announcements/PREPARING FOR LAB 2.txt",
+  "sha256": "4c608a5585b72f91d9b083f32b3c1624b07646934882fb18ae0dc5db4cb54834",
+  "kind": "txt",
+  "label": "PREPARING FOR LAB 2",
+  "units": 10,
+  "authority": "lecturer"
+ },
+ "SRC-PROCTORU-TRIAL-TEST-TEST-1-SUBMITTED-TO-PROCTO": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/07_announcements/PROCTORU TRIAL TEST & TEST 1 SUBMITTED TO PROCTORU.txt",
+  "sha256": "1e29148ced2186f1be086cb0aba5d9c928aaf4d42e312364155cc641f246f776",
+  "kind": "txt",
+  "label": "PROCTORU TRIAL TEST & TEST 1 SUBMITTED TO PROCTORU",
+  "units": 33,
+  "authority": "lecturer"
+ },
+ "SRC-RESP-1-RECORDING-IS-UP": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/07_announcements/RESP 1 RECORDING IS UP.txt",
+  "sha256": "9af9b744a4df915991b3214feee01a7bb95a46ebac13955d25722370ef165bcd",
+  "kind": "txt",
+  "label": "RESP 1 RECORDING IS UP",
+  "units": 5,
+  "authority": "lecturer"
+ },
+ "SRC-RESPONSE-NEEDED-POSSIBLE-SWAP": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/07_announcements/RESPONSE NEEDED_ POSSIBLE SWAP.txt",
+  "sha256": "67bf321771e89fd5d98acb0cc0d0dcc1115845f06c522a8972a2519b3fc16141",
+  "kind": "txt",
+  "label": "RESPONSE NEEDED_ POSSIBLE SWAP",
+  "units": 7,
+  "authority": "lecturer"
+ },
+ "SRC-RESPONSE-NEEDED-POSSIBLE-SWAP-WITH-REPLIES": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/07_announcements/RESPONSE NEEDED_ POSSIBLE SWAP_with_replies.txt",
+  "sha256": "5ef313f725b718e5c0580e5e2d05a9e21e7058b1a644998b98e17f6e4f07b5c2",
+  "kind": "txt",
+  "label": "RESPONSE NEEDED_ POSSIBLE SWAP_with_replies",
+  "units": 99,
+  "authority": "lecturer"
+ },
+ "SRC-SAQ-WHAT-CAN-WE-EXPECT": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/07_announcements/SAQ - What can we expect_.txt",
+  "sha256": "9da0c7e06ffc8a6944c4eca112a67bedd0d5ba41031a749a2d5b007088bf61e2",
+  "kind": "txt",
+  "label": "SAQ - What can we expect_",
+  "units": 35,
+  "authority": "lecturer"
+ },
+ "SRC-SUMMARY-OF-REGULATION-OF-BREATHING": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/07_announcements/SUMMARY OF REGULATION OF BREATHING.txt",
+  "sha256": "a726e4a2126323d969b60049aff253cb02901a9bf55c911d197d9a06bf6462c3",
+  "kind": "txt",
+  "label": "SUMMARY OF REGULATION OF BREATHING",
+  "units": 12,
+  "authority": "lecturer"
+ },
+ "SRC-VENUE-NOT-ON-CANVAS-CALENDAR-WHAT-DO-I-DO": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/07_announcements/VENUE NOT ON CANVAS CALENDAR_ WHAT DO I DO_.txt",
+  "sha256": "6264e7fb4fef30492a250c88a1f298b8b971c709638a61f80f6ad920576726f3",
+  "kind": "txt",
+  "label": "VENUE NOT ON CANVAS CALENDAR_ WHAT DO I DO_",
+  "units": 10,
+  "authority": "lecturer"
+ },
+ "SRC-WHAT-WILL-BE-IN-TEST-1": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/07_announcements/WHAT WILL BE IN TEST 1_.txt",
+  "sha256": "31a7b71d215324bc2c8f9255c43576e43364c5a8c1d518e8a8df718f1d7ba74f",
+  "kind": "txt",
+  "label": "WHAT WILL BE IN TEST 1_",
+  "units": 13,
+  "authority": "lecturer"
+ },
+ "SRC-WHEN-WHERE-LAB-GROUPS-SHOULD-BE-AVAILABLE": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/07_announcements/WHEN & WHERE LAB GROUPS SHOULD BE AVAILABLE.txt",
+  "sha256": "cdf41c32e78663ede63f05a450147cfe995a6ce198d9dd1ebce5f16075705dbb",
+  "kind": "txt",
+  "label": "WHEN & WHERE LAB GROUPS SHOULD BE AVAILABLE",
+  "units": 13,
+  "authority": "lecturer"
+ },
+ "SRC-WHERE-IN-THE-BODY-IS-THE-SPLEEN-LOCATED": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/07_announcements/WHERE IN THE BODY IS THE SPLEEN LOCATED_.txt",
+  "sha256": "3508ed18af434185b744b3f156a22da65089e01d5b6db16a311731b5f32086ad",
+  "kind": "txt",
+  "label": "WHERE IN THE BODY IS THE SPLEEN LOCATED_",
+  "units": 10,
+  "authority": "lecturer"
+ },
+ "SRC-ALL-ANNOUNCEMENTS-COMBINED": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/07_announcements/_ALL_ANNOUNCEMENTS_COMBINED.txt",
+  "sha256": "b14764437a1687edc88f85070a1cb2515c3d7600bae046437b20d54290fe2c02",
+  "kind": "txt",
+  "label": "_ALL_ANNOUNCEMENTS_COMBINED",
+  "units": 628,
+  "authority": "lecturer"
+ },
+ "SRC-DESCRIPTION-20": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/08_assignments/Anatomy 2 Discussion Board_ Learning together by sharing answers/description.txt",
+  "sha256": "c31f7863e0d6e10ecaab29c93423ee907c009d2a6ee2e7c347bb18840b58a48b",
+  "kind": "txt",
+  "label": "description",
+  "units": 21,
+  "authority": "lecturer"
+ },
+ "SRC-DESCRIPTION-21": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/08_assignments/Anatomy 3_ Discussion Board_ Learning together about the Respiratory system/description.txt",
+  "sha256": "cdd5f5211faeba9e1961e33946cfb649352132fb501bf9d90181b0cde6d34d38",
+  "kind": "txt",
+  "label": "description",
+  "units": 5,
+  "authority": "lecturer"
+ },
+ "SRC-DESCRIPTION-22": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/08_assignments/EXTENSION REQUEST FORMS/description.txt",
+  "sha256": "6f866267cebf4721ba598aba1b05d055f1b51c0c8b6d2da9e9f9c0771ddcbe5a",
+  "kind": "txt",
+  "label": "description",
+  "units": 1,
+  "authority": "lecturer"
+ },
+ "SRC-DESCRIPTION-23": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/08_assignments/MODULE 1.1_ BLOOD VESSELS AS AN IMPORTANT PART OF YOUR TRAINING/description.txt",
+  "sha256": "0f5aeb5b0bbfba20f05ea2cbc76fcbed2197b9e75450dc21ceb614264fb6644f",
+  "kind": "txt",
+  "label": "description",
+  "units": 5,
+  "authority": "lecturer"
+ },
+ "SRC-DESCRIPTION-24": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/08_assignments/MODULE 1.1_CVS2 MIX & MATCH_ HEART & VALVES (10 marks)/description.txt",
+  "sha256": "b9eba990af46a763e29cd02c3e29e309e033eccc2caf85aad7c2485c2bccb4f4",
+  "kind": "txt",
+  "label": "description",
+  "units": 19,
+  "authority": "lecturer"
+ },
+ "SRC-DESCRIPTION-25": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/08_assignments/MODULE 1.2_ AIRWAYS, BARO- & CHEMORECEPTORS (10 marks)/description.txt",
+  "sha256": "c09f90c430a168755409d22e63e5409d0f8e87570a93f2b238121ede039ec799",
+  "kind": "txt",
+  "label": "description",
+  "units": 3,
+  "authority": "lecturer"
+ },
+ "SRC-ALL-ASSIGNMENTS-COMBINED": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/08_assignments/_ALL_ASSIGNMENTS_COMBINED.txt",
+  "sha256": "94532329b0a6a773c63620e39aa41ef0a1a566b1b78e74c7684c9dcacb4887c3",
+  "kind": "txt",
+  "label": "_ALL_ASSIGNMENTS_COMBINED",
+  "units": 297,
+  "authority": "lecturer"
+ },
+ "SRC-MY-GRADE-SUMMARY": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/09_grades_submissions/my_grade_summary.txt",
+  "sha256": "ff99b5fba00843c617d669961a8411fbae52ce59d84067397ddcaa86abecde75",
+  "kind": "txt",
+  "label": "my_grade_summary",
+  "units": 5,
+  "authority": "lecturer"
+ },
+ "SRC-MY-SUBMISSIONS-SUMMARY": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/09_grades_submissions/my_submissions_summary.txt",
+  "sha256": "80f6848ff0fdfd3bc9d92a002969a4af27645471c4f86cf46d1d8045fc99a2cd",
+  "kind": "txt",
+  "label": "my_submissions_summary",
+  "units": 105,
+  "authority": "lecturer"
+ },
+ "SRC-EXTERNAL-TOOLS": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/10_external_media/external_tools.txt",
+  "sha256": "bda2c93e0c4988d3593d11586b8e592eb4234fdac8ab3dbc5551a4f3f21a22d9",
+  "kind": "txt",
+  "label": "external_tools",
+  "units": 9,
+  "authority": "lecturer"
+ },
+ "SRC-CALENDAR-EVENTS": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/11_misc/calendar_events.txt",
+  "sha256": "c46eb2d9ad4058421879e0f53c255053fd950074ec2eead0e3d5571b3f225848",
+  "kind": "txt",
+  "label": "calendar_events",
+  "units": 1,
+  "authority": "lecturer"
+ },
+ "SRC-PEOPLE-LIST": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/11_misc/people_list.txt",
+  "sha256": "6b072b03870fe8e81db3a4ea7961a390626c1a14851dd098db31303cd9900ab3",
+  "kind": "txt",
+  "label": "people_list",
+  "units": 189,
+  "authority": "lecturer"
+ },
+ "SRC-MASTER-REPORT": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/MASTER_REPORT.txt",
+  "sha256": "3886be58196a4a6d94a8974738762834806d66c644611a1e43abcfb2f548ebc4",
+  "kind": "txt",
+  "label": "MASTER_REPORT",
+  "units": 1364,
+  "authority": "lecturer"
+ },
+ "SRC-EXTRACTION-LOG": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/01_canvas_structure/extraction_log.txt",
+  "sha256": "2ebbde2ad78352a6f03cd1492a696422c5b3fedaa354e8995c9fa739a62997d1",
+  "kind": "txt",
+  "label": "extraction_log",
+  "units": 457,
+  "authority": "lecturer"
+ },
  "SRC-PAGE-IMAGES-FROM-LAB-1-CVS-A": {
-  "path": "_inbox/Health Science 2 Export Module 1/Lab 1 prep - Cardiovascular System/PAGE_IMAGES FROM LAB 1 CVS a.txt",
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/02_module_export/Lab 1 prep - Cardiovascular System/PAGE_IMAGES FROM LAB 1 CVS a.txt",
   "sha256": "e89b38a9508085aab1d86fc688b5015a4a13d9af32f55a5a215b0da2f9207972",
   "kind": "txt",
   "label": "PAGE_IMAGES FROM LAB 1 CVS a",
@@ -680,7 +2336,7 @@
   "authority": "lecturer"
  },
  "SRC-PAGE-IMAGES-FROM-LAB-2": {
-  "path": "_inbox/Health Science 2 Export Module 1/Lab 2 - Respiratory System/PAGE_IMAGES FROM LAB 2.txt",
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/02_module_export/Lab 2 - Respiratory System/PAGE_IMAGES FROM LAB 2.txt",
   "sha256": "29cba45c0e1bf3ab9f8212d47b0ec88e56922074c5c4d0a10a64f91edf89e895",
   "kind": "txt",
   "label": "PAGE_IMAGES FROM LAB 2",
@@ -688,7 +2344,7 @@
   "authority": "lecturer"
  },
  "SRC-DISCUSSION-MODULE-1-1-DISCUSSION-DVT": {
-  "path": "_inbox/Health Science 2 Export Module 1/MODULE 1.1 THE CARDIOVASCULAR SYSTEM/DISCUSSION_MODULE 1.1- DISCUSSION- DVT.txt",
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/02_module_export/MODULE 1.1 THE CARDIOVASCULAR SYSTEM/DISCUSSION_MODULE 1.1- DISCUSSION- DVT.txt",
   "sha256": "4702449f8b0b32e993190690e4ac8678eed7ea2905c5c9e6c0e5c16cb10809cc",
   "kind": "txt",
   "label": "DISCUSSION_MODULE 1.1- DISCUSSION- DVT",
@@ -696,7 +2352,7 @@
   "authority": "student-peer"
  },
  "SRC-DISCUSSION-MODULE-1-1-TEST-CASE-STUDY-1-BLOOD-": {
-  "path": "_inbox/Health Science 2 Export Module 1/MODULE 1.1 THE CARDIOVASCULAR SYSTEM/DISCUSSION_MODULE 1.1- TEST CASE STUDY 1- BLOOD PRESSURE.txt",
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/02_module_export/MODULE 1.1 THE CARDIOVASCULAR SYSTEM/DISCUSSION_MODULE 1.1- TEST CASE STUDY 1- BLOOD PRESSURE.txt",
   "sha256": "dae3987e5c94fbe9da10b5d6d3237b5f47efcab6d420c93eb0a09abc754dd1a6",
   "kind": "txt",
   "label": "DISCUSSION_MODULE 1.1- TEST CASE STUDY 1- BLOOD PRESSURE",
@@ -704,7 +2360,7 @@
   "authority": "student-peer"
  },
  "SRC-PAGE-LEARNING-PAGE-CVS-1-BLOOD-VESSELS": {
-  "path": "_inbox/Health Science 2 Export Module 1/MODULE 1.1 THE CARDIOVASCULAR SYSTEM/PAGE_LEARNING PAGE CVS 1- BLOOD VESSELS.txt",
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/02_module_export/MODULE 1.1 THE CARDIOVASCULAR SYSTEM/PAGE_LEARNING PAGE CVS 1- BLOOD VESSELS.txt",
   "sha256": "ccd8e687c4fb405c09f193995befd7fa67b06d19debefabf1b22c9a32ee4e1ac",
   "kind": "txt",
   "label": "PAGE_LEARNING PAGE CVS 1- BLOOD VESSELS",
@@ -712,7 +2368,7 @@
   "authority": "lecturer"
  },
  "SRC-PAGE-LEARNING-PAGE-CVS-2-THE-HEART-BLOOD-FLOW": {
-  "path": "_inbox/Health Science 2 Export Module 1/MODULE 1.1 THE CARDIOVASCULAR SYSTEM/PAGE_LEARNING PAGE CVS 2- THE HEART & BLOOD FLOW.txt",
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/02_module_export/MODULE 1.1 THE CARDIOVASCULAR SYSTEM/PAGE_LEARNING PAGE CVS 2- THE HEART & BLOOD FLOW.txt",
   "sha256": "df7a5a1713a8b5136686b28e27f39f0e06cf73aee5284cba12989faa392487f2",
   "kind": "txt",
   "label": "PAGE_LEARNING PAGE CVS 2- THE HEART & BLOOD FLOW",
@@ -720,7 +2376,7 @@
   "authority": "lecturer"
  },
  "SRC-PAGE-LEARNING-PAGE-CVS-3-CARDIAC-PHYSIOLOGY": {
-  "path": "_inbox/Health Science 2 Export Module 1/MODULE 1.1 THE CARDIOVASCULAR SYSTEM/PAGE_LEARNING PAGE CVS 3- CARDIAC PHYSIOLOGY.txt",
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/02_module_export/MODULE 1.1 THE CARDIOVASCULAR SYSTEM/PAGE_LEARNING PAGE CVS 3- CARDIAC PHYSIOLOGY.txt",
   "sha256": "1ca70aaf03ff1740e65fe5323d1750a183c995b6d99af03ca716a90f76d6c246",
   "kind": "txt",
   "label": "PAGE_LEARNING PAGE CVS 3- CARDIAC PHYSIOLOGY",
@@ -728,7 +2384,7 @@
   "authority": "lecturer"
  },
  "SRC-PAGE-LEARNING-PAGE-CVS-4-REGULATION-OF-BLOOD-P": {
-  "path": "_inbox/Health Science 2 Export Module 1/MODULE 1.1 THE CARDIOVASCULAR SYSTEM/PAGE_LEARNING PAGE CVS 4- REGULATION OF BLOOD PRESSURE  .txt",
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/02_module_export/MODULE 1.1 THE CARDIOVASCULAR SYSTEM/PAGE_LEARNING PAGE CVS 4- REGULATION OF BLOOD PRESSURE  .txt",
   "sha256": "30cb5d429fdab3748b1f149975cec29afdc9caadd23e94fa782baf824a28367f",
   "kind": "txt",
   "label": "PAGE_LEARNING PAGE CVS 4- REGULATION OF BLOOD PRESSURE  ",
@@ -736,7 +2392,7 @@
   "authority": "lecturer"
  },
  "SRC-PAGE-MODULE-1-1-CIRCULATORY-SHOCK": {
-  "path": "_inbox/Health Science 2 Export Module 1/MODULE 1.1 THE CARDIOVASCULAR SYSTEM/PAGE_MODULE 1.1- Circulatory Shock.txt",
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/02_module_export/MODULE 1.1 THE CARDIOVASCULAR SYSTEM/PAGE_MODULE 1.1- Circulatory Shock.txt",
   "sha256": "9dc996b6238eeef1fd06200b04f9e59655d3d96d41601ac33ac2a371103a4d38",
   "kind": "txt",
   "label": "PAGE_MODULE 1.1- Circulatory Shock",
@@ -744,7 +2400,7 @@
   "authority": "lecturer"
  },
  "SRC-DISCUSSION-MODULE-1-EXAM-CASE-4-PANIC-ATTACK-D": {
-  "path": "_inbox/Health Science 2 Export Module 1/MODULE 1.2  THE RESPIRATORY SYSTEM/DISCUSSION_MODULE 1 EXAM  CASE 4- -PANIC ATTACK DISCUSSION.txt",
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/02_module_export/MODULE 1.2  THE RESPIRATORY SYSTEM/DISCUSSION_MODULE 1 EXAM  CASE 4- -PANIC ATTACK DISCUSSION.txt",
   "sha256": "ac47c8f7764d3130d5ad2fea057000ee116b8ef17347108aa75a5a510cec94a1",
   "kind": "txt",
   "label": "DISCUSSION_MODULE 1 EXAM  CASE 4- -PANIC ATTACK DISCUSSION",
@@ -752,7 +2408,7 @@
   "authority": "student-peer"
  },
  "SRC-DISCUSSION-MODULE-1-EXAM-CASE-3-ASTHMA-DISCUSS": {
-  "path": "_inbox/Health Science 2 Export Module 1/MODULE 1.2  THE RESPIRATORY SYSTEM/DISCUSSION_MODULE 1 EXAM CASE 3- -ASTHMA- DISCUSSION.txt",
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/02_module_export/MODULE 1.2  THE RESPIRATORY SYSTEM/DISCUSSION_MODULE 1 EXAM CASE 3- -ASTHMA- DISCUSSION.txt",
   "sha256": "980dfb6064a9a895860b2fb86aa369ead8f5e7fdf544119682dcbfae9ae19572",
   "kind": "txt",
   "label": "DISCUSSION_MODULE 1 EXAM CASE 3- -ASTHMA- DISCUSSION",
@@ -760,7 +2416,7 @@
   "authority": "student-peer"
  },
  "SRC-DISCUSSION-MODULE-1-2-LUNG-TISSUE-UNDER-THE-MI": {
-  "path": "_inbox/Health Science 2 Export Module 1/MODULE 1.2  THE RESPIRATORY SYSTEM/DISCUSSION_MODULE 1.2- LUNG TISSUE UNDER THE MICROSCOPE.txt",
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/02_module_export/MODULE 1.2  THE RESPIRATORY SYSTEM/DISCUSSION_MODULE 1.2- LUNG TISSUE UNDER THE MICROSCOPE.txt",
   "sha256": "87c16d205904294b9f7364d886ef818195245dcc2046282c45b3f594b76de79e",
   "kind": "txt",
   "label": "DISCUSSION_MODULE 1.2- LUNG TISSUE UNDER THE MICROSCOPE",
@@ -768,7 +2424,7 @@
   "authority": "student-peer"
  },
  "SRC-DISCUSSION-MODULE-1-2-RESPIRATORY-SYSTEM-DISCU": {
-  "path": "_inbox/Health Science 2 Export Module 1/MODULE 1.2  THE RESPIRATORY SYSTEM/DISCUSSION_MODULE 1.2- RESPIRATORY SYSTEM DISCUSSION BOARD (RESP  LEARNING PAGES 1,2,3 & 4).txt",
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/02_module_export/MODULE 1.2  THE RESPIRATORY SYSTEM/DISCUSSION_MODULE 1.2- RESPIRATORY SYSTEM DISCUSSION BOARD (RESP  LEARNING PAGES 1,2,3 & 4).txt",
   "sha256": "c0d6ec6d4473654d5c335afdc988a0463f1beeb0968a0697a9e699e527f5c01a",
   "kind": "txt",
   "label": "DISCUSSION_MODULE 1.2- RESPIRATORY SYSTEM DISCUSSION BOARD (RESP  LEARNING PAGES 1,2,3 & 4)",
@@ -776,7 +2432,7 @@
   "authority": "student-peer"
  },
  "SRC-PAGE-LEARNING-PAGE-RESP-1-RESPIRATORY-TRACT-AN": {
-  "path": "_inbox/Health Science 2 Export Module 1/MODULE 1.2  THE RESPIRATORY SYSTEM/PAGE_LEARNING PAGE RESP 1- Respiratory tract anatomy.txt",
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/02_module_export/MODULE 1.2  THE RESPIRATORY SYSTEM/PAGE_LEARNING PAGE RESP 1- Respiratory tract anatomy.txt",
   "sha256": "b9de6552474099743458089213d7aec17f0ca7b254313c3d0ec50988c01cbbc2",
   "kind": "txt",
   "label": "PAGE_LEARNING PAGE RESP 1- Respiratory tract anatomy",
@@ -784,7 +2440,7 @@
   "authority": "lecturer"
  },
  "SRC-PAGE-LEARNING-PAGE-RESP-2-THE-PHYSIOLOGY-OF-TH": {
-  "path": "_inbox/Health Science 2 Export Module 1/MODULE 1.2  THE RESPIRATORY SYSTEM/PAGE_LEARNING PAGE RESP 2- The physiology of the respiratory tract.txt",
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/02_module_export/MODULE 1.2  THE RESPIRATORY SYSTEM/PAGE_LEARNING PAGE RESP 2- The physiology of the respiratory tract.txt",
   "sha256": "b093d460f75280ec4f3f5cc0149299d8fce8481906bb7dc5a9c528c3b0f3c42e",
   "kind": "txt",
   "label": "PAGE_LEARNING PAGE RESP 2- The physiology of the respiratory tract",
@@ -792,7 +2448,7 @@
   "authority": "lecturer"
  },
  "SRC-PAGE-LEARNING-PAGE-RESP-3-GAS-EXCHANGE-AND-GAS": {
-  "path": "_inbox/Health Science 2 Export Module 1/MODULE 1.2  THE RESPIRATORY SYSTEM/PAGE_LEARNING PAGE RESP 3- Gas exchange and gas transport.txt",
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/02_module_export/MODULE 1.2  THE RESPIRATORY SYSTEM/PAGE_LEARNING PAGE RESP 3- Gas exchange and gas transport.txt",
   "sha256": "7217dee163cbf8272cad1111ed54b739df68cdfe9c445bf9a972a94ace152bb7",
   "kind": "txt",
   "label": "PAGE_LEARNING PAGE RESP 3- Gas exchange and gas transport",
@@ -800,7 +2456,7 @@
   "authority": "lecturer"
  },
  "SRC-PAGE-LEARNING-PAGE-RESP-4-REGULATION-OF-RESPIR": {
-  "path": "_inbox/Health Science 2 Export Module 1/MODULE 1.2  THE RESPIRATORY SYSTEM/PAGE_LEARNING PAGE RESP 4- Regulation of respiratory system.txt",
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/02_module_export/MODULE 1.2  THE RESPIRATORY SYSTEM/PAGE_LEARNING PAGE RESP 4- Regulation of respiratory system.txt",
   "sha256": "48f31bacf7347cbec974d546eae85e24cce1ca01ef7ebe28effdfabf3e0f17eb",
   "kind": "txt",
   "label": "PAGE_LEARNING PAGE RESP 4- Regulation of respiratory system",
@@ -808,7 +2464,7 @@
   "authority": "lecturer"
  },
  "SRC-PAGE-MODULE-1-2-HELPFUL-RESPIRATORY-VIDEOS": {
-  "path": "_inbox/Health Science 2 Export Module 1/MODULE 1.2  THE RESPIRATORY SYSTEM/PAGE_MODULE 1.2- Helpful Respiratory Videos.txt",
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/02_module_export/MODULE 1.2  THE RESPIRATORY SYSTEM/PAGE_MODULE 1.2- Helpful Respiratory Videos.txt",
   "sha256": "24a5775d4bec0040af740347e71855ec198a94c83645d4974290af1cce3759fa",
   "kind": "txt",
   "label": "PAGE_MODULE 1.2- Helpful Respiratory Videos",
@@ -816,7 +2472,7 @@
   "authority": "lecturer"
  },
  "SRC-PAGE-MODULE-1-2-RESPIRATORY-REGULATION-ACID-BA": {
-  "path": "_inbox/Health Science 2 Export Module 1/MODULE 1.2  THE RESPIRATORY SYSTEM/PAGE_MODULE 1.2- Respiratory Regulation, Acid-Base Balance and Tutorial.txt",
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/02_module_export/MODULE 1.2  THE RESPIRATORY SYSTEM/PAGE_MODULE 1.2- Respiratory Regulation, Acid-Base Balance and Tutorial.txt",
   "sha256": "e5578d8b9e73014735f8cffe4fad568ab2a669e5c70d8e67aa32b45a3ddfd20a",
   "kind": "txt",
   "label": "PAGE_MODULE 1.2- Respiratory Regulation, Acid-Base Balance and Tutorial",
@@ -824,7 +2480,7 @@
   "authority": "lecturer"
  },
  "SRC-THE-AIRWAYS-DIAGRAMS-DOCX-1": {
-  "path": "_inbox/Health Science 2 Export Module 1/MODULE 1.2  THE RESPIRATORY SYSTEM/THE AIRWAYS diagrams. docx-1.docx",
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/02_module_export/MODULE 1.2  THE RESPIRATORY SYSTEM/THE AIRWAYS diagrams. docx-1.docx",
   "sha256": "edc51079ee00e4730c00cdc5c5dd3e0e4761a5df9c3d7ca00d8f7537b9bc4299",
   "kind": "docx",
   "label": "THE AIRWAYS diagrams. docx-1",
@@ -832,7 +2488,7 @@
   "authority": "lecturer"
  },
  "SRC-DISCUSSION-MODULE-1-EXAM-CASE-2-DISCUSSION-LYM": {
-  "path": "_inbox/Health Science 2 Export Module 1/MODULE 1.3  LYMPHATIC SYSTEM/DISCUSSION_MODULE 1 EXAM CASE 2- DISCUSSION- -LYMPH NODE REMOVAL.txt",
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/02_module_export/MODULE 1.3  LYMPHATIC SYSTEM/DISCUSSION_MODULE 1 EXAM CASE 2- DISCUSSION- -LYMPH NODE REMOVAL.txt",
   "sha256": "63032ed8aaa1eed2e705c12b225e1937707d6a7f89b0244989bd993c708ca468",
   "kind": "txt",
   "label": "DISCUSSION_MODULE 1 EXAM CASE 2- DISCUSSION- -LYMPH NODE REMOVAL",
@@ -840,7 +2496,7 @@
   "authority": "student-peer"
  },
  "SRC-DISCUSSION-MODULE-1-TEST-CASE-STUDY-5-DISCUSSI": {
-  "path": "_inbox/Health Science 2 Export Module 1/MODULE 1.3  LYMPHATIC SYSTEM/DISCUSSION_MODULE 1 TEST CASE STUDY 5- DISCUSSION- VACCINATION AND IMMUNISATION.txt",
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/02_module_export/MODULE 1.3  LYMPHATIC SYSTEM/DISCUSSION_MODULE 1 TEST CASE STUDY 5- DISCUSSION- VACCINATION AND IMMUNISATION.txt",
   "sha256": "ec56dba52c8eb8f70b268a71c887c3876acdcf06d5bdcfb7832eb49f8ce16930",
   "kind": "txt",
   "label": "DISCUSSION_MODULE 1 TEST CASE STUDY 5- DISCUSSION- VACCINATION AND IMMUNISATION",
@@ -848,7 +2504,7 @@
   "authority": "student-peer"
  },
  "SRC-PAGE-LEARNING-PAGE-LYMPHATIC-SYSTEM": {
-  "path": "_inbox/Health Science 2 Export Module 1/MODULE 1.3  LYMPHATIC SYSTEM/PAGE_LEARNING PAGE- Lymphatic System.txt",
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/02_module_export/MODULE 1.3  LYMPHATIC SYSTEM/PAGE_LEARNING PAGE- Lymphatic System.txt",
   "sha256": "1dc12b0735a095a061d75ec88713ba2c31df561ec9a531a78d506920c8cb70b7",
   "kind": "txt",
   "label": "PAGE_LEARNING PAGE- Lymphatic System",
@@ -856,7 +2512,7 @@
   "authority": "lecturer"
  },
  "SRC-DISCUSSION-MODULE-1-HELPLINE": {
-  "path": "_inbox/Health Science 2 Export Module 1/MODULE 1/DISCUSSION_MODULE 1 HELPLINE.txt",
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/02_module_export/MODULE 1/DISCUSSION_MODULE 1 HELPLINE.txt",
   "sha256": "5610cc3bf75e69a1da24e65b0ee2e2c244701e056c49f642081245bbf6147d1f",
   "kind": "txt",
   "label": "DISCUSSION_MODULE 1 HELPLINE",
@@ -864,7 +2520,7 @@
   "authority": "student-peer"
  },
  "SRC-PAGE-MODULE-1-1-1-2-1-3-RESOURCES": {
-  "path": "_inbox/Health Science 2 Export Module 1/MODULE 1/PAGE_MODULE 1.1, 1.2 & 1.3 RESOURCES.txt",
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/02_module_export/MODULE 1/PAGE_MODULE 1.1, 1.2 & 1.3 RESOURCES.txt",
   "sha256": "2d1e96020184ecbb4041c36d1a3f638dff9ba040603ff8d45f480dc0ba5bb9d3",
   "kind": "txt",
   "label": "PAGE_MODULE 1.1, 1.2 & 1.3 RESOURCES",
@@ -872,7 +2528,7 @@
   "authority": "lecturer"
  },
  "SRC-DISCUSSION-MARKED-ANSWERS-MOD-1-TEST-CASE-STUD": {
-  "path": "_inbox/Health Science 2 Export Module 1/Module 1 Revision Materials/DISCUSSION_MARKED ANSWERS- MOD 1 TEST CASE STUDIES 1 (BLOOD PRESSURE) & 5 (VACCINATION). BY PREVIOUS SEMESTER'S STUDENTS.txt",
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/02_module_export/Module 1 Revision Materials/DISCUSSION_MARKED ANSWERS- MOD 1 TEST CASE STUDIES 1 (BLOOD PRESSURE) & 5 (VACCINATION). BY PREVIOUS SEMESTER'S STUDENTS.txt",
   "sha256": "ea40627222d430e0e307a4437cd7306233e865c0fa0871c5cfdbe833453ebd08",
   "kind": "txt",
   "label": "DISCUSSION_MARKED ANSWERS- MOD 1 TEST CASE STUDIES 1 (BLOOD PRESSURE) & 5 (VACCINATION). BY PREVIOUS SEMESTER'S STUDENTS",
@@ -880,7 +2536,7 @@
   "authority": "student-peer"
  },
  "SRC-DISCUSSION-MODULE-1-COMPLETION": {
-  "path": "_inbox/Health Science 2 Export Module 1/Module 1 Revision Materials/DISCUSSION_Module 1 Completion.txt",
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/02_module_export/Module 1 Revision Materials/DISCUSSION_Module 1 Completion.txt",
   "sha256": "ad4f17789061a3943fbd64f99b75bf02af14b30d3fa628ce7ae0ac07f66bc19d",
   "kind": "txt",
   "label": "DISCUSSION_Module 1 Completion",
@@ -888,7 +2544,7 @@
   "authority": "student-peer"
  },
  "SRC-PAGE-MODULE-1-KAHOOTS-3-OF-THEM": {
-  "path": "_inbox/Health Science 2 Export Module 1/Module 1 Revision Materials/PAGE_MODULE 1 KAHOOTS (3 OF THEM).txt",
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/02_module_export/Module 1 Revision Materials/PAGE_MODULE 1 KAHOOTS (3 OF THEM).txt",
   "sha256": "f318152342234a8726a2ea7ba5e6252f61f04b2ae5b3258714eb8120dae330ca",
   "kind": "txt",
   "label": "PAGE_MODULE 1 KAHOOTS (3 OF THEM)",
@@ -896,7 +2552,7 @@
   "authority": "lecturer"
  },
  "SRC-DISCUSSION-MODULE-1-ANSWERS-DISCUSSION-BOARD-L": {
-  "path": "_inbox/Health Science 2 Export Module 1/SAQ PRACTICE DISCUSSIONS PEER MARKED/DISCUSSION_MODULE 1- ANSWERS- DISCUSSION BOARD LYMPHATIC SYSTEM, CARDIOVASCULAR SYSTEM & RESPIRATORY SYSTEM- LEARNING TOGETHER.txt",
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/02_module_export/SAQ PRACTICE DISCUSSIONS PEER MARKED/DISCUSSION_MODULE 1- ANSWERS- DISCUSSION BOARD LYMPHATIC SYSTEM, CARDIOVASCULAR SYSTEM & RESPIRATORY SYSTEM- LEARNING TOGETHER.txt",
   "sha256": "511c975bf5adc514e818712858620bdecd36f47f7915370c374f3bf8bdaa1fae",
   "kind": "txt",
   "label": "DISCUSSION_MODULE 1- ANSWERS- DISCUSSION BOARD LYMPHATIC SYSTEM, CARDIOVASCULAR SYSTEM & RESPIRATORY SYSTEM- LEARNING TOGETHER",
@@ -904,7 +2560,7 @@
   "authority": "student-peer"
  },
  "SRC-DISCUSSION-MODULE-1-DISCUSSION-BOARD-LYMPHATIC": {
-  "path": "_inbox/Health Science 2 Export Module 1/SAQ PRACTICE DISCUSSIONS PEER MARKED/DISCUSSION_MODULE 1- DISCUSSION BOARD LYMPHATIC SYSTEM, CARDIOVASCULAR SYSTEM & RESPIRATORY SYSTEM- LEARNING TOGETHER.txt",
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/02_module_export/SAQ PRACTICE DISCUSSIONS PEER MARKED/DISCUSSION_MODULE 1- DISCUSSION BOARD LYMPHATIC SYSTEM, CARDIOVASCULAR SYSTEM & RESPIRATORY SYSTEM- LEARNING TOGETHER.txt",
   "sha256": "78dd1659c9f644d884f295079f51f58488c258965183ffeda91327eeb0e9f959",
   "kind": "txt",
   "label": "DISCUSSION_MODULE 1- DISCUSSION BOARD LYMPHATIC SYSTEM, CARDIOVASCULAR SYSTEM & RESPIRATORY SYSTEM- LEARNING TOGETHER",
@@ -912,7 +2568,7 @@
   "authority": "student-peer"
  },
  "SRC-DISCUSSION-MODULE-1-1-CVS-DISCUSSION-BOARD-SCE": {
-  "path": "_inbox/Health Science 2 Export Module 1/SAQ PRACTICE DISCUSSIONS PEER MARKED/DISCUSSION_MODULE 1.1- CVS DISCUSSION BOARD (SCENARIO LINKED).txt",
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/02_module_export/SAQ PRACTICE DISCUSSIONS PEER MARKED/DISCUSSION_MODULE 1.1- CVS DISCUSSION BOARD (SCENARIO LINKED).txt",
   "sha256": "e016db1b995cb315b593e1220526175d5552ee840f45b7b0f001cf93ea3173dc",
   "kind": "txt",
   "label": "DISCUSSION_MODULE 1.1- CVS DISCUSSION BOARD (SCENARIO LINKED)",
@@ -920,7 +2576,7 @@
   "authority": "student-peer"
  },
  "SRC-DISCUSSION-MODULE-1-1-HEART-COVERINGS-STRUCTUR": {
-  "path": "_inbox/Health Science 2 Export Module 1/SAQ PRACTICE DISCUSSIONS PEER MARKED/DISCUSSION_MODULE 1.1- HEART COVERINGS & STRUCTURES IN THE RIGHT & LEFT HALVES OF THE HEART.txt",
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/02_module_export/SAQ PRACTICE DISCUSSIONS PEER MARKED/DISCUSSION_MODULE 1.1- HEART COVERINGS & STRUCTURES IN THE RIGHT & LEFT HALVES OF THE HEART.txt",
   "sha256": "9dd526ef863196769b9e7fd31e165e6f7d3b6bec3dc084cd1cded52a6c3e2947",
   "kind": "txt",
   "label": "DISCUSSION_MODULE 1.1- HEART COVERINGS & STRUCTURES IN THE RIGHT & LEFT HALVES OF THE HEART",
@@ -928,7 +2584,7 @@
   "authority": "student-peer"
  },
  "SRC-DISCUSSION-MODULE-1-2-RESPIRATORY-DISCUSSION-S": {
-  "path": "_inbox/Health Science 2 Export Module 1/SAQ PRACTICE DISCUSSIONS PEER MARKED/DISCUSSION_MODULE 1.2- RESPIRATORY- DISCUSSION-  (SCENARIO LINKED).txt",
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/02_module_export/SAQ PRACTICE DISCUSSIONS PEER MARKED/DISCUSSION_MODULE 1.2- RESPIRATORY- DISCUSSION-  (SCENARIO LINKED).txt",
   "sha256": "69c93b170ae607bddc30a88bacd61282fceaa57380b099bf3f0416ffaef211ee",
   "kind": "txt",
   "label": "DISCUSSION_MODULE 1.2- RESPIRATORY- DISCUSSION-  (SCENARIO LINKED)",
@@ -936,7 +2592,7 @@
   "authority": "student-peer"
  },
  "SRC-DISCUSSION-MODULE-1-2-USEFUL-VIDEOS-EXPLAINING": {
-  "path": "_inbox/Health Science 2 Export Module 1/SAQ PRACTICE DISCUSSIONS PEER MARKED/DISCUSSION_MODULE 1.2- USEFUL VIDEOS EXPLAINING THE RESPIRATORY SYSTEM.txt",
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/02_module_export/SAQ PRACTICE DISCUSSIONS PEER MARKED/DISCUSSION_MODULE 1.2- USEFUL VIDEOS EXPLAINING THE RESPIRATORY SYSTEM.txt",
   "sha256": "f904e7da11c65e641a12f5fa3253e2ebc36adff81a3a5f4952a6da267b6edce3",
   "kind": "txt",
   "label": "DISCUSSION_MODULE 1.2- USEFUL VIDEOS EXPLAINING THE RESPIRATORY SYSTEM",
@@ -944,7 +2600,7 @@
   "authority": "student-peer"
  },
  "SRC-DISCUSSION-MODULE-1-3-LYMPHATIC-SYSTEM-DISCUSS": {
-  "path": "_inbox/Health Science 2 Export Module 1/SAQ PRACTICE DISCUSSIONS PEER MARKED/DISCUSSION_MODULE 1.3- LYMPHATIC SYSTEM- DISCUSSION- (SCENARIO LINKED).txt",
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/02_module_export/SAQ PRACTICE DISCUSSIONS PEER MARKED/DISCUSSION_MODULE 1.3- LYMPHATIC SYSTEM- DISCUSSION- (SCENARIO LINKED).txt",
   "sha256": "e48a8ec8a70ba60ca392105f90a88f80272f24c9b6b4479c63021d21853599a8",
   "kind": "txt",
   "label": "DISCUSSION_MODULE 1.3- LYMPHATIC SYSTEM- DISCUSSION- (SCENARIO LINKED)",
@@ -952,12 +2608,20 @@
   "authority": "student-peer"
  },
  "SRC-PAGE-ASSESSMENT-OVERVIEW": {
-  "path": "_inbox/Health Science 2 Export Module 1/SUMMATIVE ASSESSMENTS (pass-fail depends on performance in these)/PAGE_ASSESSMENT OVERVIEW .txt",
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/02_module_export/SUMMATIVE ASSESSMENTS (pass-fail depends on performance in these)/PAGE_ASSESSMENT OVERVIEW .txt",
   "sha256": "34eac662ae031ee46e1545be5bf7ed1292d374320fb5b96709155a57c3cd6d3b",
   "kind": "txt",
   "label": "PAGE_ASSESSMENT OVERVIEW ",
   "units": 162,
   "authority": "course-doc"
+ },
+ "SRC-MERGE-REPORT": {
+  "path": "_inbox/Health Science 2 Export Module 1/HS2_MERGED/MERGE-REPORT.txt",
+  "sha256": "cfcdebdb188d20ebd78df1f63fef8c6d7702ff3b813d451f9afff41df8c0a86d",
+  "kind": "txt",
+  "label": "MERGE-REPORT",
+  "units": 12,
+  "authority": "lecturer"
  },
  "SRC-2026-2-722-537-541-552-COURSE-LAB-WORKBOOK-FF-2": {
   "path": "_inbox/Health Science 2 Export Module 1/ESSENTIAL DOCUMENTS & LINKS/2026 (2) 722.537 541 552 Course Lab Workbook ff.pdf",
@@ -975,11 +2639,115 @@
   "units": 14,
   "authority": "course-doc"
  },
- "SRC-PDF-OF-IN-CLASS-FORMATIVE-MODEL-ANSWERS": {
-  "path": "_inbox/Health Science 2 Export Module 1/Module 1 Revision Materials/PDF of In Class Formative Model Answers.pdf",
+ "SRC-CASE-STUDY-FORMATIVE-TEST-MODULE-1-2-20-MARKS-": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/CASE STUDY FORMATIVE TEST MODULE 1-2 (20 marks)_ Health Science 2.pdf",
+  "sha256": "4a9080ce9fff1fea6342f6a7511310a152338f6c714b8f1ceb74756404cdd1b1",
+  "kind": "pdf",
+  "label": "CASE STUDY FORMATIVE TEST MODULE 1-2 (20 marks)_ Health Science 2",
+  "units": 14,
+  "authority": "lecturer"
+ },
+ "SRC-MODULE-1-SAQ-MC-FORMATIVE-CVS-LYMPHATIC-RESPIR": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/MODULE 1_ SAQ & MC_ FORMATIVE CVS, LYMPHATIC & RESPIRATORY SYSTEMS _(50 marks)_ Health Science 2.pdf",
+  "sha256": "fb7ebebfb578c78cc229aa071b51397ec1855825520f67a71601e87660ff8612",
+  "kind": "pdf",
+  "label": "MODULE 1_ SAQ & MC_ FORMATIVE CVS, LYMPHATIC & RESPIRATORY SYSTEMS _(50 marks)_ Health Science 2",
+  "units": 15,
+  "authority": "lecturer"
+ },
+ "SRC-MODULE-1-FORMATIVE-TEST-HEALTH-SCIENCE-2": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/08of11/MODULE 1 _ Formative Test_ Health Science 2.pdf",
+  "sha256": "f7901b5a2739c15dfd681e6792b91cf27d04d30b153321eec70e566e8e8d337e",
+  "kind": "pdf",
+  "label": "MODULE 1 _ Formative Test_ Health Science 2",
+  "units": 24,
+  "authority": "lecturer"
+ },
+ "SRC-GUIDELINES-PROF-BOUNDARIES-BOOKLET-FULL": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/11of11/18 PROFESSIONALISM IN NURSING/Files/Guidelines Prof Boundaries Booklet full.pdf",
+  "sha256": "b303ce47e065e81706168798ee3f7d69be44acb3a9a6d3ec3278abd65b8fd51d",
+  "kind": "pdf",
+  "label": "Guidelines Prof Boundaries Booklet full",
+  "units": 35,
+  "authority": "lecturer"
+ },
+ "SRC-GUIDELINES-SOCIAL-MEDIA": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/11of11/18 PROFESSIONALISM IN NURSING/Files/Guidelines Social Media.pdf",
+  "sha256": "f777f1001e9bfe9130ef8f2b2b2985e756738508895ec7e6d71cb2bf0340569b",
+  "kind": "pdf",
+  "label": "Guidelines Social Media",
+  "units": 7,
+  "authority": "lecturer"
+ },
+ "SRC-GUIDELINE-SOCIAL-MEDIA-AND-THE-NURSING-PROFESS": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/1of11/04 COMMUNICATION CHANNELS & RECORDINGS FROM THE PAST & PRESENT/Files/Guideline - Social media and the nursing profession, 2019.pdf",
+  "sha256": "007e205f867b3fd242c63b516b291a6f1e8d149495c194d5f8a8aa4dbf5615ba",
+  "kind": "pdf",
+  "label": "Guideline - Social media and the nursing profession, 2019",
+  "units": 23,
+  "authority": "lecturer"
+ },
+ "SRC-MODULE-1-1-SHOCK-QUIZ-5-MARKS-HEALTH-SCIENCE-2": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/1of11/08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM/MODULE 1.1 SHOCK QUIZ (5 Marks)_ Health Science 2.pdf",
+  "sha256": "fec4c1b6384789470392f3d9e8a53bd9ff9b617f79769c4a555da8f080605ddd",
+  "kind": "pdf",
+  "label": "MODULE 1.1 SHOCK QUIZ (5 Marks)_ Health Science 2",
+  "units": 4,
+  "authority": "lecturer"
+ },
+ "SRC-MODULE-1-1-QUIZ-CVS2-THE-HEART-25-MARKS-HEALTH": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/1of11/08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM/MODULE 1.1_ QUIZ_ CVS2 THE HEART (25 marks)_ Health Science 2.pdf",
+  "sha256": "342eec038ececaefa0652eb03c11e317495b2b52d71a1037f5eee64791bb742f",
+  "kind": "pdf",
+  "label": "MODULE 1.1_ QUIZ_ CVS2 THE HEART (25 marks)_ Health Science 2",
+  "units": 25,
+  "authority": "lecturer"
+ },
+ "SRC-MODULE-1-1-SAQ-MC-CVS-REVIEW-35-MARKS-HEALTH-S": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/1of11/08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM/MODULE 1.1_ SAQ & MC_ CVS REVIEW _(35 marks )_ Health Science 2.pdf",
+  "sha256": "b0c7d599d0c4f99040ae482d96d6a5c631663547ef0864ae5fc233656a39f4a1",
+  "kind": "pdf",
+  "label": "MODULE 1.1_ SAQ & MC_ CVS REVIEW _(35 marks )_ Health Science 2",
+  "units": 35,
+  "authority": "lecturer"
+ },
+ "SRC-MODULE-1-2-RESP-BASIC-ANATOMY-10-MARKS-HEALTH-": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/4of11/MODULE 1.2_ RESP BASIC ANATOMY (10 Marks) _ Health Science 2.pdf",
+  "sha256": "bddcd511cee432ed17be5aaed70c453796daa178ecfdc8ccde8e916e47ec829a",
+  "kind": "pdf",
+  "label": "MODULE 1.2_ RESP BASIC ANATOMY (10 Marks) _ Health Science 2",
+  "units": 12,
+  "authority": "lecturer"
+ },
+ "SRC-MODULE-1-2-RESPIRATORY-SYSTEM-BASIC-PHYSIOLOGY": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/4of11/MODULE 1.2_ RESPIRATORY SYSTEM BASIC PHYSIOLOGY (13 marks)_ Health Science 2.pdf",
+  "sha256": "dc7ee45bd2a9c4502929eac591d638e26c69df3d750fafd8de563d701caa1813",
+  "kind": "pdf",
+  "label": "MODULE 1.2_ RESPIRATORY SYSTEM BASIC PHYSIOLOGY (13 marks)_ Health Science 2",
+  "units": 8,
+  "authority": "lecturer"
+ },
+ "SRC-MODULE-1-3-QUIZ-DISEASES-TERMINOLOGY-RELATED-T": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/7of11/10 MODULE 1.3 LYMPHATIC SYSTEM/MODULE 1.3_ QUIZ_ DISEASES _ TERMINOLOGY RELATED TO THE LYMPHATIC SYSTEM_ Health Science 2.pdf",
+  "sha256": "e3b4988c8bd27537ff451e022bd4fa287613d17991fee0d271bcc5f750715495",
+  "kind": "pdf",
+  "label": "MODULE 1.3_ QUIZ_ DISEASES _ TERMINOLOGY RELATED TO THE LYMPHATIC SYSTEM_ Health Science 2",
+  "units": 10,
+  "authority": "lecturer"
+ },
+ "SRC-MODULE-1-3-SAQ-MC-FLUID-ELECTROLYTE-FLUID-BALA": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/7of11/10 MODULE 1.3 LYMPHATIC SYSTEM/MODULE 1.3_SAQ & MC_ FLUID, ELECTROLYTE & FLUID BALANCE (10 marks) _ Health Science 2.pdf",
+  "sha256": "5618c87e6bd3a3142980f32f32c4465a7385a4d7f1e0467a9787fa7c89587cd9",
+  "kind": "pdf",
+  "label": "MODULE 1.3_SAQ & MC_ FLUID, ELECTROLYTE & FLUID BALANCE (10 marks) _ Health Science 2",
+  "units": 3,
+  "authority": "lecturer"
+ },
+ "SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS": {
+  "path": "_inbox/Health Science 2 Export Module 1/HEALTH SCIENCE 2/7of11/11 Module 1 Revision Materials/Files/BN2 Formative Test PDF Model Answers.pdf",
   "sha256": "267d1ef091ea98d8d842f5dd301958c2622c65c4a7db2a8e6fa11a39e4dcc03f",
   "kind": "pdf",
-  "label": "PDF of In Class Formative Model Answers",
+  "label": "BN2 Formative Test PDF Model Answers",
   "units": 22,
   "authority": "lecturer"
  },
@@ -989,110 +2757,6 @@
   "kind": "pdf",
   "label": "MODULE 1.2- Anne's Respiratory System Practice Quiz - DOWNLOAD THIS FILE AND OPEN",
   "units": 1,
-  "authority": "lecturer"
- },
- "SRC-CASE-STUDY-FORMATIVE-TEST-MODULE-1-2-20-MARKS-": {
-  "path": "_inbox/HEALTH SCIENCE 2/CASE STUDY FORMATIVE TEST MODULE 1-2 (20 marks)_ Health Science 2.pdf",
-  "sha256": "4a9080ce9fff1fea6342f6a7511310a152338f6c714b8f1ceb74756404cdd1b1",
-  "kind": "pdf",
-  "label": "CASE STUDY FORMATIVE TEST MODULE 1-2 (20 marks)_ Health Science 2",
-  "units": 14,
-  "authority": "lecturer"
- },
- "SRC-MODULE-1-SAQ-MC-FORMATIVE-CVS-LYMPHATIC-RESPIR": {
-  "path": "_inbox/HEALTH SCIENCE 2/MODULE 1_ SAQ & MC_ FORMATIVE CVS, LYMPHATIC & RESPIRATORY SYSTEMS _(50 marks)_ Health Science 2.pdf",
-  "sha256": "fb7ebebfb578c78cc229aa071b51397ec1855825520f67a71601e87660ff8612",
-  "kind": "pdf",
-  "label": "MODULE 1_ SAQ & MC_ FORMATIVE CVS, LYMPHATIC & RESPIRATORY SYSTEMS _(50 marks)_ Health Science 2",
-  "units": 15,
-  "authority": "lecturer"
- },
- "SRC-MODULE-1-FORMATIVE-TEST-HEALTH-SCIENCE-2": {
-  "path": "_inbox/HEALTH SCIENCE 2/08of11/MODULE 1 _ Formative Test_ Health Science 2.pdf",
-  "sha256": "f7901b5a2739c15dfd681e6792b91cf27d04d30b153321eec70e566e8e8d337e",
-  "kind": "pdf",
-  "label": "MODULE 1 _ Formative Test_ Health Science 2",
-  "units": 24,
-  "authority": "lecturer"
- },
- "SRC-GUIDELINES-PROF-BOUNDARIES-BOOKLET-FULL": {
-  "path": "_inbox/HEALTH SCIENCE 2/11of11/18 PROFESSIONALISM IN NURSING/Files/Guidelines Prof Boundaries Booklet full.pdf",
-  "sha256": "b303ce47e065e81706168798ee3f7d69be44acb3a9a6d3ec3278abd65b8fd51d",
-  "kind": "pdf",
-  "label": "Guidelines Prof Boundaries Booklet full",
-  "units": 35,
-  "authority": "lecturer"
- },
- "SRC-GUIDELINES-SOCIAL-MEDIA": {
-  "path": "_inbox/HEALTH SCIENCE 2/11of11/18 PROFESSIONALISM IN NURSING/Files/Guidelines Social Media.pdf",
-  "sha256": "f777f1001e9bfe9130ef8f2b2b2985e756738508895ec7e6d71cb2bf0340569b",
-  "kind": "pdf",
-  "label": "Guidelines Social Media",
-  "units": 7,
-  "authority": "lecturer"
- },
- "SRC-GUIDELINE-SOCIAL-MEDIA-AND-THE-NURSING-PROFESS": {
-  "path": "_inbox/HEALTH SCIENCE 2/1of11/04 COMMUNICATION CHANNELS & RECORDINGS FROM THE PAST & PRESENT/Files/Guideline - Social media and the nursing profession, 2019.pdf",
-  "sha256": "007e205f867b3fd242c63b516b291a6f1e8d149495c194d5f8a8aa4dbf5615ba",
-  "kind": "pdf",
-  "label": "Guideline - Social media and the nursing profession, 2019",
-  "units": 23,
-  "authority": "lecturer"
- },
- "SRC-MODULE-1-1-SHOCK-QUIZ-5-MARKS-HEALTH-SCIENCE-2": {
-  "path": "_inbox/HEALTH SCIENCE 2/1of11/08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM/MODULE 1.1 SHOCK QUIZ (5 Marks)_ Health Science 2.pdf",
-  "sha256": "fec4c1b6384789470392f3d9e8a53bd9ff9b617f79769c4a555da8f080605ddd",
-  "kind": "pdf",
-  "label": "MODULE 1.1 SHOCK QUIZ (5 Marks)_ Health Science 2",
-  "units": 4,
-  "authority": "lecturer"
- },
- "SRC-MODULE-1-1-QUIZ-CVS2-THE-HEART-25-MARKS-HEALTH": {
-  "path": "_inbox/HEALTH SCIENCE 2/1of11/08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM/MODULE 1.1_ QUIZ_ CVS2 THE HEART (25 marks)_ Health Science 2.pdf",
-  "sha256": "342eec038ececaefa0652eb03c11e317495b2b52d71a1037f5eee64791bb742f",
-  "kind": "pdf",
-  "label": "MODULE 1.1_ QUIZ_ CVS2 THE HEART (25 marks)_ Health Science 2",
-  "units": 25,
-  "authority": "lecturer"
- },
- "SRC-MODULE-1-1-SAQ-MC-CVS-REVIEW-35-MARKS-HEALTH-S": {
-  "path": "_inbox/HEALTH SCIENCE 2/1of11/08 MODULE 1.1 THE CARDIOVASCULAR SYSTEM/MODULE 1.1_ SAQ & MC_ CVS REVIEW _(35 marks )_ Health Science 2.pdf",
-  "sha256": "b0c7d599d0c4f99040ae482d96d6a5c631663547ef0864ae5fc233656a39f4a1",
-  "kind": "pdf",
-  "label": "MODULE 1.1_ SAQ & MC_ CVS REVIEW _(35 marks )_ Health Science 2",
-  "units": 35,
-  "authority": "lecturer"
- },
- "SRC-MODULE-1-2-RESP-BASIC-ANATOMY-10-MARKS-HEALTH-": {
-  "path": "_inbox/HEALTH SCIENCE 2/4of11/MODULE 1.2_ RESP BASIC ANATOMY (10 Marks) _ Health Science 2.pdf",
-  "sha256": "bddcd511cee432ed17be5aaed70c453796daa178ecfdc8ccde8e916e47ec829a",
-  "kind": "pdf",
-  "label": "MODULE 1.2_ RESP BASIC ANATOMY (10 Marks) _ Health Science 2",
-  "units": 12,
-  "authority": "lecturer"
- },
- "SRC-MODULE-1-2-RESPIRATORY-SYSTEM-BASIC-PHYSIOLOGY": {
-  "path": "_inbox/HEALTH SCIENCE 2/4of11/MODULE 1.2_ RESPIRATORY SYSTEM BASIC PHYSIOLOGY (13 marks)_ Health Science 2.pdf",
-  "sha256": "dc7ee45bd2a9c4502929eac591d638e26c69df3d750fafd8de563d701caa1813",
-  "kind": "pdf",
-  "label": "MODULE 1.2_ RESPIRATORY SYSTEM BASIC PHYSIOLOGY (13 marks)_ Health Science 2",
-  "units": 8,
-  "authority": "lecturer"
- },
- "SRC-MODULE-1-3-QUIZ-DISEASES-TERMINOLOGY-RELATED-T": {
-  "path": "_inbox/HEALTH SCIENCE 2/7of11/10 MODULE 1.3 LYMPHATIC SYSTEM/MODULE 1.3_ QUIZ_ DISEASES _ TERMINOLOGY RELATED TO THE LYMPHATIC SYSTEM_ Health Science 2.pdf",
-  "sha256": "e3b4988c8bd27537ff451e022bd4fa287613d17991fee0d271bcc5f750715495",
-  "kind": "pdf",
-  "label": "MODULE 1.3_ QUIZ_ DISEASES _ TERMINOLOGY RELATED TO THE LYMPHATIC SYSTEM_ Health Science 2",
-  "units": 10,
-  "authority": "lecturer"
- },
- "SRC-MODULE-1-3-SAQ-MC-FLUID-ELECTROLYTE-FLUID-BALA": {
-  "path": "_inbox/HEALTH SCIENCE 2/7of11/10 MODULE 1.3 LYMPHATIC SYSTEM/MODULE 1.3_SAQ & MC_ FLUID, ELECTROLYTE & FLUID BALANCE (10 marks) _ Health Science 2.pdf",
-  "sha256": "5618c87e6bd3a3142980f32f32c4465a7385a4d7f1e0467a9787fa7c89587cd9",
-  "kind": "pdf",
-  "label": "MODULE 1.3_SAQ & MC_ FLUID, ELECTROLYTE & FLUID BALANCE (10 marks) _ Health Science 2",
-  "units": 3,
   "authority": "lecturer"
  }
 }
