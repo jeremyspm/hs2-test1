@@ -26,6 +26,10 @@ const figBlock =
 
 const out = tpl.slice(0, a + START.length) + '\n' + figBlock + pack.trim() + '\n' + tpl.slice(b);
 
+/* Filled by the runtime smoke test below (the shipped page counting its own rings) and
+   checked against audit/spine.mjs further down, where the pack object is loaded. */
+let ENGINE_RINGS = null;
+
 // Parse the generated page's scripts before writing. A stray apostrophe inside a
 // single-quoted card string kills the whole app silently — the page still renders,
 // it just runs no JavaScript. Never ship without this passing.
@@ -103,6 +107,17 @@ for (const [i, m] of [...out.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/sc
       globalThis.__FILTMISMATCH__=bad;
       globalThis.__FILTCHECKED__=filtDims(ALLTYPES).reduce((a,d)=>a+d.opts.length,0);
     })();
+    /* ── G15: the page's own idea of which ring each card is in ────────────────
+       Counted here, in the artifact's own scope, and compared below against
+       audit/spine.mjs. ringOf is written twice on purpose — the page imports
+       nothing — so this comparison is the only thing keeping the two honest.
+       No backticks anywhere in this string: it is inside one. */
+    ;(function(){
+      if(typeof ringOf!=='function'||!HASRINGS()){ globalThis.__RINGCOUNTS__=null; return; }
+      const n=[0,0,0,0];
+      for(const c of PACK.cards){ if(c.damaged) continue; n[ringOf(c)]++; }
+      globalThis.__RINGCOUNTS__=n;
+    })();
   `;
   try {
     vm.runInContext(script + GATE + '\n;globalThis.__REACHED_END__=true;', ctx, { filename: 'index.html', timeout: 15000 });
@@ -123,6 +138,7 @@ for (const [i, m] of [...out.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/sc
     process.exit(1);
   }
   console.log(`all ${ctx.__FILTCHECKED__} "Rep only…" options deal exactly the count they advertise ✓`);
+  ENGINE_RINGS = ctx.__RINGCOUNTS__ ?? null;
 
   /* ── G14: All cards' "as tested" view is the study card, not a copy of it ─────
      The whole claim of that view is that a card looks there exactly as it looks when
@@ -312,6 +328,28 @@ console.log(`all ${(P.criteria ?? []).length} focus points have at least one car
     process.exit(1);
   }
   console.log(`Ring 0 is ${Object.keys(spine).length} keys, every one resolving to the card audit/spine.mjs chooses ✓`);
+
+  /* ── G15: the engine's rings are audit/spine.mjs's rings ─────────────────────
+     `ringOf` is written twice — in audit/spine.mjs, and again inside the shipped page,
+     which imports nothing because it is one offline file. Two implementations of "which
+     ring is this card in" do not fail loudly when they drift: they deal a different deck
+     from the one the spec describes and measure-spec.mjs prints, and every screen still
+     looks right. The page counted its own rings during the smoke test above, in its own
+     scope; this is the comparison. */
+  const { ringCounts } = await import('./audit/spine.mjs');
+  const want = ringCounts(P, ckey);
+  if (!ENGINE_RINGS) {
+    console.error('✗ the shipped page reported no ring counts — has ringOf/HASRINGS been renamed, or has PACK.spine gone?');
+    process.exit(1);
+  }
+  if (ENGINE_RINGS.join(',') !== want.join(',')) {
+    console.error('✗ the page deals different rings from the ones audit/spine.mjs describes:');
+    console.error(`    page      : ${ENGINE_RINGS.map((n, i) => `Ring ${i} ${n}`).join(' · ')}`);
+    console.error(`    spine.mjs : ${want.map((n, i) => `Ring ${i} ${n}`).join(' · ')}`);
+    console.error('\n✗ NOT SHIPPING. The reader would be dealt a deck nobody reviewed.');
+    process.exit(1);
+  }
+  console.log(`rings agree, page and spine.mjs: ${want.map((n, i) => `Ring ${i} ${n}`).join(' · ')} ✓`);
 }
 
 /* The declaration has to REACH the reader, or culling to honest numbers just means

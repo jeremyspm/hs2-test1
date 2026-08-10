@@ -469,6 +469,19 @@ h2.sec{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--tx
    as a stray tag rather than a button. */
 .cmend{margin-left:auto;flex:0 0 auto;display:flex;align-items:center;gap:8px}
 .empty{color:var(--tx3);text-align:center;padding:40px 10px;font-size:14px}
+/* ---- the ring bar: the one progress claim the tool makes ----
+   Opaque, not glass: it sits still and is read, and nothing moves behind it.
+   min-width:0 on the flex child because the ring line wraps at 375px and a long
+   focus-point name would otherwise push the whole bar wider than the viewport. */
+.ringbar{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px 13px;margin:0 0 12px;min-width:0}
+.ringline{font-size:14px;color:var(--tx);line-height:1.45}
+.ringline b{color:var(--acc-tx)}
+.ringsub{font-size:12.5px;color:var(--tx3);margin-top:3px;line-height:1.5}
+.ringsub2{margin-top:9px}
+.ringwarn{margin-top:9px;font-size:12.5px;line-height:1.55;color:var(--tx2);background:var(--gHard);border:1px solid var(--bHard);border-radius:9px;padding:9px 11px}
+.ringwarn .btn{margin-top:7px}
+.ringdone h3{margin:0 0 8px}
+.ringdone p{font-size:14px;line-height:1.6;color:var(--tx2);margin:0 0 10px}
 .foot{margin-top:26px;text-align:center;font-size:11.5px;color:var(--tx3)}
 
 /* ================= the cram session ==================================
@@ -12674,6 +12687,13 @@ if(!S.flags) S.flags={};           // …and before cards could be flagged
    defaulted here rather than in migrate(), which returns early on a v3 blob, so a
    reader with saved progress picks them up empty and fills them as they go. Nothing
    here is read by the Progress projection — see the note over `S.typed` below. */
+/* …and before the deck was dealt in rings. `lock` is cardKey → {n,t}: how many
+   qualifying correct answers, and when the last one counted. `ring` is which ring the
+   reader has chosen to be in, or the string 'any' for the escape hatch. Both additive
+   and both default empty, so a saved blob from before the rings arrives at ring 0 with
+   nothing locked — which is the honest starting position, not a regression. */
+if(!S.lock)  S.lock={};
+if(S.ring===undefined) S.ring=0;
 if(!S.sess)  S.sess={d:'',n:0,goal:0};
 if(!S.typed) S.typed={};           // cardKey -> {a,c,n}: attempted / clean / near-miss
 if(!S.ovr)   S.ovr=[];             // "I was right" overrides, newest last, capped
@@ -14027,7 +14047,46 @@ function systemBlocks(){
   if(orphan.length) blocks.push({id:'_rest',name:'Everything else',topics:orphan});
   return blocks;
 }
+/* The deck for one ring. Ring 0 is dealt in the order the COURSE publishes its focus
+   points, because that is the order the reader will meet them in every other document
+   they own; the rest are dealt round-robin across focus points, weakest first, so no
+   single point can eat a session. Locked cards drop out — they are the ring's own
+   definition of done — but a card that has been answered right once and is waiting out
+   its hour stays in, because it has not been proven yet. */
+function buildRingDeck(types,ring){
+  const src=deckSource(types).filter(c=>ringOf(c)===ring&&!isLocked(c.key));
+  if(ring===0){
+    const order={}; (PACK.criteria||[]).forEach((c,i)=>order[c.id]=i);
+    return src.slice().sort((a,b)=>(order[a.crit]??99)-(order[b.crit]??99));
+  }
+  const by={};
+  src.forEach(c=>(by[c.crit||'_']=by[c.crit||'_']||[]).push(c));
+  /* Weakest point first, so the round-robin starts where the reader is worst — and
+     inside a point, weakest card first for the same reason. */
+  const score=id=>{ const cs=by[id]; return cs.filter(c=>!cardWeak(c)).length/cs.length; };
+  const groups=Object.keys(by).sort((a,b)=>score(a)-score(b))
+    .map(id=>by[id].slice().sort((a,b)=>cardWeak(b)-cardWeak(a)));
+  /* A STRICT round-robin, not the proportional stride-merge the unringed deck uses.
+     They look interchangeable and are not: strideMerge spreads each group evenly across
+     the whole deck, so a focus point holding 78 cards contributes about one card in
+     four — cvs-5 turned up three times in the first eight. That is the imbalance the
+     rings exist to correct. One card per focus point per cycle, and a big point simply
+     takes more cycles to exhaust. */
+  const out=[];
+  for(let i=0;out.length<src.length;i++){
+    let dealt=false;
+    for(const g of groups) if(i<g.length){ out.push(g[i]); dealt=true; }
+    if(!dealt) break;
+  }
+  return out;
+}
 function buildDeck(types){
+  /* THE RINGS ARE NOT A PROPERTY OF THE VIEW. This read `VIEW==='study'` for one
+     afternoon, and the coupling is silently wrong twice over: the deck is built lazily,
+     so a rebuild triggered while any other view is on screen produces an UNRINGED deck
+     that the study view then deals; and ⚡ HELP ME CRAM deals from this same deck, where
+     the rings are exactly what a short session wants — Ring 0 IS the cram session. */
+  if(HASRINGS()) return buildRingDeck(types,ringNow());
   const cm={}; (PACK.criteria||[]).forEach(c=>cm[c.id]=c);
   const src=deckSource(types);
   /* Order INSIDE each topic by rank, THEN stride-merge the topics.
@@ -14056,12 +14115,116 @@ function buildDeck(types){
   }
   return out;
 }
+/* ════════════ THE RINGS — breadth before depth, and a lock to prove it ════════════
+   Turned on only by a pack that declares `spine` (criterion id → the card key that
+   LEADS that focus point, resolved at build time). Without it every function here
+   falls through and the deck behaves exactly as it did before, which is what keeps
+   this template usable by a pack that has no criteria at all.
+
+   WHY. This pack holds 87 cards on the functional anatomy of the heart and 1 on
+   internal respiration, against a paper where each focus point is worth about one
+   question. Dealt in pack order or at random, a reader spends a session on ground
+   worth one mark while a different point worth the same mark never appears. So the
+   deck is dealt in rings, and a ring is not offered until the ring inside it is
+   locked:
+
+     Ring 0  the spine — ONE card per focus point, the best-evidenced one.
+             Clear it and you have answered a question on every examinable area.
+     Ring 1  every card on a focus point holding fewer than SIX. Scarcity makes each
+             one load-bearing: miss it and the point is missed entirely.
+     Ring 2  the rest of the lecturer's own questions, round-robin across focus
+             points, weakest first. Never pack order.
+     Ring 3  background — her lecture and this pack's own writing, explicitly last.
+
+   LOCKED is deliberately expensive: correct TWICE, in sittings at least an hour
+   apart. One correct answer proves you can recall it now; a second an hour later is
+   the first evidence it survived. Getting a locked card wrong unlocks it and returns
+   it to the front of its ring — the claim the header makes has to stay falsifiable. */
+const RINGS=[
+  {n:0,name:'the spine',      blurb:'One card for every focus point the test can ask about.'},
+  {n:1,name:'the thin points',blurb:'Focus points with almost nothing behind them — every card here is load-bearing.'},
+  {n:2,name:'her questions',  blurb:'The rest of the questions the lecturer has actually set.'},
+  {n:3,name:'background',     blurb:'Her lecture notes and this pack’s own writing. Last, and skippable.'},
+];
+const HASRINGS=()=>!!(PACK.spine&&Object.keys(PACK.spine).length&&(PACK.criteria||[]).length);
+const THINAT=6;                      // "fewer than six cards" — §4 of the rebuild spec
+/* Cards per focus point, counting alsoCrit: a point is thin when little TOUCHES it,
+   not when little leads it. Computed once off the pack, which never changes at run
+   time. */
+let _perPoint=null;
+function perPoint(){
+  if(_perPoint) return _perPoint;
+  _perPoint={};
+  for(const c of PACK.cards){ if(c.type==='rail') continue;
+    for(const id of [c.crit].concat(c.alsoCrit||[]).filter(Boolean)) _perPoint[id]=(_perPoint[id]||0)+1; }
+  return _perPoint;
+}
+let _spineKeys=null;
+const spineKeys=()=>_spineKeys||(_spineKeys=new Set(Object.values(PACK.spine||{})));
+function ringOf(c){
+  if(!HASRINGS()) return 0;
+  /* `key` is added by allCards()/cardsOf() as cards leave PACK — a raw PACK.cards entry
+     does not carry one, and `spineKeys().has(undefined)` is false for every card, which
+     silently empties Ring 0 and spills all 38 spine cards into the rings behind it.
+     Caught by G15 in build.mjs, which counts rings over PACK.cards directly. */
+  if(spineKeys().has(c.key||ckey(c))) return 0;
+  const pp=perPoint();
+  if([c.crit].concat(c.alsoCrit||[]).filter(Boolean).some(id=>(pp[id]||0)<THINAT)) return 1;
+  return c.tier==='verbatim'?2:3;
+}
+
+/* ---- the lock ---- */
+const LOCKGAP=3600e3;                // an hour: the operational definition of "another sitting"
+const lockRec=k=>S.lock[k]||null;
+const isLocked=k=>!!(S.lock[k]&&S.lock[k].n>=2);
+/* Called from every place a card is answered. `ok` is the reader's own verdict on a
+   flashcard and the marker's on everything else. */
+function lockMark(key,ok){
+  if(!HASRINGS()) return;
+  if(!ok){ if(S.lock[key]) delete S.lock[key]; save(); return; }
+  const r=S.lock[key], now=Date.now();
+  if(!r) S.lock[key]={n:1,t:now};
+  else if(now-r.t>=LOCKGAP) S.lock[key]={n:Math.min(2,r.n+1),t:now};
+  else return;                        // right again inside the same hour proves nothing new
+  save();
+}
+const pointLocked=id=>isLocked((PACK.spine||{})[id]);
+const pointsLocked=()=>(PACK.criteria||[]).filter(c=>pointLocked(c.id)).length;
+/* A ring is cleared when every card in it is locked. Measured over the FULL pool, not
+   the reader's current filters — a ring you cleared by narrowing the scope is not a
+   ring you cleared. */
+function ringCards(n){
+  return cardsOf(ALLTYPES,'all').filter(inPool).filter(answerable).filter(c=>ringOf(c)===n);
+}
+function ringProgress(n){
+  const cs=ringCards(n), done=cs.filter(c=>isLocked(c.key)).length;
+  return {total:cs.length,done,left:cs.length-done};
+}
+/* The furthest ring the reader has earned. Never skips: ring 2 stays shut while ring
+   1 has a card in it, however much of ring 2 is already locked. */
+function ringOpen(){
+  for(let n=0;n<RINGS.length;n++) if(ringProgress(n).left>0) return n;
+  return RINGS.length-1;
+}
+/* Which ring is actually being dealt. `S.ring` is the reader's choice and is honoured
+   only as far as they have earned — except for `any`, the escape hatch: it drops
+   straight into ring 2 and the screen says out loud that the spine is not locked yet.
+   ([[two-doors-pattern]] — a reduced pool must announce itself and must never be a
+   hard lock.) */
+function ringNow(){
+  if(!HASRINGS()) return null;
+  if(S.ring==='any') return 2;
+  const open=ringOpen();
+  const want=typeof S.ring==='number'?S.ring:open;
+  return Math.min(want,open);
+}
+
 /* In memory only — a deck is a sitting, not saved progress. */
 const DECK={};
 const deckKey=t=>Array.isArray(t)?t.join('+'):t;
 /* Any change to the scope must rebuild the deck, or the reader keeps being dealt
    cards from the pool they just narrowed away from. The filters go in whole. */
-const deckSig=()=>[S.door,bgOn(),FILTDIMS.map(d=>S.filters[d].join(',')).join(';')].join('|');
+const deckSig=()=>[S.door,bgOn(),HASRINGS()?ringNow():'',FILTDIMS.map(d=>S.filters[d].join(',')).join(';')].join('|');
 /* Split out of nextCard so the cram session can look at the deck it is about to be
    dealt from without consuming a card off it. Same deck, same rebuild rule. */
 function ensureDeck(types){
@@ -14070,9 +14233,21 @@ function ensureDeck(types){
   if(!d||d.sig!==sig||d.i>=d.cards.length) d=DECK[k]={cards:buildDeck(types),i:0,sig};
   return d;
 }
+/* A CARD LOCKED DURING THIS SITTING MUST NOT BE DEALT AGAIN, and the deck cannot be
+   rebuilt to achieve it: the signature does not change when a card locks, and even if
+   it did, rebuilding mid-sitting reshuffles the round-robin and re-deals cards the
+   reader has just seen. So the lock is applied at the moment of dealing, and the
+   exhausted deck is left to `ensureDeck` to rebuild — which filters the locked ones out
+   properly. Without this the end of Ring 0 never arrives: the deck still holds 38 cards
+   and the reader is dealt spine cards they have already locked, for ever. */
 function nextCard(types){
-  const d=ensureDeck(types);
-  return d.cards.length?d.cards[d.i++]:null;
+  const skip=c=>HASRINGS()&&isLocked(c.key);
+  for(let pass=0;pass<3;pass++){                 // deal · rebuild · confirm empty
+    const d=ensureDeck(types);
+    if(!d.cards.length) return null;
+    while(d.i<d.cards.length){ const c=d.cards[d.i++]; if(!skip(c)) return c; }
+  }
+  return null;
 }
 /* A missed card comes back inside the same sitting rather than waiting a whole
    pass. Again lands sooner than Hard. */
@@ -14574,14 +14749,59 @@ document.addEventListener('click',e=>{
    flips, a written answer reveals its marking points, a machine-marked card gets
    answered and marked — but that is now an INTERACTION the card chooses, not a
    destination the reader has to choose first.                                  */
+/* ---- the ring header: one line, one number ----
+   "Focus point 7 of 38 locked" is the only progress claim worth making on this pack,
+   and it is falsifiable: it means seven spine cards have been answered right twice, an
+   hour or more apart. Everything else a cram tool counts — cards seen, minutes spent,
+   percentage mastered — measures effort rather than coverage. */
+function ringHeadHTML(){
+  if(!HASRINGS()) return '';
+  const n=ringNow(), r=RINGS[n], p=ringProgress(n), locked=pointsLocked(), tot=(PACK.criteria||[]).length;
+  const days=daysLeft();
+  const escaped=S.ring==='any'&&ringOpen()===0;
+  return `<div class="ringbar">
+      <div class="ringline"><b>Focus point ${locked} of ${tot} locked</b> · Ring ${n} — ${esc(r.name)}${
+        days!=null?` · ${days} day${days===1?'':'s'}`:''}</div>
+      <div class="ringsub">${esc(r.blurb)} <b>${p.left}</b> left in this ring.</div>
+      ${escaped?`<div class="ringwarn">You asked to be dealt anything, so this is Ring 2 — the spine is <b>not</b> locked yet. ${
+        ringProgress(0).left} focus point${ringProgress(0).left===1?'':'s'} still ${
+        ringProgress(0).left===1?'has':'have'} an unanswered lead card. <button class="btn ghost" id="ringBack">Back to the spine</button></div>`
+      :n>0?'':`<div class="ringsub2"><button class="btn ghost" id="ringAny">Deal me anything</button></div>`}
+    </div>`;
+}
+function wireRingBar(){
+  const a=$('#ringAny'); if(a&&a.addEventListener) a.onclick=()=>{ S.ring='any'; save(); renderStudy(); };
+  const b=$('#ringBack'); if(b&&b.addEventListener) b.onclick=()=>{ S.ring=0; save(); renderStudy(); };
+  const n=$('#ringNext'); if(n&&n.addEventListener) n.onclick=()=>{ S.ring=ringOpen(); save(); renderStudy(); };
+}
+/* The end of a ring is a real screen, not an empty queue. It says what was locked, and
+   it is the only place the next ring is offered. */
+function ringDoneHTML(){
+  const n=ringNow(), r=RINGS[n], open=ringOpen(), tot=(PACK.criteria||[]).length;
+  const more=open>n||RINGS[open]&&open!==n;
+  return `<div class="card ringdone">
+      <h3>Ring ${n} locked — ${esc(r.name)}</h3>
+      <p>${n===0
+        ? `You have now answered a question on <b>every one of the ${tot} focus points</b> the test is allowed to ask about — each of them twice, in sittings an hour or more apart.`
+        : `Every card in this ring is locked.`}</p>
+      <p class="ringsub">Focus points locked: <b>${pointsLocked()} of ${tot}</b>.</p>
+      ${more?`<div class="btnrow"><button class="btn primary" id="ringNext">Start Ring ${open} — ${esc(RINGS[open].name)}</button></div>`
+            :`<p class="ringsub">That is the whole pack. Nothing is left unlocked.</p>`}
+    </div>`;
+}
 function renderStudy(){
   /* The cram button rides ABOVE the doors on purpose. Study opens by asking the reader
      to choose a door and then read a note about deck composition — which is the right
      screen for someone who has decided to work, and the wrong one for someone deciding
      whether to. The first thing on the page should be the thing that needs no decision. */
-  const G=cramCTA()+gate(renderStudy,ALLTYPES);
+  const G=cramCTA()+ringHeadHTML()+gate(renderStudy,ALLTYPES);
   setTimeout(wireCramCTA,0);
+  setTimeout(wireRingBar,0);
   CUR=nextCard(ALLTYPES);
+  /* With rings on, an empty deck is not an empty pool — it is a ring finished, and it
+     gets a screen that says so. Only fall through to the filter dead-end below when
+     the reader has genuinely filtered everything away. */
+  if(!CUR&&HASRINGS()&&!filtOn()){ view.innerHTML=G+ringDoneHTML(); setTimeout(wireRingBar,0); return; }
   /* An empty queue used to say "No cards in this topic yet", which was true of the
      one filter that existed then and is a dead end now: five dimensions can
      intersect to nothing, and the reader has to be told WHICH combination did it and
@@ -14662,6 +14882,11 @@ function wireRate(c){
   $$('.rate button').forEach(b=>b.onclick=()=>{
     const r=+b.dataset.r;
     srsRate(c.key,r);
+    /* Good and Easy are the reader saying they had it; Again and Hard are not. On a
+       self-graded card the reader IS the marker, so their verdict is what the lock
+       counts — anything else would be the tool second-guessing the only person who
+       can see the answer they gave. */
+    lockMark(c.key,r>=2);
     if(r<=1) requeue(ALLTYPES,c,r===0?4:10);   // Again comes back sooner than Hard
     afterCard();
   });
@@ -14797,6 +15022,10 @@ function studyAuto(G,head,c,tot){
     $('#body').innerHTML=runnerHTML(r);
     const m=S.mcq[c.key]||{a:0,c:0}; m.a++; if(ok)m.c++;
     m.g=(m.g||0)+got; m.t=(m.t||0)+tot; S.mcq[c.key]=m; save();
+    /* FULL marks or it does not count. A cloze with ten blanks and nine right is a
+       card the reader cannot yet answer, and locking it would put a focus point in the
+       "done" column on the strength of a near miss. */
+    lockMark(c.key,ok);
     if(!ok) requeue(ALLTYPES,c,got?10:4);      // partly right waits longer than fully wrong
     $('#fb').innerHTML=feedbackHTML(c,r.resp,`${ok?'✅':got?'➖':'❌'} <b>${got} / ${tot} mark${tot>1?'s':''}.</b> `)+srcHTML(c)+
       `<div class="btnrow"><button class="btn primary" id="next">Next ↵</button></div>`;
@@ -15232,6 +15461,7 @@ function cramTyped(bar,head,c,plan){
   function cramCredit(card,verdict){
     const tot=cardMarks(card), m=S.mcq[card.key]||{a:0,c:0};
     m.a++; m.c++; m.g=(m.g||0)+tot; m.t=(m.t||0)+tot; S.mcq[card.key]=m; save();
+    lockMark(card.key,true);           // typing it from memory is the strongest evidence there is
     if(verdict==='near') requeue(ALLTYPES,card,10);
     $('#tfb').innerHTML+=srcHTML(card);
     const row=$('.card .btnrow');

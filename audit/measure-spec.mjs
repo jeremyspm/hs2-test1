@@ -13,7 +13,8 @@
 
    It measures; it does not gate. run-all.mjs does not call it. */
 import { loadPack } from './load-pack.mjs';
-import { spineOf, partsOf } from './spine.mjs';
+import { spineOf, partsOf, ringCounts } from './spine.mjs';
+import { ckey } from './ckey.mjs';
 
 const { pack: P } = loadPack();
 
@@ -68,8 +69,12 @@ const claims = [
   ['§4', 'of those, pinned to her lecture', 2, spine.filter((s) => s.card?.tier === 'taught').length],
   ['§4', 'of those, background reading', 1, spine.filter((s) => s.card?.tier === 'textbook').length],
   ['§4', 'focus points declared thin (below the old authoring floor)', 12, (P.thin ?? []).length],
-  ['§4', 'cards in Ring 1 — every card on a focus point holding fewer than 6', 29,
-    D.filter((c) => critsOf(c).some((id) => (perPoint[id] ?? 0) < 6)).length],
+  /* The ring sizes as the engine DEALS them, from the same module the engine is gated
+     against — not "every card on a thin focus point", which double-counts the 15 spine
+     cards that sit on one and are dealt in Ring 0. */
+  ['§4', 'cards in Ring 1 — the thin points, spine cards excluded', 14, ringCounts(P, ckey)[1]],
+  ['§4', 'cards in Ring 2 — the rest of her questions', 274, ringCounts(P, ckey)[2]],
+  ['§4', 'cards in Ring 3 — background', 88, ringCounts(P, ckey)[3]],
 
   ['§6 C1', 'cards carrying no focus point at all — CLOSED 11 Aug', 0,
     D.filter((c) => !critsOf(c).length).length],

@@ -40,3 +40,43 @@ export function spineFor(cards, critId) {
 export function spineOf(pack) {
   return (pack.criteria ?? []).map((cr) => ({ id: cr.id, card: spineFor(pack.cards ?? [], cr.id) }));
 }
+
+/* ── which ring a card is dealt in ────────────────────────────────────────────
+   The engine carries its own copy of this — it ships as one offline page and imports
+   nothing — so build.mjs runs BOTH and fails if the four counts disagree. That gate is
+   the only thing making "Ring 1 holds 14 cards" mean the same in the spec and in the
+   reader's hands.
+
+   THINAT is the "fewer than six cards" of §4, counted over `crit` AND `alsoCrit`,
+   because a point is thin when little TOUCHES it, not when little leads it. */
+export const THINAT = 6;
+
+export function ringsOf(pack) {
+  const cards = (pack.cards ?? []).filter((c) => c.type !== 'rail' ? true : true);
+  const per = {};
+  for (const c of cards) {
+    if (c.type === 'rail') continue;
+    for (const id of [c.crit, ...(c.alsoCrit ?? [])].filter(Boolean)) per[id] = (per[id] ?? 0) + 1;
+  }
+  const spineKeys = new Set(Object.values(pack.spine ?? {}));
+  const ckeyOf = new Map();   // filled by the caller's ckey, kept out of here on purpose
+  return { per, spineKeys, ckeyOf };
+}
+
+/** 0-3 for one card. `isSpine` is passed in because the key hash lives in ckey.mjs. */
+export function ringOfCard(c, per, isSpine) {
+  if (isSpine) return 0;
+  if ([c.crit, ...(c.alsoCrit ?? [])].filter(Boolean).some((id) => (per[id] ?? 0) < THINAT)) return 1;
+  return c.tier === 'verbatim' ? 2 : 3;
+}
+
+/** [n0, n1, n2, n3] over every card the engine would consider dealing. */
+export function ringCounts(pack, ckey) {
+  const { per, spineKeys } = ringsOf(pack);
+  const out = [0, 0, 0, 0];
+  for (const c of pack.cards ?? []) {
+    if (c.damaged) continue;                       // the engine's `answerable` filter
+    out[ringOfCard(c, per, spineKeys.has(ckey(c)))]++;
+  }
+  return out;
+}
