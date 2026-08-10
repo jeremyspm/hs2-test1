@@ -137,6 +137,52 @@ for (const [i, m] of [...out.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/sc
       for(const c of PACK.cards){ if(c.damaged) continue; n[ringOf(c)]++; }
       globalThis.__RINGCOUNTS__=n;
     })();
+    /* ── G18: the easy opening REORDERS Round 1 and never re-crews it ──────────
+       coldOpen promotes three short machine-marked questions to the front for a
+       reader who has answered nothing. Ordering is a judgement call; membership is
+       the claim the rebuild spec reviewed card by card. Compare the set, not the
+       list, and check the promotion actually happened — a filter that silently
+       matches nothing would leave the five-mark essay as card one and pass every
+       other gate in this file. No backticks: this whole thing is inside one. */
+    ;(function(){
+      if(typeof coldOpen!=='function'||!HASRINGS()){ globalThis.__COLD__=null; return; }
+      const base=cardsOf(ALLTYPES,'all').filter(inPool).filter(answerable).filter(c=>ringOf(c)===0);
+      const got=coldOpen(base.slice());
+      const set=new Set(got);
+      globalThis.__COLD__={
+        n:got.length, base:base.length,
+        same:got.length===base.length&&base.every(c=>set.has(c)),
+        moved:base.length>2&&got[0]!==base[0],
+        head:got.slice(0,3).map(c=>c.type+'/'+c.tier),
+      };
+    })();
+    /* ── G19: all four Spine Bar states are reachable ─────────────────────────
+       A state nobody can ever reach is a lie drawn in CSS. SEEN in particular is
+       computed differently from the other three — off any card on the topic rather
+       than off its lead card — so it is the one that can quietly stop happening.
+       Drives S.lock and S.mcq synthetically and reads pointState back. */
+    ;(function(){
+      if(typeof pointState!=='function'||!HASRINGS()){ globalThis.__SEGSTATES__=null; return; }
+      const cr=(PACK.criteria||[]).find(c=>(PACK.spine||{})[c.id]&&critCards(c.id).length>1);
+      if(!cr){ globalThis.__SEGSTATES__=[]; return; }
+      const lead=(PACK.spine||{})[cr.id];
+      const other=critCards(cr.id).find(c=>c.key!==lead&&!isRecall(c));
+      const keepL=S.lock, keepM=S.mcq, hit={};
+      S.lock={}; S.mcq={}; hit[pointState(cr.id)]=1;
+      if(other){ S.mcq[other.key]={a:1,c:1,g:1,t:1}; hit[pointState(cr.id)]=1; }
+      S.lock[lead]={n:1,t:Date.now()}; hit[pointState(cr.id)]=1;
+      S.lock[lead]={n:2,t:Date.now()}; hit[pointState(cr.id)]=1;
+      S.lock=keepL; S.mcq=keepM;
+      globalThis.__SEGSTATES__=Object.keys(hit);
+    })();
+    /* ── G20: the bar draws one segment per focus point, in blocks ───────────── */
+    ;(function(){
+      if(typeof spineBarHTML!=='function'||!HASRINGS()){ globalThis.__SPINE__=null; return; }
+      const h=spineBarHTML();
+      globalThis.__SPINE__={segs:(h.match(/class="sseg /g)||[]).length,
+                            groups:(h.match(/class="spinegrp"/g)||[]).length,
+                            crits:(PACK.criteria||[]).length};
+    })();
   `;
   try {
     vm.runInContext(script + GATE + '\n;globalThis.__REACHED_END__=true;', ctx, { filename: 'index.html', timeout: 15000 });
@@ -177,6 +223,100 @@ for (const [i, m] of [...out.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/sc
     process.exit(1);
   }
   console.log('“as tested” renders through the study card’s own head/face functions ✓');
+
+  /* ── G17: every kind of lead card can actually reach LOCKED ───────────────────
+     This gate exists because the tool shipped for a week with two of its 38 lead
+     cards unlockable. Three of the four study runners called lockMark; studyWritten
+     did not, and two focus points have a WRITTEN lead card — so Round 1 could never
+     be completed and Round 2 could never open through the door built to open it.
+
+     Nothing else here would have caught it: the pack was correct, the spine resolved,
+     the rings counted, the page ran. The bug lived in one of four near-identical
+     functions, in the branch nobody re-reads. Structural, in the artifact's own
+     source: a runner either calls lockMark itself or delegates to wireRate, which
+     does. Add a fifth runner and this fails until it is wired. */
+  const RUNNERS = ['studyRail', 'studyFlash', 'studyWritten', 'studyAuto'];
+  const unlockable = [];
+  for (const fn of RUNNERS) {
+    const m = script.match(new RegExp('\\nfunction ' + fn + '\\([^)]*\\)\\{[\\s\\S]*?\\n\\}'));
+    if (!m) { console.error(`✗ ${fn} not found — the study runners have been renamed`); process.exit(1); }
+    if (!/lockMark\(|wireRate\(/.test(m[0])) unlockable.push(fn);
+  }
+  if (unlockable.length) {
+    console.error(`✗ NOT SHIPPING. ${unlockable.join(', ')} never calls lockMark — a lead card dealt by it can never lock, so its round can never be completed.`);
+    process.exit(1);
+  }
+  console.log(`all ${RUNNERS.length} study runners record the lock ✓`);
+
+  const cold = ctx.__COLD__;
+  if (cold) {
+    if (!cold.same) {
+      console.error(`✗ NOT SHIPPING. The easy opening changed Round 1's MEMBERSHIP: ${cold.base} cards in, ${cold.n} out. It may reorder the round and nothing else.`);
+      process.exit(1);
+    }
+    if (!cold.moved) {
+      console.error('✗ the easy opening matched nothing — a cold reader still opens on whatever the course lists first. Check the verbatim/mcq/stem-length filter in coldOpen.');
+      process.exit(1);
+    }
+    const wrong = cold.head.filter(h => h !== 'mcq/verbatim');
+    if (wrong.length) {
+      console.error(`✗ the first cards of a cold Round 1 are ${cold.head.join(', ')} — they are meant to be short machine-marked questions from a past paper.`);
+      process.exit(1);
+    }
+    console.log(`a cold reader opens on ${cold.head.length} short past-paper questions, and Round 1 still holds all ${cold.n} ✓`);
+  }
+
+  /* ── G21: the reader never meets the word "ring" ──────────────────────────────
+     The identifiers stay `ring` on purpose — renaming sixty of them buys nothing
+     anybody can see — which is exactly why this is easy to get wrong: the word is
+     everywhere in the source, so a new string reading "38 left in this ring" looks
+     native. It happened twice in one afternoon.
+
+     THE FIRST VERSION OF THIS GATE WAS WORSE THAN NONE. It rendered nine named
+     surfaces and grepped their output, passed, and the words "38 in this ring" were on
+     the screen the whole time — the filter bar simply was not on the list. An
+     enumerated checklist of surfaces is a checklist of the surfaces you remembered.
+
+     So: scan the ENGINE, whole, with comments stripped. Not the built page — the pack
+     says "cartilage rings" seven times and is right to. The pattern is the word with a
+     prose delimiter in front and no identifier character behind, which every
+     `ringOf(`, `S.ring=`, `.ringbar` and `(types,ring)` fails and every sentence hits.
+     Zero false positives on the engine as it stands. */
+  {
+    const eng = tpl
+      .replace(/\/\*[\s\S]*?\*\//g, '')        // JS block comments
+      .replace(/<!--[\s\S]*?-->/g, '')         // HTML comments
+      .replace(/(^|\s)\/\/.*$/gm, '$1');       // line comments, but not the // in https://
+    const leaks = [...eng.matchAll(/[\s>"'][Rr]ings?(?![A-Za-z0-9_(])/g)]
+      .map(m => eng.slice(Math.max(0, m.index - 70), m.index + 45).replace(/\s+/g, ' '));
+    if (leaks.length) {
+      console.error(`✗ NOT SHIPPING. The word "ring" is in ${leaks.length} reader-facing engine string(s):`);
+      for (const l of leaks.slice(0, 8)) console.error('    …' + l);
+      console.error('  Nobody knows what a ring is. Say Round, and never without its plain-English subtitle.');
+      process.exit(1);
+    }
+    console.log('no reader-facing engine string says "ring" ✓');
+  }
+
+  const seg = ctx.__SEGSTATES__;
+  if (seg) {
+    const want = ['new', 'seen', 'half', 'locked'];
+    const missing = want.filter(s => !seg.includes(s));
+    if (missing.length) {
+      console.error(`✗ NOT SHIPPING. Spine Bar state(s) no reader can ever reach: ${missing.join(', ')}. A state drawn in CSS and never returned is a lie.`);
+      process.exit(1);
+    }
+  }
+  const sp = ctx.__SPINE__;
+  if (sp) {
+    /* Counted inside the vm — `pack` up here is the source TEXT, and the loaded pack
+       object does not exist until well below this block. */
+    if (sp.segs !== sp.crits) {
+      console.error(`✗ NOT SHIPPING. The Spine Bar draws ${sp.segs} segments for ${sp.crits} focus points.`);
+      process.exit(1);
+    }
+    console.log(`the Spine Bar draws all ${sp.segs} focus points in ${sp.groups} block(s), every state reachable ✓`);
+  }
 }
 
 /* Stats come from LOADING the pack, not from regexing it. pack.js is now generated

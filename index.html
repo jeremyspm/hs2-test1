@@ -93,6 +93,25 @@ header{display:flex;align-items:center;gap:10px;margin:6px 0 12px;flex-wrap:wrap
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:22px 22px 20px;position:relative;animation:pop .28s cubic-bezier(.2,.9,.3,1.2)}
 @keyframes pop{from{opacity:0;transform:translateY(10px) scale(.99)}to{opacity:1;transform:none}}
 .cmeta{display:flex;align-items:center;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+/* ---- the reason row: prose, not chips (see cardHeadHTML) ----
+   `min-width:0` on the prose column or a long topic name pushes the card past the
+   viewport at 375px, taking the page with it. */
+.creason{display:flex;align-items:flex-start;gap:8px;margin-bottom:11px;min-width:0}
+.reason{min-width:0;font-size:11.5px;line-height:1.55;color:var(--tx3)}
+.reason b{color:var(--tx2);font-weight:700}
+/* The source phrase is the same `data-prov` button as the old chip, restyled as a
+   dotted-underlined phrase so it reads as part of the sentence and still looks
+   pressable. Colour still carries the tier. */
+.prov.ln{display:inline;background:none;border:0;padding:0;border-radius:0;font-size:11.5px;
+  font-weight:700;text-transform:none;letter-spacing:0;
+  text-decoration:underline dotted;text-underline-offset:2px}
+.prov.ln.verbatim{color:var(--good)}
+.prov.ln.taught{color:var(--acc-tx)}
+.prov.ln.textbook{color:var(--tx3);font-weight:600}
+.prov.ln.unverified{color:var(--bad)}
+.reasonnote{font-size:11.5px;line-height:1.55;color:var(--tx3);background:var(--card2);
+  border-radius:8px;padding:8px 10px;margin:0 0 12px}
+.reasonnote b{color:var(--tx2)}
 .tag{font-size:10.5px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:3px 8px;border-radius:6px;background:var(--card2);border:1px solid var(--line2);color:var(--tx2)}
 .tag.acc{background:var(--acc-soft);color:var(--acc-tx);border-color:var(--bAcc)}
 .tag.right{margin-left:auto;color:var(--tx3);border-color:var(--line)}
@@ -354,7 +373,7 @@ h2.sec{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--tx
 .libnote{margin-top:10px;font-size:12.5px;line-height:1.55;color:var(--tx2);background:var(--card2);
   border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:9px;padding:10px 12px}
 .libnote b{color:var(--tx)}
-/* AS TESTED. The card wears the study card's own classes — .cmeta, .q, .opts, .seq,
+/* AS TESTED. The card wears the study card's own classes — .creason, .q, .opts, .seq,
    .tfrow — because it IS the study card's markup, so almost nothing is needed here.
    `.q` is dialled back only in size: at 19px in a list of sixty it stops reading as a
    list. Everything that carries meaning (the mark count, the option lettering, the
@@ -362,7 +381,7 @@ h2.sec{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--tx
    lookalike instead of the thing itself. */
 .libcard.test{padding:16px 16px 14px}
 .libcard.test .q{font-size:16.5px;margin-bottom:2px}
-.libcard.test .cmeta{margin-bottom:11px}
+.libcard.test .creason{margin-bottom:11px}
 .libcard.test .tface{margin-top:11px}
 .libcard.test .tbtns{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
 .libcard.test .tbtns .btn{flex:1 1 150px;padding:10px 13px;font-size:13px}
@@ -469,6 +488,85 @@ h2.sec{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--tx
    as a stray tag rather than a button. */
 .cmend{margin-left:auto;flex:0 0 auto;display:flex;align-items:center;gap:8px}
 .empty{color:var(--tx3);text-align:center;padding:40px 10px;font-size:14px}
+/* ---- THE SPINE BAR — one segment per focus point, and the lock drawn --------
+   The mechanic already existed in S.lock and nothing on screen showed it: a card
+   locks on the SECOND correct answer an hour later, so a reader's entire first
+   sitting moved no number at all. This is the fix, and it is a redraw of state that
+   was already there — no score, no points, nothing invented.
+
+   Four states, and the middle one is the whole reason this exists: HALF fills on the
+   very first correct answer, ten seconds in. It also teaches the hour rule without a
+   paragraph — a bar of half-fills means come back later.
+
+   375px arithmetic: 375 − 32 padding = 343. 38 segments, 2px inside a system block,
+   7px between blocks. `flex:1 1 0` + `min-width:0` everywhere is what makes that a
+   floor rather than a hope: the segments shrink, they never push the page wide.
+   Opaque, not glass — it is read, not looked through ([[house-design-system]]). */
+.spinewrap{position:sticky;top:0;z-index:30;background:var(--bg);min-height:58px;
+  padding:9px 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line)}
+.spinetop{display:flex;align-items:baseline;gap:8px;min-width:0;margin-bottom:7px}
+.spinetop .n{font-size:13px;font-weight:700;color:var(--tx2);min-width:0;line-height:1.35}
+.spinetop .n b{color:var(--acc-tx);font-weight:800}
+.spinetop .d{font-size:11.5px;color:var(--tx3);white-space:nowrap;flex:0 0 auto}
+.spineq{margin-left:auto;flex:0 0 auto;width:21px;height:21px;padding:0;border-radius:50%;
+  border:1px solid var(--line2);background:var(--card);color:var(--tx3);
+  font:inherit;font-size:12px;font-weight:800;line-height:1;cursor:pointer;align-self:center}
+.spineq:hover,.spineq.on{color:var(--acc-tx);border-color:var(--acc)}
+/* The block labels ride the SAME flex proportions as the bar, so a label sits over its
+   own segments. A block narrower than a fifth of the bar gets its gap and no text —
+   "LYMPHATIC & IMMUNITY" truncated into 36px is noise, and the expanded list names it
+   in full anyway. */
+.spinelabs{display:flex;gap:7px;min-width:0;margin-bottom:4px}
+.spinelab{min-width:0;overflow:hidden;white-space:nowrap;font-size:8.5px;font-weight:800;
+  letter-spacing:.7px;text-transform:uppercase;color:var(--tx3)}
+.spinebar{display:flex;gap:7px;width:100%;min-width:0;background:none;border:0;padding:0;
+  cursor:pointer;-webkit-tap-highlight-color:transparent}
+.spinegrp{display:flex;gap:2px;min-width:0}
+.sseg{flex:1 1 0;min-width:0;height:15px;border-radius:3px;position:relative;overflow:hidden;
+  background:var(--line);opacity:.5;transition:opacity .3s,background .3s,box-shadow .4s}
+.sseg i{position:absolute;left:0;right:0;bottom:0;height:0;background:var(--acc);opacity:.55;
+  transition:height .45s cubic-bezier(.2,.8,.2,1),opacity .45s}
+/* SEEN is an OUTLINE, not a slightly paler fill. At 6.6px wide two flat greys ten
+   percent apart are the same grey, and the difference between "never touched" and
+   "started" is one the reader has to be able to read at a glance. */
+.sseg.seen{opacity:1;background:none;box-shadow:inset 0 0 0 1.5px var(--line2)}
+.sseg.half,.sseg.locked{opacity:1;background:var(--line2)}
+.sseg.half i{height:50%}
+.sseg.locked i{height:100%;opacity:1}
+.sseg.locked{box-shadow:0 0 0 1px var(--bAcc),0 0 8px -2px var(--acc)}
+.spinesub{font-size:11.5px;color:var(--tx3);margin-top:7px;line-height:1.45;min-width:0}
+.spinesub b{color:var(--tx2);font-weight:700}
+/* The expanded list is the blueprint, in place. It is the SAME rows Progress renders —
+   one renderer, so the two surfaces cannot drift apart. */
+.spineopen{background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:12px 13px;margin:0 0 12px}
+.spineopen h4{margin:0 0 3px;font-size:13px}
+.spinehelp{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--acc);
+  border-radius:12px;padding:13px 15px;margin:0 0 12px;font-size:13px;line-height:1.6;color:var(--tx2)}
+.spinehelp dl{margin:9px 0 0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:5px 10px;align-items:baseline}
+.spinehelp dt{font-weight:800;color:var(--tx);white-space:nowrap;font-size:12.5px}
+.spinehelp dd{margin:0;font-size:12.5px;color:var(--tx3);min-width:0}
+@media (prefers-reduced-motion:reduce){ .sseg,.sseg i{transition:none} }
+/* ---- the reward dial: what that answer actually bought ----------------------
+   In spirit from Giga's EarnedReadout (components/studio/DrillView.jsx:246, css :818):
+   dials that DWELL after a grade, before you advance. "Answer → mark → next card" had
+   no punctuation at all, and the one thing worth punctuating is the only claim the
+   tool makes.
+
+   HONEST BY CONSTRUCTION. It reports whatever lockMark actually returned, including
+   "that did not count yet" — Giga's own rule, that a reward fires only when something
+   really advanced, because a celebration over nothing discredits every other signal.
+   Stacked at phone width; two columns only when there is room for two. */
+.earned{display:grid;grid-template-columns:minmax(0,1fr);gap:9px;margin:11px 0 0;
+  padding:11px 13px;border:1px solid var(--line2);border-radius:10px;background:var(--card2)}
+@media (min-width:520px){ .earned{grid-template-columns:minmax(0,auto) minmax(0,1fr);gap:9px 18px} }
+.earned .dial{min-width:0}
+.earned .k{display:block;font-size:9.5px;font-weight:800;letter-spacing:.8px;
+  text-transform:uppercase;color:var(--tx3);margin-bottom:3px}
+.earned .v{display:block;font-size:14px;font-weight:800;color:var(--tx);line-height:1.3}
+.earned .v.on{color:var(--acc-tx)}
+.earned .n{display:block;font-size:11.5px;color:var(--tx3);line-height:1.45;margin-top:3px}
+.earned .n b{color:var(--tx2)}
 /* ---- the ring bar: the one progress claim the tool makes ----
    Opaque, not glass: it sits still and is read, and nothing moves behind it.
    min-width:0 on the flex child because the ring line wraps at 375px and a long
@@ -491,8 +589,12 @@ h2.sec{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--tx
   color:var(--tx);font:inherit;cursor:pointer}
 .bprow:hover{background:var(--card2)}
 .bpmark{width:20px;text-align:center;font-size:14px;color:var(--tx3)}
+/* The same four states as a Spine Bar segment, and the same colour language: indigo
+   means earned. HALF used to be folded into "started", which is precisely the state
+   the reader most needs to see. */
 .bprow.locked .bpmark{color:var(--good)}
-.bprow.started .bpmark{color:var(--hard)}
+.bprow.half .bpmark{color:var(--acc-tx)}
+.bprow.seen .bpmark{color:var(--tx3)}
 .bptx{min-width:0}
 .bptx b{display:block;font-size:13.5px;font-weight:600;line-height:1.35}
 .bpsub{display:block;font-size:11.5px;color:var(--tx3);margin-top:2px}
@@ -569,6 +671,13 @@ h2.sec{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--tx
     <span class="dleft" id="hDays" hidden></span>
     <button class="iconbtn" id="btnTheme" title="Theme">◐</button>
   </header>
+  <!-- THE SPINE BAR. It lives in the SHELL, not in a view, for one reason: the whole
+       point of it is that it never goes away. A progress claim that only exists on the
+       screen you were already looking at is the bug this element was built to fix.
+       Two elements, not one: the bar is sticky and the expanded list is not, because a
+       sticky element cannot be taller than the viewport without eating the page. -->
+  <div id="spine" class="spinewrap" hidden></div>
+  <div id="spineopen"></div>
   <div id="packwarn"></div>
   <div id="onboard"></div>
   <div class="controls">
@@ -13896,6 +14005,9 @@ function nav(v){
   navBtns().forEach(b=>b.classList.toggle('on',b.dataset.v===v));
   if(SECOND(v)) showMore(true);               // never leave the active tab hidden
   VIEWS[v]();
+  /* AFTER the view, not before: the round line under the bar reads `ringNow()`, and a
+     view that changes the scope (drilling one point) has to have changed it already. */
+  renderSpine();
 }
 navBtns().forEach(b=>b.onclick=()=>nav(b.dataset.v));
 $('#navMore').onclick=()=>showMore($('#nav2').classList.contains('hidden'));
@@ -13951,10 +14063,15 @@ function renderOnboard(){
          point and stops when they are locked. Naming a door that is not there is how a
          reader ends up on an empty tab deciding the tool is broken — and that is exactly
          what this paragraph did for one build after the tabs changed. */
-      ?`<p><b>One way in.</b> The queue opens on <b>the spine</b>: one card for each of
-         those focus points, and nothing else until every one is <b>locked</b> —
-         answered right twice, in sittings an hour or more apart. About
-         ${Math.round(nC*0.7)} minutes if you know it. Everything else waits behind that.</p>`
+      /* Named ROUND 1 rather than "the spine", and the bar it fills is named too. The
+         reader is about to dismiss this panel and the words have to survive it — which
+         is what the permanent ? and the line under the Spine Bar are for. */
+      ?`<p><b>One way in.</b> The queue opens on <b>${ROUNDLAB(0)}</b> — ${esc(RINGS[0].sub)},
+         and nothing else until every one is <b>locked</b>: answered right twice, in
+         sittings an hour or more apart. About ${Math.round(nC*0.7)} minutes if you know it.</p>
+       <p>The bar at the top is one segment per topic. Get one right and its segment
+         <b>half-fills</b>; get it right again an hour later and it fills. Tap the bar for
+         the full list, or <b>?</b> for what these words mean.</p>`
       :HASBRIEF()
       ?`<p><b>Two ways in.</b> <b>Read the Brief</b> if the lecture has gone fuzzy — it explains
          each focus point in plain prose. <b>⚡ Help me cram</b> if you would rather just start:
@@ -14077,11 +14194,36 @@ function systemBlocks(){
    single point can eat a session. Locked cards drop out — they are the ring's own
    definition of done — but a card that has been answered right once and is waiting out
    its hour stays in, because it has not been proven yet. */
+/* ── THE FIRST CARD IS NOT THE HARDEST CARD IN THE DECK ───────────────────────
+   Ring 0 deals in published order, so a cold reader's first ever interaction was
+   whatever the course happens to list first — on this pack, a five-mark written answer
+   on the one topic the lecturer has never set a question about. Write five marks of
+   prose from memory, then mark yourself, before you have seen the tool work once.
+   Nobody survives that, and the three hundred questions behind it never get seen.
+
+   So a reader with NOTHING locked opens on up to three short machine-marked questions
+   from the lecturer's own past papers — the cards most likely to produce a correct
+   answer, which is what puts the first segment on the board. It reorders WITHIN the
+   round and never touches membership: the deck reviewed in the rebuild spec is still
+   the deck being dealt, and G18 in build.mjs checks exactly that.
+
+   Measured in CARDS ANSWERED, not locks held. Keying it off `S.lock` was wrong by one
+   sitting: a reader who answers a single question owns one lock record and is no longer
+   "cold" by that test, so their second visit opened on the five-mark essay after all —
+   the exact bounce this exists to prevent. */
+const COLDN=3, COLDSTEM=160;
+function coldOpen(deck){
+  if(answeredN()>=COLDN||deck.length<=COLDN) return deck;
+  const easy=deck.filter(c=>c.tier==='verbatim'&&c.type==='mcq'&&strip(c.q||'').length<=COLDSTEM);
+  if(easy.length<COLDN) return deck;          // half of an easy start is not an easy start
+  const pick=new Set(easy.slice().sort((a,b)=>strip(a.q).length-strip(b.q).length).slice(0,COLDN));
+  return deck.filter(c=>pick.has(c)).concat(deck.filter(c=>!pick.has(c)));
+}
 function buildRingDeck(types,ring){
   const src=deckSource(types).filter(c=>ringOf(c)===ring&&!isLocked(c.key));
   if(ring===0){
     const order={}; (PACK.criteria||[]).forEach((c,i)=>order[c.id]=i);
-    return src.slice().sort((a,b)=>(order[a.crit]??99)-(order[b.crit]??99));
+    return coldOpen(src.slice().sort((a,b)=>(order[a.crit]??99)-(order[b.crit]??99)));
   }
   const by={};
   src.forEach(c=>(by[c.crit||'_']=by[c.crit||'_']||[]).push(c));
@@ -14164,12 +14306,26 @@ function buildDeck(types){
    apart. One correct answer proves you can recall it now; a second an hour later is
    the first evidence it survived. Getting a locked card wrong unlocks it and returns
    it to the front of its ring — the claim the header makes has to stay falsifiable. */
+/* THE READER NEVER MEETS THE WORD "RING". Nobody knows what a ring is, including the
+   people who named it — it was house vocabulary that leaked into the interface and then
+   sat in the header permanently with no gloss. To a reader these are ROUNDS, numbered
+   from one because that is how people count, and a round NEVER appears without the
+   plain-English `sub` in the same breath. The identifiers below stay `ring`: renaming
+   sixty of them buys nothing a reader can see, and this comment is the map between the
+   two. Every string that reaches a screen goes through ROUNDLAB / `sub`.
+   `${LECT}` rather than a pronoun — the engine is shared and does not know the
+   lecturer's gender. */
 const RINGS=[
-  {n:0,name:'the spine',      blurb:'One card for every focus point the test can ask about.'},
-  {n:1,name:'the thin points',blurb:'Focus points with almost nothing behind them — every card here is load-bearing.'},
-  {n:2,name:'her questions',  blurb:'The rest of the questions the lecturer has actually set.'},
-  {n:3,name:'background',     blurb:'Her lecture notes and this pack’s own writing. Last, and skippable.'},
+  {n:0,name:'the spine',      sub:'one card from every topic',
+   blurb:'One card for every focus point the test can ask about.'},
+  {n:1,name:'the thin points',sub:'the topics with barely any material',
+   blurb:'Focus points with almost nothing behind them — every card here is load-bearing.'},
+  {n:2,name:'the rest',       sub:`every other question ${LECT} has set`,
+   blurb:`The rest of the questions ${LECT} has actually set.`},
+  {n:3,name:'background',     sub:'background reading (optional)',
+   blurb:`${LECTS} lecture notes and this pack’s own writing. Last, and skippable.`},
 ];
+const ROUNDLAB=n=>`Round ${n+1}`;
 const HASRINGS=()=>!!(PACK.spine&&Object.keys(PACK.spine).length&&(PACK.criteria||[]).length);
 const THINAT=6;                      // "fewer than six cards" — §4 of the rebuild spec
 /* Cards per focus point, counting alsoCrit: a point is thin when little TOUCHES it,
@@ -14203,14 +14359,23 @@ const lockRec=k=>S.lock[k]||null;
 const isLocked=k=>!!(S.lock[k]&&S.lock[k].n>=2);
 /* Called from every place a card is answered. `ok` is the reader's own verdict on a
    flashcard and the marker's on everything else. */
+/* Returns what actually happened, because the readout above the Next button has to
+   report the real outcome and there are five of them — including "right again, but
+   inside the hour, so it did not count", which the reader would otherwise experience
+   as the bar mysteriously not moving. */
 function lockMark(key,ok){
-  if(!HASRINGS()) return;
-  if(!ok){ if(S.lock[key]) delete S.lock[key]; save(); return; }
+  if(!HASRINGS()) return 'off';
   const r=S.lock[key], now=Date.now();
-  if(!r) S.lock[key]={n:1,t:now};
-  else if(now-r.t>=LOCKGAP) S.lock[key]={n:Math.min(2,r.n+1),t:now};
-  else return;                        // right again inside the same hour proves nothing new
-  save();
+  let out;
+  if(!ok){ out=r?'lost':'none'; if(r) delete S.lock[key]; save(); }
+  else if(!r){ S.lock[key]={n:1,t:now}; out='half'; save(); }
+  else if(now-r.t>=LOCKGAP){ S.lock[key]={n:Math.min(2,r.n+1),t:now};
+    out=S.lock[key].n>=2?'locked':'half'; save(); }
+  else out='tooSoon';                 // right again inside the same hour proves nothing new
+  /* The segment moves while the feedback for the answer that moved it is still on
+     screen. That is the payoff beat the tool did not have. */
+  renderSpine();
+  return out;
 }
 const pointLocked=id=>isLocked((PACK.spine||{})[id]);
 const pointsLocked=()=>(PACK.criteria||[]).filter(c=>pointLocked(c.id)).length;
@@ -14248,6 +14413,152 @@ function ringNow(){
   const open=ringOpen();
   const want=typeof S.ring==='number'?S.ring:open;
   return Math.min(want,open);
+}
+
+/* ════════════ THE SPINE BAR — the lock, drawn ═══════════════════════════════════
+   The rings were a good mechanic the interface refused to show anybody. A card locks
+   on the SECOND correct answer an hour later, so a cold reader's entire first sitting
+   changed no number on screen: "0 of 38 locked" before, "0 of 38 locked" after. The
+   most motivating thing in the design — a two-stage gauge that half-fills — was
+   rendered as nothing at all.
+
+   Everything here is a REDRAW OF STATE THAT ALREADY EXISTS in S.lock. No score, no XP,
+   no invented progress. Four states per focus point:
+
+     untouched  nothing answered on this topic at all
+     seen       something answered here, nothing proven
+     half       its lead card right ONCE — one more, an hour later, and it locks
+     locked     its lead card right twice, an hour or more apart
+
+   HALF is why this exists. It moves on the first correct answer, ten seconds in, and a
+   bar full of half-fills teaches the hour rule without a sentence of explanation.
+
+   It is a MAP, not a meter. A 0–100% bar says how much; 38 named cells say WHICH — the
+   gap in the middle of the respiratory block is a thing you can point at and go fix. */
+const SEGWORD={
+  new:'not started',
+  seen:'started — nothing proven yet',
+  half:'right once · one more, an hour later, locks it',
+  locked:'locked',
+};
+/* SEEN is measured over every card on the point; HALF and LOCKED only ever over its
+   lead card, because that is exactly what the header's claim means. Reading `seen` off
+   the lead card too would leave a reader who has answered nine cards on a topic
+   looking at an untouched cell. */
+function pointState(id){
+  const k=(PACK.spine||{})[id], r=k?S.lock[k]:null;
+  if(r&&r.n>=2) return 'locked';
+  if(r&&r.n>=1) return 'half';
+  return critCards(id).filter(inPool).some(cardSeen)?'seen':'new';
+}
+/* Body-system blocks, derived from `PACK.systems` — the list the deck order already
+   uses — by matching the criterion id prefix. A pack that declares no systems gets one
+   undivided block and the bar still works.
+
+   THE BAR IS IN PUBLISHED ORDER OR IT IS NOTHING. If grouping would reorder the focus
+   points away from the order the course lists them in, the grouping is thrown away
+   rather than the order: the reader's other documents are in published order and a bar
+   that silently permutes them is worse than a bar with no blocks in it. */
+let _spineGroups=null;
+function spineGroups(){
+  if(_spineGroups) return _spineGroups;
+  const crits=PACK.criteria||[], flat=[{label:'',crits}];
+  const claimed=new Set(), groups=[];
+  for(const s of (PACK.systems||[])){
+    const mine=crits.filter(c=>!claimed.has(c.id)&&(c.id===s.id||String(c.id).startsWith(s.id+'-')));
+    if(!mine.length) continue;
+    mine.forEach(c=>claimed.add(c.id));
+    groups.push({label:s.name||s.id,crits:mine});
+  }
+  const rest=crits.filter(c=>!claimed.has(c.id));
+  if(rest.length) groups.push({label:'',crits:rest});
+  if(!groups.length) return _spineGroups=flat;
+  const order=[].concat(...groups.map(g=>g.crits.map(c=>c.id))).join(',');
+  return _spineGroups=(order===crits.map(c=>c.id).join(',')?groups:flat);
+}
+/* The reader's own state, in one place, so every string below counts the same way. */
+function spineTally(){
+  const crits=PACK.criteria||[];
+  const st=crits.map(c=>pointState(c.id));
+  return {tot:crits.length,
+          locked:st.filter(s=>s==='locked').length,
+          half:st.filter(s=>s==='half').length,
+          seen:st.filter(s=>s==='seen').length};
+}
+let SPINEOPEN=false, SPINEHELP=false;
+const NEXTROUNDAT=6;                 // cards left in a round before the next one is named
+function spineBarHTML(){
+  const t=spineTally(), d=daysLeft(), gs=spineGroups();
+  /* A block narrower than a fifth of the bar gets its gap and no label — see the CSS.
+     `flex:N 1 0` is what keeps a block's width proportional to how many focus points
+     it holds, which is the only reason the label above it lines up with it. */
+  const labs=gs.map(g=>`<div class="spinelab" style="flex:${g.crits.length} 1 0">${
+      g.crits.length/t.tot>=0.2?esc(String(g.label).toUpperCase()):''}</div>`).join('');
+  const segs=gs.map(g=>`<span class="spinegrp" style="flex:${g.crits.length} 1 0">${
+      g.crits.map(c=>{ const st=pointState(c.id);
+        return `<span class="sseg ${st}" title="${esc(c.name||c.id)} — ${SEGWORD[st]}"><i></i></span>`;
+      }).join('')}</span>`).join('');
+  /* The half count is named out loud. It is the number that moved during this sitting,
+     and leaving it out is what made the first sitting feel like nothing happened. */
+  const half=t.half?` · <b>${t.half}</b> half-way`:'';
+  return `<div class="spinetop">
+      <span class="n"><b>${t.locked}</b> of ${t.tot} topics locked in${half}</span>
+      ${d!=null&&d>=0?`<span class="d">${d===0?'today':d===1?'1 day':d+' days'}</span>`:''}
+      <button class="spineq${SPINEHELP?' on':''}" id="spineQ" title="What do these words mean?"
+        aria-expanded="${SPINEHELP?'true':'false'}">?</button>
+    </div>
+    <div class="spinelabs" aria-hidden="true">${labs}</div>
+    <button class="spinebar" id="spineBar" aria-expanded="${SPINEOPEN?'true':'false'}"
+      aria-label="${t.locked} of ${t.tot} topics locked. Open the full list.">${segs}</button>
+    <div class="spinesub">${spineSubHTML(t)}</div>`;
+}
+/* The line under the bar is where the ROUND lives, and it is not dismissible. "Round 1"
+   on its own is as meaningless as "Ring 0" was; it never appears without its `sub`. */
+function spineSubHTML(t){
+  if(S.ring==='point'){
+    const cr=(PACK.criteria||[]).find(c=>c.id===(S.filters.crits||[])[0]);
+    return `Drilling <b>${esc(cr?(cr.name||cr.id):'one topic')}</b> — outside the rounds.`;
+  }
+  const n=ringNow(); if(n===null) return `${t.tot} topics · tap the bar for the list`;
+  const p=ringProgress(n), r=RINGS[n];
+  /* "— then Round 2 opens" only once it is nearly true. It is a promise worth making
+     at 4 to go and a second wrapped line of sticky furniture at 38, and every line
+     this bar costs is a line of the card the reader is trying to answer. */
+  const next=p.left&&p.left<=NEXTROUNDAT&&n<RINGS.length-1?` — then ${ROUNDLAB(n+1)} opens`:'';
+  return `<b>${ROUNDLAB(n)}</b> · ${esc(r.sub)}${p.left?` · <b>${p.left}</b> to go${next}`:' · done'}`;
+}
+const SPINEGLOSS=`<div class="spinehelp" id="spineHelp">
+    <b>The three words this tool uses.</b>
+    <dl>
+      <dt>Topic</dt><dd>One of the focus points the course says the test can ask about. One segment in the bar, in the order the course publishes them.</dd>
+      <dt>Locked</dt><dd>You answered that topic's lead card right <b>twice</b>, in sittings an hour or more apart. Once is a half-height segment; the second one, an hour later, fills it.</dd>
+      <dt>Round</dt><dd>Which pass through the deck you are on. ${RINGS.map((r,i)=>`<b>${ROUNDLAB(i)}</b> is ${esc(r.sub)}`).join('; ')}. A round opens when the one before it is fully locked — and you can always skip ahead.</dd>
+    </dl>
+    <button class="wlink" id="spineIntro">Show the opening explanation again →</button>
+  </div>`;
+/* Redrawn from every path that can change a lock, so the segment moves while the
+   feedback for the answer that moved it is still on screen. Guarded on the element
+   existing: the build runs this whole page against a stub DOM. */
+function renderSpine(){
+  const bar=$('#spine'), open=$('#spineopen');
+  if(!bar||!open) return;
+  if(!HASRINGS()){ bar.hidden=true; open.innerHTML=''; return; }
+  bar.hidden=false;
+  bar.innerHTML=spineBarHTML();
+  /* ONE COUNTDOWN, AND IT IS THE ONE THAT SURVIVES SCROLLING. The header pill and this
+     bar both read daysLeft(), so a ringed pack showed "12 days left" twice on the first
+     screen — and the header's copy is the one that scrolls away. The pill stands for
+     every pack that has no Spine Bar. */
+  const pill=$('#hDays'); if(pill&&daysLeft()!=null) pill.hidden=true;
+  open.innerHTML=(SPINEHELP?SPINEGLOSS:'')+
+    (SPINEOPEN?`<div class="spineopen">${blueprintRowsHTML()}</div>`:'');
+  const b=$('#spineBar'); if(b) b.onclick=()=>{ SPINEOPEN=!SPINEOPEN; renderSpine(); };
+  const q=$('#spineQ'); if(q) q.onclick=()=>{ SPINEHELP=!SPINEHELP; renderSpine(); };
+  /* THE DEFINITION OF "LOCKED" IS NEEDED ON THE SECOND SITTING, which is exactly when
+     the first-run panel is unreachable. This puts it back. */
+  const i=$('#spineIntro'); if(i) i.onclick=()=>{
+    SPINEHELP=false; S.onboarded=false; save(); renderSpine(); renderOnboard(); window.scrollTo({top:0}); };
+  wireBlueprint();
 }
 
 /* In memory only — a deck is a sitting, not saved progress. */
@@ -14480,7 +14791,7 @@ function filterUI(cb,types){
            sat one line under a bar reading "38 left in this ring". Two card counts on one
            screen that cannot be reconciled is the thing this note was written to avoid. -->
       <span class="fnote">${HASRINGS()&&ringNow()!==null
-        ? `${on?`<b>${nRing}</b> of <b>${n}</b>`:`<b>${nRing}</b>`} in this ring${on?', after your filters':''}`
+        ? `${on?`<b>${nRing}</b> of <b>${n}</b>`:`<b>${nRing}</b>`} in ${ROUNDLAB(ringNow())}${on?', after your filters':''}`
         : on?`<b>${n}</b> card${n===1?'':'s'} in the queue`:`nothing narrowed — <b>${n}</b> in the queue`}</span>
     </div>${pills}`;
   if(!FPANEL) return bar;
@@ -14801,34 +15112,38 @@ document.addEventListener('click',e=>{
    flips, a written answer reveals its marking points, a machine-marked card gets
    answered and marked — but that is now an INTERACTION the card chooses, not a
    destination the reader has to choose first.                                  */
-/* ---- the ring header: one line, one number ----
-   "Focus point 7 of 38 locked" is the only progress claim worth making on this pack,
-   and it is falsifiable: it means seven spine cards have been answered right twice, an
-   hour or more apart. Everything else a cram tool counts — cards seen, minutes spent,
-   percentage mastered — measures effort rather than coverage. */
+/* ---- what is left of the study-screen ring bar: the OFFERS ----
+   It used to carry the progress claim as well — "Focus point 7 of 38 locked · Ring 0"
+   — and the Spine Bar in the shell now says that better, on every screen, with the
+   half state drawn. Two copies of one number is how they end up disagreeing, so this
+   one goes and the bar keeps only what it alone can do: hand the reader a way out.
+
+   THE ESCAPE HATCH IS NOT THE SECOND THING A STRANGER SEES. "Deal me anything" above
+   the very first card reads as *this thing you have not started is skippable*, which is
+   an exit offered before the entrance. It is never removed — a hard lock is against
+   house policy ([[two-doors-pattern]]) — it just waits until there is something to
+   escape from. */
+const ESCAPEAFTER=5;                 // cards answered before the way out is offered
+const answeredN=()=>allCards().filter(inPool).filter(cardSeen).length;
 function ringHeadHTML(){
   if(!HASRINGS()) return '';
-  const locked0=pointsLocked(), tot0=(PACK.criteria||[]).length;
   if(ringNow()===null){
     const id=(S.filters.crits||[])[0], cr=(PACK.criteria||[]).find(c=>c.id===id);
     return `<div class="ringbar">
-      <div class="ringline"><b>Focus point ${locked0} of ${tot0} locked</b> · drilling one point</div>
-      <div class="ringsub">${cr?`Every card on <b>${esc(cr.name||cr.id)}</b>, hardest first — not just the part of it in your current ring.`
-        :'Every card in scope, outside the rings.'}</div>
-      <div class="ringsub2"><button class="btn ghost" id="ringBack">Back to the rings</button></div>
+      <div class="ringsub">${cr?`Every card on <b>${esc(cr.name||cr.id)}</b>, hardest first — not just the part of it in the round you were on.`
+        :'Every card in scope, outside the rounds.'}</div>
+      <div class="ringsub2"><button class="btn ghost" id="ringBack">Back to the rounds</button></div>
     </div>`;
   }
-  const n=ringNow(), r=RINGS[n], p=ringProgress(n), locked=locked0, tot=tot0;
-  const days=daysLeft();
-  const escaped=S.ring==='any'&&ringOpen()===0;
+  const n=ringNow(), escaped=S.ring==='any'&&ringOpen()===0, left0=ringProgress(0).left;
+  const skip=n===0&&!escaped&&answeredN()>=ESCAPEAFTER;
+  if(!escaped&&!skip) return '';
   return `<div class="ringbar">
-      <div class="ringline"><b>Focus point ${locked} of ${tot} locked</b> · Ring ${n} — ${esc(r.name)}${
-        days!=null?` · ${days} day${days===1?'':'s'}`:''}</div>
-      <div class="ringsub">${esc(r.blurb)} <b>${p.left}</b> left in this ring.</div>
-      ${escaped?`<div class="ringwarn">You asked to be dealt anything, so this is Ring 2 — the spine is <b>not</b> locked yet. ${
-        ringProgress(0).left} focus point${ringProgress(0).left===1?'':'s'} still ${
-        ringProgress(0).left===1?'has':'have'} an unanswered lead card. <button class="btn ghost" id="ringBack">Back to the spine</button></div>`
-      :n>0?'':`<div class="ringsub2"><button class="btn ghost" id="ringAny">Deal me anything</button></div>`}
+      ${escaped?`<div class="ringwarn">You asked to skip ahead, so this is <b>${ROUNDLAB(2)}</b> — ${
+        ROUNDLAB(0)} is <b>not</b> locked yet. ${left0} topic${left0===1?'':'s'} still ${
+        left0===1?'has a lead card':'have lead cards'} you have not locked. <button class="btn ghost" id="ringBack">Back to ${ROUNDLAB(0)}</button></div>`
+      :`<div class="ringsub2"><button class="btn ghost" id="ringAny">Skip ahead to ${ROUNDLAB(2)} →</button>
+         <span class="ringsub" style="display:block;margin-top:5px">${ROUNDLAB(0)} is not locked yet — you can come back to it any time.</span></div>`}
     </div>`;
 }
 function wireRingBar(){
@@ -14839,15 +15154,15 @@ function wireRingBar(){
 /* The end of a ring is a real screen, not an empty queue. It says what was locked, and
    it is the only place the next ring is offered. */
 function ringDoneHTML(){
-  const n=ringNow(), r=RINGS[n], open=ringOpen(), tot=(PACK.criteria||[]).length;
+  const n=ringNow(), open=ringOpen(), tot=(PACK.criteria||[]).length;
   const more=open>n||RINGS[open]&&open!==n;
   return `<div class="card ringdone">
-      <h3>Ring ${n} locked — ${esc(r.name)}</h3>
+      <h3>${ROUNDLAB(n)} locked — ${esc(RINGS[n].sub)}</h3>
       <p>${n===0
-        ? `You have now answered a question on <b>every one of the ${tot} focus points</b> the test is allowed to ask about — each of them twice, in sittings an hour or more apart.`
-        : `Every card in this ring is locked.`}</p>
-      <p class="ringsub">Focus points locked: <b>${pointsLocked()} of ${tot}</b>.</p>
-      ${more?`<div class="btnrow"><button class="btn primary" id="ringNext">Start Ring ${open} — ${esc(RINGS[open].name)}</button></div>`
+        ? `You have now answered a question on <b>every one of the ${tot} topics</b> the test is allowed to ask about — each of them twice, in sittings an hour or more apart.`
+        : `Every card in this round is locked.`}</p>
+      <p class="ringsub">Topics locked: <b>${pointsLocked()} of ${tot}</b>.</p>
+      ${more?`<div class="btnrow"><button class="btn primary" id="ringNext">Start ${ROUNDLAB(open)} — ${esc(RINGS[open].sub)}</button></div>`
             :`<p class="ringsub">That is the whole pack. Nothing is left unlocked.</p>`}
     </div>`;
 }
@@ -14897,12 +15212,58 @@ function renderStudy(){
    The flag button rides the card itself because this is where a broken card is
    actually met. Sending someone to All cards to find the one they are looking at is
    how a report never gets filed. */
+/* ── ONE SENTENCE INSTEAD OF FIVE CHIPS ──────────────────────────────────────
+   The head used to read `🫀 HEART ANATOMY & FLOW · 5 MARKS · BACKGROUND READING ·
+   WRITTEN ANSWER · ⚑`. That is five pieces of DATA about the card and nowhere a
+   statement of why it is in front of you or what it buys you on the day. Worse,
+   BACKGROUND READING shouts a verdict at a reader who has no way of knowing whether it
+   is a good thing or a bad one.
+
+   So: one muted sentence — what kind of question this is, which topic, and where that
+   topic sits in the published list. The source phrase is STILL the control that opens
+   the full provenance panel: the same `data-prov` button wearing prose instead of a
+   chip, so nothing about the sourcing disclosure is lost and nothing that wires it has
+   to change.
+
+   Marks and ⚑ stay. One is what the question is worth; the other is how a reader tells
+   us the card is wrong. The type label goes — every card announces its own type in the
+   next breath ("Show answer", "Reveal marking points", a set of options). */
+const REASONLEAD={
+  verbatim:  `One of ${LECTS} own exam questions`,
+  taught:    `Straight from ${LECTS} lecture material`,
+  textbook:  `Background reading, written for this pack`,
+  unverified:`A card whose source nobody has checked`,
+};
+function reasonHTML(c){
+  const t=provOf(c);
+  const lead=t?REASONLEAD[t]:(c.type==='rail'?'A chain to rebuild from memory':'From this pack');
+  const bits=[t?`<button class="prov ln ${t}" data-prov="1" data-ck="${c.key||ckey(c)}" aria-expanded="false">${esc(lead)}</button>`
+               :`<span>${esc(lead)}</span>`];
+  const crits=PACK.criteria||[], i=crits.findIndex(x=>x.id===c.crit);
+  if(i>=0){ bits.push(`<b>${esc(crits[i].name||crits[i].id)}</b>`); bits.push(`topic ${i+1} of ${crits.length}`); }
+  else if(c.topic) bits.push(esc(topicName(c.topic)));
+  return `<span class="reason">${bits.join(' · ')}</span>`;
+}
+/* WHAT "BACKGROUND READING" ACTUALLY MEANS, said instead of shouted.
+   NOTE — this is narrower than §6 of the cold-start spec, deliberately. That proposed
+   "She has never set a question on this topic", which the data does not support for
+   every textbook card: a textbook-tier card can sit on a topic the lecturer HAS set
+   questions on. The claim about the topic is only made where the pack declares the
+   topic blind; otherwise the claim is about this card, which is the part that is true. */
+function reasonNoteHTML(c){
+  if(provOf(c)!=='textbook') return '';
+  const cr=(PACK.criteria||[]).find(x=>x.id===c.crit);
+  return `<div class="reasonnote">Not ${LECTS} own material — written for this pack so the examinable
+    facts have something to sit on.${cr&&cr.blind
+      ? ` <b>Nothing in the practice material touches this topic at all</b>, so there is nothing closer to the real paper to give you.`
+      : ` The test is unlikely to ask it in these words.`}</div>`;
+}
 function cardHeadHTML(c){
   const tot=cardMarks(c);
   return `
-      <div class="cmeta"><span class="tag acc">${topicName(c.topic)}</span>${
-        c.type==='flash'?'':`<span class="tag">${tot} mark${tot>1?'s':''}</span>`}${
-        provHTML(c)}<span class="cmend"><span class="tag right">${TYPELABEL[c.type]}</span>${flagBtnHTML(c.key)}</span></div>
+      <div class="creason">${reasonHTML(c)}<span class="cmend">${
+        c.type==='flash'?'':`<span class="tag">${tot} mark${tot>1?'s':''}</span>`}${flagBtnHTML(c.key)}</span></div>
+      ${reasonNoteHTML(c)}
       <div class="q">${c.type==='rail'?esc(c.name||'Rebuild this chain'):c.q}</div>${origHTML(c)}<div class="provslot"></div><div class="flagslot"></div>
       ${figHTML(c)}`;
 }
@@ -14952,6 +15313,40 @@ function wireRate(c){
     if(r<=1) requeue(ALLTYPES,c,r===0?4:10);   // Again comes back sooner than Hard
     afterCard();
   });
+}
+
+/* ---- what that answer bought, in the reader's own vocabulary ----
+   Rendered wherever a card has a step between being marked and being left, which is
+   every machine-marked card and every written one. Self-graded cards (flash, rail)
+   advance straight off the rate row and have no such step; for them the Spine Bar
+   moving is the whole feedback, and the dwell version is Phase C of the cold-start
+   spec, where the card-flip and the session path arrive together. */
+const LOCKDIAL={
+  half:   {v:'◐ 1 of 2', on:true,  n:'Come back in an hour, get it right once more, and this one locks.'},
+  locked: {v:'● Locked', on:true,  n:'Right twice, in sittings an hour or more apart. That is the whole claim this tool makes.'},
+  tooSoon:{v:'◐ 1 of 2', on:false, n:'Still inside the hour since the last correct answer, so this one did not count. Recalling it twice in five minutes proves nothing the first time did not.'},
+  lost:   {v:'○ 0 of 2', on:false, n:'Back to the start on this card — it comes round again shortly. Nothing else you have locked is affected.'},
+};
+function lockReadoutHTML(c,out){
+  const d=LOCKDIAL[out]; if(!d) return '';
+  const t=spineTally(), cr=(PACK.criteria||[]).find(x=>x.id===c.crit);
+  /* THE SECOND DIAL ANSWERS "so what". On a lead card that is the topic itself moving
+     towards locked; on any other card the honest answer is the round, not the topic —
+     locking a non-lead card does not lock its topic and must never look as though it
+     did. */
+  const lead=cr&&(PACK.spine||{})[cr.id]===c.key;
+  const n=ringNow();
+  let k2,v2,n2;
+  if(lead){ k2='Topic'; v2=esc(cr.name||cr.id);
+    n2=`<b>${t.locked}</b> of ${t.tot} topics locked${t.half?` · ${t.half} half-way`:''}`; }
+  else if(n===null){ k2='Topics'; v2=`${t.locked} of ${t.tot} locked`;
+    n2='This card is not its topic’s lead card, so it does not lock the topic.'; }
+  else { const p=ringProgress(n); k2=ROUNDLAB(n); v2=`${p.done} of ${p.total} locked`;
+    n2=`${esc(RINGS[n].sub)} · <b>${p.left}</b> to go`; }
+  return `<div class="earned">
+      <div class="dial"><span class="k">Lock</span><span class="v${d.on?' on':''}">${d.v}</span><span class="n">${d.n}</span></div>
+      <div class="dial"><span class="k">${esc(k2)}</span><span class="v">${v2}</span><span class="n">${n2}</span></div>
+    </div>`;
 }
 
 /* ---- flashcard: recall it, flip it, grade yourself ---- */
@@ -15049,6 +15444,7 @@ function studyWritten(G,head,c){
       <div class="answer"><div class="lab">Tick every point you got</div>
       <ul class="points" id="pts">${c.points.map((p,i)=>`<li data-i="${i}"><span class="n">${i+1}</span><span>${p}</span></li>`).join('')}</ul>
       ${c.model?`<div class="why">💡 ${c.model}</div>`:''}${srcHTML(c)}
+      <div id="lockslot"></div>
       <div class="btnrow"><button class="btn primary" id="done">Score it</button></div></div>`;
     $$('#pts li').forEach(li=>li.onclick=()=>li.classList.toggle('got'));
     $('#done').onclick=()=>{
@@ -15056,7 +15452,15 @@ function studyWritten(G,head,c){
       const pct=got/tot;
       const sm=S.saq[c.key]||{g:0,t:0}; sm.g+=got; sm.t+=tot; S.saq[c.key]=sm;
       srsRate(c.key, pct>=1?3 : pct>=0.8?2 : pct>=0.5?1 : 0);   // srsRate saves
+      /* A WRITTEN ANSWER COULD NOT LOCK — and two of this pack's 38 lead cards are
+         written ones, so Round 1 could never be completed and Round 2 could never open
+         through the door that is supposed to open it. Every other runner called
+         lockMark; this one was missed. The threshold is the same one the self-graded
+         rate row already uses: Good or better, which srsRate scores at 0.8 of the
+         marking points. Gated in build.mjs so it cannot go missing again. */
+      const lk=lockMark(c.key, pct>=0.8);
       if(pct<0.8) requeue(ALLTYPES,c,pct>=0.5?10:4);
+      const ls=$('#lockslot'); if(ls) ls.innerHTML=lockReadoutHTML(c,lk);
       $('#done').outerHTML=`<div class="why" style="flex:1">Scored <b>${got}/${tot}</b> — ${pct>=0.8?'strong ✅':pct>=0.5?'getting there — this one comes back soon':'this one goes back to the front of the queue 🔁'}</div><button class="btn primary" id="next">Next ↵</button>`;
       $('#next').onclick=afterCard;
       document.onkeydown=e=>{ if(studyish()&&e.key==='Enter'&&$('#next')) afterCard(); };
@@ -15087,9 +15491,10 @@ function studyAuto(G,head,c,tot){
     /* FULL marks or it does not count. A cloze with ten blanks and nine right is a
        card the reader cannot yet answer, and locking it would put a focus point in the
        "done" column on the strength of a near miss. */
-    lockMark(c.key,ok);
+    const lk=lockMark(c.key,ok);
     if(!ok) requeue(ALLTYPES,c,got?10:4);      // partly right waits longer than fully wrong
     $('#fb').innerHTML=feedbackHTML(c,r.resp,`${ok?'✅':got?'➖':'❌'} <b>${got} / ${tot} mark${tot>1?'s':''}.</b> `)+srcHTML(c)+
+      lockReadoutHTML(c,lk)+
       `<div class="btnrow"><button class="btn primary" id="next">Next ↵</button></div>`;
     $('#next').onclick=afterCard;
     document.onkeydown=e=>{ if(studyish()&&e.key==='Enter'&&$('#next')) afterCard(); };
@@ -15658,29 +16063,37 @@ function weakest(k){
    card says so, and a point standing on background reading says that too — a reader
    deciding what to do next needs to know which of these is a real gap in the course and
    which is a real gap in them. */
-function blueprintHTML(){
-  if(!HASRINGS()) return '';
+/* ONE RENDERER, TWO CALLERS — Progress and the expanded Spine Bar. Split out when the
+   bar learned to expand in place: two hand-written copies of these rows would have
+   drifted the moment either grew a state, and the whole point of the bar is that it
+   agrees with the list it opens into. `bpmark` carries the SAME four states as a
+   segment, including HALF, which the Progress list used to fold into "started". */
+function blueprintRowsHTML(){
   const crits=PACK.criteria||[], thin=new Map((PACK.thin||[]).map(t=>[t.id,t]));
-  const rows=crits.map(cr=>{
-    const cs=allCards().filter(inPool).filter(c=>c.crit===cr.id||(c.alsoCrit||[]).includes(cr.id));
-    const locked=pointLocked(cr.id);
-    const seen=cs.filter(cardSeen).length;
+  const MARK={locked:'✓',half:'◐',seen:'◔',new:'○'};
+  return `<div class="bplist">${crits.map(cr=>{
+    const cs=critCards(cr.id).filter(inPool);
+    const st=pointState(cr.id);
     const sp=(PACK.spine||{})[cr.id], spCard=cs.find(c=>c.key===sp);
-    const state=locked?'locked':seen?'started':'new';
-    return `<button class="bprow ${state}" data-crit="${cr.id}">
-        <span class="bpmark">${locked?'✓':seen?'◐':'○'}</span>
+    return `<button class="bprow ${st}" data-crit="${cr.id}" title="${esc(cr.name||cr.id)} — ${SEGWORD[st]}">
+        <span class="bpmark">${MARK[st]}</span>
         <span class="bptx"><b>${esc(cr.name||cr.id)}</b>
           <span class="bpsub">${cs.length} card${cs.length===1?'':'s'}${
+            st==='half'?' · <b>right once</b> — one more, an hour later':''}${
             thin.has(cr.id)?' · thin':''}${
             cr.blind?' · never practised':''}${
             spCard&&spCard.tier!=='verbatim'?' · lead card is background':''}</span></span>
         <span class="bpgo">Drill →</span>
       </button>`;
-  }).join('');
+  }).join('')}</div>`;
+}
+function blueprintHTML(){
+  if(!HASRINGS()) return '';
+  const t=spineTally();
   return `<div class="card" style="margin-bottom:14px">
-      <h3>The blueprint — ${pointsLocked()} of ${crits.length} locked</h3>
+      <h3>The blueprint — ${t.locked} of ${t.tot} locked${t.half?`, ${t.half} half-way`:''}</h3>
       <p class="ringsub" style="margin:2px 0 12px">Every focus point the course says the test can ask about, in the order it publishes them. <b>Locked</b> means you answered its lead card right twice, in sittings an hour or more apart.</p>
-      <div class="bplist">${rows}</div>
+      ${blueprintRowsHTML()}
     </div>`;
 }
 function wireBlueprint(){
