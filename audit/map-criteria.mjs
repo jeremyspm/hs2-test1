@@ -39,10 +39,21 @@ const RULES = [
      its primary the moment the unbounded `.*` was tightened. English puts the possessed
      noun either side of the possessor; a rule that only reads one order is half a rule. */
   ['cvs-2',  /\b(artery|arteries|vein|veins|capillar\w+)\b[^"]{0,60}\b(structure|differen|wall|tunica|lumen|compare)|\b(structure|differen|wall|tunica|lumen|compare)\w*\b[^"]{0,60}\b(artery|arteries|vein|veins|capillar\w+)\b|\b(tunica|IEL|internal elastic lamina)\b|which vessel|vessel type/i],
-  /* `oedema` is guarded against LYMPHoedema, which is lymph-4's word and was pulling the
-     lymphatic terminology quiz into capillary fluid movement — the accident that left
-     lymph-4 with no card of its own. Both spellings need the guard separately. */
-  ['cvs-3',  /hydrostatic|oncotic|osmotic pressure|osmolality|capillary (exchange|fluid)|filtration|reabsorption|(?<!lymph)oedema|(?<!lymph)edema/i],
+  /* TWO GUARDS, both of which were live defects.
+
+     `oedema` is bounded by  so it cannot match inside LYMPHoedema — lymph-4's own word,
+     which was pulling the lymphatic terminology quiz into capillary fluid movement and is
+     the accident that left lymph-4 with no card of its own. A lookbehind for "lymph" was
+     tried first and is not enough: in "lymphoedema" the substring `edema` is preceded by
+     "lympho", so it slipped straight past. The word boundary handles both spellings and
+     both prefixes at once.
+
+     `filtration` and `reabsorption` now need a capillary or the tissue fluid beside them.
+     Bare, they are renal words as often as capillary ones, and they had filed the RAAS
+     table, "describe the direct renal control of BP" and "the filtration membrane in the
+     kidney" under capillary fluid movement — three of them ahead of the card that IS this
+     criterion ("the forces acting across a blood capillary") in the queue. */
+  ['cvs-3',  /hydrostatic|oncotic|osmotic pressure|osmolality|capillary (exchange|fluid)|(filtration|reabsorption|absorption)[^"]{0,70}(capillar|tissue fluid|interstiti)|(capillar|tissue fluid|interstiti)[^"]{0,70}(filtration|reabsorption)|net filtration|\b(oedema|edema)\b/i],
   /* `pressure is the highest/lowest …` is added for the HEART ANATOMY true/false that
      states the pressure gradient from aorta to venae cavae. It is guarded by a vessel
      word within 90 characters because the identical phrasing is how PARTIAL pressures
@@ -77,7 +88,7 @@ const RULES = [
      discussion board and every card harvested near it. */
   ['cvs-10', /factors? affecting (heart rate|stroke volume|cardiac output)|\bages?\b|temperature[^"]{0,60}heart rate|(trained|athlete)[^"]{0,70}heart rate|heart rate[^"]{0,70}(trained|athlete)/i],
   ['cvs-11', /venous return|preload|afterload|Frank-?Starling|electrolyte[^"]{0,60}(cardiac|heart)|potassium[^"]{0,60}heart|(?<!matching )exercise[^"]{0,60}(cardiac|heart)/i],
-  ['cvs-12', /baroreceptor|vasomotor|renin|angiotensin|aldosterone|\bADH\b|antidiuretic|blood pressure[^"]{0,60}(control|regulat)|regulat[^"]{0,60}blood pressure|cardiac cent(re|er)|senses? the blood pressure/i],
+  ['cvs-12', /baroreceptor|vasomotor|renin|angiotensin|aldosterone|\bADH\b|antidiuretic|blood pressure[^"]{0,60}(control|regulat)|regulat[^"]{0,60}blood pressure|cardiac cent(re|er)|senses? the blood pressure|(control|regulat)\w*[^"]{0,40}\bBP\b|\bBP\b[^"]{0,40}(control|regulat)/i],
   ['cvs-13', /stress[^"]{0,60}blood pressure|(?<!matching )exercise[^"]{0,60}blood pressure|blood pressure[^"]{0,60}(?<!matching )exercise/i],
   ['cvs-14', /\bshock\b|hypovolaem|hypovolem|cardiogenic|anaphylactic|septic shock|distributive/i],
   ['cvs-15', /pulse|tissue perfusion|vasoconstrict|vasodilat|ischaem|ischem|myocardial infarction|angina|bradycard|tachycard|hypertens|hypotens|pericarditis|myocarditis|endocarditis|fibrillation|asystole/i],

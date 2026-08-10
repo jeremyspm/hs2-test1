@@ -87,6 +87,34 @@
   },
 
   {
+   "quiz": "MODULE 1.1: CVS HOMEOSTASIS (30 Marks)",
+   "n": "Question 3",
+   "was": "Complete the passage. (MODULE 1.1)",
+   "crit": "cvs-9",
+   "why": "Seven blanks: the conduction pathway, then the nerves, hormones and electrolytes that speed the heart up or slow it down. That is criterion 9 — the homeostatic control of heart rate, neural and hormonal — almost sentence for sentence. It was filed under cvs-5, functional anatomy of the heart, on the word `myocardium`, and cvs-5 has 78 other cards to lead with."
+  },
+  {
+   "quiz": "MODULE 1: SAQ & MC: FORMATIVE CVS, LYMPHATIC & RESPIRATORY SYSTEMS *(50 marks)",
+   "n": "Question 4",
+   "was": "Complete the passage. (MODULE 1)",
+   "crit": "cs-bp",
+   "why": "Lagi's blood pressure is 150/90 and his heart rate is 110: this is the blood-pressure case study, and it is the biggest single question in her 50-mark formative. It was filed under cvs-2 because a micrograph of an artery and a vein is one of its ten blanks — a case study being named after one of its parts."
+  },
+  {
+   "quiz": "Respiratory (SAQ & MC) Pre-Lab Quiz",
+   "n": "Question 1",
+   "was": "Select from the following which factors directly influence a persons lung capacity",
+   "drop": ["cvs-10"],
+   "why": "Eight true/false factors, every one of them about lung capacity — height, sex, smoking, age. cvs-10 fired on `age`, which is on its own list of general factors affecting heart rate, and because cvs-10 is declared first it became this card's focus point: a lung-volume question standing at the head of “General factors affecting HR, SV and CO”, which is what Ring 0 would have dealt for that point. resp-6 is the criterion for lung volumes and capacities."
+  },
+  {
+   "quiz": "MODULE 1: SAQ & MC: FORMATIVE CVS, LYMPHATIC & RESPIRATORY SYSTEMS *(50 marks)",
+   "n": "Question 15",
+   "was": "Complete the passage. (MODULE 1)",
+   "crit": "lymph-2",
+   "why": "Ten blanks on mesenteric adenitis, the MALT system, which cells are in lymph and where lymph drains. Its focus point was cvs-3 — capillary fluid movement — because `lymphoedema` is one of the drop-down options and `edema` was matching inside it. lymph-2 is the functional anatomy of the lymphatic system, which is what ten of the ten blanks are asking about."
+  },
+  {
    "quiz": "MODULE 1.1: SAQ & MC: CVS REVIEW *(35 marks )",
    "n": "Question 23",
    "was": "Describe the difference in normal BP (mean) in the arteries, arterioles, capillaries and venae cavae?",

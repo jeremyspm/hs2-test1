@@ -3,19 +3,19 @@
   "resp-17": 10,
   "resp-2": 61,
   "resp-7": 31,
-  "cvs-3": 18,
+  "cvs-3": 12,
   "resp-4": 18,
   "resp-5": 32,
   "resp-6": 13,
-  "cvs-10": 3,
   "cvs-14": 14,
-  "cvs-12": 25,
+  "cvs-12": 26,
   "cvs-15": 47,
   "cvs-5": 109,
   "cvs-6": 57,
   "cvs-8": 36,
   "cvs-4": 18,
   "cvs-9": 26,
+  "cvs-10": 2,
   "cvs-13": 2,
   "cvs-11": 10,
   "cvs-2": 20,
@@ -144,7 +144,6 @@
    "quiz": "Respiratory (SAQ & MC) Pre-Lab Quiz",
    "n": "Question 1",
    "crits": [
-    "cvs-10",
     "resp-6"
    ]
   },
@@ -251,7 +250,6 @@
    "quiz": "MODULE 1.1: CVS HOMEOSTASIS (30 Marks)",
    "n": "Question 2",
    "crits": [
-    "cvs-3",
     "cvs-12"
    ]
   },
@@ -259,9 +257,9 @@
    "quiz": "MODULE 1.1: CVS HOMEOSTASIS (30 Marks)",
    "n": "Question 3",
    "crits": [
+    "cvs-9",
     "cvs-5",
     "cvs-8",
-    "cvs-9",
     "cvs-10",
     "cvs-12",
     "cvs-15"
@@ -882,7 +880,7 @@
    "quiz": "MODULE 1.1: SAQ & MC: CVS REVIEW *(35 marks )",
    "n": "Question 27",
    "crits": [
-    "cvs-3"
+    "cvs-12"
    ]
   },
   {
@@ -1732,7 +1730,6 @@
    "n": "Question 1",
    "crits": [
     "lymph-4",
-    "cvs-3",
     "resp-2",
     "lymph-2"
    ]
@@ -1999,6 +1996,7 @@
    "quiz": "MODULE 1: SAQ & MC: FORMATIVE CVS, LYMPHATIC & RESPIRATORY SYSTEMS *(50 marks)",
    "n": "Question 4",
    "crits": [
+    "cs-bp",
     "cvs-2",
     "cvs-4",
     "cvs-5",
@@ -2007,8 +2005,7 @@
     "cvs-9",
     "cvs-12",
     "cvs-15",
-    "lymph-2",
-    "cs-bp"
+    "lymph-2"
    ]
   },
   {
@@ -2075,7 +2072,6 @@
    "quiz": "MODULE 1: SAQ & MC: FORMATIVE CVS, LYMPHATIC & RESPIRATORY SYSTEMS *(50 marks)",
    "n": "Question 11",
    "crits": [
-    "cvs-3",
     "cvs-4",
     "cvs-8",
     "cvs-9",
@@ -2116,10 +2112,9 @@
    "quiz": "MODULE 1: SAQ & MC: FORMATIVE CVS, LYMPHATIC & RESPIRATORY SYSTEMS *(50 marks)",
    "n": "Question 15",
    "crits": [
-    "cvs-3",
+    "lymph-2",
     "cvs-6",
     "lymph-1",
-    "lymph-2",
     "lymph-4",
     "cs-vacc"
    ]
@@ -2268,7 +2263,6 @@
    "n": "Question 1",
    "crits": [
     "cvs-2",
-    "cvs-3",
     "cvs-4",
     "cvs-5",
     "cvs-6",
