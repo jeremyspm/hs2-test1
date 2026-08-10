@@ -482,6 +482,23 @@ h2.sec{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--tx
 .ringwarn .btn{margin-top:7px}
 .ringdone h3{margin:0 0 8px}
 .ringdone p{font-size:14px;line-height:1.6;color:var(--tx2);margin:0 0 10px}
+/* ---- the blueprint list ----
+   `minmax(0,1fr)` on the text column, or a long focus-point name pushes the row wider
+   than the card at 375px and takes the page with it. */
+.bplist{display:flex;flex-direction:column;gap:2px}
+.bprow{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:10px;
+  width:100%;text-align:left;background:transparent;border:0;border-radius:9px;padding:9px 8px;
+  color:var(--tx);font:inherit;cursor:pointer}
+.bprow:hover{background:var(--card2)}
+.bpmark{width:20px;text-align:center;font-size:14px;color:var(--tx3)}
+.bprow.locked .bpmark{color:var(--good)}
+.bprow.started .bpmark{color:var(--hard)}
+.bptx{min-width:0}
+.bptx b{display:block;font-size:13.5px;font-weight:600;line-height:1.35}
+.bpsub{display:block;font-size:11.5px;color:var(--tx3);margin-top:2px}
+.bpgo{font-size:11.5px;color:var(--acc-tx);opacity:0;flex:0 0 auto}
+.bprow:hover .bpgo{opacity:1}
+@media (max-width:520px){ .bpgo{display:none} }
 .foot{margin-top:26px;text-align:center;font-size:11.5px;color:var(--tx3)}
 
 /* ================= the cram session ==================================
@@ -568,17 +585,22 @@ h2.sec{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--tx
       <button data-v="brief" id="navBrief" hidden>Brief</button>
       <!-- Cram is Study with a fence around it: the same deck, the same order, cut off
            at a finishable number. It is a tab as well as a button because the button is
-           how you START one and this is how you get back to one you left half-done. -->
+           how you START one and this is how you get back to one you left half-done.
+           A RINGED PACK HIDES IT: Ring 0 already is a bounded, finishable set with an
+           end screen, and two competing "start a short session" controls on one page is
+           the thing the rebuild exists to remove. -->
       <button data-v="cram" id="navCram">Cram</button>
       <button data-v="study" class="on">Study</button>
       <!-- Mock test used to sit here. Progress is promoted into the bar in its place:
            it is now the only place a mark is reported, so it should not be behind ···. -->
       <button data-v="stats">Progress</button>
+      <!-- Promoted out of ··· by a ringed pack, which wants exactly three tabs. -->
+      <button data-v="search" id="navSearch" hidden>Search</button>
       <button id="navMore" title="More" aria-expanded="false" aria-controls="nav2">···</button>
     </div>
     <div class="seg hidden" id="nav2">
       <button data-v="cards">All cards</button>
-      <button data-v="search">Search</button>
+      <button data-v="search" id="navSearch2">Search</button>
       <button data-v="audit" id="navAudit" hidden>Sources</button>
     </div>
   </div>
@@ -13865,7 +13887,11 @@ function libFlagged(){
    most of them will open twice. */
 let VIEW='study', CUR=null;
 const view=$('#view');
-const SECOND=['cards','search','stats','audit'];
+/* WHICH VIEWS LIVE BEHIND THE ··· — read off the bar, not from a list beside it.
+   The list said 'stats' long after Progress was promoted into the main bar, so opening
+   Progress unfolded the overflow row for no reason, and a ringed pack that promotes
+   Search would have had the same problem the other way. The DOM already knows. */
+const SECOND=v=>[...document.querySelectorAll('#nav2 button')].some(b=>b.dataset.v===v&&!b.hidden);
 const navBtns=()=>$$('#nav button[data-v], #nav2 button[data-v]');
 function showMore(on){
   $('#nav2').classList.toggle('hidden',!on);
@@ -13881,7 +13907,7 @@ function nav(v){
   v=VIEWALIAS[v]||v;
   VIEW=v;
   navBtns().forEach(b=>b.classList.toggle('on',b.dataset.v===v));
-  if(SECOND.includes(v)) showMore(true);      // never leave the active tab hidden
+  if(SECOND(v)) showMore(true);               // never leave the active tab hidden
   VIEWS[v]();
 }
 navBtns().forEach(b=>b.onclick=()=>nav(b.dataset.v));
@@ -13931,7 +13957,18 @@ function renderOnboard(){
          it costs, because "12 cards" is the fact that makes it possible to start.
          The Brief half is dropped entirely when there is no Brief — naming a door that
          is not there is how a reader ends up on an empty tab deciding the tool is broken. -->
-    ${HASBRIEF()
+    ${HASRINGS()
+      /* A RINGED PACK HAS ONE WAY IN, and the panel has to say the same thing the
+         screen behind it says. There is no Brief to send anyone to and no separate cram
+         button to choose between: the deck opens on Ring 0, which is one card per focus
+         point and stops when they are locked. Naming a door that is not there is how a
+         reader ends up on an empty tab deciding the tool is broken — and that is exactly
+         what this paragraph did for one build after the tabs changed. */
+      ?`<p><b>One way in.</b> The queue opens on <b>the spine</b>: one card for each of
+         those focus points, and nothing else until every one is <b>locked</b> —
+         answered right twice, in sittings an hour or more apart. About
+         ${Math.round(nC*0.7)} minutes if you know it. Everything else waits behind that.</p>`
+      :HASBRIEF()
       ?`<p><b>Two ways in.</b> <b>Read the Brief</b> if the lecture has gone fuzzy — it explains
          each focus point in plain prose. <b>⚡ Help me cram</b> if you would rather just start:
          ${SESSION_N()} cards, and it stops.</p>`
@@ -14086,7 +14123,7 @@ function buildDeck(types){
      so a rebuild triggered while any other view is on screen produces an UNRINGED deck
      that the study view then deals; and ⚡ HELP ME CRAM deals from this same deck, where
      the rings are exactly what a short session wants — Ring 0 IS the cram session. */
-  if(HASRINGS()) return buildRingDeck(types,ringNow());
+  if(HASRINGS()&&ringNow()!==null) return buildRingDeck(types,ringNow());
   const cm={}; (PACK.criteria||[]).forEach(c=>cm[c.id]=c);
   const src=deckSource(types);
   /* Order INSIDE each topic by rank, THEN stride-merge the topics.
@@ -14213,6 +14250,13 @@ function ringOpen(){
    hard lock.) */
 function ringNow(){
   if(!HASRINGS()) return null;
+  /* DRILLING ONE FOCUS POINT LEAVES THE RINGS. A reader who taps a point in the
+     blueprint has asked for that point, not for the part of it that happens to be in
+     the ring they are on — tapping "Functional anatomy of the heart · 87 cards" and
+     being dealt the four of them that sit in Ring 0 is the tool answering a different
+     question from the one asked. `point` deals the whole point, in the ordinary ranked
+     order, and the bar says so and offers the way back. */
+  if(S.ring==='point') return null;
   if(S.ring==='any') return 2;
   const open=ringOpen();
   const want=typeof S.ring==='number'?S.ring:open;
@@ -14241,7 +14285,7 @@ function ensureDeck(types){
    properly. Without this the end of Ring 0 never arrives: the deck still holds 38 cards
    and the reader is dealt spine cards they have already locked, for ever. */
 function nextCard(types){
-  const skip=c=>HASRINGS()&&isLocked(c.key);
+  const skip=c=>HASRINGS()&&ringNow()!==null&&isLocked(c.key);
   for(let pass=0;pass<3;pass++){                 // deal · rebuild · confirm empty
     const d=ensureDeck(types);
     if(!d.cards.length) return null;
@@ -14435,6 +14479,8 @@ function filterUI(cb,types){
   const pills=!on?'':`<div class="fpills">${FILTDIMS.map(d=>S.filters[d].map(id=>
       `<button class="fpill" data-fx="off" data-fd="${d}" data-fv="${esc(id)}" title="Stop filtering by this">${esc(filtLabel(d,id))}<span>✕</span></button>`).join('')).join('')}
     <button class="fpill clr" data-fx="clear">Clear all filters</button></div>`;
+  /* Counted the same way the deck is built, so the number and the deal cannot drift. */
+  const nRing=(HASRINGS()&&ringNow()!==null)?buildRingDeck(types,ringNow()).length:0;
   const bar=`<div class="filtbar">
       <button class="btn ghost${FPANEL?' open':''}" data-fx="panel" aria-expanded="${FPANEL}">🔎 Rep only… ${on?`<span class="fn">${filtCount()}</span>`:''}</button>
       <!-- NOT "whole pack — 344 cards". The pack is 345; one is damaged at source and
@@ -14442,7 +14488,13 @@ function filterUI(cb,types){
            number and calling it the pack is how a tool ends up with two card counts
            that are each true and cannot be reconciled from the screen. It says what it
            is: nothing narrowed, and this many in the queue. -->
-      <span class="fnote">${on?`<b>${n}</b> card${n===1?'':'s'} in the queue`:`nothing narrowed — <b>${n}</b> in the queue`}</span>
+      <!-- WITH RINGS ON, "in the queue" MEANS THE RING. The unringed number is the whole
+           pool, which is true of the scope and false of what will be dealt next — and it
+           sat one line under a bar reading "38 left in this ring". Two card counts on one
+           screen that cannot be reconciled is the thing this note was written to avoid. -->
+      <span class="fnote">${HASRINGS()&&ringNow()!==null
+        ? `${on?`<b>${nRing}</b> of <b>${n}</b>`:`<b>${nRing}</b>`} in this ring${on?', after your filters':''}`
+        : on?`<b>${n}</b> card${n===1?'':'s'} in the queue`:`nothing narrowed — <b>${n}</b> in the queue`}</span>
     </div>${pills}`;
   if(!FPANEL) return bar;
   const dims=filtDims(types);
@@ -14473,6 +14525,19 @@ document.addEventListener('click',e=>{
    orders the focus points rather than drawing a card queue, so the card-count note
    would be meaningless there. */
 function gate(cb,types,readyNote){
+  /* ── THE DOORS GO WHEN THE RINGS ARRIVE ──────────────────────────────────────
+     They are an ORDERING choice — "decide for me" against "I'll pick a topic" — and a
+     ringed pack has already decided: breadth across focus points first, and the ring
+     bar says so in a line. Leaving them up put two contradicting explanations of the
+     same queue on one screen, the door note announcing "all 414 cards, worked through
+     in course order" directly under a bar reading "38 left in this ring". The reader
+     has to guess which one is true, which is the failure the note itself was rewritten
+     once to fix.
+
+     The SCOPE row stays. "Rep only…" narrows which cards are in play, not what order
+     they come in, and it is orthogonal to the rings — a reader who wants only her
+     questions still gets them ring by ring. */
+  if(HASRINGS()&&readyNote===undefined) return filterUI(cb,types);
   const P=(S.door==='ready'&&readyNote===undefined)?deckStats(types):null;
   /* The filter surface sits between the doors and the note, not after it, because
      the note now describes a deck the filters have already cut — "clear a filter
@@ -14756,7 +14821,17 @@ document.addEventListener('click',e=>{
    percentage mastered — measures effort rather than coverage. */
 function ringHeadHTML(){
   if(!HASRINGS()) return '';
-  const n=ringNow(), r=RINGS[n], p=ringProgress(n), locked=pointsLocked(), tot=(PACK.criteria||[]).length;
+  const locked0=pointsLocked(), tot0=(PACK.criteria||[]).length;
+  if(ringNow()===null){
+    const id=(S.filters.crits||[])[0], cr=(PACK.criteria||[]).find(c=>c.id===id);
+    return `<div class="ringbar">
+      <div class="ringline"><b>Focus point ${locked0} of ${tot0} locked</b> · drilling one point</div>
+      <div class="ringsub">${cr?`Every card on <b>${esc(cr.name||cr.id)}</b>, hardest first — not just the part of it in your current ring.`
+        :'Every card in scope, outside the rings.'}</div>
+      <div class="ringsub2"><button class="btn ghost" id="ringBack">Back to the rings</button></div>
+    </div>`;
+  }
+  const n=ringNow(), r=RINGS[n], p=ringProgress(n), locked=locked0, tot=tot0;
   const days=daysLeft();
   const escaped=S.ring==='any'&&ringOpen()===0;
   return `<div class="ringbar">
@@ -14771,7 +14846,7 @@ function ringHeadHTML(){
 }
 function wireRingBar(){
   const a=$('#ringAny'); if(a&&a.addEventListener) a.onclick=()=>{ S.ring='any'; save(); renderStudy(); };
-  const b=$('#ringBack'); if(b&&b.addEventListener) b.onclick=()=>{ S.ring=0; save(); renderStudy(); };
+  const b=$('#ringBack'); if(b&&b.addEventListener) b.onclick=()=>{ S.ring=0; if(S.filters.crits.length) S.filters=FILT0(); save(); renderStudy(); };
   const n=$('#ringNext'); if(n&&n.addEventListener) n.onclick=()=>{ S.ring=ringOpen(); save(); renderStudy(); };
 }
 /* The end of a ring is a real screen, not an empty queue. It says what was locked, and
@@ -14794,14 +14869,14 @@ function renderStudy(){
      to choose a door and then read a note about deck composition — which is the right
      screen for someone who has decided to work, and the wrong one for someone deciding
      whether to. The first thing on the page should be the thing that needs no decision. */
-  const G=cramCTA()+ringHeadHTML()+gate(renderStudy,ALLTYPES);
+  const G=(HASRINGS()?'':cramCTA())+ringHeadHTML()+gate(renderStudy,ALLTYPES);
   setTimeout(wireCramCTA,0);
   setTimeout(wireRingBar,0);
   CUR=nextCard(ALLTYPES);
   /* With rings on, an empty deck is not an empty pool — it is a ring finished, and it
      gets a screen that says so. Only fall through to the filter dead-end below when
      the reader has genuinely filtered everything away. */
-  if(!CUR&&HASRINGS()&&!filtOn()){ view.innerHTML=G+ringDoneHTML(); setTimeout(wireRingBar,0); return; }
+  if(!CUR&&HASRINGS()&&ringNow()!==null&&!filtOn()){ view.innerHTML=G+ringDoneHTML(); setTimeout(wireRingBar,0); return; }
   /* An empty queue used to say "No cards in this topic yet", which was true of the
      one filter that existed then and is a dead end now: five dimensions can
      intersect to nothing, and the reader has to be told WHICH combination did it and
@@ -15585,6 +15660,50 @@ function weakest(k){
   return (PACK.criteria||[]).map(cr=>({cr,n:critCards(cr.id).length,m:critMastery(cr.id)}))
     .filter(x=>x.n).sort((a,b)=>(a.m==null?-1:a.m)-(b.m==null?-1:b.m)).slice(0,k);
 }
+/* ── THE BLUEPRINT, as a list — inherited from the Brief ──────────────────────
+   The one thing the Brief did that nothing else did: every focus point the course
+   publishes, in the order it publishes them, so a reader can see the SHAPE of the paper
+   rather than infer it from a queue. It belongs at the top of Progress, because that is
+   the question it answers — where am I, against what can be asked.
+
+   Three states, and the middle one matters most: LOCKED (answered right twice, an hour
+   or more apart), STARTED (some progress, not proven), and untouched. A point with one
+   card says so, and a point standing on background reading says that too — a reader
+   deciding what to do next needs to know which of these is a real gap in the course and
+   which is a real gap in them. */
+function blueprintHTML(){
+  if(!HASRINGS()) return '';
+  const crits=PACK.criteria||[], thin=new Map((PACK.thin||[]).map(t=>[t.id,t]));
+  const rows=crits.map(cr=>{
+    const cs=allCards().filter(inPool).filter(c=>c.crit===cr.id||(c.alsoCrit||[]).includes(cr.id));
+    const locked=pointLocked(cr.id);
+    const seen=cs.filter(cardSeen).length;
+    const sp=(PACK.spine||{})[cr.id], spCard=cs.find(c=>c.key===sp);
+    const state=locked?'locked':seen?'started':'new';
+    return `<button class="bprow ${state}" data-crit="${cr.id}">
+        <span class="bpmark">${locked?'✓':seen?'◐':'○'}</span>
+        <span class="bptx"><b>${esc(cr.name||cr.id)}</b>
+          <span class="bpsub">${cs.length} card${cs.length===1?'':'s'}${
+            thin.has(cr.id)?' · thin':''}${
+            cr.blind?' · never practised':''}${
+            spCard&&spCard.tier!=='verbatim'?' · lead card is background':''}</span></span>
+        <span class="bpgo">Drill →</span>
+      </button>`;
+  }).join('');
+  return `<div class="card" style="margin-bottom:14px">
+      <h3>The blueprint — ${pointsLocked()} of ${crits.length} locked</h3>
+      <p class="ringsub" style="margin:2px 0 12px">Every focus point the course says the test can ask about, in the order it publishes them. <b>Locked</b> means you answered its lead card right twice, in sittings an hour or more apart.</p>
+      <div class="bplist">${rows}</div>
+    </div>`;
+}
+function wireBlueprint(){
+  $$('.bprow').forEach(b=>b.onclick=()=>{
+    /* Drilling one point uses the scope the tool already has, rather than a second
+       mechanism that would need its own chips, its own count and its own way out. */
+    S.filters=FILT0(); S.filters.crits=[b.dataset.crit]; S.ring='point'; save();
+    nav('study'); window.scrollTo({top:0});
+  });
+}
 function renderStats(){
   /* Against the pool being studied, for the same reason topicReady is: counting the
      demoted background cards would report "6 of 286 recalled" at a reader who has
@@ -15612,7 +15731,7 @@ function renderStats(){
           : `⚠️ <b>This is a guess, not a prediction.</b> It is standing on <b>${p.n}</b> answered question${p.n===1?'':'s'}${p.nSaq?'':' and no written answers at all'}, which is nowhere near enough to be trusted. Keep going and it becomes real.`}</div>`;
 
   const weak=weakest(3);
-  view.innerHTML=hero+`
+  view.innerHTML=blueprintHTML()+hero+`
     <div class="statgrid">
       <div class="stat"><div class="n">${solid}<span style="font-size:15px;color:var(--tx3)">/${recall.length}</span></div><div class="l">recalled right, twice over</div></div>
       <div class="stat"><div class="n">${p.nAuto?p.nAuto:'—'}</div><div class="l">${p.nAuto?'questions drilled':'nothing drilled yet'}</div></div>
@@ -15642,10 +15761,31 @@ function renderStats(){
     }).join('')}
     <div class="btnrow" style="margin-top:22px"><button class="btn ghost danger" id="reset">Reset all progress</button></div>`;
   $('#reset').onclick=()=>{ if(confirm('Wipe all progress for this pack?')){ localStorage.removeItem(KEY); S=load(); save(); renderStats(); } };
+  wireBlueprint();
 }
 
 if((PACK.cards||[]).some(c=>c.tier)) $('#navAudit').hidden=false;
-if(HASBRIEF()) $('#navBrief').hidden=false;
+if(HASBRIEF()&&!HASRINGS()) $('#navBrief').hidden=false;
+/* ── THREE TABS, NOT SEVEN — for a ringed pack ────────────────────────────────
+   Study, Progress, Search. The Brief goes because the rings replaced the thing it was
+   for: it was the cold-start landing page, it was a third empty (derived from prose
+   cards, which a third of the focus points do not have), and it competed with the
+   loudest control on its own screen. What it did that nothing else did — show the
+   blueprint as a LIST, all of it, in the order the course publishes it — is not lost;
+   it is now the top of Progress, with the lock state against each point.
+
+   All cards and Sources stay, behind the ···, and that is a deliberate deviation from
+   §5 of the rebuild spec, which lists All cards among the deletions. It is the only
+   surface where a reader can SEE a card's options without being tested on them, it
+   carries the ⚑ flag export that has already turned nine reader reports into fixes, and
+   this template is copied by other tools that have no rings at all. Out of the tab bar
+   is enough to buy the calm §5 is asking for; deleting the code is not the same thing
+   and costs more than it saves. */
+if(HASRINGS()){
+  $('#navCram').hidden=true;
+  $('#navSearch').hidden=false;
+  $('#navSearch2').hidden=true;
+}
 /* A reader with no history lands in the Brief. Learn would open by asking them to
    retrieve a fact they have not encoded yet, which is the slowest way to start and
    the most discouraging. Once there is any progress, Learn is the right landing. */
@@ -15669,7 +15809,7 @@ if(MIGRATED_SCOPE&&S.filters.topics.length&&S.filters.crits.length&&!deckSource(
 }
 const coldStart=!Object.keys(S.srs).length&&!Object.keys(S.mcq).length;
 renderOnboard();
-nav(HASBRIEF()&&coldStart?'brief':'study');
+nav(HASBRIEF()&&!HASRINGS()&&coldStart?'brief':'study');
 </script>
 <script>
 /* ===== STUDY BUS v2 (hub ⚡ engine — see estate STUDY-ENGINE-SPEC.md) =====
