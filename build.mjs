@@ -192,6 +192,103 @@ if (empty.length) {
 }
 console.log(`all ${(P.criteria ?? []).length} focus points have at least one card ✓`);
 
+/* ── the three criterion-integrity gates (C1, C2, C6) ─────────────────────────
+   Added 11 Aug 2026 with the rebuild spec, and every one of them was failing when
+   it was written. They exist because the ring system about to be built on this data
+   deals cards BY focus point, so a card with no focus point is a card no reader will
+   ever be dealt, and a focus point with no card of its own has no spine card to lead
+   with. A queue that looks principled and is tagged wrong is worse than pack order.
+
+   `rail` cards are outside all of this by design — they carry no crit, are appended
+   after the coverage maths, and are a different kind of study object. See the note in
+   apply-migration.mjs where they are added. */
+{
+  const drillable = P.cards.filter(c => c.type !== 'rail');
+  const critsOf = (c) => [c.crit, ...(c.alsoCrit ?? [])].filter(Boolean);
+
+  // C1 — a card the criterion-ordered queue can never deal
+  const orphans = drillable.filter(c => !critsOf(c).length);
+  if (orphans.length) {
+    console.error(`✗ ${orphans.length} card(s) carry no focus point at all:`);
+    for (const c of orphans.slice(0, 8)) console.error(`    [${c.type} ${c.tier}] ${String(c.q ?? '').replace(/<[^>]+>/g, '').slice(0, 76)}`);
+    console.error('\n✗ NOT SHIPPING. Route them in audit/routes.json, or write the rule in map-criteria.mjs.');
+    process.exit(1);
+  }
+
+  // C2 — a focus point that is nothing's primary subject has no spine card
+  const primary = {};
+  for (const c of drillable) if (c.crit) primary[c.crit] = (primary[c.crit] ?? 0) + 1;
+  const noPrimary = (P.criteria ?? []).filter(c => !primary[c.id]);
+  if (noPrimary.length) {
+    console.error(`✗ ${noPrimary.length} focus point(s) with no card whose primary subject they are: ${noPrimary.map(c => c.id).join(', ')}`);
+    console.error('   An alsoCrit mention is a card about something else. Declare a `crit` in audit/routes.json.');
+    console.error('\n✗ NOT SHIPPING.');
+    process.exit(1);
+  }
+  console.log(`every focus point is the primary subject of at least one card ✓  (thinnest: ${Object.entries(primary).sort((a, b) => a[1] - b[1])[0].join(' with ')})`);
+
+  /* C6 — a card may not claim more focus points than it has parts to test them with.
+     The cap is per-card and relative, because "too many" is not a fixed number: her
+     50-mark formative Q4 is one question with ten keyed blanks covering ten different
+     things, and tagging it ten ways is accurate. A single-answer multiple choice tagged
+     four ways is the defect — usually because a rule fired on a DISTRACTOR, which is the
+     card being described by the answers it is trying to rule out.
+
+     parts + 3 is where the reviewed pack actually sits: after the 11 Aug rule pass the
+     worst single-answer card carries 4, and each of those four is a real factor named in
+     its own options. The gate locks that review in rather than proposing a new ideal. */
+  const partsOf = (c) => (c.blanks?.length || c.pairs?.length || c.statements?.length || c.points?.length || c.steps?.length || 1);
+  const overtagged = drillable.map(c => ({ c, n: critsOf(c).length, p: partsOf(c) })).filter(x => x.n > x.p + 3);
+  if (overtagged.length) {
+    console.error(`✗ ${overtagged.length} card(s) claim more focus points than they can test:`);
+    for (const x of overtagged.slice(0, 8)) console.error(`    ${x.n} points / ${x.p} part(s) [${x.c.type}] ${critsOf(x.c).join(',')} — ${String(x.c.q ?? '').replace(/<[^>]+>/g, '').slice(0, 56)}`);
+    console.error('\n✗ NOT SHIPPING. Trim them with a `drop` in audit/routes.json, or tighten the rule that fired.');
+    process.exit(1);
+  }
+  const worst = drillable.map(c => ({ n: critsOf(c).length, p: partsOf(c) })).sort((a, b) => (b.n - b.p) - (a.n - a.p))[0];
+  console.log(`no card claims more focus points than it can test ✓  (closest: ${worst.n} points over ${worst.p} part(s))`);
+
+  /* C5 — what the SPINE CARD of each focus point is made of.
+     Ring 0 deals one card per focus point and says, in effect, "answer this and you have
+     covered that part of the paper". The claim is only as good as the card: a `verbatim`
+     spine is one of Hannetjie's own questions, a `taught` spine is her lecture pinned by a
+     quote, and a `textbook` spine is a sentence this pack wrote about a topic the course
+     has never been observed to ask. All three are legitimate to ship; only the last one
+     must never be shipped SILENTLY.
+
+     So the rule is not "every spine must be verbatim" — that would be a demand to invent
+     questions. It is: a focus point that cannot field one of her own questions has to be
+     saying so in the pack, and a focus point standing entirely on background reading has
+     to carry a sentence explaining that to the reader. Both directions are checked, so a
+     note that stops being true fails the build instead of reassuring nobody. */
+  const RANK = { verbatim: 3, taught: 2, textbook: 1 };
+  const spineTrouble = [], staleNote = [];
+  for (const cr of P.criteria ?? []) {
+    const mine = drillable.filter(c => c.crit === cr.id);
+    const best = Math.max(0, ...mine.map(c => RANK[c.tier] ?? 0));
+    if (best === 3) {
+      if (cr.acknowledgedGap) staleNote.push(`${cr.id}: carries an acknowledged-gap note, but its spine card is now one of Hannetjie's own questions — delete the note in apply-migration.mjs`);
+      continue;
+    }
+    if (!cr.blind) spineTrouble.push(`${cr.id}: best card for it is \`${best === 2 ? 'taught' : 'textbook'}\`, but the pack does not mark the point as never-practised — the reader is told nothing`);
+    if (best === 1 && !cr.acknowledgedGap) spineTrouble.push(`${cr.id}: every card on it is background reading and there is no acknowledged-gap note saying so`);
+    // the engine renders this note through esc(); markup in it reaches the reader as angle brackets
+    if (/[<>]/.test(cr.acknowledgedGap ?? '')) spineTrouble.push(`${cr.id}: the acknowledged-gap note contains markup, and the engine escapes it — write it in plain text`);
+    if (best === 0) spineTrouble.push(`${cr.id}: no card is primarily about it at all`);
+  }
+  if (spineTrouble.length || staleNote.length) {
+    for (const m of [...spineTrouble, ...staleNote]) console.error(`✗ ${m}`);
+    console.error('\n✗ NOT SHIPPING. A focus point whose spine card is not one of her questions must say so.');
+    process.exit(1);
+  }
+  const byTier = { verbatim: 0, taught: 0, textbook: 0 };
+  for (const cr of P.criteria ?? []) {
+    const best = Math.max(0, ...drillable.filter(c => c.crit === cr.id).map(c => RANK[c.tier] ?? 0));
+    byTier[best === 3 ? 'verbatim' : best === 2 ? 'taught' : 'textbook']++;
+  }
+  console.log(`spine cards: ${byTier.verbatim} focus points can field one of her own questions, ${byTier.taught} her lecture, ${byTier.textbook} background reading (declared) ✓`);
+}
+
 /* The declaration has to REACH the reader, or culling to honest numbers just means
    quietly shipping thinner coverage. Prove the pack carries it and the engine renders
    it, rather than trusting that it does. */

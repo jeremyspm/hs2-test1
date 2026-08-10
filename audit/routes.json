@@ -1,0 +1,111 @@
+{
+ "note": "DECLARED ROUTING for individual questions of Hannetjie's, applied by map-criteria.mjs AFTER the rule table. Read the header comment in that file before adding an entry. Every entry is checked at build time: the quiz+n must address exactly one harvested card, `was` must still be the opening of that card's question, and each of `crit`/`add`/`drop` must actually change something. An entry that stops biting fails the build rather than sitting here looking useful.",
+
+ "kinds": {
+  "add": "the rules left this card with NO focus point, and no rule could reach it — the question names no physiology because the physiology is in the image. Listing the crit here is the only honest alternative to a rule loose enough to catch it by accident.",
+  "crit": "the rules found the right SET of focus points but the wrong one is first. Primary is otherwise decided by the order of the rule table, which is alphabetical-ish accident, and `crit` is what the reader is told the card is about — and what Ring 0 deals. The named id must already be among the rule hits (or be added by this same entry).",
+  "drop": "a rule fired on a word this card only mentions in passing. Removing it here keeps the rule general for the cards it is right about."
+ },
+
+ "routes": [
+  {
+   "quiz": "Practice Lab 2: SAQ & MC Quiz (10 marks)",
+   "n": "Question 3",
+   "was": "The structure labelled at B is a",
+   "add": ["resp-2"],
+   "crit": "resp-2",
+   "why": "A cross-section of the trachea with B on the cartilage; the options are four ways of describing a tracheal cartilage ring. Nothing in the words says trachea — the image does. resp-2 is the criterion that names the trachea."
+  },
+  {
+   "quiz": "Practice Lab 2: SAQ & MC Quiz (10 marks)",
+   "n": "Question 6",
+   "was": "The white shiny part of this structure labelled at A (in the first image) and 1 (in the second image) is made from?",
+   "add": ["resp-2"],
+   "crit": "resp-2",
+   "why": "A dissection photograph: A points at the white glistening wall of the airway, and the answer is that it is collagen. Same structure as Question 4 of this quiz, which asks what the tube is (the trachea). resp-2 covers the trachea and the bronchial tree."
+  },
+  {
+   "quiz": "Practice Lab 1: SAQ & MC Quiz (20 marks)",
+   "n": "Question 3",
+   "was": "Complete the passage. (Practice Lab 1)",
+   "add": ["cvs-5"],
+   "crit": "cvs-5",
+   "why": "The stem is a Canvas group title. The question itself is an image of the heart's surface — what is the white tissue on it (adipose) and what does it do (mechanical cushion) — which is criterion 5.2, the coverings of the heart."
+  },
+  {
+   "quiz": "MODULE 1.2: RESP BASIC ANATOMY (10 Marks)",
+   "n": "Question 20",
+   "was": "Find and describe at least ONE error in the labelling of the AI created summary below and describe it in the answer space.",
+   "add": ["resp-3", "resp-2"],
+   "crit": "resp-3",
+   "why": "The summary being marked is a diagram of the airway split into conducting and respiratory zones, and the errors to find are where that boundary is drawn and which structures carry cartilage. That is resp-3 — differentiate the organs of the conducting and respiratory zones — and it is the only card in the pack whose subject IS that boundary."
+  },
+  {
+   "quiz": "MODULE 1.1: CVS4 BLOOD PRESSURE (10 marks)",
+   "n": "Question 9",
+   "was": "Of the following cardiovascular components, which contains the majority of the body’s blood volume at any one time?",
+   "add": ["cvs-2"],
+   "crit": "cvs-2",
+   "why": "Veins and venules hold roughly two thirds of the blood — the capacitance property that separates a vein from an artery. cvs-2 is the criterion asking for the functional differences between artery, vein and capillary. Her CVS4 deck calls them the blood “reservoir” vessels, but it does so inside the vasomotor reflex, and the question here asks the plain anatomy, not the reflex."
+  },
+
+  {
+   "quiz": "MODULE 1.2: (SAQ &MC) STUDENT MARKED: RESPIRATORY PRACTICE TEST (20 marks)",
+   "n": "Question 17",
+   "was": "External respiration is affected by all the following except",
+   "crit": "resp-9",
+   "why": "The question names external respiration and asks which factor does not affect it. It was filed under resp-5 because three of its four options are respiratory-membrane words — the card was being described by its distractors. resp-9 is the criterion for external respiration and the factors affecting gas exchange, and this is the question that asks it."
+  },
+  {
+   "quiz": "MODULE 1.2: RESPIRATORY SYSTEM GAS LAWS (20 marks)",
+   "n": "Question 4",
+   "was": "External respiration is affected by all of the following factors except:",
+   "crit": "resp-9",
+   "why": "The same question, set again in a second quiz with the wording changed — the strongest evidence signal in the pack. Same reasoning as the Respiratory Practice Test entry above."
+  },
+  {
+   "quiz": "Respiratory System: Terminology Assessment",
+   "n": "Question 1",
+   "was": "Complete the passage. (Respiratory System)",
+   "crit": "resp-17",
+   "why": "Ten blanks, each one a respiratory term to name from its definition — dyspnoea, pneumothorax, atelectasis, eupnoea, cyanosis. It is the terminology assessment, and resp-17 is the terminology criterion. It was filed under resp-2 because the definitions name the airways they happen to be about."
+  },
+  {
+   "quiz": "MODULE 1.3: QUIZ: DISEASES / TERMINOLOGY RELATED TO THE LYMPHATIC SYSTEM",
+   "n": "Question 1",
+   "was": "Answer the question to ensure that the conditions and their descriptions match. Help is just a click away.",
+   "crit": "lymph-4",
+   "why": "Lymphoedema, sentinel nodes, Hodgkin's disease, splenectomy — this is criterion lymph-4's own list, from the quiz named after it. It was filed under cvs-3, capillary fluid movement, because `oedema` sits inside `lymphoedema` and cvs-3 is declared earlier in the rule table. That single accident is why the lymphatic terminology point had no card of its own."
+  },
+  {
+   "quiz": "MODULE 1.1: CVS HOMEOSTASIS (30 Marks)",
+   "n": "Question 4",
+   "was": "Complete the passage. (MODULE 1.1)",
+   "add": ["cvs-13"],
+   "crit": "cvs-13",
+   "why": "The hardest of these to call, and the reasoning is worth keeping. The passage opens as criterion 11 word for word — the effects of venous return, plasma electrolytes, stress and exercise on cardiac functions — and its first six blanks are that. Its last four are not: they ask what exercise does to cardiac activity and to peripheral resistance in a fit person, and every section of the passage closes on blood pressure. That is criterion 13, how blood pressure is affected by stress and exercise, and this is the only card in the pack that TESTS it rather than assuming it. cvs-11 stays on the card; it was never primary here anyway — the rules had filed the whole thing under cvs-3, capillary fluid movement, on the word osmolality."
+  },
+
+  {
+   "quiz": "MODULE 1.1: SAQ & MC: CVS REVIEW *(35 marks )",
+   "n": "Question 23",
+   "was": "Describe the difference in normal BP (mean) in the arteries, arterioles, capillaries and venae cavae?",
+   "drop": ["cvs-2"],
+   "why": "cvs-2 fires on \"difference in normal BP … in the arteries, arterioles, capillaries\", which is the pressure gradient down the tree — cvs-4, and the card already carries it. Naming three vessel types in a row is not the same as being asked how their walls differ."
+  },
+  {
+   "quiz": "MODULE 1.1: THE CVS: HEART ANATOMY (40 marks)",
+   "n": "Question 24",
+   "was": "Match the following terms to their definitions:",
+   "drop": ["cvs-2"],
+   "why": "Definitions of blood pressure, systolic pressure, stroke volume and cardiac output. cvs-2 fires on the phrase inside one of them — \"the force of blood against the walls of the arteries\" — which is the definition of BP, not a claim about artery structure."
+  },
+  {
+   "quiz": "Practice Lab 1: SAQ & MC Quiz (20 marks)",
+   "n": "Question 11",
+   "was": "Patient A had a Myocardial Infarction due to the total occlusion of the Left Anterior Descending coronary artery.",
+   "drop": ["cvs-2"],
+   "why": "cvs-2 fires on \"what parts of the heart wall are perfused by the Left Anterior Descending coronary artery\". The heart wall is not a vessel wall; this card is coronary circulation and it already carries cvs-5 and cvs-6."
+  }
+ ]
+}

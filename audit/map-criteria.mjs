@@ -33,11 +33,32 @@ const { BOUND } = await import(pathToFileURL(path.join(HERE, 'harvested-bound.js
    none of these rules fires on a control string. Add a control whenever you add a rule. */
 const RULES = [
   ['cvs-1',  /function of the (cardiovascular|circulatory)|why do we (need|have) a (heart|circulation)/i],
-  ['cvs-2',  /\b(artery|arteries|vein|veins|capillar\w+)\b.*\b(structure|differen|wall|tunica|lumen|compare)|\b(tunica|IEL|internal elastic lamina)\b|which vessel|vessel type/i],
-  ['cvs-3',  /hydrostatic|oncotic|osmotic pressure|osmolality|capillary (exchange|fluid)|filtration|reabsorption|oedema|edema/i],
-  ['cvs-4',  /peripheral resistance|\bPR\b.*\bBP\b|\bSVR\b|blood flow.*velocity|velocity.*blood|viscosity|vessel (radius|diameter).*(resistance|flow)|normal BP.*(arteries|arterioles|capillaries)/i],
+  /* BOTH DIRECTIONS. The rule read vessel-then-structure only, so "the WALLS of the VEINS
+     are too thin" and "the WALLS of the CAPILLARIES in the bone marrow" missed it — one of
+     them the card whose whole subject is capillary types, which would have lost cvs-2 as
+     its primary the moment the unbounded `.*` was tightened. English puts the possessed
+     noun either side of the possessor; a rule that only reads one order is half a rule. */
+  ['cvs-2',  /\b(artery|arteries|vein|veins|capillar\w+)\b[^"]{0,60}\b(structure|differen|wall|tunica|lumen|compare)|\b(structure|differen|wall|tunica|lumen|compare)\w*\b[^"]{0,60}\b(artery|arteries|vein|veins|capillar\w+)\b|\b(tunica|IEL|internal elastic lamina)\b|which vessel|vessel type/i],
+  /* `oedema` is guarded against LYMPHoedema, which is lymph-4's word and was pulling the
+     lymphatic terminology quiz into capillary fluid movement — the accident that left
+     lymph-4 with no card of its own. Both spellings need the guard separately. */
+  ['cvs-3',  /hydrostatic|oncotic|osmotic pressure|osmolality|capillary (exchange|fluid)|filtration|reabsorption|(?<!lymph)oedema|(?<!lymph)edema/i],
+  /* `pressure is the highest/lowest …` is added for the HEART ANATOMY true/false that
+     states the pressure gradient from aorta to venae cavae. It is guarded by a vessel
+     word within 90 characters because the identical phrasing is how PARTIAL pressures
+     are stated all through the respiratory decks — "the partial pressure of oxygen is
+     highest in the alveoli" is resp-8, not blood pressure. */
+  ['cvs-4',  /peripheral resistance|\bPR\b[^"]{0,60}\bBP\b|\bBP\b[^"]{0,60}\bPR\b|\bSVR\b|blood flow[^"]{0,60}velocity|velocity[^"]{0,60}blood|viscosity|vessel (radius|diameter)[^"]{0,60}(resistance|flow)|normal BP[^"]{0,60}(arteries|arterioles|capillaries)|pressure is (the )?(highest|lowest)[^"]{0,90}(arteries|arterioles|capillar|ven[ae]|veins)/i],
   ['cvs-5',  /pericardi|epicardi|myocardi|endocardi|heart wall|\bchambers? of the heart\b|heart chamber|atri\w+|ventricl\w+|septum|valve|papillary|chordae|apex of the heart|heart is located|pectinate|trabecul|fibrous material on the outside of the heart/i],
-  ['cvs-6',  /blood flow through|pulmonary (circuit|circulation)|systemic (circuit|circulation)|coronary (artery|arteries|circulation)|route of the|widow maker|foramen ovale|ductus|arch of the aorta|descending aorta|hepatic portal|inferior vena cava|superior vena cava|major (artery|blood vessels)|interventricular artery|circumflex|deoxygenated blood to the lungs/i],
+  /* Two alternatives added 11 Aug 2026 for the CVS4 BLOOD PRESSURE capture:
+     `double circulation` / `closed and double` is her own slide-3 wording for what the
+     human circulation IS — two circuits, blood never leaving the vessels — and that slide
+     is this criterion, not cvs-1 (her slide 2 is the FUNCTIONS: transport, pumping,
+     protection). `aortic arch` is deliberately NOT bare: the arch is named on every
+     baroreceptor card in the pack ("baroreceptors in the aortic arch and carotid sinus"),
+     and a bare alternative would have tagged the whole BP reflex family as circuit
+     anatomy. It fires only when a branch of the arch is named beside it. */
+  ['cvs-6',  /blood flow through|pulmonary (circuit|circulation)|systemic (circuit|circulation)|coronary (artery|arteries|circulation)|route of the|widow maker|foramen ovale|ductus|arch of the aorta|descending aorta|hepatic portal|inferior vena cava|superior vena cava|major (artery|blood vessels)|interventricular artery|circumflex|deoxygenated blood to the lungs|double circulation|closed and double|aortic arch[^"]{0,90}brachiocephalic/i],
   ['cvs-7',  /heart sound|\bS1\b|\bS2\b|\blub\b|\bdub\b|lub-?dub|murmur|auscultat|phono-?cardiogram/i],
   ['cvs-8',  /\bECG\b|EKG|P wave|QRS|T wave|SA node|AV node|sinoatrial|atrioventricular node|bundle of His|Purkinje|conduction system|cardiac cycle|automaticity|depolaris|repolaris/i],
   /* `vagus` needs heart context. Bare, it fired on "The nerve that excites the diaphragm
@@ -46,11 +67,18 @@ const RULES = [
      focus point. The vagus does far more than the heart; only the cardiac half is
      cvs-9. The one card that reaches cvs-9 through this rule alone and SHOULD (the
      Module 1 formative passage) names the heart in the same breath and still matches. */
-  ['cvs-9',  /cardiac output|stroke volume|\bCO = |heart rate.*control|sympathetic.*heart|parasympathetic.*heart|vagus[^"]{0,70}(heart|cardiac|SA node|AV node|atria|rate)|(heart|cardiac|SA node|AV node|atria)[^"]{0,70}vagus|inotropic|chronotropic/i],
-  ['cvs-10', /factors? affecting (heart rate|stroke volume|cardiac output)|\bages?\b|temperature.*heart rate/i],
-  ['cvs-11', /venous return|preload|afterload|Frank-?Starling|electrolyte.*(cardiac|heart)|potassium.*heart|exercise.*(cardiac|heart)/i],
-  ['cvs-12', /baroreceptor|vasomotor|renin|angiotensin|aldosterone|\bADH\b|antidiuretic|blood pressure.*(control|regulat)|regulat.*blood pressure/i],
-  ['cvs-13', /stress.*blood pressure|exercise.*blood pressure|blood pressure.*exercise/i],
+  ['cvs-9',  /cardiac output|stroke volume|\bCO = |heart rate[^"]{0,60}control|sympathetic[^"]{0,90}heart|parasympathetic[^"]{0,90}heart|vagus[^"]{0,70}(heart|cardiac|SA node|AV node|atria|rate)|(heart|cardiac|SA node|AV node|atria)[^"]{0,70}vagus|inotropic|chronotropic|cardio-?accelerat|cardio-?inhibit/i],
+  /* Her own slide for this criterion is the "Effect of general factors on heart rate,
+     stroke volume & cardiac output" table — exercise, fever, ageing, dehydration, stress,
+     hypertension — and slide 28's "Variations in heart rate" adds gender and age. Fitness
+     is the same kind of factor and the CVS4 quiz asks it directly, so `trained`/`athlete`
+     joins the list. Both alternatives require `heart rate` within 70 characters: bare,
+     `trained` would have taken the "BLOOD VESSELS AS AN IMPORTANT PART OF YOUR TRAINING"
+     discussion board and every card harvested near it. */
+  ['cvs-10', /factors? affecting (heart rate|stroke volume|cardiac output)|\bages?\b|temperature[^"]{0,60}heart rate|(trained|athlete)[^"]{0,70}heart rate|heart rate[^"]{0,70}(trained|athlete)/i],
+  ['cvs-11', /venous return|preload|afterload|Frank-?Starling|electrolyte[^"]{0,60}(cardiac|heart)|potassium[^"]{0,60}heart|(?<!matching )exercise[^"]{0,60}(cardiac|heart)/i],
+  ['cvs-12', /baroreceptor|vasomotor|renin|angiotensin|aldosterone|\bADH\b|antidiuretic|blood pressure[^"]{0,60}(control|regulat)|regulat[^"]{0,60}blood pressure|cardiac cent(re|er)|senses? the blood pressure/i],
+  ['cvs-13', /stress[^"]{0,60}blood pressure|(?<!matching )exercise[^"]{0,60}blood pressure|blood pressure[^"]{0,60}(?<!matching )exercise/i],
   ['cvs-14', /\bshock\b|hypovolaem|hypovolem|cardiogenic|anaphylactic|septic shock|distributive/i],
   ['cvs-15', /pulse|tissue perfusion|vasoconstrict|vasodilat|ischaem|ischem|myocardial infarction|angina|bradycard|tachycard|hypertens|hypotens|pericarditis|myocarditis|endocarditis|fibrillation|asystole/i],
 
@@ -66,8 +94,19 @@ const RULES = [
      ventilation is also known as" is still its question. Three cards move, each to the
      criterion that already listed it as an alsoCrit, so no coverage is lost and resp-10
      (the thinnest respiratory point) gains one. */
-  ['resp-1',  /processes of respiration|pulmonary ventilation|cellular respiration|four (processes|stages)|metabolic reason.*respiration/i],
-  ['resp-2',  /\bnose\b|nasal|sinus|pharyn|laryn|trache|bronch|pleura|lung.*(lobe|anatomy|tissue)|respiratory tract anatomy|sizes of the two lungs|pneumonia/i],
+  ['resp-1',  /processes of respiration|pulmonary ventilation|cellular respiration|four (processes|stages)|metabolic reason[^"]{0,60}respiration/i],
+  /* `sinus` WAS BARE HERE AND HAS NEVER ONCE DONE ITS JOB. It is in the rule for the
+     paranasal sinuses, which criterion 2 names — and not one of Hannetjie's 376 harvested
+     questions says "paranasal" or "sinusitis". What it matched instead was the CAROTID
+     sinus, the CORONARY sinus and sinusoidal capillaries: 12 cardiovascular cards, every
+     baroreflex card in the pack among them, each carrying a respiratory-anatomy tag it
+     had no business with. The whole "describe the neural mechanisms regulating blood
+     pressure" family was filed as partly respiratory because of five letters.
+
+     Caught by a control string, four months after the same mistake was documented three
+     lines up for `age`, `lub` and `chamber`. `nasal` still covers "nasal sinuses" if she
+     ever asks; `paranasal` is her own word from the criterion. */
+  ['resp-2',  /\bnose\b|nasal|paranasal|sinusitis|pharyn|laryn|trache|bronch|pleura|lung[^"]{0,60}(lobe|anatomy|tissue)|respiratory tract anatomy|sizes of the two lungs|pneumonia/i],
   ['resp-3',  /conducting zone|respiratory zone|upper respiratory|lower respiratory/i],
   ['resp-4',  /pathway of air|air pass|muco-?cili|cilia|vibrissae|cough|sneeze|carina|sound production|vocal/i],
   /* `penumocyte` is HER spelling, on the Blood-Carrying-Gases true/false. Spelt out as
@@ -75,15 +114,19 @@ const RULES = [
      `ischaem|ischem` are: a rule that guesses at misspellings starts matching words
      nobody wrote. */
   ['resp-5',  /alveol\w+|surfactant|respiratory membrane|type (I|II|1|2) (cell|pneumocyte)|surface tension|p(?:neu|enu)mocyte/i],
-  ['resp-6',  /lung volume|lung capacit|tidal volume|residual volume|vital capacity|inspiratory reserve|expiratory reserve|spirometr|\bFRC\b|\bTLC\b|peak flow/i],
+  /* `lung capacit` did not reach "The RESPIRATORY capacities are a combined of 2 or more
+     volumes", which is how the Practice Lab 2 spirometry question opens — the only card in
+     the pack that asks the reader to read a spirometer trace. `respiratory capacit` and the
+     capacity's full name are both hers. */
+  ['resp-6',  /lung volume|lung capacit|respiratory capacit|functional residual capacity|tidal volume|residual volume|vital capacity|inspiratory reserve|expiratory reserve|spirometr|\bFRC\b|\bTLC\b|peak flow/i],
   /* The Gas-Laws quiz states ventilation mechanics as four true/false claims about quiet
      and forced breathing — "Quiet expiration is a passive process involving mainly
      elastic recoil" — and none of the wording above reaches them. `forced inhalation` is
      added alongside the existing `forced inspiration` because she uses both words. */
-  ['resp-7',  /Boyle|intrapleural|intrapulmonary|pressure.*volume change|airway resistance|compliance|pneumothorax|atelectasis|bell jar|accessory muscles|forced (breathing|exhalation|inspiration|inhalation)|quiet (inspiration|expiration|breathing)|elastic recoil|intercostal/i],
-  ['resp-8',  /atmospheric air|alveolar air|partial pressure|Dalton|composition of.*air|total atmospheric pressure|\bin the atmosphere\b/i],
-  ['resp-9',  /external respiration|pulmonary gas exchange|gas exchange.*(alveol|lung)|diffusion.*(alveol|membrane)/i],
-  ['resp-10', /internal respiration|tissue gas exchange|gas exchange.*tissue/i],
+  ['resp-7',  /Boyle|intrapleural|intrapulmonary|pressure[^"]{0,60}volume change|airway resistance|compliance|pneumothorax|atelectasis|bell jar|accessory muscles|forced (breathing|exhalation|inspiration|inhalation)|quiet (inspiration|expiration|breathing)|elastic recoil|intercostal/i],
+  ['resp-8',  /atmospheric air|alveolar air|partial pressure|Dalton|composition of[^"]{0,60}air|total atmospheric pressure|\bin the atmosphere\b/i],
+  ['resp-9',  /external respiration|pulmonary gas exchange|gas exchange[^"]{0,60}(alveol|lung)|diffusion[^"]{0,60}(alveol|membrane)/i],
+  ['resp-10', /internal respiration|tissue gas exchange|gas exchange[^"]{0,60}tissue/i],
   /* `h[ae]moglobin` is one character class and "haemoglobin" needs two — so the rule has
      only ever matched the AMERICAN spelling, and every question of hers written the
      British way fell through to no criterion at all. It is the same failure mode as the
@@ -100,22 +143,22 @@ const RULES = [
      dixoide is transported" displayed "Transport of oxygen in the blood". */
   ['resp-11', /oxygen transport|oxyha?emoglobin|(?<!carbamino)(?<!carbino)ha?emoglobin|dissociation curve|Bohr|heme group|haeme group|affinity for which/i],
   ['resp-12', /carbon dioxide transport|bicarbonate|carbamino|carbonic anhydrase|chloride shift/i],
-  ['resp-13', /respiratory centre|respiratory center|medulla|pons|\bDRG\b|\bVRG\b|pontine|basic rhythm/i],
+  ['resp-13', /respiratory centre|respiratory center|medullary respiratory|medulla[^"]{0,70}(respirat|breath|ventilat|inspir|expir)|(respirat|breath|ventilat|inspir|expir)[^"]{0,70}medulla|\bpons\b[^"]{0,70}(respirat|breath|ventilat)|(respirat|breath|ventilat)[^"]{0,70}\bpons\b|\bDRG\b|\bVRG\b|pontine|basic rhythm|pulmonary inflation reflex|Hering-?Breuer/i],
   /* Her Blood-Carrying-Gases quiz opens with six acid-base items that never say
      "acidosis": they say "Normal blood pH is", "Blood with a pH of 7 is", and put
      `acidotic`/`alkalotic` in the options. Same chemistry, different part of speech. */
-  ['resp-14', /chemoreceptor|\bpH\b.*(ventilation|respiration|breathing)|blood pH|\bpH of\b|acidotic|alkalotic|PCO2.*ventilation|hypercapn|hypoxi[ac]|acidosis|alkalosis|ketoacidosis|urge to breathe|acid.?base buffer/i],
-  ['resp-15', /emotion|conscious control|voluntary.*breath|hypothalam.*breath|cortical.*breath|anxiety|panic/i],
-  ['resp-16', /exercise.*ventilation|body temperature.*breath|pain.*breath|irritation.*airway|hyperpnoea/i],
+  ['resp-14', /chemoreceptor[^"]{0,90}(ventilat|breath|respirat|CO2|CO₂|carbon dioxide|oxygen|\bO2\b|\bpH\b)|(ventilat|breath|respirat|carbon dioxide|oxygen)[^"]{0,90}chemoreceptor|\bpH\b[^"]{0,60}(ventilation|respiration|breathing)|blood pH|\bpH of\b|acidotic|alkalotic|PCO2[^"]{0,60}ventilation|hypercapn|hypoxi[ac]|acidosis|alkalosis|ketoacidosis|urge to breathe|acid.?base buffer/i],
+  ['resp-15', /emotion|conscious control|voluntary[^"]{0,60}breath|hypothalam[^"]{0,60}breath|cortical[^"]{0,60}breath|anxiety|panic/i],
+  ['resp-16', /(?<!matching )exercise[^"]{0,60}ventilation|body temperature[^"]{0,60}breath|pain[^"]{0,60}breath|irritation[^"]{0,60}airway|hyperpnoea/i],
   ['resp-17', /asthma|bronchitis|emphysema|tuberculosis|bronchodilator|dyspnoea|apnoea|eupnoea|tachypnoea|hyperventilat|hypoventilat|hypocapn|cyanosis/i],
 
-  ['lymph-1', /function.*lymphatic|lymphatic.*function|immune|body defence|lipid absorption|fluid (volume|balance)/i],
+  ['lymph-1', /function[^"]{0,60}lymphatic|lymphatic[^"]{0,60}function|immune|body defence|lipid absorption|fluid (volume|balance)/i],
   ['lymph-2', /lymph node|lymphatic (capillar|vessel|duct)|thoracic duct|cisterna chyli|spleen|thymus|tonsil|Peyer|subclavian vein|lacteal/i],
-  ['lymph-3', /lymph.*(return|drain).*(blood|venous|cardiovascular)|relationship between.*lymphatic|lymph flows towards|thoracic (duct|cavity).*lymph|lymph.*pressure created/i],
+  ['lymph-3', /lymph[^"]{0,60}(return|drain)[^"]{0,60}(blood|venous|cardiovascular)|relationship between[^"]{0,60}lymphatic|lymph flows towards|thoracic (duct|cavity)[^"]{0,60}lymph|lymph[^"]{0,60}pressure created/i],
   ['lymph-4', /bubo|lymphoedema|lymphedema|lymphangitis|Hodgkin|splenectomy|tonsillitis|sentinel node|swollen gland|ruptured spleen|adenitis/i],
 
-  ['cs-bp',   /case study.*blood pressure|Lagi|blood pressure.*scenario/i],
-  ['cs-vacc', /vaccin|immunis|immuniz|antigen|antibod|lymphocyte|B cell|T cell|memory cell|dendritic|macrophage|plasma cell/i],
+  ['cs-bp',   /case study[^"]{0,60}blood pressure|Lagi|blood pressure[^"]{0,60}scenario/i],
+  ['cs-vacc', /vaccin|immunis|immuniz|antigen|antibod|lymphocyte|\bB cells?\b|\bT cells?\b|memory cell|dendritic|macrophage|plasma cell/i],
 ];
 
 const textOf = (c) => JSON.stringify({ q: c.q, text: c.text, options: c.options, pairs: c.pairs, statements: c.statements, blanks: c.blanks });
@@ -138,6 +181,14 @@ const CONTROLS = [
      purpose, which is the list working.) */
   'a relaxed atmosphere in the ward', 'the graph of blood flow over time',
   'the patient was quiet and settled', 'elastic stockings', 'a haemorrhage',
+  /* Controls for the five alternatives added 11 Aug 2026 with the CVS4 BLOOD PRESSURE and
+     Practice Lab 2 captures. Each is the near-miss the new alternative was written to
+     avoid: the arch named as a baroreceptor site rather than as the root of the great
+     arteries, a partial pressure stated in the same words as a blood pressure, the
+     training that is a nursing course rather than an athlete's, and a capacity that is
+     not a lung's. */
+  'the aortic arch and the carotid sinus', 'pressure is the highest at sea level',
+  'students trained in the lab', 'the capacity of the ward', 'a closed and sterile field',
 ];
 const leaks = [];
 for (const s of CONTROLS) {
@@ -151,13 +202,104 @@ if (leaks.length) {
   process.exit(1);
 }
 
+const ruleHits = new Map();
+for (const c of BOUND) {
+  const t = textOf(c);
+  ruleHits.set(c, RULES.filter(([, re]) => re.test(t)).map(([id]) => id));
+}
+
+/* ── declared routing, per question ───────────────────────────────────────────
+   THE RULE TABLE CANNOT REACH EVERY QUESTION, and pretending otherwise is how it
+   would get loosened until it files things by accident. Five of her questions name no
+   physiology at all because the physiology is in an image — "The white shiny part of
+   this structure labelled at A", "The structure labelled at B is a" — and a rule broad
+   enough to catch those would catch half the pack.
+
+   The other thing this file fixes is WHICH criterion is first. `crits[0]` becomes the
+   card's `crit`, which is the focus point the reader is shown and the one Ring 0 deals,
+   and until now it was decided by the order of the rule table. That is fine when a card
+   touches one point and arbitrary when it touches eight: the lymphatic terminology
+   matching exercise — buboes, lymphoedema, Hodgkin's — was filed under cvs-3, capillary
+   fluid movement, because `oedema` is inside `lymphoedema` and cvs-3 is declared earlier.
+
+   Every entry is proven to still bite (see the gates below). An entry that has stopped
+   matching, or that no longer changes anything, fails the build instead of rotting. */
+const ROUTES = JSON.parse(fs.readFileSync(path.join(HERE, 'routes.json'), 'utf8')).routes ?? [];
+const norm = (s) => String(s ?? '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+{
+  const problems = [];
+  const seen = new Set();
+  for (const r of ROUTES) {
+    const at = `${r.quiz} ${r.n}`;
+    if (seen.has(at)) { problems.push(`${at}: listed twice`); continue; }
+    seen.add(at);
+    const hits = BOUND.filter((c) => c.ev?.quiz === r.quiz && c.ev?.n === r.n);
+    if (hits.length !== 1) { problems.push(`${at}: addresses ${hits.length} harvested cards, needs exactly 1`); continue; }
+    const c = hits[0];
+    /* The anchor. It is the only guard a human can read, and it is what catches a route
+       still pointing at question 9 after question 9 became a different question. */
+    if (!norm(c.q).startsWith(norm(r.was))) {
+      problems.push(`${at}: anchor does not open this card's question.\n        want: ${norm(r.was).slice(0, 90)}\n        got : ${norm(c.q).slice(0, 90)}`);
+      continue;
+    }
+    const before = ruleHits.get(c);
+    let next = [...before];
+    for (const id of r.drop ?? []) {
+      if (!before.includes(id)) { problems.push(`${at}: drops ${id}, which no rule put on this card`); continue; }
+      next = next.filter((x) => x !== id);
+    }
+    for (const id of r.add ?? []) {
+      if (before.includes(id)) { problems.push(`${at}: adds ${id}, which a rule already found — write the rule, not the route`); continue; }
+      next.push(id);
+    }
+    if (r.crit) {
+      if (!next.includes(r.crit)) { problems.push(`${at}: makes ${r.crit} primary, but nothing puts it on this card — add it in the same entry, or write the rule`); continue; }
+      if (next[0] === r.crit && !(r.add ?? []).includes(r.crit)) { problems.push(`${at}: ${r.crit} is already first — the entry changes nothing`); continue; }
+      next = [r.crit, ...next.filter((x) => x !== r.crit)];
+    }
+    if (!(r.crit || (r.add ?? []).length || (r.drop ?? []).length)) { problems.push(`${at}: does nothing — needs at least one of crit/add/drop`); continue; }
+    for (const id of next) if (!(pack.criteria ?? []).some((cr) => cr.id === id)) problems.push(`${at}: ${id} is not a focus point this pack declares`);
+    ruleHits.set(c, next);
+  }
+  if (problems.length) {
+    console.error(`✗ ${problems.length} problem(s) in routes.json:\n   ` + problems.join('\n   '));
+    process.exit(1);
+  }
+}
+
 const mapped = [];
 const unmapped = [];
 for (const c of BOUND) {
-  const t = textOf(c);
-  const hits = RULES.filter(([, re]) => re.test(t)).map(([id]) => id);
+  const hits = ruleHits.get(c);
   if (hits.length) mapped.push({ card: c, crits: hits });
   else unmapped.push(c);
+}
+
+/* ── --why: show the TEXT each rule fired on ─────────────────────────────────
+   A criterion tag is a claim that the card teaches that focus point, and the counts
+   alone cannot tell a real tag from a rule that hit a word in a distractor. This prints
+   the matched substring beside every hit so a human can read the claim and judge it,
+   which is what a review of `alsoCrit` actually requires. Read-only; writes nothing.
+     node map-criteria.mjs --why           every card with more than 3 tags
+     node map-criteria.mjs --why=resp-2    every card carrying that focus point */
+const whyArg = process.argv.find((a) => a.startsWith('--why'));
+if (whyArg) {
+  const only = whyArg.includes('=') ? whyArg.split('=')[1] : null;
+  const strip = (s) => String(s ?? '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+  const rows = mapped.filter((m) => only ? m.crits.includes(only) : m.crits.length > 3);
+  console.log(`\n══ WHY ${only ? `— cards carrying ${only}` : '— cards with more than 3 focus points'} (${rows.length}) ══\n`);
+  for (const m of rows.sort((a, b) => b.crits.length - a.crits.length)) {
+    const t = textOf(m.card);
+    console.log(`${m.crits.length} tags · ${m.card.ev.quiz} · ${m.card.ev.n}`);
+    console.log(`   ${strip(m.card.q).slice(0, 110)}`);
+    for (const id of m.crits) {
+      const rule = RULES.find(([x]) => x === id);
+      const hit = rule && t.match(rule[1]);
+      console.log(`     ${id.padEnd(9)} ${hit ? JSON.stringify(hit[0].slice(0, 70)) : '— declared in routes.json'}`);
+    }
+    console.log('');
+  }
+  process.exit(0);
 }
 
 /* ── coverage from HER questions ─────────────────────────────────────────── */

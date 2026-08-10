@@ -39,7 +39,7 @@ export const COVERAGE_FILL = [
   },
   {
     type: 'mcq', topic: 'cvs-anat', crit: 'cvs-1', tier: 'textbook',
-    srcNote: 'Standard introductory physiology. The course lists protection as a function without breaking it into these two halves.',
+    srcNote: 'The two halves are the lecture’s own: the CV1 slide headed FUNCTIONS OF CARDIOVASCULAR SYSTEM puts “Disease and infection” and “Blood loss” under PROTECTION. The wording of the options is written for this pack.',
     q: 'The cardiovascular system has a protective function. This is best described as:',
     options: [
       'Clotting to seal damaged vessels, and carrying immune cells and antibodies to infection',
@@ -55,16 +55,17 @@ export const COVERAGE_FILL = [
   },
   {
     type: 'saq', topic: 'cvs-anat', crit: 'cvs-1', tier: 'textbook', marks: 5,
-    srcNote: 'Marking points written for this pack from the course’s own three-function framing. This is not a schedule the course publishes — self-mark it generously.',
-    q: 'Explain the functions of the cardiovascular system under the headings TRANSPORT, REGULATION and PROTECTION. (5 marks)',
+    srcNote: 'The three headings are the lecture’s, from the CV1 slide FUNCTIONS OF CARDIOVASCULAR SYSTEM. The marking points under them are written for this pack — the course publishes no schedule for this one, so self-mark it generously.',
+    q: 'Explain the functions of the cardiovascular system under the headings TRANSPORT, PUMPING and PROTECTION. (5 marks)',
     points: [
       '<b>Transport — to the tissues:</b> oxygen from the lungs, nutrients from the digestive tract, and hormones from the endocrine glands',
-      '<b>Transport — away from the tissues:</b> carbon dioxide to the lungs and metabolic wastes such as urea to the kidneys',
-      '<b>Regulation of temperature:</b> blood carries heat from the core to the skin; vessels dilate to lose it and constrict to conserve it',
-      '<b>Regulation of the internal environment:</b> distributing fluid, electrolytes and buffers keeps pH and tissue fluid volume stable',
-      '<b>Protection:</b> clotting seals damaged vessels to prevent blood loss, and the blood delivers white cells and antibodies to infection',
+      '<b>Transport — away from the tissues:</b> carbon dioxide to the lungs and metabolic wastes such as urea to the kidneys; heat to the skin, which is how the system also regulates temperature',
+      '<b>Pumping:</b> the heart is a double pump — the right side to the lungs, the left side to the body — and it is what keeps the blood moving at all',
+      '<b>Protection — blood loss:</b> platelets and clotting factors seal a damaged vessel',
+      '<b>Protection — disease and infection:</b> the blood delivers white cells and antibodies to wherever infection is',
     ],
-    model: 'Any sensible split of the three headings scores. If you gave one transport point rather than two, ' +
-           'give yourself the mark and add the direction you missed — the two-way traffic is the part worth remembering.',
+    model: 'Mark against the lecture’s three headings, not the textbook’s. Most books give the third as REGULATION ' +
+           '(temperature, pH, fluid balance) where the CV1 slide gives PUMPING — if you wrote regulation, the content is ' +
+           'not wrong, but add the pumping point, because that is the heading you were taught.',
   },
 ];
