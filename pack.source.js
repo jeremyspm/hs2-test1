@@ -47,6 +47,17 @@ const PACK = {
 
   coverage: { min: 6, blindMin: 10, blindNeedsSaq: true },
 
+  /* THE NUMBER THE PACK IS MEASURED AGAINST, asserted from the course document rather
+     than counted from the list below — that is the entire point of it. The engine's
+     first-run panel may only claim to cover the blueprint when this equals the criteria
+     it actually ships; without the field it states its scope and claims nothing. So the
+     failure mode of forgetting to update it is an UNDERSTATED tool, never an overstated
+     one, and dropping a criterion downgrades the claim by itself.
+     36 numbered focus points for Module 1 in `Science 2 Detailed Content.docx`, plus the
+     two unstarred case studies (Blood pressure, Vaccination) that the Assessment
+     Overview names as examinable in this test. */
+  blueprint: { total: 38 },
+
   criteria: [
     /* ---- Cardiovascular (15) ---- */
     { id:'cvs-1',  name:'Function of the cardiovascular system' },

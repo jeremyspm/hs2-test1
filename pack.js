@@ -111,6 +111,9 @@ const PACK = {
   "blindMin": 10,
   "blindNeedsSaq": true
  },
+ "blueprint": {
+  "total": 38
+ },
  "criteria": [
   {
    "id": "cvs-1",

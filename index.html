@@ -470,6 +470,65 @@ h2.sec{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--tx
 .cmend{margin-left:auto;flex:0 0 auto;display:flex;align-items:center;gap:8px}
 .empty{color:var(--tx3);text-align:center;padding:40px 10px;font-size:14px}
 .foot{margin-top:26px;text-align:center;font-size:11.5px;color:var(--tx3)}
+
+/* ================= the cram session ==================================
+   Deliberately the loudest thing on the page. Every other control here asks the
+   reader to make a decision first — which door, which topic, which filter — and a
+   reader who has not opened the tool in four days does not want a decision, they
+   want a start. This is the one control that needs no choice made before it works. */
+.bigcram{display:block;width:100%;padding:20px 18px;border-radius:16px;border:none;
+  background:linear-gradient(135deg,var(--acc),var(--acc2));color:#fff;
+  font-size:18px;font-weight:900;letter-spacing:.4px;line-height:1.25;
+  box-shadow:0 10px 26px color-mix(in srgb,var(--acc) 32%,transparent);
+  margin-bottom:14px;transition:.14s;text-align:center}
+.bigcram:hover{transform:translateY(-1px);box-shadow:0 14px 32px color-mix(in srgb,var(--acc) 40%,transparent)}
+.bigcram small{display:block;font-size:12.5px;font-weight:600;opacity:.86;margin-top:5px;letter-spacing:0}
+
+/* PIPS, NOT A PERCENTAGE BAR. You can count twelve dots and see the end of the
+   thing; a bar at 25% invites the question "25% of what?", which is the question
+   this whole view exists to stop being asked. */
+.sessbar{display:flex;align-items:center;gap:11px;background:var(--card);border:1px solid var(--line);
+  border-radius:12px;padding:10px 13px;margin-bottom:12px;font-size:12.5px;color:var(--tx2)}
+.pips{display:flex;gap:4px;flex:1;flex-wrap:wrap}
+.pips i{width:100%;max-width:16px;height:6px;border-radius:3px;background:var(--card2);
+  border:1px solid var(--line);flex:1 1 8px;transition:.2s}
+.pips i.on{background:linear-gradient(90deg,var(--acc),var(--acc2));border-color:transparent}
+.pips i.now{background:var(--acc-soft);border-color:var(--acc)}
+.sessbar b{color:var(--tx);white-space:nowrap}
+.sessbar .sx{margin-left:auto;font-size:11.5px;color:var(--tx3);background:none;border:none;
+  text-decoration:underline;cursor:pointer;padding:0}
+.sessbar .sx:hover{color:var(--tx2)}
+
+/* Typed recall. The input is big because this gets used with thumbs. */
+.tin{width:100%;padding:15px 16px;border-radius:13px;background:var(--card2);
+  border:2px solid var(--line2);color:var(--tx);font-size:17px;font-weight:600;
+  font-family:inherit;transition:.14s;margin-top:14px}
+.tin:focus{outline:none;border-color:var(--acc);background:var(--card)}
+.tin::placeholder{color:var(--tx3);font-weight:500}
+.tin.hit{border-color:var(--good)} .tin.near{border-color:var(--hard)} .tin.miss{border-color:var(--miss)}
+.tinhint{font-size:12px;color:var(--tx3);margin-top:8px;font-style:italic}
+.tverdict{margin-top:13px;padding:12px 14px;border-radius:11px;font-size:14px;line-height:1.5;border:1px solid var(--line)}
+.tverdict.hit{background:var(--gGood);border-color:var(--good);color:var(--tx)}
+.tverdict.near{background:var(--gHard);border-color:var(--hard);color:var(--tx)}
+.tverdict.miss{background:var(--gMiss);border-color:var(--miss);color:var(--tx)}
+.tverdict b{font-weight:800}
+.tovr{background:none;border:none;color:var(--tx3);font-size:12px;text-decoration:underline;
+  cursor:pointer;padding:0;margin-top:9px;display:inline-block}
+.tovr:hover{color:var(--tx2)}
+.tblanks{display:flex;flex-direction:column;gap:11px;margin-top:14px}
+.tblanks label{font-size:11.5px;text-transform:uppercase;letter-spacing:.8px;color:var(--tx3);
+  font-weight:700;margin-bottom:5px;display:block}
+.tblanks .tin{margin-top:0}
+
+.sessdone{background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+  box-shadow:var(--shadow);padding:28px 24px;text-align:center;animation:pop .28s cubic-bezier(.2,.9,.3,1.2)}
+.sessdone h3{font-size:22px;font-weight:900;margin-bottom:8px}
+.sessdone p{font-size:14px;color:var(--tx2);line-height:1.6;margin-bottom:8px}
+.sessdone .tally{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin:18px 0 6px}
+.sessdone .tally div{background:var(--card2);border:1px solid var(--line);border-radius:11px;
+  padding:10px 14px;min-width:84px}
+.sessdone .tally b{display:block;font-size:21px;font-weight:900;color:var(--tx)}
+.sessdone .tally span{font-size:11px;text-transform:uppercase;letter-spacing:.7px;color:var(--tx3)}
 </style>
 </head>
 <body>
@@ -494,6 +553,10 @@ h2.sec{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--tx
          do, so they stay behind the ···. -->
     <div class="seg" id="nav">
       <button data-v="brief" id="navBrief" hidden>Brief</button>
+      <!-- Cram is Study with a fence around it: the same deck, the same order, cut off
+           at a finishable number. It is a tab as well as a button because the button is
+           how you START one and this is how you get back to one you left half-done. -->
+      <button data-v="cram" id="navCram">Cram</button>
       <button data-v="study" class="on">Study</button>
       <!-- Mock test used to sit here. Progress is promoted into the bar in its place:
            it is now the only place a mark is reported, so it should not be behind ···. -->
@@ -650,6 +713,9 @@ const PACK = {
   "min": 6,
   "blindMin": 10,
   "blindNeedsSaq": true
+ },
+ "blueprint": {
+  "total": 38
  },
  "criteria": [
   {
@@ -10805,6 +10871,13 @@ function migrate(s){
 function save(){ localStorage.setItem(KEY,JSON.stringify(S)); }
 if(!S.door) S.door='ready';        // saves made before the two doors existed
 if(!S.flags) S.flags={};           // …and before cards could be flagged
+/* …and before there were bounded sessions or typed answers. All three are ADDITIVE:
+   defaulted here rather than in migrate(), which returns early on a v3 blob, so a
+   reader with saved progress picks them up empty and fills them as they go. Nothing
+   here is read by the Progress projection — see the note over `S.typed` below. */
+if(!S.sess)  S.sess={d:'',n:0,goal:0};
+if(!S.typed) S.typed={};           // cardKey -> {a,c,n}: attempted / clean / near-miss
+if(!S.ovr)   S.ovr=[];             // "I was right" overrides, newest last, capped
 /* …and before the queue could be narrowed by anything but one topic.
    `migrate()` returns early on a v3 blob, so this cannot live there: a reader who
    already has v3 saved progress with a topic chip selected still has to arrive in
@@ -11980,7 +12053,7 @@ function showMore(on){
   $('#navMore').classList.toggle('on',on);
   $('#navMore').setAttribute('aria-expanded',String(on));
 }
-const VIEWS={brief:renderBrief,study:renderStudy,cards:renderLibrary,search:renderSearch,stats:renderStats,audit:renderAudit};
+const VIEWS={brief:renderBrief,cram:renderCram,study:renderStudy,cards:renderLibrary,search:renderSearch,stats:renderStats,audit:renderAudit};
 /* learn / mcq / saq were three tabs before the queues merged. The hub deep-links by
    mode and a reader may have bookmarked one, so they alias onto Study rather than
    landing on a blank view. */
@@ -12002,16 +12075,48 @@ $('#navMore').onclick=()=>showMore($('#nav2').classList.contains('hidden'));
    without anybody writing copy. */
 function renderOnboard(){
   const slot=$('#onboard'); if(!slot) return;
-  if(S.onboarded||!HASBRIEF()){ slot.innerHTML=''; return; }
+  /* Gated on having CRITERIA, not on having a Brief. It used to be the latter, which
+     meant a pack without one lost the exam date, the pass mark and the first-run
+     orientation as well — punishing the reader for a property of the pack. */
+  if(S.onboarded||!PACK.criteria||!PACK.criteria.length){ slot.innerHTML=''; return; }
   const cfg=Object.assign({auto:0,saq:0,minutes:0,pass:80},PACK.exam||{});
   const nQ=(cfg.auto||0)+(cfg.saq||0), d=examDate(), dl=daysLeft();
+  /* COMPLETENESS IS A CLAIM, AND THE PACK HAS TO EARN IT — the engine cannot.
+     This line used to read "There are N focus points the course says the test can ask
+     you about. This tool has every one of them", with N counted from the pack's OWN
+     criteria list. That is a tautology rendered as a guarantee, and on a narrow pack it
+     lies: the Module 1 Terminology tool covered 3 of the course's 36 focus points and
+     printed "There are 3 focus points … This tool has every one of them." True about
+     itself, badly false about the paper. Only a pack that names the blueprint it is
+     measured against may claim to cover it — PACK.blueprint.total. Anything else states
+     its scope and makes no claim at all, so the failure mode of forgetting the field is
+     an understated tool rather than an overstated one. */
+  const bp=PACK.blueprint||null, nC=PACK.criteria.length,
+        fp=n=>`${n} focus point${n===1?'':'s'}`;
+  const cover=bp&&bp.total>nC
+      ?`<p>This tool covers <b>${fp(nC)}</b> of the <b>${bp.total}</b> the course lists for this paper — one slice of the test, not the whole of it.</p>`
+    :bp&&bp.total===nC
+      ?`<p>There are <b>${fp(nC)}</b> the course says the test can ask you about. This tool has every one of them.</p>`
+      :`<p>This tool drills <b>${fp(nC)}</b> from the course's assessment criteria.</p>`;
   const when=d?d.toLocaleDateString('en-NZ',{day:'numeric',month:'long'}):null;
   const facts=[cfg.minutes?`${cfg.minutes} minutes`:null,nQ?`${nQ} questions`:null,when?`on ${when}`:null].filter(Boolean).join(', ');
   slot.innerHTML=`<div class="onb">
     <h3>${esc(PACK.title)}</h3>
     <p>${facts?esc(facts.charAt(0).toUpperCase()+facts.slice(1))+'. ':''}${PASSTARGET()?passCaveat():`You need <b>${cfg.pass}%</b> to pass.`}</p>
-    <p>There are <b>${(PACK.criteria||[]).length} focus points</b> the course says the test can ask you about. This tool has every one of them.</p>
-    <p><b>Start by reading the Brief.</b> Then drill. That is the whole method.</p>
+    ${cover}
+    <!-- This used to read "Start by reading the Brief. Then drill." — which stopped being
+         true the moment ⚡ HELP ME CRAM became the loudest control on the same screen.
+         A first-run panel that recommends one thing while the page shouts another is
+         worse than no panel: the reader has to guess which one the tool means. Both are
+         named, in the order they should be used, and the cram set is described by what
+         it costs, because "12 cards" is the fact that makes it possible to start.
+         The Brief half is dropped entirely when there is no Brief — naming a door that
+         is not there is how a reader ends up on an empty tab deciding the tool is broken. -->
+    ${HASBRIEF()
+      ?`<p><b>Two ways in.</b> <b>Read the Brief</b> if the lecture has gone fuzzy — it explains
+         each focus point in plain prose. <b>⚡ Help me cram</b> if you would rather just start:
+         ${SESSION_N()} cards, and it stops.</p>`
+      :`<p><b>⚡ Help me cram</b> is the way in: ${SESSION_N()} cards, and it stops.</p>`}
     <button class="btn primary" id="onbGo">Got it${dl!=null&&dl>0?` — ${dl} day${dl===1?'':'s'} to go`:''}</button>
   </div>`;
   $('#onbGo').onclick=()=>{ S.onboarded=true; save(); slot.innerHTML=''; };
@@ -12158,10 +12263,16 @@ const deckKey=t=>Array.isArray(t)?t.join('+'):t;
 /* Any change to the scope must rebuild the deck, or the reader keeps being dealt
    cards from the pool they just narrowed away from. The filters go in whole. */
 const deckSig=()=>[S.door,bgOn(),FILTDIMS.map(d=>S.filters[d].join(',')).join(';')].join('|');
-function nextCard(types){
+/* Split out of nextCard so the cram session can look at the deck it is about to be
+   dealt from without consuming a card off it. Same deck, same rebuild rule. */
+function ensureDeck(types){
   const k=deckKey(types), sig=deckSig();
   let d=DECK[k];
   if(!d||d.sig!==sig||d.i>=d.cards.length) d=DECK[k]={cards:buildDeck(types),i:0,sig};
+  return d;
+}
+function nextCard(types){
+  const d=ensureDeck(types);
   return d.cards.length?d.cards[d.i++]:null;
 }
 /* A missed card comes back inside the same sitting rather than waiting a whole
@@ -12444,7 +12555,20 @@ function gate(cb,types,readyNote){
    It is DERIVED, not authored. The teaching material is already in the pack:
    flash answers written in teaching order underneath named criteria. This
    view simply renders them as prose instead of as questions.            */
-const HASBRIEF=()=>!!(PACK.criteria&&PACK.criteria.length);
+/* A LIST OF CRITERIA IS NOT A BRIEF. This view is derived from flash/saq cards (see
+   critProse below), so a pack made of nothing but machine-marked cards declares its
+   criteria, renders one empty stub per criterion, and `nav()` at the bottom of this
+   file sends every cold reader straight to them. That shipped: the Module 1 Terminology
+   tool — 63 multichoice cards, no flash, no saq — opened on a tab reading "No written
+   summary for this one yet" three times over, directly under an onboarding panel
+   telling the reader to start by reading it. The tab is earned by having prose to put
+   in it, not by having headings to put it under. */
+let _hasbrief=null;
+const HASBRIEF=()=>{
+  if(_hasbrief===null) _hasbrief=!!(PACK.criteria&&PACK.criteria.length)
+    &&PACK.criteria.some(c=>critProse(c.id).length);
+  return _hasbrief;
+};
 S.read=S.read||{};                 // critId -> timestamp. Additive: no migration needed.
 /* cardKey -> {g,t}: marking points you ticked, out of the total. The SRS box alone
    cannot carry this — it records how WELL you recalled something, not how many marks
@@ -12532,7 +12656,10 @@ function factHTML(c){
 function renderBrief(){
   const all=PACK.criteria||[];
   const pos={}; all.forEach((c,i)=>pos[c.id]=i);
-  const G=gate(renderBrief,RECALL,`<div class="doornote">Everything is here under either door — <b>Get me ready</b> only changes the <b>order</b>, putting the parts no practice test covers, and the parts you are weakest on, first. Nothing is hidden.</div>`);
+  /* Also on the Brief, because a cold reader lands HERE, and the Brief is a long page:
+     someone who scrolls it and closes the tab has read without ever retrieving. */
+  const G=cramCTA()+gate(renderBrief,RECALL,`<div class="doornote">Everything is here under either door — <b>Get me ready</b> only changes the <b>order</b>, putting the parts no practice test covers, and the parts you are weakest on, first. Nothing is hidden.</div>`);
+  setTimeout(wireCramCTA,0);
 
   let list=all.slice();
   if(S.door==='ready') list.sort((a,b)=>critRank(a)-critRank(b)||pos[a.id]-pos[b.id]);
@@ -12649,7 +12776,12 @@ document.addEventListener('click',e=>{
    answered and marked — but that is now an INTERACTION the card chooses, not a
    destination the reader has to choose first.                                  */
 function renderStudy(){
-  const G=gate(renderStudy,ALLTYPES);
+  /* The cram button rides ABOVE the doors on purpose. Study opens by asking the reader
+     to choose a door and then read a note about deck composition — which is the right
+     screen for someone who has decided to work, and the wrong one for someone deciding
+     whether to. The first thing on the page should be the thing that needs no decision. */
+  const G=cramCTA()+gate(renderStudy,ALLTYPES);
+  setTimeout(wireCramCTA,0);
   CUR=nextCard(ALLTYPES);
   /* An empty queue used to say "No cards in this topic yet", which was true of the
      one filter that existed then and is a dead end now: five dimensions can
@@ -12715,12 +12847,24 @@ const RATEROW=`<div class="rate">
       <button class="r3" data-r="2">Good</button>
       <button class="r4" data-r="3">Easy</button>
     </div>`;
+/* WHERE "NEXT" GOES. The four card runners below are shared by Study and the cram
+   session, and they used to call renderStudy by name — which, dealt inside a session,
+   silently threw the reader back to the unbounded queue halfway through their set and
+   lost the count. One indirection instead of a parameter on all four: the runners ask
+   where they are, and the session gets to tick its counter on the way past.
+   `studyish` is the two views a card can be dealt in; the Enter-key handlers test it
+   for the same reason. */
+const studyish=()=>VIEW==='study'||VIEW==='cram';
+function afterCard(){
+  if(VIEW==='cram'){ sessDone(); renderCram(); window.scrollTo({top:0}); }
+  else renderStudy();
+}
 function wireRate(c){
   $$('.rate button').forEach(b=>b.onclick=()=>{
     const r=+b.dataset.r;
     srsRate(c.key,r);
     if(r<=1) requeue(ALLTYPES,c,r===0?4:10);   // Again comes back sooner than Hard
-    renderStudy();
+    afterCard();
   });
 }
 
@@ -12795,7 +12939,7 @@ function studyRail(G,head,c){
     wireRate(c);
   };
   $('#flip').onclick=flip;
-  document.onkeydown=e=>{ if(VIEW==='study'&&e.key==='Enter'&&$('#flip')) flip(); };
+  document.onkeydown=e=>{ if(studyish()&&e.key==='Enter'&&$('#flip')) flip(); };
 }
 function studyFlash(G,head,c){
   view.innerHTML=G+`<div class="card">${head}${faceHTML(c,null)}
@@ -12806,7 +12950,7 @@ function studyFlash(G,head,c){
     wireRate(c);
   };
   $('#flip').onclick=flip;
-  document.onkeydown=e=>{ if(VIEW==='study'&&e.key==='Enter'&&$('#flip')) flip(); };
+  document.onkeydown=e=>{ if(studyish()&&e.key==='Enter'&&$('#flip')) flip(); };
 }
 
 /* ---- written answer: say it, reveal the marking points, tick honestly ---- */
@@ -12828,12 +12972,12 @@ function studyWritten(G,head,c){
       srsRate(c.key, pct>=1?3 : pct>=0.8?2 : pct>=0.5?1 : 0);   // srsRate saves
       if(pct<0.8) requeue(ALLTYPES,c,pct>=0.5?10:4);
       $('#done').outerHTML=`<div class="why" style="flex:1">Scored <b>${got}/${tot}</b> — ${pct>=0.8?'strong ✅':pct>=0.5?'getting there — this one comes back soon':'this one goes back to the front of the queue 🔁'}</div><button class="btn primary" id="next">Next ↵</button>`;
-      $('#next').onclick=renderStudy;
-      document.onkeydown=e=>{ if(VIEW==='study'&&e.key==='Enter'&&$('#next')) renderStudy(); };
+      $('#next').onclick=afterCard;
+      document.onkeydown=e=>{ if(studyish()&&e.key==='Enter'&&$('#next')) afterCard(); };
     };
   };
   $('#flip').onclick=reveal;
-  document.onkeydown=e=>{ if(VIEW==='study'&&e.key==='Enter'&&$('#flip')) reveal(); };
+  document.onkeydown=e=>{ if(studyish()&&e.key==='Enter'&&$('#flip')) reveal(); };
 }
 
 /* ---- machine-marked: mcq / order / cloze / tfset / match ---- */
@@ -12857,12 +13001,459 @@ function studyAuto(G,head,c,tot){
     if(!ok) requeue(ALLTYPES,c,got?10:4);      // partly right waits longer than fully wrong
     $('#fb').innerHTML=feedbackHTML(c,r.resp,`${ok?'✅':got?'➖':'❌'} <b>${got} / ${tot} mark${tot>1?'s':''}.</b> `)+srcHTML(c)+
       `<div class="btnrow"><button class="btn primary" id="next">Next ↵</button></div>`;
-    $('#next').onclick=renderStudy;
-    document.onkeydown=e=>{ if(VIEW==='study'&&e.key==='Enter'&&$('#next')) renderStudy(); };
+    $('#next').onclick=afterCard;
+    document.onkeydown=e=>{ if(studyish()&&e.key==='Enter'&&$('#next')) afterCard(); };
   };
   wireRunner($('#body'),r,refresh);
   if($('#submit')) $('#submit').onclick=grade;
-  document.onkeydown=e=>{ if(VIEW==='study'&&e.key==='Enter'&&$('#submit')&&!$('#submit').disabled) grade(); };
+  document.onkeydown=e=>{ if(studyish()&&e.key==='Enter'&&$('#submit')&&!$('#submit').disabled) grade(); };
+}
+
+/* ═══════════════ TYPED RECALL — the matcher ═══════════════════════════════════
+   Producing a term from memory is strictly harder than picking it out of four, and it
+   is the harder thing that predicts whether you still have it in a week. So where a
+   card's answer is a short term, we ask for it typed BEFORE showing any options.
+
+   This only works if the marker is fair, and "fair" here is a specific claim: it must
+   never mark a reader wrong for knowing the thing. A reader marked wrong for a spelling
+   they would have recognised instantly stops typing and starts tapping, and the feature
+   is gone. Equally it must not accept a wrong term, or it teaches one.
+
+   Between those sits the NEAR verdict, which is the whole design: right idea, shown the
+   correct spelling, credited. The reader is never punished for prose and never left
+   believing a misspelling was the word.
+
+   NORMALISATION IS SYMMETRIC — both the typed text and the key go through exactly the
+   same pipeline, so the folds do not have to be linguistically correct, only consistent.
+   `ae`→`e` mangles "aerobic" into "erobic" on both sides and still matches. That is why
+   this is a fold and not a dictionary. (The one that matters: the course writes
+   "haemoglobin" and half the textbooks write "hemoglobin". A pack has already shipped a
+   criteria rule that missed the British spelling for months, which is this bug wearing
+   a different hat.) */
+/* Kept SHORT on purpose. The first cut also stripped his/her/its/at/in/on, which ate
+   the proper noun in "Bundle of His" and left the key as the bare word "bundle" —
+   contained in half the conduction-system distractors. A stopword list on anatomical
+   terms is a liability: articles and "and"/"of" are safe, pronouns and prepositions
+   are not. */
+const STOPW=/\b(the|a|an|of|and)\b/g;
+function normAns(s){
+  return String(s==null?'':s)
+    .replace(/<[^>]*>/g,' ')                       // options may carry <b>…</b>
+    .replace(/&[a-z]+;|&#\d+;/gi,' ')
+    .toLowerCase()
+    .replace(/[‘’ʼ]/g,"'")
+    .replace(/[^a-z0-9\s'-]/g,' ')                 // punctuation, brackets, symbols
+    .replace(/['-]/g,'')                           // "o'clock", "well-known" join up
+    .replace(STOPW,' ')
+    .replace(/\s+/g,' ').trim();
+}
+/* Spelling fold, applied AFTER normAns. Order matters: the plural strip runs last so
+   it sees already-folded stems. Words of 3 letters or fewer are never de-pluralised —
+   "gas" must not become "ga". */
+function foldSpell(s){
+  return s.replace(/ae|oe/g,'e')
+          .replace(/is(e|ed|es|ing)\b/g,'iz$1')
+          .replace(/ys(e|ed|es|ing)\b/g,'yz$1')
+          .replace(/([a-z]{2,})ies\b/g,'$1y')          // capillaries → capillary
+          .replace(/([a-z]{2,}(?:s|x|z|ch|sh))es\b/g,'$1')  // reflexes → reflex
+          .replace(/\B([a-z]{3,})s\b/g,'$1')           // veins → vein; never "gas" → "ga"
+          .replace(/\s+/g,' ').trim();
+}
+const foldKey=s=>foldSpell(normAns(s));
+/* Levenshtein, iterative, single row. Bounded inputs (short terms) so no cap needed. */
+function lev(a,b){
+  if(a===b) return 0;
+  if(!a.length||!b.length) return Math.max(a.length,b.length);
+  let prev=Array.from({length:b.length+1},(_,i)=>i);
+  for(let i=1;i<=a.length;i++){
+    const cur=[i];
+    for(let j=1;j<=b.length;j++)
+      cur[j]=Math.min(prev[j]+1, cur[j-1]+1, prev[j-1]+(a[i-1]===b[j-1]?0:1));
+    prev=cur;
+  }
+  return prev[b.length];
+}
+/* How far off still counts as "you knew it, you mistyped it". Scaled by length, because
+   one wrong letter in a 4-letter word is a different word and one wrong letter in
+   "atelectasis" is a thumb. */
+const nearTol=n=>n<=4?0:n<=7?1:n<=12?2:3;
+/* Accepted forms of the key. A Canvas option often carries a gloss the reader should
+   not have to reproduce — "Left Anterior Descending artery {LAD}" — so the gloss and
+   the ungossed stem are BOTH accepted, and so is the bare abbreviation. */
+function keyForms(correct){
+  const raw=String(correct==null?'':correct).replace(/<[^>]*>/g,' ');
+  const forms=[raw];
+  const inner=raw.match(/[({[]([^)}\]]+)[)}\]]/g)||[];
+  inner.forEach(x=>forms.push(x.replace(/^[({[]|[)}\]]$/g,'')));
+  forms.push(raw.replace(/[({[][^)}\]]*[)}\]]/g,' '));
+  return [...new Set(forms.map(foldKey).filter(Boolean))];
+}
+/* Verdict: 'hit' | 'near' | 'miss'. `wrongs` are the card's own distractors — if the
+   typed text lands closer to one of those than to the key, it is a MISS whatever the
+   edit distance says. Without that guard, "hypertension" typed against a key of
+   "hypotension" scores distance 1 and gets credited as a near-miss for the exact
+   opposite of the right answer. */
+function matchAnswer(input,correct,wrongs){
+  const t=foldKey(input);
+  if(!t) return 'miss';
+  const forms=keyForms(correct);
+  if(!forms.length) return 'miss';
+  const wforms=(wrongs||[]).map(w=>foldKey(w)).filter(Boolean);
+  /* THE DISTRACTOR TEST RUNS FIRST, and it has to. Ordered the other way, containment
+     credited the reader for typing the card's own wrong answer whenever the distractor
+     was the key with a qualifier bolted on — "Parasympathetic nervous system" contains
+     "sympathetic nervous system", "Non-ciliated columnar epithelia" contains the
+     ciliated one, "Glomerular" sits inside "Juxta glomerular". Six cards in the pack
+     did exactly this, and every one of them would have marked the opposite of the right
+     answer correct. Typing an option the card offers and calls wrong is a miss. */
+  if(wforms.includes(t)&&!forms.includes(t)) return 'miss';
+  if(forms.includes(t)) return 'hit';
+  /* Containment, and only for multi-word keys — a one-word key inside a longer answer
+     is not evidence, since "veins" sits inside "veins and arteries". Even then it is
+     refused when a DISTRACTOR is the better containment match, which is the same
+     negation trap one step along: the reader who writes out the non-ciliated option in
+     full should not be credited because the ciliated key is a substring of it. */
+  for(const f of forms){
+    if(f.split(' ').length<2) continue;
+    if(!(t.includes(f)||f.includes(t))) continue;
+    if(wforms.some(w=>w!==f&&(t.includes(w)||w.includes(t))&&w.length>=f.length)) continue;
+    return 'hit';
+  }
+  const dists=forms.map(f=>lev(t,f));
+  const best=Math.min(...dists);
+  const bestForm=forms[dists.indexOf(best)]||forms[0];
+  const wrongBest=wforms.reduce((m,w)=>Math.min(m,lev(t,w)),Infinity);
+  if(wrongBest<=best) return 'miss';
+  return best<=nearTol(bestForm.length)?'near':'miss';
+}
+/* ---- which cards can honestly be asked without their options ----
+   The trap this avoids: a stem written to be read alongside its options — "which of the
+   following is NOT part of the conducting zone" — is meaningless as an open question,
+   and asking it typed produces a card nobody can answer and everybody blames themselves
+   for. Rejecting conservatively costs one card; getting it wrong costs the reader's
+   trust in the whole mode. On hs2-test1 this leaves 55 of 157 multichoice.
+
+   True/false options are excluded for a different reason: typing "true" is not recall. */
+const OPTDEP=/which of the (following|statements|options)|from the (list|options)|select (all|the)|choose (the|from)|listed (above|below)|(shown|given) below/i;
+const NEGSTEM=/\b(not|except|incorrect|least)\b/i;
+const plainQ=q=>{ const s=String(q||'').replace(/<[^>]*>/g,' '); return !OPTDEP.test(s)&&!NEGSTEM.test(s); };
+const shortAns=s=>{ const n=normAns(s); return !!n && n.split(' ').length<=3 && !/^(true|false)$/.test(n); };
+/* An mcq is typeable when its stem stands alone and its answer is a short term. */
+function typedMCQ(c){
+  if(c.type!=='mcq') return null;
+  const opts=c.options||[];
+  if(opts.length<2) return null;
+  const i=typeof c.correct==='number'?c.correct:-1;
+  if(i<0||opts[i]==null) return null;
+  if(!plainQ(c.q)||!shortAns(opts[i])) return null;
+  return {answer:opts[i],wrongs:opts.filter((_,j)=>j!==i)};
+}
+/* A cloze is a fill-in-the-blank already — the engine just renders dropdowns over it,
+   which hands the reader the answer. Typed, it becomes the thing it always was.
+   ALL-OR-NOTHING per card: a card with one long blank among short ones would deal half
+   typed and half dropdown, which reads as a bug. Whole card or nothing. */
+function typedCloze(c){
+  if(c.type!=='cloze') return null;
+  const bs=c.blanks||[];
+  if(!bs.length) return null;
+  const out=[];
+  for(const b of bs){
+    const o=b.options||[], i=typeof b.correct==='number'?b.correct:-1;
+    if(i<0||o[i]==null||!shortAns(o[i])) return null;
+    out.push({answer:o[i],wrongs:o.filter((_,j)=>j!==i)});
+  }
+  return out;
+}
+const typedPlan=c=>{ const m=typedMCQ(c); if(m) return {kind:'mcq',slots:[m]};
+                     const z=typedCloze(c); return z?{kind:'cloze',slots:z}:null; };
+/* Bookkeeping for typed attempts. Deliberately its OWN store: `S.mcq` is what the
+   Progress projection reads to weight the paper, and it must keep meaning "marks scored
+   on this card". Typing is a study mode, not a different score — so the mark recorded
+   for a card is whatever the card is finally worth, exactly as before, and the typed
+   attempt is recorded here beside it. Nothing downstream shifts. */
+function typedLog(key,verdict){
+  const t=S.typed[key]||{a:0,c:0,n:0};
+  t.a++; if(verdict==='hit') t.c++; else if(verdict==='near') t.n++;
+  S.typed[key]=t; save();
+}
+function logOverride(key,typed,expected){
+  S.ovr.push({k:key,t:String(typed).slice(0,80),e:String(expected).slice(0,80),ts:Date.now()});
+  if(S.ovr.length>200) S.ovr=S.ovr.slice(-200);   // a log, not a leak
+  save();
+}
+
+/* ═══════════════ THE CRAM SESSION ═════════════════════════════════════════════
+   A session is NOT a new queue. It is the deck the Study view already builds — same
+   cards, same ranking, the lecturer's own questions and the never-practised focus
+   points still first — with a fence around it at a finishable number.
+
+   That is the entire idea, and it is why this is ~100 lines rather than a scheduler.
+   The thing that makes a 345-card pack frightening is not 345 cards, it is an
+   unbounded queue with a debt number printed on it. Shrinking the pack does not fix
+   that; a 60-card pack with a growing due count produces the same dread. So: no due
+   count anywhere on this view, a set you can see the end of, and a real ending.
+
+   What this view must never do is imply the set IS the pack. It says what it is. */
+const SESSION_N=()=>Math.max(4,((PACK.session||{}).n)||12);
+/* Aim for one typed card in every N dealt. Measured, not guessed: on hs2-test1, 69 of
+   the 344 dealable cards can be asked typed, but only ONE of them lands in the first
+   twelve — `cardRank` leads with weak rails and flashcards by design, and neither can
+   be typed. A mode whose whole argument is "producing it beats recognising it" cannot
+   show the reader one typed card per sitting.
+
+   So the session pulls the next typeable card forward when it is due one. It reorders,
+   it never filters: nothing is added to the deck, nothing is dropped from it, and every
+   card still appears exactly once per pass. It mutates the SHARED deck — the same one
+   Study deals from — which is deliberate rather than sloppy: two decks would need two
+   requeue paths and could disagree about what the reader had already seen. The visible
+   effect on Study is that a multichoice card may arrive a few places earlier than it
+   otherwise would, which breaks none of the guarantees the door note makes. */
+const CRAM_TYPED_EVERY=()=>{ const v=(PACK.session||{}).typedEvery; return v===0?0:(v||3); };
+const today=()=>new Date().toLocaleDateString('en-CA');   // YYYY-MM-DD, local
+function sessState(){
+  const s=S.sess;
+  if(s.d!==today()){ s.d=today(); s.n=0; s.goal=0; s.base=0; save(); }
+  if(s.base==null) s.base=0;      // a blob saved before sets were counted from a baseline
+  return s;
+}
+/* A set is never longer than the pool it is drawn from. Without this, a small pack — or
+   a reader who has narrowed the queue to eleven cards — is promised twelve, and the deck
+   silently rebuilds and starts repeating cards to make the number up. Promising more
+   distinct cards than exist is the one lie this view cannot afford, since the number IS
+   the feature.
+
+   `base` is where the CURRENT set started, and it is what the bar counts from. Without
+   it the counter accumulated across the day: a reader who took a fourth set was looking
+   at "48 of 60" over sixty wrapped pips, which is a debt number over two rows — the
+   precise thing this view exists to keep off the screen. The day's total is still kept
+   (`n`) and still reported, but on the ending, where it reads as something done rather
+   than something owed. */
+function sessStart(){
+  const s=sessState();
+  s.base=s.n;
+  s.goal=s.n+Math.min(SESSION_N(),Math.max(1,deckSource(ALLTYPES).length));
+  save();
+}
+const sessLive=()=>{ const s=sessState(); return s.goal>s.n; };
+/* The button that starts one. Rendered on Study and the Brief — the two views a reader
+   actually lands on — and it is the loudest thing on either of them by design. */
+function cramCTA(){
+  const s=sessState(), n=SESSION_N();
+  const live=s.goal>s.n, left=s.goal-s.n;
+  return `<button class="bigcram" id="goCram">${
+    live?`⚡ CARRY ON CRAMMING<small>${left} card${left===1?'':'s'} left in this set</small>`
+        :`⚡ HELP ME CRAM<small>${n} cards, about ${Math.round(n*0.6)} minutes — then you are done</small>`}</button>`;
+}
+function wireCramCTA(){
+  const b=$('#goCram'); if(!b||!b.addEventListener) return;
+  b.onclick=()=>{
+    /* Retire the first-run panel on the way in. It sits above the view and is six lines
+       tall, so on a 390px phone the card a reader just asked for starts below the fold —
+       they tap the big button and land on the thing they tapped, pushed off screen.
+       ACTING on the panel's own suggestion is a stronger "got it" than tapping Got it,
+       and every fact in it is still reachable from Progress and Sources. */
+    if(!S.onboarded){ S.onboarded=true; save(); renderOnboard(); }
+    if(!sessLive()) sessStart();
+    nav('cram'); window.scrollTo({top:0});
+  };
+}
+function pipsHTML(done,goal){
+  let h='';
+  for(let i=0;i<goal;i++) h+=`<i class="${i<done?'on':i===done?'now':''}"></i>`;
+  return `<div class="pips">${h}</div>`;
+}
+function sessBar(){
+  const s=sessState(), done=s.n-s.base, total=s.goal-s.base;
+  return `<div class="sessbar"><b>${done} of ${total}</b>${pipsHTML(done,total)}
+    <button class="sx" id="sessOut">leave</button></div>`;
+}
+/* Counting a card as done is the session's ONLY job beyond dealing it, and it is
+   deliberately generous: an item counts when the reader has finished with it, whether
+   they got it right or not. Counting only correct answers turns a 12-card set into an
+   unbounded one for exactly the reader who most needs it to end. */
+function sessDone(){ const s=sessState(); s.n++; save(); }
+/* Deal the next card, pulling a typeable one forward when the session is due one.
+   Costs a scan of the remaining deck only on the slots that want a typed card. */
+function cramDeal(){
+  const every=CRAM_TYPED_EVERY(), s=sessState();
+  if(every>0 && (s.n%every)===0){
+    const d=ensureDeck(ALLTYPES);
+    if(d.i<d.cards.length && !typedPlan(d.cards[d.i])){
+      for(let j=d.i+1;j<d.cards.length;j++){
+        if(typedPlan(d.cards[j])){ const [c]=d.cards.splice(j,1); d.cards.splice(d.i,0,c); break; }
+      }
+    }
+  }
+  return nextCard(ALLTYPES);
+}
+function renderCram(){
+  const s=sessState();
+  /* The empty check comes BEFORE the finished check. A reader who has narrowed the queue
+     to nothing has a goal of n and would otherwise be congratulated on finishing a set
+     that was never dealt — "Done — 0 cards", with no hint that a filter did it. */
+  if(!deckSource(ALLTYPES).length){
+    view.innerHTML=`<div class="empty">${filtOn()
+      ? `Nothing matches the filters you have on. <button class="btn ghost" data-fx="clear" style="margin-left:6px">Clear them</button>`
+      : 'No cards in this pack yet.'}</div>`;
+    return;
+  }
+  if(!s.goal){ sessStart(); }
+  if(s.n>=s.goal) return cramFinished();
+  CUR=cramDeal();
+  if(!CUR){ view.innerHTML=`<div class="empty">No cards here yet.</div>`; return; }
+  const c=CUR, bar=sessBar(), head=cardHeadHTML(c), plan=typedPlan(c);
+  if(plan)                 cramTyped(bar,head,c,plan);
+  else if(c.type==='rail') studyRail(bar,head,c);
+  else if(c.type==='flash')studyFlash(bar,head,c);
+  else if(c.type==='saq')  studyWritten(bar,head,c);
+  else                     studyAuto(bar,head,c,cardMarks(c));
+  wireSessBar();
+}
+/* "leave" goes to the BRIEF, not to Study. Study is the unbounded queue with the whole
+   card count printed across the top of it — the exact screen a bounded session exists to
+   keep a nervous reader away from — so exiting into it undoes the point at the one moment
+   the reader has already decided they have had enough. The Brief is calm, and it carries
+   the CARRY ON CRAMMING button at the top, so the way back is the first thing on it. */
+function wireSessBar(){
+  setTimeout(()=>{
+    const b=$('#sessOut');
+    if(b&&b.addEventListener) b.onclick=()=>nav(HASBRIEF()?'brief':'study');
+  },0);
+}
+/* The end of a set. It has to do two things at once: stop, and not imply that stopping
+   means finished. Both are said plainly — the tally is what happened, the line under it
+   is what is still there. No projection, no percentage, no "you are 34% ready": this
+   view has no business estimating a mark, and the Progress tab already does the honest
+   version of that. */
+function cramFinished(){
+  const s=sessState(), dl=(typeof daysLeft==='function')?daysLeft():null;
+  const n=SESSION_N();
+  /* A zero tile is a worse report than no tile: a reader whose set happened to contain no
+     typeable card reads "0 terms typed" as a thing they failed to do. */
+  const typedN=Object.keys(S.typed).length;
+  /* The heading counts the SET just finished; the tally counts the day. Both were `s.n`
+     before, so a second set announced "Done — 24 cards" for twelve cards of work. */
+  const set=Math.max(0,s.goal-s.base);
+  view.innerHTML=`<div class="sessdone">
+    <h3>Done — ${set} card${set===1?'':'s'}.</h3>
+    <p>That is the set. ${dl!=null&&dl>0?`<b>${dl} day${dl===1?'':'s'}</b> until the test — one set a day from here is ${n*dl} more reps.`:''}</p>
+    <div class="tally">
+      <div><b>${s.n}</b><span>today</span></div>
+      ${typedN?`<div><b>${typedN}</b><span>terms typed</span></div>`:''}
+    </div>
+    <p style="margin-top:16px">The rest of the pack has not gone anywhere — <b>Study</b>
+      deals from it without a limit, and <b>All cards</b> shows every one of them.</p>
+    <div class="btnrow">
+      <button class="btn primary" id="cramMore">Another ${n}</button>
+      <button class="btn ghost" id="cramStop">I'm done for now</button>
+    </div></div>`;
+  setTimeout(()=>{
+    const m=$('#cramMore'), st=$('#cramStop');
+    if(m&&m.addEventListener) m.onclick=()=>{ sessStart(); renderCram(); window.scrollTo({top:0}); };
+    if(st&&st.addEventListener) st.onclick=()=>nav('stats');
+  },0);
+}
+
+/* ---- the typed card: produce it, then meet it the way the paper asks it ----
+   TWO STAGES, and the second is not a consolation prize. Stage one asks for the term
+   with no options on screen. Miss it — or ask to see them — and the SAME card re-deals
+   as the multichoice/dropdown it has always been, which is the format the real paper
+   uses. So a miss converts into a rep of the examinable form instead of a dead end,
+   and the lazy path (tap straight through to the options every time) still trains the
+   right thing. Nobody hits a wall.
+
+   Marks are recorded by the ORIGINAL runner in stage two, untouched. A typed hit
+   records the card's full marks through the same `markAuto` path — see cramCredit —
+   so `S.mcq` keeps meaning exactly what it meant before this view existed. */
+function cramTyped(bar,head,c,plan){
+  const multi=plan.slots.length>1;
+  const fields=plan.slots.map((s,i)=>`<div>${multi?`<label>Blank ${i+1}</label>`:''}
+      <input class="tin" id="tin${i}" autocomplete="off" autocapitalize="off" autocorrect="off"
+        spellcheck="false" enterkeyhint="go" aria-label="${multi?`Blank ${i+1}`:'Your answer'}"
+        placeholder="${multi?'…':'Type the answer'}"/></div>`).join('');
+  /* THE FIRST ONE OF THESE A READER EVER MEETS needs a different sentence. Typed recall
+     is the only place in the tool that asks you to produce something with nothing on
+     screen to lean on, and a cold reader's honest reaction to a blank box is that they
+     are about to be caught out. The thing that defuses it is not encouragement, it is
+     the mechanic: you cannot get stuck, because a miss hands you the multichoice. Said
+     once, on the first card, and never again — `S.typed` empty is the test, so no new
+     state and no flag to reset. */
+  const firstEver=!Object.keys(S.typed).length;
+  view.innerHTML=bar+`<div class="card">${head}
+    ${plan.kind==='cloze'&&c.text?`<div class="txt" style="margin-top:6px">${clozeStemHTML(c)}</div>`:''}
+    <div class="tblanks" id="tblanks">${fields}</div>
+    <div class="tinhint">${firstEver
+      ? `Type it from memory — nothing is on screen to pick from, which is the point. Spelling is marked kindly, and if you miss it the multichoice version comes straight up, so you cannot get stuck.`
+      : `Type it from memory — spelling is marked kindly. No options yet.`}</div>
+    <div id="tfb"></div>
+    <div class="btnrow">
+      <button class="btn primary" id="tcheck">Check ↵</button>
+      <button class="btn ghost" id="tskip">Show me the options</button>
+    </div></div>`;
+  const inputs=plan.slots.map((_,i)=>$('#tin'+i)).filter(x=>x&&x.classList);
+  if(inputs[0]&&inputs[0].focus) inputs[0].focus();
+  /* Falls through to the ordinary runner, which owns marking from here. */
+  const toOptions=(note)=>{
+    const G=bar+(note?`<div class="tverdict miss">${note}</div>`:'');
+    studyAuto(G,head,c,cardMarks(c));
+    wireSessBar();
+  };
+  const check=()=>{
+    const verdicts=plan.slots.map((s,i)=>matchAnswer(inputs[i]?inputs[i].value:'',s.answer,s.wrongs));
+    verdicts.forEach((v,i)=>{ if(inputs[i]) inputs[i].className='tin '+v; });
+    plan.slots.forEach((s,i)=>typedLog(c.key+'#'+i,verdicts[i]));
+    const worst=verdicts.includes('miss')?'miss':verdicts.includes('near')?'near':'hit';
+    if(worst==='miss'){
+      const missed=plan.slots.filter((_,i)=>verdicts[i]==='miss').length;
+      $('#tfb').innerHTML=`<div class="tverdict miss">Not quite${
+        multi?` — ${missed} of ${plan.slots.length} off`:''}. Here it is the way the paper asks it.</div>
+        <button class="tovr" id="tovr">I think I was right — count it</button>`;
+      const ov=$('#tovr');
+      if(ov&&ov.addEventListener) ov.onclick=()=>{
+        plan.slots.forEach((s,i)=>{ if(verdicts[i]==='miss') logOverride(c.key+'#'+i,inputs[i]?inputs[i].value:'',s.answer); });
+        cramCredit(c,'near');
+      };
+      const btn=$('#tcheck'); if(btn&&btn.classList) btn.textContent='Show the options ↵';
+      if(btn&&btn.addEventListener) btn.onclick=()=>toOptions('You typed it before seeing these.');
+      const sk=$('#tskip'); if(sk&&sk.remove) sk.remove();
+      return;
+    }
+    const shown=plan.slots.map(s=>`<b>${esc(String(s.answer).replace(/<[^>]*>/g,''))}</b>`).join(' · ');
+    $('#tfb').innerHTML=`<div class="tverdict ${worst}">${
+      worst==='hit'?`✅ Yes — ${shown}. You produced that from memory, which is the hard version.`
+                   :`➖ Right idea — the spelling is ${shown}.`}</div>`;
+    cramCredit(c,worst);
+  };
+  const finish=()=>{ sessDone(); renderCram(); window.scrollTo({top:0}); };
+  /* A typed hit still has to record the card's marks, or a card answered the hard way
+     would look unattempted to Progress and to cardWeak(). It records the SAME full
+     marks the runner would have recorded for a correct answer — no bonus, no penalty.
+     A near-miss is credited in full too and re-queued, because the reader knew it and
+     the spelling is worth meeting again inside the sitting. */
+  function cramCredit(card,verdict){
+    const tot=cardMarks(card), m=S.mcq[card.key]||{a:0,c:0};
+    m.a++; m.c++; m.g=(m.g||0)+tot; m.t=(m.t||0)+tot; S.mcq[card.key]=m; save();
+    if(verdict==='near') requeue(ALLTYPES,card,10);
+    $('#tfb').innerHTML+=srcHTML(card);
+    const row=$('.card .btnrow');
+    if(row&&row.innerHTML!==undefined) row.innerHTML=`<button class="btn primary" id="tnext">Next ↵</button>`;
+    const nx=$('#tnext');
+    if(nx&&nx.addEventListener) nx.onclick=finish;
+    document.onkeydown=e=>{ if(VIEW==='cram'&&e.key==='Enter'&&$('#tnext')) finish(); };
+  }
+  const ck=$('#tcheck'), sk=$('#tskip');
+  if(ck&&ck.addEventListener) ck.onclick=check;
+  if(sk&&sk.addEventListener) sk.onclick=()=>toOptions('You asked for the options — no penalty, this is the format the paper uses.');
+  document.onkeydown=e=>{
+    if(VIEW!=='cram'||e.key!=='Enter') return;
+    if($('#tnext')) finish(); else if($('#tcheck')) $('#tcheck').click();
+  };
+}
+/* The cloze passage with its blanks left as blanks. `runnerHTML` renders dropdowns into
+   the same slots; here they stay holes, because handing over the options is the one
+   thing this stage must not do. */
+function clozeStemHTML(c){
+  return String(c.text||'').replace(/\[\[(\d+)\]\]/g,(_,n)=>`<b>&nbsp;____${n}____&nbsp;</b>`);
 }
 
 /* ---- Mock test: REMOVED ----
@@ -13129,7 +13720,7 @@ if(tp&&PACK.topics.some(t=>t.id===tp)){ S.filters.topics=[tp]; save(); }
 if(ty){ const ts=ty.split(',').filter(t=>ALLTYPES.includes(t)); if(ts.length){ S.filters.types=ts; save(); } }
 /* learn/mcq/saq are kept here on purpose: nav() aliases them onto Study, so a hub
    link or bookmark written before the merge still lands somewhere real. */
-if(md&&['brief','study','learn','mcq','saq','cards','search','stats','audit'].includes(md)) nav(md);
+if(md&&['brief','cram','study','learn','mcq','saq','cards','search','stats','audit'].includes(md)) nav(md);
 else if(tp||ty) nav(VIEW);   // re-render so the scope change shows
 })();
 </script>
