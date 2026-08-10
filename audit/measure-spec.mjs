@@ -13,6 +13,7 @@
 
    It measures; it does not gate. run-all.mjs does not call it. */
 import { loadPack } from './load-pack.mjs';
+import { spineOf, partsOf } from './spine.mjs';
 
 const { pack: P } = loadPack();
 
@@ -25,40 +26,16 @@ const CRITS = P.criteria ?? [];
 const MARKED = ['mcq', 'match', 'cloze', 'tfset', 'order'];
 const critsOf = (c) => [c.crit, ...(c.alsoCrit ?? [])].filter(Boolean);
 const evsOf = (c) => [].concat(c.ev ?? []).filter(Boolean);
-const partsOf = (c) => (c.blanks?.length || c.pairs?.length || c.statements?.length || c.points?.length || c.steps?.length || 1);
 
 const perPoint = {};
 for (const c of D) for (const id of critsOf(c)) perPoint[id] = (perPoint[id] ?? 0) + 1;
 const primaryCount = {};
 for (const c of D) if (c.crit) primaryCount[c.crit] = (primaryCount[c.crit] ?? 0) + 1;
 
-/* ── Ring 0, exactly as §4 defines it ─────────────────────────────────────────
-   "One card per focus point, chosen as the best-evidenced card for that point: a
-   `verbatim` card that has been asked more than once, else any `verbatim` card, else the
-   best available."
-
-   Only cards whose PRIMARY subject the point is are eligible — that is what §6's C2 is
-   about, and an alsoCrit mention would put a card about something else at the head of a
-   focus point. Ties fall through to pack order, and two of them are real: cvs-3 has two
-   five-part cards that are equally about it.
-
-   WHEN RING 0 IS BUILT, THE ENGINE MUST USE THIS RULE AND NOT A SECOND COPY OF IT. Two
-   implementations of "which card is the spine" that disagree would put a different card
-   at the head of a focus point than the one measured here, and nothing would show it. */
-const RANK = { verbatim: 3, taught: 2, textbook: 1 };
-const spine = CRITS.map((cr) => {
-  const mine = D.filter((c) => c.crit === cr.id);
-  /* TIER FIRST, THEN THE REPEAT. Written the other way round — repeat first, as the
-     sentence in §4 reads — it put a `taught` card that happens to carry two evidence
-     entries at the head of resp-14, resp-16 and lymph-1, ahead of sixteen of Hannetjie's
-     own questions. "Asked more than once" is a tie-break BETWEEN her questions, not a
-     reason to prefer a lecture slide over one. */
-  const best = mine.slice().sort((a, b) =>
-    (RANK[b.tier] ?? 0) - (RANK[a.tier] ?? 0) ||
-    (evsOf(b).length > 1) - (evsOf(a).length > 1) ||
-    partsOf(b) - partsOf(a))[0];
-  return { id: cr.id, card: best ?? null };
-});
+/* Ring 0 — the spine. The rule lives in spine.mjs, which the pack builder uses too, so
+   the 38 cards printed below are the 38 the tool leads with. Ties fall through to pack
+   order, and one of them is real: cvs-3 has two five-part cards equally about it. */
+const spine = spineOf(P);
 
 const claims = [
   ['§intro', 'cards in the shipped pack', 415, CARDS.length],

@@ -287,6 +287,31 @@ console.log(`all ${(P.criteria ?? []).length} focus points have at least one car
     byTier[best === 3 ? 'verbatim' : best === 2 ? 'taught' : 'textbook']++;
   }
   console.log(`spine cards: ${byTier.verbatim} focus points can field one of her own questions, ${byTier.taught} her lecture, ${byTier.textbook} background reading (declared) ✓`);
+
+  /* ── PACK.spine resolves, and resolves to the card that was reviewed ──────────
+     Ring 0 is a list of card KEYS, and a key that matches nothing deals an empty ring
+     while every count around it still looks right. The keys are written by
+     apply-migration.mjs from audit/spine.mjs; this re-derives them here, from the
+     shipped pack, with the same module — so a spine that has silently drifted from the
+     38 cards a human read fails the build rather than the reader's session. */
+  const { spineFor } = await import('./audit/spine.mjs');
+  const { ckey } = await import('./audit/ckey.mjs');
+  const spine = P.spine ?? {};
+  const spineBad = [];
+  for (const cr of P.criteria ?? []) {
+    const want = spineFor(P.cards, cr.id);
+    const got = spine[cr.id];
+    if (!want) { if (got) spineBad.push(`${cr.id}: has a spine key but no card is primarily about it`); continue; }
+    if (!got) { spineBad.push(`${cr.id}: no spine key — Ring 0 would skip this focus point`); continue; }
+    if (got !== ckey(want)) spineBad.push(`${cr.id}: spine key ${got} is not the card spine.mjs chooses (${ckey(want)})`);
+    if (!P.cards.some(c => ckey(c) === got)) spineBad.push(`${cr.id}: spine key ${got} matches no shipped card`);
+  }
+  if (spineBad.length) {
+    for (const m of spineBad) console.error(`✗ ${m}`);
+    console.error('\n✗ NOT SHIPPING. Re-run apply-migration.mjs — PACK.spine is stale.');
+    process.exit(1);
+  }
+  console.log(`Ring 0 is ${Object.keys(spine).length} keys, every one resolving to the card audit/spine.mjs chooses ✓`);
 }
 
 /* The declaration has to REACH the reader, or culling to honest numbers just means
