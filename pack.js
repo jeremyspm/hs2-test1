@@ -140,7 +140,7 @@ const PACK = {
   {
    "id": "cvs-5",
    "name": "Functional anatomy of the heart and great vessels",
-   "herQuestions": 109
+   "herQuestions": 108
   },
   {
    "id": "cvs-6",
@@ -8498,10 +8498,7 @@ const PACK = {
      "v": false
     }
    ],
-   "crit": "cvs-5",
-   "alsoCrit": [
-    "cvs-12"
-   ],
+   "crit": "cvs-12",
    "why": "Sort them by direction rather than memorising six facts. <b>Aldosterone and angiotensin II raise pressure by retaining sodium and water and constricting vessels; adrenaline raises it through the heart.</b> The three that lower it are two vasodilators and one volume-dumper — atrial natriuretic peptide exists precisely to make the kidney shed sodium when the atria are over-stretched."
   },
   {
@@ -8868,7 +8865,7 @@ const PACK = {
    "alsoCrit": [
     "resp-2"
    ],
-   "why": "Two pairings, each a pair of opposites: <b>atria receive, ventricles pump</b>; <b>systole contracts, diastole relaxes</b>. Getting either half right forces the other, so check them against each other instead of recalling four separate facts."
+   "why": "Two pairings, each a pair of opposites: <b>atria receive, ventricles pump</b>; <b>systole contracts, diastole relaxes</b>. Getting either half right forces the other, so check them against each other instead of recalling four separate facts.<br><br><b>The three vessel prompts are the trap, and they are worth slowing down for.</b> All three read “…pumped by the heart to the lungs and body tissues through”, so the only thing telling them apart is the first word. The key wants <b>the lung's two blood supplies</b>: <b>deoxygenated → pulmonary artery</b> (blood going to the alveoli to be oxygenated) and <b>oxygenated → bronchial artery</b> (blood going to feed the lung tissue itself, branching off the aorta). The unqualified one is just <b>arteries</b>. If you answered “aorta” in your head for the oxygenated one you were not wrong about the body — the aorta is simply not on the list, because this line is asking about the lung."
   },
   {
    "topic": "cvs-ecg",

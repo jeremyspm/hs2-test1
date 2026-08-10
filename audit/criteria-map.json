@@ -10,7 +10,7 @@
   "cvs-14": 14,
   "cvs-12": 26,
   "cvs-15": 47,
-  "cvs-5": 109,
+  "cvs-5": 108,
   "cvs-6": 57,
   "cvs-8": 36,
   "cvs-4": 18,
@@ -2399,7 +2399,6 @@
    "quiz": "MODULE 1.1: CVS4 BLOOD PRESSURE (10 marks)",
    "n": "Question 18",
    "crits": [
-    "cvs-5",
     "cvs-12"
    ]
   },

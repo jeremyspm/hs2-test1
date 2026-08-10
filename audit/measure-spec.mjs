@@ -70,7 +70,7 @@ const claims = [
   ['§2', 'focus points the course publishes for Module 1 (36 criteria + the 2 case studies)', 38, CRITS.length],
   ['§2', 'questions in the paper', 35, P.exam.auto + P.exam.saq],
   ['§2', 'minutes', 65, P.exam.minutes],
-  ['§2', 'cards on cvs-5, the biggest focus point', 88, perPoint['cvs-5']],
+  ['§2', 'cards on cvs-5, the biggest focus point', 87, perPoint['cvs-5']],
   ['§2', 'cards on resp-2', 48, perPoint['resp-2']],
   ['§2', 'cards on cvs-15', 41, perPoint['cvs-15']],
   ['§2', 'cards on resp-10, the smallest', 1, perPoint['resp-10']],
