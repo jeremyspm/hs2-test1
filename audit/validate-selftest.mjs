@@ -16,7 +16,10 @@ try {
   process.exit(1);
 } catch { /* expected: it must fail */ }
 
-const report = JSON.parse(fs.readFileSync(path.join(HERE, 'validate-report.json'), 'utf8'));
+/* The FIXTURE's report, not the pack's. These used to be the same file, so running this
+   self-test left validate-report.json describing the tripwire pack — 39 deliberate
+   failures — where the real pack's report belongs. */
+const report = JSON.parse(fs.readFileSync(path.join(HERE, 'validate-report.fixture.json'), 'utf8'));
 const got = report.failures;
 
 /* what each gate must have caught, identified by a string in the failure */

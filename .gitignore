@@ -34,3 +34,7 @@ audit/missing-explanations.json
 # apply-migration.mjs writes both of these on every run. pack.js is the artifact.
 pack.new.js
 pack.backup.js
+
+# the tripwire fixture's own validation report — a description of a deliberately
+# broken pack, which must never be mistaken for the real one.
+audit/validate-report.fixture.json

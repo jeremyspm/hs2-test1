@@ -363,6 +363,14 @@ for (const g of Object.keys(GATE_NAMES)) {
 }
 
 console.log(`\n${failures.length} total failure(s)`);
-fs.writeFileSync(path.join(HERE, 'validate-report.json'), JSON.stringify({ failures, tiers, glossTiers }, null, 1));
-console.log('wrote audit/validate-report.json');
+/* THE REPORT IS NAMED AFTER THE PACK IT DESCRIBES.
+   validate-selftest.mjs runs this file against fixtures/tripwire.pack.js — a pack built
+   to trip every gate — and that run was overwriting validate-report.json with its 39
+   deliberate failures. The file then sat on disk, and got committed, describing a pack
+   that looked broken and was not. So a `--pack` run writes its own report beside it, and
+   the self-test reads that one: both runs still get a machine-readable result, and
+   neither can be mistaken for the other. */
+const reportPath = path.join(HERE, packArg === -1 ? 'validate-report.json' : 'validate-report.fixture.json');
+fs.writeFileSync(reportPath, JSON.stringify({ failures, tiers, glossTiers }, null, 1));
+console.log(`wrote audit/${path.basename(reportPath)}`);
 if (failures.length) process.exit(1);
