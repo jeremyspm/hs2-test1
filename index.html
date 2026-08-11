@@ -568,7 +568,14 @@ h2.sec{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--tx
    Stacked at phone width; two columns only when there is room for two. */
 .earned{display:grid;grid-template-columns:minmax(0,1fr);gap:9px;margin:11px 0 0;
   padding:11px 13px;border:1px solid var(--line2);border-radius:10px;background:var(--card2)}
-@media (min-width:520px){ .earned{grid-template-columns:minmax(0,auto) minmax(0,1fr);gap:9px 18px} }
+/* TWO EQUAL HALVES, not `auto 1fr`. An `auto` maximum sizes that track towards its
+   max-content, and the widest note in LOCKDIAL is a 155-character sentence, so on any
+   screen wide enough for the two-column rule the first dial took the entire row and the
+   second collapsed to a 0px track — the topic name rendered one word per line down the
+   right edge, which is what the desktop page actually shipped. Two 1fr tracks cannot
+   do that whatever the notes say, and neither dial has content that wants more than
+   half. */
+@media (min-width:520px){ .earned{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:9px 18px} }
 .earned .dial{min-width:0}
 .earned .k{display:block;font-size:9.5px;font-weight:800;letter-spacing:.8px;
   text-transform:uppercase;color:var(--tx3);margin-bottom:3px}
@@ -13153,10 +13160,12 @@ function synthWhy(c,resp){
   }
   return '';
 }
-/* The way through to the prose. Only offered when the pack HAS a Brief and this card
-   names a focus point that is actually in it — a dead link would be worse than none. */
+/* The way through to the prose. Only offered when the reader can actually REACH the
+   Brief and this card names a focus point that is in it — a dead link would be worse
+   than none, and on a ringed pack, where the tab is retired, that is exactly what this
+   was: it shipped under every wrong answer and landed on a page with no way back. */
 function briefLink(c){
-  if(!HASBRIEF()||!c||!c.crit) return '';
+  if(!BRIEFOK()||!c||!c.crit) return '';
   const cr=(PACK.criteria||[]).find(x=>x.id===c.crit); if(!cr) return '';
   return `<button class="wlink" data-brief="${c.crit}">→ Read the full explanation: ${esc(cr.name||cr.id)}</button>`;
 }
@@ -14010,6 +14019,11 @@ const VIEWS={brief:renderBrief,cram:renderCram,study:renderStudy,cards:renderLib
 const VIEWALIAS={learn:'study',mcq:'study',saq:'study'};
 function nav(v){
   v=VIEWALIAS[v]||v;
+  /* The Brief is retired on a ringed pack, so nothing may land there — not a stale
+     bookmark, not a hub deep link (?mode=brief), not a button added later that forgets
+     to ask. Every caller that RENDERS an offer also checks BRIEFOK so the offer is not
+     drawn at all; this is the floor under those checks, not a substitute for them. */
+  if(v==='brief'&&!BRIEFOK()) v='study';
   VIEW=v;
   navBtns().forEach(b=>b.classList.toggle('on',b.dataset.v===v));
   if(SECOND(v)) showMore(true);               // never leave the active tab hidden
@@ -14816,7 +14830,7 @@ function bgRow(types){
   return S.bg
     ? `<div class="bgrow"><span>Drawing from all <b>${all.length}</b> cards, including the <b>${bg}</b> that go back over ground the course's own questions already cover.</span>
          <button class="btn ghost" id="bgTog">− Just the ${core} the course has asked about</button></div>`
-    : `<div class="bgrow"><span>Drawing from the <b>${core}</b> cards the course has set questions on, plus the ones covering focus points no practice test touches. The other <b>${bg}</b> go back over that same ground in more general terms — they are still in the Brief and in Search.</span>
+    : `<div class="bgrow"><span>Drawing from the <b>${core}</b> cards the course has set questions on, plus the ones covering focus points no practice test touches. The other <b>${bg}</b> go back over that same ground in more general terms — they are still in ${BRIEFOK()?'the Brief and in Search':'All cards and in Search'}.</span>
          <button class="btn ghost" id="bgTog">+ Add the other ${bg} cards</button></div>`;
 }
 /* Delegated, not wired per render, for the same reason #scopeClr is: every other
@@ -14897,7 +14911,7 @@ function filterUI(cb,types){
       ${d.note?`<div class="fsub">${d.note}</div>`:''}
       <div class="chips">${d.opts.map(o=>`<button class="chip${S.filters[d.id].includes(o.id)?' on':''}" data-fx="tog" data-fd="${d.id}" data-fv="${esc(o.id)}"${o.hint?` title="${esc(o.hint)}"`:''}>${esc(o.lab)}<span class="pc">${o.n}</span></button>`).join('')}</div>
     </div>`).join('')}
-    <p class="fintro last">This narrows the <b>queue</b> only. The Brief, Search, All cards and your Progress keep counting the whole pack.</p>
+    <p class="fintro last">This narrows the <b>queue</b> only. ${BRIEFOK()?'The Brief, Search':'Search'}, All cards and your Progress keep counting the whole pack.</p>
   </div>`;
 }
 /* Delegated, every control of it, for the reason #bgTog and the old #scopeClr are:
@@ -15000,6 +15014,18 @@ const HASBRIEF=()=>{
     &&PACK.criteria.some(c=>critProse(c.id).length);
   return _hasbrief;
 };
+/* HASBRIEF says the prose EXISTS. BRIEFOK says the reader can get to it — and on a
+   ringed pack they cannot, because the rings retired the tab (see the three-tabs block
+   at the bottom of this file).
+
+   Every route in has to ask the same question. It did not: the tab was hidden by one
+   test and four other things went on offering the view — the "→ Read the full
+   explanation" button under every wrong answer, the "leave" button on a finished
+   session, the cold-start landing, and ?mode=brief. Clicking the first of those on
+   hs2-test1 dropped the reader onto a retired page, which is how a reader learns to
+   distrust the rest of the buttons. One predicate, asked everywhere, and nav() as the
+   backstop for any route added later. */
+const BRIEFOK=()=>HASBRIEF()&&!HASRINGS();
 S.read=S.read||{};                 // critId -> timestamp. Additive: no migration needed.
 /* cardKey -> {g,t}: marking points you ticked, out of the total. The SRS box alone
    cannot carry this — it records how WELL you recalled something, not how many marks
@@ -15323,7 +15349,13 @@ function renderStudy(){
    us the card is wrong. The type label goes — every card announces its own type in the
    next breath ("Show answer", "Reveal marking points", a set of options). */
 const REASONLEAD={
-  verbatim:  `One of ${LECTS} own exam questions`,
+  /* "past quiz question", never "exam question". The tier records where the card CAME
+     FROM — one of the lecturer's own past papers — and the reader hears the second
+     phrasing as a claim about where it is GOING, which is a promise about the paper
+     this pack has no way to keep. Everywhere else it is already said correctly ("From
+     a past quiz", "Copied out of one of her own past quizzes"); this was the one line
+     that drifted. */
+  verbatim:  `One of ${LECTS} own past quiz questions`,
   taught:    `Straight from ${LECTS} lecture material`,
   textbook:  `Background reading, written for this pack`,
   unverified:`A card whose source nobody has checked`,
@@ -15906,7 +15938,7 @@ function renderCram(){
 function wireSessBar(){
   setTimeout(()=>{
     const b=$('#sessOut');
-    if(b&&b.addEventListener) b.onclick=()=>nav(HASBRIEF()?'brief':'study');
+    if(b&&b.addEventListener) b.onclick=()=>nav(BRIEFOK()?'brief':'study');
   },0);
 }
 /* The end of a set. It has to do two things at once: stop, and not imply that stopping
@@ -16259,7 +16291,7 @@ function renderStats(){
 }
 
 if((PACK.cards||[]).some(c=>c.tier)) $('#navAudit').hidden=false;
-if(HASBRIEF()&&!HASRINGS()) $('#navBrief').hidden=false;
+if(BRIEFOK()) $('#navBrief').hidden=false;
 /* ── THREE TABS, NOT SEVEN — for a ringed pack ────────────────────────────────
    Study, Progress, Search. The Brief goes because the rings replaced the thing it was
    for: it was the cold-start landing page, it was a third empty (derived from prose
@@ -16303,7 +16335,7 @@ if(MIGRATED_SCOPE&&S.filters.topics.length&&S.filters.crits.length&&!deckSource(
 }
 const coldStart=!Object.keys(S.srs).length&&!Object.keys(S.mcq).length;
 renderOnboard();
-nav(HASBRIEF()&&!HASRINGS()&&coldStart?'brief':'study');
+nav(BRIEFOK()&&coldStart?'brief':'study');
 </script>
 <script>
 /* ===== STUDY BUS v2 (hub ⚡ engine — see estate STUDY-ENGINE-SPEC.md) =====

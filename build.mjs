@@ -192,6 +192,50 @@ for (const [i, m] of [...out.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/sc
                             want:gs.filter(g=>g.label).length,
                             thin:gs.filter(g=>g.label&&spineLabNames(g).length<2).map(g=>g.label)};
     })();
+    /* ── G21: the retired Brief has no way in ─────────────────────────────────
+       A ringed pack retires the Brief tab, and for one shipped build four other
+       things went on offering it anyway — most visibly the "Read the full
+       explanation" button under every wrong answer, which dropped the reader onto a
+       page that is not in the tab bar and has no way back. Hiding a tab is not
+       retiring a surface; the surface is retired when nothing can reach it.
+
+       Checks what RENDERS an offer (the wrong-answer link, and the two prose lines
+       that used to name the tab by hand) and what ROUTES to it, and requires
+       VIEWS.brief to still EXIST — otherwise this passes for the wrong reason the
+       day somebody deletes renderBrief, and stops guarding the guard. The tab button
+       is not checked here: the stub DOM answers hidden:false to everything, so
+       that assertion would be theatre. No backticks: this whole thing is inside one. */
+    ;(function(){
+      if(!HASRINGS()){ globalThis.__BRIEF__=null; return; }
+      const keep=VIEW;
+      nav('brief');
+      const landed=VIEW;
+      nav(keep);
+      /* BOTH BRANCHES, forced. bgRow renders the sentence that names the Brief only
+         while the background cards are OUT, and filterUI returns early with the panel
+         shut — so read off the default state this check cannot fail no matter what
+         those strings say, which is worse than not having it. */
+      const keepBG=S.bg, keepP=FPANEL; FPANEL=true; let prose='';
+      for(const bg of [false,true]){ S.bg=bg; prose+=' '+bgRow(ALLTYPES)+' '+filterUI(function(){},ALLTYPES); }
+      S.bg=keepBG; FPANEL=keepP;
+      globalThis.__BRIEF__={
+        ok:BRIEFOK(),
+        viewExists:typeof VIEWS.brief==='function',
+        links:PACK.cards.map(function(c,i){return briefLink({...c,key:ckey(c),idx:i})}).filter(Boolean).length,
+        landed:landed,
+        proseLen:prose.length,
+        namesIt:/brief/i.test(prose),
+      };
+    })();
+    /* ── G22: the provenance label states a SOURCE, not a prediction ──────────
+       The verbatim tier means the question came out of one of her own past papers.
+       It shipped reading "One of Hannetjie's own exam questions", which a reader
+       hears as a claim about what is coming — the one claim this pack cannot make.
+       Everywhere else the same tier is already worded as a source ("From a past
+       quiz"). Assert the label, not a vague ban on the word. */
+    ;(function(){
+      globalThis.__LEADS__=(typeof REASONLEAD==='object'&&REASONLEAD)?{...REASONLEAD}:null;
+    })();
   `;
   try {
     vm.runInContext(script + GATE + '\n;globalThis.__REACHED_END__=true;', ctx, { filename: 'index.html', timeout: 15000 });
@@ -305,6 +349,36 @@ for (const [i, m] of [...out.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/sc
       process.exit(1);
     }
     console.log('no reader-facing engine string says "ring" ✓');
+  }
+
+  {
+    const b = ctx.__BRIEF__;
+    if (!b) { console.error('✗ the retired-Brief gate did not run — this pack has no rings, or nav/HASRINGS has been renamed'); process.exit(1); }
+    if (!b.viewExists) { console.error('✗ VIEWS.brief is gone, so this gate proves nothing. Delete the gate with the view, or put the view back.'); process.exit(1); }
+    const fail = [];
+    if (b.ok) fail.push('BRIEFOK() is true on a ringed pack');
+    if (b.links) fail.push(`${b.links} card(s) still render "→ Read the full explanation"`);
+    if (b.landed !== 'study') fail.push(`nav('brief') landed on "${b.landed}", not study`);
+    if (!b.proseLen) fail.push('bgRow/filterUI rendered nothing, so the wording check read an empty string');
+    if (b.namesIt) fail.push('a line above the queue still tells the reader about the Brief');
+    if (fail.length) {
+      console.error('✗ NOT SHIPPING. The Brief is retired on this pack but still reachable:');
+      for (const f of fail) console.error('    ' + f);
+      console.error('  A button that lands on a retired page teaches the reader to distrust the others.');
+      process.exit(1);
+    }
+    console.log('the retired Brief has no way in — no link, no route, no mention ✓');
+  }
+  {
+    const L = ctx.__LEADS__;
+    if (!L) { console.error('✗ REASONLEAD is gone — the provenance label gate cannot run'); process.exit(1); }
+    if (!/past quiz/.test(L.verbatim) || /\bexam\b/i.test(L.verbatim)) {
+      console.error(`✗ NOT SHIPPING. The verbatim label reads "${L.verbatim}".`);
+      console.error('  That tier records where the card CAME FROM — one of her past papers. Calling it');
+      console.error('  an exam question makes a promise about the paper this pack cannot keep.');
+      process.exit(1);
+    }
+    console.log('the past-quiz label states a source, not a prediction ✓');
   }
 
   const seg = ctx.__SEGSTATES__;
