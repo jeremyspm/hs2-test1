@@ -882,6 +882,11 @@ const PACK = {
   "cs-bp",
   "cs-vacc"
  ],
+ "analytics": {
+  "site": "hs2-test1",
+  "url": "https://lnfoyklfxrkwgvqkoeor.supabase.co",
+  "key": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxuZm95a2xmeHJrd2d2cWtvZW9yIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQ0MzYxNjksImV4cCI6MjEwMDAxMjE2OX0.WAlvKYEe556z5ExafHFkWPJMnAZ-maMo2dPytTQ3xsA"
+ },
  "criteria": [
   {
    "id": "cvs-1",
@@ -14246,6 +14251,87 @@ function nav(v){
 navBtns().forEach(b=>b.onclick=()=>nav(b.dataset.v));
 $('#navMore').onclick=()=>showMore($('#nav2').classList.contains('hidden'));
 
+/* ════════════ VISIT COUNTER ════════════════════════════════════════════════════
+   Ported from hub/cloud/count.js rather than rewritten ([[porting-not-reimplementing]]).
+   It writes to the `pageviews` table of the hub's own Supabase — the same table, with a
+   different `site` value, which is exactly what that column is for. No third party, no
+   advertising network, no cookie, and the IP address is never sent or stored.
+
+   WHAT IS RECORDED: a site name, a path, a random per-browser id, a random per-tab id,
+   a coarse device bucket, language, timezone, and the referring HOST for traffic
+   arriving from off-site. That is enough for "how many people, how many views" and is
+   not enough to identify anybody. Reading it back requires signing in as the owner —
+   the row-level policy is insert-only for everyone else.
+
+   THE SHARED-ORIGIN DIVIDEND: this page and the hub are both on jeremyspm.github.io, so
+   they share localStorage. Reusing `hub.vid` means one person opening the hub and then
+   this tool is ONE visitor rather than two, and `hub.nocount` set anywhere on the origin
+   excludes this page too. Minting fresh keys here would have double-counted every real
+   reader and quietly broken the owner exclusion.
+
+   IT MUST NEVER BREAK THE PAGE IT COUNTS. Everything is wrapped, the fetch is
+   fire-and-forget, and a pack that declares no `analytics.site` sends nothing at all. */
+(function(){
+  try{
+    var A=(PACK.analytics||{}), CFG=A.url&&A.key?A:null;
+    if(!CFG||!A.site) return;
+    var host=location.hostname;
+    /* Never count development. Building this means reloading it dozens of times a day,
+       and every one would land in the stats as a visitor. */
+    if(!host||host==='localhost'||host==='127.0.0.1'||host==='[::1]'||
+       host.slice(-6)==='.local'||location.protocol==='file:') return;
+    /* ?nocount=1 marks this browser as the author's, for ever, on the whole origin.
+       ?nocount=0 undoes it. This is the "exclude me" switch and it has to be reachable
+       from a phone, which is why it is a URL and not a build flag. */
+    try{
+      var q=new URLSearchParams(location.search).get('nocount');
+      if(q==='1') localStorage.setItem('hub.nocount','1');
+      if(q==='0') localStorage.removeItem('hub.nocount');
+    }catch(e){}
+    /* Global Privacy Control is a legally recognised opt-out in some places, so it is
+       honoured. DNT deliberately is not: it is a signal about CROSS-SITE tracking, and
+       nothing here is a cross-site identifier. */
+    try{
+      if(navigator.globalPrivacyControl) return;
+      if(localStorage.getItem('hub.nocount')==='1') return;
+    }catch(e){}
+    function rid(){
+      try{ if(crypto&&crypto.randomUUID) return crypto.randomUUID(); }catch(e){}
+      return 'r'+Math.random().toString(36).slice(2)+Date.now().toString(36);
+    }
+    function keep(store,key){
+      try{ var v=store.getItem(key); if(!v){ v=rid(); store.setItem(key,v); } return v; }
+      catch(e){ return rid(); }        // private mode → counted as a new visitor
+    }
+    var w=window.innerWidth||1024;
+    var ref=null;
+    try{
+      if(document.referrer){
+        var h=new URL(document.referrer).hostname;
+        /* HOST only, and nothing for same-site navigation: an internal click is not
+           traffic arriving, and counting it would make every referrer number wrong. */
+        if(h&&h!==location.hostname) ref=h.replace(/^www\./,'').slice(0,80);
+      }
+    }catch(e){}
+    var body={
+      site:String(A.site).slice(0,40),
+      path:String(location.pathname||'/').slice(0,200),
+      ref:ref,
+      visitor:keep(localStorage,'hub.vid'),
+      session:keep(sessionStorage,'hub.sid'),
+      device:w<560?'phone':w<1024?'tablet':'desktop',
+      tz:null, lang:(navigator.language||'').slice(0,12)||null, user_id:null
+    };
+    try{ body.tz=Intl.DateTimeFormat().resolvedOptions().timeZone||null; }catch(e){}
+    fetch(CFG.url+'/rest/v1/pageviews',{
+      method:'POST', keepalive:true,
+      headers:{'apikey':CFG.key,'Authorization':'Bearer '+CFG.key,
+               'Content-Type':'application/json','Prefer':'return=minimal'},
+      body:JSON.stringify(body)
+    }).catch(function(){});
+  }catch(e){}
+})();
+
 /* ---- first run --------------------------------------------------------------
    There was no onboarding at all: a cold reader met an error banner, eight tabs and
    two unexplained doors. This is ten seconds of plain language and then it is gone
@@ -15620,9 +15706,27 @@ function renderStudy(){
      to choose a door and then read a note about deck composition — which is the right
      screen for someone who has decided to work, and the wrong one for someone deciding
      whether to. The first thing on the page should be the thing that needs no decision. */
-  const G=(HASRINGS()?'':cramCTA())+ringHeadHTML()+gate(renderStudy,ALLTYPES);
+  /* ════════ THE STOP ════════════════════════════════════════════════════════════
+     A ringed Study view is BOUNDED. It was not, and that was the worst defect in the
+     tool: a card locks on the second correct answer an hour later, so nothing locks in
+     a first sitting; buildRingDeck filters on !isLocked, so after all 38 spine cards the
+     deck rebuilt to the same 38 and dealt card one again — for ever — with every answer
+     from there reporting "still inside the hour, so this one did not count". The reader
+     was handed an unbounded loop of questions the tool itself called worthless, and
+     ringDoneHTML (the only ending) needed all 38 LOCKED, which is unreachable in an hour.
+
+     One set, then a screen that stops and says when to come back. No second tab: a
+     ringed pack's own onboarding says "one way in", and a Cram tab dealing this same
+     deck under another name would contradict it. */
+  if(HASRINGS()){
+    const s=sessState();
+    if(!s.goal) sessStart();
+    if(s.n>=s.goal&&buildDeck(ALLTYPES).length){ cramFinished(); window.scrollTo({top:0}); return; }
+  }
+  const G=(HASRINGS()?sessBar():cramCTA())+ringHeadHTML()+gate(renderStudy,ALLTYPES);
   setTimeout(wireCramCTA,0);
   setTimeout(wireRingBar,0);
+  setTimeout(wireSessBar,0);
   CUR=nextCard(ALLTYPES);
   /* With rings on, an empty deck is not an empty pool — it is a ring finished, and it
      gets a screen that says so. Only fall through to the filter dead-end below when
@@ -15754,7 +15858,11 @@ const RATEROW=`<div class="rate">
 const studyish=()=>VIEW==='study'||VIEW==='cram';
 function afterCard(){
   if(VIEW==='cram'){ sessDone(); renderCram(); window.scrollTo({top:0}); }
-  else renderStudy();
+  /* A RINGED STUDY VIEW IS ALSO A SET, so it counts cards too. Without this line the
+     round has no end: buildRingDeck filters on !isLocked, nothing locks inside the hour,
+     so the deck rebuilds to the same cards and re-deals them for ever while every answer
+     reports "did not count". See the block over renderStudy. */
+  else { if(HASRINGS()) sessDone(); renderStudy(); }
 }
 function wireRate(c){
   $$('.rate button').forEach(b=>b.onclick=()=>{
@@ -16178,10 +16286,22 @@ function sessState(){
    precise thing this view exists to keep off the screen. The day's total is still kept
    (`n`) and still reported, but on the ending, where it reads as something done rather
    than something owed. */
+/* HOW BIG A SET IS. Twelve, except that a round of 38 taken twelve at a time leaves a
+   last set of two — and a two-card set is a worse ending than a long one, because the
+   reader reads it as the tool running out rather than as a stopping point. So a remainder
+   smaller than a third of a set is absorbed into the one before it: 38 deals 12, 12, 14.
+   Counted over the deck ACTUALLY AVAILABLE (the ring's unlocked cards under whatever
+   filters are on), never over the pack, or the promise on the pip bar is a number the
+   queue cannot deliver. */
+function setSize(){
+  const n=SESSION_N(), avail=(HASRINGS()?buildDeck(ALLTYPES):deckSource(ALLTYPES)).length;
+  if(avail<=n) return Math.max(1,avail);
+  return (avail-n)<Math.ceil(n/3) ? avail : n;
+}
 function sessStart(){
   const s=sessState();
   s.base=s.n;
-  s.goal=s.n+Math.min(SESSION_N(),Math.max(1,deckSource(ALLTYPES).length));
+  s.goal=s.n+setSize();
   save();
 }
 const sessLive=()=>{ const s=sessState(); return s.goal>s.n; };
@@ -16222,6 +16342,41 @@ function sessBar(){
    they got it right or not. Counting only correct answers turns a 12-card set into an
    unbounded one for exactly the reader who most needs it to end. */
 function sessDone(){ const s=sessState(); s.n++; save(); }
+/* ════════════ THE RETURN ═══════════════════════════════════════════════════════
+   The whole tool rests on one claim — right twice, in sittings an hour or more apart —
+   and the second sitting was left entirely to the reader to remember. There is no
+   notification, no server and no push on a page served off GitHub Pages, so the only
+   honest mechanism available is to say WHEN, on the screen they are already looking at.
+
+   A TIME, NOT A DURATION. "Come back in an hour" is a fact the reader has to convert
+   while deciding whether to bother; "come back after 6:42pm" is an instruction. It is
+   computed from the lock records, so it cannot drift from the rule it describes.
+
+   The LATEST half decides it, not the earliest: coming back when only the first card of
+   the set is eligible would lock one topic and report the rest as "did not count",
+   which is precisely the experience this exists to prevent. */
+function spineHalfReady(){
+  const sp=PACK.spine||{}; let last=0, n=0;
+  for(const id in sp){ const r=S.lock[sp[id]]; if(r&&r.n===1){ n++; if(r.t>last) last=r.t; } }
+  return n?{n:n,at:last+LOCKGAP}:null;
+}
+const clockAt=t=>new Date(t).toLocaleTimeString('en-NZ',{hour:'numeric',minute:'2-digit'}).toLowerCase().replace(/\s/g,'');
+/* The one sentence that gives a reader a reason to open this again today. Four states,
+   and three of them are not celebrations — a set that moved nothing says so
+   ([[self-explaining-ui-policy]]; Giga's rule that confetti fires only when the session
+   actually advanced something). */
+function comeBackHTML(){
+  const h=spineHalfReady(), t=spineTally();
+  if(t.locked>=t.tot) return `<p class="cbk">Every topic is locked. There is nothing left in the rounds that needs a second sitting.</p>`;
+  if(!h) return `<p class="cbk">Nothing is half-way yet — a topic reaches half when you get its first card right, and locks on a second correct answer an hour or more later. ${
+    t.locked?`You have <b>${t.locked}</b> locked.`:'Nothing is locked yet.'}</p>`;
+  const now=Date.now();
+  if(h.at<=now) return `<p class="cbk"><b>${h.n} topic${h.n===1?' is':'s are'} half-way, and the hour is already up.</b>
+    Get ${h.n===1?'it':'them'} right once more and ${h.n===1?'it locks':'they lock'} — that can be your next set, right now.</p>`;
+  return `<p class="cbk"><b>${h.n} topic${h.n===1?' is':'s are'} half-way.</b>
+    Come back after <b>${clockAt(h.at)}</b>, get ${h.n===1?'it':'them'} right once more, and ${
+    h.n===1?'it locks':`those ${h.n} lock`}.</p>`;
+}
 /* Deal the next card, pulling a typeable one forward when the session is due one.
    Costs a scan of the remaining deck only on the slots that want a typed card. */
 function cramDeal(){
@@ -16267,7 +16422,10 @@ function renderCram(){
 function wireSessBar(){
   setTimeout(()=>{
     const b=$('#sessOut');
-    if(b&&b.addEventListener) b.onclick=()=>nav(BRIEFOK()?'brief':'study');
+    /* On a ringed pack Study IS the set, so the old destination is the screen the reader
+       is trying to leave — it would re-enter the same set and read as a dead button.
+       Progress is the calm surface, and it carries the blueprint and the projected mark. */
+    if(b&&b.addEventListener) b.onclick=()=>nav(HASRINGS()?'stats':BRIEFOK()?'brief':'study');
   },0);
 }
 /* The end of a set. It has to do two things at once: stop, and not imply that stopping
@@ -16284,22 +16442,55 @@ function cramFinished(){
   /* The heading counts the SET just finished; the tally counts the day. Both were `s.n`
      before, so a second set announced "Done — 24 cards" for twelve cards of work. */
   const set=Math.max(0,s.goal-s.base);
+  /* A RINGED PACK ENDS A SET DIFFERENTLY, and the difference is the point of the screen.
+     The generic ending reports a tally and offers more; a ringed one has to deliver the
+     hour rule, because that is the only reason to come back today rather than tomorrow.
+     The closing line also changes: "Study deals from it without a limit" is exactly wrong
+     here — Study IS this set, and there is no unbounded door to send anyone through. */
+  const ringed=HASRINGS();
+  const more=ringed?(buildDeck(ALLTYPES).length):(deckSource(ALLTYPES).length);
+  /* HOW MANY OF THOSE ARE WORTH DEALING RIGHT NOW. A card whose only correct answer was
+     minutes ago cannot lock again until the hour is up, so dealing it returns "did not
+     count" — the bounded version of the loop this screen exists to end. Offering
+     "Another 12" as the primary action when every remaining card is inside its hour is
+     the tool inviting work it has already said is worthless. */
+  const useful=ringed?buildDeck(ALLTYPES).filter(function(c){
+    const r=S.lock[c.key]; return !r||r.n<1||(Date.now()-r.t)>=LOCKGAP; }).length:more;
+  const nxt=ringed?Math.min(SESSION_N(),useful||more):n;
   view.innerHTML=`<div class="sessdone">
     <h3>Done — ${set} card${set===1?'':'s'}.</h3>
-    <p>That is the set. ${dl!=null&&dl>0?`<b>${dl} day${dl===1?'':'s'}</b> until the test — one set a day from here is ${n*dl} more reps.`:''}</p>
+    <p>That is the set. ${dl!=null&&dl>0?`<b>${dl} day${dl===1?'':'s'}</b> until the test.`:''}</p>
+    ${ringed?comeBackHTML():''}
     <div class="tally">
       <div><b>${s.n}</b><span>today</span></div>
+      ${ringed?`<div><b>${spineTally().locked}</b><span>topics locked</span></div>`:''}
       ${typedN?`<div><b>${typedN}</b><span>terms typed</span></div>`:''}
     </div>
-    <p style="margin-top:16px">The rest of the pack has not gone anywhere — <b>Study</b>
-      deals from it without a limit, and <b>All cards</b> shows every one of them.</p>
+    ${ringed
+      /* RECONCILE THE TWO NUMBERS. "38 cards left" printed straight after twelve cards of
+         work reads as "you achieved nothing" — both numbers are true and the reader is
+         left to join them up. Nothing locks inside the hour, so the count cannot fall
+         yet, and the sentence has to say that rather than leave it as an apparent
+         contradiction with the half-way line above. */
+      ?(more?`<p style="margin-top:16px"><b>${more}</b> card${more===1?'':'s'} in ${ROUNDLAB(ringNow()??0)} ${more===1?'is':'are'} still unlocked${
+          more-useful>0?`, and <b>${more-useful}</b> of those you have already answered once today — ${
+            more-useful===1?'it is':'they are'} waiting out the hour, which is why the number has not dropped`:''}.
+          <b>All cards</b> shows every one of them without testing you.</p>`
+            :`<p style="margin-top:16px">Nothing is left unlocked in ${ROUNDLAB(ringNow()??0)}.</p>`)
+      :`<p style="margin-top:16px">The rest of the pack has not gone anywhere — <b>Study</b>
+        deals from it without a limit, and <b>All cards</b> shows every one of them.</p>`}
     <div class="btnrow">
-      <button class="btn primary" id="cramMore">Another ${n}</button>
-      <button class="btn ghost" id="cramStop">I'm done for now</button>
+      ${ringed&&!useful&&more
+        /* Every remaining card is inside its hour. Demoted, and labelled with what it
+           actually buys, so the reader chooses re-reading knowingly instead of being
+           steered into it by the loudest button on the screen. */
+        ?`<button class="btn ghost" id="cramMore">Read another ${nxt} anyway<small>nothing can lock until the hour is up</small></button>`
+        :more?`<button class="btn primary" id="cramMore">Another ${nxt}</button>`:''}
+      <button class="btn ${ringed&&!useful&&more?'primary':'ghost'}" id="cramStop">I'm done for now</button>
     </div></div>`;
   setTimeout(()=>{
     const m=$('#cramMore'), st=$('#cramStop');
-    if(m&&m.addEventListener) m.onclick=()=>{ sessStart(); renderCram(); window.scrollTo({top:0}); };
+    if(m&&m.addEventListener) m.onclick=()=>{ sessStart(); (ringed?renderStudy:renderCram)(); window.scrollTo({top:0}); };
     if(st&&st.addEventListener) st.onclick=()=>nav('stats');
   },0);
 }

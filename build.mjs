@@ -50,7 +50,7 @@ let out = tpl.slice(0, a + START.length) + '\n' + figBlock + pack.trim() + '\n' 
 let ENGINE_RINGS = null;
 /* Same hoist as ENGINE_RINGS, and for the same reason: `ctx` is local to the smoke
    test, and these are read where the pack object is loaded. */
-let ENGINE_YIELD = null, ENGINE_SHARE = null;
+let ENGINE_YIELD = null, ENGINE_SHARE = null, ENGINE_STOP = null;
 
 // Parse the generated page's scripts before writing. A stray apostrophe inside a
 // single-quoted card string kills the whole app silently — the page still renders,
@@ -99,6 +99,10 @@ for (const [i, m] of [...out.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/sc
     location: { search: '', origin: 'file://', pathname: '/index.html', href: '' },
     matchMedia: () => ({ matches: false, addEventListener() {} }),
     setTimeout: () => 0, setInterval: () => 0, clearInterval() {}, requestAnimationFrame: () => 0,
+    /* Added when G25 first drove a set to its end: the done screen scrolls to the top,
+       and no gate had ever reached that path, so the stub had never needed it. A stub
+       grows only when a probe walks somewhere real code goes. */
+    scrollTo() {}, fetch: () => ({ catch() {} }),
     URLSearchParams, Date, Math, JSON, Object, Array, String, Number, Boolean, RegExp, Set, Map, Proxy, isNaN, parseInt, parseFloat, encodeURIComponent, decodeURIComponent,
   };
   ctx.window = ctx; ctx.globalThis = ctx; ctx.self = ctx;
@@ -170,6 +174,46 @@ for (const [i, m] of [...out.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/sc
         strays:wRound.filter(function(c){ return !onWritten(c); }).length,
         escapeTo:ESCAPETO, escapeIsWritten:ESCAPETO===R_WRITTEN,
       };
+    })();
+    /* ── G25: a set ENDS — the direct regression test for the card-39 loop ─────
+       A ringed pack used to deal for ever: nothing locks inside the hour, the deck
+       filters on !isLocked, so it rebuilt to the same cards and re-dealt them while
+       every answer said "did not count". Drive setSize()+1 cards through the real
+       session counter and require the study view to reach the done screen. Reads the
+       rendered text, not a flag, because a flag can be true while nothing renders.
+       No backticks: this whole thing is inside one. */
+    ;(function(){
+      if(typeof setSize!=='function'||!HASRINGS()){ globalThis.__STOP__=null; return; }
+      /* DO NOT SCRAPE THE STUB. document.querySelector('#view').innerHTML is '' for every
+         element the stub hands back, so a probe that looks for markup in it passes or
+         fails for reasons that have nothing to do with the page — the wrong-artifact trap
+         that has already cost this repo two silent gates. The observable that actually
+         means "the set stopped" is that renderStudy DEALT NO CARD: CUR is the card on
+         screen, and if it changes after the goal is reached, the loop is back. */
+      const keepS=JSON.stringify(S.sess), keepV=VIEW, keepL=JSON.stringify(S.lock);
+      S.sess={d:'',n:0,goal:0,base:0}; sessStart();
+      const size=sessState().goal-sessState().base;
+      let dealt=0, before=null;
+      for(let i=0;i<size;i++){ renderStudy(); if(CUR) dealt++; sessDone(); }
+      before=CUR; renderStudy();
+      /* comeBackHTML is a pure function of S.lock, so it is exercised directly, in all
+         three states a reader can be in rather than only the one this run happens to hit. */
+      const say=function(){ try{ return String(comeBackHTML()); }catch(e){ return ''; } };
+      const none=say();
+      const sp=PACK.spine||{}, k1=Object.values(sp)[0];
+      S.lock={}; S.lock[k1]={n:1,t:Date.now()};       const fresh=say();
+      S.lock={}; S.lock[k1]={n:1,t:Date.now()-2*LOCKGAP}; const ready=say();
+      globalThis.__STOP__={
+        size:size, dealt:dealt, stopped:CUR===before,
+        none:/Nothing is half-way/.test(none),
+        fresh:/Come back after/.test(fresh),
+        ready:/hour is already up/.test(ready),
+        /* [0-9] not \d: this probe is inside a TEMPLATE LITERAL, which eats a lone
+           backslash, so the regex shipped as /d{1,2}:d{2}/ and matched nothing while the
+           string it was testing said 5:36pm. Same family as the backticks. */
+        clock:/[0-9]{1,2}:[0-9]{2}(am|pm)/.test(fresh),
+      };
+      S.sess=JSON.parse(keepS); VIEW=keepV; S.lock=JSON.parse(keepL); save();
     })();
     /* ── G24: the reader's SHARE sentence is computed, never typed ─────────────
        "about a fifth" is a claim about the paper. Typed as a literal it is the
@@ -305,6 +349,7 @@ for (const [i, m] of [...out.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/sc
   ENGINE_RINGS = ctx.__RINGCOUNTS__ ?? null;
   ENGINE_YIELD = ctx.__YIELD__ ?? null;
   ENGINE_SHARE = ctx.__SHARE__ ?? null;
+  ENGINE_STOP  = ctx.__STOP__ ?? null;
 
   /* ── G14: All cards' "as tested" view is the study card, not a copy of it ─────
      The whole claim of that view is that a card looks there exactly as it looks when
@@ -702,6 +747,19 @@ console.log(`all ${(P.criteria ?? []).length} focus points have at least one car
     if (!Y.escapeIsWritten) bad.push(`"Skip ahead" lands on round ${Y.escapeTo}, not the written half`);
     if (bad.length) { console.error('✗ ' + bad.join('\n✗ ')); console.error('\n✗ NOT SHIPPING.'); process.exit(1); }
     console.log(`the written half is Round ${Y.escapeTo + 1} — ${Y.wRound} cards, all on a declared point, dealt first in Round 1 and the escape hatch's destination ✓`);
+  }
+  const ST = ENGINE_STOP;
+  if (P.spine && Object.keys(P.spine).length) {
+    if (!ST) { console.error('✗ the pack has rounds and the page reported no set — has setSize or sessStart been renamed?'); process.exit(1); }
+    const bad = [];
+    if (ST.dealt !== ST.size) bad.push(`a set of ${ST.size} dealt ${ST.dealt} cards`);
+    if (!ST.stopped) bad.push(`the study view dealt another card after the set of ${ST.size} was complete — the card-39 loop is back`);
+    if (!ST.none) bad.push('the done screen has nothing to say when no topic is half-way');
+    if (!ST.fresh) bad.push('the done screen does not tell a reader when to come back');
+    if (!ST.clock) bad.push('the come-back line gives no clock time — a duration is a sum the reader has to do');
+    if (!ST.ready) bad.push('the done screen does not notice when the hour is already up');
+    if (bad.length) { console.error('✗ ' + bad.join('\n✗ ')); console.error('\n✗ NOT SHIPPING.'); process.exit(1); }
+    console.log(`a set of ${ST.size} cards ends, and the done screen names a clock time to come back ✓`);
   }
   const SH = ENGINE_SHARE;
   if (SH) {

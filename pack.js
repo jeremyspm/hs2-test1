@@ -119,6 +119,11 @@ const PACK = {
   "cs-bp",
   "cs-vacc"
  ],
+ "analytics": {
+  "site": "hs2-test1",
+  "url": "https://lnfoyklfxrkwgvqkoeor.supabase.co",
+  "key": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxuZm95a2xmeHJrd2d2cWtvZW9yIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQ0MzYxNjksImV4cCI6MjEwMDAxMjE2OX0.WAlvKYEe556z5ExafHFkWPJMnAZ-maMo2dPytTQ3xsA"
+ },
  "criteria": [
   {
    "id": "cvs-1",

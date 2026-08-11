@@ -89,6 +89,17 @@ const PACK = {
      these two, widen this list — that is the only edit required. */
   written: ['cs-bp', 'cs-vacc'],
 
+  /* Visit counting, into the hub's own Supabase `pageviews` table — same table, own
+     `site` value. Both keys are PUBLIC by design: the anon key grants nothing on its own,
+     because row-level security makes the table insert-only for anyone who is not the
+     signed-in owner. The secret service_role key is not here and never should be.
+     Declared per pack, so a copied tool that says nothing sends nothing. */
+  analytics: {
+    site: 'hs2-test1',
+    url: 'https://lnfoyklfxrkwgvqkoeor.supabase.co',
+    key: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxuZm95a2xmeHJrd2d2cWtvZW9yIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQ0MzYxNjksImV4cCI6MjEwMDAxMjE2OX0.WAlvKYEe556z5ExafHFkWPJMnAZ-maMo2dPytTQ3xsA',
+  },
+
   /* THE SHARE THE COURSE PUBLISHES, not the one this pack can estimate. The Assessment
      Overview states the written section is 20% of Continuous Test 1. The engine can
      derive a share from the mean marks of the cards it holds — that is what
