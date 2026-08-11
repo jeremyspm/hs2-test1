@@ -14595,6 +14595,7 @@ function renderSpine(){
   bar.hidden=false;
   bar.innerHTML=spineBarHTML();
   fitSpineLabels();
+  observeSpineLabels();
   /* ONE COUNTDOWN, AND IT IS THE ONE THAT SURVIVES SCROLLING. The header pill and this
      bar both read daysLeft(), so a ringed pack showed "12 days left" twice on the first
      screen — and the header's copy is the one that scrolls away. The pill stands for
@@ -14610,14 +14611,48 @@ function renderSpine(){
     SPINEHELP=false; S.onboarded=false; save(); renderSpine(); renderOnboard(); window.scrollTo({top:0}); };
   wireBlueprint();
 }
-/* Rotating a phone changes every block's width and nothing re-renders the bar, so the
-   fit has to be redone on its own. Only the labels move — the candidates are still in
-   the DOM — so this re-fits rather than re-rendering, and a reader mid-answer keeps
-   their card. `typeof` because the build runs this script against a stub global that
-   has no addEventListener. */
+/* THE FIRST FIT IS NOT THE LAST WORD, and shipping as if it were is what made the very
+   first version of this wrong: renderSpine runs before the layout has settled, measures
+   a block narrower than it ends up, picks a shorter name than it needed to — and that
+   choice then sticks for the whole session. Live, the lymphatic block settled at 74px
+   with LYMPHATIC needing exactly 74, and the bar was showing LYMPH. Under-labelling, not
+   clipping, so nothing looked broken; it was just quietly answering the reader's question
+   with less than it had room for.
+
+   So watch the row instead of guessing when it is final. A ResizeObserver fires on every
+   width change from any cause — first layout, a scrollbar appearing, a phone rotating, a
+   container changing — which is the whole set of things that can change the answer. It
+   cannot loop: the labels have min-width:0 and clip, so writing text into them never
+   changes the row's own width.
+
+   Re-fits rather than re-renders, so a reader mid-answer keeps their card. Guarded on
+   both globals because the build runs this script against a stub that has neither. */
+function observeSpineLabels(){
+  /* The next frame, unconditionally. This is the one that fixes the first-render case:
+     by then the column has its real width and the scrollbar has decided whether it
+     exists. Costs one no-op pass when the first fit was already right. */
+  if(typeof requestAnimationFrame==='function') requestAnimationFrame(fitSpineLabels);
+  if(typeof ResizeObserver!=='function') return;
+  const row=$('#spine .spinelabs'); if(!row||!row.getBoundingClientRect) return;
+  if(!observeSpineLabels.ro) observeSpineLabels.ro=new ResizeObserver(()=>fitSpineLabels());
+  observeSpineLabels.ro.disconnect();          // the row is replaced on every render
+  observeSpineLabels.ro.observe(row);
+}
+/* AND the window events, whether or not ResizeObserver exists. This was written as an
+   `else` to the observer and that was wrong: the preview pane this was verified in
+   delivers no ResizeObserver callbacks at all — a fresh probe observer logged zero hits
+   across a 343px→1400px change — so the `else` meant nothing re-fitted on resize and the
+   bar kept a stale LYMPH at a width with room for LYMPHATIC.
+
+   The lesson is not about that pane. It is that the fit has ONE job and three
+   independent chances to do it, all idempotent and all cheap: a stale label is a
+   silent wrong answer, and a redundant re-measure costs a few microseconds. */
 if(typeof addEventListener==='function'){
   let _fitT=0;
-  addEventListener('resize',()=>{ clearTimeout(_fitT); _fitT=setTimeout(fitSpineLabels,120); });
+  const refit=()=>{ clearTimeout(_fitT); _fitT=setTimeout(fitSpineLabels,120); };
+  addEventListener('resize',refit);
+  addEventListener('orientationchange',refit);
+  addEventListener('load',fitSpineLabels);     // late images can add a scrollbar
 }
 
 /* In memory only — a deck is a sitting, not saved progress. */
