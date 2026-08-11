@@ -48,6 +48,9 @@ let out = tpl.slice(0, a + START.length) + '\n' + figBlock + pack.trim() + '\n' 
 /* Filled by the runtime smoke test below (the shipped page counting its own rings) and
    checked against audit/spine.mjs further down, where the pack object is loaded. */
 let ENGINE_RINGS = null;
+/* Same hoist as ENGINE_RINGS, and for the same reason: `ctx` is local to the smoke
+   test, and these are read where the pack object is loaded. */
+let ENGINE_YIELD = null, ENGINE_SHARE = null;
 
 // Parse the generated page's scripts before writing. A stray apostrophe inside a
 // single-quoted card string kills the whole app silently — the page still renders,
@@ -133,9 +136,52 @@ for (const [i, m] of [...out.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/sc
        No backticks anywhere in this string: it is inside one. */
     ;(function(){
       if(typeof ringOf!=='function'||!HASRINGS()){ globalThis.__RINGCOUNTS__=null; return; }
-      const n=[0,0,0,0];
+      /* Length comes from RINGS, not a literal. Hardcoded as [0,0,0,0] this probe
+         reported the fifth ring as NaN the moment a written half was declared — which
+         G15 caught, but only because the comparison is against spine.mjs rather than
+         against a number this same array produced. A probe that sizes itself from a
+         constant the feature does not own is a probe that stops measuring the feature. */
+      const n=new Array(RINGS.length).fill(0);
       for(const c of PACK.cards){ if(c.damaged) continue; n[ringOf(c)]++; }
       globalThis.__RINGCOUNTS__=n;
+    })();
+    /* ── G23: the written half is its own round, and Round 1 opens on it ───────
+       Two claims, one probe. (1) The written round holds every non-spine card on a
+       declared written point and nothing else — declared, so a pack that infers it
+       from type:'saq' fails here rather than quietly redefining what the screen
+       promises. (2) yieldOpen hoists those points to the front of Round 1 without
+       changing its membership: publication order put the two focus points carrying
+       18.4% of the marks at cards 37 and 38, and the ONLY thing making the fix safe
+       is that it is a reorder. Same set test as G18, for the same reason.
+       No backticks: this whole thing is inside one. */
+    ;(function(){
+      if(typeof yieldOpen!=='function'||typeof primaryWritten!=='function'||!HASRINGS()||!HASWRITTEN()){ globalThis.__YIELD__=null; return; }
+      const all=cardsOf(ALLTYPES,'all').filter(inPool).filter(answerable);
+      const r1=all.filter(function(c){ return ringOf(c)===R_SPINE; });
+      const got=yieldOpen(r1.slice()), set=new Set(got);
+      const wRound=all.filter(function(c){ return ringOf(c)===R_WRITTEN; });
+      const wantW=all.filter(function(c){ return onWritten(c)&&ringOf(c)!==R_SPINE; });
+      globalThis.__YIELD__={
+        same:got.length===r1.length&&r1.every(function(c){ return set.has(c); }),
+        lead:got.length?primaryWritten(got[0]):false,
+        nLead:got.filter(primaryWritten).length,
+        headClean:got.slice(0,got.filter(primaryWritten).length).every(primaryWritten),
+        wRound:wRound.length, wantW:wantW.length,
+        strays:wRound.filter(function(c){ return !onWritten(c); }).length,
+        escapeTo:ESCAPETO, escapeIsWritten:ESCAPETO===R_WRITTEN,
+      };
+    })();
+    /* ── G24: the reader's SHARE sentence is computed, never typed ─────────────
+       "about a fifth" is a claim about the paper. Typed as a literal it is the
+       invented-pass-mark failure with extra steps — a number that looks official,
+       sourced from nobody, and silently wrong the moment exam config changes. Drives
+       paperWeights through a different exam and requires the words to move. */
+    ;(function(){
+      if(typeof shareWord!=='function'||typeof SAQSHARE!=='function'){ globalThis.__SHARE__=null; return; }
+      const real=shareWord(SAQSHARE());
+      const keep=PACK.exam; PACK.exam=Object.assign({},keep,{auto:1,saq:60,saqShare:0.5});
+      const moved=shareWord(SAQSHARE()); PACK.exam=keep;
+      globalThis.__SHARE__={real:real,moved:moved,differs:real!==moved};
     })();
     /* ── G18: the easy opening REORDERS Round 1 and never re-crews it ──────────
        coldOpen promotes three short machine-marked questions to the front for a
@@ -257,6 +303,8 @@ for (const [i, m] of [...out.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/sc
   }
   console.log(`all ${ctx.__FILTCHECKED__} "Rep only…" options deal exactly the count they advertise ✓`);
   ENGINE_RINGS = ctx.__RINGCOUNTS__ ?? null;
+  ENGINE_YIELD = ctx.__YIELD__ ?? null;
+  ENGINE_SHARE = ctx.__SHARE__ ?? null;
 
   /* ── G14: All cards' "as tested" view is the study card, not a copy of it ─────
      The whole claim of that view is that a card looks there exactly as it looks when
@@ -640,6 +688,29 @@ console.log(`all ${(P.criteria ?? []).length} focus points have at least one car
     process.exit(1);
   }
   console.log(`rings agree, page and spine.mjs: ${want.map((n, i) => `Ring ${i} ${n}`).join(' · ')} ✓`);
+
+  /* ── G23 + G24, read back ─────────────────────────────────────────────────── */
+  const Y = ENGINE_YIELD;
+  if (P.written?.length) {
+    if (!Y) { console.error('✗ the pack declares a written half and the page reported nothing — has yieldOpen or HASWRITTEN been renamed?'); process.exit(1); }
+    const bad = [];
+    if (!Y.same) bad.push('yieldOpen changed Round 1 membership — it may only reorder');
+    if (!Y.lead) bad.push('Round 1 does not open on a card whose PRIMARY subject is a written-half topic');
+    if (!Y.headClean) bad.push('the written cards are not contiguous at the front of Round 1');
+    if (Y.strays) bad.push(`${Y.strays} card(s) in the written round are not on a declared written point`);
+    if (Y.wRound !== Y.wantW) bad.push(`the written round holds ${Y.wRound} cards, ${Y.wantW} qualify`);
+    if (!Y.escapeIsWritten) bad.push(`"Skip ahead" lands on round ${Y.escapeTo}, not the written half`);
+    if (bad.length) { console.error('✗ ' + bad.join('\n✗ ')); console.error('\n✗ NOT SHIPPING.'); process.exit(1); }
+    console.log(`the written half is Round ${Y.escapeTo + 1} — ${Y.wRound} cards, all on a declared point, dealt first in Round 1 and the escape hatch's destination ✓`);
+  }
+  const SH = ENGINE_SHARE;
+  if (SH) {
+    if (!SH.differs) {
+      console.error(`✗ the written-share wording did not change when the exam config did (both "${SH.real}") — it is a literal, not a reading of paperWeights()`);
+      process.exit(1);
+    }
+    console.log(`the written share reads "${SH.real}" and is derived from the exam config, not typed ✓`);
+  }
 }
 
 /* The declaration has to REACH the reader, or culling to honest numbers just means

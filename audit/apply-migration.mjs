@@ -681,12 +681,13 @@ function applyStems(list) {
   }
   const problems = [];
   const seen = new Set();
-  let applied = 0;
+  let applied = 0, fixed = 0;
 
   for (const e of STEMS) {
     if (seen.has(e.k)) { problems.push(`${e.k}: listed twice`); continue; }
     seen.add(e.k);
-    if (!e.q === !e.sub) { problems.push(`${e.k}: needs exactly one of \`q\` or \`sub\``); continue; }
+    if (e.q && e.sub) { problems.push(`${e.k}: needs at most one of \`q\` or \`sub\``); continue; }
+    if (!e.q && !e.sub && !e.fix) { problems.push(`${e.k}: needs one of \`q\`, \`sub\` or \`fix\``); continue; }
 
     const hits = byKey.get(e.k);
     if (!hits) { problems.push(`${e.k}: matches no card — the question it was written for has changed. Anchor: "${String(e.was).slice(0, 70)}…"`); continue; }
@@ -701,6 +702,83 @@ function applyStems(list) {
       continue;
     }
     if (c.qOrig) { problems.push(`${e.k}: card already carries a qOrig — refusing to restem twice`); continue; }
+
+    /* ── `fix`: the same surgical substitution, applied to the card's BODY ────────────
+       Six reader flags in the first round-trip were typos inside her own passages and
+       dropdown options — "tunica medi", "internal elastic lanmina", "Acetyl choline",
+       "Juxta glomerular". Every one of them was verified present in the raw capture
+       first, so these are hers and not the parser's; and a verbatim card is provenance,
+       not scripture — the original is kept and shown, exactly as `qOrig` already works
+       for stems.
+
+       WHAT MAY BE TOUCHED, AND THE KEY CONSEQUENCE OF EACH. `csig` folds in `text` and
+       `pairs` but NOT `blanks`, so a `text` or `pairs` fix changes the card's ckey and a
+       `blanks` fix does not. That is the same deliberate reset restemming already
+       accepts: a reader's progress on a passage that has been corrected does not carry
+       over, and a stale explanation cannot silently reattach. It is safe HERE and only
+       here because explanations.json is applied earlier in this file, against the
+       pre-edit card — the ordering that the flags.mjs fixture bug already taught us to
+       hold on to.
+
+       Same exactly-once rule as `sub`, for the same reason: a substitution that matches
+       twice edits somewhere nobody looked, and one that matches zero times is a fix that
+       has silently rotted. */
+    if (e.fix) {
+      const before = JSON.stringify([c.text ?? null, c.pairs ?? null, c.blanks ?? null]);
+      let bad = false;
+      const subOne = (s, pairs, label) => {
+        let out = String(s);
+        for (const [from, to] of pairs) {
+          const n = out.split(from).length - 1;
+          if (n > 1) { problems.push(`${e.k}: ${label} substitution "${from.slice(0, 40)}" matched ${n} times, needs at most 1`); bad = true; return out; }
+          if (n === 1) { out = out.split(from).join(to); hitCount[label] = (hitCount[label] ?? 0) + 1; }
+        }
+        return out;
+      };
+      var hitCount = {};
+      if (e.fix.text) {
+        if (!c.text) { problems.push(`${e.k}: fix.text on a card with no passage`); continue; }
+        c.textOrig = c.text; c.text = subOne(c.text, e.fix.text, 'text');
+      }
+      if (e.fix.pairs) {
+        if (!c.pairs) { problems.push(`${e.k}: fix.pairs on a card with no pairs`); continue; }
+        c.pairsOrig = JSON.parse(JSON.stringify(c.pairs));
+        c.pairs = c.pairs.map(p => p.map(v => subOne(v, e.fix.pairs, 'pairs')));
+      }
+      if (e.fix.blanks) {
+        if (!c.blanks) { problems.push(`${e.k}: fix.blanks on a card with no blanks`); continue; }
+        c.blanksOrig = JSON.parse(JSON.stringify(c.blanks));
+        c.blanks = c.blanks.map(b => Object.assign({}, b, { options: b.options.map(o => subOne(o, e.fix.blanks, 'blanks')) }));
+      }
+      /* `order` — presentation only, and the one fix that is not a substitution. Her
+         answer key for a find-the-error question listed the numbered parts 1,4,3,2,5,
+         so the card asked the reader to check five numbered claims in a scrambled
+         order. Nothing about the content changes; the pairs are the same pairs. Asserted
+         as a permutation so a typo in the list cannot drop or duplicate a pair. */
+      if (e.fix.order) {
+        if (!c.pairs) { problems.push(`${e.k}: fix.order on a card with no pairs`); continue; }
+        const o = e.fix.order;
+        const ok = o.length === c.pairs.length &&
+          new Set(o).size === o.length && o.every(i => Number.isInteger(i) && i >= 0 && i < c.pairs.length);
+        if (!ok) { problems.push(`${e.k}: fix.order is not a permutation of ${c.pairs.length} pairs`); continue; }
+        if (o.every((v, i) => v === i)) { problems.push(`${e.k}: fix.order is the order it already has`); continue; }
+        if (!c.pairsOrig) c.pairsOrig = JSON.parse(JSON.stringify(c.pairs));
+        c.pairs = o.map(i => c.pairs[i]);
+      }
+      /* Every declared substitution must land somewhere on this card, or the entry is
+         describing text that is no longer there. */
+      for (const f of ['text', 'pairs', 'blanks']) {
+        if (e.fix[f] && (hitCount[f] ?? 0) !== e.fix[f].length) {
+          problems.push(`${e.k}: fix.${f} declared ${e.fix[f].length} substitution(s), ${hitCount[f] ?? 0} matched`); bad = true;
+        }
+      }
+      if (bad) continue;
+      if (JSON.stringify([c.text ?? null, c.pairs ?? null, c.blanks ?? null]) === before) {
+        problems.push(`${e.k}: fix changed nothing`); continue;
+      }
+      fixed++;
+      if (!e.q && !e.sub) { applied++; continue; }   // fix-only entry: no stem to rewrite
+    }
 
     let next = String(c.q);
     if (e.sub) {
@@ -727,7 +805,7 @@ function applyStems(list) {
     console.error(`✗ ${problems.length} problem(s) in stems.json:\n   ` + problems.join('\n   '));
     process.exit(1);
   }
-  return { applied };
+  return { applied, fixed };
 }
 
 /* ── 9c. cards that are broken in the COURSE, not in the import ──────────────

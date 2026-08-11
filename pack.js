@@ -27,6 +27,7 @@ const PACK = {
   "minutes": 65,
   "pass": 65,
   "noPaper": true,
+  "saqShare": 0.2,
   "mix": {
    "cloze": 0.4,
    "mcq": 0.3,
@@ -114,6 +115,10 @@ const PACK = {
  "blueprint": {
   "total": 38
  },
+ "written": [
+  "cs-bp",
+  "cs-vacc"
+ ],
  "criteria": [
   {
    "id": "cvs-1",
@@ -1541,7 +1546,7 @@ const PACK = {
    "figcap": "From Practice Lab 2: SAQ & MC Quiz (10 marks) · Question 11",
    "crit": "resp-2",
    "selfMark": true,
-   "a": "<b>Read the field first.</b> This slide is a <b>bronchiole cut across</b> — the big pale space at the bottom — sitting in lung parenchyma, the honeycomb filling the top. Your four can come from either. The question lets you <i>choose</i>, and Canvas published no marking schedule, so there is no fixed number-to-name key: name the structure at the number you pick and give it a job.<br><br><b>1 — the bronchiole lumen.</b> The airway itself. It conducts air to the alveoli, and its diameter is what bronchoconstriction and bronchodilation change.<br><b>3, and again at 4 — the bronchiolar epithelium.</b> The thin band of dark nuclei at the edge of the lumen: ciliated, simple columnar grading to cuboidal, driving the mucus escalator upward. Note what the wall does <i>not</i> have — <b>no cartilage and no submucosal glands</b> — which is exactly what makes this a bronchiole and not a bronchus.<br><b>2 — a lymphoid aggregate in the airway wall.</b> The dense purple mass of tightly packed small lymphocytes: <b>bronchus-associated lymphoid tissue (BALT)</b>. It samples inhaled antigen and mounts a local immune response, which is why lymphoid tissue sits right against the airway.<br><b>The pale honeycomb above (where 5–9 lie) — alveoli and alveolar septa.</b> The <b>alveoli</b> are the thin-walled sacs where gas exchange happens; the walls between them are <b>alveolar septa</b>, and the long line drawn at <b>7</b> runs along one. The septum is where the <b>respiratory membrane</b> sits — type I pneumocyte, fused basement membranes and capillary endothelium, <b>0.5–1 µm</b> thick — with capillaries pressed flat against it. At this magnification the dark dots strung along each septum are mostly capillary and septal cell nuclei.<br><br>Worth naming for any lung section even where this slide will not resolve them: <b>type I pneumocytes</b>, the flat squamous cells forming most of the alveolar wall, thin enough to diffuse across; <b>type II pneumocytes</b>, rounder and bulging into the sac, secreting <b>surfactant</b> to lower surface tension and stop the alveolus collapsing; and <b>alveolar macrophages</b>, free cells in the airspace that engulf dust and pathogens.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
+   "a": "<b>Read the field first.</b> This slide is a <b>bronchiole cut across</b> — the big pale space at the bottom — sitting in lung parenchyma, the honeycomb filling the top. Your four can come from either. The question lets you <i>choose</i>, and Canvas published no marking schedule, so there is no fixed number-to-name key: name the structure at the number you pick and give it a job.<br><br><b>1 — the bronchiole lumen.</b> The airway itself. It conducts air to the alveoli, and its diameter is what bronchoconstriction and bronchodilation change.<br><b>3, and again at 4 — the bronchiolar epithelium.</b> The thin band of dark nuclei at the edge of the lumen: ciliated, simple columnar grading to cuboidal, driving the mucus escalator upward. Note what the wall does <i>not</i> have — <b>no cartilage and no submucosal glands</b> — which is exactly what makes this a bronchiole and not a bronchus.<br><b>2 — a lymphoid aggregate in the airway wall.</b> The dense purple mass of tightly packed small lymphocytes: <b>bronchus-associated lymphoid tissue (BALT)</b>. It samples inhaled antigen and mounts a local immune response, which is why lymphoid tissue sits right against the airway.<br><b><b>5, 6, 8 and 9 — alveoli</b>, the pale honeycomb filling the top of the field. Each is a thin-walled air sac, and together they are the <b>gas exchange surface</b>: oxygen diffuses out of them into the blood and carbon dioxide diffuses back in. Any one of the four numbers answers the question, and they answer it the same way.<br><b>7 — an alveolar septum</b>, the wall between two alveoli; that is what the long line is drawn along. The septum is where the <b>respiratory membrane</b> sits — type I pneumocyte, fused basement membranes and capillary endothelium, <b>0.5–1 µm</b> thick — with capillaries pressed flat against it. At this magnification the dark dots strung along each septum are mostly capillary and septal cell nuclei.<br><br>Worth naming for any lung section even where this slide will not resolve them: <b>type I pneumocytes</b>, the flat squamous cells forming most of the alveolar wall, thin enough to diffuse across; <b>type II pneumocytes</b>, rounder and bulging into the sac, secreting <b>surfactant</b> to lower surface tension and stop the alveolus collapsing; and <b>alveolar macrophages</b>, free cells in the airspace that engulf dust and pathogens.<div class=\"srcline\"><b>Self-marked question.</b> Canvas published no marking schedule for this one, so the answer above is written for this pack from the Module 1 lecture material — it is not Hannetjie's own model answer. Check it against the slides if anything looks off.</div>"
   },
   {
    "topic": "resp-anat",
@@ -2012,8 +2017,95 @@ const PACK = {
    },
    "type": "cloze",
    "q": "The renin–angiotensin–aldosterone system. Complete the table: what makes each hormone, where it acts, and what it does.",
-   "text": "The long-term homeostatic control of blood pressure and the effect of general factors on blood pressure. This is where the RAAS system is activated. Renin-->Angiotensinogen --> Angiotensin 1 and 2 --> Aldosterone & ADH. Hormone/ Enzyme Made by Target Effect Renin [[1]] (granular) cells in kidney Angiotensinogen Converts Angiotensinogen to [[2]] Angiotensinogen formed by the [[3]] Angiotensin-converting Enzyme (ACE) lung (cell type 1) & capillary endothelia, kidney epithelia, Angiotensin I Converts Angiotensin I to Angiotensin II Angiotensin II Pulmonary epithelia where ACE is produced Adrenal cortex [[4]] pituitary [[5]] muscles in blood vessel walls Stimulates aldosterone & ADH secretion & vaso constriction Aldosterone Adrenal cortex [[6]] Stimulate [[7]] reabsorption [[8]] (vasopressin) Posterior Pituitary gland Collecting duct Stimulates [[9]] reabsorption",
+   "text": "The long-term homeostatic control of blood pressure and the effect of general factors on blood pressure. This is where the RAAS system is activated. Renin-->Angiotensinogen --> Angiotensin 1 and 2 --> Aldosterone & ADH. Hormone/ Enzyme Made by Target Effect Renin [[1]] (granular) cells in kidney Angiotensinogen Converts Angiotensinogen to [[2]] Angiotensinogen formed by the [[3]] Angiotensin-converting Enzyme (ACE) lung (cell type 1) & capillary endothelia, kidney epithelia, Angiotensin I Converts Angiotensin I to Angiotensin II Angiotensin II Pulmonary epithelia where ACE is produced Adrenal cortex [[4]] pituitary [[5]] muscles in blood vessel walls Stimulates aldosterone & ADH secretion & vasoconstriction Aldosterone Adrenal cortex [[6]] Stimulate [[7]] reabsorption [[8]] (vasopressin) Posterior Pituitary gland Collecting duct Stimulates [[9]] reabsorption",
    "blanks": [
+    {
+     "options": [
+      "Glomerular",
+      "Peritubular capillary",
+      "Juxtaglomerular",
+      "Cortical"
+     ],
+     "correct": 2
+    },
+    {
+     "options": [
+      "ADH",
+      "angiotensin 2",
+      "angiotensin I",
+      "Aldosterone"
+     ],
+     "correct": 2
+    },
+    {
+     "options": [
+      "heart",
+      "bladder",
+      "brain",
+      "liver"
+     ],
+     "correct": 3
+    },
+    {
+     "options": [
+      "Anterior",
+      "Lateral",
+      "Posterior",
+      "Medial"
+     ],
+     "correct": 2
+    },
+    {
+     "options": [
+      "Skeletal and smooth",
+      "Smooth",
+      "Cardiac",
+      "Skeletal"
+     ],
+     "correct": 1
+    },
+    {
+     "options": [
+      "DCT and Collecting duct",
+      "proximal convoluted tubule (PCT)",
+      "Loop of Henle",
+      "distal convoluted tubule (DCT)"
+     ],
+     "correct": 0
+    },
+    {
+     "options": [
+      "Sodium (Na +)",
+      "Potassium (K+)",
+      "Calcium (Ca++)"
+     ],
+     "correct": 0
+    },
+    {
+     "options": [
+      "FSH",
+      "ACTH",
+      "ADH",
+      "LH"
+     ],
+     "correct": 2
+    },
+    {
+     "options": [
+      "calcium",
+      "sodium",
+      "water",
+      "glucose"
+     ],
+     "correct": 2
+    }
+   ],
+   "fig": "<img src=\"data:image/webp;base64,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\" alt=\"Figure from Hannetjie's quiz question\">",
+   "figcap": "From MODULE 1.1: CVS HOMEOSTASIS (30 Marks) · Question 2",
+   "crit": "cvs-12",
+   "why": "Follow the chain in order and every blank sits somewhere on it: <b>renin</b> from the kidney acts on <b>angiotensinogen</b> from the liver, ACE in the lung makes angiotensin II, and angiotensin II then triggers <b>aldosterone</b> (sodium reabsorbed, water follows) and <b>ADH</b> (water reabsorbed directly).",
+   "textOrig": "The long-term homeostatic control of blood pressure and the effect of general factors on blood pressure. This is where the RAAS system is activated. Renin-->Angiotensinogen --> Angiotensin 1 and 2 --> Aldosterone & ADH. Hormone/ Enzyme Made by Target Effect Renin [[1]] (granular) cells in kidney Angiotensinogen Converts Angiotensinogen to [[2]] Angiotensinogen formed by the [[3]] Angiotensin-converting Enzyme (ACE) lung (cell type 1) & capillary endothelia, kidney epithelia, Angiotensin I Converts Angiotensin I to Angiotensin II Angiotensin II Pulmonary epithelia where ACE is produced Adrenal cortex [[4]] pituitary [[5]] muscles in blood vessel walls Stimulates aldosterone & ADH secretion & vaso constriction Aldosterone Adrenal cortex [[6]] Stimulate [[7]] reabsorption [[8]] (vasopressin) Posterior Pituitary gland Collecting duct Stimulates [[9]] reabsorption",
+   "blanksOrig": [
     {
      "options": [
       "Glomerular",
@@ -2095,10 +2187,6 @@ const PACK = {
      "correct": 2
     }
    ],
-   "fig": "<img src=\"data:image/webp;base64,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\" alt=\"Figure from Hannetjie's quiz question\">",
-   "figcap": "From MODULE 1.1: CVS HOMEOSTASIS (30 Marks) · Question 2",
-   "crit": "cvs-12",
-   "why": "Follow the chain in order and every blank sits somewhere on it: <b>renin</b> from the kidney acts on <b>angiotensinogen</b> from the liver, ACE in the lung makes angiotensin II, and angiotensin II then triggers <b>aldosterone</b> (sodium reabsorbed, water follows) and <b>ADH</b> (water reabsorbed directly).",
    "qOrig": "Complete the passage. (MODULE 1.1)"
   },
   {
@@ -2511,7 +2599,7 @@ const PACK = {
       "Adrenaline",
       "Thyroxine",
       "Aldosterone",
-      "Acetyl choline"
+      "Acetylcholine"
      ],
      "correct": 3
     },
@@ -2531,6 +2619,87 @@ const PACK = {
     "cvs-15"
    ],
    "why": "One reflex, run in both directions. <b>Low BP: sympathetic outflow, faster heart, vasoconstriction, pressure up.</b> High BP: the vagus and acetylcholine slow the heart while the vasomotor centre is inhibited, so vessels dilate. Note the sensors are baroreceptors in the aortic arch and carotid <b>sinus</b>, not the bodies.",
+   "blanksOrig": [
+    {
+     "options": [
+      "inhibited",
+      "stimulated"
+     ],
+     "correct": 1
+    },
+    {
+     "options": [
+      "inhibited",
+      "stimulated"
+     ],
+     "correct": 1
+    },
+    {
+     "options": [
+      "inhibited",
+      "stimulated"
+     ],
+     "correct": 1
+    },
+    {
+     "options": [
+      "Sympathetic",
+      "Parasympathetic"
+     ],
+     "correct": 0
+    },
+    {
+     "options": [
+      "dilation",
+      "constriction"
+     ],
+     "correct": 1
+    },
+    {
+     "options": [
+      "stimulated",
+      "inhibited"
+     ],
+     "correct": 0
+    },
+    {
+     "options": [
+      "stimulated",
+      "inhibited"
+     ],
+     "correct": 1
+    },
+    {
+     "options": [
+      "inhibited",
+      "stimulated"
+     ],
+     "correct": 0
+    },
+    {
+     "options": [
+      "Parasympathetic",
+      "Sympathetic"
+     ],
+     "correct": 0
+    },
+    {
+     "options": [
+      "Adrenaline",
+      "Thyroxine",
+      "Aldosterone",
+      "Acetyl choline"
+     ],
+     "correct": 3
+    },
+    {
+     "options": [
+      "dilation",
+      "constriction"
+     ],
+     "correct": 0
+    }
+   ],
    "qOrig": "Complete the passage. (MODULE 1.1)"
   },
   {
@@ -3923,8 +4092,28 @@ const PACK = {
     "n": "Question 12"
    },
    "type": "match",
-   "q": "Define Blood pressure (BP) Systolic pressure Diastolic pressure Pulse pressure One of the underlined terms is incorrect. Find the incorrect term and replace it with a correct one to make the answer true. Blood pressure: pressure exerted by blood against walls of 1.bloodvessels Systolic pressure highest 2. arterial pressure when heart contracts & pumps blood to body. Diastolic pressure Lowest pressure in arteries when heart 3.relaxes & refills with blood between beats. Pulse pressure 4.difference between systolic and diastolic pressures",
+   "q": "Define Blood pressure (BP) Systolic pressure Diastolic pressure Pulse pressure One of the numbered terms below is incorrect. Find the incorrect term and replace it with a correct one to make the answer true. Blood pressure: pressure exerted by blood against walls of 1. blood vessels Systolic pressure highest 2. arterial pressure when heart contracts & pumps blood to body. Diastolic pressure Lowest pressure in arteries when heart 3.relaxes & refills with blood between beats. Pulse pressure 4.difference between systolic and diastolic pressures",
    "pairs": [
+    [
+     "1. blood vessels",
+     "Arteries"
+    ],
+    [
+     "2.arterial pressure",
+     "Correct"
+    ],
+    [
+     "3.relaxes & refills",
+     "Correct"
+    ],
+    [
+     "4.difference",
+     "Correct"
+    ]
+   ],
+   "crit": "cvs-15",
+   "why": "Blood pressure is defined and measured in the <b>arteries</b> — that is the only planted error. The rest of that answer is the standard definition, including pulse pressure as the gap between the two readings.",
+   "pairsOrig": [
     [
      "1.bloodvessels",
      "Arteries"
@@ -3942,8 +4131,7 @@ const PACK = {
      "Correct"
     ]
    ],
-   "crit": "cvs-15",
-   "why": "Blood pressure is defined and measured in the <b>arteries</b> — that is the only planted error. The rest of that answer is the standard definition, including pulse pressure as the gap between the two readings."
+   "qOrig": "Define Blood pressure (BP) Systolic pressure Diastolic pressure Pulse pressure One of the underlined terms is incorrect. Find the incorrect term and replace it with a correct one to make the answer true. Blood pressure: pressure exerted by blood against walls of 1.bloodvessels Systolic pressure highest 2. arterial pressure when heart contracts & pumps blood to body. Diastolic pressure Lowest pressure in arteries when heart 3.relaxes & refills with blood between beats. Pulse pressure 4.difference between systolic and diastolic pressures"
   },
   {
    "topic": "cvs-bp",
@@ -3955,8 +4143,37 @@ const PACK = {
     "n": "Question 13"
    },
    "type": "match",
-   "q": "Define: Blood pressure (BP) Cardiac output (CO) Stroke volume (SV) Peripheral resistance (PR) or Systemic Vascular resistance (SVR) The answer below contains two errors in the numbered parts below. Find the errors and replace them with alternatives that would make the definitions correct. Blood pressure: pressure exerted by blood the blood on the 1. walls of the arteries Cardiac output (CO) total volume of blood pumped by 2.heart/sec : CO = HR x SV Stroke volume (SV) 3.amount of blood pumped out of heart's 4.ventricles per beat. Peripheral resistance (PR) or systemic vascular resistance (SVR) = 5. drag blood vessels exert against flow of blood.",
+   "q": "Define: Blood pressure (BP) Cardiac output (CO) Stroke volume (SV) Peripheral resistance (PR) or Systemic Vascular resistance (SVR) The answer below contains two errors in the numbered parts below. Find the errors and replace them with alternatives that would make the definitions correct. Blood pressure: pressure exerted by blood on the 1. walls of the arteries Cardiac output (CO) total volume of blood pumped by 2.heart/sec : CO = HR x SV Stroke volume (SV) 3.amount of blood pumped out of heart's 4.ventricles per beat. Peripheral resistance (PR) or systemic vascular resistance (SVR) = 5. drag blood vessels exert against flow of blood.",
    "pairs": [
+    [
+     "1.walls of the arteries",
+     "Correct"
+    ],
+    [
+     "2.heart/sec",
+     "heart/minute"
+    ],
+    [
+     "3.amount",
+     "Correct"
+    ],
+    [
+     "4.ventricles",
+     "Left ventricle"
+    ],
+    [
+     "5.drag blood vessels exert against flow of blood",
+     "Correct"
+    ]
+   ],
+   "crit": "cvs-2",
+   "alsoCrit": [
+    "cvs-4",
+    "cvs-5",
+    "cvs-9"
+   ],
+   "why": "Neither error is in the physiology, and both matter anyway: cardiac output is per <b>minute</b>, and stroke volume is quoted for the <b>left ventricle</b>. Get the first wrong and every calculation built on CO = HR × SV comes out wrong with it.",
+   "pairsOrig": [
     [
      "1.walls of the arteries",
      "Correct"
@@ -3978,13 +4195,6 @@ const PACK = {
      "Correct"
     ]
    ],
-   "crit": "cvs-2",
-   "alsoCrit": [
-    "cvs-4",
-    "cvs-5",
-    "cvs-9"
-   ],
-   "why": "Neither error is in the physiology, and both matter anyway: cardiac output is per <b>minute</b>, and stroke volume is quoted for the <b>left ventricle</b>. Get the first wrong and every calculation built on CO = HR × SV comes out wrong with it.",
    "qOrig": "Define: Blood pressure (BP) Cardiac output (CO) Stroke volume (SV) Peripheral resistance (PR) or Systemic Vascular resistance (SVR) The answer below contains two errors in the underlined parts. Find the errors and replace them with alternatives that would make the definitions correct. Blood pressure: pressure exerted by blood the blood on the 1. walls of the arteries Cardiac output (CO) total volume of blood pumped by 2.heart/sec : CO = HR x SV Stroke volume (SV) 3.amount of blood pumped out of heart's 4.ventricles per beat. Peripheral resistance (PR) or systemic vascular resistance (SVR) = 5. drag blood vessels exert against flow of blood."
   },
   {
@@ -4200,7 +4410,7 @@ const PACK = {
    },
    "type": "cloze",
    "q": "Artery against vein. Complete the comparison of their walls and lumens.",
-   "text": "How is the structure of the artery different to that of the vein? Artery Vein [[1]] diameter [[2]] diameter Stiff appearance Floppy appearance [[3]] tunica media [[4]] tunica medi Thin tunica externa Thick tunica externa [[5]] internal elastic lanmina internal elastic lamina [[6]]",
+   "text": "How is the structure of the artery different to that of the vein? Artery Vein [[1]] diameter [[2]] diameter Stiff appearance Floppy appearance [[3]] tunica media [[4]] tunica media Thin tunica externa Thick tunica externa [[5]] internal elastic lamina internal elastic lamina [[6]]",
    "blanks": [
     {
      "options": [
@@ -4248,6 +4458,7 @@ const PACK = {
    ],
    "crit": "cvs-2",
    "why": "One rule generates the whole table. The artery must <b>withstand pressure</b>, so its media and elastic laminae are thick and prominent around a small round lumen; the vein only carries volume back, so it is floppy with a large lumen and a thick outer coat.",
+   "textOrig": "How is the structure of the artery different to that of the vein? Artery Vein [[1]] diameter [[2]] diameter Stiff appearance Floppy appearance [[3]] tunica media [[4]] tunica medi Thin tunica externa Thick tunica externa [[5]] internal elastic lanmina internal elastic lamina [[6]]",
    "qOrig": "Complete the passage. (MODULE 1.1)"
   },
   {
@@ -11702,7 +11913,7 @@ const PACK = {
   "cvs-9": "kpujrwa",
   "cvs-10": "k16hg961",
   "cvs-11": "k2ux4u3",
-  "cvs-12": "kswj2jp",
+  "cvs-12": "k624s6d",
   "cvs-13": "k1ec5jzp",
   "cvs-14": "k4599g6",
   "cvs-15": "k1amoam",

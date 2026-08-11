@@ -37,13 +37,41 @@ const CASES = [
    d => { d.stems.push({ ...d.stems[0] }); },
    'listed twice'],
 
-  ['neither q nor sub given',
-   d => { delete d.stems[0].q; },
-   'exactly one of'],
+  /* The contract widened on 11 Aug: an entry may now also carry `fix`, which patches the
+     card's BODY (passage, pairs, blank options) rather than its stem. So "neither" became
+     "none of the three" and "both" stayed an error. These two read the applier's exact
+     words on purpose — a selftest that matches loosely stops noticing when the message
+     stops describing the rule. */
+  /* Pick the entry by SHAPE, not by index. Both of these used d.stems[0], and the day a
+     `sub`+`fix` entry was prepended to the file they started mutating the wrong kind of
+     record and testing nothing — one passed the build outright. A fixture that depends on
+     file order is a fixture that rots the next time somebody adds a line. */
+  ['none of q, sub or fix given',
+   d => { delete d.stems.find(x => x.q && !x.sub && !x.fix).q; },
+   'needs one of'],
 
   ['both q and sub given',
-   d => { d.stems[0].sub = [['a', 'b']]; },
-   'exactly one of'],
+   d => { d.stems.find(x => x.q && !x.sub && !x.fix).sub = [['a', 'b']]; },
+   'at most one of'],
+
+  ['a fix substitution that matches nothing',
+   d => { const e = d.stems.find(x => x.fix && x.fix.text);
+          e.fix.text = [['text that is not in the passage', 'x']]; },
+   'matched'],
+
+  ['a fix substitution that matches twice',
+   d => { const e = d.stems.find(x => x.fix && x.fix.text);
+          e.fix.text = [[' ', '_']]; },
+   'needs at most 1'],
+
+  ['fix.order that is not a permutation',
+   d => { const e = d.stems.find(x => x.fix && x.fix.order); e.fix.order = [0, 0, 1, 2, 3]; },
+   'not a permutation'],
+
+  ['fix.order that changes nothing',
+   d => { const e = d.stems.find(x => x.fix && x.fix.order);
+          e.fix.order = e.fix.order.map((_, i) => i); },
+   'the order it already has'],
 
   ['a substitution that matches nothing',
    d => { const e = d.stems.find(x => x.sub); e.sub = [['text that is not in the stem', 'x']]; },

@@ -72,9 +72,12 @@ const claims = [
   /* The ring sizes as the engine DEALS them, from the same module the engine is gated
      against — not "every card on a thin focus point", which double-counts the 15 spine
      cards that sit on one and are dealt in Ring 0. */
-  ['§4', 'cards in Ring 1 — the thin points, spine cards excluded', 16, ringCounts(P, ckey)[1]],
-  ['§4', 'cards in Ring 2 — the rest of her questions', 274, ringCounts(P, ckey)[2]],
-  ['§4', 'cards in Ring 3 — background', 85, ringCounts(P, ckey)[3]],
+  /* A round was inserted at index 1 on 11 Aug — the written half. Every count behind it
+     shifted, which is exactly what this file exists to catch and did. */
+  ['§4', 'cards in Ring 1 — the written half (the case studies the SAQs come from)', 19, ringCounts(P, ckey)[1]],
+  ['§4', 'cards in Ring 2 — the thin points, spine cards excluded', 15, ringCounts(P, ckey)[2]],
+  ['§4', 'cards in Ring 3 — the rest of her questions', 264, ringCounts(P, ckey)[3]],
+  ['§4', 'cards in Ring 4 — background', 77, ringCounts(P, ckey)[4]],
 
   ['§6 C1', 'cards carrying no focus point at all — CLOSED 11 Aug', 0,
     D.filter((c) => !critsOf(c).length).length],

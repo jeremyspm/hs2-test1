@@ -33,6 +33,11 @@ import { readFileSync, existsSync } from 'node:fs';
 import { loadPack } from './load-pack.mjs';
 import { ckey } from './ckey.mjs';
 
+/* Tag-stripper for console output. It used to be imported implicitly and was not — the
+   reporter threw on the first card it printed. Same family as the last two times this
+   script broke: a dev tool nobody runs until they need it. */
+const strip = (s) => String(s ?? '').replace(/<[^>]*>/g, ' ').replace(/&[a-z]+;/g, ' ').replace(/\s+/g, ' ').trim();
+
 const { pack } = loadPack();
 const byKey = new Map(pack.cards.map(c => [ckey(c), c]));
 

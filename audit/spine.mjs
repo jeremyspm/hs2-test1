@@ -63,20 +63,35 @@ export function ringsOf(pack) {
   return { per, spineKeys, ckeyOf };
 }
 
-/** 0-3 for one card. `isSpine` is passed in because the key hash lives in ckey.mjs. */
-export function ringOfCard(c, per, isSpine) {
+/* THE WRITTEN HALF — mirrors the engine's `onWritten`/R_* constants exactly. The two
+   copies exist because the engine ships as one offline page and imports nothing; G15
+   runs both and fails if the counts disagree, which is the only thing making
+   "Round 2 holds 21 cards" mean the same in the spec and in the reader's hands. */
+export const writtenOf = (pack) => new Set((pack.written ?? []).filter(Boolean));
+export const onWritten = (c, wset) =>
+  [c.crit, ...(c.alsoCrit ?? [])].filter(Boolean).some((id) => wset.has(id));
+
+/** 0-4 for one card. `isSpine` is passed in because the key hash lives in ckey.mjs. */
+export function ringOfCard(c, per, isSpine, wset) {
+  const W = wset && wset.size > 0;
+  const R_WRITTEN = W ? 1 : -1, R_THIN = W ? 2 : 1, R_REST = W ? 3 : 2, R_BG = W ? 4 : 3;
   if (isSpine) return 0;
-  if ([c.crit, ...(c.alsoCrit ?? [])].filter(Boolean).some((id) => (per[id] ?? 0) < THINAT)) return 1;
-  return c.tier === 'verbatim' ? 2 : 3;
+  /* Before the thin test, exactly as the engine does it. */
+  if (R_WRITTEN >= 0 && onWritten(c, wset)) return R_WRITTEN;
+  if ([c.crit, ...(c.alsoCrit ?? [])].filter(Boolean).some((id) => (per[id] ?? 0) < THINAT)) return R_THIN;
+  return c.tier === 'verbatim' ? R_REST : R_BG;
 }
 
 /** [n0, n1, n2, n3] over every card the engine would consider dealing. */
 export function ringCounts(pack, ckey) {
   const { per, spineKeys } = ringsOf(pack);
-  const out = [0, 0, 0, 0];
+  const wset = writtenOf(pack);
+  /* Length follows the pack, so a pack with no written half still reports four rings and
+     a hardcoded [0,0,0,0] cannot silently drop the fifth on the floor. */
+  const out = new Array(wset.size > 0 ? 5 : 4).fill(0);
   for (const c of pack.cards ?? []) {
     if (c.damaged) continue;                       // the engine's `answerable` filter
-    out[ringOfCard(c, per, spineKeys.has(ckey(c)))]++;
+    out[ringOfCard(c, per, spineKeys.has(ckey(c)), wset)]++;
   }
   return out;
 }

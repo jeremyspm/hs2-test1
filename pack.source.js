@@ -23,6 +23,15 @@ const PACK = {
   // several marks each (as the real Canvas paper's do — the Module 1 formative
   // was 30 questions for 80.5 points), so 3 SAQs would only have come to 13%.
   exam: { auto: 30, saq: 5, minutes: 65, pass: 65, noPaper: true,
+          /* saqShare: the share of the MARKS the written section carries, straight from
+             the Assessment Overview ("written section = 20% of Continuous Test 1").
+             The engine can estimate this from the mean marks of the cards it holds —
+             paperWeights() — but on this pack that lands near a sixth, because it is an
+             estimate of the paper built from a proxy for it. Telling a student the
+             estimate when the course has published the real figure is the same error as
+             inventing one, so the sourced number wins and the estimate is the fallback
+             for packs with no published split. Read by SAQSHARE(); never typed. */
+          saqShare: .20,
           mix: { mcq:.40, cloze:.20, match:.15, tfset:.15, order:.10 } },
 
   doorNote: 'The priority order here is not a guess. The course publishes 36 assessment criteria for Module 1; the two formative tests between them only drill 12 of those, so this queue starts with the 8 they never touch. <b>One honest caveat:</b> Canvas will not export quizzes, and there are around 13 more of them in the course — including a 50-mark Module 1 SAQ paper and quizzes on shock, the heart, and lymphatic terminology. Some of those almost certainly do cover a few of these 8. "Blind" here means <b>no practice material we can read</b>, not "she never tested it".',
@@ -57,6 +66,37 @@ const PACK = {
      two unstarred case studies (Blood pressure, Vaccination) that the Assessment
      Overview names as examinable in this test. */
   blueprint: { total: 38 },
+
+  /* THE FOCUS POINTS THE PAPER'S WRITTEN QUESTIONS COME FROM — Round 2, "the written
+     half". Declared here, never inferred from `type:'saq'`: three of this pack's 17
+     written cards sit on ordinary focus points (cvs-1, cvs-2, resp-4), and sweeping
+     those in would redefine the round as "anything with a written card" while the
+     screen still promised "the case studies the written questions come from".
+
+     SOURCED, not chosen. `Case Study Workbook 2026 S2.docx` states that blue-marked
+     case studies sit in the TESTS and starred ones are exam-only, which puts Blood
+     pressure (#1) and Vaccination (#5) in Test 1 and nothing else. The pack agrees with
+     itself: 14 of its 17 saq cards are on these two.
+
+     WHY IT EARNS ITS OWN ROUND. `exam` is 29 machine-marked + 6 written, and running
+     paperWeights() over the pack puts the written half at 18.4% of the marks — against
+     the Assessment Overview's published "20% SAQ", which is two independent routes to
+     the same number. Before this, the 21 non-spine cards on these two points were
+     scattered through a 274-card round-robin with nothing marking them as the ground a
+     fifth of the paper is written on.
+
+     If the C4 capture (discussion_topics/413368) turns up written questions outside
+     these two, widen this list — that is the only edit required. */
+  written: ['cs-bp', 'cs-vacc'],
+
+  /* THE SHARE THE COURSE PUBLISHES, not the one this pack can estimate. The Assessment
+     Overview states the written section is 20% of Continuous Test 1. The engine can
+     derive a share from the mean marks of the cards it holds — that is what
+     paperWeights() does — but on this pack that lands near a sixth, because it is an
+     estimate of the paper built from a proxy for it. Telling a student the estimate when
+     the course has published the real figure is the same error as inventing one, so the
+     sourced number wins and the estimate stays as the fallback for packs with no
+     published split. Read by SAQSHARE(); never typed into a sentence. */
 
   criteria: [
     /* ---- Cardiovascular (15) ---- */
