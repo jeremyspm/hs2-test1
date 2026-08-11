@@ -760,7 +760,7 @@ h2.sec{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--tx
     </div>
   </div>
   <div id="view"></div>
-  <div class="foot">Works offline, no account needed · sign in via the hub to sync your progress across devices</div>
+  <div class="foot" id="foot">Works offline, no account needed · sign in via the hub to sync your progress across devices</div>
 </div>
 
 <!-- Optional cloud sync: dormant unless signed in at jeremyspm.github.io. Fully offline-first without it.
@@ -13244,9 +13244,29 @@ const FILTDIMS=['topics','types','tiers','crits','status'];
 const FILT0=()=>({topics:[],types:[],tiers:[],crits:[],status:[]});
 const KEY='cramengine.'+PACK.id;
 let S=load();
-if(window.Cloud) Cloud.sync([KEY]);   // syncs this pack's progress across devices when signed in; no-op otherwise
+/* Syncs this pack's progress across devices when signed in; a no-op otherwise, and
+   the tool works exactly the same offline either way. `mergeState` is what makes two
+   devices safe to use in the same day — see its note below. */
+if(window.Cloud) Cloud.sync([KEY],{merge:mergeState});
+/* The additive defaults, as a function, because `load()` is called again at RUN time —
+   by "Reset all progress", and by the restore button in Progress — and the versions of
+   these that sit at the top of the file are one-shot statements that only ever run at
+   boot. Reset therefore left `S.lock` undefined and the next answered card threw on
+   `S.lock[key]`, in the shipped tool, today.
+
+   `filters` and `ringsV` are deliberately NOT here: each has a migration gated on being
+   absent, and filling them in early would silence the migration rather than satisfy it. */
+function defaults(s){
+  ['srs','mcq','read','saq','flags','lock','typed','sess'].forEach(k=>{ if(!s[k]||typeof s[k]!=='object') s[k]={}; });
+  if(!Array.isArray(s.ovr)) s.ovr=[];
+  if(!s.sess.d) s.sess={d:'',n:0,goal:0,base:0};
+  if(!s.door) s.door='ready';
+  if(s.ring===undefined) s.ring=0;
+  if(!s.libView) s.libView=s.libAns===false?'q':'read';
+  return s;
+}
 function load(){
-  try{ const s=JSON.parse(localStorage.getItem(KEY)); if(s&&s.srs) return migrate(s); }catch(e){}
+  try{ const s=JSON.parse(localStorage.getItem(KEY)); if(s&&s.srs) return defaults(migrate(s)); }catch(e){}
   /* `flags` lives in the same blob as progress on purpose: Cloud.sync already carries
      this key, so a card flagged on a phone mid-revision is waiting on the laptop that
      can actually fix it. No new storage, no new sync path. */
@@ -13254,8 +13274,8 @@ function load(){
      the key is deliberately NOT migrated away, because a saved blob from before this
      build still carries it and dropping it on load would be a destructive write to a
      Cloud.sync'd record for no gain. It is simply never read again. */
-  return {v:3,theme:'dark',topic:'all',door:'ready',bg:false,srs:{},mcq:{},read:{},saq:{},
-          flags:{},libGroup:'topic',libAt:null,libAns:true,filters:FILT0(),libView:'read'};
+  return defaults({v:3,theme:'dark',topic:'all',door:'ready',bg:false,srs:{},mcq:{},read:{},saq:{},
+          flags:{},libGroup:'topic',libAt:null,libAns:true,filters:FILT0(),libView:'read'});
 }
 /* v1 keyed progress by card index · v2 by a hash of the question · v3 adds the
    card's content signature so cards sharing a question stem stop sharing a record. */
@@ -13282,6 +13302,118 @@ function migrate(s){
   s.v=3; return s;
 }
 function save(){ localStorage.setItem(KEY,JSON.stringify(S)); }
+
+/* ── COMBINING TWO DEVICES ───────────────────────────────────────────────────────
+   Handed to Cloud.sync and called when the phone and the laptop have both moved
+   since they last agreed. Without one, the sync layer has to pick a side, and
+   picking a side means one of the two sittings is deleted — which is exactly the
+   failure this exists to stop: an evening on the phone, opened on the laptop the
+   next morning, gone.
+
+   THE RULE IS UNION, NEVER ARITHMETIC. Every card appears in the result; where both
+   sides hold a record for the same card, the MORE-ADVANCED record wins whole. It is
+   never field-wise, and counters are never added: the two sides share a common
+   ancestor, so adding would double-count the history they both already have, and
+   mixing fields could produce a record claiming more right answers than attempts.
+   Taking the further-along record can under-count a card drilled on both devices in
+   the same window; that direction is the safe one for a mastery estimate, and it is
+   the only one that cannot invent evidence.
+
+   VIEW STATE STAYS LOCAL. Theme, filters, which door, which round, where you were in
+   the browser: those come from `mine`. You should not sit down at your laptop and
+   find its screen rearranged by what you tapped on your phone. Progress travels;
+   the furniture does not. */
+function mergeState(mine,theirs){
+  if(!mine||!theirs) return mine||theirs||null;
+  const out=Object.assign({},theirs,mine);      // scalars: the device you are sitting at
+  const pick=(k,better)=>{
+    const a=mine[k]||{}, b=theirs[k]||{}, o={};
+    for(const id in a) o[id]=a[id];
+    for(const id in b) o[id]=(id in o)?better(o[id],b[id]):b[id];
+    out[k]=o;
+  };
+  const most=f=>(x,y)=>((+(y||{})[f]||0)>(+(x||{})[f]||0)?y:x);
+  pick('srs',(x,y)=>{                            // more recalls; tie → further ahead
+    const sx=+x.seen||0, sy=+y.seen||0;
+    return sy>sx?y : sx>sy?x : ((+y.due||0)>(+x.due||0)?y:x);
+  });
+  pick('mcq',  most('a'));                       // more attempts
+  pick('typed',most('a'));
+  pick('saq',  most('t'));                       // more marks attempted
+  pick('lock',(x,y)=>{                           // more qualifying correct answers
+    const nx=+x.n||0, ny=+y.n||0;
+    return ny>nx?y : nx>ny?x : ((+y.t||0)>(+x.t||0)?y:x);
+  });
+  pick('read',(x,y)=>Math.min(+x||0,+y||0)||x||y);   // when it was FIRST marked read
+  pick('flags',most('t'));                       // the later note on the same card
+  /* The override log is append-only on both sides, so it interleaves by timestamp.
+     Deduped on card+time, because the same entry arrives twice once both devices
+     have seen each other. */
+  const seen={}, ovr=[].concat(mine.ovr||[],theirs.ovr||[])
+    .filter(e=>e&&!seen[e.k+'|'+e.ts]&&(seen[e.k+'|'+e.ts]=1))
+    .sort((a,b)=>(+a.ts||0)-(+b.ts||0));
+  out.ovr=ovr.slice(-200);
+  /* Today's bounded set. `n` is how many cards have been answered today and the other
+     three describe the set in progress AROUND it, so the record moves across whole —
+     a spliced one would draw a pip bar that counts from a baseline nothing reached. */
+  const sm=mine.sess||{}, st=theirs.sess||{};
+  out.sess=(String(st.d||'')>String(sm.d||'')) ? st
+         : (String(sm.d||'')>String(st.d||'')) ? sm
+         : ((+st.n||0)>(+sm.n||0)?st:sm);
+  out.v=Math.max(+mine.v||0,+theirs.v||0)||mine.v;
+  out.ringsV=Math.max(+mine.ringsV||0,+theirs.ringsV||0)||undefined;
+  if(out.ringsV===undefined) delete out.ringsV;
+  out.onboarded=!!(mine.onboarded||theirs.onboarded);
+  return out;
+}
+/* Fresher progress has just landed in localStorage from another device. The sync
+   layer reloads the page for this, which is the reliable way to adopt it — every
+   migration and default re-runs. This handler is the SAFETY NET for when it cannot:
+   a reload is refused inside the quiet window, and without this the in-memory state
+   would carry on as if nothing had arrived and the next save() would write straight
+   back over it. Copied field by field ONTO the live object, so defaults filled in at
+   boot survive for any key an older build did not send, and so every closure holding
+   `S` sees the new values. Not cancelled — let the reload happen when it is allowed. */
+if(window.addEventListener) addEventListener('cloud:applied',function(){
+  let fresh=null; try{ fresh=JSON.parse(localStorage.getItem(KEY)); }catch(e){}
+  if(!fresh||!fresh.srs) return;
+  Object.keys(fresh).forEach(k=>{ S[k]=fresh[k]; });
+  try{ nav(VIEW); renderFoot(); }catch(e){}
+});
+/* WHETHER THIS DEVICE IS SYNCING AT ALL, said out loud. The footer used to state the
+   same sentence forever — "sign in via the hub to sync" — whether you had or not,
+   which is the one thing it could not afford to be vague about: a tool that is
+   quietly saving to this device only looks identical to one that is syncing, right
+   up until the morning you open the other device and your evening is missing.
+   [[self-explaining-ui-policy]] */
+function agoText(iso){
+  const t=Date.parse(iso||''); if(!t) return '';
+  const m=Math.round((Date.now()-t)/60000);
+  return m<1?'just now' : m<60?`${m} min ago` : m<1440?`${Math.round(m/60)} h ago`
+       : new Date(t).toLocaleDateString(undefined,{day:'numeric',month:'short'});
+}
+function renderFoot(){
+  const el=$('#foot'); if(!el) return;
+  /* The middle branch is for the window where a device still holds the PREVIOUS
+     cloud.js in its cache: signed in, syncing, but with no `state` to ask. Saying
+     "not signed in" there would be a lie told by the very line that exists to stop
+     one, so fall back to the fact we can still establish. */
+  const who=(window.Cloud&&Cloud.user&&Cloud.user())||null;
+  const st=(window.Cloud&&Cloud.state) ? Cloud.state()
+         : who ? {mode:'synced',email:who.email} : {mode:'off'};
+  const hub='https://jeremyspm.github.io/';
+  if(st.mode==='synced'||st.mode==='pending'){
+    const when=st.mode==='pending'?'saving…':(st.at?`last synced ${agoText(st.at)}`:'ready to sync');
+    el.innerHTML=`☁ Syncing across your devices as ${esc(st.email||'you')} · ${esc(when)}`;
+  } else {
+    el.innerHTML=`Works offline · <b>not signed in — progress stays on this device only.</b> `
+      +`<a href="${hub}" target="_blank" rel="noopener">Sign in at the hub</a> to carry it between your phone and laptop.`;
+  }
+}
+if(window.Cloud&&Cloud.onChange) Cloud.onChange(renderFoot); else renderFoot();
+if(window.addEventListener) addEventListener('visibilitychange',function(){
+  if(document.visibilityState==='visible') renderFoot();
+});
 if(!S.door) S.door='ready';        // saves made before the two doors existed
 if(!S.flags) S.flags={};           // …and before cards could be flagged
 /* …and before there were bounded sessions or typed answers. All three are ADDITIVE:
@@ -17258,6 +17390,34 @@ function wireBlueprint(){
     nav('study'); window.scrollTo({top:0});
   });
 }
+/* ── UNDO THE LAST SYNC ──────────────────────────────────────────────────────────
+   When this device takes a copy down from the cloud, the sync layer keeps whatever
+   it replaced. That is normally invisible and should stay that way — but "my evening
+   on the phone is missing" is a thing that HAS happened here, and the answer to it
+   cannot be a line of JavaScript typed into a console, because the device it happened
+   on is a phone. So the copy is offered back, in the one view that is already about
+   what has been done, and only when there is one to offer.
+
+   It restores rather than deletes: the restored copy goes up to the cloud like any
+   other change, and any device holding work this one has not seen still merges its
+   own in. Nothing about this button can lose a card. */
+function undoSyncHTML(){
+  const b=(window.Cloud&&Cloud.backup)?Cloud.backup(KEY):null;
+  if(!b||b.data==null) return '';
+  let n=0; try{ n=Object.keys(JSON.parse(b.data).srs||{}).length; }catch(e){ return ''; }
+  return `<div class="doornote" style="margin-top:22px">☁ <b>Something arrived from another device ${esc(agoText(new Date(b.at).toISOString()))}.</b>
+    The copy this device held before that is still here — ${n} card${n===1?'':'s'} with a record on it.
+    If what you are looking at is missing work you know you did, put it back:
+    <div class="btnrow" style="margin-top:10px"><button class="btn ghost" id="undoSync">Restore this device's earlier copy</button></div></div>`;
+}
+function wireUndoSync(){
+  const u=$('#undoSync'); if(!u) return;
+  u.onclick=()=>{
+    if(!confirm('Put back the copy this device held before the last sync? Nothing is deleted — it merges with whatever your other devices have.')) return;
+    if(window.Cloud&&Cloud.rollback&&Cloud.rollback(KEY)){ S=load(); save(); nav('stats'); }
+    else alert('That copy is no longer available on this device.');
+  };
+}
 function renderStats(){
   /* Against the pool being studied, for the same reason topicReady is: counting the
      demoted background cards would report "6 of 286 recalled" at a reader who has
@@ -17313,8 +17473,10 @@ function renderStats(){
         <div class="bar"><i style="width:${pct}%"></i></div>
         <div class="sub">${recTot?`${rec} of ${recTot} recalled right twice over`:'nothing to recall here'}${a?` · ${a.pct}% of drill marks (${a.tries} tries)`:' · not drilled yet'}</div></div>`;
     }).join('')}
+    ${undoSyncHTML()}
     <div class="btnrow" style="margin-top:22px"><button class="btn ghost danger" id="reset">Reset all progress</button></div>`;
   $('#reset').onclick=()=>{ if(confirm('Wipe all progress for this pack?')){ localStorage.removeItem(KEY); S=load(); save(); renderStats(); } };
+  wireUndoSync();
   wireBlueprint();
 }
 
