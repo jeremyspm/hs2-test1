@@ -317,6 +317,66 @@ for (const [i, m] of [...out.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/sc
         namesIt:/brief/i.test(prose),
       };
     })();
+    /* ── G26: the reader is ASKED, and can change their mind ───────────────────
+       The rounds are a good order and for one release they were the ONLY order: the
+       tool opened by explaining what was about to happen, and the only ways off it
+       were a filter that narrows the round you are already in and a blueprint row
+       three taps deep in Progress. A default nobody was offered an alternative to is
+       not a default, it is a rail.
+
+       Five claims, all of them things that would go quiet rather than loud if they
+       broke:
+         1. with no route chosen the chooser renders BOTH options, and the first-run
+            panel stays silent underneath it (two first-run surfaces at once is how
+            the reader gets explained a route they have not agreed to);
+         2. under EITHER route the row still carries BOTH doors and exactly one is
+            lit — the anti-lock claim, and the one a well-meant tidy-up breaks first;
+         3. the two routes deal DIFFERENT decks. A second door that changes nothing
+            is worse than no second door;
+         4. nothing names a round while the rounds are paused;
+         5. coming back to Guided from a one-topic drill undoes the drill, or the
+            reader lands in "Round 1" secretly narrowed to one focus point.
+       No backticks anywhere: this whole thing is inside one. */
+    ;(function(){
+      if(typeof routeUI!=='function'||typeof routePickHTML!=='function'||!HASRINGS()){ globalThis.__ROUTE__=null; return; }
+      const keepR=S.route, keepF=JSON.stringify(S.filters), keepRing=S.ring, keepOb=S.onboarded, out={};
+      const noop=function(){};
+      S.route=undefined; S.onboarded=false;
+      const ask=routePickHTML();
+      out.asks=ROUTEASK();
+      out.askLen=ask.length;
+      out.hasBoth=/id="rpGuided"/.test(ask)&&/id="rpOwn"/.test(ask);
+      /* The modal is a full-screen overlay with no close button, so its two options MUST
+         go through the delegated handler. Wired per render, a lost binding locks the
+         reader out of the whole tool rather than out of one control. */
+      out.askDelegated=/data-route="guided"/.test(ask)&&/data-route="own"/.test(ask);
+      let vals0=(ask.match(/data-route="[a-z]+"/g)||[]);
+      /* The RETURN VALUE, not the stub's innerHTML — which reads back as '' for every
+         element and would pass this check no matter what the panel did. */
+      out.panelQuiet=renderOnboard()==='';
+      let vals=vals0.slice();
+      out.doors={};
+      for(const r of ['guided','own']){
+        setRoute(r);
+        const ui=routeUI(noop,ALLTYPES);
+        vals=vals.concat((ui.match(/data-route="[a-z]+"/g)||[]));
+        out.doors[r]={g:/data-route="guided"/.test(ui),o:/data-route="own"/.test(ui),
+                      why:/data-route="why"/.test(ui),lit:(ui.match(/class="door on"/g)||[]).length};
+      }
+      setRoute('guided'); S.ring=0;
+      out.gRing=ringNow(); out.gDeck=buildDeck(ALLTYPES).length; out.gSub=String(spineSubHTML(spineTally()));
+      setRoute('own');
+      out.oRing=ringNow(); out.oDeck=buildDeck(ALLTYPES).length; out.oSub=String(spineSubHTML(spineTally()));
+      out.oHead=String(ringHeadHTML()).trim();
+      /* The one-point drill, and the way back out of it. */
+      S.filters=FILT0(); S.filters.crits=[(PACK.criteria||[])[0].id]; S.ring='point'; S.route='own';
+      vals=vals.concat((String(ringHeadHTML()).match(/data-route="[a-z]+"/g)||[]));
+      setRoute('guided');
+      out.undrilled=S.filters.crits.length===0&&typeof S.ring==='number';
+      out.values=vals.map(function(v){ return v.slice(12,-1); });
+      S.route=keepR; S.filters=JSON.parse(keepF); S.ring=keepRing; S.onboarded=keepOb; save();
+      globalThis.__ROUTE__=out;
+    })();
     /* ── G22: the provenance label states a SOURCE, not a prediction ──────────
        The verbatim tier means the question came out of one of her own past papers.
        It shipped reading "One of Hannetjie's own exam questions", which a reader
@@ -472,6 +532,45 @@ for (const [i, m] of [...out.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/sc
       process.exit(1);
     }
     console.log('the past-quiz label states a source, not a prediction ✓');
+  }
+
+  {
+    const R = ctx.__ROUTE__;
+    if (!R) { console.error('✗ the route gate did not run — this pack has no rings, or routeUI/routePickHTML has been renamed'); process.exit(1); }
+    const fail = [];
+    if (!R.asks) fail.push('ROUTEASK() is false with nothing chosen — a cold reader is never asked which route to take');
+    if (!R.hasBoth || R.askLen < 300) fail.push(`the chooser does not offer both routes (${R.askLen} chars, both=${R.hasBoth})`);
+    if (!R.askDelegated) fail.push('the chooser\'s options are not delegated — a lost binding on a full-screen modal with no close button locks the reader out of the whole tool');
+    if (R.panelQuiet !== true) fail.push('the first-run panel renders UNDERNEATH the chooser — two explanations at once, one about a route not yet chosen');
+    for (const r of ['guided', 'own']) {
+      const d = R.doors[r];
+      if (!d.g) fail.push(`under "${r}" the route row has no way back to Guided — that is a lock`);
+      if (!d.o) fail.push(`under "${r}" the route row has no "I'll choose" — the reader is on a rail again`);
+      if (!d.why) fail.push(`under "${r}" nothing explains the difference between the two`);
+      if (d.lit !== 1) fail.push(`under "${r}" ${d.lit} door(s) are lit, not exactly one — the reader cannot tell which route is running`);
+    }
+    if (R.gRing !== 0) fail.push(`Guided is not dealing Round 1 (ringNow=${R.gRing})`);
+    if (R.oRing !== null) fail.push('"I\'ll choose" is still inside the rounds — it reorders one round instead of leaving them');
+    if (!R.oDeck) fail.push('"I\'ll choose" deals an empty queue');
+    if (R.oDeck <= R.gDeck) fail.push(`"I'll choose" deals ${R.oDeck} and Guided deals ${R.gDeck} — the second door changes nothing`);
+    if (!/Round [0-9]/.test(R.gSub)) fail.push('the bar does not name the round under Guided');
+    if (/Round [0-9]/.test(R.oSub)) fail.push(`the bar still names a round while the rounds are paused: "${R.oSub}"`);
+    if (R.oHead) fail.push('a second "back to the rounds" bar renders under "I\'ll choose" — the same control twice, and two of them drift');
+    if (!R.undrilled) fail.push('returning to Guided from a one-topic drill leaves the filter on, so "Round 1" is secretly one focus point');
+    const bad = [...new Set(R.values)].filter(v => !['guided', 'own', 'why'].includes(v));
+    if (bad.length) fail.push(`data-route value(s) the handler does not understand: ${bad.join(', ')}`);
+    /* The route buttons are the only way out of a narrowed self-directed queue and the
+       only way back into the rounds. Every other binding in the engine attaches on a
+       setTimeout the file's own comments call racy — measured, not assumed: clicking
+       the old id-wired "Back to the rounds" in the same tick as its render did nothing
+       at all. A lost binding on THIS control is a lock, which house policy forbids. */
+    if (!script.includes("closest('[data-route]')")) fail.push('the route buttons are no longer delegated — a lost binding on them is a lock');
+    if (fail.length) {
+      console.error('✗ NOT SHIPPING. The reader is back on a rail:');
+      for (const f of fail) console.error('    ' + f);
+      process.exit(1);
+    }
+    console.log(`the route is asked once and both doors stay on screen under either — Guided deals ${R.gDeck}, "I'll choose" ${R.oDeck} ✓`);
   }
 
   const seg = ctx.__SEGSTATES__;
