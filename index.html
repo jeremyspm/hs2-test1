@@ -513,12 +513,21 @@ h2.sec{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--tx
   font:inherit;font-size:12px;font-weight:800;line-height:1;cursor:pointer;align-self:center}
 .spineq:hover,.spineq.on{color:var(--acc-tx);border-color:var(--acc)}
 /* The block labels ride the SAME flex proportions as the bar, so a label sits over its
-   own segments. A block narrower than a fifth of the bar gets its gap and no text —
-   "LYMPHATIC & IMMUNITY" truncated into 36px is noise, and the expanded list names it
-   in full anyway. */
+   own segments. Which text a block gets is MEASURED at render time — see
+   fitSpineLabels — not guessed from how many focus points it holds. The guess it
+   replaces ("narrower than a fifth of the bar gets no text") was written to keep
+   "LYMPHATIC & IMMUNITY" out of 36px, and it did: it also left the third body system
+   as an unlabelled run of segments beside two named ones, which is the one thing a
+   block label exists to prevent. Clipping is still not allowed — a block that cannot
+   hold even its short code gets its gap and nothing, and the expanded list names it. */
 .spinelabs{display:flex;gap:7px;min-width:0;margin-bottom:4px}
 .spinelab{min-width:0;overflow:hidden;white-space:nowrap;font-size:8.5px;font-weight:800;
   letter-spacing:.7px;text-transform:uppercase;color:var(--tx3)}
+/* The last resort before a block goes nameless. At 375px the lymphatic block is 34px
+   and its short code is 36px — two pixels are the whole difference between a named
+   block and an anonymous one, and buying them back with tracking and half a point of
+   size is worth more than the uniformity it costs. Applied per block, by the fit. */
+.spinelab.tight{font-size:8px;letter-spacing:.2px}
 .spinebar{display:flex;gap:7px;width:100%;min-width:0;background:none;border:0;padding:0;
   cursor:pointer;-webkit-tap-highlight-color:transparent}
 .spinegrp{display:flex;gap:2px;min-width:0}
@@ -14468,7 +14477,7 @@ function spineGroups(){
     const mine=crits.filter(c=>!claimed.has(c.id)&&(c.id===s.id||String(c.id).startsWith(s.id+'-')));
     if(!mine.length) continue;
     mine.forEach(c=>claimed.add(c.id));
-    groups.push({label:s.name||s.id,crits:mine});
+    groups.push({label:s.name||s.id,short:s.short||s.id,crits:mine});
   }
   const rest=crits.filter(c=>!claimed.has(c.id));
   if(rest.length) groups.push({label:'',crits:rest});
@@ -14485,15 +14494,55 @@ function spineTally(){
           half:st.filter(s=>s==='half').length,
           seen:st.filter(s=>s==='seen').length};
 }
+/* The names a block can wear, longest first: the system's full name, then its head word,
+   then its short code. "Lymphatic & immunity" gives LYMPHATIC in a block too narrow for
+   the whole thing and LYMPH in one too narrow for that, and the reader is told which body
+   system they are looking at in all three cases. A pack may declare `short` on a system;
+   the id is the fallback because that is what ids in this pack already are (cvs, resp,
+   lymph). Uppercased here, not in CSS, so the measuring pass measures the real glyphs. */
+function spineLabNames(g){
+  const full=String(g.label||'').trim(); if(!full) return [];
+  const out=[full];
+  const head=full.split(/\s*[&/,(]\s*/)[0].trim();
+  if(head&&head!==full) out.push(head);
+  const sh=String(g.short||'').trim();
+  if(sh&&!out.some(x=>x.toUpperCase()===sh.toUpperCase())) out.push(sh);
+  return out.map(s=>s.toUpperCase());
+}
+/* MEASURED, because the same block is a different width on a phone than on a laptop and
+   a rule written in percent-of-bar cannot know that. Walk the candidates longest first
+   and keep the first that does not overflow its own block; if none do, blank it rather
+   than ship a clipped word. Runs synchronously right after innerHTML — no paint happens
+   in between, so the reader never sees the long name flash and shrink. */
+function fitSpineLabels(){
+  for(const el of $$('#spine .spinelab')){
+    if(!el.clientWidth) continue;        // not laid out yet; the next render will fit it
+    const cands=String(el.dataset.labs||'').split('|').filter(Boolean);
+    let fitted='';
+    /* Two passes: every name at normal tracking first, then every name tightened. A
+       longer name at normal size beats a shorter one, and any name beats none. */
+    for(const tight of [false,true]){
+      el.classList.toggle('tight',tight);
+      for(const c of cands){ el.textContent=c;
+        if(el.scrollWidth<=el.clientWidth+1){ fitted=c; break; } }
+      if(fitted) break;
+    }
+    if(!fitted) el.classList.remove('tight');
+    el.textContent=fitted;
+  }
+}
 let SPINEOPEN=false, SPINEHELP=false;
 const NEXTROUNDAT=6;                 // cards left in a round before the next one is named
 function spineBarHTML(){
   const t=spineTally(), d=daysLeft(), gs=spineGroups();
-  /* A block narrower than a fifth of the bar gets its gap and no label — see the CSS.
+  /* Every block ships EVERY name it could wear; fitSpineLabels picks the longest one
+     that actually fits once the browser has laid the row out. The full name is what is
+     rendered here, so a block is never blank because the measuring pass did not run.
      `flex:N 1 0` is what keeps a block's width proportional to how many focus points
      it holds, which is the only reason the label above it lines up with it. */
-  const labs=gs.map(g=>`<div class="spinelab" style="flex:${g.crits.length} 1 0">${
-      g.crits.length/t.tot>=0.2?esc(String(g.label).toUpperCase()):''}</div>`).join('');
+  const labs=gs.map(g=>{ const c=spineLabNames(g);
+      return `<div class="spinelab" style="flex:${g.crits.length} 1 0" data-labs="${
+        esc(c.join('|')).replace(/"/g,'&quot;')}">${esc(c[0]||'')}</div>`; }).join('');
   const segs=gs.map(g=>`<span class="spinegrp" style="flex:${g.crits.length} 1 0">${
       g.crits.map(c=>{ const st=pointState(c.id);
         return `<span class="sseg ${st}" title="${esc(c.name||c.id)} — ${SEGWORD[st]}"><i></i></span>`;
@@ -14545,6 +14594,7 @@ function renderSpine(){
   if(!HASRINGS()){ bar.hidden=true; open.innerHTML=''; return; }
   bar.hidden=false;
   bar.innerHTML=spineBarHTML();
+  fitSpineLabels();
   /* ONE COUNTDOWN, AND IT IS THE ONE THAT SURVIVES SCROLLING. The header pill and this
      bar both read daysLeft(), so a ringed pack showed "12 days left" twice on the first
      screen — and the header's copy is the one that scrolls away. The pill stands for
@@ -14559,6 +14609,15 @@ function renderSpine(){
   const i=$('#spineIntro'); if(i) i.onclick=()=>{
     SPINEHELP=false; S.onboarded=false; save(); renderSpine(); renderOnboard(); window.scrollTo({top:0}); };
   wireBlueprint();
+}
+/* Rotating a phone changes every block's width and nothing re-renders the bar, so the
+   fit has to be redone on its own. Only the labels move — the candidates are still in
+   the DOM — so this re-fits rather than re-rendering, and a reader mid-answer keeps
+   their card. `typeof` because the build runs this script against a stub global that
+   has no addEventListener. */
+if(typeof addEventListener==='function'){
+  let _fitT=0;
+  addEventListener('resize',()=>{ clearTimeout(_fitT); _fitT=setTimeout(fitSpineLabels,120); });
 }
 
 /* In memory only — a deck is a sitting, not saved progress. */

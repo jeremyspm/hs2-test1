@@ -175,13 +175,22 @@ for (const [i, m] of [...out.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/sc
       S.lock=keepL; S.mcq=keepM;
       globalThis.__SEGSTATES__=Object.keys(hit);
     })();
-    /* ── G20: the bar draws one segment per focus point, in blocks ───────────── */
+    /* ── G20: the bar draws one segment per focus point, in NAMED blocks ───────
+       The names are the half that broke. The bar blanked any block holding under a
+       fifth of the focus points, so CARDIOVASCULAR and RESPIRATORY were labelled and
+       LYMPHATIC — four points of thirty-eight — was an anonymous run of segments the
+       reader could not identify. Nothing failed: the segments were all there, the
+       blocks were all there, and the markup for the third one simply had no text in
+       it. So count the names, not just the blocks. */
     ;(function(){
       if(typeof spineBarHTML!=='function'||!HASRINGS()){ globalThis.__SPINE__=null; return; }
-      const h=spineBarHTML();
+      const h=spineBarHTML(), gs=spineGroups();
       globalThis.__SPINE__={segs:(h.match(/class="sseg /g)||[]).length,
                             groups:(h.match(/class="spinegrp"/g)||[]).length,
-                            crits:(PACK.criteria||[]).length};
+                            crits:(PACK.criteria||[]).length,
+                            named:(h.match(/data-labs="[^"]*"/g)||[]).filter(s=>s.length>12).length,
+                            want:gs.filter(g=>g.label).length,
+                            thin:gs.filter(g=>g.label&&spineLabNames(g).length<2).map(g=>g.label)};
     })();
   `;
   try {
@@ -315,7 +324,16 @@ for (const [i, m] of [...out.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/sc
       console.error(`✗ NOT SHIPPING. The Spine Bar draws ${sp.segs} segments for ${sp.crits} focus points.`);
       process.exit(1);
     }
-    console.log(`the Spine Bar draws all ${sp.segs} focus points in ${sp.groups} block(s), every state reachable ✓`);
+    if (sp.named !== sp.want) {
+      console.error(`✗ NOT SHIPPING. ${sp.want - sp.named} of ${sp.want} block(s) in the Spine Bar carry no name.`);
+      console.error('   A run of segments the reader cannot identify, sitting next to named ones, reads as a bug.');
+      process.exit(1);
+    }
+    /* A block whose ONLY name is its full one goes blank on a phone the moment it is
+       too narrow for it — the fit has nothing shorter to fall back to. Not fatal (a
+       pack may genuinely have nothing shorter to say), but it must not be silent. */
+    if (sp.thin.length) console.log(`⚠ no short form to fall back on for: ${sp.thin.join(', ')} — give the system a "short" in pack.js or these go blank on a narrow screen`);
+    console.log(`the Spine Bar draws all ${sp.segs} focus points in ${sp.groups} block(s), all ${sp.named} named, every state reachable ✓`);
   }
 }
 
