@@ -712,6 +712,37 @@ console.log(`all ${(P.criteria ?? []).length} focus points have at least one car
   }
   console.log(`Ring 0 is ${Object.keys(spine).length} keys, every one resolving to the card audit/spine.mjs chooses ✓`);
 
+  /* ── G24: the FORMATIVE tie-break still matches her formatives ────────────────
+     spine.mjs decides "came from a formative" by matching the word against each card's
+     `ev.quiz` / `ev.src`, because the alternative — a hardcoded list of registry ids —
+     goes stale silently and that file has no way to notice. This is the half of that
+     bargain that does the noticing.
+
+     A predicate that matches NOTHING is the dangerous failure, and it is invisible: the
+     sort still runs, every count is unchanged, Round 1 is still 38 cards, and the only
+     symptom is that the deal quietly reverts to being decided by `parts`. So assert the
+     population, in both directions. The floor is her two formatives at their current
+     reach; the ceiling exists because /formative/i is a word match and a course that
+     starts titling its topic quizzes "formative" would swallow the whole pack and the
+     tie-break would again decide nothing. */
+  const { isFormative } = await import('./audit/spine.mjs');
+  const drill = P.cards.filter(c => c.type !== 'rail' && !c.damaged);
+  const nF = drill.filter(isFormative).length;
+  const leadF = (P.criteria ?? []).map(cr => spineFor(P.cards, cr.id)).filter(c => c && isFormative(c)).length;
+  if (nF < 20 || nF > drill.length * 0.25) {
+    console.error(`✗ NOT SHIPPING. The formative tie-break matches ${nF} of ${drill.length} drillable cards.`);
+    console.error('  Too few means her formatives have been renamed out of the predicate and Round 1 has silently');
+    console.error('  gone back to being decided by part-count; too many means the word no longer distinguishes');
+    console.error('  anything. Check ev.quiz / ev.src against audit/registry.json, then re-read spine.mjs.');
+    process.exit(1);
+  }
+  if (leadF < 8) {
+    console.error(`✗ NOT SHIPPING. Only ${leadF} of the 38 lead cards come from a formative — it was 13 when the`);
+    console.error('  tie-break was added, and 3 before it. A drop means the tie-break is no longer reaching the deal.');
+    process.exit(1);
+  }
+  console.log(`formative tie-break live: ${nF} drillable cards trace to one of her formatives, ${leadF} of them lead a focus point ✓`);
+
   /* ── G15: the engine's rings are audit/spine.mjs's rings ─────────────────────
      `ringOf` is written twice — in audit/spine.mjs, and again inside the shipped page,
      which imports nothing because it is one offline file. Two implementations of "which

@@ -26,8 +26,22 @@ const { pack } = loadPack(path.join(HERE, '..', 'pack.source.js'));
    fuzzy matching, because both were mis-resolved once already. */
 const ALIASES = {
   'module 1 formative test (canvas)': 'SRC-MODULE-1-FORMATIVE-TEST-HEALTH-SCIENCE-2',
-  'bn2 formative test pdf model answers': 'SRC-PDF-OF-IN-CLASS-FORMATIVE-MODEL-ANSWERS',
+  'bn2 formative test pdf model answers': 'SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS',
 };
+/* An alias naming a source that does not exist is WORSE than no alias at all. The second
+   entry above read SRC-PDF-OF-IN-CLASS-FORMATIVE-MODEL-ANSWERS until 11 Aug 2026, which is
+   in no registry: `resolveSrc` returned it, `findQuote` filtered a corpus that holds no
+   unit with that id, found nothing, and thirteen cards citing her formative model answers
+   were demoted to `textbook` carrying the sentence "no phrase from this card appears in
+   that source — the citation was never verified". The citation was never SEARCHED. The
+   failure is silent by construction, because an alias exists precisely for the ids that do
+   not match a label, so there is nothing left to disagree with it. */
+for (const [head, id] of Object.entries(ALIASES)) {
+  if (!registry[id]) {
+    console.error(`✗ alias "${head}" resolves to ${id}, which is in no registry — every card citing it would be demoted with a reason that is not true.`);
+    process.exit(1);
+  }
+}
 const labels = Object.entries(registry).map(([id, v]) => [id, v.label.toLowerCase()]);
 
 function resolveSrc(src) {
@@ -198,6 +212,47 @@ function findQuote(card, srcId, locs) {
   return null;
 }
 
+/* ── HER PAPERS ARE NOT HER LECTURE ──────────────────────────────────────────
+   This file had three possible answers — `taught`, `textbook`, `unverified` — and no
+   way to reach `verbatim` at all. That is not a missing feature, it is a category error
+   the whole tool was built on top of: triage asks "does the cited source SUPPORT this
+   card's claim", which is a question about content, and `verbatim` is a question about
+   ORIGIN. So every card that came out of a paper Hannetjie SET, but arrived through this
+   path rather than through the Canvas-capture harvest, was capped at `taught` and told
+   the reader "Straight from Hannetjie's lecture material".
+
+   The cost was not cosmetic. `tier` is the first tie-break in audit/spine.mjs, so a
+   `taught` card can never lead a focus point however good it is; and ringOfCard deals
+   non-verbatim cards LAST, under a heading that says background reading. Two of her own
+   Module 1 formative SAQs — the artery-vs-vein micrograph (5 marks) and the inspired-air
+   particles question (3 marks) — were therefore dealt dead last, in Ring 4, as background
+   reading, in a tool built to frontload exactly that kind of question.
+
+   The rule is deliberately narrow, because the one thing this pack must never do is
+   claim our writing is hers. BOTH must hold:
+
+     1. the source is a paper she SET, listed by id below — not a lecture, not a
+        workbook, not a peer discussion;
+     2. the evidence is HERS AND THIS CARD'S, by one of two mechanically checkable
+        routes — the located quote appears in the card's own question stem, or it came
+        out of a "Your Answer:" span, which in a Canvas results print is her model answer
+        to her own question.
+
+   Everything else the triage promoted stays `taught`, including two cards whose quote
+   matched her answer PROSE rather than their stem: her paper supports what they say,
+   which is what `taught` means, and that is as far as the evidence goes. */
+const HER_PAPERS = new Set([
+  'SRC-MODULE-1-FORMATIVE-TEST-HEALTH-SCIENCE-2',   // MODULE 1 : Formative Test (Canvas results print)
+  'SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS',       // BN2 Formative Test PDF Model Answers
+]);
+const flat = (s) => normQuote(String(s ?? '').replace(/<[^>]+>/g, ' ')).toLowerCase().replace(/\s+/g, ' ').trim();
+
+function herPaper(card, srcId, ev) {
+  if (!HER_PAPERS.has(srcId) || !ev) return false;
+  if (ev.how === 'model-answer') return true;                  // her marking schedule
+  return flat(card.q).includes(flat(ev.quote));                // her stem, in this card
+}
+
 /* ── declared-quantity fixes ────────────────────────────────────────────────
    The contradictions the validator already reports, with the corrected value, so the
    apply step can rewrite them rather than merely flagging. */
@@ -272,7 +327,7 @@ for (const it of items) {
   const weak = ev && ev.strong === false;
   let tier, why, candidateEv = null;
   if (ev && !weak && !uncited && auth && !['student-peer', 'external'].includes(auth)) {
-    tier = 'taught';
+    tier = herPaper(it.o, r.id, ev) ? 'verbatim' : 'taught';
   } else if (ev && uncited) {
     tier = 'textbook';
     candidateEv = ev;
@@ -304,7 +359,7 @@ for (const it of items) {
     label: (it.o.q ?? it.o.term ?? '').slice(0, 78),
     oldSrc: src, resolved: r?.id ?? null, via: r?.via ?? 'none',
     tier, why: why ?? null,
-    ev: tier === 'taught' ? [ev, ...extraEv] : null,
+    ev: (tier === 'taught' || tier === 'verbatim') ? [ev, ...extraEv] : null,
     candidateEv, quantityIssues: qIssues,
   });
 }
@@ -315,7 +370,8 @@ const byTier = {};
 for (const p of proposals) byTier[p.tier] = (byTier[p.tier] ?? 0) + 1;
 const cited = proposals.filter(p => p.oldSrc).length;
 const promoted = proposals.filter(p => p.tier === 'taught').length;
-const failedCite = proposals.filter(p => p.oldSrc && p.tier !== 'taught').length;
+const hers = proposals.filter(p => p.tier === 'verbatim').length;
+const failedCite = proposals.filter(p => p.oldSrc && !['taught', 'verbatim'].includes(p.tier)).length;
 const qFix = proposals.filter(p => p.quantityIssues.length);
 
 console.log('══ PHASE 4 · TRIAGE PROPOSAL ═══════════════════════');
@@ -324,12 +380,15 @@ console.log('  proposed tiers:');
 for (const [t, n] of Object.entries(byTier).sort((a, b) => b[1] - a[1])) console.log(`    ${String(n).padStart(4)}  ${t}`);
 console.log(`\n  ${cited} item(s) carry an old citation`);
 console.log(`    ${promoted} promoted to \`taught\` — a phrase from the card was found verbatim in the cited source`);
+console.log(`    ${hers} promoted to \`verbatim\` — the cited source is a paper SHE SET and the quote is her stem or her marking schedule`);
 console.log(`    ${failedCite} could NOT be substantiated from what they cite`);
 console.log(`\n  ${qFix.length} item(s) have a declared-quantity issue to rewrite:`);
 const byIssue = {};
 for (const p of qFix) for (const q of p.quantityIssues) byIssue[`${q.id} (${q.kind})`] = (byIssue[`${q.id} (${q.kind})`] ?? 0) + 1;
 for (const [k, n] of Object.entries(byIssue).sort((a, b) => b[1] - a[1])) console.log(`    ${String(n).padStart(3)}×  ${k}`);
+/* `ev` has been an ARRAY since extraEv was added; reading `.scope` off the array itself
+   incremented scope[undefined] and printed a confident "0 · 0" for the whole pack. */
 const scope = { cited: 0, document: 0 };
-for (const p of proposals) if (p.ev) scope[p.ev.scope]++;
+for (const p of proposals) if (p.ev?.[0]) scope[p.ev[0].scope]++;
 console.log(`\n  evidence located at the cited slide/page: ${scope.cited} · elsewhere in the same document: ${scope.document}`);
 console.log('\nwrote audit/migration.json  (proposal only — nothing has been applied)');

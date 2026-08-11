@@ -1938,7 +1938,7 @@
    "oldSrc": "MODULE 1 Formative Test (Canvas) — Q16 model answer",
    "resolved": "SRC-MODULE-1-FORMATIVE-TEST-HEALTH-SCIENCE-2",
    "via": "alias",
-   "tier": "taught",
+   "tier": "verbatim",
    "why": null,
    "ev": [
     {
@@ -1975,7 +1975,7 @@
    "oldSrc": "MODULE 1 Formative Test (Canvas) — Q17 model answer",
    "resolved": "SRC-MODULE-1-FORMATIVE-TEST-HEALTH-SCIENCE-2",
    "via": "alias",
-   "tier": "taught",
+   "tier": "verbatim",
    "why": null,
    "ev": [
     {
@@ -2377,7 +2377,7 @@
    "oldSrc": "MODULE 1 Formative Test (Canvas) — Q26 model answer",
    "resolved": "SRC-MODULE-1-FORMATIVE-TEST-HEALTH-SCIENCE-2",
    "via": "alias",
-   "tier": "taught",
+   "tier": "verbatim",
    "why": null,
    "ev": [
     {
@@ -2468,11 +2468,20 @@
    "type": "mcq",
    "label": "Which of the following drives FILTRATION at the arterial end of a capillary, d",
    "oldSrc": "BN2 Formative Test PDF Model Answers — Q2",
-   "resolved": "SRC-PDF-OF-IN-CLASS-FORMATIVE-MODEL-ANSWERS",
+   "resolved": "SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS",
    "via": "alias",
-   "tier": "textbook",
-   "why": "cites bn2 formative test pdf model answers but no phrase from this card appears in that source — the citation was never verified",
-   "ev": null,
+   "tier": "taught",
+   "why": null,
+   "ev": [
+    {
+     "src": "SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS",
+     "loc": "page 2",
+     "quote": "High hydrostatic pressure at the arterial end",
+     "scope": "cited",
+     "how": "phrase",
+     "strong": true
+    }
+   ],
    "candidateEv": null,
    "quantityIssues": []
   },
@@ -2713,11 +2722,20 @@
    "type": "mcq",
    "label": "Which valve is described? \"Found between the right atrium and the right ventri",
    "oldSrc": "BN2 Formative Test PDF Model Answers — Q9",
-   "resolved": "SRC-PDF-OF-IN-CLASS-FORMATIVE-MODEL-ANSWERS",
+   "resolved": "SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS",
    "via": "alias",
-   "tier": "textbook",
-   "why": "cites bn2 formative test pdf model answers but no phrase from this card appears in that source — the citation was never verified",
-   "ev": null,
+   "tier": "verbatim",
+   "why": null,
+   "ev": [
+    {
+     "src": "SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS",
+     "loc": "page 10",
+     "quote": "between the right atrium and the right ventricle, it",
+     "scope": "cited",
+     "how": "phrase",
+     "strong": true
+    }
+   ],
    "candidateEv": null,
    "quantityIssues": []
   },
@@ -3000,11 +3018,20 @@
    "type": "mcq",
    "label": "Which part of the ECG best represents ventricular repolarisation?",
    "oldSrc": "BN2 Formative Test PDF Model Answers — Q1",
-   "resolved": "SRC-PDF-OF-IN-CLASS-FORMATIVE-MODEL-ANSWERS",
+   "resolved": "SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS",
    "via": "alias",
-   "tier": "textbook",
-   "why": "cites bn2 formative test pdf model answers but no phrase from this card appears in that source — the citation was never verified",
-   "ev": null,
+   "tier": "taught",
+   "why": null,
+   "ev": [
+    {
+     "src": "SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS",
+     "loc": "page 1",
+     "quote": "An ECG trace does not show ventricular",
+     "scope": "cited",
+     "how": "phrase",
+     "strong": true
+    }
+   ],
    "candidateEv": null,
    "quantityIssues": []
   },
@@ -3014,11 +3041,20 @@
    "type": "mcq",
    "label": "Which structure of the respiratory system has a similar pacemaking function to",
    "oldSrc": "BN2 Formative Test PDF Model Answers — Q5",
-   "resolved": "SRC-PDF-OF-IN-CLASS-FORMATIVE-MODEL-ANSWERS",
+   "resolved": "SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS",
    "via": "alias",
-   "tier": "textbook",
-   "why": "cites bn2 formative test pdf model answers but no phrase from this card appears in that source — the citation was never verified",
-   "ev": null,
+   "tier": "verbatim",
+   "why": null,
+   "ev": [
+    {
+     "src": "SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS",
+     "loc": "page 6",
+     "quote": "function to the SA node",
+     "scope": "cited",
+     "how": "phrase",
+     "strong": true
+    }
+   ],
    "candidateEv": null,
    "quantityIssues": []
   },
@@ -3693,11 +3729,20 @@
    "type": "mcq",
    "label": "Which type of shock could be caused by major blood loss?",
    "oldSrc": "BN2 Formative Test PDF Model Answers — Q12",
-   "resolved": "SRC-PDF-OF-IN-CLASS-FORMATIVE-MODEL-ANSWERS",
+   "resolved": "SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS",
    "via": "alias",
-   "tier": "textbook",
-   "why": "cites bn2 formative test pdf model answers but no phrase from this card appears in that source — the citation was never verified",
-   "ev": null,
+   "tier": "verbatim",
+   "why": null,
+   "ev": [
+    {
+     "src": "SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS",
+     "loc": "page 13",
+     "quote": "of shock could be caused by major blood loss?",
+     "scope": "cited",
+     "how": "phrase",
+     "strong": true
+    }
+   ],
    "candidateEv": null,
    "quantityIssues": []
   },
@@ -4084,11 +4129,20 @@
    "type": "mcq",
    "label": "Which of the following is NOT part of the conducting zone of the respiratory s",
    "oldSrc": "BN2 Formative Test PDF Model Answers — Q8",
-   "resolved": "SRC-PDF-OF-IN-CLASS-FORMATIVE-MODEL-ANSWERS",
+   "resolved": "SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS",
    "via": "alias",
-   "tier": "textbook",
-   "why": "cites bn2 formative test pdf model answers but no phrase from this card appears in that source — the citation was never verified",
-   "ev": null,
+   "tier": "verbatim",
+   "why": null,
+   "ev": [
+    {
+     "src": "SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS",
+     "loc": "page 9",
+     "quote": "part of the conducting zone of the respiratory system?",
+     "scope": "cited",
+     "how": "phrase",
+     "strong": true
+    }
+   ],
    "candidateEv": null,
    "quantityIssues": []
   },
@@ -4226,7 +4280,7 @@
    "oldSrc": "MODULE 1 Formative Test (Canvas) — Q14 model answer",
    "resolved": "SRC-MODULE-1-FORMATIVE-TEST-HEALTH-SCIENCE-2",
    "via": "alias",
-   "tier": "taught",
+   "tier": "verbatim",
    "why": null,
    "ev": [
     {
@@ -4653,11 +4707,20 @@
    "type": "mcq",
    "label": "Which factor does NOT impact upon pulmonary ventilation?",
    "oldSrc": "BN2 Formative Test PDF Model Answers — Q3",
-   "resolved": "SRC-PDF-OF-IN-CLASS-FORMATIVE-MODEL-ANSWERS",
+   "resolved": "SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS",
    "via": "alias",
-   "tier": "textbook",
-   "why": "cites bn2 formative test pdf model answers but no phrase from this card appears in that source — the citation was never verified",
-   "ev": null,
+   "tier": "verbatim",
+   "why": null,
+   "ev": [
+    {
+     "src": "SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS",
+     "loc": "page 4",
+     "quote": "factor DOES NOT impact upon pulmonary ventilation?",
+     "scope": "cited",
+     "how": "phrase",
+     "strong": true
+    }
+   ],
    "candidateEv": null,
    "quantityIssues": []
   },
@@ -4915,12 +4978,19 @@
    "type": "mcq",
    "label": "In the blood flowing through systemic veins of a person at rest, haemoglobin i",
    "oldSrc": "BN2 Formative Test PDF Model Answers — Q11",
-   "resolved": "SRC-PDF-OF-IN-CLASS-FORMATIVE-MODEL-ANSWERS",
+   "resolved": "SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS",
    "via": "alias",
    "tier": "textbook",
-   "why": "cites bn2 formative test pdf model answers but no phrase from this card appears in that source — the citation was never verified",
+   "why": "cites bn2 formative test pdf model answers, which supports the wording but contains no figure of \"98%\" — the number is not hers",
    "ev": null,
-   "candidateEv": null,
+   "candidateEv": {
+    "src": "SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS",
+    "loc": "page 12",
+    "quote": "In the blood flowing through systemic veins of a",
+    "scope": "cited",
+    "how": "phrase",
+    "strong": true
+   },
    "quantityIssues": []
   },
   {
@@ -5034,12 +5104,29 @@
    "type": "cloze",
    "label": "Complete the passage on carbon dioxide transport.",
    "oldSrc": "BN2 Formative Test PDF Model Answers — Q16 (adapted)",
-   "resolved": "SRC-PDF-OF-IN-CLASS-FORMATIVE-MODEL-ANSWERS",
+   "resolved": "SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS",
    "via": "alias",
    "tier": "textbook",
-   "why": "cites bn2 formative test pdf model answers but no phrase from this card appears in that source — the citation was never verified",
+   "why": "the topic appears at page 18 of bn2 formative test pdf model answers, but the specific claim was not located — candidate evidence recorded for review",
    "ev": null,
-   "candidateEv": null,
+   "candidateEv": {
+    "src": "SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS",
+    "loc": "page 18",
+    "quote": "CARBONIC ANHYDRASE. This molecule tends to dissolve, forming HYDROGEN ions and BICARBONATE. [6] accounts for about 70% of all the CO2 transported in the blood",
+    "scope": "cited",
+    "how": "tokens-weak",
+    "matched": {
+     "nums": [
+      "70"
+     ],
+     "terms": [
+      "transport",
+      "anhydrase",
+      "bicarbonate"
+     ]
+    },
+    "strong": false
+   },
    "quantityIssues": []
   },
   {
@@ -5468,11 +5555,20 @@
    "type": "mcq",
    "label": "Which of the following terms refers to air in the pleural space?",
    "oldSrc": "BN2 Formative Test PDF Model Answers — Q7",
-   "resolved": "SRC-PDF-OF-IN-CLASS-FORMATIVE-MODEL-ANSWERS",
+   "resolved": "SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS",
    "via": "alias",
-   "tier": "textbook",
-   "why": "cites bn2 formative test pdf model answers but no phrase from this card appears in that source — the citation was never verified",
-   "ev": null,
+   "tier": "verbatim",
+   "why": null,
+   "ev": [
+    {
+     "src": "SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS",
+     "loc": "page 8",
+     "quote": "Which of the following terms refers to air in",
+     "scope": "cited",
+     "how": "phrase",
+     "strong": true
+    }
+   ],
    "candidateEv": null,
    "quantityIssues": []
   },
@@ -5554,7 +5650,7 @@
    "type": "mcq",
    "label": "Lymph is derived from:",
    "oldSrc": "BN2 Formative Test PDF Model Answers — Q6",
-   "resolved": "SRC-PDF-OF-IN-CLASS-FORMATIVE-MODEL-ANSWERS",
+   "resolved": "SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS",
    "via": "alias",
    "tier": "textbook",
    "why": "cites bn2 formative test pdf model answers but no phrase from this card appears in that source — the citation was never verified",
@@ -5806,11 +5902,20 @@
    "type": "mcq",
    "label": "At which blood vessel does lymphatic fluid drain back into the venous system?",
    "oldSrc": "BN2 Formative Test PDF Model Answers — Q4",
-   "resolved": "SRC-PDF-OF-IN-CLASS-FORMATIVE-MODEL-ANSWERS",
+   "resolved": "SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS",
    "via": "alias",
-   "tier": "textbook",
-   "why": "cites bn2 formative test pdf model answers but no phrase from this card appears in that source — the citation was never verified",
-   "ev": null,
+   "tier": "verbatim",
+   "why": null,
+   "ev": [
+    {
+     "src": "SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS",
+     "loc": "page 5",
+     "quote": "At which blood vessel does",
+     "scope": "cited",
+     "how": "phrase",
+     "strong": true
+    }
+   ],
    "candidateEv": null,
    "quantityIssues": []
   },
@@ -5820,11 +5925,20 @@
    "type": "mcq",
    "label": "Lymph vessels and veins have similar structures and functions. Which of the fo",
    "oldSrc": "BN2 Formative Test PDF Model Answers — Q10",
-   "resolved": "SRC-PDF-OF-IN-CLASS-FORMATIVE-MODEL-ANSWERS",
+   "resolved": "SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS",
    "via": "alias",
-   "tier": "textbook",
-   "why": "cites bn2 formative test pdf model answers but no phrase from this card appears in that source — the citation was never verified",
-   "ev": null,
+   "tier": "verbatim",
+   "why": null,
+   "ev": [
+    {
+     "src": "SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS",
+     "loc": "page 11",
+     "quote": "Lymph vessels and veins have similar structures and functions.",
+     "scope": "cited",
+     "how": "phrase",
+     "strong": true
+    }
+   ],
    "candidateEv": null,
    "quantityIssues": []
   },

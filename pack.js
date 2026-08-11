@@ -410,7 +410,7 @@ const PACK = {
     "Both CO and PR determine blood pressure, so as they increase, blood pressure rises back to normal"
    ],
    "model": "This marking schedule is the lecturer's own, reproduced from the Module 1 formative test. Hannetjie's note: \"If you got the gist of each step, you'll likely be able to achieve close to full marks.\"",
-   "tier": "taught",
+   "tier": "verbatim",
    "ev": [
     {
      "src": "SRC-MODULE-1-FORMATIVE-TEST-HEALTH-SCIENCE-2",
@@ -433,7 +433,7 @@ const PACK = {
     "Angiotensin II acts in three ways: (i) vasoconstriction, raising peripheral resistance; (ii) increased ADH release, making the collecting ducts more permeable so water is reabsorbed, raising blood volume; (iii) action on the adrenal gland to release Aldosterone, which increases Na⁺ reabsorption in the nephron — and water follows salt, raising blood volume"
    ],
    "model": "The lecturer's own marking schedule from the Module 1 formative test, reproduced verbatim. Note this is the SLOW mechanism — minutes to hours — compared with the neural response in seconds.",
-   "tier": "taught",
+   "tier": "verbatim",
    "ev": [
     {
      "src": "SRC-MODULE-1-FORMATIVE-TEST-HEALTH-SCIENCE-2",
@@ -595,6 +595,7 @@ const PACK = {
    "topic": "cvs-vessels",
    "crit": "cvs-2",
    "q": "An artery and a vein sit side by side under the microscope, each already named. Identify <b>3 things you CAN see</b> that support the naming, and <b>2 differences you CANNOT see</b>.",
+   "qOrig": "Identify 3 things that support the labels of the artery and the vein that you can see. Also identify 2 differences between the artery and vein that you CANNOT see in the diagram.",
    "marks": 5,
    "points": [
     "CAN see: the internal elastic lamina (IEL) is present in the artery",
@@ -607,12 +608,56 @@ const PACK = {
     "CANNOT see: the pressure inside the vein is lower"
    ],
    "model": "Every point above is from the lecturer's own marking schedule for Module 1 Formative Test Q26. Hannetjie lists five visible differences and three invisible ones — you need only 3 and 2, so any three of the first group and any two of the second earn the marks. The examiner is testing whether you can separate structural evidence from inference.",
-   "tier": "taught",
+   "tier": "verbatim",
    "ev": [
     {
      "src": "SRC-MODULE-1-FORMATIVE-TEST-HEALTH-SCIENCE-2",
      "loc": "page 20",
      "quote": "shape better than the vein"
+    }
+   ]
+  },
+  {
+   "type": "mcq",
+   "topic": "cvs-vessels",
+   "crit": "cvs-3",
+   "q": "Which of the following drives FILTRATION at the arterial end of a capillary, delivering nutrients to the tissues?",
+   "options": [
+    "High hydrostatic pressure at the arterial end",
+    "High osmotic pressure at the arterial end",
+    "High hydrostatic pressure at the venous end",
+    "High osmotic pressure at the venous end"
+   ],
+   "correct": 0,
+   "why": "Straight from the formative test. <b>Hydrostatic pressure pushes out; oncotic pressure pulls in.</b>",
+   "tier": "taught",
+   "ev": [
+    {
+     "src": "SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS",
+     "loc": "page 2",
+     "quote": "High hydrostatic pressure at the arterial end"
+    }
+   ]
+  },
+  {
+   "type": "mcq",
+   "topic": "cvs-anat",
+   "crit": "cvs-5",
+   "q": "Which valve is described? \"Found between the right atrium and the right ventricle, it has 3 valve flaps and is anchored to papillary muscles by chordae tendineae.\"",
+   "options": [
+    "Mitral valve",
+    "Aortic valve",
+    "Tricuspid valve",
+    "Pulmonary valve"
+   ],
+   "correct": 2,
+   "why": "Straight from the formative test. <b>Tri</b>cuspid = three cusps, <b>right</b> side.",
+   "tier": "verbatim",
+   "ev": [
+    {
+     "src": "SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS",
+     "loc": "page 10",
+     "quote": "between the right atrium and the right ventricle, it"
     }
    ]
   },
@@ -647,6 +692,94 @@ const PACK = {
    ]
   },
   {
+   "type": "mcq",
+   "topic": "cvs-ecg",
+   "crit": "cvs-8",
+   "q": "Which part of the ECG best represents ventricular repolarisation?",
+   "options": [
+    "The P wave",
+    "The QRS complex",
+    "The T wave",
+    "An ECG trace does not show ventricular repolarisation"
+   ],
+   "correct": 2,
+   "why": "From the formative test. P = atrial depolarisation, QRS = ventricular depolarisation, <b>T = ventricular repolarisation</b>.",
+   "tier": "taught",
+   "ev": [
+    {
+     "src": "SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS",
+     "loc": "page 1",
+     "quote": "An ECG trace does not show ventricular"
+    }
+   ]
+  },
+  {
+   "type": "mcq",
+   "topic": "cvs-ecg",
+   "crit": "cvs-8",
+   "q": "Which structure of the respiratory system has a similar pacemaking function to the SA node of the heart?",
+   "options": [
+    "The pontine respiratory group",
+    "The ventral respiratory group of the medulla",
+    "The cardioinhibitory centre",
+    "The carotid body"
+   ],
+   "correct": 1,
+   "why": "From the formative test. The <b>VRG</b> contains the pre-Bötzinger complex — the rhythm generator for breathing.",
+   "tier": "verbatim",
+   "ev": [
+    {
+     "src": "SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS",
+     "loc": "page 6",
+     "quote": "function to the SA node"
+    }
+   ]
+  },
+  {
+   "type": "mcq",
+   "topic": "cvs-output",
+   "crit": "cvs-14",
+   "q": "Which type of shock could be caused by major blood loss?",
+   "options": [
+    "Cardiogenic shock",
+    "Anaphylactic shock",
+    "Hypovolaemic shock",
+    "Septic shock"
+   ],
+   "correct": 2,
+   "why": "From the formative test. <b>Hypo-vol-aemic</b> = low volume.",
+   "tier": "verbatim",
+   "ev": [
+    {
+     "src": "SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS",
+     "loc": "page 13",
+     "quote": "of shock could be caused by major blood loss?"
+    }
+   ]
+  },
+  {
+   "type": "mcq",
+   "topic": "resp-anat",
+   "crit": "resp-3",
+   "q": "Which of the following is NOT part of the conducting zone of the respiratory system?",
+   "options": [
+    "Pharynx",
+    "Larynx",
+    "Trachea",
+    "Alveoli"
+   ],
+   "correct": 3,
+   "why": "From the formative test. <b>Alveoli</b> are the respiratory zone — everything else listed conducts.",
+   "tier": "verbatim",
+   "ev": [
+    {
+     "src": "SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS",
+     "loc": "page 9",
+     "quote": "part of the conducting zone of the respiratory system?"
+    }
+   ]
+  },
+  {
    "type": "saq",
    "topic": "resp-anat",
    "crit": "resp-4",
@@ -658,12 +791,34 @@ const PACK = {
     "Structures like the carina can stimulate the body to cough or sneeze, forcibly expelling any dust or debris"
    ],
    "model": "The lecturer's own marking schedule from the Module 1 formative test. Hannetjie's follow-up question: what happens to dust that DOES make it to the lungs? — it is engulfed and removed by alveolar macrophages.",
-   "tier": "taught",
+   "tier": "verbatim",
    "ev": [
     {
      "src": "SRC-MODULE-1-FORMATIVE-TEST-HEALTH-SCIENCE-2",
      "loc": "page 12",
      "quote": "Explain why most particles in the inspired air, like"
+    }
+   ]
+  },
+  {
+   "type": "mcq",
+   "topic": "resp-mech",
+   "crit": "resp-7",
+   "q": "Which factor does NOT impact upon pulmonary ventilation?",
+   "options": [
+    "Lung compliance",
+    "Airway diameter",
+    "Partial pressure gradients",
+    "Surfactant production"
+   ],
+   "correct": 2,
+   "why": "From the formative test. <b>Partial pressure gradients</b> drive gas EXCHANGE (diffusion), not the bulk movement of air.",
+   "tier": "verbatim",
+   "ev": [
+    {
+     "src": "SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS",
+     "loc": "page 4",
+     "quote": "factor DOES NOT impact upon pulmonary ventilation?"
     }
    ]
   },
@@ -694,6 +849,28 @@ const PACK = {
      "src": "SRC-2026-RESP-3",
      "loc": "slide 22",
      "quote": "| 1. | | Bicarbonate ions in plasma | - 70% is transported as | bicarbonate (HCO | 3 | - | ) | 2 | . | As | carb-amino-hemoglobin | = | chemically bound to hemoglobin | - | 20-30% is carried in RBCs | 3. | | Dissolved in plasma | | - 7 to | 10% | 1 | 2 | 3 | Carbon"
+    }
+   ]
+  },
+  {
+   "type": "mcq",
+   "topic": "resp-anat",
+   "crit": "resp-17",
+   "q": "Which of the following terms refers to air in the pleural space?",
+   "options": [
+    "Atelectasis",
+    "Pneumothorax",
+    "Eupnoea",
+    "Dyspnoea"
+   ],
+   "correct": 1,
+   "why": "From the formative test. <b>Pneumo</b> = air, <b>thorax</b> = chest cavity.",
+   "tier": "verbatim",
+   "ev": [
+    {
+     "src": "SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS",
+     "loc": "page 8",
+     "quote": "Which of the following terms refers to air in"
     }
    ]
   },
@@ -744,6 +921,50 @@ const PACK = {
      "src": "SRC-2026-LYMPHATIC-SYSTEM",
      "loc": "slide 26",
      "quote": "hollows in the epithelium - trap bacteria"
+    }
+   ]
+  },
+  {
+   "type": "mcq",
+   "topic": "lymph",
+   "crit": "lymph-3",
+   "q": "At which blood vessel does lymphatic fluid drain back into the venous system?",
+   "options": [
+    "The jugular vein",
+    "The subclavian vein",
+    "The superior vena cava",
+    "The inferior vena cava"
+   ],
+   "correct": 1,
+   "why": "From the formative test. Both ducts empty into the <b>subclavian</b> veins.",
+   "tier": "verbatim",
+   "ev": [
+    {
+     "src": "SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS",
+     "loc": "page 5",
+     "quote": "At which blood vessel does"
+    }
+   ]
+  },
+  {
+   "type": "mcq",
+   "topic": "lymph",
+   "crit": "lymph-3",
+   "q": "Lymph vessels and veins have similar structures and functions. Which of the following HELPS to move fluid through both types of vessel?",
+   "options": [
+    "Mini-valves in the walls of the capillaries",
+    "The skeletal muscle pump and one-way valves",
+    "The pumping action of the left ventricle",
+    "Ciliary action"
+   ],
+   "correct": 1,
+   "why": "Adapted from the formative test. Neither system can rely on the heart at that distance.",
+   "tier": "verbatim",
+   "ev": [
+    {
+     "src": "SRC-BN2-FORMATIVE-TEST-PDF-MODEL-ANSWERS",
+     "loc": "page 11",
+     "quote": "Lymph vessels and veins have similar structures and functions."
     }
    ]
   },
@@ -11908,10 +12129,10 @@ const PACK = {
  ],
  "spine": {
   "cvs-1": "k704ear",
-  "cvs-2": "kfi0gc6",
-  "cvs-3": "k1je8nx3",
-  "cvs-4": "k1s65ktm",
-  "cvs-5": "ka7bk2m",
+  "cvs-2": "kc6wb7e",
+  "cvs-3": "kjwjr5t",
+  "cvs-4": "k18shc5f",
+  "cvs-5": "kg8ohcz",
   "cvs-6": "kpaoaq3",
   "cvs-7": "k1kjvy09",
   "cvs-8": "ki6v76q",
@@ -11920,15 +12141,15 @@ const PACK = {
   "cvs-11": "k2ux4u3",
   "cvs-12": "k624s6d",
   "cvs-13": "k1ec5jzp",
-  "cvs-14": "k4599g6",
+  "cvs-14": "k1j6nomq",
   "cvs-15": "k1amoam",
   "resp-1": "k1pht6s3",
   "resp-2": "k1i0lff8",
-  "resp-3": "kowaa8e",
-  "resp-4": "k6alv4a",
+  "resp-3": "ksuv1z4",
+  "resp-4": "k77kdri",
   "resp-5": "k1iwtyzg",
   "resp-6": "k73rk7r",
-  "resp-7": "k39af4",
+  "resp-7": "k1xrp19n",
   "resp-8": "kuz0sbn",
   "resp-9": "k1q7e971",
   "resp-10": "k101608j",
@@ -11938,10 +12159,10 @@ const PACK = {
   "resp-14": "ktewuho",
   "resp-15": "ko5804t",
   "resp-16": "k1aky373",
-  "resp-17": "k1cbf576",
+  "resp-17": "k110awyv",
   "lymph-1": "keopzdk",
   "lymph-2": "k1yd7wtb",
-  "lymph-3": "k1ur7y0v",
+  "lymph-3": "ki561dh",
   "lymph-4": "k1onuyp6",
   "cs-bp": "k1rmauh0",
   "cs-vacc": "kuav0vm"
@@ -12019,7 +12240,7 @@ const PACK = {
   },
   {
    "id": "lymph-3",
-   "n": 2,
+   "n": 4,
    "floor": 6
   },
   {

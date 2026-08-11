@@ -46,13 +46,13 @@ Full gap analysis: [`../HS2-TEST1-CRAM-SPEC.md`](../HS2-TEST1-CRAM-SPEC.md).
 
 ## Contents
 
-**345 cards** · 157 mcq · 58 flash · 46 rail · 34 match · 19 cloze · 18 saq ·
-9 tfset · 4 order · 74 glossary terms · 15 ported figures · 56 cards carrying a
+**424 cards** · 225 mcq · 58 flash · 46 rail · 45 match · 19 cloze · 17 saq ·
+10 tfset · 4 order · 74 glossary terms · 15 ported figures · 56 cards carrying a
 figure lifted from the quiz that set them.
 
 Every card carries a `crit:` naming the focus point it covers. **`node build.mjs`
 exits non-zero** if any focus point ends up with no card at all, and refuses to ship if
-**any of the 223 machine-marked cards has no explanation, or any of the 18 written
+**any of the 303 machine-marked cards has no explanation, or any of the 17 written
 answers has no model answer**. (The old *floor* of 6 cards stopped being a ship blocker
 when the manufactured cards were culled — see *One pool* below, and `PACK.thin`.)
 Those gates are what let the page stop warning the reader: validation output
@@ -129,7 +129,7 @@ opens by asking you to recall something; on a topic you only half-absorbed in th
 lecture, that is the slowest and most discouraging way in. Read the section, mark
 it read, then drill it.
 
-## Then Study — one queue, 345 cards
+## Then Study — one queue, 424 cards
 
 There is **one** practice tab. Every card in the pack is in it, and the card decides
 how it is presented: a flashcard flips and you grade yourself, a written question
@@ -193,7 +193,7 @@ up as a pill like everything else.
 
 ## All cards — read the pack, see it as tested, flag what is broken
 
-Behind the `···`. Every one of the 345 cards, standing still: group them by topic,
+Behind the `···`. Every one of the 424 cards, standing still: group them by topic,
 focus point, source or question type, open a group and read the questions with their
 answers straight through. It shows the background-reading cards too — like the Brief
 and Search, this is a view that has to be able to show *everything*.

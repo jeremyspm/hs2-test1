@@ -1,23 +1,23 @@
 {
  "freeze": {
-  "at": "2026-08-10T15:17:46.819Z",
-  "commit": "a2a411a1bdb0c145b3e2fbcad796d70d00e08a46",
+  "at": "2026-08-11T05:30:44.829Z",
+  "commit": "7952ef86a63b03aadbb39ea36f429f6b5a54de71",
   "files": {
    "pack.js": {
-    "bytes": 2537859,
-    "sha256": "6b29fdc2a07c77ce7985578a8d01ab7c2e75b4181139548154874ff6a65fe3d0"
+    "bytes": 2550945,
+    "sha256": "151e619876e2c83c27f32dc1f0d9c5332ba5cca33a76c305fd72d3eef2ba0246"
    },
    "index.html": {
-    "bytes": 3579035,
-    "sha256": "e95664e7c9e7f24dbcfd0ebf0cf02def0cae4b8924bf4ba9849cc346364c08dc"
+    "bytes": 3673205,
+    "sha256": "b83a9389d5939715e01704a921541e564d13c83b0b3d1ed10a92402614415497"
    },
    "figs.js": {
     "bytes": 803534,
     "sha256": "ee0d312635146e073b6b6cfbbbfc08b2b168db2bce75154f4a82ae78a53e0c44"
    },
    "build.mjs": {
-    "bytes": 15032,
-    "sha256": "dfed816bc8bd42a0efd272c34ae43b2f1253bbab6aa765bbb39b1647e2103ea6"
+    "bytes": 56456,
+    "sha256": "fe91a3d46e91c1556f08122fb0db80cb3339788b6e693f6ab4449d69e8e4e6f1"
    }
   }
  },
@@ -2394,7 +2394,7 @@
    "src": null,
    "srcInfo": null,
    "quantities": [],
-   "chars": 417,
+   "chars": 799,
    "label": "State the three broad functions of the cardiovascular system."
   },
   {
@@ -2607,7 +2607,7 @@
     "candidates": []
    },
    "quantities": [],
-   "chars": 1052,
+   "chars": 1233,
    "label": "An artery and a vein sit side by side under the microscope, each already named. Identify <"
   },
   {

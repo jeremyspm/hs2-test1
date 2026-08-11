@@ -806,7 +806,7 @@ const PACK = {
      never prints it: `marks` only sets how heavily the mock test weights this card. It
      has to be set explicitly, because `cardMarks` falls back to `points.length` for an
      saq, and that is 8 here now the marking points are one per line. */
-  { type:'saq', topic:'cvs-vessels', crit:'cvs-2', src:'MODULE 1 Formative Test (Canvas) — Q26 model answer', q:'An artery and a vein sit side by side under the microscope, each already named. Identify <b>3 things you CAN see</b> that support the naming, and <b>2 differences you CANNOT see</b>.', marks:5,
+  { type:'saq', topic:'cvs-vessels', crit:'cvs-2', src:'MODULE 1 Formative Test (Canvas) — Q26 model answer', q:'An artery and a vein sit side by side under the microscope, each already named. Identify <b>3 things you CAN see</b> that support the naming, and <b>2 differences you CANNOT see</b>.', qOrig:'Identify 3 things that support the labels of the artery and the vein that you can see. Also identify 2 differences between the artery and vein that you CANNOT see in the diagram.', marks:5,
     points:['CAN see: the internal elastic lamina (IEL) is present in the artery',
             'CAN see: the artery has a relatively thicker tunica media',
             'CAN see: the artery holds its shape better than the vein',

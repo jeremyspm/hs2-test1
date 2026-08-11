@@ -136,7 +136,11 @@ const retier = (o, kind, i) => {
   let out = stripOldSrc(o);
   if (!p) return { ...out, tier: 'textbook', srcNote: 'No migration proposal was found for this item, so its sourcing is unknown.' };
   out.tier = p.tier;
-  if (p.tier === 'taught' && p.ev) {
+  /* `verbatim` reaches here too since 11 Aug 2026 — see HER_PAPERS in migrate.mjs. It
+     must take the same branch as `taught`: a tier carrying evidence that fell through to
+     the `else` would be given srcNote(null), which renders as "Nothing in the captured
+     course material was found stating this" on a card lifted out of one of her papers. */
+  if ((p.tier === 'taught' || p.tier === 'verbatim') && p.ev) {
     const evs = (Array.isArray(p.ev) ? p.ev : [p.ev]).filter(Boolean);
     out.ev = evs.map(e => ({ src: e.src, loc: e.loc, quote: e.quote }));
   }

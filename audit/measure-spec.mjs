@@ -13,7 +13,7 @@
 
    It measures; it does not gate. run-all.mjs does not call it. */
 import { loadPack } from './load-pack.mjs';
-import { spineOf, partsOf, ringCounts } from './spine.mjs';
+import { spineOf, partsOf, ringCounts, isFormative } from './spine.mjs';
 import { ckey } from './ckey.mjs';
 
 const { pack: P } = loadPack();
@@ -35,24 +35,26 @@ for (const c of D) if (c.crit) primaryCount[c.crit] = (primaryCount[c.crit] ?? 0
 
 /* Ring 0 — the spine. The rule lives in spine.mjs, which the pack builder uses too, so
    the 38 cards printed below are the 38 the tool leads with. Ties fall through to pack
-   order, and one of them is real: cvs-3 has two five-part cards equally about it. */
+   order; since the FORMATIVE tie-break was added on 11 Aug the remaining ties are between
+   cards that are alike on all four measures, and cvs-3 — the example this note used to
+   name — is no longer one of them. */
 const spine = spineOf(P);
 
 const claims = [
-  ['§intro', 'cards in the shipped pack', 414, CARDS.length],
-  ['§intro', 'drillable cards (the pack minus the rails)', 368, D.length],
-  ['§1', 'machine-marked cards carrying an authored `why`', 293,
+  ['§intro', 'cards in the shipped pack', 424, CARDS.length],
+  ['§intro', 'drillable cards (the pack minus the rails)', 378, D.length],
+  ['§1', 'machine-marked cards carrying an authored `why`', 303,
     D.filter((c) => MARKED.includes(c.type) && String(c.why ?? '').trim()).length],
-  ['§1', 'machine-marked cards in total', 293, D.filter((c) => MARKED.includes(c.type)).length],
+  ['§1', 'machine-marked cards in total', 303, D.filter((c) => MARKED.includes(c.type)).length],
 
   ['§2', 'focus points the course publishes for Module 1 (36 criteria + the 2 case studies)', 38, CRITS.length],
   ['§2', 'questions in the paper', 35, P.exam.auto + P.exam.saq],
   ['§2', 'minutes', 65, P.exam.minutes],
-  ['§2', 'cards on cvs-5, the biggest focus point', 87, perPoint['cvs-5']],
+  ['§2', 'cards on cvs-5, the biggest focus point', 88, perPoint['cvs-5']],
   ['§2', 'cards on resp-2', 48, perPoint['resp-2']],
   ['§2', 'cards on cvs-15', 41, perPoint['cvs-15']],
   ['§2', 'cards on resp-10, the smallest', 1, perPoint['resp-10']],
-  ['§2', 'focus points holding 2 cards or fewer', 8,
+  ['§2', 'focus points holding 2 cards or fewer', 7,
     CRITS.filter((c) => (perPoint[c.id] ?? 0) <= 2).length],
 
   ['§3', 'drillable cards carrying more than one evidence entry (asked twice)', 10,
@@ -61,22 +63,29 @@ const claims = [
     D.filter((c) => evsOf(c).some((e) => /FORMATIVE CVS, LYMPHATIC/.test(e.quiz ?? ''))).length],
   ['§3', 'focus points those 11 cards touch, alsoCrit counted', 22,
     new Set(D.filter((c) => evsOf(c).some((e) => /FORMATIVE CVS, LYMPHATIC/.test(e.quiz ?? ''))).flatMap(critsOf)).size],
-  ['§3', 'drillable cards that are `verbatim` — her own questions', 321,
+  ['§3', 'drillable cards that are `verbatim` — her own questions', 333,
     D.filter((c) => c.tier === 'verbatim').length],
+  /* Added 11 Aug 2026, because the answer to "are the 38 highest-yield?" was a research
+     job the first time it was asked and should be a row from now on. `isFormative` is the
+     predicate the deal itself uses, so this measures the deal, not a paraphrase of it. */
+  ['§3', 'drillable cards from EITHER of her formatives (the 50-mark quiz and the test PDF)', 25,
+    D.filter(isFormative).length],
 
   ['§4', 'cards in Ring 0 — one per focus point', 38, spine.filter((s) => s.card).length],
   ['§4', 'of those, one of her own questions', 35, spine.filter((s) => s.card?.tier === 'verbatim').length],
   ['§4', 'of those, pinned to her lecture', 2, spine.filter((s) => s.card?.tier === 'taught').length],
   ['§4', 'of those, background reading', 1, spine.filter((s) => s.card?.tier === 'textbook').length],
+  ['§4', 'of those, drawn from a formative — was 3 before the tie-break', 13,
+    spine.filter((s) => s.card && isFormative(s.card)).length],
   ['§4', 'focus points declared thin (below the old authoring floor)', 12, (P.thin ?? []).length],
   /* The ring sizes as the engine DEALS them, from the same module the engine is gated
      against — not "every card on a thin focus point", which double-counts the 15 spine
      cards that sit on one and are dealt in Ring 0. */
   /* A round was inserted at index 1 on 11 Aug — the written half. Every count behind it
      shifted, which is exactly what this file exists to catch and did. */
-  ['§4', 'cards in Ring 1 — the written half (the case studies the SAQs come from)', 19, ringCounts(P, ckey)[1]],
-  ['§4', 'cards in Ring 2 — the thin points, spine cards excluded', 15, ringCounts(P, ckey)[2]],
-  ['§4', 'cards in Ring 3 — the rest of her questions', 264, ringCounts(P, ckey)[3]],
+  ['§4', 'cards in Ring 1 — the written half (the case studies the SAQs come from)', 18, ringCounts(P, ckey)[1]],
+  ['§4', 'cards in Ring 2 — the thin points, spine cards excluded', 16, ringCounts(P, ckey)[2]],
+  ['§4', 'cards in Ring 3 — the rest of her questions', 274, ringCounts(P, ckey)[3]],
   ['§4', 'cards in Ring 4 — background', 77, ringCounts(P, ckey)[4]],
 
   ['§6 C1', 'cards carrying no focus point at all — CLOSED 11 Aug', 0,
@@ -109,7 +118,7 @@ const claims = [
     spine.filter((s) => s.card && s.card.tier !== 'verbatim')
       .filter((s) => { const cr = CRITS.find((c) => c.id === s.id); return cr.blind || cr.acknowledgedGap; }).length],
   ['§6 C6', 'most focus points claimed by one card', 10, Math.max(...D.map((c) => critsOf(c).length))],
-  ['§6 C6', 'average focus points per card (×100, to keep this integer)', 160,
+  ['§6 C6', 'average focus points per card (×100, to keep this integer)', 158,
     Math.round(100 * D.reduce((a, c) => a + critsOf(c).length, 0) / D.length)],
   ['§6 C6', 'cards claiming more focus points than they have parts to test', 0,
     D.filter((c) => critsOf(c).length > partsOf(c) + 3).length],

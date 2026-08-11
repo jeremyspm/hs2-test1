@@ -26,12 +26,50 @@ const evsOf = (c) => [].concat(c.ev ?? []).filter(Boolean);
 export const partsOf = (c) =>
   (c.blanks?.length || c.pairs?.length || c.statements?.length || c.points?.length || c.steps?.length || 1);
 
+/* ── the FORMATIVE tie-break ──────────────────────────────────────────────────
+   Asked directly on 11 Aug 2026 whether the 38 cards Round 1 deals are the highest-yield
+   questions in the pack — particularly against MODULE 1: SAQ & MC: FORMATIVE CVS,
+   LYMPHATIC & RESPIRATORY SYSTEMS, which the lecturer called the closest thing to the
+   real test. They were not, and the reason was structural: NO TIE-BREAK HERE KNEW WHICH
+   ASSESSMENT A QUESTION CAME FROM, so "closest to the test" could not influence the deal
+   at all. Three of the 38 leads came from a formative; five focus points held a formative
+   card and were led by one from a topic quiz instead. cvs-5 was the worst — 71 cards
+   compete and the winner was a 14-part matcher that won on `parts`, which measures how
+   many boxes a card has, not how much like the test it is.
+
+   Her formatives arrive by two different routes and must both be recognised, or the
+   tie-break silently applies to half the evidence: the Canvas captures carry a `quiz`
+   title, the two formative PDFs carry a registry `src` id. Matching on the word is
+   deliberate — the alternative is a hardcoded list of ids that goes stale silently, and
+   this file has no way to notice. build.mjs asserts the match COUNT instead, so a source
+   renamed out of the predicate fails the build rather than quietly flattening the deal.
+
+   It sits BELOW tier and BELOW "asked twice" and ABOVE `parts`. Below tier because tier
+   is a provenance claim and a formative card that is not hers does not exist. Above
+   `parts` because `parts` was never a yield measure — it counts boxes, and it is the last
+   resort before file order.
+
+   Below "asked twice" is the one placement that was actually decided rather than
+   inherited, and cvs-8 (conduction system, cardiac cycle and ECG) is the case that
+   decides it: put FORMATIVE above and the point is led by "which structure of the
+   RESPIRATORY system has a similar pacemaking function to the SA node" — a one-part
+   cross-over MCQ that happens to sit in a formative. Leave it below and the point is led
+   by "label the ECG recording", five parts, which she set in two separate quizzes. A
+   question she asked twice is already evidence about what she asks; being drawn from a
+   formative is evidence about how she asks it. cvs-8 is the ONLY point where the two
+   orders disagree, so the whole of this paragraph rests on one card — which is the reason
+   it is written down here rather than left as a preference. */
+const FORMATIVE = /formative/i;
+export const isFormative = (c) =>
+  evsOf(c).some((e) => FORMATIVE.test(`${e.quiz ?? ''} ${e.src ?? ''}`));
+
 /** The spine card for one criterion, or null if nothing is primarily about it. */
 export function spineFor(cards, critId) {
   const mine = cards.filter((c) => c.crit === critId && c.type !== 'rail');
   return mine.slice().sort((a, b) =>
     (RANK[b.tier] ?? 0) - (RANK[a.tier] ?? 0) ||          // her question, else her lecture, else ours
     (evsOf(b).length > 1) - (evsOf(a).length > 1) ||      // set twice beats set once
+    isFormative(b) - isFormative(a) ||                    // she called the formative closest to the test
     partsOf(b) - partsOf(a)                              // more of the point tested
   )[0] ?? null;
 }
