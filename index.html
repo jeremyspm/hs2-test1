@@ -352,6 +352,34 @@ h2.sec{font-size:12.5px;text-transform:uppercase;letter-spacing:1px;color:var(--
    that must never be truncated. `.fpills` is the announcement — it is deliberately
    loud (accent border, own row) because it is the only thing standing between a
    reader and a queue that is quietly missing four fifths of the pack. */
+/* ---- narrowing the queue -----------------------------------------------------
+   The bar wraps rather than shrinks: at 375px a row holding a button, a count and a
+   clear-all has no business trying to stay on one line, and the count is the part
+   that must never be truncated. `.fpills` is the announcement — it is deliberately
+   loud (accent border, own row) because it is the only thing standing between a
+   reader and a queue that is quietly missing four fifths of the pack. */
+.filtbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.filtbar .btn{flex:0 0 auto;padding:9px 13px;font-size:12.5px;font-weight:600}
+.filtbar .btn.open{border-color:var(--acc);color:var(--tx)}
+.filtbar .fn{display:inline-block;min-width:18px;margin-left:6px;padding:1px 6px;border-radius:var(--r3);background:var(--acc);color:var(--onAcc);font-size:11px;font-weight:800}
+.filtbar .fnote{font-size:12.5px;color:var(--tx2);font-variant-numeric:tabular-nums}
+.filtbar .fnote b{color:var(--tx)}
+.fpills{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.fpill{display:inline-flex;align-items:center;gap:6px;max-width:100%;padding:6px 10px;border-radius:var(--r3);
+  background:var(--acc-soft);border:1px solid var(--bAcc);color:var(--acc-tx);font-size:12.5px;font-weight:600;line-height:1.3;text-align:left}
+.fpill span{font-size:11px;opacity:.8}
+.fpill:hover{border-color:var(--acc);color:var(--tx)}
+.fpill.clr{background:none;border-color:var(--line2);color:var(--tx2)}
+.filtpanel{background:var(--card);border:1px solid var(--line);border-radius:var(--r2);padding:14px 15px 6px;margin-bottom:12px}
+.filtpanel .fintro{margin:0 0 12px;font-size:12.5px;line-height:1.55;color:var(--tx2)}
+.filtpanel .fintro.last{margin:2px 0 8px;padding-top:10px;border-top:1px solid var(--line);color:var(--tx3)}
+.filtpanel .fintro b{color:var(--tx)}
+.filtrow{margin-bottom:12px}
+.filtrow .fhead{display:flex;align-items:baseline;gap:9px;margin-bottom:6px;font-size:14px;color:var(--tx)}
+.filtrow .fclr{font-size:11px;font-weight:800;color:var(--tx3);text-transform:uppercase;letter-spacing:.4px}
+.filtrow .fclr:hover{color:var(--bad)}
+.filtrow .fsub{font-size:12.5px;color:var(--tx3);margin-bottom:7px;line-height:1.45}
+.filtrow .chips{margin-bottom:0}
 /* ---- two doors ---- */
 .doors{display:flex;gap:8px;margin-bottom:10px;align-items:stretch}
 .door{flex:1;padding:12px 10px;border-radius:var(--r2);background:var(--card);border:1px solid var(--line);font-size:14px;font-weight:800;color:var(--tx2);line-height:1.3;transition:.14s}
@@ -15121,8 +15149,11 @@ function repScope(spec){
      on. `own` because asking for a named group IS the second door being taken — without
      it the reader lands on Study with 🎯 Guided still lit above a queue that is not the
      rounds, and the loudest thing on the screen is wrong. */
-  S.ring='point'; S.route='own';
-  save();
+  /* ONE implementation of the transition, in `filtRoute` below, because the panel
+     needs the identical one and two copies of it is how one of them drifts. It sets
+     ring 'point' + route 'own' and saves; G-DRILL fails the build if anything else
+     writes that state. */
+  filtRoute();
 }
 /* `data-repn` is the promise in machine-readable form. It exists so G-CHK7 can compare
    what a button SAYS with what `repScope` then deals, on every button the page renders,
@@ -16511,7 +16542,50 @@ document.addEventListener('click',e=>{
    G13 in build.mjs used to check that each of the 62 chips dealt the count it printed.
    Its successor is G-CHK7, which asks the same question of 172 scopes and asks it of
    `buildDeck` rather than `deckSource` — strictly more, one layer deeper, and it catches
-   the round intersection that G13 could not see. */
+   the round intersection that G13 could not see.
+
+   ── AND THE PANEL IS BACK, BEHIND THE SECOND DOOR ──────────────────────────────
+   Deleting it was half right and half wrong. Right: it had no business being the first
+   thing above a question, and every filter must arrive with an announcement and a way
+   out. Wrong: the Checklist was made the ONLY way to narrow, and the Checklist can only
+   hand over a whole focus point — you cannot ask it for three topics, or for "just the
+   multichoice", and picking every point one at a time is not a thing anyone will do. A
+   second door that can only be opened one way is not the reader choosing.
+
+   So it returns where the choosing already lives: inside [ Change ], under 🗂 Let me
+   choose, not on the card screen. And it now goes through the SAME contract ⚡ Rep does —
+   `filtRoute()` below sets `ring:'point'` and `route:'own'` the moment anything is
+   narrowed, and puts the ring back the moment the last filter comes off. That is the
+   trap the deletion was really closing, and it is closed here instead. */
+const TIERFILT=['verbatim','taught','textbook','unverified'];
+function filtDims(types){
+  const all=cardsOf(types,'all').filter(inPool).filter(answerable);
+  /* DE-DUPED BY KEY, exactly as `scopeCards` de-dupes before dealing. Two cards with
+     the same key are the same card, and counting them twice here is how a chip comes to
+     print 16 and deal 15 — the drift G-PANEL now fails the build over. */
+  const cnt=q=>{ const seen=new Set(); return q.filter(c=>seen.has(c.key)?false:(seen.add(c.key),true)).length; };
+  const mk=(id,lab,note,opts)=>({id,lab,note,opts:opts
+    .map(o=>({...o,n:cnt(all.filter(c=>o.pred(c)&&passFilters(c,id)))}))
+    .filter(o=>o.n||S.filters[id].includes(o.id))});
+  const ds=[
+    mk('topics','Topic','',PACK.topics.map(t=>({id:t.id,lab:`${t.icon} ${t.name}`,pred:c=>c.topic===t.id}))),
+    mk('types','Question type','The form the question takes — the same split the real paper has.',
+       ALLTYPES.map(t=>({id:t,lab:TYPELABEL[t],pred:c=>c.type===t}))),
+  ];
+  if(PACK.cards.some(c=>c.tier))
+    ds.push(mk('tiers','Where the card came from','',TIERFILT.map(t=>({id:t,lab:PROV[t].lab,pred:c=>provOf(c)===t}))
+      .concat([{id:'_none',lab:'No source recorded',pred:c=>!provOf(c)}])));
+  if((PACK.criteria||[]).length)
+    ds.push(mk('crits','Focus point','The course’s own published list — pick one, or as many as you like.',
+      PACK.criteria.map(cr=>({id:cr.id,lab:cr.name||cr.id,pred:c=>c.crit===cr.id||(c.alsoCrit||[]).includes(cr.id)}))));
+  ds.push(mk('status','How you are doing on it','Worked out from your own answers, so it moves as you go.',
+    STATUS.map(s=>({id:s.id,lab:s.lab,hint:s.hint,pred:c=>cardStatus(c).includes(s.id)}))));
+  return ds.filter(d=>d.opts.length);
+}
+/* A panel is a moment, not a preference — it opens where you are and is gone next
+   time. Deliberately NOT in S: a filter panel that is still open three sessions
+   later is just chrome. */
+let FPANEL=false;
 const filtLabel=(dim,id)=>{
   if(dim==='topics') return topicName(id);
   if(dim==='types')  return TYPELABEL[id]||id;
@@ -16535,13 +16609,59 @@ function scopeLabel(){
     for(const v of S.filters[d]) out.push(filtLabel(d,v));
   return out.length?out.join(' · '):null;
 }
-/* The one control the deleted panel owned that MUST survive it: clearing. It is the way
-   out of a queue that has been narrowed to nothing, and it stays DELEGATED for the reason
-   every other exit here is — every post-render binding in this file attaches on a
-   setTimeout that a fast tab switch can beat, and a lost binding on an exit is a lock. */
+/* THE PANEL, rendered inside [ Change ]. Never on the card screen, and never a fifth
+   stratum above a question — it is one disclosure inside the sheet that already holds
+   the two doors, so opening it is already the reader saying "I am choosing".
+
+   The counts are taken the same way the deck is built (`passFilters` with this dimension
+   skipped), so a chip reading 12 deals 12 and cannot drift from what the queue does. */
+function filterUI(types){
+  const n=deckSource(types).length, on=filtOn();
+  const pills=!on?'':`<div class="fpills">${FILTDIMS.map(d=>S.filters[d].map(id=>
+      `<button class="fpill" data-fx="off" data-fd="${d}" data-fv="${esc(id)}" title="Stop filtering by this">${esc(filtLabel(d,id))}<span>✕</span></button>`).join('')).join('')}
+    <button class="fpill clr" data-fx="clear">Clear all filters</button></div>`;
+  /* ONE card count, and it is the queue's. Narrowing leaves the rounds (`filtRoute`
+     sets ring 'point'), so there is no ring number to reconcile against this one —
+     which is what the old two-number version of this line existed to manage. */
+  const bar=`<div class="filtbar">
+      <button class="btn ghost${FPANEL?' open':''}" data-fx="panel" aria-expanded="${FPANEL}">🔎 Rep only… ${on?`<span class="fn">${filtCount()}</span>`:''}</button>
+      <span class="fnote">${on?`<b>${n}</b> card${n===1?'':'s'} in the queue`:`nothing narrowed — <b>${n}</b> in the queue`}</span>
+    </div>${pills}`;
+  if(!FPANEL) return bar;
+  const dims=filtDims(types);
+  return bar+`<div class="filtpanel">
+    <p class="fintro">Pick as many as you like. Inside a row they add up (<b>multichoice <i>or</i> matching</b>); across rows they narrow (<b>multichoice, <i>and</i> on the heart</b>). The number on each is how many cards it leaves you once everything else you have picked is applied.</p>
+    ${dims.map(d=>`<div class="filtrow">
+      <div class="fhead"><b>${esc(d.lab)}</b>${S.filters[d.id].length?`<button class="fclr" data-fx="clrdim" data-fd="${d.id}">clear</button>`:''}</div>
+      ${d.note?`<div class="fsub">${d.note}</div>`:''}
+      <div class="chips">${d.opts.map(o=>`<button class="chip${S.filters[d.id].includes(o.id)?' on':''}" data-fx="tog" data-fd="${d.id}" data-fv="${esc(o.id)}"${o.hint?` title="${esc(o.hint)}"`:''}>${esc(o.lab)}<span class="pc">${o.n}</span></button>`).join('')}</div>
+    </div>`).join('')}
+    <p class="fintro last">This narrows the <b>queue</b> only. ${BRIEFOK()?'The Brief, Search':'Search'}, All cards and your Progress keep counting the whole pack.</p>
+  </div>`;
+}
+/* THE ONE CONTRACT every narrowing in this tool now goes through, panel or ⚡ Rep. A
+   filter that leaves the ring on would be dealt as "the part of round 1 that also
+   matches", which is neither what the chip said nor a thing anyone asked for; and a
+   narrowed queue that does not leave the rounds cannot announce itself on the queue
+   line, which is the lock [[two-doors-pattern]] forbids. Clearing the last filter hands
+   the rounds back rather than stranding the reader outside them. */
+function filtRoute(){
+  if(filtOn()){ S.ring='point'; S.route='own'; }
+  else if(S.ring==='point') S.ring=ringOpen();
+  save();
+}
+/* Delegated, every control of it, for the reason #bgTog is: these buttons are the only
+   route out of a narrowed queue, and every other post-render binding in this file
+   attaches on a setTimeout that a fast tab switch can beat. A filter you cannot turn off
+   is a lock. */
 document.addEventListener('click',e=>{
-  const b=e.target.closest('[data-fx="clear"]'); if(!b) return;
-  filtClear(); S.ring=ringOpen(); save();
+  const b=e.target.closest('[data-fx]'); if(!b) return;
+  const fx=b.dataset.fx;
+  if(fx==='panel') FPANEL=!FPANEL;
+  else if(fx==='clear') filtClear();
+  else if(fx==='clrdim'){ S.filters[b.dataset.fd]=[]; save(); }
+  else if(fx==='off'||fx==='tog') filtToggle(b.dataset.fd,b.dataset.fv);
+  filtRoute();
   nav(VIEW);
 });
 /* `readyNote` lets a view describe its own "Get me ready" behaviour. The Brief
@@ -16629,8 +16749,10 @@ function changeSheetHTML(types){
       <span class="rb2">The rounds, in the order the course argues for. ${ROUNDLAB(0)} gives every one of the ${(PACK.criteria||[]).length} topics a card — it is the only route that can promise you have covered the published list.</span></button>
     <button class="rowbtn${own?' on':''}" data-route="own">
       <span class="rb1">🗂 Let me choose</span>
-      <span class="rb2">Hands it over. The rounds pause; nothing resets, and what you have locked stays locked.</span></button>
+      <span class="rb2">Hands it over. The rounds pause; nothing resets, and what you have locked stays locked. Narrow the queue below to whatever you want to rep.</span></button>
     ${HASCHK()?`<button class="wlink" data-qx="chk">Pick a point on the Checklist →</button>`:''}
+    <div class="shh">What you are being dealt from</div>
+    ${filterUI(types)}
     ${escaped?`<div class="note warn">You asked to skip ahead, so you are on <b>${ROUNDLAB(ESCAPETO)}</b> — ${ROUNDLAB(0)} is <b>not</b> locked yet.
       <button class="btn ghost" data-qx="back0">Back to ${ROUNDLAB(0)}</button></div>`
      :canSkip?`<button class="wlink" data-qx="skip">Skip ahead to ${ROUNDLAB(ESCAPETO)} →</button>

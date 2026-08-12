@@ -601,6 +601,36 @@ for (const [i, m] of [...out.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/sc
       S.filters=JSON.parse(keepF); S.route=keepR; S.ring=keepRing; save();
       globalThis.__REP__={bad:bad,n:scopes.length};
     })();
+    /* ── G-PANEL: the restored 🔎 Rep only… panel obeys the ⚡ Rep contract ──────
+       The panel was deleted once and the gate over it was a grep for its own name —
+       which protected the deletion, not the reader. What actually had to hold is that
+       no narrowing reaches S.filters without ANNOUNCING itself and carrying a way out.
+       So this presses every chip the panel renders, from the cold default, and asks the
+       four questions that matter: does it deal the count it printed, does it leave the
+       rounds (ring 'point'), does the queue line name what it narrowed to, and is the
+       way back into the rounds on screen. Plus: clearing the last filter must hand the
+       rounds back rather than strand the reader outside them. */
+    ;(function(){
+      if(typeof filtDims!=='function'||typeof filtRoute!=='function'){ globalThis.__PANEL__=null; return; }
+      const keepF=JSON.stringify(S.filters), keepR=S.route, keepRing=S.ring;
+      const bad=[]; let n=0;
+      S.filters=FILT0(); S.route='guided'; S.ring=0; save();
+      const dims=filtDims(ALLTYPES);
+      for(const d of dims) for(const o of d.opts){
+        S.filters=FILT0(); S.route='guided'; S.ring=0; save();
+        filtToggle(d.id,o.id); filtRoute(); n++;
+        const where=d.id+':'+o.id;
+        const dealt=buildDeck(ALLTYPES).length;
+        if(dealt!==o.n) bad.push(where+' — the chip says '+o.n+', the queue deals '+dealt);
+        if(S.ring!=='point'||S.route!=='own') bad.push(where+' — narrowed the queue without leaving the rounds');
+        if(!scopeLabel()) bad.push(where+' — a reduced pool that cannot say what it is reduced to');
+        if(String(queueLineHTML(ALLTYPES)).indexOf('data-route="guided"')<0) bad.push(where+' — no way back into the rounds on screen');
+      }
+      filtClear(); filtRoute();
+      if(S.ring==='point') bad.push('clearing the last filter left the reader outside the rounds');
+      S.filters=JSON.parse(keepF); S.route=keepR; S.ring=keepRing; save();
+      globalThis.__PANEL__={bad:bad,n:n};
+    })();
   `;
   try {
     vm.runInContext(script + GATE + '\n;globalThis.__REACHED_END__=true;', ctx, { filename: 'index.html', timeout: 15000 });
@@ -612,15 +642,21 @@ for (const [i, m] of [...out.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/sc
   if (!ctx.__REACHED_END__) { console.error('✗ the shipped page did not finish executing'); process.exit(1); }
   console.log('shipped page executes end-to-end against a stub DOM ✓');
 
-  /* THE FILTER PANEL IS GONE, AND SO IS ANY OTHER WAY TO NARROW THE QUEUE BEHIND THE
-     READER'S BACK. Every narrowing now goes through `repScope`, which also sets
-     `ring:'point'` — so the pool announces itself and carries its own way out. This
-     asserts the deletion held: a `filtDims`/`filterUI` that grew back would be a second
-     road into `S.filters` with none of that, which is the shape of every bug this
-     rebuild removed. Structural, cheap, and it fails the moment somebody restores it
-     without also restoring a gate over it. */
-  for (const gone of ['function filtDims(', 'function filterUI(', 'FPANEL'])
-    if (script.includes(gone)) { console.error(`✗ NOT SHIPPING. "${gone}" is back — a second way to narrow the queue with no announcement and no exit.`); process.exit(1); }
+  /* NO WAY TO NARROW THE QUEUE BEHIND THE READER'S BACK. This used to be a grep for
+     `filtDims`/`filterUI`/`FPANEL`, on the argument that the panel itself was the bug.
+     It was not: the bug was a narrowing that reached `S.filters` without an announcement
+     or an exit, and a grep for a function name cannot tell the two apart. The panel is
+     back (the Checklist alone could only hand over a whole focus point, which is not the
+     reader choosing), and what is asserted now is the contract — in G-PANEL above, by
+     pressing every chip. Both roads in, `repScope` and `filtRoute`, are checked. */
+  const PAN = ctx.__PANEL__;
+  if (!PAN) { console.error('✗ G-PANEL could not run — filtDims/filtRoute missing from the shipped page.'); process.exit(1); }
+  if (PAN.bad.length) {
+    console.error(`✗ NOT SHIPPING. ${PAN.bad.length} of ${PAN.n} filter chips break the narrowing contract:`);
+    PAN.bad.slice(0, 12).forEach(b => console.error('   · ' + b));
+    process.exit(1);
+  }
+  console.log(`all ${PAN.n} filter chips deal what they print, announce themselves and carry the way out ✓`);
   /* ── G-CHK8: nothing tells the reader to press a button that is not there ──────
      Deleting a surface is not finished when the code goes; it is finished when nothing
      names it. The retired Brief taught this the expensive way — the tab was hidden by
@@ -633,14 +669,21 @@ for (const [i, m] of [...out.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/sc
      and a comment is not a button. Same comment-stripping as G-CHK6, same reason. */
   {
     const CODE = script.replace(/^[ \t]*\/\*[\s\S]*?\*\//gm, '').replace(/^[ \t]*\/\/.*$/gm, '');
-    const named = ['Rep only'].filter(s => CODE.includes(s));
+    /* `Rep only` came OFF this list when the panel came back — the point of the gate is
+       that copy and screen agree, in whichever direction they disagree. So the same
+       block now also asserts the opposite: a page that names the panel must have one. */
+    const named = [].filter(s => CODE.includes(s));
     if (named.length) {
       console.error(`✗ NOT SHIPPING. A reader-facing string still names a deleted surface: ${named.join(', ')}`);
       console.error('   A control the copy promises and the screen does not have reads as a broken tool.');
       process.exit(1);
     }
+    if (CODE.includes('Rep only') !== CODE.includes('function filterUI(')) {
+      console.error('✗ NOT SHIPPING. The copy names “Rep only…” and the page has no panel behind it (or the reverse).');
+      process.exit(1);
+    }
   }
-  console.log('the five-dimension filter panel is gone, and nothing still tells the reader to press it ✓');
+  console.log('every surface the copy names is one the page actually has ✓');
   ENGINE_RINGS = ctx.__RINGCOUNTS__ ?? null;
   ENGINE_YIELD = ctx.__YIELD__ ?? null;
   ENGINE_SHARE = ctx.__SHARE__ ?? null;
@@ -698,8 +741,17 @@ for (const [i, m] of [...out.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/sc
     const fail = [];
     const rep = CODE.match(/\nfunction repScope\([^)]*\)\{[\s\S]*?\n\}/);
     if (!rep) fail.push('repScope is gone or renamed — the drill state has no single writer');
-    else for (const w of ['S.filters=', 'S.ring=', 'S.route='])
-      if (!rep[0].includes(w)) fail.push(`repScope no longer sets ${w} — a partial write is exactly the shipped bug`);
+    else {
+      if (!rep[0].includes('S.filters=')) fail.push('repScope no longer sets S.filters= — a partial write is exactly the shipped bug');
+      /* THE TRANSITION MOVED, IT DID NOT MULTIPLY. `filtRoute` now owns "a narrowed queue
+         leaves the rounds and lights the second door" because the restored panel needs
+         the identical transition, and repScope must go THROUGH it rather than beside it. */
+      if (!/filtRoute\(\)/.test(rep[0])) fail.push('repScope does not call filtRoute — the drill state has two writers again');
+    }
+    const fr = CODE.match(/\nfunction filtRoute\([^)]*\)\{[\s\S]*?\n\}/);
+    if (!fr) fail.push('filtRoute is gone or renamed — the drill state has no single writer');
+    else for (const w of ["S.ring='point'", "S.route='own'", 'save()'])
+      if (!fr[0].includes(w)) fail.push(`filtRoute no longer sets ${w} — a partial write is exactly the shipped bug`);
     if ((CODE.match(/function repScope\(/g) || []).length !== 1) fail.push('more than one repScope');
     const handlers = (CODE.match(/closest\('\[data-rep\]'\)/g) || []).length;
     if (handlers !== 1) fail.push(`${handlers} [data-rep] click handlers — there must be exactly 1`);
@@ -718,7 +770,7 @@ for (const [i, m] of [...out.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/sc
        comparison, not an assignment. */
     const drill = [...CODE.matchAll(/S\.ring\s*=\s*'point'/g)];
     if (drill.length !== 1) {
-      fail.push(`S.ring='point' is written in ${drill.length} place(s) in code — only repScope may:`);
+      fail.push(`S.ring='point' is written in ${drill.length} place(s) in code — only filtRoute may:`);
       for (const d of drill) fail.push('      ' + CODE.slice(CODE.lastIndexOf('\n', d.index) + 1, CODE.indexOf('\n', d.index)).trim());
     }
     /* Every offer of the journey states what it will deal, or G-CHK7 has nothing to
