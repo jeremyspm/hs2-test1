@@ -1,0 +1,61 @@
+{
+  "_": "AUTHORED — 46 decisions, one per rail, made by reading each chain and asking which published criterion it ANSWERS. Not derived from the card's topic, and deliberately not derived at all: criterion-tagging-traps is the record of what a regex does here — it files a card by its distractors, decides the primary by rule order, and matches bare words inside other words. A rail is a chain of ideas with no stem and no options, which is the WORST possible input to a text matcher and the easiest for a human. apply-migration.mjs fails if any rail is missing from this table, if a key matches no rail, or if a value is not a criterion of the pack.",
+  "_scope": "PRIMARY ONLY. No alsoCrit is set here. Ring membership, the thin round, every count on the Checklist and the coverage arithmetic all read these tags, so one tag per rail keeps the change auditable — 46 rails, 46 decisions, and nothing else moves. Several chains genuinely touch a second criterion (the artery wall reaches peripheral resistance; the chemoreflex reaches ventilation); adding those is a separate pass with its own evidence.",
+  "_thin": "Rails still do not count toward coverage. perPoint() in the engine skips type:'rail' and background.thin is computed before the rails are appended, so 'thin' keeps meaning 'how much of HER material exists here'. What these tags buy is that every card in the pack is filed under a checklist item — which was literally false for 46 of 434 — and that a rail on a thin point is now dealt in the round that says its cards are load-bearing, instead of last, as optional background.",
+
+  "Filtration — the arterial end": "cvs-3",
+  "Reabsorption — the venous end": "cvs-3",
+  "Hypertension → oedema": "cvs-3",
+  "Hypoalbuminaemia → oedema": "cvs-3",
+  "Dehydration → less filtration": "cvs-3",
+  "Why the artery wall is thick": "cvs-2",
+  "Why the capillary is one cell thick": "cvs-2",
+
+  "Blood flow through the heart": "cvs-6",
+  "Coronary circulation": "cvs-6",
+  "How the AV valves are held shut": "cvs-5",
+
+  "The conduction pathway to the QRS": "cvs-8",
+  "The P wave": "cvs-8",
+  "The T wave": "cvs-8",
+  "Why the myocardium contracts as one": "cvs-8",
+  "CO = SV × HR, BP = CO × PR": "cvs-4",
+
+  "Baroreflex — the cardiac arm": "cvs-12",
+  "Baroreflex — the vessel arm": "cvs-12",
+  "RAAS — the vasoconstriction arm": "cvs-12",
+  "RAAS — the ADH arm": "cvs-12",
+  "RAAS — the aldosterone arm": "cvs-12",
+  "Direct renal control": "cvs-12",
+  "The chemoreflex": "cvs-12",
+
+  "Why shock kills": "cvs-14",
+  "Hypovolaemic shock": "cvs-14",
+  "Distributive shock": "cvs-14",
+
+  "The pathway of air": "resp-4",
+  "Why the alveolus can exchange gas": "resp-5",
+  "Surfactant keeps the alveoli open": "resp-5",
+  "The muco-ciliary escalator": "resp-4",
+  "The cough reflex": "resp-4",
+
+  "Quiet inspiration": "resp-7",
+  "Quiet expiration is passive": "resp-7",
+  "How a pneumothorax collapses a lung": "resp-7",
+  "External respiration": "resp-9",
+
+  "CO₂ becomes bicarbonate": "resp-12",
+  "Hyperventilation → alkalosis": "resp-14",
+  "Hypoventilation → acidosis": "resp-14",
+  "Oxygen loading": "resp-11",
+  "The Bohr effect — unloading": "resp-11",
+  "Compensating for metabolic acidosis": "resp-14",
+
+  "Rhythm → diaphragm": "resp-13",
+  "Rhythm → intercostals": "resp-13",
+  "The strongest respiratory drive": "resp-14",
+
+  "Where lymph goes": "lymph-3",
+  "How the immune response is organised": "lymph-1",
+  "How lymphoedema happens": "lymph-4"
+}

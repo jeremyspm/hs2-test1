@@ -24,7 +24,114 @@ const figBlock =
   'const FIGCAP={' + [...used].map(id => `'${id}':${JSON.stringify(FIG[id].cap)}`).join(',') + '};\n' +
   'const F=id=>FIGART[id]||\'\', FC=id=>FIGCAP[id]||\'\';\n';
 
-let out = tpl.slice(0, a + START.length) + '\n' + figBlock + pack.trim() + '\n' + tpl.slice(b);
+/* Stats come from LOADING the pack, not from regexing it. pack.js is now generated
+   JSON, so patterns written for the old hand-authored style (type:'flash', crit:'cvs-7')
+   matched nothing and every count silently read zero — a build that reported "0 cards"
+   while shipping 588. Loaded HERE rather than after the splice because the checklist
+   block below needs the criterion list to join against. */
+const { loadPack } = await import('./audit/load-pack.mjs');
+const { pack: P } = loadPack();
+
+/* ════════ THE CHECKLIST — generated from the corpus, never typed ════════════════
+   `🗂 I'll choose` is the course's own assessable-criteria list, in the course's own
+   words. The strings therefore come out of audit/corpus.json at build time and are
+   spliced in; a literal typed into pack.js would be a paraphrase waiting to happen
+   ([[porting-not-reimplementing]]). G-CHK1 below diffs every shipped string back
+   against the corpus, so the page and the course document cannot diverge.
+
+   Three things are AUTHORED, and each is gated: which pack criterion is which numbered
+   row (checklist-map.json), which glossary entry a published term means where the two
+   spell it differently (glossary-aliases.json), and nothing else. */
+const { readChecklist, joinChecklist, ws: WS, normTerm } = await import('./audit/checklist.mjs');
+let CHECK = null;
+{
+  const raw = JSON.parse(readFileSync('audit/checklist-map.json', 'utf8'));
+  const map = Object.fromEntries(Object.entries(raw).filter(([k]) => !k.startsWith('_')));
+  const aliasRaw = JSON.parse(readFileSync('audit/glossary-aliases.json', 'utf8'));
+  const alias = Object.fromEntries(Object.entries(aliasRaw).filter(([k]) => !k.startsWith('_')));
+
+  let doc;
+  try { doc = readChecklist('audit/corpus.json'); }
+  catch (e) { console.error(`✗ NOT SHIPPING. The checklist could not be read out of the corpus: ${e.message}`); process.exit(1); }
+
+  /* The two case studies are NOT on the published checklist. They are this pack's own
+     extra criteria and they carry about a fifth of the paper's marks, so they get their
+     own block below the numbered list, headed honestly — never renumbered into it. The
+     verbatim list is exactly 36 rows or the page has stopped being the course's
+     document. Derived from the map, so declaring a third one is a one-line change. */
+  const extra = P.criteria.filter((c) => !map[c.id]).map((c) => c.id);
+  const { rows, fails } = joinChecklist(doc.items, map, P.criteria, extra);
+  if (fails.length) {
+    console.error('✗ NOT SHIPPING. The checklist ↔ pack join is not total:');
+    for (const f of fails) console.error('    ' + f);
+    process.exit(1);
+  }
+
+  /* ── G-CHK5: every published term reaches a glossary entry ───────────────────
+     All 64 published terms DO have an entry; 8 of them only through an alias. A naive
+     equality match renders those 8 as uncovered, which is a confidently-drawn gap that
+     is not there. Resolved at BUILD time so the page ships links, not a lookup — and so
+     this can fail rather than a reader finding a dead chip mid-revision.
+
+     It fails in BOTH directions. An alias that is no longer needed is exactly the shape
+     of the dead ALIAS that once silently deleted ten of her own questions: an
+     indirection nothing disagrees with, because nothing can. */
+  const gloss = new Map((P.glossary ?? []).map((g) => [normTerm(g.term), g.term]));
+  const unresolved = [], usedAlias = new Set();
+  const resolve = (t) => {
+    const direct = gloss.get(normTerm(t));
+    if (direct) return direct;
+    const a = alias[t] ?? alias[WS(t)];
+    if (a && gloss.get(normTerm(a))) { usedAlias.add(alias[t] ? t : WS(t)); return gloss.get(normTerm(a)); }
+    return null;
+  };
+  let nTerms = 0;
+  for (const r of rows) {
+    if (!r.terms) continue;
+    r.terms = r.terms.map((t) => {
+      nTerms++;
+      const g = resolve(t);
+      if (!g) unresolved.push(`${r.sys} ${r.num}: "${t}"`);
+      return { t, g };
+    });
+  }
+  if (unresolved.length) {
+    console.error(`✗ NOT SHIPPING. ${unresolved.length} published term(s) resolve to no glossary entry:`);
+    for (const u of unresolved) console.error('    ' + u);
+    console.error('   Add the entry, or an alias in audit/glossary-aliases.json if it is already there under another heading.');
+    process.exit(1);
+  }
+  const dead = Object.keys(alias).filter((k) => !usedAlias.has(k));
+  if (dead.length) {
+    console.error(`✗ NOT SHIPPING. ${dead.length} glossary alias(es) are never needed: ${dead.join(', ')}`);
+    console.error('   An indirection nothing disagrees with fails silently by construction. Delete it.');
+    process.exit(1);
+  }
+  console.log(`the checklist is ${rows.length} rows in the course's own words · all ${nTerms} published terms reach the glossary (${usedAlias.size} via an alias) ✓`);
+
+  CHECK = {
+    rows,
+    extra,
+    block: 'PACK.checklist=' + JSON.stringify({
+      title: 'Module 1 — Assessment Criteria',
+      lead: 'The ' + rows.length + ' points the course publishes, in its own words. Everything in this tool is filed under one of them.',
+      /* Word for word, typos included. The reader is holding this beside their own
+         Canvas tab; a line we quietly corrected is a line they cannot find. */
+      note: 'Copied word for word from the course’s own list — including its typos and its numbering, so you can match it against Canvas line by line. The short name under each one is this tool’s.',
+      systems: doc.systems.map((s) => ({
+        code: s.code, name: s.name,
+        rows: s.items.map((it) => {
+          const r = rows.find((x) => x.crit && x.sys === it.sys && x.num === it.num);
+          return { crit: r.crit, num: it.num, text: it.text, subs: it.subs, terms: r.terms };
+        }),
+      })),
+      extra,
+      extraNote: 'Not on the published checklist — the two case studies every written question comes from.',
+    }) + ';\n',
+  };
+}
+
+let out = tpl.slice(0, a + START.length) + '\n' + figBlock + pack.trim() + '\n' + CHECK.block + tpl.slice(b);
 
 /* ── the <title> in the head ─────────────────────────────────────────────────
    The splice only replaces what sits between the two markers, so the shipped page kept
@@ -108,31 +215,26 @@ for (const [i, m] of [...out.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/sc
   ctx.window = ctx; ctx.globalThis = ctx; ctx.self = ctx;
   const vm = await import('node:vm');
   vm.createContext(ctx);
-  /* ── G13: every filter option delivers the number it advertises ──────────────
-     "Rep only…" prints a count on each chip and then deals a queue. Those are two
-     predicates over the same cards, and they drifted the day they were written: the
-     panel counted "No source recorded" with `provOf` (which files the 46 rails
-     there, as every other view does) while the queue matched on `c.tier` raw, so the
-     chip promised 46 cards and dealt nought. A reader cannot tell a filter that
+  /* ── G13 IS RETIRED, AND ITS SUCCESSOR IS G-CHK7 ──────────────────────────────
+     G13 checked that each of the 62 chips in the "Rep only…" panel dealt the count it
+     printed. It was written because those two predicates drifted the day they were
+     written: the panel counted "No source recorded" with `provOf` (which files the 46
+     rails there, as every other view does) while the queue matched on `c.tier` raw, so
+     the chip promised 46 cards and dealt nought. A reader cannot tell a filter that
      matches nothing from a pack that contains nothing.
+
+     The panel is gone (see the note in the template where it stood) and G-CHK7 asks the
+     same question of every scope the tool can now produce — 172 of them, including the
+     Checklist's presets — and asks it of `buildDeck` rather than `deckSource`, which is
+     one layer deeper and is where the round intersection that G13 could not see happens.
+     Strictly more coverage, not less. Retiring a gate is only allowed with a sentence
+     like this one naming what took it over.
 
      Appended to the shipped script rather than run against `ctx`, because `const`
      declarations in a classic script are script-scoped and never become properties
      of the vm's global — reaching them from outside would silently find `undefined`
      and pass. Same rule as the ckey fixture: check the artifact, in its own scope. */
   const GATE = `
-    ;(function(){
-      const bad=[], keep=JSON.stringify(S.filters);
-      for(const d of filtDims(ALLTYPES)) for(const o of d.opts){
-        S.filters=FILT0(); S.filters[d.id]=[o.id];
-        const n=deckSource(ALLTYPES).length;
-        const fresh=filtDims(ALLTYPES).find(x=>x.id===d.id).opts.find(x=>x.id===o.id);
-        if(!fresh||fresh.n!==n) bad.push(d.id+'/'+o.id+': the chip says '+(fresh?fresh.n:'gone')+', the queue deals '+n);
-      }
-      S.filters=JSON.parse(keep);
-      globalThis.__FILTMISMATCH__=bad;
-      globalThis.__FILTCHECKED__=filtDims(ALLTYPES).reduce((a,d)=>a+d.opts.length,0);
-    })();
     /* ── G15: the page's own idea of which ring each card is in ────────────────
        Counted here, in the artifact's own scope, and compared below against
        audit/spine.mjs. ringOf is written twice on purpose — the page imports
@@ -271,16 +373,28 @@ for (const [i, m] of [...out.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/sc
        LYMPHATIC — four points of thirty-eight — was an anonymous run of segments the
        reader could not identify. Nothing failed: the segments were all there, the
        blocks were all there, and the markup for the third one simply had no text in
-       it. So count the names, not just the blocks. */
+       it. So count the names, not just the blocks.
+
+       WHERE THE NAME LIVES CHANGED; THE CLAIM DID NOT. There is no measured labels row
+       above the bar any more — a whole sticky row of chrome about chrome. The name is on
+       the block's own title attribute and heads its section in the list the bar opens
+       into, so this counts it in BOTH places. A reader who cannot identify a run of
+       segments has exactly two things to try, and both have to work.
+       No backticks anywhere: this whole thing is inside one. */
     ;(function(){
       if(typeof spineBarHTML!=='function'||!HASRINGS()){ globalThis.__SPINE__=null; return; }
-      const h=spineBarHTML(), gs=spineGroups();
+      const h=spineBarHTML(), gs=spineGroups(), list=String(blueprintRowsHTML());
+      const want=gs.filter(function(g){ return g.label; });
       globalThis.__SPINE__={segs:(h.match(/class="sseg /g)||[]).length,
                             groups:(h.match(/class="spinegrp"/g)||[]).length,
                             crits:(PACK.criteria||[]).length,
-                            named:(h.match(/data-labs="[^"]*"/g)||[]).filter(s=>s.length>12).length,
-                            want:gs.filter(g=>g.label).length,
-                            thin:gs.filter(g=>g.label&&spineLabNames(g).length<2).map(g=>g.label)};
+                            /* Through the page's own esc(), or "Lymphatic & immunity"
+                               never matches its own escaped markup and the gate fails on
+                               an ampersand. Compare the artifact the way it is written. */
+                            named:want.filter(function(g){ return h.indexOf('data-sys="'+esc(g.label)+'"')>=0; }).length,
+                            listed:want.filter(function(g){ return list.indexOf('>'+esc(g.label)+'<')>=0; }).length,
+                            want:want.length,
+                            rows:(list.match(/class="bprow /g)||[]).length};
     })();
     /* ── G21: the retired Brief has no way in ─────────────────────────────────
        A ringed pack retires the Brief tab, and for one shipped build four other
@@ -302,12 +416,13 @@ for (const [i, m] of [...out.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/sc
       const landed=VIEW;
       nav(keep);
       /* BOTH BRANCHES, forced. bgRow renders the sentence that names the Brief only
-         while the background cards are OUT, and filterUI returns early with the panel
-         shut — so read off the default state this check cannot fail no matter what
-         those strings say, which is worse than not having it. */
-      const keepBG=S.bg, keepP=FPANEL; FPANEL=true; let prose='';
-      for(const bg of [false,true]){ S.bg=bg; prose+=' '+bgRow(ALLTYPES)+' '+filterUI(function(){},ALLTYPES); }
-      S.bg=keepBG; FPANEL=keepP;
+         while the background cards are OUT, so read off the default state this check
+         cannot fail no matter what those strings say, which is worse than not having it.
+         The filter panel used to be swept the same way and is gone; the sheet that
+         replaced it is swept instead, with the background row inside it. */
+      const keepBG=S.bg, keepQ=QSHEET; QSHEET=true; let prose='';
+      for(const bg of [false,true]){ S.bg=bg; prose+=' '+bgRow(ALLTYPES)+' '+queueLineHTML(ALLTYPES); }
+      S.bg=keepBG; QSHEET=keepQ;
       globalThis.__BRIEF__={
         ok:BRIEFOK(),
         viewExists:typeof VIEWS.brief==='function',
@@ -324,23 +439,27 @@ for (const [i, m] of [...out.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/sc
        three taps deep in Progress. A default nobody was offered an alternative to is
        not a default, it is a rail.
 
-       Five claims, all of them things that would go quiet rather than loud if they
+       Six claims, all of them things that would go quiet rather than loud if they
        broke:
          1. with no route chosen the chooser renders BOTH options, and the first-run
             panel stays silent underneath it (two first-run surfaces at once is how
             the reader gets explained a route they have not agreed to);
-         2. under EITHER route the row still carries BOTH doors and exactly one is
+         2. under EITHER route the sheet still carries BOTH doors and exactly one is
             lit — the anti-lock claim, and the one a well-meant tidy-up breaks first;
          3. the two routes deal DIFFERENT decks. A second door that changes nothing
             is worse than no second door;
          4. nothing names a round while the rounds are paused;
          5. coming back to Guided from a one-topic drill undoes the drill, or the
-            reader lands in "Round 1" secretly narrowed to one focus point.
+            reader lands in "Round 1" secretly narrowed to one focus point;
+         6. the CLOSED queue line names the route that is running, and offers the
+            control that changes it. This claim is new and it is what buys the right to
+            fold the doors into a sheet at all: a choice is only reversible-without-a-
+            menu-path if the state is visible and its edit button is beside it. Checked
+            with the sheet SHUT, which is how the reader meets it.
        No backticks anywhere: this whole thing is inside one. */
     ;(function(){
-      if(typeof routeUI!=='function'||typeof routePickHTML!=='function'||!HASRINGS()){ globalThis.__ROUTE__=null; return; }
-      const keepR=S.route, keepF=JSON.stringify(S.filters), keepRing=S.ring, keepOb=S.onboarded, out={};
-      const noop=function(){};
+      if(typeof queueLineHTML!=='function'||typeof routePickHTML!=='function'||!HASRINGS()){ globalThis.__ROUTE__=null; return; }
+      const keepR=S.route, keepF=JSON.stringify(S.filters), keepRing=S.ring, keepOb=S.onboarded, keepQ=QSHEET, out={};
       S.route=undefined; S.onboarded=false;
       const ask=routePickHTML();
       out.asks=ROUTEASK();
@@ -355,22 +474,42 @@ for (const [i, m] of [...out.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/sc
          element and would pass this check no matter what the panel did. */
       out.panelQuiet=renderOnboard()==='';
       let vals=vals0.slice();
-      out.doors={};
+      out.doors={}; out.shut={};
       for(const r of ['guided','own']){
         setRoute(r);
-        const ui=routeUI(noop,ALLTYPES);
+        /* SHUT FIRST. This is the state the reader is actually in, and the whole claim
+           of the redesign is that it still says which route is running. */
+        QSHEET=false;
+        const closed=queueLineHTML(ALLTYPES);
+        out.shut[r]={names:/Guided|You are choosing/.test(closed),
+                     change:/data-qx="change"/.test(closed),
+                     leaks:/data-route=/.test(closed)};
+        QSHEET=true;
+        const ui=queueLineHTML(ALLTYPES);
         vals=vals.concat((ui.match(/data-route="[a-z]+"/g)||[]));
         out.doors[r]={g:/data-route="guided"/.test(ui),o:/data-route="own"/.test(ui),
-                      why:/data-route="why"/.test(ui),lit:(ui.match(/class="door on"/g)||[]).length};
+                      why:/data-qx="gloss"/.test(ui),lit:(ui.match(/class="rowbtn on"/g)||[]).length};
       }
+      QSHEET=keepQ;
       setRoute('guided'); S.ring=0;
       out.gRing=ringNow(); out.gDeck=buildDeck(ALLTYPES).length; out.gSub=String(spineSubHTML(spineTally()));
       setRoute('own');
       out.oRing=ringNow(); out.oDeck=buildDeck(ALLTYPES).length; out.oSub=String(spineSubHTML(spineTally()));
       out.oHead=String(ringHeadHTML()).trim();
-      /* The one-point drill, and the way back out of it. */
-      S.filters=FILT0(); S.filters.crits=[(PACK.criteria||[])[0].id]; S.ring='point'; S.route='own';
-      vals=vals.concat((String(ringHeadHTML()).match(/data-route="[a-z]+"/g)||[]));
+      /* The one-point drill: it announces itself, it says how many, and it carries the
+         way back on the same row — which is the queue line now, not a bar of its own.
+         Read from the CLOSED line, because a way out that needs a sheet opened first is
+         a menu path, and this is the control house policy is strictest about. */
+      repScope('crits:'+(PACK.criteria||[])[0].id);
+      QSHEET=false;
+      const drilled=queueLineHTML(ALLTYPES);
+      out.drill={names:drilled.indexOf(String((PACK.criteria||[])[0].name||''))>=0,
+                 /* DOUBLE backslash: this whole probe is inside a template literal, so a
+                    lone \\d is just "d" and the regex silently matches nothing. Exactly
+                    the bug that shipped /d{1,2}:d{2}/ for the come-back clock. */
+                 counts:/all \\d+ cards?/.test(drilled),
+                 out:/data-route="guided"/.test(drilled)};
+      vals=vals.concat((drilled.match(/data-route="[a-z]+"/g)||[]));
       setRoute('guided');
       out.undrilled=S.filters.crits.length===0&&typeof S.ring==='number';
       out.values=vals.map(function(v){ return v.slice(12,-1); });
@@ -386,6 +525,82 @@ for (const [i, m] of [...out.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/sc
     ;(function(){
       globalThis.__LEADS__=(typeof REASONLEAD==='object'&&REASONLEAD)?{...REASONLEAD}:null;
     })();
+    /* ── G-CHK4 (runtime half): the page DRAWS the list, expanded, under every preset ──
+       The half of G-CHK4 that lives above this checks the DATA — 36 rows, case studies
+       outside them. That is not the same claim as "the page renders them": a view that
+       produces 36 collapsed rows and throws on the first tap ships perfectly happily
+       past a data check, and the expanded body is where all the work is (the ⚡ Rep
+       button, the term chips, the stem index, the preset arithmetic).
+       So every row is opened, under every preset, and asked for its markup. */
+    ;(function(){
+      if(typeof chkRows!=='function'||!HASCHK()){ globalThis.__CHK__=null; return; }
+      const keep=S.chk, out={presets:[],terms:0,termRows:0,chars:0};
+      for(const p of CHKPRESETS){
+        S.chk=p.id;
+        const rs=chkRows();
+        let chars=0;
+        rs.forEach(function(r){ CHKOPEN[r.crit]=true; });
+        rs.forEach(function(r){ chars+=String(chkRowHTML(r)).length; });
+        rs.forEach(function(r){ CHKOPEN[r.crit]=false; });
+        out.presets.push({id:p.id,rows:rs.length,ids:rs.map(function(r){ return r.crit; }),
+                          n:rs.reduce(function(a,r){ return a+r.n; },0),chars:chars});
+        out.chars+=chars;
+      }
+      S.chk='all';
+      chkRows().forEach(function(r){ if(r.terms){ out.termRows++; out.terms+=r.terms.length; } });
+      out.extra=String(chkExtraHTML());
+      S.chk=keep; save();
+      globalThis.__CHK__=out;
+    })();
+    /* ── G-CHK7: a ⚡ Rep button hands over exactly what it promised ────────────
+       THIS IS THE GATE THAT CATCHES THE RING-INTERSECTION BUG, and today's shipped
+       version fails it. All cards' "Rep these in Study" set S.filters and nothing
+       else; GUIDED() is the default, so buildRingDeck then intersected that filter
+       with the CURRENT ROUND — and Round 1 is one card per focus point. A button
+       reading "Rep all 16 cards" dealt at most one, and zero once that point's lead
+       card was locked, dropping the reader on the filter dead-end.
+
+       Two things make it checkable. Every Rep button now states its promise in
+       data-repn, from the same expression the queue builds from; and the press is
+       simulated from the COLD DEFAULT — Guided, Round 1 — because that is the state
+       a reader who has never taken the second door is actually in, and the only
+       state in which the old handler was wrong.
+
+       Measured on buildDeck, never deckSource. deckSource is the SCOPE and was
+       right the whole time; the loss happened one layer further in. A gate written
+       against deckSource here would have passed against the broken build, which is
+       the failure mode [[hs2-provenance-audit]] records: a check whose fixture is
+       the wrong artifact is not a check. */
+    ;(function(){
+      if(typeof repBtnHTML!=='function'||typeof repScope!=='function'){ globalThis.__REP__=null; return; }
+      const keepF=JSON.stringify(S.filters), keepR=S.route, keepRing=S.ring;
+      const scopes=[];
+      /* Every scope any surface can produce, INCLUDING the Checklist's presets — those
+         are the two-dimension ones, and a preset that re-counts a row without changing
+         what the button deals is the same broken promise wearing a new hat. */
+      const PRESETS=(typeof CHKPRESETS==='object'&&CHKPRESETS)?CHKPRESETS.map(function(p){ return p.scope||''; }):[''];
+      (PACK.criteria||[]).forEach(function(cr){
+        PRESETS.forEach(function(sfx){ scopes.push('crits:'+cr.id+sfx); });
+      });
+      (PACK.topics||[]).forEach(function(t){ scopes.push('topics:'+t.id); });
+      ALLTYPES.forEach(function(t){ scopes.push('types:'+t); });
+      scopes.push('status:flagged');
+      const bad=[];
+      for(const s of scopes){
+        /* Reset to cold BEFORE each press. Without this the second scope is pressed
+           from inside the first one's drill, which is a state no reader is ever in
+           and which happens to make the intersection bug invisible. */
+        S.filters=FILT0(); S.route='guided'; S.ring=0;
+        const m=String(repBtnHTML(s)).match(/data-repn="(\\d+)"/);
+        if(!m){ bad.push(s+' — the button states no count at all'); continue; }
+        const promised=+m[1];
+        repScope(s);
+        const dealt=buildDeck(ALLTYPES).length;
+        if(dealt!==promised) bad.push(s+' — the button says '+promised+', the queue deals '+dealt);
+      }
+      S.filters=JSON.parse(keepF); S.route=keepR; S.ring=keepRing; save();
+      globalThis.__REP__={bad:bad,n:scopes.length};
+    })();
   `;
   try {
     vm.runInContext(script + GATE + '\n;globalThis.__REACHED_END__=true;', ctx, { filename: 'index.html', timeout: 15000 });
@@ -397,15 +612,35 @@ for (const [i, m] of [...out.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/sc
   if (!ctx.__REACHED_END__) { console.error('✗ the shipped page did not finish executing'); process.exit(1); }
   console.log('shipped page executes end-to-end against a stub DOM ✓');
 
-  const mm = ctx.__FILTMISMATCH__ ?? null;
-  if (mm === null) { console.error('✗ the filter gate did not run — has filtDims/deckSource been renamed?'); process.exit(1); }
-  if (mm.length) {
-    console.error(`✗ ${mm.length} filter option(s) advertise a count they do not deal:`);
-    for (const m of mm.slice(0, 10)) console.error('    ' + m);
-    console.error('\n✗ NOT SHIPPING. A chip that promises 46 cards and deals none is worse than no filter.');
-    process.exit(1);
+  /* THE FILTER PANEL IS GONE, AND SO IS ANY OTHER WAY TO NARROW THE QUEUE BEHIND THE
+     READER'S BACK. Every narrowing now goes through `repScope`, which also sets
+     `ring:'point'` — so the pool announces itself and carries its own way out. This
+     asserts the deletion held: a `filtDims`/`filterUI` that grew back would be a second
+     road into `S.filters` with none of that, which is the shape of every bug this
+     rebuild removed. Structural, cheap, and it fails the moment somebody restores it
+     without also restoring a gate over it. */
+  for (const gone of ['function filtDims(', 'function filterUI(', 'FPANEL'])
+    if (script.includes(gone)) { console.error(`✗ NOT SHIPPING. "${gone}" is back — a second way to narrow the queue with no announcement and no exit.`); process.exit(1); }
+  /* ── G-CHK8: nothing tells the reader to press a button that is not there ──────
+     Deleting a surface is not finished when the code goes; it is finished when nothing
+     names it. The retired Brief taught this the expensive way — the tab was hidden by
+     one test and four other things went on offering the view, so clicking "Read the full
+     explanation" dropped the reader on a dead page, which is how they learn to distrust
+     the rest of the buttons (G21 is that gate). "🔎 Rep only…" was named by the first-run
+     panel and by the unringed door help on the day the panel was deleted.
+
+     Reader-facing strings only: the deletion notes in the source say the name on purpose,
+     and a comment is not a button. Same comment-stripping as G-CHK6, same reason. */
+  {
+    const CODE = script.replace(/^[ \t]*\/\*[\s\S]*?\*\//gm, '').replace(/^[ \t]*\/\/.*$/gm, '');
+    const named = ['Rep only'].filter(s => CODE.includes(s));
+    if (named.length) {
+      console.error(`✗ NOT SHIPPING. A reader-facing string still names a deleted surface: ${named.join(', ')}`);
+      console.error('   A control the copy promises and the screen does not have reads as a broken tool.');
+      process.exit(1);
+    }
   }
-  console.log(`all ${ctx.__FILTCHECKED__} "Rep only…" options deal exactly the count they advertise ✓`);
+  console.log('the five-dimension filter panel is gone, and nothing still tells the reader to press it ✓');
   ENGINE_RINGS = ctx.__RINGCOUNTS__ ?? null;
   ENGINE_YIELD = ctx.__YIELD__ ?? null;
   ENGINE_SHARE = ctx.__SHARE__ ?? null;
@@ -441,6 +676,144 @@ for (const [i, m] of [...out.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/sc
      functions, in the branch nobody re-reads. Structural, in the artifact's own
      source: a runner either calls lockMark itself or delegates to wireRate, which
      does. Add a fifth runner and this fails until it is wired. */
+  /* ── G-CHK6: ONE ⚡ Rep journey, with one writer ──────────────────────────────
+     The bug G-CHK7 catches was not a typo, it was a second implementation. Two
+     buttons doing "the same journey" wrote the same shared state and one of them
+     wrote a subset of it — silently, because the deck the subset produced was still
+     a valid deck. So the structural rule is that there is nothing to disagree with:
+     one delegated handler, one writer of the drill state, and every button that
+     offers the journey states the number it is promising.
+
+     Cheap, in the artifact, and it fails the moment somebody helpfully adds a second
+     path — which is how this got here in the first place. */
+  {
+    /* COUNT CODE, NOT PROSE. The first version of this gate counted raw occurrences
+       and failed on its own documentation — the comment standing where wireBlueprint
+       used to be names the assignment it forbids, which is the single most useful
+       sentence at that spot. This file's comments are line-initial block comments, so
+       stripping those is enough and never reaches the pack's single-line strings.
+       That comment is deliberately left in place: it is the fixture proving the strip
+       still works, and it is why each hit below is reported with its own line. */
+    const CODE = script.replace(/^[ \t]*\/\*[\s\S]*?\*\//gm, '').replace(/^[ \t]*\/\/.*$/gm, '');
+    const fail = [];
+    const rep = CODE.match(/\nfunction repScope\([^)]*\)\{[\s\S]*?\n\}/);
+    if (!rep) fail.push('repScope is gone or renamed — the drill state has no single writer');
+    else for (const w of ['S.filters=', 'S.ring=', 'S.route='])
+      if (!rep[0].includes(w)) fail.push(`repScope no longer sets ${w} — a partial write is exactly the shipped bug`);
+    if ((CODE.match(/function repScope\(/g) || []).length !== 1) fail.push('more than one repScope');
+    const handlers = (CODE.match(/closest\('\[data-rep\]'\)/g) || []).length;
+    if (handlers !== 1) fail.push(`${handlers} [data-rep] click handlers — there must be exactly 1`);
+    /* AND THE HANDLER MUST DELEGATE TO IT. Without this line the gate has a hole wide
+       enough to drive the original bug back through: a handler that assembles the state
+       inline leaves `repScope` present, correct and unused, and G-CHK7 — which presses
+       the button by calling repScope — would go on passing while the real click did
+       something else. Check the path the reader takes, not the helper beside it. */
+    {
+      const h = CODE.match(/closest\('\[data-rep\]'\)[\s\S]*?\n\}\);/);
+      if (!h) fail.push('the [data-rep] handler could not be read');
+      else if (!/repScope\(/.test(h[0])) fail.push('the [data-rep] handler does not call repScope — it is assembling the drill state itself');
+    }
+    /* Any OTHER writer of the drill state is a second journey by definition. repScope
+       is allowed one; setRoute is allowed to read it to undo the drill, which is a
+       comparison, not an assignment. */
+    const drill = [...CODE.matchAll(/S\.ring\s*=\s*'point'/g)];
+    if (drill.length !== 1) {
+      fail.push(`S.ring='point' is written in ${drill.length} place(s) in code — only repScope may:`);
+      for (const d of drill) fail.push('      ' + CODE.slice(CODE.lastIndexOf('\n', d.index) + 1, CODE.indexOf('\n', d.index)).trim());
+    }
+    /* Every offer of the journey states what it will deal, or G-CHK7 has nothing to
+       compare against and the promise goes back to being unfalsifiable prose. */
+    for (const m of CODE.matchAll(/data-rep="/g))
+      if (!CODE.slice(m.index, m.index + 200).includes('data-repn="'))
+        fail.push('a data-rep button states no data-repn count — G-CHK7 cannot check it');
+    if (fail.length) {
+      console.error('✗ NOT SHIPPING. The ⚡ Rep journey has more than one implementation:');
+      for (const f of fail) console.error('    ' + f);
+      process.exit(1);
+    }
+    console.log('one ⚡ Rep handler, one writer of the drill state, every button stating its count ✓');
+  }
+  {
+    const R = ctx.__REP__;
+    if (!R) { console.error('✗ G-CHK7 did not run — repScope/repBtnHTML have been renamed'); process.exit(1); }
+    if (R.bad.length) {
+      console.error(`✗ ${R.bad.length} of ${R.n} ⚡ Rep button(s) do not deal what they promise:`);
+      for (const b of R.bad.slice(0, 12)) console.error('    ' + b);
+      console.error('\n✗ NOT SHIPPING. "Rep all 16 cards" that deals one is the bug this page was rebuilt around.');
+      process.exit(1);
+    }
+    console.log(`all ${R.n} ⚡ Rep buttons deal exactly the count they promise, pressed from a cold Guided start ✓`);
+  }
+
+  /* ── G-CHK1 / G-CHK4: the checklist that SHIPS is the course's document ───────
+     Not a check on the extractor — a check on the artifact. It reads the strings back
+     out of the generated page and requires every one of them to appear, whitespace
+     normalised, in a corpus unit filed under SRC-ASSESSMENT-CRITERIA. A transform
+     added anywhere between the two (a tidy-up of the double comma in the respiratory
+     terms, a "helpful" closing bracket on Respiratory 5, an ellipsis on the 330-char
+     criterion 12) fails here rather than in front of a reader holding Canvas open.
+
+     The same reasoning as the ckey fixture: a self-check whose fixture is the wrong
+     artifact is not a check. The fixture here is the page, not the JSON in between. */
+  {
+    const m = out.match(/PACK\.checklist=(\{[\s\S]*?\});\n/);
+    if (!m) { console.error('✗ NOT SHIPPING. PACK.checklist is not in the built page.'); process.exit(1); }
+    let shipped; try { shipped = JSON.parse(m[1]); }
+    catch (e) { console.error('✗ NOT SHIPPING. PACK.checklist does not parse: ' + e.message); process.exit(1); }
+    const corpus = JSON.parse(readFileSync('audit/corpus.json', 'utf8'))
+      .filter((u) => u.src === 'SRC-ASSESSMENT-CRITERIA').map((u) => WS(u.t));
+    const inDoc = (s) => corpus.some((t) => t.includes(WS(s)));
+    const fail = [], seen = new Set();
+    let nRows = 0, nStr = 0, nTermsShipped = 0;
+    for (const s of shipped.systems) {
+      if (!inDoc(s.name)) fail.push(`the system heading "${s.name}" is not in the course document`);
+      for (const r of s.rows) {
+        nRows++; nTermsShipped += (r.terms ?? []).length;
+        if (seen.has(r.crit)) fail.push(`${r.crit} is rendered twice`);
+        seen.add(r.crit);
+        if (!r.text) { fail.push(`${r.crit} has no verbatim text`); continue; }
+        for (const str of [r.text, ...r.subs.map((x) => x.text), ...(r.terms ?? []).map((x) => x.t)]) {
+          nStr++;
+          if (!inDoc(str)) fail.push(`${r.crit}: "${String(str).slice(0, 60)}…" is not in the course document`);
+        }
+      }
+    }
+    /* A case study rendered inside the numbered list stops the page being the course's
+       own document — the thing every other rule here is protecting. */
+    for (const id of shipped.extra) if (seen.has(id)) fail.push(`${id} is not on the published checklist and is rendered inside the numbered rows`);
+    if (nRows !== 36) fail.push(`the checklist renders ${nRows} numbered rows, not 36`);
+    if (fail.length) {
+      console.error('✗ NOT SHIPPING. The shipped checklist is not the course document:');
+      for (const f of fail.slice(0, 12)) console.error('    ' + f);
+      process.exit(1);
+    }
+    /* And the same claim about the RENDER, not just the data. */
+    const R = ctx.__CHK__;
+    if (!R) { console.error('✗ the checklist render gate did not run — chkRows/HASCHK renamed?'); process.exit(1); }
+    const rfail = [];
+    const byId = Object.fromEntries(R.presets.map((p) => [p.id, p]));
+    if (!byId.all || byId.all.rows !== 36) rfail.push(`the "Everything" preset draws ${byId.all?.rows} rows, not 36`);
+    for (const p of R.presets) {
+      if (!p.chars) rfail.push(`the "${p.id}" preset draws no markup at all`);
+      if (p.ids.some((id) => shipped.extra.includes(id))) rfail.push(`a case study is drawn inside the "${p.id}" numbered rows`);
+    }
+    const blindWant = P.criteria.filter((c) => c.blind && !shipped.extra.includes(c.id)).map((c) => c.id);
+    if (byId.blind && byId.blind.ids.join() !== blindWant.join())
+      rfail.push(`"Never practised" draws ${byId.blind.ids.join(',') || 'nothing'} — the pack declares ${blindWant.join(',')}`);
+    /* Three of the 36 are term lists rather than statements, and their chips are the
+       only route to a glossary entry outside Search. A row that quietly stopped
+       rendering its terms would look completely normal. */
+    if (R.termRows !== 3) rfail.push(`${R.termRows} terminology rows render their terms, not 3`);
+    if (R.terms !== nTermsShipped) rfail.push(`${R.terms} term chips render against ${nTermsShipped} published terms`);
+    for (const id of shipped.extra) if (!R.extra.includes(id)) rfail.push(`${id} is missing from the block below the 36`);
+    if (rfail.length) {
+      console.error('✗ NOT SHIPPING. The checklist page does not draw what it holds:');
+      for (const f of rfail) console.error('    ' + f);
+      process.exit(1);
+    }
+    console.log(`all ${nStr} checklist strings in the shipped page are present verbatim in the course document · every row draws expanded under all ${R.presets.length} presets ✓`);
+  }
+
   const RUNNERS = ['studyRail', 'studyFlash', 'studyWritten', 'studyAuto'];
   const unlockable = [];
   for (const fn of RUNNERS) {
@@ -543,11 +916,17 @@ for (const [i, m] of [...out.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/sc
     if (!R.askDelegated) fail.push('the chooser\'s options are not delegated — a lost binding on a full-screen modal with no close button locks the reader out of the whole tool');
     if (R.panelQuiet !== true) fail.push('the first-run panel renders UNDERNEATH the chooser — two explanations at once, one about a route not yet chosen');
     for (const r of ['guided', 'own']) {
-      const d = R.doors[r];
-      if (!d.g) fail.push(`under "${r}" the route row has no way back to Guided — that is a lock`);
-      if (!d.o) fail.push(`under "${r}" the route row has no "I'll choose" — the reader is on a rail again`);
-      if (!d.why) fail.push(`under "${r}" nothing explains the difference between the two`);
+      const d = R.doors[r], q = R.shut[r];
+      if (!d.g) fail.push(`under "${r}" the [ Change ] sheet has no way back to Guided — that is a lock`);
+      if (!d.o) fail.push(`under "${r}" the [ Change ] sheet has no "Let me choose" — the reader is on a rail again`);
+      if (!d.why) fail.push(`under "${r}" nothing explains what the words mean`);
       if (d.lit !== 1) fail.push(`under "${r}" ${d.lit} door(s) are lit, not exactly one — the reader cannot tell which route is running`);
+      /* THE SHUT STATE IS THE STATE THE READER IS IN. Folding two permanently-visible
+         doors into a sheet is only allowed while the closed line still NAMES the route
+         and puts its edit button beside it — otherwise the choice has been demoted to a
+         menu path, which [[two-doors-pattern]] rule 2 forbids. */
+      if (!q.names) fail.push(`with the sheet shut, the queue line under "${r}" does not say which route is running`);
+      if (!q.change) fail.push(`with the sheet shut, there is no [ Change ] control under "${r}" — the route is stated and not reversible`);
     }
     if (R.gRing !== 0) fail.push(`Guided is not dealing Round 1 (ringNow=${R.gRing})`);
     if (R.oRing !== null) fail.push('"I\'ll choose" is still inside the rounds — it reorders one round instead of leaving them');
@@ -556,8 +935,18 @@ for (const [i, m] of [...out.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/sc
     if (!/Round [0-9]/.test(R.gSub)) fail.push('the bar does not name the round under Guided');
     if (/Round [0-9]/.test(R.oSub)) fail.push(`the bar still names a round while the rounds are paused: "${R.oSub}"`);
     if (R.oHead) fail.push('a second "back to the rounds" bar renders under "I\'ll choose" — the same control twice, and two of them drift');
+    /* The drill is the one state where the reader is being dealt something other than
+       what the round line promises, so all three of these have to be true on the CLOSED
+       line: what it narrowed to, how many that is, and the way back. */
+    if (!R.drill.names) fail.push('a one-point drill does not name the point it narrowed to');
+    if (!R.drill.counts) fail.push('a one-point drill does not say how many cards it is dealing');
+    if (!R.drill.out) fail.push('a one-point drill offers no way back to the rounds without opening a sheet first — that is a menu path, not an exit');
     if (!R.undrilled) fail.push('returning to Guided from a one-topic drill leaves the filter on, so "Round 1" is secretly one focus point');
-    const bad = [...new Set(R.values)].filter(v => !['guided', 'own', 'why'].includes(v));
+    /* `why` is gone with ROUTEHELP — the sheet IS the explanation, and its glossary link
+       is `data-qx`. A `data-route` the handler does not understand now silently calls
+       setRoute with it, which falls through to 'guided': a door that quietly means the
+       other one. */
+    const bad = [...new Set(R.values)].filter(v => !['guided', 'own'].includes(v));
     if (bad.length) fail.push(`data-route value(s) the handler does not understand: ${bad.join(', ')}`);
     /* The route buttons are the only way out of a narrowed self-directed queue and the
        only way back into the rounds. Every other binding in the engine attaches on a
@@ -595,20 +984,95 @@ for (const [i, m] of [...out.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/sc
       console.error('   A run of segments the reader cannot identify, sitting next to named ones, reads as a bug.');
       process.exit(1);
     }
-    /* A block whose ONLY name is its full one goes blank on a phone the moment it is
-       too narrow for it — the fit has nothing shorter to fall back to. Not fatal (a
-       pack may genuinely have nothing shorter to say), but it must not be silent. */
-    if (sp.thin.length) console.log(`⚠ no short form to fall back on for: ${sp.thin.join(', ')} — give the system a "short" in pack.js or these go blank on a narrow screen`);
-    console.log(`the Spine Bar draws all ${sp.segs} focus points in ${sp.groups} block(s), all ${sp.named} named, every state reachable ✓`);
+    /* And the same names head their sections in the list the bar opens into, which is
+       where a reader who cannot read a tooltip on a phone actually goes. The labels row
+       is gone; both of its replacements have to work, or the name has simply been
+       deleted with the row. */
+    if (sp.listed !== sp.want) {
+      console.error(`✗ NOT SHIPPING. ${sp.want - sp.listed} of ${sp.want} body system(s) head no section in the list the bar opens into.`);
+      console.error('   On a phone the block tooltip is unreachable, so this list is the only place the name survives.');
+      process.exit(1);
+    }
+    if (sp.rows !== sp.crits) {
+      console.error(`✗ NOT SHIPPING. The list the bar opens into draws ${sp.rows} rows for ${sp.crits} focus points — grouping has dropped or duplicated one.`);
+      process.exit(1);
+    }
+    console.log(`the Spine Bar draws all ${sp.segs} focus points in ${sp.groups} block(s), all ${sp.named} named in the bar and in the list ✓`);
   }
 }
 
-/* Stats come from LOADING the pack, not from regexing it. pack.js is now generated
-   JSON, so patterns written for the old hand-authored style (type:'flash', crit:'cvs-7')
-   matched nothing and every count silently read zero — a build that reported "0 cards"
-   while shipping 588. */
-const { loadPack } = await import('./audit/load-pack.mjs');
-const { pack: P } = loadPack();
+/* ── G-CSS1: the scales are enforced, or they are temporary ────────────────────────
+   The stylesheet was not badly written, it was UNSCALED — 22 font sizes, 7 weights, 15
+   radii, tuned component by component in isolation. Six steps, three weights and three
+   radii fix that once; this is what stops it drifting back, because three tools from now
+   nobody remembers the scale and every fix will be one half-pixel nudge that looks right
+   on its own.
+
+   OVER THE WHOLE PAGE, not just the <style> block. Half the drift arrived as
+   `style="font-size:13.5px"` inside a template literal, where a stylesheet-only check
+   cannot see it — and an inline value is the one most likely to be a nudge nobody
+   revisits. Raw colours are checked the same way and only outside :root, because that is
+   where the palette lives and the palette is the estate's ([[house-design-system]]);
+   a hex anywhere else is a component inventing its own. */
+{
+  const style = out.match(/<style>([\s\S]*?)<\/style>/);
+  if (!style) { console.error('✗ NOT SHIPPING. No <style> block — the scale gate has nothing to check.'); process.exit(1); }
+  /* The PALETTE blocks, plural: `:root` twice and one per theme. They are where raw hex
+     belongs and the only place it does — the estate palette is copied wholesale out of
+     hub/index.html and the derivations under it were measured, so a check that swept
+     them would be a standing order to indirect the house colours for no reason. */
+  const PAL = /(?::root|html\[data-theme="[a-z]+"\])\{[\s\S]*?\n\}/g;
+  const rest = style[1].replace(PAL, '');
+  const FS = new Set(['11px', '12.5px', '14px', '16px', '19px', '24px', '40px']);
+  const FW = new Set(['400', '600', '800', 'inherit']);
+  const RD = new Set(['var(--r1)', 'var(--r2)', 'var(--r3)', 'var(--r)', '0', 'inherit']);
+  const bad = [];
+  const sweep = (src, where) => {
+    for (const m of src.matchAll(/font-size\s*:\s*([^;"'}\n!]+)/g))
+      if (!FS.has(m[1].trim())) bad.push(`${where} font-size: ${m[1].trim()}`);
+    for (const m of src.matchAll(/font-weight\s*:\s*([^;"'}\n!]+)/g))
+      if (!FW.has(m[1].trim())) bad.push(`${where} font-weight: ${m[1].trim()}`);
+    for (const m of src.matchAll(/border-radius\s*:\s*([^;"'}\n!]+)/g))
+      if (!RD.has(m[1].trim())) bad.push(`${where} border-radius: ${m[1].trim()}`);
+  };
+  sweep(rest, 'stylesheet');
+  sweep(out.replace(/<style>[\s\S]*?<\/style>/, ''), 'inline');
+  /* Six is the scale, and a seventh step declared and never used is the scale rotting
+     quietly. Only the hero's 40px is allowed to be rare. */
+  for (const step of ['11px', '12.5px', '14px', '16px', '19px', '24px'])
+    if (!rest.includes('font-size:' + step)) bad.push(`the ${step} step is declared and never used — the scale has six steps or it has five`);
+  for (const m of rest.matchAll(/#[0-9a-fA-F]{3,8}\b/g)) bad.push(`raw colour outside :root: ${m[0]}`);
+  if (bad.length) {
+    console.error(`✗ NOT SHIPPING. ${bad.length} value(s) outside the declared scale:`);
+    for (const b of [...new Set(bad)].slice(0, 14)) console.error('    ' + b);
+    console.error('   6 type steps (11 · 12.5 · 14 · 16 · 19 · 24, plus the 40px result hero), 3 weights, 3 radii.');
+    process.exit(1);
+  }
+  /* ── AND NO TWO COMPONENTS SHARE A MODIFIER NAME ──────────────────────────────
+     `.clozebody.seg` — a long cloze passage split into blocks — collided head-on with
+     `.seg`, the navigation segmented control, so a 400-word question was laid out as a
+     TAB BAR: display:flex, padding, gap, wrap. It pushed 4px past a 375px viewport and
+     took the body scroll with it. Nothing threw. Both components looked entirely
+     plausible on their own screens, which is why it survived.
+
+     So: a class used as a BARE selector (its own component) may not also be used as a
+     modifier on another component's element. The check is deliberately narrow — it does
+     not police naming, it catches the one shape that fails silently. */
+  {
+    const bare = new Set([...rest.matchAll(/(?:^|[\s,>+~])\.([A-Za-z][\w-]*)\s*\{/gm)].map((m) => m[1]));
+    const clash = [];
+    for (const m of rest.matchAll(/\.([A-Za-z][\w-]*)\.([A-Za-z][\w-]*)/g)) {
+      if (bare.has(m[2]) && m[1] !== m[2]) clash.push(`.${m[1]}.${m[2]} — "${m[2]}" is also a component of its own`);
+    }
+    if (clash.length) {
+      console.error(`✗ NOT SHIPPING. ${clash.length} modifier name(s) collide with a component:`);
+      for (const c of [...new Set(clash)]) console.error('    ' + c);
+      console.error('   One of these is styling the other by accident. Rename the modifier.');
+      process.exit(1);
+    }
+  }
+  console.log('every size, weight, radius and colour in the page is on the declared scale, and no modifier collides with a component ✓');
+}
 
 const types = {};
 for (const c of P.cards) types[c.type] = (types[c.type] || 0) + 1;
@@ -699,8 +1163,25 @@ console.log('tiers:', Object.entries(tiers).sort((a, b) => b[1] - a[1]).map(([k,
    `blindNeedsSaq` goes the same way and for the same reason: resp-15 and resp-16 have
    zero questions from her anywhere in the course, so demanding a written-answer card
    on them is demanding an invented one. */
+/* QUESTION CARDS ONLY, and the rails' new focus points are exactly why this had to be
+   said out loud. Three counts of "how many cards touch this point" exist in the estate
+   and they answer different questions:
+
+     PACK.thin[].n   computed in apply-migration BEFORE the rails are appended
+     perPoint()      in the engine, which skips type:'rail' explicitly
+     this            which counted everything, and agreed with the other two only for
+                     as long as no rail carried a crit
+
+   The moment the rails were filed under the checklist this reported resp-13 as having 5
+   cards against a declared 3, and correctly failed the build. The fix is not to relax
+   the comparison but to count the same thing the other two count: coverage is a claim
+   about how much of HER material stands behind a focus point, and a chain to rebuild
+   from memory is a different kind of study object. G-CHK2 above is the gate that every
+   card — rails included — is FILED; this is the gate that filing one did not quietly
+   make a thin point look covered. */
 const counts = {};
-for (const c of P.cards) for (const id of [c.crit, ...(c.alsoCrit ?? [])].filter(Boolean)) counts[id] = (counts[id] || 0) + 1;
+for (const c of P.cards) { if (c.type === 'rail') continue;
+  for (const id of [c.crit, ...(c.alsoCrit ?? [])].filter(Boolean)) counts[id] = (counts[id] || 0) + 1; }
 
 const empty = (P.criteria ?? []).filter(c => !counts[c.id]);
 if (empty.length) {
@@ -717,12 +1198,38 @@ console.log(`all ${(P.criteria ?? []).length} focus points have at least one car
    ever be dealt, and a focus point with no card of its own has no spine card to lead
    with. A queue that looks principled and is tagged wrong is worse than pack order.
 
-   `rail` cards are outside all of this by design — they carry no crit, are appended
-   after the coverage maths, and are a different kind of study object. See the note in
-   apply-migration.mjs where they are added. */
+   `rail` cards stay outside the COVERAGE maths — they are a different kind of study
+   object and may not make a thin focus point look covered — but they are no longer
+   outside the FILING. See the note in apply-migration.mjs where they are added. */
 {
   const drillable = P.cards.filter(c => c.type !== 'rail');
   const critsOf = (c) => [c.crit, ...(c.alsoCrit ?? [])].filter(Boolean);
+
+  /* ── G-CHK2: every card in the pack is filed under a checklist item ───────────
+     C1 below asks this of the drillable cards and always has. This asks it of ALL of
+     them, which is the claim the Checklist page makes in its own opening line —
+     "everything in this tool is filed under one of them" — and which was false for the
+     46 rails on the day that sentence was written. A page that states a total and is
+     wrong about it is worse than a page that states nothing. */
+  const unfiled = P.cards.filter(c => !critsOf(c).length);
+  if (unfiled.length) {
+    console.error(`✗ NOT SHIPPING. ${unfiled.length} of ${P.cards.length} cards are under no checklist item, and the Checklist page claims every card is:`);
+    for (const c of unfiled.slice(0, 8)) console.error(`    [${c.type} ${c.tier ?? '—'}] ${String(c.name ?? c.q ?? '').replace(/<[^>]+>/g, '').slice(0, 76)}`);
+    console.error('   Rails are authored in audit/rail-crits.json; question cards route through audit/routes.json.');
+    process.exit(1);
+  }
+  /* ── G-CHK3: and every focus point it names is a real one ─────────────────────
+     Both directions. A card naming an id that is not in PACK.criteria is dealt by
+     nothing and counted by nothing; a criterion with no card renders a row promising
+     zero. The second half is the gate above this block; this is the first. */
+  const ids = new Set((P.criteria ?? []).map(c => c.id));
+  const ghosts = P.cards.flatMap(c => critsOf(c).filter(id => !ids.has(id)).map(id => ({ c, id })));
+  if (ghosts.length) {
+    console.error(`✗ NOT SHIPPING. ${ghosts.length} card(s) name a focus point this pack does not declare:`);
+    for (const g of ghosts.slice(0, 8)) console.error(`    ${g.id} ← ${String(g.c.name ?? g.c.q ?? '').replace(/<[^>]+>/g, '').slice(0, 60)}`);
+    process.exit(1);
+  }
+  console.log(`all ${P.cards.length} cards are filed under a declared focus point, rails included ✓`);
 
   // C1 — a card the criterion-ordered queue can never deal
   const orphans = drillable.filter(c => !critsOf(c).length);

@@ -962,6 +962,60 @@ const background = cullBackground(deduped);
    safeguard: a rail is a different kind of study object, and letting one fill a focus
    point would make a thin one look covered while the number of real questions under it
    had not moved. `thin` has to keep meaning "how much of HER material exists here". */
+/* ── EVERY RAIL NOW CARRIES A FOCUS POINT, AND EVERY ONE WAS DECIDED BY HAND ──────
+   "Every card in this tool is filed under one of the course's checklist items" was
+   literally false for 46 of 434 cards: every rail carried topic + from + beads and no
+   crit at all. They are the causal chains — Filtration, the arterial end · Reabsorption,
+   the venous end · the baroreflex — and they are exactly the material a reader looking
+   at "Capillary fluid movement" wants dealt to them.
+
+   THE TAGS ARE AUTHORED, NOT DERIVED, and rail-crits.json is the table.
+   [[criterion-tagging-traps]] is the record of what derivation does to this pack: it
+   files a card by its distractors, decides the primary by rule order, and matches bare
+   words inside other words. A rail is the worst possible input to a text matcher — no
+   stem, no options, just a chain of nouns — and the easiest thing in the pack for a
+   human to place. So: derive nothing, block until all 46 are set.
+
+   WHAT THIS DOES NOT CHANGE. `background.thin` is computed above, before this line, off
+   the question-cards alone, and the engine's perPoint() skips type:'rail'. A rail still
+   cannot make a thin focus point look covered — "thin" keeps meaning "how much of HER
+   material exists here". What moves is that a rail on a thin point is now dealt in the
+   round whose whole claim is that its cards are load-bearing, rather than last, in the
+   optional background round. */
+{
+  const table = JSON.parse(fs.readFileSync(path.join(HERE, 'rail-crits.json'), 'utf8'));
+  const map = Object.fromEntries(Object.entries(table).filter(([k]) => !k.startsWith('_')));
+  const ids = new Set(criteria.map((c) => c.id));
+  const fails = [], claimed = new Set();
+  for (const r of RAILS) {
+    const nm = r.name;
+    if (!nm) { fails.push(`a rail from ${r.from} has no name to key on`); continue; }
+    const id = map[nm];
+    if (!id) { fails.push(`no focus point authored for the rail "${nm}"`); continue; }
+    if (!ids.has(id)) { fails.push(`"${nm}" is filed under ${id}, which is not a criterion of this pack`); continue; }
+    claimed.add(nm);
+    r.crit = id;
+  }
+  /* A key matching no rail is the shape of the dead ALIAS that once deleted ten of her
+     questions: an entry nothing can disagree with, because nothing reads it. */
+  for (const nm of Object.keys(map)) if (!claimed.has(nm)) fails.push(`rail-crits.json names "${nm}", which is not a rail in this pack`);
+  if (fails.length) {
+    console.error(`✗ ${fails.length} problem(s) filing the rails under the checklist:`);
+    for (const f of fails) console.error('    ' + f);
+    process.exit(1);
+  }
+  /* A rail must not cross body systems — its topic and its focus point are two
+     independent statements about the same card and they have to agree. */
+  const TSYS = Object.fromEntries(topics.map((t) => [t.id, t.sys]));
+  const csys = (id) => String(id).split('-')[0];
+  const crossed = RAILS.filter((r) => TSYS[r.topic] && csys(r.crit) !== TSYS[r.topic]);
+  if (crossed.length) {
+    console.error(`✗ ${crossed.length} rail(s) filed under another body system's focus point:`);
+    for (const r of crossed) console.error(`    "${r.name}" is in ${r.topic} (${TSYS[r.topic]}) and filed under ${r.crit}`);
+    process.exit(1);
+  }
+}
+
 const shipped = [...background.kept, ...RAILS];
 
 /* Move anything left in a retired topic, then prove nothing was stranded — a card

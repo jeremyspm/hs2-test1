@@ -1,0 +1,12 @@
+{
+  "_": "AUTHORED. The course names a term one way and this pack's glossary heads it another. Case and curly apostrophes are folded automatically (checklist.mjs normTerm) — everything here is a REAL difference somebody has looked at and confirmed. Without it a naive equality match reports 8 of the 64 published terms as uncovered, which is a fake-confident gap of exactly the kind self-explaining-ui-policy forbids: the entries all exist, under a merged or differently-spelled heading. G-CHK5 fails the build if any published term still resolves to nothing, and it also fails if an alias here stops being needed — an unused indirection is the shape of the dead ALIAS that once deleted ten of her questions.",
+
+  "Heart Attack": "Heart attack / Myocardial infarction",
+  "Myocardial Infarction": "Heart attack / Myocardial infarction",
+  "Positive And Negative Inotropic Action": "Inotropic action",
+  "Positive And Negative Chronotropic Action": "Chronotropic action",
+  "Negative Pressure": "Negative pressure breathing",
+  "Positive Pressure": "Positive pressure ventilation",
+  "Hypocapnea": "Hypocapnia",
+  "Hypercapnoea": "Hypercapnia"
+}

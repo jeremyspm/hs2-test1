@@ -1,9 +1,112 @@
 {
- "failures": [],
+ "failures": [
+  {
+   "gate": "G4",
+   "where": "card #383",
+   "msg": "quantity \"159.6 mmHg\" is not inside any evidence quote — demote to `textbook` or cite it",
+   "detail": "Air in the alveoli is not the air you breathed in. Work through what"
+  },
+  {
+   "gate": "G4",
+   "where": "card #383",
+   "msg": "quantity \"760 mmHg\" is not inside any evidence quote — demote to `textbook` or cite it",
+   "detail": "Air in the alveoli is not the air you breathed in. Work through what"
+  },
+  {
+   "gate": "G4",
+   "where": "card #383",
+   "msg": "quantity \"40 mmHg\" is not inside any evidence quote — demote to `textbook` or cite it",
+   "detail": "Air in the alveoli is not the air you breathed in. Work through what"
+  },
+  {
+   "gate": "G4",
+   "where": "card #383",
+   "msg": "quantity \"40 mmHg\" is not inside any evidence quote — demote to `textbook` or cite it",
+   "detail": "Air in the alveoli is not the air you breathed in. Work through what"
+  },
+  {
+   "gate": "G4",
+   "where": "card #383",
+   "msg": "quantity \"0.2 mmHg\" is not inside any evidence quote — demote to `textbook` or cite it",
+   "detail": "Air in the alveoli is not the air you breathed in. Work through what"
+  },
+  {
+   "gate": "G4",
+   "where": "card #383",
+   "msg": "quantity \"47 mmHg\" is not inside any evidence quote — demote to `textbook` or cite it",
+   "detail": "Air in the alveoli is not the air you breathed in. Work through what"
+  },
+  {
+   "gate": "G4",
+   "where": "card #383",
+   "msg": "quantity \"7.4 mmHg\" is not inside any evidence quote — demote to `textbook` or cite it",
+   "detail": "Air in the alveoli is not the air you breathed in. Work through what"
+  },
+  {
+   "gate": "G4",
+   "where": "card #383",
+   "msg": "quantity \"159.6 mmHg\" is not inside any evidence quote — demote to `textbook` or cite it",
+   "detail": "Air in the alveoli is not the air you breathed in. Work through what"
+  },
+  {
+   "gate": "G4",
+   "where": "card #383",
+   "msg": "quantity \"40 mmHg\" is not inside any evidence quote — demote to `textbook` or cite it",
+   "detail": "Air in the alveoli is not the air you breathed in. Work through what"
+  },
+  {
+   "gate": "G4",
+   "where": "card #383",
+   "msg": "quantity \"592.8 mmHg\" is not inside any evidence quote — demote to `textbook` or cite it",
+   "detail": "Air in the alveoli is not the air you breathed in. Work through what"
+  },
+  {
+   "gate": "G4",
+   "where": "card #383",
+   "msg": "quantity \"0.2 mmHg\" is not inside any evidence quote — demote to `textbook` or cite it",
+   "detail": "Air in the alveoli is not the air you breathed in. Work through what"
+  },
+  {
+   "gate": "G4",
+   "where": "card #383",
+   "msg": "quantity \"47 mmHg\" is not inside any evidence quote — demote to `textbook` or cite it",
+   "detail": "Air in the alveoli is not the air you breathed in. Work through what"
+  },
+  {
+   "gate": "G4",
+   "where": "card #383",
+   "msg": "quantity \"40 mmHg\" is not inside any evidence quote — demote to `textbook` or cite it",
+   "detail": "Air in the alveoli is not the air you breathed in. Work through what"
+  },
+  {
+   "gate": "G4",
+   "where": "card #383",
+   "msg": "quantity \"47 mmHg\" is not inside any evidence quote — demote to `textbook` or cite it",
+   "detail": "Air in the alveoli is not the air you breathed in. Work through what"
+  },
+  {
+   "gate": "G4",
+   "where": "card #383",
+   "msg": "quantity \"0.2 mmHg\" is not inside any evidence quote — demote to `textbook` or cite it",
+   "detail": "Air in the alveoli is not the air you breathed in. Work through what"
+  },
+  {
+   "gate": "G4",
+   "where": "card #383",
+   "msg": "quantity \"592.8 mmHg\" is not inside any evidence quote — demote to `textbook` or cite it",
+   "detail": "Air in the alveoli is not the air you breathed in. Work through what"
+  },
+  {
+   "gate": "G4",
+   "where": "card #383",
+   "msg": "quantity \"47 mmHg\" is not inside any evidence quote — demote to `textbook` or cite it",
+   "detail": "Air in the alveoli is not the air you breathed in. Work through what"
+  }
+ ],
  "tiers": {
-  "taught": 22,
-  "textbook": 25,
-  "verbatim": 321,
+  "taught": 24,
+  "verbatim": 336,
+  "textbook": 28,
   "rail": 46
  },
  "glossTiers": {

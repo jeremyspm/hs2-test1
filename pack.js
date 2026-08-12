@@ -11278,7 +11278,8 @@ const PACK = {
     "is highest at the",
     "favours",
     "forces fluid from the blood vessel into the"
-   ]
+   ],
+   "crit": "cvs-3"
   },
   {
    "type": "rail",
@@ -11298,7 +11299,8 @@ const PACK = {
     "is highest at the",
     "favours",
     "forces fluid from the interstitium back into the"
-   ]
+   ],
+   "crit": "cvs-3"
   },
   {
    "type": "rail",
@@ -11316,7 +11318,8 @@ const PACK = {
     "raises",
     "when raised, forces more fluid into the",
     "accumulating fluid, becomes"
-   ]
+   ],
+   "crit": "cvs-3"
   },
   {
    "type": "rail",
@@ -11334,7 +11337,8 @@ const PACK = {
     "lowers plasma protein and so lowers",
     "when too low, fails to drive",
     "when it fails, leaves fluid in the tissues as"
-   ]
+   ],
+   "crit": "cvs-3"
   },
   {
    "type": "rail",
@@ -11350,7 +11354,8 @@ const PACK = {
    "verbs": [
     "lowers blood volume and so lowers",
     "when lowered, forces less fluid into the"
-   ]
+   ],
+   "crit": "cvs-3"
   },
   {
    "type": "rail",
@@ -11368,7 +11373,8 @@ const PACK = {
     "carries blood away from the heart at high pressure, so it has a thick",
     "is smooth muscle, which performs",
     "changes vessel diameter and so changes"
-   ]
+   ],
+   "crit": "cvs-2"
   },
   {
    "type": "rail",
@@ -11386,7 +11392,8 @@ const PACK = {
     "is one endothelial cell thick, which allows",
     "of oxygen, nutrients and wastes maintains",
     "when inadequate to vital organs, may be"
-   ]
+   ],
+   "crit": "cvs-2"
   },
   {
    "type": "rail",
@@ -11422,7 +11429,8 @@ const PACK = {
     "opens into the",
     "ejects blood through the",
     "opens into the"
-   ]
+   ],
+   "crit": "cvs-6"
   },
   {
    "type": "rail",
@@ -11442,7 +11450,8 @@ const PACK = {
     "supply the",
     "drains its used blood into the",
     "opens into the"
-   ]
+   ],
+   "crit": "cvs-6"
   },
   {
    "type": "rail",
@@ -11458,7 +11467,8 @@ const PACK = {
    "verbs": [
     "stop the AV valve flaps opening the wrong way, being anchored by the",
     "anchors the chordae tendineae to the"
-   ]
+   ],
+   "crit": "cvs-5"
   },
   {
    "type": "rail",
@@ -11484,7 +11494,8 @@ const PACK = {
     "depolarise the",
     "depolarising, writes on the ECG the",
     "means the ventricles contract, ejecting the"
-   ]
+   ],
+   "crit": "cvs-8"
   },
   {
    "type": "rail",
@@ -11500,7 +11511,8 @@ const PACK = {
    "verbs": [
     "depolarises the atria, which writes on the ECG the",
     "causes the atria to"
-   ]
+   ],
+   "crit": "cvs-8"
   },
   {
    "type": "rail",
@@ -11516,7 +11528,8 @@ const PACK = {
    "verbs": [
     "writes on the ECG the",
     "causes the ventricles to"
-   ]
+   ],
+   "crit": "cvs-8"
   },
   {
    "type": "rail",
@@ -11532,7 +11545,8 @@ const PACK = {
    "verbs": [
     "hold gap junctions that let the impulse pass fibre to fibre, giving",
     "makes the myocardium contract as one coordinated"
-   ]
+   ],
+   "crit": "cvs-8"
   },
   {
    "type": "rail",
@@ -11548,7 +11562,8 @@ const PACK = {
    "verbs": [
     "multiplied by heart rate gives",
     "multiplied by peripheral resistance gives"
-   ]
+   ],
+   "crit": "cvs-4"
   },
   {
    "type": "rail",
@@ -11570,7 +11585,8 @@ const PACK = {
     "stimulates the",
     "raises heart rate and force of contraction, raising",
     "multiplied by peripheral resistance restores"
-   ]
+   ],
+   "crit": "cvs-12"
   },
   {
    "type": "rail",
@@ -11588,7 +11604,8 @@ const PACK = {
     "stimulates the",
     "constricts the blood vessels, raising",
     "multiplied by cardiac output restores"
-   ]
+   ],
+   "crit": "cvs-12"
   },
   {
    "type": "rail",
@@ -11610,7 +11627,8 @@ const PACK = {
     "converts angiotensinogen from the liver into",
     "is converted by ACE in the lungs into",
     "causes vasoconstriction, raising"
-   ]
+   ],
+   "crit": "cvs-12"
   },
   {
    "type": "rail",
@@ -11630,7 +11648,8 @@ const PACK = {
     "makes the collecting ducts porous so water is reabsorbed, raising",
     "stretches the vessels and fills the heart, raising",
     "multiplied by heart rate and peripheral resistance sets"
-   ]
+   ],
+   "crit": "cvs-12"
   },
   {
    "type": "rail",
@@ -11646,7 +11665,8 @@ const PACK = {
    "verbs": [
     "makes the adrenal cortex release",
     "reabsorbs sodium, and water follows salt, raising"
-   ]
+   ],
+   "crit": "cvs-12"
   },
   {
    "type": "rail",
@@ -11664,7 +11684,8 @@ const PACK = {
     "receiving less blood flow, lowers its",
     "when reduced, lowers",
     "when reduced, keeps fluid in the blood, raising"
-   ]
+   ],
+   "crit": "cvs-12"
   },
   {
    "type": "rail",
@@ -11680,7 +11701,8 @@ const PACK = {
    "verbs": [
     "is detected by",
     "signal the"
-   ]
+   ],
+   "crit": "cvs-12"
   },
   {
    "type": "rail",
@@ -11700,7 +11722,8 @@ const PACK = {
     "left unperfused, is starved of",
     "starvation causes",
     "accumulates into"
-   ]
+   ],
+   "crit": "cvs-14"
   },
   {
    "type": "rail",
@@ -11720,7 +11743,8 @@ const PACK = {
     "when reduced, lowers",
     "when reduced, lowers",
     "too low to perfuse the tissues, is"
-   ]
+   ],
+   "crit": "cvs-14"
   },
   {
    "type": "rail",
@@ -11736,7 +11760,8 @@ const PACK = {
    "verbs": [
     "shifts fluid into the wrong compartment by extreme vasodilation, lowering",
     "when it collapses, lowers"
-   ]
+   ],
+   "crit": "cvs-14"
   },
   {
    "type": "rail",
@@ -11766,7 +11791,8 @@ const PACK = {
     "lead on to",
     "open into",
     "open into"
-   ]
+   ],
+   "crit": "resp-4"
   },
   {
    "type": "rail",
@@ -11782,7 +11808,8 @@ const PACK = {
    "verbs": [
     "are lined by type I pneumocytes, which form part of the",
     "is thin enough (0.5–1 µm) for"
-   ]
+   ],
+   "crit": "resp-5"
   },
   {
    "type": "rail",
@@ -11798,7 +11825,8 @@ const PACK = {
    "verbs": [
     "secrete",
     "reduces surface tension and so keeps open the"
-   ]
+   ],
+   "crit": "resp-5"
   },
   {
    "type": "rail",
@@ -11814,7 +11842,8 @@ const PACK = {
    "verbs": [
     "make mucus that traps dust, forming with the cilia the",
     "sweeps trapped particles upward toward the"
-   ]
+   ],
+   "crit": "resp-4"
   },
   {
    "type": "rail",
@@ -11830,7 +11859,8 @@ const PACK = {
    "verbs": [
     "is sensitive to particles and triggers the",
     "contracts the"
-   ]
+   ],
+   "crit": "resp-4"
   },
   {
    "type": "rail",
@@ -11854,7 +11884,8 @@ const PACK = {
     "rising, lowers by Boyle's law the",
     "falling below atmospheric, creates a",
     "drives air in until the pressures equalise —"
-   ]
+   ],
+   "crit": "resp-7"
   },
   {
    "type": "rail",
@@ -11872,7 +11903,8 @@ const PACK = {
     "of the stretched lungs, as the inspiratory muscles relax, reduces",
     "falling, raises by Boyle's law the",
     "rising above atmospheric, drives air out —"
-   ]
+   ],
+   "crit": "resp-7"
   },
   {
    "type": "rail",
@@ -11888,7 +11920,8 @@ const PACK = {
    "verbs": [
     "puts air in the pleural cavity, destroying the negative",
     "once lost, uncouples the lung from the chest wall, causing"
-   ]
+   ],
+   "crit": "resp-7"
   },
   {
    "type": "rail",
@@ -11904,7 +11937,8 @@ const PACK = {
    "verbs": [
     "drives gases across the respiratory membrane by",
     "moves O₂ into the blood and CO₂ into the alveoli — this is"
-   ]
+   ],
+   "crit": "resp-9"
   },
   {
    "type": "rail",
@@ -11922,7 +11956,8 @@ const PACK = {
     "enters the red cell, where carbonic anhydrase joins it to water to form",
     "dissociates into hydrogen ions and",
     "diffuses into the plasma, carrying about 70% of the"
-   ]
+   ],
+   "crit": "resp-12"
   },
   {
    "type": "rail",
@@ -11940,7 +11975,8 @@ const PACK = {
     "blows off CO₂, driving the buffer left and using up",
     "falling in concentration, raise the",
     "above 7.45, is"
-   ]
+   ],
+   "crit": "resp-14"
   },
   {
    "type": "rail",
@@ -11958,7 +11994,8 @@ const PACK = {
     "retains CO₂, driving the buffer right and producing more",
     "rising in concentration, lower the",
     "below 7.35, is"
-   ]
+   ],
+   "crit": "resp-14"
   },
   {
    "type": "rail",
@@ -11974,7 +12011,8 @@ const PACK = {
    "verbs": [
     "binds four oxygen molecules to become",
     "carries 98.5% of the blood's"
-   ]
+   ],
+   "crit": "resp-11"
   },
   {
    "type": "rail",
@@ -11990,7 +12028,8 @@ const PACK = {
    "verbs": [
     "in warm, acidic, CO₂-rich tissue lowers the oxygen affinity of",
     "with lowered affinity, releases its oxygen to the"
-   ]
+   ],
+   "crit": "resp-11"
   },
   {
    "type": "rail",
@@ -12008,7 +12047,8 @@ const PACK = {
     "raises hydrogen ions and drops blood pH, which is picked up by",
     "call for faster breathing, which exhales more",
     "falling, lets hydrogen ions and bicarbonate recombine, consuming"
-   ]
+   ],
+   "crit": "resp-14"
   },
   {
    "type": "rail",
@@ -12026,7 +12066,8 @@ const PACK = {
     "is self-exciting and sets the basic rhythm, firing down the",
     "stimulates the",
     "contracting, increases thoracic volume and produces"
-   ]
+   ],
+   "crit": "resp-13"
   },
   {
    "type": "rail",
@@ -12044,7 +12085,8 @@ const PACK = {
     "also fires down the",
     "stimulate the",
     "contracting, lift the ribcage and produce"
-   ]
+   ],
+   "crit": "resp-13"
   },
   {
    "type": "rail",
@@ -12062,7 +12104,8 @@ const PACK = {
     "is the strongest stimulus, exciting the",
     "when excited, increases the rate and depth of",
     "increasing, blows off"
-   ]
+   ],
+   "crit": "resp-14"
   },
   {
    "type": "rail",
@@ -12086,7 +12129,8 @@ const PACK = {
     "carry lymph through the",
     "filter it and pass it on to the",
     "join the thoracic and right lymphatic ducts, which empty into the"
-   ]
+   ],
+   "crit": "lymph-3"
   },
   {
    "type": "rail",
@@ -12102,7 +12146,8 @@ const PACK = {
    "verbs": [
     "collect antigens and present them to",
     "organise the"
-   ]
+   ],
+   "crit": "lymph-1"
   },
   {
    "type": "rail",
@@ -12118,7 +12163,8 @@ const PACK = {
    "verbs": [
     "stops the drainage of the",
     "accumulating fluid, becomes"
-   ]
+   ],
+   "crit": "lymph-4"
   }
  ],
  "glossary": [

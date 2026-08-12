@@ -238,8 +238,17 @@ for (const [key, hits] of Object.entries(critAssertions)) {
 /* A card can serve more than one criterion; `alsoCrit` holds the extras. Counting only
    `crit` reported resp-10 and lymph-4 as textbook-only when her own questions cover
    them — the coverage was there, the count was not looking at it. */
+/* QUESTION CARDS ONLY. The 46 rails now carry a focus point too — every card in the
+   pack is filed under a checklist item, which is what the Checklist page claims — but
+   coverage is a claim about how much of HER material stands behind a point, and a chain
+   to rebuild from memory is a different kind of study object. `PACK.thin` is computed
+   before the rails are appended and the engine's perPoint() skips them, so counting them
+   here made this gate the only one of the three disagreeing: it reported four points as
+   carrying a "stale number" that was accurate. Three counts of one idea is the bug; the
+   note in build.mjs beside its own `counts` is the other half of this. */
 const critCards = {};
 for (const c of pack.cards) {
+  if (c.type === 'rail') continue;
   for (const id of [c.crit, ...(c.alsoCrit ?? [])].filter(Boolean)) {
     (critCards[id] ??= []).push(c);
   }
