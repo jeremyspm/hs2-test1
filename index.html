@@ -735,7 +735,7 @@ h2.sec{font-size:12.5px;text-transform:uppercase;letter-spacing:1px;color:var(--
   .chkn{justify-self:start}
   .chkchev{justify-self:end}
 }
-.chkpickbar p{margin:0 0 4px;font-size:13.5px;line-height:1.55;color:var(--tx2)}
+.chkpickbar p{margin:0 0 4px;font-size:14px;line-height:1.55;color:var(--tx2)}
 
 /* ================= the cram session ==================================
    Deliberately the loudest thing on the page. Every other control here asks the
@@ -17178,6 +17178,18 @@ function ringDoneHTML(){
             :`<p class="ringsub">That is the whole pack. Nothing is left unlocked.</p>`}
     </div>`;
 }
+/* Everything left in the round was answered correctly within the last hour, so none of
+   it can lock yet — dealing it again would just say "did not count". Distinct from
+   ringDoneHTML: the round is not finished, it is waiting, and the come-back time is
+   the whole point of the screen. */
+function ringWaitHTML(){
+  return `<div class="card ringdone">
+      <h3>${ROUNDLAB(ringNow())} — waiting on the hour</h3>
+      <p>Every card left in this round was answered correctly within the last hour, so
+        none of them can lock yet. Re-asking them now would not count.</p>
+      ${comeBackHTML()}
+    </div>`;
+}
 function renderStudy(){
   /* The cram button rides ABOVE the doors on purpose. Study opens by asking the reader
      to choose a door and then read a note about deck composition — which is the right
@@ -17216,6 +17228,18 @@ function renderStudy(){
   const G=(HASRINGS()?'':cramCTA())+ringHeadHTML()+gate(renderStudy,ALLTYPES);
   setTimeout(wireCramCTA,0);
   setTimeout(wireRingBar,0);
+  /* THE WAIT — the direct fix for the card-39 loop now that no fixed-length set stops
+     a ring by accident. A card whose only correct answer was minutes ago cannot lock
+     again until the hour is up; buildRingDeck only drops FULLY locked cards, so a ring
+     whose every remaining card is in that within-the-hour state is non-empty and would
+     otherwise be dealt, answered, and re-dealt for ever, each answer saying "did not
+     count". Checked before a card is dealt, on the actual ring deck rather than CUR, so
+     it catches the stuck state whether or not this render happens to land on one. */
+  if(HASRINGS()&&GUIDED()&&ringNow()!==null&&!filtOn()){
+    const deck=buildDeck(ALLTYPES);
+    const useful=deck.filter(function(c){ const r=S.lock[c.key]; return !r||r.n<1||(Date.now()-r.t)>=LOCKGAP; });
+    if(deck.length&&!useful.length){ CUR=null; view.innerHTML=G+ringWaitHTML(); setTimeout(wireRingBar,0); return; }
+  }
   CUR=nextCard(ALLTYPES);
   /* With rings on, an empty deck is not an empty pool — it is a ring finished, and it
      gets a screen that says so. Only fall through to the filter dead-end below when
