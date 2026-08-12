@@ -618,6 +618,65 @@ console.log(`built index.html — ${(out.length / 1024).toFixed(0)} KB`);
 console.log(`${P.cards.length} cards:`, Object.entries(types).sort((a, b) => b[1] - a[1]).map(([k, v]) => `${k} ${v}`).join(' · '));
 console.log('tiers:', Object.entries(tiers).sort((a, b) => b[1] - a[1]).map(([k, v]) => `${k} ${v}`).join(' · '));
 
+/* ── G30 · the cull exemption may only be spent on something genuinely absent ──
+   `gapFill` lets a card survive `cullBackground`, which otherwise drops any textbook
+   card whose focus points all carry one of her questions. That test is blind below
+   criterion level — cvs-15 holds 47 of her questions and never once asked what
+   pericarditis is — so the exemption is real and necessary. It is also exactly the
+   shape of a backdoor: set the flag and any padding ships.
+
+   So the flag COSTS something. A `gapFill` card must declare `gapTerms`, every term
+   must actually appear in the card claiming it, and — the part that matters — NO OTHER
+   CARD may test that term. The moment a term is covered somewhere else, the card
+   claiming it is padding by the pack's own definition and the build says so.
+
+   Checked against the SHIPPED pack, so a term that arrives later by harvest fails this
+   rather than quietly leaving a duplicate in place. */
+{
+  const strip = (s) => String(s).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').toLowerCase();
+  /* What the reader is asked to produce or choose between — never the explanation, or
+     a term merely NAMED in someone else's `why` would count as tested. */
+  const tested = (c) => {
+    const b = [c.q, c.text, c.prompt, c.stem];
+    for (const k of ['options', 'statements', 'points', 'steps']) if (Array.isArray(c[k])) b.push(JSON.stringify(c[k]));
+    for (const k of ['pairs', 'blanks']) if (Array.isArray(c[k])) b.push(JSON.stringify(c[k]));
+    return strip(b.filter(Boolean).join(' '));
+  };
+  const cardsG = P.cards.filter((c) => c.type !== 'rail' && !c.damaged);
+  const gapCards = cardsG.filter((c) => c.gapFill);
+  const critsOfG = (c) => [c.crit, ...(c.alsoCrit ?? [])].filter(Boolean);
+  const fails = [], notes = [];
+  for (const c of gapCards) {
+    const terms = c.gapTerms ?? [];
+    if (!terms.length) { fails.push(`a gapFill card on ${c.crit} declares no gapTerms`); continue; }
+    /* THE DUPLICATE TEST IS SCOPED TO THE CRITERION, and that is the whole subtlety.
+       A bare phrase means different things under different criteria: "body temperature"
+       appears in two cvs-1 cards because the CARDIOVASCULAR system regulates it, which
+       is not remotely the same learning objective as criterion resp-16's "the effect of
+       body temperature on the rate and depth of ventilation". An unscoped substring
+       search called that a duplicate and would have deleted the only card in the pack
+       answering the criterion — the same context-blind matching that mis-files cards in
+       map-criteria.mjs. A term is only already-covered if it is covered FOR THIS POINT.
+       Cross-criterion hits are still printed, because they are worth a human glance. */
+    const mine = new Set(critsOfG(c));
+    for (const t of terms) {
+      const needle = strip(t);
+      if (!tested(c).includes(needle)) { fails.push(`${c.crit}: declares "${t}" but does not ask it`); continue; }
+      const hits = cardsG.filter((o) => o !== c && tested(o).includes(needle));
+      const sameCrit = hits.filter((o) => critsOfG(o).some((id) => mine.has(id)));
+      if (sameCrit.length) fails.push(`${c.crit}: "${t}" is already tested by ${sameCrit.length} other card(s) on the same focus point — the exemption is not needed`);
+      else if (hits.length) notes.push(`"${t}" also appears in ${hits.length} card(s) on other focus points (${[...new Set(hits.flatMap(critsOfG))].join(', ')}) — different objective, kept`);
+    }
+  }
+  for (const n of notes) console.log(`  · ${n}`);
+  if (fails.length) {
+    console.error(`✗ G30 — gapFill exemptions that are not earned:\n   ${fails.join('\n   ')}`);
+    process.exit(1);
+  }
+  const nTerms = gapCards.reduce((n, c) => n + (c.gapTerms ?? []).length, 0);
+  if (gapCards.length) console.log(`${gapCards.length} gap-fill card(s) exempt from the cull, closing ${nTerms} named term(s) no other card asks ✓`);
+}
+
 /* ── coverage gate ────────────────────────────────────────────────────────────
    THE FLOOR STOPPED BEING A SHIP BLOCKER when the manufactured cards were culled.
 
