@@ -697,6 +697,10 @@ h2.sec{font-size:12.5px;text-transform:uppercase;letter-spacing:1px;color:var(--
   text-transform:none;color:var(--tx3);white-space:nowrap}
 .chkrow{background:var(--card);border:1px solid var(--line);border-radius:var(--r2);margin-bottom:6px;overflow:hidden}
 .chkrow.open{border-color:var(--line2)}
+.chkrow.picked{border-color:var(--acc-tx)}
+.chkheadwrap{display:flex;align-items:flex-start}
+.chkbox{flex:0 0 auto;width:17px;height:17px;margin:14px 0 0 13px;accent-color:var(--acc-tx);cursor:pointer}
+.chkheadwrap .chkhead{width:auto;flex:1 1 auto;min-width:0}
 .chkhead{display:grid;gap:6px 9px;align-items:start;width:100%;text-align:left;
   grid-template-columns:20px 20px minmax(0,1fr) auto 16px;
   grid-template-areas:"mk nu tx ct cv";
@@ -731,6 +735,7 @@ h2.sec{font-size:12.5px;text-transform:uppercase;letter-spacing:1px;color:var(--
   .chkn{justify-self:start}
   .chkchev{justify-self:end}
 }
+.chkpickbar p{margin:0 0 4px;font-size:13.5px;line-height:1.55;color:var(--tx2)}
 
 /* ================= the cram session ==================================
    Deliberately the loudest thing on the page. Every other control here asks the
@@ -15490,8 +15495,8 @@ function renderOnboard(){
     ${HASBRIEF()
       ?`<p><b>Two ways in.</b> <b>Read the Brief</b> if the lecture has gone fuzzy — it explains
          each focus point in plain prose. <b>⚡ Help me cram</b> if you would rather just start:
-         ${SESSION_N()} cards, and it stops.</p>`
-      :`<p><b>⚡ Help me cram</b> is the way in: ${SESSION_N()} cards, and it stops.</p>`}
+         cards keep coming until you press <b>Stop for now</b>.</p>`
+      :`<p><b>⚡ Help me cram</b> is the way in: cards keep coming until you press <b>Stop for now</b>.</p>`}
     <button class="btn primary" id="onbGo">Got it${dl!=null&&dl>0?` — ${dl} day${dl===1?'':'s'} to go`:''}</button>
   </div>`;
   slot.innerHTML=html;
@@ -15542,9 +15547,9 @@ function onboardBlockHTML(){
          way to teach somebody the tool is broken. Same failure as the retired Brief being
          named by four things after its tab went ([[self-explaining-ui-policy]]); G-CHK8
          now fails the build on any reader-facing mention of a deleted surface. */
-      :`<p><b>You are picking.</b> ${HASCHK()?`The <b>Checklist</b> tab is the course's own list of what the test can ask — open a point and rep exactly its cards.`
-        :`Browse <b>All cards</b> and hit <b>⚡ Rep these</b> on any group.`} Pick nothing and you get the whole
-        pack, leading with the questions ${LECT} has actually set.</p>
+      :`<p><b>You are picking.</b> ${HASCHK()?`The <b>Checklist</b> tab is the course's own list of what the test can ask — check off the points you want and rep exactly those.`
+        :`Browse <b>All cards</b> and hit <b>⚡ Rep these</b> on any group.`} Pick at least
+        one thing before anything is dealt — the tool never guesses for you.</p>
       <p><b>🎯 Guided</b> is one tap away under <b>Change</b> on the card screen, and the
         rounds take over${wN&&share?`, opening on one card from every topic and then the ${
         wN===1?'case study':'case studies'} worth ${share} of the marks`:''}.</p>`;
@@ -15631,8 +15636,8 @@ function routePickHTML(){
       <button class="rowbtn rpopt" id="rpOwn" data-route="own">
         <span class="rpt">🗂 I'll choose</span>
         <span class="rpb">Pick what you rep — a topic, a question type, one point off the
-          course's list, or <b>the ones you keep getting wrong</b>. Pick nothing and it
-          deals the whole pack, hardest and highest-value first.</span></button>
+          course's list, or <b>the ones you keep getting wrong</b>. You choose at least one
+          of those before anything is dealt, so the tool never guesses what you meant.</span></button>
       <p class="rpfoot"><b>Neither is a commitment.</b> Both buttons stay at the top of
         every card screen, so you can swap over mid-session. Same cards either way, same
         marking, and anything you lock stays locked.</p>
@@ -16691,14 +16696,14 @@ document.addEventListener('click',e=>{
    were built and it is still true; they ride the same box on their own strip rather than
    a bar of their own. */
 function queueLineHTML(types){
-  const s=sessState(), done=s.n-s.base, total=s.goal-s.base;
+  const s=sessState(), done=s.n-s.base;
   /* `spineSubHTML` is unchanged and still owns the sentence describing what is being
      dealt — the round and its plain-English subtitle, or the announcement that the pool
      is reduced and to what. It used to render under the bar on every screen; it renders
      here, on the one screen that deals cards, because that is the only place naming a
      round means anything. */
   const who=GUIDED()?'🎯 Guided':'🗂 You are choosing';
-  const set=(total>0)?` · <b>${done} of ${total}</b>`:'';
+  const set=sessLive()?` · <b>${done}</b> this session`:'';
   /* A REDUCED POOL ANNOUNCES ITSELF, SAYS HOW BIG IT IS, AND CARRIES ITS OWN WAY OUT —
      all three on one row, once. The count comes from `deckSource`, which IS the queue, so
      the sentence cannot promise a number the next card contradicts. The exit is
@@ -16714,7 +16719,7 @@ function queueLineHTML(types){
         : `<b>${who}</b> · ${spineSubHTML(spineTally())}${set}`}</div>
       ${drill?`<button class="btn ghost qchg" data-route="guided">Back to the rounds</button>`:''}
       <button class="btn ghost qchg" data-qx="change" aria-expanded="${SHEETOPEN()?'true':'false'}">${SHEETOPEN()?'Close':'Change'}</button>
-      ${total>0?pipsHTML(done,total):''}
+      ${sessLive()?`<button class="btn ghost qchg" data-qx="endset">⏹ Stop for now</button>`:''}
     </div>${SHEETOPEN()?changeSheetHTML(types):''}`;
 }
 /* OPEN BY ITSELF ON A FIRST RUN, because the sheet's first block is the first-run
@@ -16733,7 +16738,7 @@ const SHEETOPEN=()=>QSHEET||!S.onboarded;
    there is no window in which a door is on screen and dead. */
 let QSHEET=false;
 function changeSheetHTML(types){
-  const own=!GUIDED(), s=sessState(), left=s.goal-s.n;
+  const own=!GUIDED(), s=sessState();
   const n=ringNow();
   /* The escape hatch, moved. It is a rarely-taken deliberate action, not permanent
      furniture — but it is never removed, because a round you cannot leave is a lock. It
@@ -16757,7 +16762,7 @@ function changeSheetHTML(types){
       <button class="btn ghost" data-qx="back0">Back to ${ROUNDLAB(0)}</button></div>`
      :canSkip?`<button class="wlink" data-qx="skip">Skip ahead to ${ROUNDLAB(ESCAPETO)} →</button>
       <div class="note quiet">${ROUNDLAB(0)} is not locked yet — you can come back to it any time.</div>`:''}
-    ${s.goal>s.n?`<button class="wlink" data-qx="endset">End this set (${s.n-s.base} of ${s.goal-s.base}) →</button>`:''}
+    ${sessLive()?`<button class="wlink" data-qx="endset">⏹ Stop for now (${s.n-s.base} card${s.n-s.base===1?'':'s'} this session) →</button>`:''}
     ${bgRow(types)}
     <button class="wlink" data-qx="gloss">What “locked”, “round” and “topic” mean ⌄</button>
   </div>`;
@@ -16779,11 +16784,9 @@ document.addEventListener('click',e=>{
   else if(x==='skip'){ S.ring='any'; save(); QSHEET=false; }
   else if(x==='back0'){ setRoute('guided'); S.ring=R_SPINE; save(); QSHEET=false; }
   else if(x==='endset'){
-    /* CLOSE the set, do not merely show its ending. Leaving `goal` above `n` means the
-       next card screen deals card four of twelve as though nothing happened. */
-    const st=sessState(), of=Math.max(0,st.goal-st.base);
-    st.goal=st.n; save(); QSHEET=false;
-    cramFinished(of); window.scrollTo({top:0}); return;
+    QSHEET=false;
+    stopSession();
+    return;
   }
   /* Falls through to nav(VIEW) rather than returning: `renderSpine` alone redraws the
      bar and leaves the sheet standing in the view underneath it, so the panel opened and
@@ -17181,21 +17184,30 @@ function renderStudy(){
      screen for someone who has decided to work, and the wrong one for someone deciding
      whether to. The first thing on the page should be the thing that needs no decision. */
   /* ════════ THE STOP ════════════════════════════════════════════════════════════
-     A ringed Study view is BOUNDED. It was not, and that was the worst defect in the
-     tool: a card locks on the second correct answer an hour later, so nothing locks in
-     a first sitting; buildRingDeck filters on !isLocked, so after all 38 spine cards the
-     deck rebuilt to the same 38 and dealt card one again — for ever — with every answer
-     from there reporting "still inside the hour, so this one did not count". The reader
-     was handed an unbounded loop of questions the tool itself called worthless, and
-     ringDoneHTML (the only ending) needed all 38 LOCKED, which is unreachable in an hour.
-
-     One set, then a screen that stops and says when to come back. No second tab: a
-     ringed pack's own onboarding says "one way in", and a Cram tab dealing this same
-     deck under another name would contradict it. */
+     A ringed Study view deals cards indefinitely — the deck cycles the rounds and,
+     once every round is cleared, the reader's own weak spots — and the only way it
+     ends is the reader pressing ⏹ Stop for now, which lives on the queue line and in
+     [ Change ] (see stopSession). No fixed count is ever promised or reached. */
   if(HASRINGS()){
     const s=sessState();
-    if(!s.goal) sessStart();
-    if(s.n>=s.goal&&buildDeck(ALLTYPES).length){ cramFinished(); window.scrollTo({top:0}); return; }
+    if(!s.active) sessStart();
+  }
+  /* 🗂 OWN ROUTE REQUIRES A PICK. "Pick nothing and it deals the whole pack" used to be
+     the second door's own copy — the reader who wanted to choose got the one outcome
+     that looks exactly like not choosing. So the door now opens onto the picker itself
+     and nothing is dealt until at least one filter is on; `filtRoute` already flips the
+     route to 'own' the moment a filter is chosen, so this gate clears itself. */
+  if(!GUIDED()&&!filtOn()){
+    FPANEL=true;
+    view.innerHTML=`<div class="note info onb">
+      <h3>Pick what you want to rep</h3>
+      <p><b>🗂 You are choosing</b>, so pick at least one thing below before anything is
+        dealt — a topic, a question type, a focus point, or <b>the ones you keep getting
+        wrong</b>.</p>
+      ${filterUI(ALLTYPES)}
+      <button class="btn ghost" data-route="guided" style="margin-top:12px">Or go back to 🎯 Guide me</button>
+    </div>`;
+    return;
   }
   /* THREE STRATA, NOT TEN. The session bar and the escape hatch are inside the queue
      line and the [ Change ] sheet; the doors are its label and its button; the filter
@@ -17724,16 +17736,14 @@ function logOverride(key,typed,expected){
 /* ═══════════════ THE CRAM SESSION ═════════════════════════════════════════════
    A session is NOT a new queue. It is the deck the Study view already builds — same
    cards, same ranking, the lecturer's own questions and the never-practised focus
-   points still first — with a fence around it at a finishable number.
+   points still first — dealt with no fixed length at all.
 
-   That is the entire idea, and it is why this is ~100 lines rather than a scheduler.
-   The thing that makes a 345-card pack frightening is not 345 cards, it is an
-   unbounded queue with a debt number printed on it. Shrinking the pack does not fix
-   that; a 60-card pack with a growing due count produces the same dread. So: no due
-   count anywhere on this view, a set you can see the end of, and a real ending.
-
-   What this view must never do is imply the set IS the pack. It says what it is. */
-const SESSION_N=()=>Math.max(4,((PACK.session||{}).n)||12);
+   It used to fence itself at a finishable number, on the theory that an unbounded
+   queue with a debt number printed on it is what makes a big pack frightening. The
+   debt number was the problem, not the length: this view still prints no due count
+   anywhere, but it no longer invents a stopping point nobody asked for. It deals for
+   as long as the reader wants and ends only when they press Stop for now — the one
+   real ending, said plainly rather than promised by a count. */
 /* Aim for one typed card in every N dealt. Measured, not guessed: on hs2-test1, 69 of
    the 344 dealable cards can be asked typed, but only ONE of them lands in the first
    twelve — `cardRank` leads with weak rails and flashcards by design, and neither can
@@ -17751,49 +17761,29 @@ const CRAM_TYPED_EVERY=()=>{ const v=(PACK.session||{}).typedEvery; return v===0
 const today=()=>new Date().toLocaleDateString('en-CA');   // YYYY-MM-DD, local
 function sessState(){
   const s=S.sess;
-  if(s.d!==today()){ s.d=today(); s.n=0; s.goal=0; s.base=0; save(); }
+  if(s.d!==today()){ s.d=today(); s.n=0; s.active=false; s.base=0; save(); }
   if(s.base==null) s.base=0;      // a blob saved before sets were counted from a baseline
   return s;
 }
-/* A set is never longer than the pool it is drawn from. Without this, a small pack — or
-   a reader who has narrowed the queue to eleven cards — is promised twelve, and the deck
-   silently rebuilds and starts repeating cards to make the number up. Promising more
-   distinct cards than exist is the one lie this view cannot afford, since the number IS
-   the feature.
-
-   `base` is where the CURRENT set started, and it is what the bar counts from. Without
-   it the counter accumulated across the day: a reader who took a fourth set was looking
-   at "48 of 60" over sixty wrapped pips, which is a debt number over two rows — the
-   precise thing this view exists to keep off the screen. The day's total is still kept
-   (`n`) and still reported, but on the ending, where it reads as something done rather
-   than something owed. */
-/* HOW BIG A SET IS. Twelve, except that a round of 38 taken twelve at a time leaves a
-   last set of two — and a two-card set is a worse ending than a long one, because the
-   reader reads it as the tool running out rather than as a stopping point. So a remainder
-   smaller than a third of a set is absorbed into the one before it: 38 deals 12, 12, 14.
-   Counted over the deck ACTUALLY AVAILABLE (the ring's unlocked cards under whatever
-   filters are on), never over the pack, or the promise on the pip bar is a number the
-   queue cannot deliver. */
-function setSize(){
-  const n=SESSION_N(), avail=(HASRINGS()?buildDeck(ALLTYPES):deckSource(ALLTYPES)).length;
-  if(avail<=n) return Math.max(1,avail);
-  return (avail-n)<Math.ceil(n/3) ? avail : n;
-}
+/* `base` is where the CURRENT session started, and it is what the bar counts from.
+   Without it the counter accumulated across the day: a reader on their fourth sitting
+   would see a running daily total instead of what THIS sitting has done. The day's
+   total is still kept (`n`) and still reported, but on the ending, where it reads as
+   something done rather than something owed. */
 function sessStart(){
   const s=sessState();
   s.base=s.n;
-  s.goal=s.n+setSize();
+  s.active=true;
   save();
 }
-const sessLive=()=>{ const s=sessState(); return s.goal>s.n; };
+const sessLive=()=>sessState().active;
 /* The button that starts one. Rendered on Study and the Brief — the two views a reader
    actually lands on — and it is the loudest thing on either of them by design. */
 function cramCTA(){
-  const s=sessState(), n=SESSION_N();
-  const live=s.goal>s.n, left=s.goal-s.n;
+  const s=sessState(), live=sessLive(), done=s.n-s.base;
   return `<button class="bigcram" id="goCram">${
-    live?`⚡ CARRY ON CRAMMING<small>${left} card${left===1?'':'s'} left in this set</small>`
-        :`⚡ HELP ME CRAM<small>${n} cards, about ${Math.round(n*0.6)} minutes — then you are done</small>`}</button>`;
+    live?`⚡ CARRY ON CRAMMING<small>${done} card${done===1?'':'s'} so far — keeps going until you stop</small>`
+        :`⚡ HELP ME CRAM<small>Cards keep coming until you press Stop for now</small>`}</button>`;
 }
 function wireCramCTA(){
   const b=$('#goCram'); if(!b||!b.addEventListener) return;
@@ -17808,15 +17798,10 @@ function wireCramCTA(){
     nav('cram'); window.scrollTo({top:0});
   };
 }
-function pipsHTML(done,goal){
-  let h='';
-  for(let i=0;i<goal;i++) h+=`<i class="${i<done?'on':i===done?'now':''}"></i>`;
-  return `<div class="pips">${h}</div>`;
-}
 function sessBar(){
-  const s=sessState(), done=s.n-s.base, total=s.goal-s.base;
-  return `<div class="sessbar"><b>${done} of ${total}</b>${pipsHTML(done,total)}
-    <button class="sx" id="sessOut">leave</button></div>`;
+  const s=sessState(), done=s.n-s.base;
+  return `<div class="sessbar"><b>${done} card${done===1?'':'s'}</b> this session
+    <button class="sx" id="sessOut">⏹ Stop for now</button></div>`;
 }
 /* Counting a card as done is the session's ONLY job beyond dealing it, and it is
    deliberately generous: an item counts when the reader has finished with it, whether
@@ -17874,17 +17859,15 @@ function cramDeal(){
 }
 function renderCram(){
   const s=sessState();
-  /* The empty check comes BEFORE the finished check. A reader who has narrowed the queue
-     to nothing has a goal of n and would otherwise be congratulated on finishing a set
-     that was never dealt — "Done — 0 cards", with no hint that a filter did it. */
+  /* The empty check comes BEFORE dealing. A reader who has narrowed the queue to
+     nothing must be told a filter did that, not handed a blank card screen. */
   if(!deckSource(ALLTYPES).length){
     view.innerHTML=`<div class="empty">${filtOn()
       ? `Nothing matches the filters you have on. <button class="btn ghost" data-fx="clear" style="margin-left:6px">Clear them</button>`
       : 'No cards in this pack yet.'}</div>`;
     return;
   }
-  if(!s.goal){ sessStart(); }
-  if(s.n>=s.goal) return cramFinished();
+  if(!s.active) sessStart();
   CUR=cramDeal();
   if(!CUR){ view.innerHTML=`<div class="empty">No cards here yet.</div>`; return; }
   const c=CUR, bar=sessBar(), head=cardHeadHTML(c), plan=typedPlan(c);
@@ -17895,44 +17878,31 @@ function renderCram(){
   else                     studyAuto(bar,head,c,cardMarks(c));
   wireSessBar();
 }
-/* "leave" goes to the BRIEF, not to Study. Study is the unbounded queue with the whole
-   card count printed across the top of it — the exact screen a bounded session exists to
-   keep a nervous reader away from — so exiting into it undoes the point at the one moment
-   the reader has already decided they have had enough. The Brief is calm, and it carries
-   the CARRY ON CRAMMING button at the top, so the way back is the first thing on it. */
 function wireSessBar(){
   setTimeout(()=>{
     const b=$('#sessOut');
-    /* On a ringed pack Study IS the set, so the old destination is the screen the reader
-       is trying to leave — it would re-enter the same set and read as a dead button.
-       Progress is the calm surface, and it carries the blueprint and the projected mark. */
-    if(b&&b.addEventListener) b.onclick=()=>nav(HASRINGS()?'stats':BRIEFOK()?'brief':'study');
+    if(b&&b.addEventListener) b.onclick=()=>stopSession();
   },0);
 }
-/* The end of a set. It has to do two things at once: stop, and not imply that stopping
-   means finished. Both are said plainly — the tally is what happened, the line under it
-   is what is still there. No projection, no percentage, no "you are 34% ready": this
-   view has no business estimating a mark, and the Progress tab already does the honest
-   version of that. */
-/* `ofSet` is how big the set WAS, and it is only passed when the reader ended it early
-   from [ Change ] — that path closes the set (goal := n) before rendering, so by the time
-   this runs the two numbers agree and the honest one is gone. Passed in rather than
-   inferred, because inferring it means not closing the set, and a button called "End this
-   set" that leaves the set running is a button that does nothing. */
-function cramFinished(ofSet){
+/* THE ONE WAY A SESSION ENDS, now that it never ends itself. Every stop button — the
+   sticky bar on the card screen, [ Change ]'s link, the session bar in Cram — calls
+   this and only this, so there is one ending screen rather than several near-copies
+   that could disagree about what "stopped" means. */
+function stopSession(){
+  const s=sessState(); s.active=false; save();
+  cramFinished(); window.scrollTo({top:0});
+}
+/* THE STOP SCREEN. Pressing Stop for now ends the sitting; it does not mean finished —
+   the tally is what happened, the line under it is what is still there. No projection,
+   no percentage, no "you are 34% ready": this view has no business estimating a mark,
+   and the Progress tab already does the honest version of that. */
+function cramFinished(){
   const s=sessState(), dl=(typeof daysLeft==='function')?daysLeft():null;
-  const n=SESSION_N();
-  /* A zero tile is a worse report than no tile: a reader whose set happened to contain no
-     typeable card reads "0 terms typed" as a thing they failed to do. */
+  /* A zero tile is a worse report than no tile: a reader whose sitting happened to
+     contain no typeable card reads "0 terms typed" as a thing they failed to do. */
   const typedN=Object.keys(S.typed).length;
-  /* The heading counts the SET just finished; the tally counts the day. Both were `s.n`
-     before, so a second set announced "Done — 24 cards" for twelve cards of work.
-     AND IT COUNTS WHAT WAS DONE, NOT WHAT WAS PROMISED. This screen used to be reachable
-     only by finishing, so the two were the same number; "End this set" in [ Change ] can
-     now arrive here at card three, and the set SIZE in that heading would be the tool
-     congratulating a reader for nine cards they did not answer. */
-  const set=ofSet!=null?ofSet:Math.max(0,s.goal-s.base), done=Math.max(0,s.n-s.base), early=done<set;
-  /* A RINGED PACK ENDS A SET DIFFERENTLY, and the difference is the point of the screen.
+  const done=Math.max(0,s.n-s.base);
+  /* A RINGED PACK ENDS A SITTING DIFFERENTLY, and the difference is the point of the screen.
      The generic ending reports a tally and offers more; a ringed one has to deliver the
      hour rule, because that is the only reason to come back today rather than tomorrow.
      The closing line also changes: "Study deals from it without a limit" is exactly wrong
@@ -17946,11 +17916,9 @@ function cramFinished(ofSet){
      the tool inviting work it has already said is worthless. */
   const useful=ringed?buildDeck(ALLTYPES).filter(function(c){
     const r=S.lock[c.key]; return !r||r.n<1||(Date.now()-r.t)>=LOCKGAP; }).length:more;
-  const nxt=ringed?Math.min(SESSION_N(),useful||more):n;
   view.innerHTML=`<div class="sessdone">
-    <h3>Done — ${done} card${done===1?'':'s'}.</h3>
-    <p>${early?`You stopped the set at ${done} of ${set}${done?'':' — nothing counted, and nothing is lost'}.`
-       :'That is the set.'} ${dl!=null&&dl>0?`<b>${dl} day${dl===1?'':'s'}</b> until the test.`:''}</p>
+    <h3>Stopped — ${done} card${done===1?'':'s'}.</h3>
+    <p>${done?'':'Nothing was answered, so nothing is lost.'} ${dl!=null&&dl>0?`<b>${dl} day${dl===1?'':'s'}</b> until the test.`:''}</p>
     ${ringed?comeBackHTML():''}
     <div class="tally">
       <div><b>${s.n}</b><span>today</span></div>
@@ -17980,8 +17948,8 @@ function cramFinished(ofSet){
         /* Every remaining card is inside its hour. Demoted, and labelled with what it
            actually buys, so the reader chooses re-reading knowingly instead of being
            steered into it by the loudest button on the screen. */
-        ?`<button class="btn ghost" id="cramMore">Read another ${nxt} anyway<small>nothing can lock until the hour is up</small></button>`
-        :more?`<button class="btn primary" id="cramMore">Another ${nxt}</button>`:''}
+        ?`<button class="btn ghost" id="cramMore">Keep going anyway<small>nothing can lock until the hour is up</small></button>`
+        :more?`<button class="btn primary" id="cramMore">Keep going</button>`:''}
       <button class="btn ${ringed&&!useful&&more?'primary':'ghost'}" id="cramStop">I'm done for now</button>
     </div></div>`;
   setTimeout(()=>{
@@ -18265,6 +18233,15 @@ function chkRows(sysCode){
 }
 const MARK={locked:'✓',half:'◐',seen:'◔',new:'○'};
 let CHKOPEN={}, CHKALL={}, CHKTERM={}, CHKHELP=false;
+/* ── MULTI-SELECT PICKS ──────────────────────────────────────────────────────────
+   Each row carries its own checkbox now, independent of opening it to read the detail.
+   Checking any number of them replaces the whole scope the same way ⚡ Rep always has —
+   `crits:id1,id2,...` is a scope the engine already understands (comma-separated values
+   inside one dimension), so picking five points across three systems and pressing the
+   one Rep button this bar shows deals exactly those five, hardest first, and nothing
+   else. Not saved in S: a set of picks left checked from last week is a stale intent,
+   not a preference. */
+let CHKPICK=new Set();
 /* The expanded body. It answers, in order: what will I be dealt, how much of it is HER
    material, what does this tool call it, and what do the questions actually look like.
    The stems are an INDEX, not a rendering of the card — All cards owns "exactly as the
@@ -18309,16 +18286,21 @@ function chkRowHTML(r){
     thin?'thin':'',
     lead&&provOf(lead)!=='verbatim'?'lead card is background':'',
   ].filter(Boolean);
-  return `<div class="chkrow ${r.st}${open?' open':''}">
-    <button class="chkhead" data-chk="${r.crit}" aria-expanded="${open}" title="${esc(SEGWORD[r.st])}">
-      <span class="chkmark">${MARK[r.st]}</span>
-      <span class="chknum">${r.num}</span>
-      <span class="chktx">${esc(r.text)}
-        ${r.subs.length?`<span class="chksubs">${r.subs.map(s=>`<span><b>${esc(s.n)}</b> ${esc(s.text)}</span>`).join('')}</span>`:''}
-        ${tags.length?`<span class="chktags">${tags.map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</span>`:''}</span>
-      <span class="chkn">${r.n}</span>
-      <span class="chkchev">${open?'⌃':'⌄'}</span>
-    </button>
+  const picked=CHKPICK.has(r.crit);
+  return `<div class="chkrow ${r.st}${open?' open':''}${picked?' picked':''}">
+    <div class="chkheadwrap">
+      <input type="checkbox" class="chkbox" data-chkpick="${r.crit}" id="chkbox-${r.crit}"${picked?' checked':''}
+        aria-label="Pick ${esc(r.text)} to rep">
+      <button class="chkhead" data-chk="${r.crit}" aria-expanded="${open}" title="${esc(SEGWORD[r.st])}">
+        <span class="chkmark">${MARK[r.st]}</span>
+        <span class="chknum">${r.num}</span>
+        <span class="chktx">${esc(r.text)}
+          ${r.subs.length?`<span class="chksubs">${r.subs.map(s=>`<span><b>${esc(s.n)}</b> ${esc(s.text)}</span>`).join('')}</span>`:''}
+          ${tags.length?`<span class="chktags">${tags.map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</span>`:''}</span>
+        <span class="chkn">${r.n}</span>
+        <span class="chkchev">${open?'⌃':'⌄'}</span>
+      </button>
+    </div>
     ${open?chkBodyHTML(r):''}
   </div>`;
 }
@@ -18336,6 +18318,25 @@ function chkExtraHTML(){
   return `<h3 class="chksys">Not on the published checklist</h3>
     <p class="note info">${esc(PACK.checklist.extraNote||'')} ${HASWRITTEN()?`Worth ${shareWord(SAQSHARE())} of the marks.`:''}</p>
     ${rows.map(chkRowHTML).join('')}`;
+}
+/* THE BAR THAT SAYS WHAT IS ACTUALLY BEING REPPED. It is the one honest place to make
+   the checkbox picks legible: it names every point checked, in full, and the button
+   beside it is the SAME `repScope` journey as every other ⚡ Rep on the page — a comma
+   joined `crits:` scope, the current preset appended exactly as a single row's does —
+   so the count on the button and the deck it hands over cannot drift apart. */
+function chkPickBarHTML(){
+  if(!CHKPICK.size) return '';
+  const P=chkPreset(), ids=[...CHKPICK];
+  const names=ids.map(id=>{ const cr=(PACK.criteria||[]).find(c=>c.id===id); return cr&&cr.name?cr.name:id; });
+  const scope='crits:'+ids.join(',')+P.scope;
+  return `<div class="card chkpickbar">
+    <p><b>Repping ${ids.length} point${ids.length===1?'':'s'} you picked — nothing else:</b>
+      ${names.map(esc).join(', ')}.</p>
+    <div class="btnrow">
+      ${repBtnHTML(scope)}
+      <button class="btn ghost" id="chkPickClear">Clear picks</button>
+    </div>
+  </div>`;
 }
 function renderChecklist(){
   const C=PACK.checklist, P=chkPreset();
@@ -18358,6 +18359,7 @@ function renderChecklist(){
           ? `<div class="note warn">Showing <b>${rows.length}</b> of the ${tot} published points — ${esc(P.sub())}. The other ${tot-rows.length} are one tap away under <b>Everything</b>.</div>`
           : `<p class="chknote quiet">All <b>${tot}</b> points the course publishes — ${esc(P.sub())}. <b>${done}</b> locked.</p>`;})()}
     </div>
+    ${chkPickBarHTML()}
     ${C.systems.map(s=>{ const rs=chkRows(s.code); if(!rs.length) return '';
       const lk=rs.filter(r=>r.st==='locked').length;
       return `<h3 class="chksys">${esc(s.name)}<span>${lk} of ${rs.length} ✓</span></h3>
@@ -18371,12 +18373,15 @@ function renderChecklist(){
 document.addEventListener('click',e=>{
   const h=e.target.closest('[data-chk]'), p=e.target.closest('[data-chkp]');
   const a=e.target.closest('[data-chka]'), t=e.target.closest('[data-chkt]'), q=e.target.closest('#chkQ');
-  if(!h&&!p&&!a&&!t&&!q) return;
+  const pk=e.target.closest('[data-chkpick]'), cl=e.target.closest('#chkPickClear');
+  if(!h&&!p&&!a&&!t&&!q&&!pk&&!cl) return;
   if(h) CHKOPEN[h.dataset.chk]=!CHKOPEN[h.dataset.chk];
   if(a) CHKALL[a.dataset.chka]=!CHKALL[a.dataset.chka];
   if(t) CHKTERM[t.dataset.chkt]=!CHKTERM[t.dataset.chkt];
   if(q) CHKHELP=!CHKHELP;
   if(p){ S.chk=p.dataset.chkp; save(); }
+  if(pk){ const id=pk.dataset.chkpick; if(CHKPICK.has(id)) CHKPICK.delete(id); else CHKPICK.add(id); }
+  if(cl) CHKPICK.clear();
   renderChecklist();
 });
 
